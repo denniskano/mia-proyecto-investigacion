@@ -1,0 +1,23 @@
+\begin{longtable}{@{}p{0.16\textwidth}p{0.10\textwidth}p{0.20\textwidth}p{0.12\textwidth}p{0.22\textwidth}p{0.14\textwidth}@{}}
+\caption{Operación de variables de investigación (Anexo D)} \label{tab:anexo-d} \\
+\toprule
+\textbf{Ratio} & \textbf{Fase} & \textbf{Def. operativa} & \textbf{Escala} & \textbf{Instrumento / cálculo} & \textbf{Control} \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\textit{(continúa)}} \\
+\midrule
+\textbf{Ratio} & \textbf{Fase} & \textbf{Def. operativa} & \textbf{Escala} & \textbf{Instrumento / cálculo} & \textbf{Control} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{\textit{(continúa en la siguiente página)}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+StructuralScore (E) & Fase 3 / OE2 & Correspondencia estructural OpenAPI $\leftrightarrow$ BIAN & [0, 1] continua & Matriz de correspondencias + promedio ponderado de pares alineados & Umbral de matching fijo; mismo insumo normalizado (OE1) \\
+SemanticScore (S) & Fase 4 / OE3 & Similitud semántica entre términos OpenAPI y conceptos BIAN & [0, 1] continua & Similitud coseno (embeddings) o medida ontológica acordada & Corpus de términos fijo; modelo de embedding fijo por corrida \\
+CoverageScore (C) & Fase 5 / OE4 & Proporción de conceptos BIAN cubiertos por el contrato & [0, 1] continua & Ratio conceptos BIAN mapeados / total de conceptos del SD & Mismos S y E; taxonomía BIAN del SD emparejado \\
+AlignmentScore & Fase 5 / OE4 & Indicador global de alineación del contrato & [0, 1] continua & $\alpha \cdot S + \beta \cdot E + \gamma \cdot C$ & $\alpha+\beta+\gamma=1$; umbrales Alta/Media/Baja/Nula fijos \\
+Clasificación de alineación & Fase 5 / OE4 & Nivel interpretativo del contrato evaluado & Nominal (4 niveles) & Alta $\geq$0,80; Media 0,60--0,79; Baja 0,40--0,59; Nula $<$0,40 & Mismo AlignmentScore; reglas Tabla tipologías Cap.~1 \\
+Calidad de extracción (OE1) & Fase 2 / OE1 & Completitud de la normalización documental & Ratio + conteos & \% elementos extraídos vs.\ artefacto fuente & Versión fija OpenAPI + BIAN; parser fijo \\
+\end{longtable}

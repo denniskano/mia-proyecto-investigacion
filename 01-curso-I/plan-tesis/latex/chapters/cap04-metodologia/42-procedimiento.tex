@@ -1,0 +1,40 @@
+El procedimiento sigue las cinco fases del modelo (Anexo~C), alineadas con OE1--OE4. La
+\textbf{adquisición de artefactos} (Cap.~4 §4.3) precede a la normalización: contratos OpenAPI y
+material BIAN se identifican, versionan y almacenan antes del \textit{parsing}. Este capítulo
+documenta el diseño del procedimiento; su ejecución a escala queda fuera del alcance (§1.6).
+
+\begin{enumerate}
+  \item \textbf{Fase 1 --- Diseñar el modelo:} definir entradas, scores S/E/C, fórmula de
+        agregación y umbrales de clasificación (Cap.~1 §1.4; Anexo~C).
+  \item \textbf{Fase 2 --- Adquirir y normalizar artefactos (OE1):} obtener contratos OpenAPI y
+        extractos BIAN (§4.3); parsear y producir representaciones comparables (tabular, grafo o RDF
+        según factor elegido).
+  \item \textbf{Fase 3 --- Emparejar estructuras (OE2):} calcular correspondencias y
+        \StructuralScore{} (E).
+  \item \textbf{Fase 4 --- Calcular similitud semántica (OE3):} obtener \SemanticScore{} (S).
+  \item \textbf{Fase 5 --- Integrar y clasificar (OE4):} calcular \CoverageScore{} (C),
+        \AlignmentScore{} y clasificación por tipologías (Tabla~\ref{tab:tipologias}).
+\end{enumerate}
+
+\input{chapters/cap04-metodologia/47-objetivos-metodologia}
+
+La \Cref{fig:proc-estructural} ilustra la correspondencia jerárquica para E; la cadena completa
+aparece en la \Cref{fig:cadena-objetivos} (Cap.~2).
+
+\setcounter{figure}{6}
+\begin{figure}[H]
+  \centering
+  \figCapSeven
+  \caption{Correspondencia jerárquica para el cálculo de \StructuralScore{} (E). Fuente: elaboración
+  propia; ejemplo ilustrativo.}
+  \label{fig:proc-estructural}
+\end{figure}
+
+\subsection{Protocolo de validación empírica (fuera de alcance)}
+
+Para una validación empírica posterior, el protocolo escrito contemplará: (1)~instrumento de captura
+(repositorio de contratos); (2)~infraestructura (\textit{parsing}, almacenamiento);
+(3)~condiciones de registro; (4)~tamaño y representatividad de la muestra; (5)~etiquetado de pares
+OpenAPI$\leftrightarrow$BIAN (juicio experto o \textit{ground truth} documentado);
+(6)~aspectos éticos/legales; (7)~evaluación del desempeño del sistema (precisión vs.\ referencia,
+análisis de falsos positivos/negativos en matching).

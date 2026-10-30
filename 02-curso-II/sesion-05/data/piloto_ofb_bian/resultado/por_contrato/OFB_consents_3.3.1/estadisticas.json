@@ -1,0 +1,24 @@
+{
+  "archivo_entrada": "OFB_consents_3.3.1.yml",
+  "source": "BANCO",
+  "contrato": "API Consents - Open Finance Brasil",
+  "version": "3.3.1",
+  "openapi": "3.0.0",
+  "cantidad_operaciones": 5,
+  "cantidad_schemas": 24,
+  "cantidad_propiedades": 45,
+  "fragmentos_corpus": 84,
+  "operaciones_con_summary": 5,
+  "operaciones_con_description": 5,
+  "operaciones_summary_igual_description": 0,
+  "metodos": {
+    "POST": 2,
+    "GET": 2,
+    "DELETE": 1
+  },
+  "tags": {
+    "Consents": 5
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/consents/3.3.1.yml"
+}

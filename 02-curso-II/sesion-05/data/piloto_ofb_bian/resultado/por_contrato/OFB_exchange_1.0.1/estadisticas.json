@@ -1,0 +1,23 @@
+{
+  "archivo_entrada": "OFB_exchange_1.0.1.yml",
+  "source": "BANCO",
+  "contrato": "API Exchange - Open Finance Brasil",
+  "version": "1.0.1",
+  "openapi": "3.0.0",
+  "cantidad_operaciones": 2,
+  "cantidad_schemas": 19,
+  "cantidad_propiedades": 48,
+  "fragmentos_corpus": 87,
+  "operaciones_con_summary": 2,
+  "operaciones_con_description": 2,
+  "operaciones_summary_igual_description": 0,
+  "metodos": {
+    "GET": 2
+  },
+  "tags": {
+    "Exchange Online Rate": 1,
+    "Exchange VET Value": 1
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/exchange/1.0.1.yml"
+}

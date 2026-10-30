@@ -1,0 +1,22 @@
+{
+  "archivo_entrada": "OFB_credit-cards_2.3.1.yml",
+  "source": "BANCO",
+  "contrato": "API Credit-cards-accounts - Open Finance Brasil",
+  "version": "2.3.1",
+  "openapi": "3.0.0",
+  "cantidad_operaciones": 7,
+  "cantidad_schemas": 40,
+  "cantidad_propiedades": 127,
+  "fragmentos_corpus": 253,
+  "operaciones_con_summary": 7,
+  "operaciones_con_description": 7,
+  "operaciones_summary_igual_description": 0,
+  "metodos": {
+    "GET": 7
+  },
+  "tags": {
+    "Credit Card": 7
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/credit-cards/2.3.1.yml"
+}

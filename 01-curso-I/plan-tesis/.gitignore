@@ -1,0 +1,30 @@
+# LaTeX — artefactos de compilación (el PDF del plan sí se versiona)
+latex/build/*
+!latex/build/*.pdf
+latex/*.aux
+latex/*.fdb_latexmk
+latex/*.fls
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*.lof
+latex/*.lot
+latex/*.synctex.gz
+latex/*.bbl
+latex/*.blg
+
+# Office / temporales
+**/~$*.xlsx
+**/~$*.docx
+
+# SO / editores
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Entrega Guía 1 (regenerable)
+entrega/Informe_Guia1_Grupo9.2/
+entrega/Informe_Guia1_Grupo9.2.zip

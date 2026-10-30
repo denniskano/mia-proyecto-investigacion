@@ -1,0 +1,26 @@
+% Figura ontología conceptual — elaboración propia Grupo 9.2 (TikZ)
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[
+    font=\small\sffamily,
+    box/.style={draw, rounded corners=2pt, align=center, minimum width=2.6cm,
+                minimum height=0.85cm, fill=gray!8},
+    ref/.style={box, fill=blue!8},
+    prod/.style={box, fill=green!10},
+    arr/.style={-{Stealth[length=2.2mm]}, thick, gray!70}
+  ]
+    \node[box] (sector) {Sector bancario\\APIs documentadas};
+    \node[box, below=0.9cm of sector] (obj) {\textbf{Objeto:}\\contrato OpenAPI bancario};
+    \node[ref, right=1.1cm of obj] (bian) {\textbf{Referencia:}\\\ServiceDomain{} BIAN};
+    \node[box, below=0.9cm of obj] (ua) {\textbf{UA:}\\endpoint/schema $\leftrightarrow$\\ \Behavior{} / \BusinessObject{}};
+    \node[prod, below=0.9cm of ua] (out) {\textbf{Producto:}\\S, E, C, \AlignmentScore{}};
+
+    \draw[arr] (sector) -- (obj);
+    \draw[arr] (obj) -- (ua);
+    \draw[arr] (bian) -- (ua);
+    \draw[arr] (ua) -- (out);
+  \end{tikzpicture}
+  \caption{Mapa conceptual del estudio: objeto, referencia, unidad de análisis y producto del
+           modelo (elaboración propia).}
+  \label{fig:ontologia}
+\end{figure}

@@ -1,0 +1,55 @@
+# Videos de clase y sus transcripciones (quedan solo en local)
+00-archivo/clases-video/*
+!00-archivo/clases-video/README.md
+00-archivo/transcriptions/*
+!00-archivo/transcriptions/README.md
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+
+# Dependencias y entornos
+**/node_modules/
+**/.venv/
+**/.venv-excel/
+**/__pycache__/
+*.pyc
+
+# Secretos
+.env
+.env.*
+*.pem
+
+# SO / editores
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# LaTeX auxiliar (los PDF del plan sí se versionan)
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.bbl
+*.blg
+_build_*/
+
+# Entrega Guía 1 regenerable (zip ~170 MB)
+01-curso-I/plan-tesis/entrega/Informe_Guia1_Grupo9.2/
+01-curso-I/plan-tesis/entrega/Informe_Guia1_Grupo9.2.zip
+
+# Repo GitHub previo del plan (metadatos locales; no subir)
+01-curso-I/plan-tesis/.git-github-denniskano/
+
+# Temporales Office
+**/~$*.xlsx
+**/~$*.docx

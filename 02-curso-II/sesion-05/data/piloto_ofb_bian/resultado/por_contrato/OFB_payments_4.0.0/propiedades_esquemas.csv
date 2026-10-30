@@ -1,0 +1,276 @@
+﻿source;archivo;schema;property;type;format;ref;description;property_normalized;description_normalized;source_url
+BANCO;OFB_payments_4.0.0.yml;422ResponseErrorCreateConsent;errors;array;;;;errors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;422ResponseErrorCreateConsent;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;422ResponseErrorCreatePixPayments;errors;array;;;;errors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;422ResponseErrorCreatePixPayments;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;422ResponseErrorCreatePixPayment;errors;array;;;;errors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;422ResponseErrorCreatePixPayment;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;BusinessEntity;document;object;;;;document;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;CreatePaymentConsent;data;object;;;Objeto contendo as informações de consentimento para a iniciação de pagamento.;data;objeto contendo as informações de consentimento para a iniciação de pagamento.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;CreatePixPayment;data;array;;;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;CreditorAccount;ispb;string;;;"Deve ser preenchido com o ISPB (Identificador do Sistema de Pagamentos Brasileiros) do participante do SPI (Sistema de pagamentos instantâneos) somente com números.
+";ispb;deve ser preenchido com o ispb (identificador do sistema de pagamentos brasileiros) do participante do spi (sistema de pagamentos instantâneos) somente com números.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;CreditorAccount;issuer;string;;;"Código da Agência emissora da conta sem dígito. 
+(Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, 
+no exercício de atividades da instituição, não podendo ser móvel ou transitória).
+
+[Restrição] Preenchimento obrigatório para os seguintes tipos de conta: CACC (CONTA_DEPOSITO_A_VISTA) e SVGS (CONTA_POUPANCA).
+";issuer;código da agência emissora da conta sem dígito. (agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória). [restrição] preenchimento obrigatório para os seguintes tipos de conta: cacc (conta deposito a vista) e svgs (conta poupanca).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;CreditorAccount;number;string;;;"Deve ser preenchido com o número da conta do usuário recebedor, com dígito verificador (se este existir),  
+se houver valor alfanumérico, este deve ser convertido para 0.
+";number;deve ser preenchido com o número da conta do usuário recebedor, com dígito verificador (se este existir), se houver valor alfanumérico, este deve ser convertido para 0.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;CreditorAccount;accountType;;;EnumAccountPaymentsType;;account type;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;DebtorAccount;ispb;string;;;"Deve ser preenchido com o ISPB (Identificador do Sistema de Pagamentos Brasileiros) do participante do SPI (Sistema de pagamentos instantâneos) somente com números.
+";ispb;deve ser preenchido com o ispb (identificador do sistema de pagamentos brasileiros) do participante do spi (sistema de pagamentos instantâneos) somente com números.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;DebtorAccount;issuer;string;;;"Código da Agência emissora da conta sem dígito. 
+(Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, 
+no exercício de atividades da instituição, não podendo ser móvel ou transitória).
+
+[Restrição] Preenchimento obrigatório para os seguintes tipos de conta: CACC (CONTA_DEPOSITO_A_VISTA) e SVGS (CONTA_POUPANCA).
+";issuer;código da agência emissora da conta sem dígito. (agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória). [restrição] preenchimento obrigatório para os seguintes tipos de conta: cacc (conta deposito a vista) e svgs (conta poupanca).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;DebtorAccount;number;string;;;"Deve ser preenchido com o número da conta transacional do usuário pagador, com dígito verificador (se este existir),  
+se houver valor alfanumérico, este deve ser convertido para 0.
+";number;deve ser preenchido com o número da conta transacional do usuário pagador, com dígito verificador (se este existir), se houver valor alfanumérico, este deve ser convertido para 0.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;DebtorAccount;accountType;;;EnumAccountPaymentsType;;account type;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ConsentsDebtorAccount;ispb;string;;;"Deve ser preenchido com o ISPB (Identificador do Sistema de Pagamentos Brasileiros) do participante do SPI (Sistema de pagamentos instantâneos) somente com números.
+";ispb;deve ser preenchido com o ispb (identificador do sistema de pagamentos brasileiros) do participante do spi (sistema de pagamentos instantâneos) somente com números.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ConsentsDebtorAccount;issuer;string;;;"Código da Agência emissora da conta sem dígito. 
+(Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, 
+no exercício de atividades da instituição, não podendo ser móvel ou transitória).
+
+[Restrição] Preenchimento obrigatório para os seguintes tipos de conta: CACC (CONTA_DEPOSITO_A_VISTA) e SVGS (CONTA_POUPANCA).
+";issuer;código da agência emissora da conta sem dígito. (agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória). [restrição] preenchimento obrigatório para os seguintes tipos de conta: cacc (conta deposito a vista) e svgs (conta poupanca).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ConsentsDebtorAccount;number;string;;;"Deve ser preenchido com o número da conta transacional do usuário pagador, com dígito verificador (se este existir),  
+se houver valor alfanumérico, este deve ser convertido para 0.
+";number;deve ser preenchido com o número da conta transacional do usuário pagador, com dígito verificador (se este existir), se houver valor alfanumérico, este deve ser convertido para 0.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ConsentsDebtorAccount;accountType;;;EnumAccountPaymentsType;;account type;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;Details;localInstrument;;;EnumLocalInstrument;;local instrument;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;Details;qrCode;string;;;"Sequência de caracteres que corresponde ao QR Code disponibilizado para o pagador.
+É a sequência de caracteres que seria lida pelo leitor de QR Code, e deve propiciar o retorno dos dados do pagador após consulta na DICT.
+Essa funcionalidade é possível tanto para QR Code estático quanto para QR Code dinâmico.
+No arranjo do Pix esta é a mesma sequência gerada e/ou lida pela funcionalidade Pix Copia e Cola.
+Este campo deverá ser no formato UTF-8.
+[Restrição] Preenchimento obrigatório para pagamentos por QR Code, observado o tamanho máximo de 512 bytes.
+";qr code;sequência de caracteres que corresponde ao qr code disponibilizado para o pagador. é a sequência de caracteres que seria lida pelo leitor de qr code, e deve propiciar o retorno dos dados do pagador após consulta na dict. essa funcionalidade é possível tanto para qr code estático quanto para qr code dinâmico. no arranjo do pix esta é a mesma sequência gerada e ou lida pela funcionalidade pix copia e cola. este campo deverá ser no formato utf 8. [restrição] preenchimento obrigatório para pagamentos por qr code, observado o tamanho máximo de 512 bytes.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;Details;proxy;string;;;"Chave cadastrada no DICT pertencente ao recebedor. Os tipos de chaves podem ser: telefone, e-mail, cpf/cnpj ou chave aleatória.
+No caso de telefone celular deve ser informado no padrão E.1641.
+Para e-mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres.
+No caso de CPF deverá ser informado com 11 números, sem pontos ou traços.
+Para o caso de CNPJ deverá ser informado com 14 números, sem pontos ou traços.
+No caso de chave aleatória deve ser informado o UUID gerado pelo DICT, conforme formato especificado na RFC41223.
+Se informado, a detentora da conta deve validar o proxy no DICT quando localInstrument for igual a DICT, QRDN ou QRES e validar o campo creditorAccount.
+Esta validação é opcional caso o localInstrument for igual a INIC.
+[Restrição]
+Se localInstrument for igual a MANU, o campo proxy não deve ser preenchido.
+Se localInstrument for igual INIC, DICT, QRDN ou QRES, o campo proxy deve ser sempre preenchido com a chave Pix.
+";proxy;chave cadastrada no dict pertencente ao recebedor. os tipos de chaves podem ser: telefone, e mail, cpf cnpj ou chave aleatória. no caso de telefone celular deve ser informado no padrão e.1641. para e mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. no caso de cpf deverá ser informado com 11 números, sem pontos ou traços. para o caso de cnpj deverá ser informado com 14 números, sem pontos ou traços. no caso de chave aleatória deve ser informado o uuid gerado pelo dict, conforme formato especificado na rfc41223. se informado, a detentora da conta deve validar o proxy no dict quando local instrument for igual a dict, qrdn ou qres e validar o campo creditor account. esta validação é opcional caso o local instrument for igual a inic. [restrição] se local instrument for igual a manu, o campo proxy não deve ser preenchido. se local instrument for igual inic, dict, qrdn ou qres, o campo proxy deve ser sempre preenchido com a chave pix.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;Details;creditorAccount;;;CreditorAccount;;creditor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ConsentRejectionReason;code;;;EnumConsentRejectionReasonType;;code;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ConsentRejectionReason;detail;string;;;"Contém informações adicionais ao consentimento rejeitado.
+- VALOR_INVALIDO: O valor enviado não é válido para o QR Code informado;
+- NAO_INFORMADO: Não informada pela detentora de conta;
+- FALHA_INFRAESTRUTURA: [Descrição de qual falha na infraestrutura inviabilizou o processamento].
+- TEMPO_EXPIRADO_AUTORIZACAO: Consentimento expirou antes que o usuário pudesse confirmá-lo.
+- TEMPO_EXPIRADO_CONSUMO: O usuário não finalizou o fluxo de pagamento e o consentimento expirou;
+- REJEITADO_USUARIO: O usuário rejeitou a autorização do consentimento 
+- CONTAS_ORIGEM_DESTINO_IGUAIS: A conta selecionada é igual à conta destino e não permite realizar esse pagamento.
+- CONTA_NAO_PERMITE_PAGAMENTO: A conta selecionada é do tipo [salario/investimento/liquidação/outros] e não permite realizar esse pagamento.
+- SALDO_INSUFICIENTE: A conta selecionada não possui saldo suficiente para realizar o pagamento.
+- VALOR_ACIMA_LIMITE: O valor ultrapassa o limite estabelecido [na instituição/no arranjo/outro] para permitir a realização de transações pelo cliente.
+- QRCODE_INVALIDO: O QRCode utilizado para a iniciação de pagamento não é válido. 
+
+[Restrição] Caso consentimento rejeitado de versões nas quais não havia o campo rejectionReason retornar o seguinte detail: Motivo de rejeição inexistente em versões anteriores.
+";detail;"contém informações adicionais ao consentimento rejeitado. valor invalido: o valor enviado não é válido para o qr code informado; nao informado: não informada pela detentora de conta; falha infraestrutura: [descrição de qual falha na infraestrutura inviabilizou o processamento]. tempo expirado autorizacao: consentimento expirou antes que o usuário pudesse confirmá lo. tempo expirado consumo: o usuário não finalizou o fluxo de pagamento e o consentimento expirou; rejeitado usuario: o usuário rejeitou a autorização do consentimento contas origem destino iguais: a conta selecionada é igual à conta destino e não permite realizar esse pagamento. conta nao permite pagamento: a conta selecionada é do tipo [salario investimento liquidação outros] e não permite realizar esse pagamento. saldo insuficiente: a conta selecionada não possui saldo suficiente para realizar o pagamento. valor acima limite: o valor ultrapassa o limite estabelecido [na instituição no arranjo outro] para permitir a realização de transações pelo cliente. qrcode invalido: o qrcode utilizado para a iniciação de pagamento não é válido. [restrição] caso consentimento rejeitado de versões nas quais não havia o campo rejection reason retornar o seguinte detail: motivo de rejeição inexistente em versões anteriores.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;RejectionReason;code;;;EnumRejectionReasonType;;code;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;RejectionReason;detail;string;;;Contém informações adicionais ao pagamento rejeitado;detail;contém informações adicionais ao pagamento rejeitado;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;RejectionReasonGetPix;code;;;EnumRejectionReasonTypeGetPix;;code;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;RejectionReasonGetPix;detail;string;;;Contém informações adicionais ao pagamento rejeitado;detail;contém informações adicionais ao pagamento rejeitado;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;Identification;personType;;;EnumPaymentPersonType;;person type;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;Identification;cpfCnpj;string;;;"Identificação da pessoa envolvida na transação.  
+Preencher com o CPF ou CNPJ, de acordo com o valor escolhido no campo type.  
+O CPF será utilizado com 11 números e deverá ser informado sem pontos ou traços.  
+O CNPJ será utilizado com 14 números e deverá ser informado sem pontos ou traços.
+";cpf cnpj;identificação da pessoa envolvida na transação. preencher com o cpf ou cnpj, de acordo com o valor escolhido no campo type. o cpf será utilizado com 11 números e deverá ser informado sem pontos ou traços. o cnpj será utilizado com 14 números e deverá ser informado sem pontos ou traços.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;Identification;name;string;;;"Em caso de pessoa natural deve ser informado o nome completo do titular da conta do recebedor.  
+Em caso de pessoa jurídica deve ser informada a razão social ou o nome fantasia da conta do recebedor.
+";name;em caso de pessoa natural deve ser informado o nome completo do titular da conta do recebedor. em caso de pessoa jurídica deve ser informada a razão social ou o nome fantasia da conta do recebedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;LoggedUser;document;object;;;;document;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;Meta;requestDateTime;string;date-time;;Data e hora da consulta, conforme especificação RFC-3339, formato UTC.;request date time;data e hora da consulta, conforme especificação rfc 3339, formato utc.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;LinkSingle;self;string;uri;;URI completo que gerou a resposta atual.;self;uri completo que gerou a resposta atual.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;LinkSinglePost;self;string;uri;;URI completo para o primeiro item presente na resposta.;self;uri completo para o primeiro item presente na resposta.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PaymentConsent;type;;;EnumPaymentType;;type;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PaymentConsent;schedule;;;Schedule;;schedule;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PaymentConsent;date;string;date;;"[Restrição] Mutuamente excludente com o objeto schedule. 
+
+Este campo é obrigatório no caso de pagamento único. 
+
+Neste caso, o objeto schedule não deve ser informado.
+";date;[restrição] mutuamente excludente com o objeto schedule. este campo é obrigatório no caso de pagamento único. neste caso, o objeto schedule não deve ser informado.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PaymentConsent;currency;string;;;"Código da moeda nacional segundo modelo ISO-4217, ou seja, 'BRL'.
+Todos os valores monetários informados estão representados com a moeda vigente do Brasil.
+";currency;código da moeda nacional segundo modelo iso 4217, ou seja, 'brl'. todos os valores monetários informados estão representados com a moeda vigente do brasil.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PaymentConsent;amount;string;;;"Valor da transação com 2 casas decimais.
+";amount;valor da transação com 2 casas decimais.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PaymentConsent;ibgeTownCode;string;;;"O campo ibgetowncode no arranjo PIX, tem o mesmo comportamento que o campo codMun descrito no item 1.6.6 do manual do PIX, conforme segue:
+
+1. Caso a informação referente ao município não seja enviada; o PSP do recebedor assumirá que não existem feriados estaduais e municipais no período em questão;
+";ibge town code;"o campo ibgetowncode no arranjo pix, tem o mesmo comportamento que o campo cod mun descrito no item 1.6.6 do manual do pix, conforme segue: 1. caso a informação referente ao município não seja enviada; o psp do recebedor assumirá que não existem feriados estaduais e municipais no período em questão;";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PaymentConsent;details;;;Details;;details;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PaymentPix;amount;string;;;"Valor da transação com 2 casas decimais. O valor deve ser o mesmo enviado no consentimento. 
+
+Para QR Code estático com valor pré-determinado no QR Code ou para QR Code dinâmico com indicação de que o valor não pode ser alterado: O campo amount deve ser preenchido com o valor estabelecido no QR Code. 
+Caso seja preenchido com valor divergente do QR Code, deve ser retornado um erro HTTP Status 422.
+";amount;valor da transação com 2 casas decimais. o valor deve ser o mesmo enviado no consentimento. para qr code estático com valor pré determinado no qr code ou para qr code dinâmico com indicação de que o valor não pode ser alterado: o campo amount deve ser preenchido com o valor estabelecido no qr code. caso seja preenchido com valor divergente do qr code, deve ser retornado um erro http status 422.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PaymentPix;currency;string;;;"Código da moeda nacional segundo modelo ISO-4217, ou seja, 'BRL'.  
+Todos os valores monetários informados estão representados com a moeda vigente do Brasil.
+";currency;código da moeda nacional segundo modelo iso 4217, ou seja, 'brl'. todos os valores monetários informados estão representados com a moeda vigente do brasil.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PatchPixPayment;data;;;PatchPixPaymentData;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PatchPixPaymentData;status;;;EnumPaymentCancellationStatusType;;status;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PatchPixPaymentData;cancellation;object;;;"Objeto que agrupa as informações de qual foi o usuário pagador que solicitou o cancelamento da transação.  
+Observação: este campo é necessário porque, em casos de múltiplas alçadas de autorização, é possível que o pagamento seja solicitado por um usuário pagador e cancelado por outro.
+";cancellation;objeto que agrupa as informações de qual foi o usuário pagador que solicitou o cancelamento da transação. observação: este campo é necessário porque, em casos de múltiplas alçadas de autorização, é possível que o pagamento seja solicitado por um usuário pagador e cancelado por outro.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PatchPixPaymentCancellation;reason;;;EnumPaymentCancellationReasonType;;reason;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PatchPixPaymentCancellation;cancelledFrom;;;EnumPaymentCancellationFromType;;cancelled from;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PatchPixPaymentCancellation;cancelledAt;string;date-time;;Data e hora que foi realizado o cancelamento, conforme especificação RFC-3339, formato UTC.;cancelled at;data e hora que foi realizado o cancelamento, conforme especificação rfc 3339, formato utc.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PatchPixPaymentCancellation;cancelledBy;object;;;Informação relacionada ao usuário pagador que solicitou o cancelamento do pagamento.;cancelled by;informação relacionada ao usuário pagador que solicitou o cancelamento do pagamento.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PixPaymentCancellation;reason;;;EnumPaymentCancellationReasonType;;reason;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PixPaymentCancellation;cancelledFrom;;;EnumPaymentCancellationFromType;;cancelled from;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PixPaymentCancellation;cancelledAt;string;date-time;;Data e hora que foi realizado o cancelamento, conforme especificação RFC-3339, formato UTC.;cancelled at;data e hora que foi realizado o cancelamento, conforme especificação rfc 3339, formato utc.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;PixPaymentCancellation;cancelledBy;object;;;Informação relacionada ao usuário pagador que solicitou o cancelamento do pagamento.;cancelled by;informação relacionada ao usuário pagador que solicitou o cancelamento do pagamento.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponseError;errors;array;;;;errors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponseError;meta;object;;;Meta informações referente à API requisitada.;meta;meta informações referente à api requisitada.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePaymentConsent;data;object;;;Objeto contendo as informações de consentimento para a iniciação de pagamento.;data;objeto contendo as informações de consentimento para a iniciação de pagamento.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePaymentConsent;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePaymentConsent;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponseCreatePaymentConsent;data;object;;;Objeto contendo as informações de consentimento para a iniciação de pagamento.;data;objeto contendo as informações de consentimento para a iniciação de pagamento.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponseCreatePaymentConsent;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponseCreatePaymentConsent;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPayment;data;;;ResponsePixPaymentData;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPayment;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPayment;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixConsent;data;array;;;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixConsent;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixConsent;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPayment;data;;;ResponsePatchPixPaymentData;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPayment;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPayment;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;paymentId;string;;;"Código ou identificador único informado pela instituição detentora da conta para representar
+a iniciação de pagamento individual. O `paymentId` deve ser diferente do `endToEndId`.
+Este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.
+";payment id;código ou identificador único informado pela instituição detentora da conta para representar a iniciação de pagamento individual. o `payment id` deve ser diferente do `end to end id`. este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;endToEndId;;;EndToEndId;;end to end id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;consentId;string;;;"Identificador único do consentimento criado para a iniciação de pagamento solicitada. Deverá ser um URN - Uniform Resource Name.
+Um URN, conforme definido na [RFC8141](https://tools.ietf.org/html/rfc8141) é um Uniform Resource
+Identifier - URI - que é atribuído sob o URI scheme ""urn"" e um namespace URN específico, com a intenção de que o URN
+seja um identificador de recurso persistente e independente da localização.
+Considerando a string urn:bancoex:C1DD33123 como exemplo para consentId temos:
+- o namespace(urn)
+- o identificador associado ao namespace da instituição transnmissora (bancoex)
+- o identificador específico dentro do namespace (C1DD33123).
+Informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [RFC8141](https://tools.ietf.org/html/rfc8141).
+";consent id;"identificador único do consentimento criado para a iniciação de pagamento solicitada. deverá ser um urn uniform resource name. um urn, conforme definido na [rfc8141](https: tools.ietf.org html rfc8141) é um uniform resource identifier uri que é atribuído sob o uri scheme ""urn"" e um namespace urn específico, com a intenção de que o urn seja um identificador de recurso persistente e independente da localização. considerando a string urn:bancoex:c1 dd33123 como exemplo para consent id temos: o namespace(urn) o identificador associado ao namespace da instituição transnmissora (bancoex) o identificador específico dentro do namespace (c1 dd33123). informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [rfc8141](https: tools.ietf.org html rfc8141).";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;creationDateTime;string;date-time;;"Data e hora em que o recurso foi criado.
+Uma string com data e hora conforme especificação RFC-3339,
+sempre com a utilização de timezone UTC(UTC time format).
+";creation date time;data e hora em que o recurso foi criado. uma string com data e hora conforme especificação rfc 3339, sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;statusUpdateDateTime;string;date-time;;"Data e hora da última atualização da iniciação de pagamento.
+Uma string com data e hora conforme especificação RFC-3339,
+sempre com a utilização de timezone UTC(UTC time format).
+";status update date time;data e hora da última atualização da iniciação de pagamento. uma string com data e hora conforme especificação rfc 3339, sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;proxy;string;;;"Chave cadastrada no DICT pertencente ao recebedor. Os tipos de chaves podem ser: telefone, e-mail, cpf/cnpj ou chave aleatória.
+No caso de telefone celular deve ser informado no padrão E.1641.
+Para e-mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres.
+No caso de CPF deverá ser informado com 11 números, sem pontos ou traços.
+Para o caso de CNPJ deverá ser informado com 14 números, sem pontos ou traços.
+No caso de chave aleatória deve ser informado o UUID gerado pelo DICT, conforme formato especificado na RFC41223.
+Se informado, a detentora da conta deve validar o proxy no DICT quando localInstrument for igual a DICT, QRDN ou QRES e validar o campo creditorAccount.
+Esta validação é opcional caso o localInstrument for igual a INIC.
+[Restrição] Se localInstrument for igual a MANU, o campo proxy não deve ser preenchido. Se localInstrument for igual INIC, DICT, QRDN ou QRES, o campo proxy deve ser sempre preenchido com a chave Pix.
+";proxy;chave cadastrada no dict pertencente ao recebedor. os tipos de chaves podem ser: telefone, e mail, cpf cnpj ou chave aleatória. no caso de telefone celular deve ser informado no padrão e.1641. para e mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. no caso de cpf deverá ser informado com 11 números, sem pontos ou traços. para o caso de cnpj deverá ser informado com 14 números, sem pontos ou traços. no caso de chave aleatória deve ser informado o uuid gerado pelo dict, conforme formato especificado na rfc41223. se informado, a detentora da conta deve validar o proxy no dict quando local instrument for igual a dict, qrdn ou qres e validar o campo creditor account. esta validação é opcional caso o local instrument for igual a inic. [restrição] se local instrument for igual a manu, o campo proxy não deve ser preenchido. se local instrument for igual inic, dict, qrdn ou qres, o campo proxy deve ser sempre preenchido com a chave pix.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;ibgeTownCode;string;;;"O campo ibgetowncode no arranjo PIX, tem o mesmo comportamento que o campo codMun descrito no item 1.6.6 do manual do PIX, conforme segue:
+
+1. Caso a informação referente ao município não seja enviada; o PSP do recebedor assumirá que não existem feriados estaduais e municipais no período em questão;
+";ibge town code;"o campo ibgetowncode no arranjo pix, tem o mesmo comportamento que o campo cod mun descrito no item 1.6.6 do manual do pix, conforme segue: 1. caso a informação referente ao município não seja enviada; o psp do recebedor assumirá que não existem feriados estaduais e municipais no período em questão;";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;status;;;EnumPaymentStatusType;;status;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;rejectionReason;;;RejectionReason;;rejection reason;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;localInstrument;;;EnumLocalInstrument;;local instrument;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;cnpjInitiator;string;;;CNPJ do Iniciador de Pagamento devidamente habilitado para a prestação de Serviço de Iniciação no Pix.;cnpj initiator;cnpj do iniciador de pagamento devidamente habilitado para a prestação de serviço de iniciação no pix.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;payment;;;PaymentPix;;payment;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;transactionIdentification;string;;;"Trata-se de um identificador de transação que deve ser retransmitido intacto pelo PSP do pagador ao gerar a ordem de pagamento.
+
+[Restrição] A detentora deve obrigatoriamente retornar o campo com o mesmo valor recebido da iniciadora, caso ele tenha sido enviado na requisição da iniciação do pagamento.
+";transaction identification;trata se de um identificador de transação que deve ser retransmitido intacto pelo psp do pagador ao gerar a ordem de pagamento. [restrição] a detentora deve obrigatoriamente retornar o campo com o mesmo valor recebido da iniciadora, caso ele tenha sido enviado na requisição da iniciação do pagamento.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;remittanceInformation;string;;;"Deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.
+";remittance information;deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;creditorAccount;;;CreditorAccount;;creditor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;cancellation;;;PatchPixPaymentCancellation;;cancellation;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;debtorAccount;;;DebtorAccount;;debtor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePatchPixPaymentData;authorisationFlow;string;;;"Campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado.
+
+[Restrição] Se CIBA ou FIDO, preenchimento obrigatório. Caso o campo não esteja presente no payload, subentende-se que o fluxo de autorização utilizado é o HYBRID_FLOW.
+";authorisation flow;campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado. [restrição] se ciba ou fido, preenchimento obrigatório. caso o campo não esteja presente no payload, subentende se que o fluxo de autorização utilizado é o hybrid flow.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponseCreatePixPayment;data;array;;;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponseCreatePixPayment;links;;;LinkSinglePost;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponseCreatePixPayment;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;paymentId;string;;;"Código ou identificador único informado pela instituição detentora da conta para representar
+a iniciação de pagamento individual. O `paymentId` deve ser diferente do `endToEndId`.
+Este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.
+";payment id;código ou identificador único informado pela instituição detentora da conta para representar a iniciação de pagamento individual. o `payment id` deve ser diferente do `end to end id`. este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;endToEndId;;;EndToEndId;;end to end id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;consentId;string;;;"Identificador único do consentimento criado para a iniciação de pagamento solicitada. Deverá ser um URN - Uniform Resource Name.
+Um URN, conforme definido na [RFC8141](https://tools.ietf.org/html/rfc8141) é um Uniform Resource
+Identifier - URI - que é atribuído sob o URI scheme ""urn"" e um namespace URN específico, com a intenção de que o URN
+seja um identificador de recurso persistente e independente da localização.
+Considerando a string urn:bancoex:C1DD33123 como exemplo para consentId temos:
+- o namespace(urn)
+- o identificador associado ao namespace da instituição transnmissora (bancoex)
+- o identificador específico dentro do namespace (C1DD33123).
+Informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [RFC8141](https://tools.ietf.org/html/rfc8141).
+";consent id;"identificador único do consentimento criado para a iniciação de pagamento solicitada. deverá ser um urn uniform resource name. um urn, conforme definido na [rfc8141](https: tools.ietf.org html rfc8141) é um uniform resource identifier uri que é atribuído sob o uri scheme ""urn"" e um namespace urn específico, com a intenção de que o urn seja um identificador de recurso persistente e independente da localização. considerando a string urn:bancoex:c1 dd33123 como exemplo para consent id temos: o namespace(urn) o identificador associado ao namespace da instituição transnmissora (bancoex) o identificador específico dentro do namespace (c1 dd33123). informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [rfc8141](https: tools.ietf.org html rfc8141).";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;creationDateTime;string;date-time;;"Data e hora em que o recurso foi criado.
+Uma string com data e hora conforme especificação RFC-3339,
+sempre com a utilização de timezone UTC(UTC time format).
+";creation date time;data e hora em que o recurso foi criado. uma string com data e hora conforme especificação rfc 3339, sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;statusUpdateDateTime;string;date-time;;"Data e hora da última atualização da iniciação de pagamento.
+Uma string com data e hora conforme especificação RFC-3339,
+sempre com a utilização de timezone UTC(UTC time format).
+";status update date time;data e hora da última atualização da iniciação de pagamento. uma string com data e hora conforme especificação rfc 3339, sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;proxy;string;;;"Chave cadastrada no DICT pertencente ao recebedor. Os tipos de chaves podem ser: telefone, e-mail, cpf/cnpj ou chave aleatória.
+No caso de telefone celular deve ser informado no padrão E.1641.
+Para e-mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres.
+No caso de CPF deverá ser informado com 11 números, sem pontos ou traços.
+Para o caso de CNPJ deverá ser informado com 14 números, sem pontos ou traços.
+No caso de chave aleatória deve ser informado o UUID gerado pelo DICT, conforme formato especificado na RFC41223.
+Se informado, a detentora da conta deve validar o proxy no DICT quando localInstrument for igual a DICT, QRDN ou QRES e validar o campo creditorAccount.
+Esta validação é opcional caso o localInstrument for igual a INIC.
+[Restrição] Se localInstrument for igual a MANU, o campo proxy não deve ser preenchido. Se localInstrument for igual INIC, DICT, QRDN ou QRES, o campo proxy deve ser sempre preenchido com a chave Pix.
+";proxy;chave cadastrada no dict pertencente ao recebedor. os tipos de chaves podem ser: telefone, e mail, cpf cnpj ou chave aleatória. no caso de telefone celular deve ser informado no padrão e.1641. para e mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. no caso de cpf deverá ser informado com 11 números, sem pontos ou traços. para o caso de cnpj deverá ser informado com 14 números, sem pontos ou traços. no caso de chave aleatória deve ser informado o uuid gerado pelo dict, conforme formato especificado na rfc41223. se informado, a detentora da conta deve validar o proxy no dict quando local instrument for igual a dict, qrdn ou qres e validar o campo creditor account. esta validação é opcional caso o local instrument for igual a inic. [restrição] se local instrument for igual a manu, o campo proxy não deve ser preenchido. se local instrument for igual inic, dict, qrdn ou qres, o campo proxy deve ser sempre preenchido com a chave pix.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;ibgeTownCode;string;;;"O campo ibgetowncode no arranjo PIX, tem o mesmo comportamento que o campo codMun descrito no item 1.6.6 do manual do PIX, conforme segue:
+
+1. Caso a informação referente ao município não seja enviada; o PSP do recebedor assumirá que não existem feriados estaduais e municipais no período em questão;
+";ibge town code;"o campo ibgetowncode no arranjo pix, tem o mesmo comportamento que o campo cod mun descrito no item 1.6.6 do manual do pix, conforme segue: 1. caso a informação referente ao município não seja enviada; o psp do recebedor assumirá que não existem feriados estaduais e municipais no período em questão;";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;status;;;EnumPaymentStatusType;;status;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;rejectionReason;;;RejectionReasonGetPix;;rejection reason;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;localInstrument;;;EnumLocalInstrument;;local instrument;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;cnpjInitiator;string;;;CNPJ do Iniciador de Pagamento devidamente habilitado para a prestação de Serviço de Iniciação no Pix.;cnpj initiator;cnpj do iniciador de pagamento devidamente habilitado para a prestação de serviço de iniciação no pix.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;payment;;;PaymentPix;;payment;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;transactionIdentification;string;;;"Trata-se de um identificador de transação que deve ser retransmitido intacto pelo PSP do pagador ao gerar a ordem de pagamento.
+
+[Restrição] A detentora deve obrigatoriamente retornar o campo com o mesmo valor recebido da iniciadora, caso ele tenha sido enviado na requisição da iniciação do pagamento.
+";transaction identification;trata se de um identificador de transação que deve ser retransmitido intacto pelo psp do pagador ao gerar a ordem de pagamento. [restrição] a detentora deve obrigatoriamente retornar o campo com o mesmo valor recebido da iniciadora, caso ele tenha sido enviado na requisição da iniciação do pagamento.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;remittanceInformation;string;;;"Deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.
+";remittance information;deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;creditorAccount;;;CreditorAccount;;creditor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;cancellation;;;PixPaymentCancellation;;cancellation;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;debtorAccount;;;DebtorAccount;;debtor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ResponsePixPaymentData;authorisationFlow;string;;;"Campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado.
+
+[Restrição] Se CIBA ou FIDO, preenchimento obrigatório. Caso o campo não esteja presente no payload, subentende-se que o fluxo de autorização utilizado é o HYBRID_FLOW.
+";authorisation flow;campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado. [restrição] se ciba ou fido, preenchimento obrigatório. caso o campo não esteja presente no payload, subentende se que o fluxo de autorização utilizado é o hybrid flow.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ScheduleSingle;single;object;;;Define a política de agendamento único.;single;define a política de agendamento único.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ScheduleDaily;daily;object;;;;daily;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ScheduleWeekly;weekly;object;;;;weekly;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ScheduleMonthly;monthly;object;;;;monthly;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml
+BANCO;OFB_payments_4.0.0.yml;ScheduleCustom;custom;object;;;"[Restrição] As datas enviadas na lista de datas (array “dates”) não podem ser repetidas. 
+Caso datas repetidas sejam enviadas, o detentor deve rejeitar a criação do consentimento, informando o erro PARAMETRO_INVALIDO.
+";custom;[restrição] as datas enviadas na lista de datas (array “dates”) não podem ser repetidas. caso datas repetidas sejam enviadas, o detentor deve rejeitar a criação do consentimento, informando o erro parametro invalido.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payments/4.0.0.yml

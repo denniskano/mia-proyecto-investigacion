@@ -1,0 +1,11 @@
+{
+  "name": "exposicion-plan-tesis-v2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:v2": "node build_exposicion_v2.mjs"
+  },
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}

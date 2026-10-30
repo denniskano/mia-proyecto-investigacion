@@ -1,0 +1,16 @@
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen}
+
+Los bancos publican APIs como contratos OpenAPI (YAML/JSON). BIAN ordena el negocio en
+\ServiceDomain{}s con \textit{behaviors} y \textit{business objects}. Esas dos capas las escriben
+equipos distintos y rara vez se comprueba, antes de integrar, si el contrato REST coincide con el
+modelo de referencia.
+
+Este plan define \textbf{cómo} medir esa correspondencia: \SemanticScore{} (S),
+\StructuralScore{} (E), \CoverageScore{} (C) y un \AlignmentScore{} agregado, con trazabilidad en
+la matriz de consistencia (Anexo~C). El alcance se limita a artefactos documentales (contrato +
+extracto BIAN); no se implementa el artefacto ni se evalúa seguridad operativa de APIs en
+producción (§\ref{sec:alcances}).
+
+\vspace{0.5cm}
+\noindent\textbf{Palabras clave:} \palabrasClaveES.

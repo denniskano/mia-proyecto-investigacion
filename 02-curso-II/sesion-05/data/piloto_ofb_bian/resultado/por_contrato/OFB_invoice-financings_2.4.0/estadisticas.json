@@ -1,0 +1,22 @@
+{
+  "archivo_entrada": "OFB_invoice-financings_2.4.0.yml",
+  "source": "BANCO",
+  "contrato": "API Invoice-financings - Open Finance Brasil",
+  "version": "2.4.0",
+  "openapi": "3.0.0",
+  "cantidad_operaciones": 5,
+  "cantidad_schemas": 39,
+  "cantidad_propiedades": 105,
+  "fragmentos_corpus": 217,
+  "operaciones_con_summary": 5,
+  "operaciones_con_description": 5,
+  "operaciones_summary_igual_description": 0,
+  "metodos": {
+    "GET": 5
+  },
+  "tags": {
+    "Invoice Financings": 5
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/invoice-financings/2.4.0.yml"
+}

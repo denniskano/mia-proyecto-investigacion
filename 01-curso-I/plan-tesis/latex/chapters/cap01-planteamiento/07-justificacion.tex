@@ -1,0 +1,23 @@
+\section{Justificación e importancia}
+
+Esta sección explica por qué conviene medir la coherencia OpenAPI--BIAN \textbf{antes} de integrar.
+No repite las definiciones del §1.1 ni la casuística del §\ref{sec:problematica}.
+
+En arquitectura bancaria, cada \textit{release} puede desplazar la interfaz REST respecto al modelo
+de negocio acordado. Farzi (2021) y Bhatia (2022) muestran que, sin trazabilidad entre capacidades
+BIAN y contratos publicados, la deriva se acumula entre equipos de producto, integración y
+gobernanza.
+
+Medir esa deriva solo con revisiones manuales no escala cuando coexisten decenas de APIs y socios
+externos. El plan propone cuantificar la coherencia mediante \AlignmentScore{} y las preguntas
+P1--P4 (§\ref{sec:planteamiento}), de modo que una revisión documental pueda priorizarse con
+evidencia objetiva (Shabbir et al., 2025).
+
+La literatura confirma la madurez de OpenAPI como artefacto técnico (Casas et al., 2021), pero la
+intersección sistemática OpenAPI--BIAN sigue delgada. Este estudio aporta el procedimiento
+reproducible y la matriz de consistencia (Anexo~C) que cierra esa brecha metodológica.
+
+El diseño descansa en representación del conocimiento, alineación de esquemas y similitud semántica
+---las mismas líneas que operacionalizan S y el \textit{matching} estructural E---. Deliberadamente
+no sustituye testing \textit{runtime} ni certificación regulatoria (eje E5, §\ref{sec:estado-arte}):
+evalúa coherencia \textbf{documental} antes del despliegue.

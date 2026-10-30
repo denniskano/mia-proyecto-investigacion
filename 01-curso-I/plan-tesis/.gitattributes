@@ -1,0 +1,13 @@
+# Normalizar finales de línea en texto plano
+*.tex text eol=lf
+*.bib text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+Makefile text eol=lf
+latexmkrc text eol=lf
+
+# Binarios
+*.png binary
+*.pdf binary
+*.xlsx binary
+*.svg binary

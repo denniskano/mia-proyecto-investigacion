@@ -1,0 +1,22 @@
+{
+  "archivo_entrada": "OFB_customers_2.2.1.yml",
+  "source": "BANCO",
+  "contrato": "API Customers - Open Finance Brasil",
+  "version": "2.2.1",
+  "openapi": "3.0.0",
+  "cantidad_operaciones": 6,
+  "cantidad_schemas": 58,
+  "cantidad_propiedades": 201,
+  "fragmentos_corpus": 396,
+  "operaciones_con_summary": 6,
+  "operaciones_con_description": 6,
+  "operaciones_summary_igual_description": 0,
+  "metodos": {
+    "GET": 6
+  },
+  "tags": {
+    "Customers": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/customers/2.2.1.yml"
+}

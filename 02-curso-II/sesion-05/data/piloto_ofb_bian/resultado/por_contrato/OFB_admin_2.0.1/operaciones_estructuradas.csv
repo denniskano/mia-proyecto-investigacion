@@ -1,0 +1,2 @@
+﻿source;version;api;archivo;path;method;operation_id;tag;parameters;request_schema_ref;response_200_ref;summary;description;summary_normalized;operation_id_normalized;source_url
+BANCO;2.0.1;APIs Admin do Open Finance Brasil;OFB_admin_2.0.1.yml;/metrics;GET;getMetrics;Metrics;page | pageSize | period;;ResponseMetricsList;Obtém as métricas de disponibilidade das APIs;Obtém as métricas de disponibilidade das APIs;obtém as métricas de disponibilidade das apis;get metrics;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/admin/2.0.1.yml

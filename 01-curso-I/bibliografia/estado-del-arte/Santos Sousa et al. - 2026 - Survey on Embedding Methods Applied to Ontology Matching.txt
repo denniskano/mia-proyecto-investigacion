@@ -1,0 +1,2940 @@
+Survey on Embedding Methods Applied to Ontology Matching
+GUILHERME SANTOS SOUSA, MELODI team, Institut de Recherche en Informatique de Toulouse, Toulouse,
+France
+
+RINALDO JOSE LIMA, Universidade Federal Rural de Pernambuco, Recife, Brazil
+CASSIA TROJAHN, MoEx team, University Grenoble Alpes, Saint-Martin-d’Hères, France and Institut de
+Recherche en Informatique de Toulouse, Toulouse, France
+Ontology matching plays a critical role in data integration, knowledge discovery, and ontology merging by establishing
+correspondences between entities from diverse ontologies. Although traditional methods have proven efective in speciic
+scenarios, they often struggle to capture the semantic depth and contextual nuances of ontology entities, especially when
+applied to large, heterogeneous, and complex ontologies. Embedding-based methods have gained prominence in recent years.
+Their efectiveness stems from their ability to encode semantic and contextual information into dense vector representations,
+which enables more robust similarity computations. This survey provides a comprehensive review of embedding-based
+techniques applied to ontology matching, with a focus on the schema-level of ontologies. A categorization framework is
+proposed that identiies the key features of the diferent proposals and classiies them according to the embedding type, training
+requirements, and context handling. In addition, this work highlights the challenges and opportunities in embedding-based
+ontology matching.
+CCS Concepts: · General and reference → Surveys and overviews; · Information systems → Ontologies; · Computing
+methodologies → Ontology engineering; Learning paradigms; Machine learning approaches.
+Additional Key Words and Phrases: Ontology Matching, Embedding, Survey
+
+1 Introduction
+Ontology matching is the task of identifying correspondences (usually semantically equivalent entities ś classes,
+properties, and instances) across diferent ontologies, encompassing both schema-level components (e.g., classes,
+properties) and instance-level data (e.g., individuals, literals). It is a task recognized as crucial in a range of real
+applications, such as data integration, knowledge fusion, semantic search, and automated reasoning. Despite the
+ield’s maturity, traditional schema-level approaches ś based on lexical, structural, or logic-based heuristics ś
+still struggle with challenges such as heterogeneous vocabularies, diverse modeling conventions, and contextdependent semantics. These limitations have motivated a growing interest in embedding techniques embeddings,
+which ofer a data-driven way to capture semantic similarity. In the context of this work, embedding is a learned
+vector representation of an ontology’s entities (such as classes, properties, and individuals). Based on the principles
+of distributional semantics [31] (that is, the idea that entities occurring in similar contexts tend to have similar
+meanings), these representations enable semantic comparisons that go beyond surface-level string or structural
+similarity.
+Authors’ Contact Information: Guilherme Santos Sousa, MELODI team, Institut de Recherche en Informatique de Toulouse, Toulouse,
+Occitanie, France; e-mail: Guilherme.Santos-Sousa@irit.fr; Rinaldo Jose Lima, Universidade Federal Rural de Pernambuco, Recife, Brazil;
+e-mail: rinaldo.jose@ufrpe.br; Cassia Trojahn, MoEx team, University Grenoble Alpes, Saint-Martin-d’Hères, Auvergne-Rhône-Alpes, France
+and Institut de Recherche en Informatique de Toulouse, Toulouse, France; e-mail: cassia.trojahn-dos-santos@univ-grenoble-alpes.fr.
+
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+© 2026 Copyright held by the owner/author(s).
+ACM 1557-7341/2026/4-ART
+https://doi.org/10.1145/3805799
+ACM Comput. Surv.
+
+2 • G. S. Sousa et al.
+
+Consequently, embeddings ofer a powerful alternative for ontology matching. Unlike traditional lexical
+techniques, embeddings map entities into a continuous vector space where geometric proximity relects semantic
+similarity. This allows matchers to capture subtle semantic relationships, such as synonymy, hyponymy, and
+homonymy, which surface-level string comparisons often miss. Furthermore, these representations can handle
+polysemy by encoding context-speciic information, efectively disambiguating entities that have multiple
+meanings. This makes embedding-based approaches particularly robust in scenarios involving complex, crossdomain, or low-resource ontologies.
+Despite rapid advances in applying embeddings to ontology matching, the ield lacks a uniied and comprehensive synthesis. While existing surveys address narrow subtopics such as the use of external knowledge sources
+[91], deep learning techniques, [40] the encoding of ontology entities with embeddings [21], and entity alignment
+[30, 142]; they do not focus on constructing the embeddings speciically for ontology matching tasks. There
+remains a gap in understanding how embedding methods are used, what kinds of information they encode,
+and how efective they are in various matching scenarios, particularly complex ones. This survey addresses the
+following key research questions: RQ1: How are embeddings used to represent ontological entities for matching?
+RQ2: What types of embedding strategies have been applied to ontology matching, and how do they difer? RQ3:
+How do existing methods handle the complexity and heterogeneity of real-world ontologies? RQ4: What are the
+limitations of current embedding-based approaches, and what directions should future research take? To answer
+these questions, this paper makes the following contributions:
+• Comprehensive Survey: provide an up-to-date and systematic review of embedding approaches applied to
+ontology matching at the schema-level, with a particular focus on embedding-based methods.
+• Novel Classiication Framework: introduce a new classiication model for embedding-based ontology matching
+approaches, based on three key dimensions: Lexical unit segmentation, Training strategy, and Complexity of
+information representation (simple vs. complex matching).
+• Gap Analysis and Comparison: analyze the strengths and limitations of each matcher, highlighting underexplored areas such as the use of embeddings in complex matching tasks.
+• Extension of Prior Work: This survey expands on the work of Sousa et al. [105] by incorporating 81 recent
+studies and introducing an additional dimension (simple vs. complex matching) to capture task complexity. It
+relects the degree of expressiveness supported by embedding-based approaches in the correspondences they
+generate.
+• Future Research Directions: provide a forward-looking discussion on the role of embeddings in ontology
+matching, including how they can complement external knowledge sources and improve alignment quality in
+complex scenarios.
+The remainder of this paper is organized as follows. Section 2 introduces foundational concepts in ontology
+matching and embeddings. Section 3 describes the methodology used to identify and analyze relevant works.
+Section 4 presents the proposed classiication model. Section 5 categorizes and describes existing approaches
+based on the proposed dimensions. Section 6 compares the approaches and discusses key insights. Section 7
+outlines promising directions for future research. Finally, Section 8 summarizes the indings and contributions of
+the survey.
+
+2 Foundational Concepts
+2.1 Fundamentals of Ontology Matching
+Ontology matching [28] is the process of generating an alignment (�′ ) between ontologies in a set Ω. While Ω
+can include more than two ontologies in the general case, it typically consists of a pair of ontologies, Ω = � 1, � 2 ,
+with alignments expressed as pairs of corresponding entities. Before deining the matching process, the entities
+of an ontology are introduced.
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 3
+
+Deinition 2.1 (Ontology entity). An ontology entity �� ∈ � is a basic element of the ontology vocabulary. The
+set of ontology entities � of � is deined as:
+� (�) = � (�) ∪ �� (�) ∪ �� (�) ∪ � (�)
+where � (�) denotes the set of classes, �� (�) denotes the set of object properties, �� (�) denotes the set of data
+properties, � (�) denotes the set of individuals (instances). Thus, an ontology entity �� satisies:
+�� ∈ {class, object property, data property, individual}.
+Each entity is identiied by a unique identiier (e.g., an IRI) and may be associated with lexical annotations and
+formal axioms deining its semantics.
+Deinition 2.2 (Matching process). The matching process can be deined as a function � that takes a pair of
+ontologies to be matched (� 1 and � 2 ), an optional input alignment �, a set of parameters �, and a set of resources
+� (e.g., background knowledge), and returns an alignment �′ between � 1 and � 2 :
+�′ = � (� 1, � 2, �, �, � )
+Each of the elements featured in this deinition has speciic characteristics that inluence the diiculty of the
+task.
+Deinition 2.3 (Alignment). An alignment �� 1 →� 2 (or �′ ) is a set of correspondences � 1, � 2, ..., �� . �� 1 →� 2 is
+directional between a source ontology � 1 and a target ontology � 2 .
+A correspondence expresses a relation � between ontology entities of � 1 and � 2 . Here, the ontology entities are
+members of the correspondence:
+Deinition 2.4 (Correspondence). A correspondence expresses a relation � (equivalence (≡), subsumption (⊒,
+⊑)) between two members � 1 and � 2 , and � expresses the level of conidence [0..1]. A member can be a single
+ontology entity of respectively � 1 and � 2 , or a more complex construction which is composed of some entities
+using constructors or transformation functions (as in the examples in the following). From that, two types of
+correspondences can be considered depending on the type of their members [116]:
+• a correspondence is simple if both � 1 and � 2 are single entities (represented as IRIs);
+• a correspondence is complex if at least one of � 1 or � 2 involves a constructor or a transformation function.
+The correspondence ⟨� 1, � 2, � ⟩ asserts that the relation � holds between the ontology entities � 1 and � 2 . One has
+to distinguish between more and less rigorous interpretations of relations. The equivalence relation, for example,
+can be interpreted as logical equivalence or, more informally, as a high level of similarity. Consider the fragment
+of the ontologies ekaw 1 and cmt 2 in Figures 1 and 2, respectively. The format used to represent the ontologies is
+described in [108]. The following correspondences can be established between these two ontologies:
+• ekaw:Paper,cmt:Paper,≡ is a simple correspondence (both members are single entities);
+• ekaw:AcceptedPaper, ∃cmt:hasDecision.cmt:Acceptance,≡) is a complex correspondence with constructors (� 2
+involves a constructor). As shown in Figure 2, � 2 corresponds to a fragment of the ontology.
+The members of the correspondence can be a simple expression, noted s, or a complex expression, noted c. A
+simple correspondence is always (1:1) whereas a complex correspondence can be (1:n), (m:1) or (m:n). The (1:1),
+(1:n), (m:1), (m:n) notations have been used for the same purpose in the literature [94, 144] (1 for s and m or n for
+c). However, they can be misinterpreted as the alignment arity or multiplicity.
+1 http://oaei.ontologymatching.org/2019/conference/data/ekaw.owl
+2 http://oaei.ontologymatching.org/2019/conference/data/cmt.owl
+
+ACM Comput. Surv.
+
+4 • G. S. Sousa et al.
+
+Decision
+Document
+
+Acceptance
+
+Rejection
+
+Paper
+Accepted_Paper
+Review
+
+hasDecision
+
+writePaper
+Person
+
+Document
+
+Paper
+
+Rejected_Paper
+
+authorOf
+
+Review
+
+co-writePaper rejectedBy
+
+Person
+
+acceptedBy
+
+writeReview
+
+Fig. 1. Fragment of ekaw ontology (from [117]).
+Fig. 2. Fragment of cmt ontology (from [117]).
+
+2.2
+
+Embeddings for Ontologies
+
+An essential step in matching approaches is measuring the similarity between ontology entities. Most approaches
+rely on a lexical step that explores the terminological layer of ontologies (e.g., labels, comments, naming conventions). However, the limited representational capacity of lexical similarity metrics has motivated the integration
+of alternative techniques. One such technique is the use of embeddings, multidimensional numerical vectors that
+capture the semantics of various data types, including text, images, symbolic knowledge, and graph structures
+[141]. These representations can be generated by machine learning models trained on large textual corpora or
+derived from the structural features of symbolic systems, such as ontologies and knowledge graphs (KGs) [5].
+Embeddings enable ontology matching by projecting entities from heterogeneous sources (lexical or structural)
+into a shared vector space, where semantic similarity can be assessed through geometric proximity, such as
+the angle between vectors [105]. This representation captures subtle semantic relations, including synonymy,
+hyponymy, and homonyms, that traditional lexical techniques often overlook [95]. For instance, the embedding
+vectors for the classes "Paper" and "Contribution" from diferent ontologies may exhibit high similarity even in
+the absence of lexical overlap, facilitating the detection of conceptually related but non-identical correspondences,
+as illustrated in Figure 3. Moreover, embeddings can address polysemy by learning multiple sense-speciic
+representations and selecting the appropriate one based on contextual cues [9],. This capability helps disambiguate
+entity meanings, thereby improving the robustness and accuracy of ontology matching systems.
+The generic embedding-based matchers can be seen as a pipeline of irst encoding the ontology elements into
+embedding vectors and then using these vectors to compare the similarity between entities, as illustrated in
+Figure 4. The similarity between two entity embeddings is typically measured using the cosine similarity metric,
+and if this similarity exceeds a predeined threshold, the entities are added to the inal alignment set. An ontology
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 5
+
+Fig. 3. Embeddings similarity is measured as the angle between two vectors.
+
+Fig. 4. Overview of the entity alignment process. Entities from two KGs are encoded into a common vector space, ater
+which a similarity metric is applied to the resulting embeddings to determine correspondences between entities.
+
+matching pipeline can be formally deined as the process designed to identify equivalence correspondences
+between entities from two distinct ontologies, O1 and O2, given as input. Such a pipeline usually consists of the
+following steps:
+Step 1: Embedding Generation. This initial stage involves creating vector representations for the entities
+within both ontologies. It can be performed through many techniques, such as geometric modeling, sequence
+modeling, or graph propagation, and may incorporate both the formal semantics and the textual literals (e.g.,
+names, deinitions) associated with the ontology entities.
+Step 2: Mapping Discovery. The generated embeddings are then employed to identify potential correspondences.
+The literature describes many approaches: (i) directly calculating the distance or similarity between the embedding
+vectors of two entities; (ii) training a supervised classiication model that uses the entity embeddings as input
+features to predict a mapping; and (iii) jointly learning task-speciic embeddings with a matching model for
+optimized performance.
+2.2.1 Text Based. Generating ontology embeddings requires accounting for both structural properties and textual
+metadata. This textual information, primarily entity labels and comments, provides critical natural language
+descriptions. To encode these elements, common techniques leverage pre-trained word vectors and language
+models such as Word2Vec [80], GloVe [88], fastText [13], and BERT [24], which ofer robust representations
+derived from large-scale corpora.
+Unlike static vectors (Word2Vec, GloVe, and fastText) that assign a single, ixed embedding to each vocabulary
+term, contextual models such as ELMo [89], BERT, and SentenceBERT [96] generate dynamic representations.
+While static models fail to distinguish polysemous words, assigning the same vector to "bank" regardless of
+ACM Comput. Surv.
+
+6 • G. S. Sousa et al.
+
+meaning, transformer-based architectures leverage multiple neural layers to produce distinct embeddings based
+on surrounding tokens. This contextual sensitivity is critical when incorporating hierarchical or relational
+metadata into entity embeddings. For multi-word sequences, representations are typically condensed into a single
+vector using aggregation strategies such as mean pooling, the [CLS] token in BERT, or the inal hidden state in
+LSTM networks.
+An additional distinction among these language models lies in their tokenization process. In Word2Vec, each
+word corresponds to a single embedding; for example, "Computer" and "Computers" are treated as distinct tokens
+with their unique embeddings. Diferently, models like BERT use subword tokenization with methods such as
+WordPiece. In this scheme, "Computer" might be split into pieces like "Comp" and "uter", while "Computers"
+could be segmented into "Comp", "uter", and "s", with each piece having a corresponding embedding. The primary
+advantage of this subword approach is its ability to handle out-of-vocabulary terms. While Word2Vec cannot
+generate a representation for a word not present in its vocabulary, WordPiece can construct one by combining the
+embeddings of its known subword units. This enhances the generalization of matching systems across diferent
+domains without the need for retraining.
+2.2.2 Graph Based. Along with textual information, in ontology matching, structural embeddings are desired
+since they can encode more information into entity embeddings to improve matching performance and can deal
+with the homonym problem to reject false positive correspondences. Diverse techniques for encoding graph
+structures exist. One of the irst approaches is RDF2Vec [97]. In RDF2Vec, the ontology graph is traversed by
+random walks, generating a document of sentences that are later used by an embedding model to generate
+the entity embeddings. The original implementation of RDF2Vec splits the sentences in each entity and the
+predicates connecting them, and uses Word2Vec to generate the inal embeddings. OWL2Vec [19] was designed
+to address the challenges of embedding ontologies written in the OWL language, which provides constructs
+such as intersectionOf and unionOf for representing complex entities. In OWL2Vec, a set of conversion rules
+to translate OWL constructs into RDF is used. A similar random walk strategy is applied; however, multiple
+documents are generated containing lexical, structural, and merged information. This method also generates
+embeddings for individual entities as well as individual words. Since no labeled data is needed to train these
+models, they can learn embeddings in an unsupervised way.
+Another approach for learning embeddings from graph structures involves translational embeddings [55].
+employed in models such as TransE [14], ConvE [23], or RotatE [110]. These methods associate each class and
+property in an ontology with a randomly initialized embedding vector. The training process is iterative: for a
+® �),
+given valid triple � = (®
+� , �,
+® The learning objective is to minimize the distance between the composite vector
+�® + �® and the target vector �.
+® Simultaneously, the process maximizes this distance for corrupted triples, which
+are generated by randomly altering one of the elements in a valid triple. This modeling framework can capture
+certain hierarchical compositions. For example, the property "grandfather" could be modeled as an embedding
+vector �® = 2 �®, which is a multiple of the vector �® for the "father" property. More advanced variations of this
+model encode embeddings in diferent spaces or manifolds to capture more complex property patterns [110].
+For instance, encoding the properties writePaper and hasRelatedPaper in a circular space such that they have an
+angle of 180º degrees between them, a predicate like inverse, deined as a rotation of 180º degrees, can transform
+the embedding of writePaper into hasRelationPaper by adding inverse to it.
+Graph Neural Networks (GNNs) [132], encompassing convolutional, message-passing, and attention-based
+variants, generate node embeddings by iteratively aggregating neighbor information. For matching tasks, these
+networks reine entity embeddings across multiple layers (see Figure 5). Typically, the embedding of a target
+entity � 1 is computed by aggregating neighbor embeddings (e.g., � 2 and � 3 ) and processing the result through
+a trainable update function. Beyond basic mean or max pooling, property-aware architectures like Relational
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 7
+
+Fig. 5. Computation of � 1 embeddings through neighborhood aggregation using the summation of near embeddings.
+
+Graph Convolutional Networks (R-GCN) [100] explicitly encode relationship types during aggregation, providing
+richer contextual depth to the inal entity representations.
+Overall, embedding-based ontology matching provides a powerful and lexible approach for capturing the
+meaning and relationships of ontology elements and can help overcome the limitations of traditional matching
+techniques. However, there are also challenges in using embeddings, such as the need for large amounts of training
+data and the choice of embedding model. The following sections review the state of the art in embedding-based
+ontology matching techniques and their applications.
+
+3 Survey Method
+To identify recent research on embedding-based similarity in ontology matching, this study conducted a literature
+search across key computer science and artiicial intelligence databases. We selected sources for their relevance
+to OM and machine learning advances, applying keyword-based queries (e.g., ontology matching, embeddings,
+and similarity calculation) to Google Scholar, Science Direct, ACM, ACL, OAEI, Semantic Scholar, IEEE, arXiv,
+MDPI, Springer, and HAL. This search spans publications from January 2014 up to July 2025. Detailed search
+criteria and results per database are summarized in Table 1. Note that keywords were adjusted to accommodate
+the speciic query formats and mechanisms of each search engine.
+Base
+google scholar
+
+Link
+https://scholar.google.com/
+
+science direct
+
+https://www.sciencedirect.com/search
+
+acm
+
+https://dl.acm.org/search/advanced
+
+acl
+oaei
+semantic scholar
+
+https://aclanthology.org/
+http://om2023.ontologymatching.org/
+https://www.semanticscholar.org/
+
+ieee
+
+https://ieeexplore.ieee.org/search/advanced
+
+arxiv
+
+https://arxiv.org/search/advanced
+
+mdpi
+
+https://www.mdpi.com/search?
+
+Keywords
+ontology embedding matching OR alignment
+ontology embedding matching alignment
+[All: ontology] AND [[All: matching] OR
+[All: alignment]] AND [All: embedding]
+AND [E-Publication Date: (01/01/2014
+TO *)]
+ontology AND (match OR align)
+*
+ontology embedding matching alignment
+("All
+Metadata":ontology)
+AND
+("All Metadata":matching OR "All
+Metadata":alignment)
+AND
+("All
+Metadata":model OR "All Metadata":embedding OR "All Metadata":learning)
+Query: order: -announced_date_irst;
+size: 200; date_range: from 2014-01-01
+; include_cross_list: True; terms: AND
+all=ontology; AND all=matching OR
+alignment; AND all=model OR embedding OR learning
+ontology matching or ontology alignment
+
+Total
+17,200
+
+Considered
+100
+
+1,175
+
+200
+
+2,639
+
+150
+
+40
+287
+969
+
+40
+287
+400
+
+476
+
+476
+
+124
+
+124
+
+169
+
+169
+
+Table 1. Literature databases and corresponding search queries used in this review.
+
+Following the initial search, the retrieved papers were manually iltered according to three primary selection
+criteria: accessibility, relevance, and methodology. Publications were excluded if they were inaccessible behind
+ACM Comput. Surv.
+
+8 • G. S. Sousa et al.
+
+Fig. 6. Overview of the proposed categorization framework.
+
+a paywall, were not directly related to schema-level matching, or did not employ embeddings for similarity
+calculation. This iltering process was designed to ensure that the selected papers are closely aligned with
+the survey’s research questions and accurately represent recent developments in embedding-based ontology
+matching. Building upon [105], which analysed 23 papers, this survey incorporates 80 additional publications.
+The resulting corpus of 103 papers forms the basis of this analysis, ofering insights into the efectiveness of
+embedding-based methods for ontology matching and identifying directions for future research.
+
+4 A Classification Framework for Embedding-Based Ontology Matching
+This survey classiies matching systems based on their embedding-based similarity computation, terminological
+feature handling, and training procedures. Building upon the framework in [105], we extend the "Lexical Unit
+Segmentation" category to include subword segmentation and introduce a new "Alignment Type" category to
+distinguish between simple and complex matching. As shown in Figure 6, our framework organizes systems
+along four non-mutually exclusive dimensions: Lexical Unit Segmentation, Training, Information Level, and
+Alignment Type. This categorization describes the information aggregated during entity embedding generation.
+Because these categories overlap, a single model may occupy multiple classiications. For instance, a system
+using word-level segmentation while incorporating external data like Wikipedia would be classiied under both
+Word-level segmentation and Background Knowledge information levels.
+
+4.1
+
+Lexical Unit Segmentation
+
+This category covers the various levels at which terminological data is segmented in matching systems. The
+chosen segmentation level signiicantly impacts a matcher’s generalization capabilities and its performance on
+the out-of-vocabulary (OOV) problem [51]. This classiication framework extends the segmentation proposed in
+[125] by adding the entity level, and is composed of four sub-categories (Figure 6), which are explained in the
+subsequent sections. An example is given in Figure 7.
+Entity-level segmentation generates a unique representation for each entity by treating its textual label as an
+indivisible unit. Alternatively, a unique embedding can be assigned directly to an entity’s identiier, bypassing
+textual content entirely, a method exempliied by RDF2Vec [97]. In this context, an entity’s entire terminological
+label constitutes a single "sentence" or atomic token. For example, phrases like "accepted paper" and "reviewed
+book" would each be assigned a single, unique embedding. A primary limitation of this approach is its inability
+to represent out-of-vocabulary entities; a model cannot generate an embedding for "accepted book" if that
+speciic sequence was absent during training, regardless of whether "accepted" and "book" were seen individually.
+However, this method is computationally eicient, as the absence of aggregation or composition functions allows
+for smaller, less complex processing models.
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 9
+
+Fig. 7. Example of the label "Accepted Paper" split in each category. The tokenization shown here has illustrative purposes
+only. Actual implementation can give diferent results.
+
+Entity-level segmentation generates a unique representation for each entity by treating its textual label as an
+indivisible unit. Alternatively, a unique embedding can be assigned directly to an entity’s identiier, bypassing
+textual content entirely, a method exempliied by RDF2Vec [97]. In this context, an entity’s entire terminological
+label constitutes a single "sentence" or atomic token. For example, phrases like "accepted paper" and "reviewed
+book" would each be assigned a single, unique embedding. A primary limitation of this approach is its inability
+to represent out-of-vocabulary entities; a model cannot generate an embedding for "accepted book" if that
+speciic sequence was absent during training, regardless of whether "accepted" and "book" were seen individually.
+However, this method is computationally eicient, as the absence of aggregation or composition functions allows
+for smaller, less complex processing models.
+Word-level segmentation generates a distinct representation for each word within an entity’s terminological
+layer. The inal entity representation is then computed by applying an aggregation function (e.g., sum or average)
+to combine these individual word embeddings into a single vector. This is the standard approach adopted by
+classic word embedding models such as GloVe [88].
+For example, under a word-level segmentation scheme, the entity "accepted paper" is tokenized into its
+constituent words, "accepted" and "paper." After retrieving the individual embedding for each word, an aggregation
+function is applied to compute a single vector representation for the complete entity. Another aggregation strategy
+can use the hidden state of a neural network; for instance, the inal output of a Long Short-Term Memory (LSTM)
+network can serve as the composite embedding. This type of segmentation ofers better generalization because
+the model can construct a meaningful representation for an unseen entity, such as "accepted book," as long as the
+embeddings for its constituent words ("accepted" and "book") are known.
+Subword-level segmentation divides text into units smaller than a whole word, such as word fragments or
+n-grams. This technique is a standard practice in many modern language models. For example, the WordPiece
+tokenizer, used by BERT, might split the word "accepted" into "accep" and "ted." The vocabulary for such tokenizers
+is learned from a large text corpus in a preliminary training step. Other common subword segmentation schemes
+include Byte-Pair Encoding (BPE) [74] and n-gram-based methods.
+Character-level segmentation, the most granular approach, operates on individual characters within the
+terminological layer. Its primary advantage is universality; by utilizing a character-based alphabet, it eliminates
+the out-of-vocabulary problem and maintains a vocabulary orders of magnitude smaller than other methods.
+However, this granularity requires models to learn meaningful representations from scratch. Consequently,
+capturing semantic depth typically requires more complex architectures, such as additional neural layers or larger
+contextual windows, to compose word-level meaning from character sequences.
+
+4.2
+
+Training Paradigm
+
+This section categorizes matching systems by their training procedures, relecting their dependency on speciic
+ontology data and their subsequent generalization capabilities. The three categories are: (i) Pre-trained: Systems
+trained exclusively on corpora external to the input ontologies; (ii) Trained: Systems enploy the input ontologies
+ACM Comput. Surv.
+
+10
+
+• G. S. Sousa et al.
+
+to either train a model from scratch or ine-tune a pre-trained one; (iii) Reference: A subset of the "Trained"
+category, speciically requiring supervised training on reference alignments.
+The Pre-train category encompasses systems that employ models trained on external data before the matching
+process begins. This includes systems that leverage general-purpose pre-trained models, such as BERT, or standard
+word embeddings. The pre-training itself is often performed on tasks unrelated to ontology matching, with
+common objectives like masked language modeling or data reconstruction.
+The Trained category includes systems that require training or ine-tuning using data from the ontologies
+being aligned, resulting in representations tailored for each matching task. When a system uses a pre-trained
+model, this process is equivalent to ine-tuning. For example, a system might reine its word embeddings using
+synonyms extracted directly from the input ontologies. Systems may also be trained on a speciic task prior to
+pre-training on another.
+The Reference category consists of supervised systems that require an annotated dataset of reference alignments to train their models. This process adjusts the internal parameters of the embedding-based similarity
+models, such as network weights. These reference alignments, which function as the ground truth, can be created
+manually by domain experts, generated automatically, or produced by a "teacher" matching system.
+
+4.3
+
+Information Level
+
+This section details the Information Level category, which classiies systems based on the scope of information
+they aggregate to generate entity embeddings. It distinguishes between four levels: No Context, Context, Relation,
+and Background Knowledge. Note that these levels are not entirely independent. Incorporating Background
+Knowledge from external sources is an approach that can be combined with any other information level. A
+system that employs information from neighboring entities is classiied as Contextual. If it explicitly encodes the
+type of properties to those entities, it is classiied under both the Context and Relation levels.
+The No Context level includes systems that generate an embedding for an entity using exclusively the
+information contained within that entity itself. Under this approach, each entity is treated as an isolated object,
+and information from other entities or their relationships is disregarded. A matcher at this information level
+generates an entity’s inal embedding by exclusively using its internal features, such as labels and comments,
+while disregarding any of its relationships to other entities. For example, a non-contextual embedding for the
+class Paper relies solely on its own internal features, whereas a contextual embedding integrates information
+® + ���� ������).
+®
+® = �������
+from related entities (e.g. �����
+In contrast, the Context level considers not only an entity’s internal information but also data from its
+surroundings and its position in the ontology hierarchy. Systems at this level generate embeddings by aggregating
+features, such as labels and comments, from neighboring entities (e.g., parent or child classes) to create a richer
+representation. However, a key distinction at this level is that while the presence of neighboring entities is used,
+the type of the connecting property is not (e.g., a disjointWith property would be processed in the same manner
+as a subClassOf property).
+The Relation level includes systems that explicitly encode the type of properties an entity has with its
+neighbors when generating embeddings [126]. Unlike at the Context level, a matcher here distinguishes between
+diferent kinds of properties, such as inheritance and disjointness. This distinction is important because diferent
+properties imply diferent similarity assumptions. For example, entities in a disjoint property should have lower
+similarity scores than entities in a parent-child hierarchy. Integrating such relational information guides the
+model towards embeddings that more accurately relect these semantic constraints.
+The Background Knowledge level comprises systems that enrich entity embeddings by incorporating
+information from sources external to the input ontologies, such as Wikipedia or WordNet [91]. This approach
+allows a matcher to inject supplementary information beyond what is explicitly stated in the ontology. For
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 11
+
+instance, if an entity lacks a descriptive comment, an external source can provide this missing text, which is
+then aggregated to generate a more comprehensive embedding. The key distinction from the Context level is the
+origin of the information: the Context level uses only data already internal to the input ontologies, whereas the
+Background Knowledge level leverages external data sources, including Wikipedia, Thesaurus, Vocabulary, etc.
+
+4.4
+
+Alignment Cardinality and Complexity
+
+This section categorizes systems based on the alignment complexity they address, distinguishing between
+simple and complex matching tasks. This classiication is important for understanding how the capabilities of
+diferent systems vary with the intricacy of the required correspondences. Simple alignment systems operate on
+atomic entities and are designed to produce one-to-one (1:1) correspondences. In this model, each entity from a
+source ontology is matched to a single, unique entity in the target ontology. In contrast, Complex alignment
+systems handle intricate correspondences that involve complex entities, in other words, those deined by logical
+combinations of other entities (e.g., using unions, intersections, or restrictions). These systems can produce
+many-to-many (n:m) alignments and are often necessary for handling constructs such as blank nodes in OWL
+ontologies.
+
+5 A Survey of Approaches by Information Scope
+In this section, the surveyed works are categorized according to the Information Level dimension. This dimension
+was selected as the primary organizing principle as it directly addresses how ontological information is used to
+construct embeddings, thus highlighting the core diferences between approaches. Within each category, works
+are further grouped by methodological similarity to illustrate how speciic embedding techniques are applied.
+The embedding models corresponding to each work are summarized in tabular form, using the model categories
+adapted from [40].
+
+5.1
+
+Approaches Using No Contextual Information
+
+This section reviews systems classiied under the No Context category, grouping them by methodological
+similarity. As deined in Section 4, these systems generate representations for an entity using only its own
+descriptive information, such as labels and comments, while disregarding data from other entities in the ontology
+graph (e.g., parent or child classes). The speciic models employed by the works in this category are summarized
+in Table 2.
+Word2Vec-Based Representations. Zhang et al. [143] is recognized as the irst to apply embeddings to ontology
+matching. Their study assessed how embeddings could be used to compare the textual information of entities,
+moving beyond purely lexical metrics. Speciically, techniques such as SVD and Word2Vec were combined with
+lexical measures to compute similarity. A key limitation of their approach was the absence of a robust method for
+handling multi-word phrases, such as those commonly found in entity comments. Despite this, the integration of
+Word2Vec within hybrid similarity pipelines, which also incorporate lexical and hand-crafted rules, was widely
+adopted in subsequent research.
+Following its initial application, Word2Vec was explored across various domains, frequently within a shared
+architectural framework. A common pattern, observed in systems such as those presented in [64, 98, 134, 137],
+follows a well-deined pipeline. First, Word2Vec is used to represent the textual information of each entity. For
+labels containing multiple words, a single embedding is produced via mean aggregation. The resulting embeddings
+are then compared using cosine similarity, and correspondences are selected from pairs that either exceed a
+predeined similarity threshold or are chosen through a method such as the stable marriage algorithm to enforce
+one-to-one correspondences.
+ACM Comput. Surv.
+
+12
+
+• G. S. Sousa et al.
+
+Name
+Zhang [143]
+ERSOM [133]
+Delgado [121]
+DeepAlignment [66]
+OntoEmma [122]
+Jurisch [60]
+Ruiz [59]
+SCBOW+DAE(O) [67]
+Gromann [39]
+Li [73]
+AnyGraphMatcher [77]
+Dome [46]
+Gonçalves [36]
+Li [71]
+DeepFCA [70]
+Hertling [48]
+Kim [64]
+DESKMatcher [82]
+Geng [33]
+Melis [4]
+Youn [140]
+REMA [69]
+BERTMap [44]
+Hertling [49]
+BERTMap [43]
+ALOD2Vec [92]
+Fine-TOM [65]
+TOM [68]
+Li [72]
+Neutel [83]
+Xue [137]
+Xue [134]
+Portisch [90]
+Rudwan [98]
+Mijalcheva [79]
+A-LIOn [3]
+AMD [127]
+KGMatcher+ [29]
+SEBMatcher [37]
+WomboCombo [62]
+LEAPME [10]
+WETA [34]
+Xue [135]
+Qiang [93]
+OLaLa [47]
+Norouzi [85]
+Shiraishi [103]
+Teymurova [115]
+Yang [138]
+
+Year
+2014
+2015
+2017
+2018
+2018
+2018
+2018
+2018
+2018
+2019
+2019
+2019
+2019
+2020
+2020
+2020
+2020
+2020
+2020
+2020
+2020
+2020
+2021
+2021
+2021
+2021
+2021
+2021
+2021
+2021
+2021
+2022
+2022
+2022
+2022
+2022
+2022
+2022
+2022
+2022
+2022
+2022
+2023
+2023
+2023
+2023
+2024
+2024
+2025
+
+.
+
+Embedding Model
+SCIBOW+DAE
+Word2vec, Glove
+Stacked Auto-Encoder
+Learned word embeddings (counter-itting)
+Word2vec, CNN, LSTM, fully connected, Siamese Networks
+RDF2Vec
+Word2Vec
+GLoVe
+hyperbolic embeddings
+RDF2Vec
+Doc2vec
+StarSpace
+Node2vec, Word2vec
+Word2vec
+Word2Vec, embedding reinement
+RDF2Vec
+Word2Vec
+TransE, ConvE
+GloVe
+Fasttext, BERT, SBERT
+Word2Vec
+ChatGPT model GPT-4, model agent
+BERT
+BERT-base-cased, roberta-base, albert-base-v2
+BERT
+RDF2vec
+ALBERT-base-v2
+Siamese BERT, word2vec
+Word2vec, Glove, kglove
+Word2Vec
+WiSARD is a RAM
+Word2vec
+RDF2vec
+Word2Vec, RNNLM
+BERT, RDF2Vec
+TransR
+Sentence-BERT, TransR
+BERT
+ClinicalBERT
+all-MiniLM-L6-v2, ALBERT-base
+fastText
+Polyglot, fastText, Word2Vec
+Word2Vec
+Multi-qa-mpnet-base-dot-v1, upstage/Llama-2-70b-instruct-v2
+Llama-2 (7b, 13b, 70b, 70b-chat, 70b-instruct-v2), airoboros-l2-70b-2.1
+ChatGPT
+OWL2Vec*, Auto encoder
+Word2vec, OWL2Vec*
+Transbox
+
+Embedding Category
+Hybrid/Combined
+Static
+Learned Representation (Autoencoder)
+Static (Reined)
+Hybrid/Combined (Static + Contextualized)
+KG-Based
+Static
+Static
+KG-Based (Geometric)
+KG-Based
+Static
+Static
+Hybrid/Combined (KG-Based + Static)
+Static
+Static (Reined)
+KG-Based
+Static
+KG-Based
+Static
+Hybrid/Combined (Static + Contextualized)
+Static
+Contextualized (LLM)
+Contextualized
+Contextualized
+Contextualized
+KG-Based
+Contextualized
+Hybrid/Combined (Contextualized + Static)
+Hybrid/Combined (Static + KG-Based)
+Static
+Learned Representation
+Static
+KG-Based
+Hybrid/Combined (Static + Contextualized)
+Hybrid/Combined (Contextualized + KG-Based)
+KG-Based
+Hybrid/Combined (Contextualized + KG-Based)
+Contextualized
+Contextualized
+Contextualized
+Static
+Static
+Static
+Contextualized (LLM)
+Contextualized (LLM)
+Contextualized (LLM)
+Satic
+Static
+Static
+
+Table 2. Embedding models employed by surveyed works classified under the No Context information level category.
+
+Embedding techniques are also efective for representing entities when combined with complementary methods.
+For instance, Geng et al. [33] demonstrated this by integrating Word2Vec with Node2Vec. A related approach
+in [71] highlights the value of domain-speciic training, where word embeddings trained on biomedical text
+were used to match biomedical ontologies. Notably, that study also demonstrated that integrating the proposed
+embedding technique into existing matching systems yielded performance improvements.
+In the multilingual domain, the work in [39] uses Word2Vec and fastText embeddings to generate representations for cross-lingual ontology matching. Their approach computes an intermediate vector based on the
+cross-similarity between the words contained in two entity labels, a strategy that simultaneously addresses the
+challenge of OOV terms.
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 13
+
+Hybrid Embedding and Lexical Similarity. A prevalent approach in the literature involves constructing hybrid
+systems that combine embedding techniques with traditional lexical similarity metrics. For example, the work
+by Fallatah et al. [29] integrates the Levenshtein lexical similarity metric with word embeddings, selecting the
+maximum value between the two scores to determine the inal similarity. Similarly, the approach in [36] irst
+employs lexical metrics to compute an initial similarity matrix, which is subsequently combined with GloVe
+embeddings trained on PubMed data to produce the inal alignment. The DOME matcher [46] also combines
+lexical and embedding-based methods, but does so sequentially. An initial similarity score is computed using
+lexical metrics and is then adjusted using Doc2Vec embeddings to produce the inal similarity scores. Focusing
+on the speciic domain of property matching, LEAPME [10] employs a distinct hybrid technique that relies on
+the embedding similarity between labels alongside a set of hand-engineered metrics.
+Embedding Reinement and Neural Augmentation. Despite their lexibility, pre-trained embeddings have a
+notable limitation: they are static, assigning a single, ixed representation to each term. This makes it diicult to
+handle homonymous entities, whose meaning may vary depending on the context in which they appear. One
+strategy to address this issue is supervised reinement, a process that contextualises pre-trained embeddings to
+the speciic semantics of the ontologies under analysis. The works in [66, 67] reine a set of pre-trained vectors
+by contrasting the representations of positively aligned entity pairs with those of negative ones. The DeepFCA
+matcher [70] implements a related reinement strategy, employing formal concept analysis to generate a lattice
+of related entities that are then approximated in the embedding space, while negative samples are extracted from
+disjoint properties.
+Another contextualization strategy involves using neural networks to further process or reine existing
+embeddings. Xue et al. [135] employ Word2Vec embeddings as input features to a neural network with the aim
+of improving the inal similarity computation. A similar approach is adopted in WETA [34], which combines the
+cosine similarity derived from fastText embeddings with classiication scores produced by a neural network. The
+study in [121] enriches a hand-engineered feature vector with the output of a neural network to compute similarity
+between entities. In a complementary direction, neural networks can also be used to generate embeddings directly.
+The ERSOM matcher [133], for example, uses an autoencoder to learn entity representations from a set of
+input features. Because the autoencoder’s training objective is to reconstruct its input from a compressed latent
+representation, it can be trained in an unsupervised manner, making it particularly suitable for tasks in which
+reference alignments are unavailable.
+Transformer-Based Approaches. With recent advances in NLP, powerful models based on the Transformer
+architecture, such as BERT, have been widely adopted. BERT is often described as a "contextual" model because
+it generates a unique representation for a word conditioned on its surrounding text. However, it is important
+to distinguish this notion of contextuality from the deinition used in this survey. Here, entity context refers
+speciically to information derived from an entity’s neighbours within the ontology structure, such as its parent and
+child classes. Accordingly, systems that apply transformer-based architectures to an entity’s textual information
+in isolation, without relying on this broader ontological context, are classiied as "No Context" systems. For
+instance, the TOM and Fine-TOM matchers [65, 68] use transformer models to generate representations from
+entity text, which are then compared using cosine similarity.
+A prevalent strategy for transformer-based models is ine-tuning on task-speciic data. Fine-TOM, for instance,
+is retrained using known entity correspondences, while the approach in [72] leverages formal concept analysis
+to derive training data for a sentence transformer. Beyond ine-tuning, models are commonly adapted through
+specialised downstream classiication heads. In ontology matching, a standard approach adds such a head to predict
+the alignment probability between entity pairs, as demonstrated in [37, 44, 49]. Similarly, the approach in [43]
+pairs a pre-trained BERT model with a binary classiier, further reining the process by averaging probabilities
+for multi-label entities and employing inverted indexing to prune the candidate space. Other research explores
+hybrid integrations: Kardos et al. [62] combine BERT embeddings with traditional lexical metrics, while Neutel et
+ACM Comput. Surv.
+
+14
+
+• G. S. Sousa et al.
+
+al. [83] compare the performance of [CLS] token pooling against subword embedding averaging. MDMapper [76]
+employs language model embeddings within a framework for master data alignment. It introduces a quantitative
+heuristic for hierarchical similarity by integrating heterogeneous entity and attribute data, alongside propertybased navigation and conlict-restricted availability management. This integrated approach ensures eicient,
+progressive matching, as demonstrated by competitive results on OAEI tracks and signiicant performance gains
+over baselines in real-world industrial standards (ETIM and ECLASS).
+Graph-Based Embeddings. RDF2Vec represents a foundational graph-based embedding approach in ontology
+matching. It generates sentence-like sequences through random walks over the ontology graph and subsequently
+processes these sequences with a Word2Vec model, treating each entity label as a single token to produce unique
+embeddings. REMA [69] follows a similar pipeline, combining random walks and Word2Vec with cosine similarity
+for alignment. Beyond direct similarity computation, these embeddings frequently serve as features for binary
+classiication. For example, the system in [60] uses RDF2Vec embeddings to predict how changes in ontology
+resources afect existing alignments, while AnyGraphMatcher [77] feeds various metrics, such as Euclidean
+distance and skip-gram probability, into a classiier to predict entity correspondences. To mitigate the scarcity
+of labelled data, AnyGraphMatcher automatically generates a gold-standard training set from initial similarity
+scores, thereby enabling supervised learning without manual annotation.
+When embeddings for two ontologies are generated independently, their respective vector spaces are often
+unaligned, rendering standard similarity metrics unreliable. To address this problem, Portisch et al. [90] employ
+linear transformation techniques to learn a rotation matrix that maps both sets of embeddings into a shared
+vector space, after which entity similarity can be computed using standard metrics such as Euclidean distance.
+Other works, such as those by Hertling et al. [48], learn a linear projection in a supervised manner to bring
+the two embedding spaces into alignment. RDF2Vec has also been combined with other models to extend its
+capabilities. For instance, DESKMatcher [82] evaluates several embedding models, (including Word2Vec, GloVe,
+and RDF2Vec) and combines them with lexical similarity metrics. In another example, the work in [79] constructs
+a hybrid representation by integrating BERT-based embeddings (derived from textual content) with RDF2Vecbased embeddings (generated from the ontology graph structure), evaluating the uniied embedding using cosine
+similarity. RDF2Vec has further been applied to complex matching tasks; for instance, in [1, 2], an RDF2Vec-based
+strategy is used to generate entity embeddings after a fuzziication method has been applied to the ontology.
+Translational Embeddings. Another technique explored in ontology matching is translational embeddings.
+Like RDF2Vec, these embeddings are derived from the graph structure of ontologies. The method operates by
+iteratively adjusting embeddings to minimise the distance between a valid triple in the ontology, such as (�, �, �),
+while simultaneously increasing the distance for corrupted triples in which one element has been altered, for
+instance (�, �, � ′ ). One of the matching systems that employs translational embeddings is A-LIOn [3], which uses
+TransR [75], a variant of TransE [14], to generate embeddings in the complex number space. AMD [127] uses
+BERT to generate initial alignment candidates that are subsequently iltered using TransR embeddings. A primary
+advantage of these techniques is their unsupervised nature: they do not require reference alignments to learn
+entity representations. The work in [4] extends translational techniques by modelling entities in hyperbolic space,
+enabling the embeddings to more efectively capture complex predicates such as inverses and compositional
+patterns. A related distance-based learning technique is StarSpace [131], which operates on a similar contrastive
+learning principle, training the model to pull embeddings of similar entities closer together while pushing
+them apart from randomly selected negative samples, thereby ensuring a clearer separation between entities
+in the vector space. This technique is also applied in [59], primarily to reduce the candidate search space when
+working with large ontologies, thus improving computational eiciency and making the alignment task tractable
+at scale. A related translational technique is applied in TransBox [138], an EL++-closed ontology embedding
+method designed to represent complex logical expressions in Description Logic EL++ via composition. TransBox
+addresses limitations of existing methods that focus on atomic entities and struggle with intricate axioms, or
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 15
+
+fail to handle many-to-one, one-to-many, and many-to-many relations efectively. It embeds roles as group
+transitions of vectors within a box, enabling the modelling of complex relational dynamics and role compositions,
+and enhances box intersections by extending the representation space to R� . Experimental results on real-world
+ontologies demonstrate state-of-the-art performance in predicting complex axioms. Silva et al. [104] proposes
+CMOM-RS, a novel approach for Complex Multi-Ontology Matching (CMOM) in a 1:� setting, without restrictions
+on mapping arity or the number of ontologies involved. The method combines an LLM-based strategy [18] that
+leverages geometric operations over language embeddings to discover complex correspondences, with a lexical
+strategy based on string similarity. The LLM-based component exploits vector subtraction and cosine similarity
+to identify the optimal set of target entity names composing a mapping. Evaluated on biomedical ontologies
+using partial reference alignments and manual expert validation, CMOM-RS improves performance over purely
+lexical approaches and substantially increases the coverage of complex multi-ontology alignments.
+
+5.2
+
+Approaches Exploiting Contextual Information
+
+This section reviews systems that exploit contextual information derived from neighboring entities to compute
+entity similarity. Such contextual information typically originates from the class hierarchy (encompassing
+parent and child classes) and associated properties or instances when available. A variety of approaches have
+been proposed for aggregating this information, each following a distinct methodology. The section provides a
+structured overview of these approaches, highlighting how diferent systems incorporate and process contextual
+data to improve matching accuracy. The embedding models employed by each work are summarized in Table 3
+Contextual Text Enrichment. A irst strategy consists of incorporating textual information from an entity’s
+structural context directly into its textual description, thereby enriching its representation before encoding. For
+example, [56] constructs a sentence that concatenates entity labels with those of two parent classes, which is
+then encoded using character embeddings and aggregated through an LSTM network; the resulting embedding
+is passed to a classiication head to predict correspondence probability. A similar approach is adopted in [120],
+where hierarchy labels are incorporated into class entity labels, and domain and range information is appended
+to property labels; the enriched text is subsequently processed by a sentence transformer, and entity similarity is
+measured using cosine similarity. This approach additionally applies a reasoner prior to matching to infer new
+relationships, and targets cross-lingual ontology matching scenarios. Truveta Mapper [6] follows a comparable
+strategy by generating smart IDs for each entity that encode hierarchical informationÐconcretely, a child entity’s
+ID contains the IDs of its ancestor concepts. These smart IDs are fed into the ByT5 model, operating at the character
+level, to produce inal embeddings; the model is further ine-tuned using synonym information extracted from
+the ontologies. TEXTO [87] similarly combines entity information with label descriptions to compute similarity
+using language models, a strategy also employed in [119]. In the context of complex ontology matching, [107]
+proposes an integrated approach that leverages LLMs to generate expressive correspondences. Extending the
+CANARD framework, the method focuses on matching semantically similar surroundings of instance sub-graphs,
+guided by user knowledge needs expressed as SPARQL queries. Four architectural modiications are introduced:
+label embedding similarity (LES), embeddings of SPARQL queries (ESQ), subgraph embeddings (SE), and instance
+embeddings (IE). Levenshtein similarity is replaced by embedding-based similarity in key pipeline steps, using
+LLMs to encode textual information for more expressive similarity assessment. Experiments on the OAEI
+Conference benchmark demonstrate that integrating LLMs signiicantly enhances performanceÐparticularly in
+the LES and ESQ conigurations, outperforming baseline and state-of-the-art systems in precision and F-measure
+without requiring reference alignments or ine-tuning.
+Embedding-Level Contextual Aggregation. A second strategy aggregates contextual information by encoding
+neighboring entities separately and combining the resulting embeddings. Sun et al. [109] encode labels from
+properties, parents, children, and instances using Word2Vec, process them through an LSTM, and subsequently
+ACM Comput. Surv.
+
+16
+
+• G. S. Sousa et al.
+
+Name
+Ruiz [58]
+Schmidt [101]
+Orji [84]
+Jurisch [61]
+Maldonado [78]
+STE + SG [130]
+Iyer [53]
+Ruiz [57]
+Sun [109]
+Jiang [56]
+DAEOM [129]
+OntoConnect [16]
+VeeAlign [52]
+MEDTO [41]
+ANN-OM [136]
+OntoConnect [15]
+VeeAlign [53]
+ONTOCONNECT [17]
+OTMapOnto [7]
+LogMapanc -ML [20]
+An [8]
+Monnin [81]
+Wang [123]
+Satti [99]
+CIDER-LM [120]
+GraphMatcher [27]
+Tayur [112]
+Wang [124]
+Khoudja [63]
+Javed [54]
+Truveta [6]
+Hao [42]
+SORBET [38]
+VersaMatch [32]
+He [45]
+LaKERMap [128]
+Benarab [12]
+Teymurova [113]
+NLFOA [102]
+Peng [87]
+Sousa [106]
+Tu [40]
+Qiang [93]
+Totoian [118]
+Silva [104]
+Liu [76]
+Mei [22]
+Taboada [111]
+Sousa [107]
+
+Year
+2018
+2018
+2018
+2019
+2019
+2020
+2020
+2020
+2020
+2020
+2020
+2020
+2020
+2021
+2021
+2021
+2021
+2021
+2021
+2021
+2022
+2022
+2022
+2022
+2022
+2022
+2022
+2022
+2022
+2022
+2023
+2023
+2023
+2023
+2023
+2023
+2023
+2023
+2023
+2023
+2023
+2023
+2024
+2024
+2024
+2024
+2025
+2025
+2025
+
+Embedding Model
+StarSpace
+GloVe
+Word2Vec’s
+RGCNs
+KAEGAN,
+Siamese Transformer-encoders, Siamese Graph Attention networks
+Universal Sentence Encoder, Siamese Network, Self Attention
+StarSpace
+LSTM, Attention
+Word2Vec (char embeddings), LSTM
+BERT, GAT
+fastText
+Universal sentence encoder, Siamese Network, Self Attention
+BioBERT, Hyperbolic GNN
+Word2vec
+fastText, LSTM, Recursive Neural Network
+Universal Sentence Encoder, siamese network, Self Attention
+GAT
+fastText, BioWordVec
+OWL2Vec
+fastText
+GCN
+Sentence-BERT, (GAT)
+BERT
+distiluse-base-multilingual-cased-v2
+Universal Sentence Encoder, GAT
+Word2Vec, LSTM, GAN
+CNN, GCN, Attention,
+Auto Encoder, BioWordVec
+BERT
+ByT5
+OWL2Vec, GCN, NNLM, RNN
+SentenceBERT
+Google’s Universal Sentence Encoder (USE), Spacy
+ChatGPT 4
+Transformer, TrasnsE
+GloVe, Neural Network
+OWL2Vec, GNN
+Sentence-transformers/All-mpnet-base-v2
+GloVe, All-MPNet-base-v2
+all-MiniLM-L6-v2, inish-treebank
+SBERT
+text-embedding-ada-002, text-embedding-3-large
+gtr-t5-large, BioLord-2023
+Sentence-BERT
+Sentence Transformer
+GNN
+SBERT
+stella-base, GritLM-7B
+
+Embedding Category
+Static
+Static
+Static
+GNN-based
+Hybrid/Combined
+Hybrid/Combined (Contextualized + GNN)
+Contextualized
+Static
+Contextualized
+Contextualized
+Hybrid/Combined (Contextualized + GNN)
+Static
+Contextualized
+Hybrid/Combined (Contextualized + GNN)
+Static
+Contextualized
+Contextualized
+GNN-based
+Static
+KG-Based
+Static
+GNN-based
+Hybrid/Combined (Contextualized + GNN)
+Contextualized
+Contextualized
+Hybrid/Combined (Contextualized + GNN)
+Hybrid/Combined
+Contextualized
+Hybrid/Combined
+Contextualized
+Contextualized
+Hybrid/Combined (KG-Based + GNN + Contextualized)
+Contextualized
+Contextualized
+Contextualized (LLM)
+Hybrid/Combined (Contextualized + KG-Based)
+Hybrid/Combined
+Hybrid/Combined (KG-Based + GNN)
+Contextualized
+Hybrid/Combined (Static + Contextualized)
+Contextualized
+Contextualized
+Contextualized (LLM)
+Contextualized (LLM)
+Contextualized (LLM)
+Contextualized (LLM)
+GNN/Contextualized (LLM)
+Contextualized (LLM)
+Contextualized (LLM)
+
+Table 3. Embedding models employed by surveyed works classified under the Context information level category.
+
+combine them via a second LSTM augmented with an attention mechanism; inal entity similarity is computed
+using Euclidean distance. A related approach is found in [57, 58], where an inverted index (LexI) is used to generate
+candidate correspondences, which are then embedded using the StarSpace model. For each candidate mapping,
+the mean vector of StarSpace word embeddings is concatenated with the embeddings of the entities involved,
+efectively reducing the search space for large ontologies. LogMap-ML [20] encodes ontologies using OWL2Vec
+and learns a transformation function via Siamese Networks that aligns the embedding spaces of the source and
+target ontologies; input pairs consist of entity classes concatenated with their hierarchical paths to the root.
+OWL2Vec embeddings are also exploited for complex matching tasks, as demonstrated by Teymurova et al. [113].
+Dhouib et al. [25, 26] encode entity labels using fastText, average word embeddings to obtain entity representations,
+and further average these with embeddings from child entities. The speciicity of a relation is estimated by
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 17
+
+its distance from the cluster center, general relations tend to cluster near the center, while speciic ones are
+more distant. Building on OWL2Vec, OWL2Vec4OA [114, 115] extends OWL2Vec* [19] speciically for ontology
+alignment. While OWL2Vec* generates embeddings for individual ontologies, OWL2Vec4OA incorporates edge
+conidence values from seed correspondences (obtained from systems such as LogMap and AML) to bias random
+walks over interconnected ontologies. Ontology axioms are transformed into RDF triples, projected ontology
+graphs are merged with weighted edges (1.0 for axioms, conidence values for correspondences), and a biased
+random walk strategy is applied. This design prioritizes high-conidence edges during walk generation, yielding
+contextually richer entity embeddings. Evaluations on biomedical ontology alignment tasks from the OAEI BioML track demonstrate signiicant improvements over OWL2Vec* in MRR and Hits@1 across the OMIM-ORDO,
+NCIT-DOID, SNOMED-NCIT-N, and SNOMED-NCIT-P datasets. SORBET Matcher [38] encodes entities together
+with their parent and child entities using Sentence-BERT [96], employing a tree-walking strategy to generate the
+training data for the matcher.
+Similarity-Level Contextual Aggregation. A third strategy computes similarity scores independently for entity
+information and for contextual data, and subsequently combines them to determine the inal correspondence. Xue
+et al. [136] combine Word2Vec embeddings with lexical measures to compute the embeddings of entities and their
+parent entities independently; the resulting similarity scores are computed separately and then fed into a neural
+network to predict the inal score. In [101], context similarities are aggregated by blending embedding-based
+and lexical metrics to obtain initial similarity values, which are subsequently averaged to yield the inal score.
+Similarly, [8] generates entity embeddings using fastText and computes inal similarity via Wasserstein distance,
+where the local context of each entity consists of all triples in which it appears as the subject. Nkisi-Orji et al. [84]
+propose a range of similarity metrics (including Word2Vec embedding similarity and a context similarity measure
+assessing the relatedness of parent and child entities) which are used as features in a random forest classiier that
+predicts entity correspondences. VersaMatch [32] similarly combines multiple similarity metrics as features in a
+classiier ensemble; some metrics are derived from embeddings provided by the SpaCy library [50], and a blocking
+strategy is applied to reduce the number of candidate pairs and improve runtime eiciency. Another approach
+combining embeddings with classiiers is introduced in [103], which proposes a self-matching training method
+for Inverted-Index Matrix Embedding (InME) and Co-occurrence Matrix Embedding (CoME) models to improve
+entity subsumption prediction. InME captures global information from annotation axioms (word occurrence
+locations), while CoME captures local information (word co-occurrences within axioms). Self-matching training
+enhances a binary classiier’s ability to recognize subclassśsuperclass relationships, improving robustness for
+isolated entities. Evaluations on the GO, FoodOn, and HeLiS ontologies show that InME with self-matching
+training outperforms existing ontology embeddings, and that concatenating CoME with OWL2Vec* yields
+superior performance on the HeLiS ontology. In BERT-INT [54], transformer-generated similarities are combined
+with structural information via a similarity matrix. PropMatch [106], which focuses on property matching, uses
+language models to generate embeddings for property-related entities and aggregates the resulting similarities to
+determine property correspondences.
+GNN-Based Approaches. GNNs constitute a particularly expressive class of models for aggregating contextual
+information in ontology matching. GNNs rely on iterative aggregation steps that combine entity embeddings
+with those of their neighbors, propagating information through multiple layers to capture context at varying
+depths. Several GNN variants have been employed in this setting, including message-passing networks, Graph
+Convolutional Networks (GCNs), and graph attention networks (GATs). Initial entity embeddings can either
+be learned through a dedicated embedding layer or generated by a language model from the entity’s textual
+description. VeeAlign [52, 53] is a supervised model that initializes entity embeddings using the Universal
+Sentence Encoder (USE) to encode textual descriptions. Context from neighboring entities is organized into
+four facetsÐancestral entities, child entities, and entities connected via object and datatype properties, each
+treated as a path; node-level attention aggregates entities within each path, and path-level attention generates a
+ACM Comput. Surv.
+
+18
+
+• G. S. Sousa et al.
+
+uniied context embedding. This context embedding is concatenated with the initial entity embedding and passed
+through a Siamese network to produce the inal representation, with cosine similarity used for cross-ontology
+comparison. Inspired by VeeAlign, GraphMatcher [27] replaces the facet-based aggregation with a GAT, using
+USE-encoded embeddings as input. Wu et al. [130] similarly employ a GAT but compute initial embeddings
+using Siamese transformer encoders; inal embeddings are compared using cosine similarity, and an automatic
+threshold estimation module based on Greedy Matching and Stable Marriage algorithms is incorporated. DAEOM
+[129] adopts an analogous architecture but replaces Siamese transformer encoders with BERT coupled with
+a pooling layer. In the NLFOA framework [102], the graph structure of ontology entities is converted into a
+textual representation that encodes hierarchical relationships and connecting properties; this text is then used to
+generate embeddings for similarity comparison. MultiEA [139] addresses the problem of simultaneously aligning
+multiple (more than two) KGs in a single pass. The proposed framework embeds entities from all candidate KGs
+into a shared feature space using a common GNN-based encoder and explores three alignment strategiesÐmean,
+anchor, and pairwiseÐto minimize distances among pre-aligned entities. An inference enhancement technique
+that incorporates high-order similarities is also introduced. Two new real-world benchmark datasets (DBP-4 and
+DWY-3) and a novel evaluation metric (M-Hits@K) are proposed to validate the framework. OM-GGAT [22]
+combines semantic and structural embedding representations using a gated graph attention model. Semantic
+knowledge and path information are encoded using OWL2Vec, and ontologies are transformed into graph
+structures; a GAT then assigns attention weights to neighboring nodes for structural feature extraction, and
+gated networks fuse the semantic and structural embeddings. Experiments on public datasets demonstrate the
+efectiveness of this approach in improving matching eiciency.
+While GNN-based architectures are capable of modeling rich contextual lows, they are typically supervised,
+requiring reference alignments to train model weights, a signiicant challenge given the scarcity of labeled
+ontology matching datasets. To address this limitation, OntoConnect [15] adopts an unsupervised approach
+that leverages GNNs for embedding generation. A related study [16, 17] uses fastText to generate initial entity
+embeddings, which are subsequently contextualized through a GNN and trained with a negative sampling strategy.
+Another variant [15] employs fastText for initial embeddings and an LSTM-based recursive graph network to
+compute embeddings across diferent hierarchical levels. Embeddings are averaged and propagated to higher
+network layers, and the model is trained via a contextual entity prediction objective, enabling cosine similarity
+computation between source and target embeddings after training. CLOM [11] is an unsupervised cross-lingual
+ontology matching method that fuses structural and semantic similarity. It addresses the twin limitations of
+supervised approaches (which sufer from a lack of training data) and current unsupervised approaches that rely
+solely on lexical similarity. CLOM uses LaBSE, a state-of-the-art multilingual text embedding model, to embed
+entity descriptions into low-dimensional vectors for semantic similarity computation. These semantic similarities
+are used to generate initial seed alignments, which in turn inform the learning of structural embeddings (e.g.,
+node2vec, GCN, RGCN, TransE) over a joint graph; a weighted combination of semantic and structural similarities
+determines the inal alignment. Experiments on the MultiFarm dataset across GermanśEnglish, GermanśFrench,
+and EnglishśFrench language pairs demonstrate substantial improvements over lexical methods, conirming the
+complementarity of structural and semantic embeddings for cross-lingual matching.
+LLM-Based Contextual Matching. LLMs have emerged as powerful context-aware encoders and reasoning
+modules for ontology matching. LLMs4OM [35] evaluates the efectiveness of LLMs in ontology matching
+through a dual-module strategy: a Retrieval-Augmented Generation (RAG) module for candidate selection and an
+LLM-based matching module for ine-grained alignment. Zero-shot prompting is explored across three ontology
+representationsÐclass, class-parent, and class-children. Extensive evaluations on 20 ontology matching datasets
+show that LLMs within LLMs4OM can match or even surpass traditional matching systems, particularly in complex
+scenarios. The unsupervised, domain-agnostic HybridOM [118] combines vector and string-based similarity
+through hybrid search. Entity representations are enriched by using LLMs to generate additional descriptions,
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 19
+
+integrating both ontology knowledge and LLM-generated content. The pipeline involves data preprocessing
+(extracting raw data, verbalizing axioms with DeepOnto, and generating biomedical descriptions with LLaMA3),
+embedding generation (using gtr-t5-large and BioLord-2023), and ingestion into an OpenSearch vector database;
+the core matching process combines k-NN and BM25 retrieval with a dual low-directional search. Evaluations
+on the Bio-ML 2024 track demonstrate high F1-score and recall, particularly in complex cases. MILA [111]
+embeds a retrieve-identify-prompt pipeline within a prioritized depth-irst search (PDFS) strategy, addressing
+both the limited performance of LLM-based systems on complex scenarios and their high computational overhead.
+MILA irst identiies high-conidence bidirectional (HCB) correspondences using fast heuristics, reserving LLM
+queries for borderline cases; candidate retrieval leverages SBERT embeddings for semantic similarity. Evaluated
+on biomedical, anatomy, and biodiversity tasks from OAEI 2024, MILA achieves the highest F-measure in ive
+of seven unsupervised tracks, matches or outperforms supervised systems, and substantially reduces runtime
+without requiring domain-speciic heuristics or ine-tuning. Agent-OM [93] introduces an agent-based paradigm
+for ontology matching, consisting of two Siamese LLM agents (a Retrieval Agent and a Matching Agent) with
+independent planning modules and tools but a shared memory. The Retrieval Agent extracts entity information
+(metadata, syntactic, lexical, and semantic) and stores it in a hybrid relational-and-vector database.The Matching
+Agent then performs hybrid database search to identify candidate correspondences, aggregates them via reciprocal
+rank fusion, validates them through LLM-driven self-checking, and merges bidirectional results. This design
+mitigates both retrieval cost and LLM hallucination. Evaluations on the OAEI Conference, Anatomy, and MSE
+tracks show competitive performance on simple matching tasks and signiicant improvements on complex and
+few-shot tasks.
+
+5.3
+
+Approaches Encoding Relational Semantics
+
+The context-aware systems described in Section 5.2 aggregate neighbor information into entity embeddings but
+frequently overlook the speciic types of properties connecting entities to their neighbors - information that
+could substantially improve the quality of the resulting representations. For instance, while disjoint entities tend
+to be semantically dissimilar, integrating their shared neighborhood into embeddings without distinguishing
+the disjointness relation can produce the opposite efect, artiicially increasing their similarity. To address this
+limitation, several matching systems explicitly encode relational information when integrating contextual data
+into entity embeddings. The models employed by the systems in this category are summarized in Table 4. Wang
+et al. [124] construct a pairwise connectivity graph from the two input ontologies, compute a similarity matrix via
+a convolutional network, and apply a graph attention network with edge-aware attention to aggregate contextual
+information into entity embeddings while preserving the semantics of speciic edge relations. The approach in
+[61] creates a uniied graph from both source and target ontologies and employs a R-GCN to generate the inal
+embeddings, comparing this strategy against established KG embedding techniques including TransE, TransH,
+and RDF2Vec. Hao et al. [42] use OWL2Vec to generate initial embeddings and encode structural paths using a
+two-hidden-layer multi-layer perceptron, representing each subjectśpredicateśobject triple as a paired encoding
+to produce a uniied embedding, a strategy also adopted by Benarab et al. [12]. The MEDTO matcher [41] generates
+initial entity embeddings using BioBERT and subsequently produces property-aware representations through
+two complementary methods: a hyperbolic GCN for hierarchical entities and a R-GCN for non-hierarchical
+ones. The two representations are concatenated and passed to a classiication network to predict correspondence
+probability. Wang et al. [128] introduce a Transformer encoder pre-trained on ontology paths, whose output
+embeddings are further reined with TransE to produce representations for both classes and properties. Monnin
+et al. [81] employ a GCN to learn entity embeddings and cluster similar entities, encoding properties as additional
+edges during a pre-processing step so that they are incorporated into the convolutional aggregation; this method
+is capable of detecting speciic correspondence relation types such as sameAs, broadMatch, and related. Finally, the
+ACM Comput. Surv.
+
+20
+
+• G. S. Sousa et al.
+
+approaches in [78, 112] explore the use of Generative Adversarial Networks (GANs) to generate property-speciic
+embedding representations for the ontology matching task.
+Name
+Jurisch [61]
+Maldonado [78]
+MEDTO [41]
+Monnin [81]
+Tayur [112]
+Wang [124]
+Hao [42]
+LaKERMap [128]
+Benarab [12]
+NLFOA [102]
+Yang [139]
+
+Year
+2019
+2019
+2021
+2022
+2022
+2022
+2023
+2023
+2023
+2023
+2024
+
+Embedding
+RGCNs
+(KAEGAN),
+BioBERT, hyperbolic GNN
+GCN
+Word2Vec, LSTM, GAN
+CNN, GCN, Attention,
+OWL2Vec, GCN, NNLM, RNN
+Transformer, TrasnsE
+GloVe, Neural Network
+Sentence-Transformers/all-mpnet-base-v2
+GNN
+
+Embedding Category
+GNN-based
+Hybrid/Combined
+Hybrid/Combined (Contextualized + GNN)
+GNN-based
+Hybrid/Combined (Static + Contextualized)
+GNN-based
+Hybrid/Combined (KG-Based + GNN + Contextualized)
+Hybrid/Combined (Contextualized + KG-Based)
+Hybrid/Combined
+Contextualized
+GNN
+
+Table 4. Embedding models employed by surveyed works classified under the Relational Semantics information level category.
+
+5.4
+
+Approaches Leveraging Background Knowledge
+
+Ontologies frequently lack exhaustive information about all their entities; some entities may have only a label
+and no accompanying deinition or comment. In such cases, the available information may be insuicient for
+constructing adequately representative embeddings. To address this limitation, several matchers inject background
+knowledge from external sources into the embedding generation process. The authors in [122] use Word2Vec
+embeddings to encode entity textual information, which is subsequently aggregated through an LSTM. Four
+views are employed (names, synonyms, deinitions, and Wikipedia context) to construct entity embeddings that
+are passed to a neural classiier for correspondence prediction. Similarly, Wang [123] relies on Wikipedia as
+background knowledge through three complementary views: a semantic view generated via an LSTM, a structural
+view aggregated using a graph attention network, and a deinition view embedded using Sentence-BERT; the
+combined representation is then used to compute cosine similarity. Li et al. [73] adopt a further multi-view
+strategy, composing inal embeddings from lexical, structural, and resource views, where the resource view
+links source and target entities to an external reference ontology. Satti et al. [99] use entity names and types
+as the basis for embedding composition, querying UMLS with suixes extracted from these texts to retrieve
+supplementary information, which is subsequently encoded by a Transformer model. In OTMapOnto [7], fastText
+and BioWordVec embeddings are averaged to produce entity representations, enriched with synset information
+from WordNet, and compared using the Wasserstein distance. The ALOD2Vec matcher [92] queries an external
+RDF2Vec-based vector dataset using entity lexical information and computes inal similarity via cosine similarity.
+Finally, Khoudja et al. [63] feed a set of similarity metrics (including similarity to reference ontologies) as
+background knowledge, into an autoencoder to generate the inal entity embeddings. The models employed by
+the systems in this category are summarized in Table 5.
+Name
+OntoEmma [122]
+Li [73]
+ALOD2Vec [92]
+OTMapOnto [7]
+Wang [123]
+Satti [99]
+Khoudja [63]
+VersaMatch [32]
+Benarab [12]
+
+Year
+2018
+2019
+2021
+2021
+2022
+2022
+2022
+2023
+2023
+
+Embedding
+word2vec, CNN, LSTM, fully connected, siamese networks
+TransE, ConvE
+RDF2vec
+fastText, BioWordVec
+Sentence-BERT, (GAT)
+BERT
+Auto Encoder, BioWordVec
+Google’s Universal Sentence Encoder (USE), spacy
+GloVe, Neural Network
+
+Embedding Category
+Hybrid/Combined (Static + Contextualized)
+KG-Based
+KG-Based
+Static
+Hybrid/Combined (Contextualized + GNN)
+Contextualized
+Hybrid/Combined (Learned + Static)
+Contextualized
+Static + GNN
+
+Table 5. Embedding models employed by surveyed works classified under the Background Knowledge information level
+category.
+
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 21
+
+(a)
+
+(b)
+
+(c)
+
+Fig. 8. Variations in each group over time. (a) Lexical unit segmentation usage over time. (b) Training approaches usage over
+time. (c) Information level usage over time.
+
+5.5
+
+Comparison
+
+Each paper is categorized according to the proposed categorization scheme. The results for simple alignments are
+presented in Table 7 under the Non-context category, and Table 8 contains the results for works integrating
+contextual information. The results for complex matching are reported in Table 9. Several trends emerge from
+the Lexical Unit Segmentation dimension, illustrated in Figure 8(a). Embeddings were irst applied to ontology
+matching in 2014, and between 2015 and 2017 hand-engineered embeddings predominated. Thereafter, word
+embeddings became the most widely used approach, accompanied by a rise in entity-level embeddings (particularly
+those based on RDF2Vec). The subsequent development of Transformer models drove subword embeddings to
+become the dominant segmentation method, while the use of word embeddings gradually declined. The growing
+adoption of GNNs has renewed interest in entity-level and character-level embeddings, and the emergence of
+LLMs has begun to replace conventional full-embedding approaches with LLM matchers in recent years. In the
+Training dimension (Figure 8(b)), a consistent increase is observed in both the use of pre-trained models and
+the use of reference alignments for embedding generation. In the Information Level dimension (Figure 8(c)), a
+growing proportion of works employ contextual information to generate entity embeddings, a trend accompanied
+by a corresponding decline in purely non-contextual approaches. Alongside this shift, increasing attention is
+being directed toward encoding property-speciic data into embeddings and toward integrating background
+knowledge.
+The distribution of embedding techniques across the surveyed literature is summarized in Figure 9. In the
+Lexical Unit Segmentation category, subword (45%) and word (36%) segmentation predominate, largely driven
+by the prevalence of pre-trained transformer models and the ease of integrating word embeddings. Entity-level
+segmentation accounts for 18%, limited by its poor domain generalization and the scarcity of pre-trained models.
+Character segmentation is the least utilized (6%), as the high complexity of training such models hinders their
+adoption. Regarding Training, both pre-trained (70%) and ontology-speciic trained models (68%) are dominant.
+Reference alignment usage remains signiicant at 38%, despite the risk to generalization given that such alignments
+are not universally available. Within the Information Level category, usage is evenly split between no-context
+and context-aware embeddings (50% each). However, speciic techniques like property encoding (12%) and
+background knowledge integration (9%) remain underexplored. Finally, for Alignment Type, 93% of works focus
+on simple matching, with only 7% addressing complex alignments. Given that simple alignments cannot resolve
+all ontological heterogeneities, increasing the focus on complex matching represents a critical opportunity for
+advancing data integration in this ield.
+ACM Comput. Surv.
+
+22
+
+• G. S. Sousa et al.
+
+Fig. 9. Distribution of the proposed classification dimensions across all surveyed papers.
+
+To analyze the distribution of category combinations, all possible multi-dimensional combinations were
+enumerated and their frequencies normalized by the total number of papers; the results are reported in Table 6.
+The most prevalent combination involves subword and word lexical segmentation, relecting the dominance of
+the most common models used in embedding generations. Character-level segmentation remains underexplored,
+appearing in only a few papers across all combinations. Within the training category, entity-level segmentation
+is rarely used in conjunction with pre-training and has few associated applications of contextual embeddings. At
+the information level, only four papers in the top 15 combinations apply property-aware embeddings, and no
+background knowledge integration.
+Combination
+Subw-Pre-C
+Subw-Pre-NC
+Subw-Train-C
+Word-Pre-NC
+Word-Train-C
+Entity-Train-NC
+Word-Train-NC
+Word-Pre-C
+Subw-Ref-C
+Subw-Train-NC
+Entity-Ref-NC
+Word-Ref-C
+Entity-Train-C
+Entity-Ref-C
+Entity-Train-Rel
+
+Count
+26
+22
+15
+14
+13
+11
+11
+10
+10
+10
+7
+7
+6
+5
+5
+
+Proportion
+0.25
+0.21
+0.14
+0.13
+0.12
+0.10
+0.10
+0.10
+0.10
+0.10
+0.07
+0.07
+0.06
+0.05
+0.05
+
+Table 6. Frequency and relative proportion of 15 most common multi-dimensional category combinations across the surveyed
+works.
+
+6 Open Challenges and Research Gaps
+6.1 Trends in Embedding-Based Ontology Matching
+The analysis conducted in this survey reveals several challenges requiring further attention.
+Generalization problem. A recurrent limitation associated with entity-level segmentation in ontology matching
+is its restricted capacity to generalize across domains. The absence of a shared vocabulary needs retraining the
+model for each previously unseen ontology, thereby hindering the cumulative acquisition of knowledge across
+matching tasks. For example, entity embeddings learned in the biomedical domain are unlikely to contain the
+same terminology as those required in the conference domain. Furthermore, even in cases where an entity label
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 23
+
+appears identically across domains, its semantic interpretation may difer substantially from that encoded during
+training, giving rise to ambiguity. Without the capacity to exploit patterns in textual information, generalizing a
+matcher remains challenging even within a single domain. As the number of unique embeddings to be learned
+grows, sparsity issues emerge in the embedding space, complicating knowledge reuse. Additionally, without
+analyzing the textual information for each entity, it becomes impossible to eliminate noisy information or to
+leverage commonalities in knowledge, such as comments and descriptions.
+Lack of shared vocabulary. Another issue that arises from this level of segmentation is the lack of shared
+vocabulary, which prevents embeddings from diferent ontologies from relating to each other. Due to the random
+initialization of neural models, the same entity can have diferent embeddings in two distinct ontologies when
+learned through these methods, as they are encoded in separate embedding spaces. The work in [90] illustrates
+this problem in embeddings generated by RDF2Vec using two identical copies of the same graph generated from
+synthetic data. To address this, the authors propose learning a rotation matrix from anchor correspondences
+to transform one embedding space into the other. They also demonstrate that introducing heterogeneity, by
+randomly removing triples from one of the graphs, signiicantly reduces matching performance. A similar issue
+was observed in LogMap-ML [20], in which OWL2Vec embeddings were used for matching. The independence
+problem, caused by the generation of separate embedding spaces during independent OWL2Vec training, was
+resolved by feeding the embeddings into a siamese network. It was trained using anchor correspondences to
+learn a transformation function that aligns the two embedding spaces.
+Structural divergence. Embedding methods that rely exclusively on ontology structure, without incorporating
+the textual information associated with each entity, are inherently sensitive to structural diferences between the
+ontologies being aligned. Consequently, such methods tend to exhibit reduced performance when applied to
+ontology pairs with substantially divergent structural organizations. This limitation is evidenced in Hertling et
+al. [? ], where RDF2Vec is evaluated across ontologies from diferent domains, yielding strong results when the
+compared ontologies share similar structural patterns but markedly lower performance when their structures
+difer. Although RDF2Vec efectively encodes the structural relationships among entities within an ontology graph,
+structural proximity does not necessarily entail semantic equivalence - the primary objective of alignment. For
+instance, entities such as "Author" and "Book" may co-occur frequently within the same ontological neighbourhood
+due to their relational proximity, causing their embeddings to be placed in close proximity in the vector space.
+Despite exhibiting high cosine similarity, these entities are semantically distinct, and a matcher relying solely on
+such structural embeddings risks producing erroneous correspondences between them.
+Need for training alignments. A signiicant portion of the reviewed systems (48%) relies on reference alignments
+for training. These alignments are typically generated by domain experts or automatic systems and establish
+equivalence relations between entities across ontologies. As no large alignment dataset is currently available,
+many systems resort to the reference alignments provided by the OAEI tracks for model training. However, since
+these alignments are also used for evaluation, systems trained on such data may sufer from generalisation issues.
+Alternative approaches treat other matching systems as teachers, using their alignment outputs as training data,
+or adopt alignment hypotheses such as exact label matching as a gold standard. These strategies assume that
+embedding models can extrapolate knowledge and identify additional correspondences, thereby increasing the
+number of available alignments. However, when such systems are also evaluated in competitive settings, alignment
+biases may arise, further resulting in generalization problems. To address these limitations, unsupervised training
+methods have been proposed, embedding ontologies into a shared vector space and inferring alignments from
+entity similarity. However, these approaches remain under development and require further investigation to
+assess their efectiveness.
+Coverage of properties. Few works explore the integration of property-speciic information into the embedding
+generation process for similarity computation. Certain properties, such as disjointness, indicate a negative efect
+on similarity, and merely including the object values they represent can lead to misleading results, causing
+ACM Comput. Surv.
+
+24
+
+• G. S. Sousa et al.
+
+disjoint entities to appear more similar than they are. Integrating property-speciic information into embedding
+generation can therefore enhance the accuracy of alignment systems. For instance, incorporating domain and
+range information into property embeddings, or explicitly encoding disjointness and other constraints, can
+provide a richer context for entity representations.
+Background knowledge. Few systems investigate the integration of background knowledge as supplementary
+information for generating embeddings. Integrating such external knowledge can ofer additional context and
+information for entities that lack suicient resources. For example, leveraging external knowledge sources like
+Wikipedia or WordNet can enrich entities with textual descriptions or semantic annotations, improving the
+quality of the generated embeddings. However, this integration is not without drawbacks, as the incorporation of
+external data may introduce noise into the embedding space and increase the computational overhead of the
+alignment process. Consequently, further research is needed to examine the trade-ofs between accuracy and
+eiciency in matching systems that adopt such strategies based on the integration of external information during
+embedding generation.
+Complex matching. Despite the importance of complex correspondences in real-world ontology alignment,
+only a limited number of approaches have explored the application of embeddings to complex matching tasks.
+In such tasks, the aggregation of multiple constituent entities into a uniied representation of a complex entity
+introduces additional diiculty in deining the boundaries and scope of meaningful contextual information.
+Speciically, a matching system must determine the extent to which the contextual information associated with
+each constituent entity contributes to the overall context of the composed complex entity. When complex entities
+and their potential contexts are modeled as subgraphs, the number of candidate combinations to be considered
+grows exponentially, resulting in worst-case time complexity that poses a signiicant scalability barrier in complex
+matching scenarios.
+
+6.2
+
+Answering the Research uestions
+
+This survey presents a systematic analysis of 103 embedding-based ontology matching approaches, providing
+evidence-based answers to the research questions formulated in Section 1. In the following, the each research
+question is addressed in turn, synthesizing the key indings across the four proposed classiication dimensions
+(lexical segmentation, training paradigm, information scope, and alignment complexity) with reference to the
+surveyed literature.
+RQ1: How are embeddings used to represent ontological entities for matching? Embeddings are one of the main
+semantic similarity measures of current matching systems, and their representational capacity varies based on
+three critical design choices revealed through this survey analysis:
+• the choice of lexical segmentation strategy has a strong impact on the generalization capability of the
+embeddings in a matcher: the survey shows 46% of approaches employ subword segmentation (primarily
+via transformer-family models), 35% use word-level segmentation, 18% adopt entity-level representations
+(e.g., RDF2Vec), and only 6% utilize character-level approaches. Entity-level embeddings face generalization
+limitations, as demonstrated in [90], because most of the techniques used in creating those embeddings often
+produce them independently for source and target ontologies that occupy diferent vector spaces, requiring
+alignment techniques like rotation matrices to make them relect the similarity measure required.
+• the information level determines the amount of information considered for similarity computation: half
+of surveyed systems generate embeddings considering only entity-related features (labels, comments), while
+the other half incorporate contextual information from neighboring entities. Crucially, only 12% explicitly
+encode relational semantics (e.g., distinguishing subClassOf from disjointWith). Not being able to encode
+properties in the embeddings can cause erroneous matches (e.g., placing semantically disjoint entities close in
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 25
+
+embedding space). Then, background knowledge integration remains underutilized (9% of systems), though
+works like [123] demonstrate its value for entities lacking descriptive text.
+• considering training-related properties and the types of correspondences produced by matching systems,
+a notable pattern emerges: while 70% of systems employ pre-trained embedding models, 68% additionally inetune these models on ontology-speciic data in order to adapt representations to domain semantics. This trend
+suggests that general-purpose pre-trained models are insuicient for capturing domain-speciic similarities
+in isolation, necessitating some degree of task-speciic adaptation. Additionally, 38% of the reviewed works
+require reference alignments during training. The reliance on such alignments introduces a practical limitation,
+as curated alignment data is scarce.
+RQ2: What types of embedding strategies have been applied to ontology matching, and how do they difer? The
+analysis in this survey reveals the usage of multiple types of embedding strategies, but most of them follow some
+trends. The dominant paradigm has evolved from static word embeddings (2015ś2018) toward transformer-based
+contextual embeddings (2019śpresent), but with critical variations:
+• Lexical/Semantic Embeddings: These approaches use word embeddings (e.g., Word2Vec, GloVe) or contextual
+embeddings (e.g., BERT) to capture semantic information from entity labels and textual descriptions. They
+emphasize language understanding but often overlook ontology structure.
+• Graph-Based Embeddings: These methods represent ontologies as graphs and use algorithms like RDF2Vec,
+TransE, or GCNs to learn embeddings that encode structural information. They can better capture hierarchical
+and relational patterns, but may struggle with sparse or inconsistent graphs.
+• Hybrid Approaches: Combining lexical and structural features, hybrid models aim to leverage the strengths
+of both. Some methods concatenate multiple embeddings, while others use attention or fusion mechanisms.
+These tend to perform better in varied scenarios but may be more complex and computationally demanding.
+The primary diferences lie in the types of input data they use (text vs. structure), the embedding architectures
+(e.g., static vs. dynamic), and the extent to which they generalize across domains.
+RQ3: How do existing methods handle the complexity and heterogeneity of real-world ontologies? Current methods
+address heterogeneity through four evidence-based strategies, but with signiicant limitations revealed in this
+work:
+• Multi-modal embeddings shows promise but remains under-engineered: while most works combine lexical
+and structural features, only 9% incorporate background knowledge. Also, the mechanisms of embedding
+combination are often simplistic (e.g., averaging similarities), which can introduce noise in the similarity computation. Some works demonstrate that property-aware graph networks can better handle medical ontologies’
+deep hierarchies, but such integration is diicult to implement, and not all works explored them.
+• Context-aware adaptation addresses lexical heterogeneity efectively: approaches incorporating hierarchical
+context (e.g., parent/child labels) can achieve higher F-measure since aggregating this information can improve
+the similarity computation used in the matching process however, as can be seen in Table 6 from the total
+distribution of all classiication combinations of embedding used in the reviewed works, the relation aware
+embeddings appears in only 0.05% in total. This reveals that most context aggregation methods treat all
+neighbors equally, ignoring that disjointWith relations, as described in RQ1 discussion, should decrease
+similarity while subClassOf should increase it.
+• Focused on simple correspondences Most of the current approaches focuses in inding only simple correspondences. Only 7% of surveyed works propose approaches that can ind complex correspondences. Most of
+the real-world ontologies require those types of correspondences to be aligned. Since only a few works propose
+applications of embeddings in such cases, this demonstrates that the proposed approaches still have diiculties
+in dealing with real-world ontology heterogeneities.
+ACM Comput. Surv.
+
+26
+
+• G. S. Sousa et al.
+
+Along with those considerations, only one work explored the generation of embeddings aggregating both
+relational and background knowledge in the information level category. This analysis demonstrates that most of
+the approaches are still focusing on one type of heterogeneity and still can not handle all types of heterogeneities
+simultaneously.
+RQ4: What are the limitations of current embedding-based approaches, and what directions should future research
+take? This synthesis identiies four interconnected limitations that form a research agenda grounded in empirical
+evidence:
+• The supervision bottleneck: 38% of approaches require reference alignments for training, creating a circular
+dependency where matching quality depends on existing alignments. This severely limits applicability to
+novel domains. Unsupervised approaches exist, but underperform supervised ones. Future work must develop
+weakly supervised paradigms that leverage minimal human input (e.g., fewer seed alignments) combined with
+self-training on promising directions that also extend to complex matching scenarios.
+• The structural semantics gap: Current embeddings poorly represent logical constraints (e.g., disjointness,
+cardinality restrictions, intersections). This analysis shows only 7% of systems handle complex correspondences
+involving logical constructorsÐdespite most of the real-world ontology alignments requiring such expressions
+[116]. Future embeddings must move beyond node/edge representations to encode complex entities (constructed
+with logical predicates such as union or intersection), potentially through neuro-symbolic integration or
+geometric embeddings in constraint-satisfying spaces (e.g., hyperbolic manifolds for hierarchy preservation),
+also dealing with the embedding shared vector space problem.
+• The explainability deicit: Embedding-based matches provide similarity scores without justiication, hindering expert validation. While the current approaches are searching for improved f-measure scores, incorporating
+explainability mechanisms is still in the second plan. Given that ontology matching can occur in high-stakes
+domains (healthcare, inance), future work must develop interpretable similarity metrics that surface evidence for
+matches. One possible direction is through attention visualization over ontology subgraphs or counterfactual
+explanations.
+• The scalability-complexity trade-of: Hybrid approaches achieve the highest accuracy but scale poorly
+to large ontologies (>100K entities). To achieve the top performance, the approaches often sacriice recall for
+eiciency by iltering some entities. Future research should explore strategies that allow for eicient embedding
+generation without sacriicing performance by applying better space reduction techniques that ilter entities
+with low similarity probability.
+These limitations aren’t isolated technical challenges but interconnected symptoms of a deeper issue: embedding approaches have prioritized relational representation capacity over similarity-aware embeddings. Future
+breakthroughs will come from embeddings explicitly optimized for the alignment task’s unique requirements for
+semantic equivalence detection under heterogeneity, with minimal supervision, and maximal interpretability.
+
+7 Future Research Directions
+The study of entity-level segmentation and information-level aggregation shows that embedding models for
+ontology matching beneit from aggregating as much information as possible. Given the typical structure of
+ontology graphs, comprising nodes with textual features and logical properties, a model capable of representing
+this information would likely combine language models and GNNs to embed both speciic properties and logical
+constraints. However, jointly training these two model types is computationally expensive, as high-performing
+language models typically comprise a large number of layers that incur signiicant processing overhead, while
+graph neural networks must operate over large-scale graphs containing millions of triples. Therefore, more
+eicient methods for training these models in tandem need to be developed to enable the computation of eicient
+data batches and gradient updates, driving the learning of parameters for both GNNs and language models.
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 27
+
+With the right combination of these approaches and optimal lexical segmentation, a matcher can achieve better
+representation capacity, generalize more efectively across domains, and accumulate knowledge, ultimately
+resulting in improved alignment performance.
+Even when a suitable model exists for capturing the features necessary to generate embeddings for similarity
+tasks, such as identifying equivalent entities in ontology matching, the availability of adequate training data
+remains a critical requirement. Neural models generally require large volumes of data to learn their objectives
+efectively, and in the context of ontology matching, such data takes the form of reference alignments between
+ontologies. These alignments are typically produced either manually by domain experts or with the assistance of
+automatic matching systems, both of which render the data generation process time-consuming and resourceintensive. Moreover, matching systems must not only identify correct correspondences but also reliably reject
+incorrect ones, resulting in a highly imbalanced training set in which true correspondences constitute only a small
+fraction of all possible entity pairs. This issue becomes even more pronounced in complex matching scenarios,
+where the number of candidate subgraph combinations grows exponentially. In this context, the construction
+of large-scale, openly available alignment datasets would substantially beneit supervised models by providing
+the breadth of examples needed to learn robust similarity patterns and, consequently, produce more accurate
+embeddings. As a complementary direction, the reinement of unsupervised techniques that rely on pretext tasks
+represents a viable alternative for reducing data dependency while maintaining competitive performance in
+ontology matching.
+Recent advancements in NLP have led to the development of LLMs, which possess billions of parameters
+and demonstrate signiicant abilities in language comprehension and generation. Given their success in various
+semantic tasks, LLMs have the potential to enhance performance in Ontology Matching tasks. For instance, He et
+al. [45] apply LLMs in conjunction with BERTMap, prompting the model to assess the semantic equivalence of
+entity pairs and using its responses to establish the inal correspondences. Another work [93] leverages LLMs by
+retrieving information from ontologies and constructing prompts to assess entity similarities. Similarly, OLaLa
+[47] uses LLMs to compute core similarity metrics between entities, with diferent prompt sets tested to evaluate
+their impact on performance. In [85], the authors propose using ChatGPT [86] for ontology alignment by querying
+the language model with a template to assess the similarity of ontology entities. Those trends demonstrate that
+LLMs will be even more present in the scenario of ontology matching in future works.
+Another promising direction for future research lies in the further investigation of the underexplored areas
+identiied by the proposed classiication scheme. In particular, the development of more robust techniques
+for encoding relational properties within embeddings, as well as the systematic integration of external data
+sources, represent valuable yet insuiciently addressed capabilities in current matching systems. With respect
+to alignment complexity, complex ontology matching remains a largely underexplored frontier, especially
+concerning the application of embedding-based methods. Future research in this area should prioritize three
+interconnected challenges: the construction of dedicated benchmark datasets, the design of principled methods
+for subgraph selection, and the advancement of techniques for embedding aggregation in the context of complex
+correspondences.
+
+8 Conclusion
+This survey presents a comprehensive analysis of the role of embedding-based approaches in ontology matching.
+The methodology is described in detail, encompassing the paper selection criteria, the databases queried, and
+the manual post-iltering process applied, resulting in a curated corpus of relevant works. Building upon a prior
+classiication scheme, the framework was extended by introducing a new dimension distinguishing between
+simple and complex matching. This addition enables a more nuanced categorization of existing approaches,
+facilitating the grouping of works according to how embedding techniques are employed within their respective
+ACM Comput. Surv.
+
+28
+
+• G. S. Sousa et al.
+
+matching processes. The analysis uncovers a set of ongoing challenges and limitations that must be addressed in
+order to advance matcher performance. Notably, while entity-level segmentation holds potential for improving
+cross-domain generalization, the number of works tackling complex matching tasks remains limited, representing
+a signiicant gap in the current literature.
+Several limitations of existing works were identiied, and directions for future research on the use of embeddings
+in ontology matching were outlined. One promising avenue is the integration of language models with GNNs,
+which would allow systems to jointly leverage textual data and relational information encoded in ontology
+graphs. Another critical direction concerns the development of large, openly available alignment datasets, which
+would enable supervised models to more efectively learn the semantic representations required for ontology
+entity matching. Taken together, these indings underscore the utility of the proposed classiication scheme
+as a guiding framework for the analysis of embedding-based approaches in ontology matching. By organizing
+existing systems along well-deined dimensions, the framework allows researchers to more readily compare
+methodological choices and identify opportunities for the development of more robust and efective matching
+techniques.
+In conclusion, the indings presented in this survey highlight the importance of embedding-based approaches
+in ontology matching and emphasize the need for further research in this area. Several directions of future
+work include: the development of contextual and explainable embeddings that coherently integrate semantic,
+structural, and justiication mechanisms; the advancement of cross-lingual and cross-domain embeddings capable
+of supporting more diverse and heterogeneous ontology matching scenarios; the design of interactive, human-inthe-loop systems that systematically incorporate expert feedback into the embedding reinement process; and the
+construction of scalable models able to handle large-scale ontologies eiciently without compromising matching
+accuracy.
+
+References
+[1] Houda Akremi, Mouhamed Gaith Ayadi, and Sami Zghal. 2022. A Fuzzy OWL Ontologies Embedding for Complex Ontology Alignments.
+In Discovery Science - 25th int. conf., DS 2022, Montpellier, France, October 10-12, 2022, Proceedings (Lecture Notes in Computer Science,
+Vol. 13601). 394ś404.
+[2] Houda Akremi, Mouhamed Gaith Ayadi, and Sami Zghal. 2023. Complex Ontology Alignments using OWL Ontologies Embedding. In
+int. conf. on Innovations in Intelligent Systems and Applications, INISTA 2023, Hammamet, Tunisia, September 20-23, 2023. IEEE, 1ś5.
+[3] Sarah M. Alghamdi, Fernando Zhapa-Camacho, and Robert Hoehndorf. 2022. A-LIOn - alignment learning through inconsistency
+negatives of the aligned ontologies. In Proc. of the 17th int. Workshop on Ontology Matching (OM 2022) co-located with the 21th int.
+Semantic Web conf. (ISWC 2022), Hangzhou, China, held as a virtual conf., October 23, 2022 (CEUR Workshop Proceedings, Vol. 3324).
+CEUR-WS.org, 137ś144.
+[4] David Alvarez-Melis, Youssef Mroueh, and Tommi S. Jaakkola. 2020. Unsupervised Hierarchy Matching with Optimal Transport over
+Hyperbolic Spaces. In The 23rd int. conf. on Artiicial Intelligence and Statistics, AISTATS 2020, 26-28 August 2020, Online [Palermo, Sicily,
+Italy] (Proc. of Machine Learning Research, Vol. 108). PMLR, 1606ś1617.
+[5] Amina Amara, Mohamed Ali Hadj Taieb, and Mohamed Ben Aouicha. 2021. Network representation learning systematic review:
+ancestors and current development state. CoRR abs/2109.07583 (2021).
+[6] Mariyam Amir, Murchana Baruah, Mahsa Eslamialishah, Sina Ehsani, Alireza Bahramali, Sadra Naddaf-Sh, and Saman Zarandioon.
+2023. Truveta Mapper: A Zero-shot Ontology Alignment Framework. CoRR abs/2301.09767 (2023).
+[7] Yuan An, Alexander Kalinowski, and Jane Greenberg. 2021. OTMapOnto: optimal transport-based ontology matching. In Proc. of the
+16th int. Workshop on Ontology Matching co-located with the 20th int. Semantic Web conf. (ISWC 2021), Virtual conf., October 25, 2021
+(CEUR Workshop Proceedings, Vol. 3063). CEUR-WS.org, 185ś192.
+[8] Yuan An, Alexander Kalinowski, and Jane Greenberg. 2022. Exploring Wasserstein distance across concept embeddings for ontology
+matching. In Proc. of the 17th int. Workshop on Ontology Matching (OM 2022) co-located with the 21th int. Semantic Web conf. (ISWC
+2022), Hangzhou, China, held as a virtual conf., October 23, 2022 (CEUR Workshop Proceedings, Vol. 3324). CEUR-WS.org, 13ś24.
+[9] Sanjeev Arora, Yuanzhi Li, Yingyu Liang, Tengyu Ma, and Andrej Risteski. 2018. Linear Algebraic Structure of Word Senses, with
+Applications to Polysemy. Trans. Assoc. Comput. Linguistics 6 (2018), 483ś495.
+[10] Daniel Ayala, Inma Hernández, David Ruiz, and Erhard Rahm. 2022. LEAPME: Learning-based Property Matching with Embeddings.
+Data Knowl. Eng. 137 (2022), 101943.
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 29
+[11] Shubhanker Banerjee, Bharathi Raja Chakravarthi, and John Philip McCrae. 2024. Cross-Lingual Ontology Matching using Structural
+and Semantic Similarity. In Proc. of the 9th Workshop on Linked Data in Linguistics@ LREC-COLING 2024. 11ś21.
+[12] Achref Benarab, Guisheng Yin, and Fahad Raique. 2023. An Embedding-Based Approach to the Ontology Matching Problem. In 2023
+IEEE 4th int. conf. on Pattern Recognition and Machine Learning (PRML). IEEE, 642ś649.
+[13] Piotr Bojanowski, Edouard Grave, Armand Joulin, and Tomás Mikolov. 2017. Enriching Word Vectors with Subword Information.
+Trans. Assoc. Comput. Linguistics 5 (2017), 135ś146.
+[14] Antoine Bordes, Nicolas Usunier, Alberto García-Durán, Jason Weston, and Oksana Yakhnenko. 2013. Translating Embeddings for
+Modeling Multi-relational Data. In Advances in Neural Information Processing Systems 26: 27th Annual conf. on Neural Information
+Processing Systems 2013. Proceedings of a meeting held December 5-8, 2013, Lake Tahoe, Nevada, United States. 2787ś2795.
+[15] Jaydeep Chakraborty, Srividya K. Bansal, Luca Virgili, Krishanu Konar, and Beyza Yaman. 2021. OntoConnect: unsupervised ontology
+alignment with recursive neural network. In SAC ’21: The 36th ACM/SIGAPP Symposium on Applied Computing, Virtual Event, Republic
+of Korea, March 22-26, 2021. ACM, 1874ś1882.
+[16] Jaydeep Chakraborty, Beyza Yaman, Luca Virgili, Krishanu Konar, and Srividya Bansal. 2020. OntoConnect: results for OAEI 2020. In
+Proc. of the 15th int. Workshop on Ontology Matching co-located with the 19th int. Semantic Web conf. (ISWC 2020), Virtual conf. (originally
+planned to be in Athens, Greece), November 2, 2020 (CEUR Workshop Proceedings, Vol. 2788). CEUR-WS.org, 204ś210.
+[17] Jaydeep Chakraborty, Hamada M. Zahera, Mohamed Ahmed Sherif, and Srividya K. Bansal. 2021. ONTOCONNECT: Domain-Agnostic
+Ontology Alignment using Graph Embedding with Negative Sampling. In 20th IEEE int. conf. on Machine Learning and Applications,
+ICMLA 2021, Pasadena, CA, USA, December 13-16, 2021. IEEE, 942ś945.
+[18] Yupeng Chang, Xu Wang, Jindong Wang, Yuan Wu, Kaijie Zhu, Hao Chen, Linyi Yang, Xiaoyuan Yi, Cunxiang Wang, Yidong Wang,
+Wei Ye, Yue Zhang, Yi Chang, Philip S. Yu, Qiang Yang, and Xing Xie. 2023. A Survey on Evaluation of Large Language Models. CoRR
+abs/2307.03109 (2023).
+[19] Jiaoyan Chen, Pan Hu, Ernesto Jiménez-Ruiz, Ole Magnus Holter, Denvar Antonyrajah, and Ian Horrocks. 2021. OWL2Vec*: embedding
+of OWL ontologies. Mach. Learn. 110, 7 (2021), 1813ś1845.
+[20] Jiaoyan Chen, Ernesto Jiménez-Ruiz, Ian Horrocks, Denvar Antonyrajah, Ali Hadian, and Jaehun Lee. 2021. Augmenting Ontology
+Alignment by Semantic Embedding and Distant Supervision. In The Semantic Web - 18th int. conf., ESWC 2021, Virtual Event, June 6-10,
+2021, Proceedings (Lecture Notes in Computer Science, Vol. 12731). Springer, 392ś408.
+[21] Jiaoyan Chen, Olga Mashkova, Fernando Zhapa-Camacho, Robert Hoehndorf, Yuan He, and Ian Horrocks. 2025. Ontology Embedding:
+A Survey of Methods, Applications and Resources. IEEE Trans. Knowl. Data Eng. 37, 7 (2025), 4193ś4212.
+[22] Mei Chen, Yunsheng Xu, Nan Wu, and Ying Pan. 2025. Ontology Matching Method Based on Gated Graph Attention Model. Computers,
+Materials & Continua 82, 3 (2025).
+[23] Tim Dettmers, Pasquale Minervini, Pontus Stenetorp, and Sebastian Riedel. 2018. Convolutional 2D Knowledge Graph Embeddings.
+In Proc. of the Thirty-Second AAAI conf. on Artiicial Intelligence, (AAAI-18), the 30th innovative Applications of Artiicial Intelligence
+(IAAI-18), and the 8th AAAI Symposium on Educational Advances in Artiicial Intelligence (EAAI-18), New Orleans, Louisiana, USA,
+February 2-7, 2018. AAAI Press, 1811ś1818.
+[24] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. BERT: Pre-training of Deep Bidirectional Transformers
+for Language Understanding. In Proc. of the 2019 conf. of the North American Chapter of the Association for Computational Linguistics:
+Human Language Technologies, NAACL-HLT 2019, Minneapolis, MN, USA, June 2-7, 2019, Volume 1 (Long and Short Papers). Association
+for Computational Linguistics, 4171ś4186.
+[25] Molka Tounsi Dhouib, Catherine Faron, and Andrea G. B. Tettamanzi. 2021. Measuring Clusters of Labels in an Embedding Space to
+Reine Relations in Ontology Alignment. J. Data Semant. 10, 3-4 (2021), 399ś408.
+[26] Molka Tounsi Dhouib, Catherine Faron-Zucker, and Andrea G. B. Tettamanzi. 2019. An Ontology Alignment Approach Combining
+Word Embedding and the Radius Measure. In Semantic Systems. The Power of AI and Knowledge Graphs - 15th int. conf., SEMANTiCS
+2019, Karlsruhe, Germany, September 9-12, 2019, Proceedings (Lecture Notes in Computer Science, Vol. 11702). Springer, 191ś197.
+[27] Seika Efeoglu. 2022. GraphMatcher: a graph representation learning approach for ontology matching. In Proc. of the 17th int. Workshop
+on Ontology Matching (OM 2022) co-located with the 21th int. Semantic Web conf. (ISWC 2022), Hangzhou, China, held as a virtual conf.,
+October 23, 2022 (CEUR Workshop Proceedings, Vol. 3324). CEUR-WS.org, 174ś180.
+[28] Jérôme Euzenat and Pavel Shvaiko. 2013. Ontology Matching, Second edition. Springer Berlin Heidelberg.
+[29] Omaima Fallatah, Ziqi Zhang, and Frank Hopfgartner. 2022. KGMatcher+ results for OAEI 2022. In Proc. of the 17th int. Workshop on
+Ontology Matching (OM 2022) co-located with the 21th int. Semantic Web conf. (ISWC 2022), Hangzhou, China, held as a virtual conf.,
+October 23, 2022 (CEUR Workshop Proceedings, Vol. 3324). CEUR-WS.org, 181ś187.
+[30] Nikolaos Fanourakis, Vasilis Efthymiou, Dimitris Kotzinos, and Vassilis Christophides. 2023. Knowledge graph embedding methods for
+entity alignment: experimental review. Data Min. Knowl. Discov. 37, 5 (2023), 2070ś2137.
+[31] Rui Feng, Congcong Yang, and Yunhua Qu. 2022. A Word Embedding Model for Analyzing Patterns and Their Distributional Semantics.
+J. Quant. Linguistics 29, 1 (2022), 80ś105.
+
+ACM Comput. Surv.
+
+30
+
+• G. S. Sousa et al.
+
+[32] Jonathan Fürst, Mauricio Fadel Argerich, and Bin Cheng. 2023. VersaMatch: Ontology Matching with Weak Supervision. Proc. VLDB
+Endow. 16, 6 (2023), 1305ś1318.
+[33] Qian Geng, Siyu Deng, Danping Jia, and Jian Jin. 2020. Cross-domain ontology construction and alignment from online customer
+product reviews. Inf. Sci. 531 (2020), 47ś67.
+[34] Anna Giabelli, Lorenzo Malandri, Fabio Mercorio, and Mario Mezzanzanica. 2022. WETA: Automatic taxonomy alignment via word
+embeddings. Comput. Ind. 138 (2022), 103626.
+[35] Hamed Babaei Giglou, Jennifer D’Souza, Felix Engel, and Sören Auer. 2024. LLMs4OM: Matching Ontologies with Large Language
+Models. In The Semantic Web: ESWC 2024 Satellite Events - Hersonissos, Crete, Greece, May 26-30, 2024, Proceedings, Part I (Lecture Notes
+in Computer Science, Vol. 15344). Springer, 25ś35.
+[36] Rafael S. Gonçalves, Maulik R. Kamdar, and Mark A. Musen. 2019. Aligning Biomedical Metadata with Ontologies Using Clustering and
+Embeddings. In The Semantic Web - 16th int. conf., ESWC 2019, Portorož, Slovenia, June 2-6, 2019, Proceedings (Lecture Notes in Computer
+Science, Vol. 11503). Springer, 146ś161.
+[37] Francis Gosselin and Amal Zouaq. 2022. SEBMatcher results for OAEI 2022. In Proc. of the 17th int. Workshop on Ontology Matching
+(OM 2022) co-located with the 21th int. Semantic Web conf. (ISWC 2022), Hangzhou, China, held as a virtual conf., October 23, 2022 (CEUR
+Workshop Proceedings, Vol. 3324). CEUR-WS.org, 202ś209.
+[38] Francis Gosselin and Amal Zouaq. 2023. SORBET: A Siamese Network for Ontology Embeddings Using a Distance-Based Regression
+Loss and BERT. In The Semantic Web - ISWC 2023 - 22nd int. Semantic Web conf., Athens, Greece, November 6-10, 2023, Proceedings, Part I
+(Lecture Notes in Computer Science, Vol. 14265). Springer, 561ś578.
+[39] Dagmar Gromann and Thierry Declerck. 2018. Comparing Pretrained Multilingual Word Embeddings on an Ontology Alignment
+Task. In Proc. of the Eleventh int. conf. on Language Resources and Evaluation, LREC 2018, Miyazaki, Japan, May 7-12, 2018. European
+Language Resources Association (ELRA).
+[40] Zakaria Hamane, Amina Samih, and Abdelhadi Fennan. 2023. Ontology Matching using Deep Learning. Journal of Theoretical and
+Applied Information Technology 101, 10 (2023).
+[41] Junheng Hao, Chuan Lei, Vasilis Efthymiou, Abdul Quamar, Fatma Özcan, Yizhou Sun, and Wei Wang. 2021. MEDTO: Medical Data to
+Ontology Matching Using Hybrid Graph Neural Networks. In KDD ’21: The 27th ACM SIGKDD conf. on Knowledge Discovery and Data
+Mining, Virtual Event, Singapore, August 14-18, 2021. ACM, 2946ś2954.
+[42] Zhigang Hao, Wolfgang Mayer, Jingbo Xia, Guoliang Li, Li Qin, and Zaiwen Feng. 2023. Ontology alignment with semantic and
+structural embeddings. J. Web Semant. 78 (2023), 100798.
+[43] Yuan He, Jiaoyan Chen, Denvar Antonyrajah, and Ian Horrocks. 2021. Biomedical ontology alignment with BERT. In Proc. of the 16th
+int. Workshop on Ontology Matching co-located with the 20th int. Semantic Web conf. (ISWC 2021), Virtual conf., October 25, 2021 (CEUR
+Workshop Proceedings, Vol. 3063). CEUR-WS.org, 1ś12.
+[44] Yuan He, Jiaoyan Chen, Denvar Antonyrajah, and Ian Horrocks. 2022. BERTMap: A BERT-Based Ontology Alignment System. In
+Thirty-Sixth AAAI conf. on Artiicial Intelligence, AAAI 2022, Thirty-Fourth conf. on Innovative Applications of Artiicial Intelligence, IAAI
+2022, The Twelveth Symposium on Educational Advances in Artiicial Intelligence, EAAI 2022 Virtual Event, February 22 - March 1, 2022.
+AAAI Press, 5684ś5691.
+[45] Yuan He, Jiaoyan Chen, Hang Dong, and Ian Horrocks. 2023. Exploring Large Language Models for Ontology Alignment. In Proc. of the
+ISWC 2023 Posters, Demos and Industry Tracks: From Novel Ideas to Industrial Practice co-located with 22nd int. Semantic Web conf. (ISWC
+2023), Athens, Greece, November 6-10, 2023 (CEUR Workshop Proceedings, Vol. 3632). CEUR-WS.org.
+[46] Sven Hertling and Heiko Paulheim. 2019. DOME Results for OAEI 2019. In Proc. of the 14th int. Workshop on Ontology Matching
+co-located with the 18th int. Semantic Web conf. (ISWC 2019), Auckland, New Zealand, October 26, 2019 (CEUR Workshop Proceedings,
+Vol. 2536). CEUR-WS.org, 123ś130.
+[47] Sven Hertling and Heiko Paulheim. 2023. OLaLa: Ontology Matching with Large Language Models. In Proc. of the 12th Knowledge
+Capture conf. 2023, K-CAP 2023, Pensacola, FL, USA, December 5-7, 2023. ACM, 131ś139.
+[48] Sven Hertling, Jan Portisch, and Heiko Paulheim. 2020. Supervised ontology and instance matching with MELT. In Proc. of the 15th int.
+Workshop on Ontology Matching co-located with the 19th int. Semantic Web conf. (ISWC 2020), Virtual conf. (originally planned to be in
+Athens, Greece), November 2, 2020 (CEUR Workshop Proceedings, Vol. 2788). CEUR-WS.org, 60ś71.
+[49] Sven Hertling, Jan Portisch, and Heiko Paulheim. 2021. Matching with transformers in MELT. In Proc. of the 16th int. Workshop
+on Ontology Matching co-located with the 20th int. Semantic Web conf. (ISWC 2021), Virtual conf., October 25, 2021 (CEUR Workshop
+Proceedings, Vol. 3063). CEUR-WS.org, 13ś24.
+[50] Matthew Honnibal and Ines Montani. 2017. spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural
+networks and incremental parsing. To appear 7, 1 (2017), 411ś420.
+[51] Ziniu Hu, Ting Chen, Kai-Wei Chang, and Yizhou Sun. 2019. Few-Shot Representation Learning for Out-Of-Vocabulary Words. In Proc.
+of the 57th conf. of the Association for Computational Linguistics, ACL 2019, Florence, Italy, July 28- August 2, 2019, Volume 1: Long Papers.
+Association for Computational Linguistics, 4102ś4112.
+
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 31
+[52] Vivek Iyer, Arvind Agarwal, and Harshit Kumar. 2020. VeeAlign: a supervised deep learning approach to ontology alignment. In Proc.
+of the 15th int. Workshop on Ontology Matching co-located with the 19th int. Semantic Web conf. (ISWC 2020), Virtual conf. (originally
+planned to be in Athens, Greece), November 2, 2020 (CEUR Workshop Proceedings, Vol. 2788). CEUR-WS.org, 216ś224.
+[53] Vivek Iyer, Arvind Agarwal, and Harshit Kumar. 2021. VeeAlign: Multifaceted Context Representation Using Dual Attention for
+Ontology Alignment. In Proc. of the 2021 conf. on Empirical Methods in Natural Language Processing, EMNLP 2021, Virtual Event / Punta
+Cana, Dominican Republic, 7-11 November, 2021. Association for Computational Linguistics, 10780ś10792.
+[54] Saleha Javed, Fredrik Sandin, Hamam Mokayed, Jerker Delsing, and Marcus Liwicki. 2022. Deep Ontology Alignment with BERT_INT:
+Improvements and Industrial Internet of Things (IIoT) Case Study. (2022).
+[55] Shaoxiong Ji, Shirui Pan, Erik Cambria, Pekka Marttinen, and Philip S. Yu. 2022. A Survey on Knowledge Graphs: Representation,
+Acquisition, and Applications. IEEE Trans. Neural Networks Learn. Syst. 33, 2 (2022), 494ś514.
+[56] Chao Jiang and Xingsi Xue. 2020. Matching Biomedical Ontologies with Long Short-Term Memory Networks. In IEEE int. conf. on
+Bioinformatics and Biomedicine, BIBM 2020, Virtual Event, South Korea, December 16-19, 2020. IEEE, 2484ś2489.
+[57] Ernesto Jiménez-Ruiz, Asan Agibetov, Jiaoyan Chen, Matthias Samwald, and Valerie Cross. 2020. Dividing the Ontology Alignment
+Task with Semantic Embeddings and Logic-Based Modules. In ECAI 2020 - 24th European conf. on Artiicial Intelligence, 29 August-8
+September 2020, Santiago de Compostela, Spain, August 29 - September 8, 2020 - Including 10th conf. on Prestigious Applications of Artiicial
+Intelligence (PAIS 2020) (Frontiers in Artiicial Intelligence and Applications, Vol. 325). IOS Press, 784ś791.
+[58] Ernesto Jiménez-Ruiz, Asan Agibetov, Matthias Samwald, and Valerie Cross. 2018. Breaking-down the Ontology Alignment Task with
+a Lexical Index and Neural Embeddings. CoRR abs/1805.12402 (2018).
+[59] Ernesto Jiménez-Ruiz, Asan Agibetov, Matthias Samwald, and Valerie Cross. 2018. We Divide, You Conquer: From Large-scale Ontology
+Alignment to Manageable Subtasks with a Lexical Index and Neural Embeddings. In Proc. of the ISWC 2018 Posters & Demonstrations,
+Industry and Blue Sky Ideas Tracks co-located with 17th int. Semantic Web conf. (ISWC 2018), Monterey, USA, October 8th - to - 12th, 2018
+(CEUR Workshop Proceedings, Vol. 2180). CEUR-WS.org.
+[60] Matthias Jurisch and Bodo Igler. 2018. RDF2Vec-based Classiication of Ontology Alignment Changes. In Proc. of the First Workshop on
+Deep Learning for Knowledge Graphs and Semantic Technologies (DL4KGS) co-located with the 15th Extended Semantic Web Conerence
+(ESWC 2018), Heraklion, Crete, Greece, June 4, 2018 (CEUR Workshop Proceedings, Vol. 2106). CEUR-WS.org, 40ś45.
+[61] Matthias Jurisch and Bodo Igler. 2019. Graph-Convolution-Based Classiication for Ontology Alignment Change Prediction. In Proc. of
+the Workshop on Deep Learning for Knowledge Graphs (DL4KG2019) Co-located with the 16th Extended Semantic Web conf. 2019 (ESWC
+2019), Portoroz, Slovenia, June 2, 2019 (CEUR Workshop Proceedings, Vol. 2377). CEUR-WS.org, 11ś20.
+[62] Péter Kardos, Zsolt Szántó, and Richárd Farkas. 2022. WomboCombo results for OAEI 2022. In Proc. of the 17th int. Workshop on
+Ontology Matching (OM 2022) co-located with the 21th int. Semantic Web conf. (ISWC 2022), Hangzhou, China, held as a virtual conf.,
+October 23, 2022 (CEUR Workshop Proceedings, Vol. 3324). CEUR-WS.org, 216ś219.
+[63] Meriem Ali Khoudja, Messaouda Fareh, and Haida Bouarfa. 2022. Deep Embedding Learning With Auto-Encoder for Large-Scale
+Ontology Matching. Int. J. Semantic Web Inf. Syst. 18, 1 (2022), 1ś18.
+[64] Minhwan Kim, Jongmo Kim, Kunyoung Kim, and Mye M. Sohn. 2020. Ontology-aided Word2vec based Synonym Identiication for
+Ontology Alignment. In 2020 IEEE int. conf. on Big Data and Smart Computing, BigComp 2020, Busan, Korea (South), February 19-22,
+2020. IEEE, 429ś431.
+[65] Leon Knorr and Jan Portisch. 2021. Fine-TOM matcher results for OAEI 2021. In Proc. of the 16th int. Workshop on Ontology Matching
+co-located with the 20th int. Semantic Web conf. (ISWC 2021), Virtual conf., October 25, 2021 (CEUR Workshop Proceedings, Vol. 3063).
+CEUR-WS.org, 144ś151.
+[66] Prodromos Kolyvakis, Alexandros Kalousis, and Dimitris Kiritsis. 2018. DeepAlignment: Unsupervised Ontology Matching with Reined
+Word Vectors. In Proc. of the 2018 conf. of the North American Chapter of the Association for Computational Linguistics: Human Language
+Technologies, NAACL-HLT 2018, New Orleans, Louisiana, USA, June 1-6, 2018, Volume 1 (Long Papers). Association for Computational
+Linguistics, 787ś798.
+[67] Prodromos Kolyvakis, Alexandros Kalousis, Barry Smith, and Dimitris Kiritsis. 2018. Biomedical ontology alignment: an approach
+based on representation learning. J. Biomed. Semant. 9, 1 (2018), 21:1ś21:20.
+[68] Daniel Kossack, Niklas Borg, Leon Knorr, and Jan Portisch. 2021. TOM matcher results for OAEI 2021. In Proc. of the 16th int. Workshop
+on Ontology Matching co-located with the 20th int. Semantic Web conf. (ISWC 2021), Virtual conf., October 25, 2021 (CEUR Workshop
+Proceedings, Vol. 3063). CEUR-WS.org, 193ś198.
+[69] Christos Koutras, Marios Fragkoulis, Asterios Katsifodimos, and Christoph Loi. 2020. REMA: Graph Embeddings-based Relational
+Schema Matching. In Proc. of the Workshops of the EDBT/ICDT 2020 Joint conf., Copenhagen, Denmark, March 30, 2020 (CEUR Workshop
+Proceedings, Vol. 2578). CEUR-WS.org.
+[70] Guoxuan Li. 2020. DeepFCA: Matching Biomedical Ontologies Using Formal Concept Analysis Embedding Techniques. In ICMHI 2020:
+4th int. conf. on Medical and Health Informatics, Kamakura City, Japan, August, 2020. ACM, 259ś265.
+[71] Guoxuan Li. 2020. Improving Biomedical Ontology Matching Using Domain-speciic Word Embeddings. In CSAE 2020: The 4th int. conf.
+on Computer Science and Application Engineering, Sanya, China, October 20-22, 2020. ACM, 120:1ś120:5.
+ACM Comput. Surv.
+
+32
+
+• G. S. Sousa et al.
+
+[72] Guoxuan Li, Songmao Zhang, Jiayi Wei, and Wenqian Ye. 2021. Combining FCA-Map with representation learning for aligning large
+biomedical ontologies. In Proc. of the 16th int. Workshop on Ontology Matching co-located with the 20th int. Semantic Web conf. (ISWC
+2021), Virtual conf., October 25, 2021 (CEUR Workshop Proceedings, Vol. 3063). CEUR-WS.org, 207ś208.
+[73] Weizhuo Li, Xuxiang Duan, Meng Wang, Xiaoping Zhang, and Guilin Qi. 2019. Multi-view Embedding for Biomedical Ontology
+Matching. In Proc. of the 14th int. Workshop on Ontology Matching co-located with the 18th int. Semantic Web conf. (ISWC 2019), Auckland,
+New Zealand, October 26, 2019 (CEUR Workshop Proceedings, Vol. 2536). CEUR-WS.org, 13ś24.
+[74] Haoran Lian, Yizhe Xiong, Jianwei Niu, Shasha Mo, Zhenpeng Su, Zijia Lin, Hui Chen, Jungong Han, and Guiguang Ding. 2025.
+Scafold-BPE: Enhancing Byte Pair Encoding for Large Language Models with Simple and Efective Scafold Token Removal. In AAAI-25,
+Sponsored by the Association for the Advancement of Artiicial Intelligence, February 25 - March 4, 2025, Philadelphia, PA, USA. AAAI
+Press, 24539ś24548.
+[75] Yankai Lin, Zhiyuan Liu, Maosong Sun, Yang Liu, and Xuan Zhu. 2015. Learning Entity and Relation Embeddings for Knowledge
+Graph Completion. In Proc. of the Twenty-Ninth AAAI conf. on Artiicial Intelligence, January 25-30, 2015, Austin, Texas, USA. AAAI
+Press, 2181ś2187.
+[76] Xianhao Liu, Jesper Grode, and Michael R. Hansen. 2024. MDMapper: A Framework for Aligning Master Data Models Using Ontology
+Matching Techniques. In Proc. of the 19th int. Workshop on Ontology Matching co-located with the 23rd int. Semantic Web conf. (ISWC
+2024), Baltimore, USA, November 11, 2024 (CEUR Workshop Proceedings, Vol. 3897). CEUR-WS.org, 30ś42.
+[77] Alexander Lütke. 2019. AnyGraphMatcher Submission to the OAEI Knowledge Graph Challenge 2019. In Proc. of the 14th int. Workshop
+on Ontology Matching co-located with the 18th int. Semantic Web conf. (ISWC 2019), Auckland, New Zealand, October 26, 2019 (CEUR
+Workshop Proceedings, Vol. 2536). CEUR-WS.org, 86ś93.
+[78] Ramón Maldonado and Sanda M. Harabagiu. 2019. Bootstrapping Adversarial Learning of Biomedical Ontology Alignments. In AMIA
+2019, American Medical Informatics Association Annual Symposium, Washington, DC, USA, November 16-20, 2019. AMIA.
+[79] Viktorija Mijalcheva, Ana Davcheva, Sasho Gramatikov, Milos Jovanovik, Dimitar Trajanov, and Riste Stojanov. 2022. Learning Robust
+Food Ontology Alignment. In IEEE int. conf. on Big Data, Big Data 2022, Osaka, Japan, December 17-20, 2022. IEEE, 4097ś4104.
+[80] Tomás Mikolov, Ilya Sutskever, Kai Chen, Gregory S. Corrado, and Jefrey Dean. 2013. Distributed Representations of Words and
+Phrases and their Compositionality. In Advances in Neural Information Processing Systems 26: 27th Annual conf. on Neural Information
+Processing Systems 2013. Proceedings of a meeting held December 5-8, 2013, Lake Tahoe, Nevada, United States. 3111ś3119.
+[81] Pierre Monnin, Chedy Raïssi, Amedeo Napoli, and Adrien Coulet. 2022. Discovering alignment relations with Graph Convolutional
+Networks: A biomedical case study. Semantic Web 13, 3 (2022), 379ś398.
+[82] Michael Monych, Jan Portisch, Michael Hladik, and Heiko Paulheim. 2020. DESKMatcher. In Proc. of the 15th int. Workshop on Ontology
+Matching co-located with the 19th int. Semantic Web conf. (ISWC 2020), Virtual conf. (originally planned to be in Athens, Greece), November
+2, 2020 (CEUR Workshop Proceedings, Vol. 2788). CEUR-WS.org, 181ś186.
+[83] Sophie Neutel and Maaike H. T. de Boer. 2021. Towards Automatic Ontology Alignment using BERT. In Proc. of the AAAI 2021 Spring
+Symposium on Combining Machine Learning and Knowledge Engineering (AAAI-MAKE 2021), Stanford University, Palo Alto, California,
+USA, March 22-24, 2021 (CEUR Workshop Proceedings, Vol. 2846). CEUR-WS.org.
+[84] Ikechukwu Nkisi-Orji, Nirmalie Wiratunga, Stewart Massie, Kit-Ying Hui, and Rachel Heaven. 2018. Ontology Alignment Based on
+Word Embedding and Random Forest Classiication. In Machine Learning and Knowledge Discovery in Databases - European conf., ECML
+PKDD 2018, Dublin, Ireland, September 10-14, 2018, Proceedings, Part I (Lecture Notes in Computer Science, Vol. 11051). Springer, 557ś572.
+[85] Sanaz Saki Norouzi, Mohammad Saeid Mahdavinejad, and Pascal Hitzler. 2023. Conversational ontology alignment with ChatGPT.
+In Proc. of the 18th int. Workshop on Ontology Matching co-located with the 22nd int. Semantic Web conf. (ISWC 2023), Athens, Greece,
+November 7, 2023 (CEUR Workshop Proceedings, Vol. 3591). CEUR-WS.org, 61ś66.
+[86] OpenAI. 2025. Chat GPT.
+[87] Yiwen Peng, Mehwish Alam, and Thomas Bonald. 2023. Ontology matching using textual class descriptions. In Proc. of the 18th int.
+Workshop on Ontology Matching co-located with the 22nd int. Semantic Web conf. (ISWC 2023), Athens, Greece, November 7, 2023 (CEUR
+Workshop Proceedings, Vol. 3591). CEUR-WS.org, 67ś72.
+[88] Jefrey Pennington, Richard Socher, and Christopher D. Manning. 2014. Glove: Global Vectors for Word Representation. In Proc. of the
+2014 conf. on Empirical Methods in Natural Language Processing, EMNLP 2014, October 25-29, 2014, Doha, Qatar, A meeting of SIGDAT, a
+Special Interest Group of the ACL. ACL, 1532ś1543.
+[89] Matthew E. Peters, Waleed Ammar, Chandra Bhagavatula, and Russell Power. 2017. Semi-supervised sequence tagging with bidirectional
+language models. In Proc. of the 55th Annual Meeting of the Association for Computational Linguistics, ACL 2017, Vancouver, Canada,
+July 30 - August 4, Volume 1: Long Papers. Association for Computational Linguistics, 1756ś1765.
+[90] Jan Portisch, Guilherme Costa, Karolin Stefani, Katharina Kreplin, Michael Hladik, and Heiko Paulheim. 2022. Ontology Matching
+Through Absolute Orientation of Embedding Spaces. In The Semantic Web: ESWC 2022 Satellite Events - Hersonissos, Crete, Greece, May
+29 - June 2, 2022, Proceedings (Lecture Notes in Computer Science, Vol. 13384). Springer, 153ś157.
+[91] Jan Portisch, Michael Hladik, and Heiko Paulheim. 2022. Background knowledge in ontology matching: A survey. Semantic Web
+Preprint (2022), 1ś55.
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 33
+[92] Jan Portisch and Heiko Paulheim. 2021. ALOD2Vec matcher results for OAEI 2021. In Proc. of the 16th int. Workshop on Ontology
+Matching co-located with the 20th int. Semantic Web conf. (ISWC 2021), Virtual conf., October 25, 2021 (CEUR Workshop Proceedings,
+Vol. 3063). CEUR-WS.org, 117ś123.
+[93] Zhangcheng Qiang, Weiqing Wang, and Kerry Taylor. 2024. Agent-OM: Leveraging LLM Agents for Ontology Matching. Proc. VLDB
+Endow. 18, 3 (2024), 516ś529.
+[94] Erhard Rahm and Philip A Bernstein. 2001. A survey of approaches to automatic schema matching. The VLDB Journal 10, 4 (Dec. 2001),
+334ś350. doi:10.1007/s007780100057
+[95] Marek Rei and Ted Briscoe. 2014. Looking for Hyponyms in Vector Space. In Proc. of the Eighteenth conf. on Computational Natural
+Language Learning, CoNLL 2014, Baltimore, Maryland, USA, June 26-27, 2014. ACL, 68ś77.
+[96] Nils Reimers and Iryna Gurevych. 2019. Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. In Proc. of the 2019 conf.
+on Empirical Methods in Natural Language Processing and the 9th int. Joint conf. on Natural Language Processing, EMNLP-IJCNLP 2019,
+Hong Kong, China, November 3-7, 2019. Association for Computational Linguistics, 3980ś3990.
+[97] Petar Ristoski and Heiko Paulheim. 2016. RDF2Vec: RDF Graph Embeddings for Data Mining. In The Semantic Web - ISWC 2016 - 15th
+int. Semantic Web conf., Kobe, Japan, October 17-21, 2016, Proceedings, Part I (Lecture Notes in Computer Science, Vol. 9981). 498ś514.
+[98] Mohammed Suleiman Mohammed Rudwan and Jean Vincent Fonou-Dombeu. 2022. Ontology Reuse: Neural Network-Based Measurement of Concepts Representations and Similarities in Ontology Corpus. In 2022 int. conf. on Artiicial Intelligence, Big Data, Computing
+and Data Communication Systems (icABCD). IEEE, 1ś8.
+[99] Fahad Ahmed Satti, Musarrat Hussain, Sungyoung Lee, and TaeChoong Chung. 2022. Signiicance of Syntactic Type Identiication in
+Embedding Vector based Schema Matching. In 16th int. conf. on Ubiquitous Information Management and Communication, IMCOM 2022,
+Seoul, Korea, Republic of, January 3-5, 2022. IEEE, 1ś6.
+[100] Michael Sejr Schlichtkrull, Thomas N. Kipf, Peter Bloem, Rianne van den Berg, Ivan Titov, and Max Welling. 2018. Modeling Relational
+Data with Graph Convolutional Networks. In The Semantic Web - 15th int. conf., ESWC 2018, Heraklion, Crete, Greece, June 3-7, 2018,
+Proceedings (Lecture Notes in Computer Science, Vol. 10843). Springer, 593ś607.
+[101] Daniela Schmidt, Rafael Basso, Cássia Trojahn, and Renata Vieira. 2018. Matching Domain and Top-level ontologies exploring Word
+Sense Disambiguation and Word Embedding. In Emerging Topics in Semantic Technologies - ISWC 2018 Satellite Events [best papers from
+13 of the workshops co-located with the ISWC 2018 conf.] (Studies on the Semantic Web, Vol. 36). IOS Press, 27ś38.
+[102] Florian Schneider, Sarthak Dash, Sugato Bagchi, Nandana Mihindukulasooriya, and Alio Massimiliano Gliozzo. 2023. NLFOA: Natural
+Language Focused Ontology Alignment. In Proc. of the 12th Knowledge Capture conf. 2023, K-CAP 2023, Pensacola, FL, USA, December
+5-7, 2023. ACM, 114ś121.
+[103] Yukihiro Shiraishi and Ken Kaneiwa. 2024. A Self-matching Training Method with Annotation Embedding Models for Ontology
+Subsumption Prediction. CoRR abs/2402.16278 (2024).
+[104] Marta Contreiras Silva, Daniel Faria, and Catia Pesquita. 2024. Complex Multi-Ontology Alignment Through Geometric Operations on
+Language Embeddings. In ECAI 2024 - 27th European conf. on Artiicial Intelligence, 19-24 October 2024, Santiago de Compostela, Spain Including 13th conf. on Prestigious Applications of Intelligent Systems (PAIS 2024) (Frontiers in Artiicial Intelligence and Applications,
+Vol. 392). IOS Press, 1333ś1340.
+[105] Guilherme Sousa, Rinaldo Lima, and Cássia Trojahn. 2022. An eye on representation learning in ontology matching. In Proc. of the 17th
+int. Workshop on Ontology Matching (OM 2022) co-located with the 21th int. Semantic Web conf. (ISWC 2022), Hangzhou, China, held as a
+virtual conf., October 23, 2022 (CEUR Workshop Proceedings, Vol. 3324). CEUR-WS.org, 49ś60.
+[106] Guilherme Sousa, Rinaldo Lima, and Cássia Trojahn. 2023. Combining word and sentence embeddings with alignment extension for
+property matching. In Proc. of the 18th int. Workshop on Ontology Matching co-located with the 22nd int. Semantic Web conf. (ISWC 2023),
+Athens, Greece, November 7, 2023 (CEUR Workshop Proceedings, Vol. 3591). CEUR-WS.org, 91ś96.
+[107] Guilherme Sousa, Rinaldo Lima, and Cássia Trojahn. 2025. Complex Ontology Matching with Large Language Model Embeddings.
+CoRR abs/2502.13619 (2025).
+[108] Gem Stapleton, John Howse, Adrienne Bonnington, and Jim Burton. 2014. A Vision for Diagrammatic Ontology Engineering. In Proc.
+of the int. Workshop on Visualizations and User Interfaces for Knowledge Engineering and Linked Data Analytics co-located with 19th
+int. conf. on Knowledge Engineering and Knowledge Management, VISUAL@EKAW 2014, Linköping, Sweden, November 24, 2014 (CEUR
+Workshop Proceedings, Vol. 1299). CEUR-WS.org, 1ś13.
+[109] Jingyu Sun, Susumu Takeuchi, and Ikuo Yamasaki. 2020. Few-Shot Ontology Alignment Model with Attribute Attentions. In 44th IEEE
+Annual Computers, Software, and Applications conf., COMPSAC 2020, Madrid, Spain, July 13-17, 2020. IEEE, 1218ś1222.
+[110] Zhiqing Sun, Zhi-Hong Deng, Jian-Yun Nie, and Jian Tang. 2019. RotatE: Knowledge Graph Embedding by Relational Rotation in
+Complex Space. In 7th int. conf. on Learning Representations, ICLR 2019, New Orleans, LA, USA, May 6-9, 2019. OpenReview.net.
+[111] Maria Taboada, Diego Martínez, Mohammed Arideh, and Rosa Mosquera. 2025. Ontology matching with Large Language Models and
+prioritized depth-irst search. Inf. Fusion 123 (2025), 103254.
+[112] Varun M. Tayur and R. Suchithra. 2022. Multi-ontology mapping generative adversarial network in internet of things for ontology
+alignment. Internet Things 20 (2022), 100616.
+ACM Comput. Surv.
+
+34
+
+• G. S. Sousa et al.
+
+[113] Sevinj Teymurova. 2023. Aligning Network of Ontologies using Graph AI. (2023).
+[114] Sevinj Teymurova, Ernesto Jiménez-Ruiz, Tillman Weyde, and Jiaoyan Chen. 2024. OWL2Vec4OA: Tailoring Knowledge Graph
+Embeddings for Ontology Alignment. In Knowledge Graphs and Semantic Web - 6th int. conf., KGSWC 2024, Paris, France, December
+11-13, 2024, Proceedings (Lecture Notes in Computer Science, Vol. 15459). Springer, 168ś182.
+[115] Sevinj Teymurova, Ernesto Jiménez-Ruiz, Tillman Weyde, and Jiaoyan Chen. 2024. Towards Tailoring Ontology Embeddings for
+Ontology Matching Tasks. In Proc. of the 19th int. Workshop on Ontology Matching co-located with the 23rd int. Semantic Web conf. (ISWC
+2024), Baltimore, USA, November 11, 2024 (CEUR Workshop Proceedings, Vol. 3897). CEUR-WS.org, 57ś60.
+[116] Élodie Thiéblin, Ollivier Haemmerlé, Nathalie Hernandez, and Cássia Trojahn. 2018. Task-Oriented Complex Ontology Alignment:
+Two Alignment Evaluation Sets. In The Semantic Web - 15th int. conf., ESWC 2018, Heraklion, Crete, Greece, June 3-7, 2018, Proceedings
+(Lecture Notes in Computer Science, Vol. 10843). Springer, 655ś670.
+[117] Élodie Thiéblin, Ollivier Haemmerlé, Nathalie Hernandez, and Cássia Trojahn. 2020. Survey on complex ontology matching. Semantic
+Web 11, 4 (2020), 689ś727.
+[118] Marius-Horatiu Totoian, Anca Marginean, Philipp Blohm, and Mir Nawab Hussain. 2024. HybridOM: Ontology Matching using Hybrid
+Search. In Proc. of the 19th int. Workshop on Ontology Matching co-located with the 23rd int. Semantic Web conf. (ISWC 2024), Baltimore,
+USA, November 11, 2024 (CEUR Workshop Proceedings, Vol. 3897). CEUR-WS.org, 138ś145.
+[119] Ming-Yu Tu, Hans Ehm, Abdelgafar Ismail, and Philipp Ulrich. 2023. Reusable Ontology Generation and Matching from Simulation
+Models. In 2023 Winter Simulation conf. (WSC). IEEE, 2298ś2309.
+[120] Javier Vela and Jorge Gracia. 2022. Cross-lingual ontology matching with CIDER-LM: results for OAEI 2022. In Proc. of the 17th int.
+Workshop on Ontology Matching (OM 2022) co-located with the 21th int. Semantic Web conf. (ISWC 2022), Hangzhou, China, held as a
+virtual conf., October 23, 2022 (CEUR Workshop Proceedings, Vol. 3324). CEUR-WS.org, 158ś165.
+[121] Thais Viana, Carla Delgado, João C. P. da Silva, and Priscila Lima. 2017. Ontology Alignment with Weightless Neural Networks. In
+Artiicial Neural Networks and Machine Learning - ICANN 2017 - 26th int. conf. on Artiicial Neural Networks, Alghero, Italy, September
+11-14, 2017, Proceedings, Part II (Lecture Notes in Computer Science, Vol. 10614). Springer, 376ś384.
+[122] Lucy Lu Wang, Chandra Bhagavatula, Mark Neumann, Kyle Lo, Chris Wilhelm, and Waleed Ammar. 2018. Ontology alignment in
+the biomedical domain using entity deinitions and context. In Proc. of the BioNLP 2018 workshop, Melbourne, Australia, July 19, 2018.
+Association for Computational Linguistics, 47ś55.
+[123] Minxian Wang and Jing Peng. 2022. Word Normalization Information Systems and Improved Learning Representation for Ontology
+Matching. In 2022 IEEE int. conf. on Electrical Engineering, Big Data and Algorithms (EEBDA). IEEE, 870ś874.
+[124] Peng Wang, Shiyi Zou, Jiajun Liu, and Wenjun Ke. 2022. Matching biomedical ontologies with GCN-based feature propagation. Math.
+Biosci. Eng 19 (2022), 8479ś8504.
+[125] Xinyi Wang, Hieu Pham, Philip Arthur, and Graham Neubig. 2019. Multilingual Neural Machine Translation With Soft Decoupled
+Encoding. In 7th int. conf. on Learning Representations, ICLR 2019, New Orleans, LA, USA, May 6-9, 2019. OpenReview.net.
+[126] Youxuan Wang, Shunmei Meng, Qi Yan, and Jing Zhang. 2023. Multi-relational Heterogeneous Graph Attention Networks for
+Knowledge-Aware Recommendation. In Web and Big Data - 7th int. Joint conf., APWeb-WAIM 2023, Wuhan, China, October 6-8, 2023,
+Proceedings, Part IV (Lecture Notes in Computer Science, Vol. 14334). Springer, 108ś123.
+[127] Zhu Wang. 2022. AMD results for OAEI 2022. In Proc. of the 17th int. Workshop on Ontology Matching (OM 2022) co-located with the 21th
+int. Semantic Web conf. (ISWC 2022), Hangzhou, China, held as a virtual conf., October 23, 2022 (CEUR Workshop Proceedings, Vol. 3324).
+CEUR-WS.org, 145ś152.
+[128] Zhu Wang. 2023. Contextualized structural self-supervised learning for ontology matching. In Proc. of the 18th int. Workshop on
+Ontology Matching co-located with the 22nd int. Semantic Web conf. (ISWC 2023), Athens, Greece, November 7, 2023 (CEUR Workshop
+Proceedings, Vol. 3591). CEUR-WS.org, 37ś48.
+[129] Jifang Wu, Jianghua Lv, Haoming Guo, and Shilong Ma. 2020. Daeom: A deep attentional embedding approach for biomedical ontology
+matching. Applied Sciences 10, 21 (2020), 7909.
+[130] Jifang Wu, Jianghua Lv, Haoming Guo, and Shilong Ma. 2020. Ontology Matching by Jointly Encoding Terminological Description and
+Network Structure. In CCIOT 2020: 5th int. conf. on Cloud Computing and Internet of Things, Okinawa, Japan, September, 2020. ACM,
+77ś85.
+[131] Ledell Yu Wu, Adam Fisch, Sumit Chopra, Keith Adams, Antoine Bordes, and Jason Weston. 2018. StarSpace: Embed All The Things!.
+In Proc. of the Thirty-Second AAAI conf. on Artiicial Intelligence, (AAAI-18), the 30th innovative Applications of Artiicial Intelligence
+(IAAI-18), and the 8th AAAI Symposium on Educational Advances in Artiicial Intelligence (EAAI-18), New Orleans, Louisiana, USA,
+February 2-7, 2018. AAAI Press, 5569ś5577.
+[132] Zonghan Wu, Shirui Pan, Fengwen Chen, Guodong Long, Chengqi Zhang, and Philip S. Yu. 2021. A Comprehensive Survey on Graph
+Neural Networks. IEEE Trans. Neural Networks Learn. Syst. 32, 1 (2021), 4ś24.
+[133] Chuncheng Xiang, Tingsong Jiang, Baobao Chang, and Zhifang Sui. 2015. ERSOM: A Structural Ontology Matching Approach Using
+Automatically Learned Entity Representation. In Proc. of the 2015 conf. on Empirical Methods in Natural Language Processing, EMNLP
+2015, Lisbon, Portugal, September 17-21, 2015. The Association for Computational Linguistics, 2419ś2429.
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 35
+[134] Xingsi Xue and Jianhua Guo. 2022. Word Embedding based Heterogeneous Entity Matching on Web of Things. In Companion of The
+Web conf. 2022, Virtual Event / Lyon, France, April 25 - 29, 2022. ACM, 941ś947.
+[135] Xingsi Xue, Jianhua Guo, Miao Ye, and Jianhui Lv. 2023. Similarity Feature Construction for Matching Ontologies through Adaptively
+Aggregating Artiicial Neural Networks. Mathematics 11, 2 (2023), 485.
+[136] Xingsi Xue, Chao Jiang, Chaofan Yang, Hai Zhu, and Cong Hu. 2021. Artiicial Neural Network Based Sensor Ontology Matching
+Technique. In Companion of The Web conf. 2021, Virtual Event / Ljubljana, Slovenia, April 19-23, 2021. ACM / IW3C2, 44ś51.
+[137] Xingsi Xue, Haolin Wang, Jie Zhang, Yikun Huang, Mengting Li, and Hai Zhu. 2021. Matching transportation ontologies with Word2Vec
+and alignment extraction algorithm. Journal of Advanced Transportation 2021 (2021), 1ś9.
+[138] Hui Yang, Jiaoyan Chen, and Uli Sattler. 2025. TransBox: EL++ -closed Ontology Embedding. In Proc. of the ACM on Web conf. 2025,
+WWW 2025, Sydney, NSW, Australia, 28 April 2025- 2 May 2025. ACM, 22ś34.
+[139] Yaming Yang, Zhe Wang, Ziyu Guan, Wei Zhao, Weigang Lu, and Xinyan Huang. 2024. Aligning Multiple Knowledge Graphs in a
+Single Pass. CoRR abs/2408.00662 (2024).
+[140] Jason Youn, Tarini Naravane, and Ilias Tagkopoulos. 2020. Using Word Embeddings to Learn a Better Food Ontology. Frontiers Artif.
+Intell. 3 (2020), 584784.
+[141] Chao Zhang, Zichao Yang, Xiaodong He, and Li Deng. 2020. Multimodal Intelligence: Representation Learning, Information Fusion,
+and Applications. IEEE J. Sel. Top. Signal Process. 14, 3 (2020), 478ś493.
+[142] Rui Zhang, Bayu Distiawan Trisedya, Miao Li, Yong Jiang, and Jianzhong Qi. 2022. A benchmark and comprehensive survey on
+knowledge graph entity alignment via representation learning. VLDB J. 31, 5 (2022), 1143ś1168.
+[143] Yuanzhe Zhang, Xuepeng Wang, Siwei Lai, Shizhu He, Kang Liu, Jun Zhao, and Xueqiang Lv. 2014. Ontology Matching with Word
+Embeddings. In Chinese Computational Linguistics and Natural Language Processing Based on Naturally Annotated Big Data - 13th China
+National conf., CCL 2014, and Second int. Symposium, NLP-NABD 2014, Wuhan, China, October 18-19, 2014. Proceedings (Lecture Notes in
+Computer Science, Vol. 8801). Springer, 34ś45.
+[144] Lu Zhou, Michelle Cheatham, Adila Krisnadhi, and Pascal Hitzler. 2018. A Complex Alignment Benchmark: Geolink Dataset. In The
+Semantic Web - ISWC 2018 - 17th int. Semantic Web conf., Monterey, CA, USA, October 8-12, 2018, Proceedings, Part II (Lecture Notes in
+Computer Science, Vol. 11137). Springer, 273ś288.
+
+A E-pub only
+A.1 Classification of the reviewed works in the proposed categorization
+A.2 Analysis of the works using embeddings that participated in OAEI
+The results of the matchers using embeddings that participated in the OAEI campaign from 2021 to 2024 are
+present in Figure 10. Among the matchers that participated, KGMatcher was one of the most successful approaches
+considering all tracks in 2021. It has a high F-measure in the tracks BioDiv, LargeBio, and Phenotype. Considering
+its classiication in this survey, it has subword lexical unit segmentation, and it is pre-trained and trained with
+data for each ontology. Despite its performance, KGMatcher uses no-context embeddings without the use of
+background knowledge. ALOD2Vec is the second one, having a high F-measure in the tracks KnowledgeGraph
+and LargeBio. ALOD2Vec uses entity-level segmentation and is pre-trained only, not requiring extra training. It
+also includes background knowledge. Other notable systems include OLaLa, which performed well in the BioDiv
+track in 2023 and applies subword segmentation with pre-training only. In the Anatomy track, recent systems
+like SEBMatcher (2022), MDMapper (2024), and SORBETMatcher (2023) also show competitive results. These
+methods typically use subword segmentation and both training and pre-training, though they do not leverage
+background knowledge. In the Conference track, GraphMatcher achieved high performance in both 2023 and
+2021. It uses subword segmentation, is trained and pre-trained, and relies on reference alignment, but does not
+incorporate background knowledge. For the LargeBio track, OTMapOnto (2021) stands out with a combination of
+word and subword segmentation, pre-training, and the use of background knowledge. Lastly, CIDER-LM, the
+top performer in MultiFarm 2022, also uses subword segmentation, is trained and pre-trained, and is based on
+reference alignments, though it does not include relational reasoning or background knowledge.
+Received 13 January 2025; revised 4 February 2026; accepted 8 March 2026
+
+ACM Comput. Surv.
+
+36
+
+• G. S. Sousa et al.
+Name
+Zhang [143]
+ERSOM [133]
+Delgado [121]
+DeepAlignment [66]
+OntoEmma [122]
+Jurisch [60]
+Ruiz [59]
+SCBOW+DAE(O) [67]
+Gromann [39]
+Li [73]
+AnyGraphMatcher [77]
+Dome [46]
+Gonçalves [36]
+Li [71]
+DeepFCA [70]
+Hertling [48]
+Kim [64]
+DESKMatcher [82]
+Geng [33]
+Melis [4]
+Youn [140]
+REMA [69]
+BERTMap [44]
+Hertling [49]
+BERTMap [43]
+ALOD2Vec [92]
+Fine-TOM [65]
+TOM [68]
+Li [72]
+Neutel [83]
+Xue [137]
+Xue [134]
+Portisch [90]
+Rudwan [98]
+Mijalcheva [79]
+A-LIOn [3]
+AMD [127]
+KGMatcher+ [29]
+SEBMatcher [37]
+WomboCombo [62]
+LEAPME [10]
+WETA [34]
+Xue [135]
+Qiang [93]
+OLaLa [47]
+Norouzi [85]
+Taboada [111]
+MDMapper [76]
+
+Entity
+
+Word
+X
+
+Subw
+
+Char
+
+Ref.
+
+X
+X
+X
+
+X
+X
+X
+
+X
+X
+X
+X
+
+X
+X
+X
+
+X
+X
+X
+X
+X
+
+X
+X
+
+X
+
+X
+X
+X
+X
+
+X
+X
+
+X
+
+X
+X
+
+X
+X
+X
+X
+X
+
+BK
+
+X
+X
+X
+X
+
+X
+X
+X
+
+X
+
+X
+X
+X
+X
+
+X
+
+X
+X
+X
+X
+
+X
+X
+X
+X
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+X
+X
+
+X
+
+X
+X
+X
+X
+X
+X
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+X
+
+Pre-train
+X
+
+X
+X
+
+X
+X
+
+X
+X
+X
+
+X
+
+X
+
+X
+
+Trained
+
+X
+X
+X
+X
+X
+X
+
+X
+X
+
+X
+X
+X
+X
+X
+X
+X
+
+X
+X
+X
+X
+X
+X
+X
+X
+X
+
+X
+
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+
+Table 7. Works that the usage of embeddings falls into the Non-Context category.
+
+ACM Comput. Surv.
+
+Survey on Embedding Methods Applied to Ontology Matching • 37
+Name
+Ruiz [58]
+Schmidt [101]
+Orji [84]
+Jurisch [61]
+Maldonado [78]
+STE + SG [130]
+Iyer [53]
+Ruiz [57]
+Sun [109]
+Jiang [56]
+DAEOM [129]
+OntoConnect [16]
+VeeAlign [52]
+MEDTO [41]
+ANN-OM [136]
+OntoConnect [15]
+VeeAlign [53]
+ONTOCONNECT [17]
+OTMapOnto [7]
+LogMapanc -ML [20]
+An [8]
+Monnin [81]
+Wang [123]
+Satti [99]
+CIDER-LM [120]
+GraphMatcher [27]
+Tayur [112]
+Wang [124]
+Khoudja [63]
+Javed [54]
+Truveta [6]
+Hao [42]
+SORBET [38]
+VersaMatch [32]
+He [45]
+LaKERMap [128]
+Benarab [12]
+Teymurova [113]
+NLFOA [102]
+Peng [87]
+Sousa [106]
+Tu [40]
+Shiraishi [103]
+Totoian [118]
+Giglou [35]
+Chen [22]
+Teymurova [114]
+Banerjee [11]
+Qiang [93]
+Yang [139]
+
+Entity
+
+Word
+X
+X
+X
+
+Subw
+
+Char
+
+X
+X
+
+Ref.
+
+Trained
+X
+
+X
+X
+X
+
+X
+X
+X
+
+X
+
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+
+X
+X
+X
+X
+X
+X
+X
+
+X
+X
+X
+
+X
+
+X
+X
+
+X
+X
+X
+
+X
+X
+X
+X
+
+X
+X
+
+X
+
+X
+X
+X
+X
+
+X
+X
+
+X
+X
+
+X
+X
+X
+
+X
+X
+X
+X
+X
+
+X
+
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+
+X
+X
+X
+
+X
+X
+X
+
+X
+X
+X
+X
+
+X
+X
+
+X
+X
+X
+X
+
+X
+X
+X
+X
+X
+
+X
+X
+
+X
+X
+X
+X
+
+X
+X
+X
+X
+X
+X
+
+X
+X
+X
+X
+
+X
+X
+X
+
+X
+X
+X
+X
+
+X
+X
+
+X
+
+X
+X
+
+X
+X
+
+X
+
+X
+X
+X
+X
+X
+X
+
+X
+X
+
+BK
+
+X
+X
+
+X
+X
+
+Rel
+
+X
+X
+
+X
+X
+
+Pre-train
+
+X
+X
+
+X
+
+X
+
+X
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+X
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+Table 8. Works in which the employed embeddings fall into the Context category.
+Name
+Dhouib [26]
+Dhouib [25]
+Akremi [1]
+Akremi [2]
+MC Silva [104]
+Sousa [107]
+Yang [138]
+
+Entity
+
+Word
+
+Subw
+X
+X
+
+Char
+
+Ref.
+
+X
+X
+
+Trained
+X
+X
+
+X
+X
+X
+
+Pre-train
+X
+X
+X
+X
+
+X
+
+X
+
+NC
+
+C
+X
+X
+
+Rel
+
+BK
+
+X
+X
+X
+X
+X
+
+Table 9. Works that have any usage of embeddings in the Complex Matching task.
+
+ACM Comput. Surv.
+
+38
+
+• G. S. Sousa et al.
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+(f)
+
+(g)
+Fig. 10. Performance of embedding matchers in OAEI tracks.
+
+ACM Comput. Surv.
+
+

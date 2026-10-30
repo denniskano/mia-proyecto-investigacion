@@ -1,0 +1,50 @@
+\chapter{Matriz de operación de variables}
+\label{anexo:d}
+
+La matriz de operación especifica cómo se \textbf{mide} cada ratio del modelo en el diseño del plan.
+Complementa la \Cref{tab:variables} (Cap.~2) y la matriz de consistencia (Anexo~C). Los
+\textbf{factores} son condiciones de diseño manipulables; los \textbf{ratios} son resultados medidos.
+
+\section{Ratios principales}
+
+\small
+\input{tables/tab-anexo-d-operacion}
+\normalsize
+
+\section{Factores por objetivo específico}
+
+\begin{table}[H]
+  \centering
+  \caption{Operacionalización de factores}
+  \label{tab:anexo-d-vi}
+  \small
+  \begin{tabular}{@{}p{0.08\textwidth}p{0.24\textwidth}p{0.58\textwidth}@{}}
+    \toprule
+    \textbf{OE} & \textbf{Factor} & \textbf{Estados / niveles considerados en el diseño} \\
+    \midrule
+    OE1 &
+    Esquema de representación intermedia &
+    Tabular (recurso--operación--esquema); grafo (nodos/aristas); RDF/triples (opcional) \\
+    OE2 &
+    Estrategia de \textit{schema matching} &
+    Nombre exacto; similitud de ruta; profundidad de esquema; operación HTTP \\
+    OE3 &
+    Técnica de similitud semántica &
+    Embeddings + coseno; matching ontología; híbrido estructural+semántico \\
+    OE4 &
+    Pesos $\alpha$, $\beta$, $\gamma$ &
+    Pesos iguales ($1/3$); ponderación experta; análisis de sensibilidad \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Notas de medición}
+
+\begin{itemize}
+  \item Todas las ratios de score se normalizan al intervalo $[0, 1]$ para permitir agregación
+        ponderada.
+  \item La clasificación nominal (Alta/Media/Baja/Nula) se obtiene por umbrales fijos definidos en
+        el Capítulo~1 §1.4 y reutilizados en OE4.
+  \item El diseño documenta el procedimiento; la ejecución experimental a escala queda fuera de
+        alcance del presente plan (§1.6).
+\end{itemize}

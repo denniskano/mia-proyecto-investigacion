@@ -1,0 +1,15 @@
+\begin{table}[H]
+  \centering
+  \caption{Ejemplo genérico ilustrativo (sin caso piloto fijo)}
+  \label{tab:ejemplo-generico}
+  \begin{tabular}{@{}p{0.44\textwidth}p{0.44\textwidth}@{}}
+    \toprule
+    \textbf{Elemento OpenAPI (genérico)} & \textbf{Elemento BIAN de referencia (ilustrativo)} \\
+    \midrule
+    \texttt{POST /payment-orders} & \Behavior{} \texttt{Initiate} del dominio de pagos \\
+    \texttt{GET /payment-orders/\{id\}} & \Behavior{} \texttt{Retrieve} \\
+    Esquema \texttt{PaymentOrder} (propiedades \texttt{amount}, \texttt{currency}) &
+    \BusinessObject{} \texttt{Payment} / \texttt{PaymentAmount} \\
+    \bottomrule
+  \end{tabular}
+\end{table}

@@ -1,0 +1,335 @@
+% Exposición oficial — Plan de Tesis Grupo 9.2 (Beamer PDF, 22 slides)
+% Compilar: make pdf  →  ../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf
+\documentclass[aspectratio=169,11pt,spanish]{beamer}
+
+\input{../../latex/config/metadata.tex}
+\input{../../latex/config/commands.tex}
+\input{beamer-preamble.tex}
+
+\title[Plan de Tesis Grupo 9.2]{\tituloPlan}
+\author{\autorAlex \and \autorJack}
+\institute{\institucionDesarrollo · \grupo}
+\date{\ciudad · \anioPlan}
+
+\begin{document}
+
+% --- 1 Portada ---
+\begin{frame}[plain]
+  \centering
+  \vspace{0.1cm}
+  {\large\bfseries UNIVERSIDAD NACIONAL DE INGENIERÍA\par}
+  \vspace{0.2cm}
+  {\small\bfseries Plan de Tesis · \grupo\par}
+  \vspace{0.45cm}
+  {\small\bfseries ``\tituloPlan''\par}
+  \vspace{0.55cm}
+  {\small Para obtener el grado de Maestro en Ciencias\\[0.12em]
+  con mención en \mencionGrado\par}
+  \vspace{0.5cm}
+  {\small\bfseries \autorAlex\par}
+  {\small\bfseries \autorJack\par}
+  \vspace{0.35cm}
+  {\small Investigación tecnológica · Design Science\par}
+  {\small IEEE: Knowledge Representation · ACM: Semantic networks\par}
+  \vspace{0.3cm}
+  {\small \ciudad · \anioPlan\par}
+  \note{[0:00--0:45] Jack. Título + tipo investigación + clasificación ACM/IEEE.}
+\end{frame}
+
+% --- 2 Fuentes (NO EXPONER) ---
+\begin{frame}{Fuentes bibliográficas y gestión documental}
+  \marcadorNoExponer
+  \vspace{0.35em}
+  \begin{planpanel}
+  \begin{itemize}
+    \item Link de los documentos:\\[0.15em]
+      {\small\url{https://drive.google.com/drive/folders/1bNOd0ZvD_2-8HIaKEGm6qX1XRMpnxxab}}
+    \item Link al Zotero Web:\\[0.15em]
+      {\small\url{https://www.zotero.org/groups/6622247/proyectotesisgrupo9.2/library}}
+  \end{itemize}
+  \end{planpanel}
+  \note{NO EXPONER. Saltar en clase (1 $\rightarrow$ 5).}
+\end{frame}
+
+% --- 3 Intro ---
+\begin{frame}{Introducción al tema (§1.1)}
+  \marcadorNoExponer
+  \begin{planpanel}
+  \small
+  La industria bancaria utiliza contratos OpenAPI para documentar e integrar APIs entre canales digitales, fintechs y socios de negocio. Paralelamente, BIAN publica contratos OpenAPI de referencia para estandarizar las capacidades bancarias y promover la interoperabilidad entre entidades (Bhatia, 2022; Farzi, 2021).
+
+  \vspace{0.35em}
+  Sin embargo, actualmente no existe un procedimiento objetivo que permita medir el grado de alineación entre un contrato OpenAPI implementado por un banco y el contrato OpenAPI de referencia propuesto por BIAN para un mismo Service Domain.
+
+  \vspace{0.35em}
+  En respuesta a esta necesidad, la presente investigación propone un modelo de medición de la alineación basado en tres dimensiones: SemanticScore, StructuralScore y CoverageScore, integradas en un AlignmentScore, con el propósito de cuantificar de manera objetiva y reproducible el nivel de alineación entre ambos contratos OpenAPI.
+  \end{planpanel}
+  \note{NO EXPONER. Saltar en clase (1 $\rightarrow$ 5).}
+\end{frame}
+
+% --- 4 Ontología (NO EXPONER) ---
+\begin{frame}{Ontología del plan --- conceptos relacionados}
+  \marcadorNoExponer
+  \figplanontology{Figura_02_Objeto_Unidad_Analisis}
+  \vspace{0.05em}
+  {\normalsize\bfseries\textcolor{uninavy}{Ontología interna --- objeto · UA · producto · referencia BIAN}}
+  \note{NO EXPONER. Figura de respaldo (informe Cap.\ 1). Saltar en clase (1 $\rightarrow$ 5).}
+\end{frame}
+
+% --- 4 Problemática situación ---
+\begin{frame}{Problemática --- situación real: dónde y actores (§1.2)}
+  \figplancompact{slide05_img01}
+  \vspace{0.15em}
+  \begin{planpanel}
+  \small
+  \keyterm{Situación real} (contexto sectorial): bancos, fintechs y socios integran capacidades vía APIs; la fragmentación y los costos de integración documentados (TSB, 2018; CMA, 2016) motivan estandarización, pero \textbf{no} constituyen el problema tecnológico de este plan.
+  \end{planpanel}
+  \note{[2:20--3:10] Jack. Situación real $\neq$ objeto $\neq$ problema tecnológico.}
+\end{frame}
+
+% --- 5 Síntomas ---
+\begin{frame}{Problemática --- síntomas, dolor y estadísticas (§1.2)}
+  \figppttwo{slide06_img01}{slide06_img02}
+  \vspace{0.1em}
+  \begin{planpanel}
+  \small
+  \textbf{Síntomas:} duplicidad de trabajo, mayor tiempo de implementación, riesgos operativos y experiencias dispares entre canales. \textbf{Evidencia:} Casas et al.\ (2021) reportan adopción masiva de OpenAPI/Swagger (68\,\% de estudios revisados). \keyterm{Brecha:} no hay métrica reproducible OpenAPI$\leftrightarrow$BIAN antes del despliegue.
+  \end{planpanel}
+  \note{[3:10--4:05] Jack. Tener PDF Casas listo (PI-13). Señalar cifra 68\,\%.}
+\end{frame}
+
+% --- 6 Objeto subyacente ---
+\begin{frame}{Objeto de estudio --- situación subyacente (§1.4)}
+  \figplancompact{slide07_img01}
+  \vspace{0.15em}
+  \begin{planpanel}
+  \small
+  \keyterm{Objeto de estudio:} contrato \textbf{OpenAPI~3.x} publicado por un banco (artefacto documental YAML/JSON). \keyterm{Referencia de contraste:} \textbf{Service Domain BIAN} (\Behavior{}, \BusinessObject{} --- no otro contrato OpenAPI genérico). \keyterm{Unidad de análisis:} par endpoint/schema $\leftrightarrow$ behavior/business object. \keyterm{Producto:} scores S, E, C y \AlignmentScore{} por instancia \texttt{contrato$\times$SD}.
+  \end{planpanel}
+  \note{[4:05--4:50] Jack. BIAN = referencia, no objeto.}
+\end{frame}
+
+% --- 7 Objeto real ---
+\begin{frame}{Objeto de estudio real --- taxonomía y ciclo de vida}
+  \figplancompact{slide08_img01}
+  \vspace{0.12em}
+  \begin{planpanel}
+  \small
+  \keyterm{Entidad real:} contrato OpenAPI publicado por un banco (YAML/JSON versionado). \keyterm{Taxonomía:} OpenAPI~3.x · dominios pagos/cuentas/préstamos. \keyterm{Ciclo de vida:} diseño $\rightarrow$ revisión $\rightarrow$ publicación $\rightarrow$ consumo $\rightarrow$ deprecación. \keyterm{Aplicación del artefacto:} fase de diseño (\textit{design-first}) y pre-despliegue, antes de certificación o producción.
+  \end{planpanel}
+  \note{[4:50--5:30] Jack. Ciclo de vida del contrato, no del proceso bancario completo.}
+\end{frame}
+
+% --- 8 Instrumento ---
+\begin{frame}{Instrumento y objeto modelado}
+  \figplancompact{slide09_img01}
+  \vspace{0.12em}
+  \begin{planpanel}
+  \small
+  \keyterm{Entrada:} contrato OpenAPI bancario + \textbf{extracto del Service Domain BIAN} emparejado. \keyterm{Instrumento:} procedimiento reproducible (parser OpenAPI + normalización + \textit{schema matching} + similitud semántica). \keyterm{Paradigma:} reglas y métricas documentadas --- \textbf{no} aprendizaje supervisado. \keyterm{Etapa de uso:} ciclo de vida del contrato, fase \textit{design-first} / pre-despliegue (antes de certificación o producción).
+  \end{planpanel}
+  \note{[5:30--6:15] Alex. Instrumento = procedimiento, no encuesta ni IoT.}
+\end{frame}
+
+% --- 9 Ejemplos numéricos ---
+\begin{frame}{Ejemplo ilustrativo --- cálculo S / E / C $\rightarrow$ \AlignmentScore{}}
+  \beamertable{%
+  \resizebox{\linewidth}{!}{%
+  \begin{tabular}{@{}lccccp{0.32\linewidth}@{}}
+    \rowcolor{tablehead}
+    \tabhead{Caso} & \tabhead{E} & \tabhead{S} & \tabhead{C} & \tabhead{Score} & \tabhead{Clasif.} \\
+    \rowcolor{tablealt} A & 0{,}88 & 0{,}85 & 0{,}90 & 0{,}88 & Alta (Anexo F) \\
+    \rowcolor{white} B & 0{,}55 & 0{,}60 & 0{,}50 & 0{,}55 & Baja \\
+    \rowcolor{tablealt} C & 0{,}12 & 0{,}15 & 0{,}10 & 0{,}12 & Nula \\
+  \end{tabular}}}
+  \vspace{0.15em}
+  {\footnotesize $\AlignmentScore = \alpha S + \beta E + \gamma C$, $\alpha=\beta=\gamma=\frac{1}{3}$ (ilustr.). \textbf{E:} 7/8 nodos $= 0{,}875$. Validación del prototipo (Tesis~2) requiere \textit{ground truth} de especialistas.}
+  \note{[6:15--7:00] Alex. Tres casos contrastantes; Anexo F.}
+\end{frame}
+
+% --- 10 Problema tecnológico ---
+\begin{frame}{Problema tecnológico (§1.3) --- situación escrita}
+  \begin{planreminder}{Recordatorio}
+    \keyterm{Problemática del sector} $\neq$ \keyterm{problema tecnológico}. \textbf{Diseñar} es verbo del objetivo general, no formulación del problema.
+  \end{planreminder}
+  \vspace{0.1em}
+  \begin{planstatement}
+  \textbf{Problema tecnológico:} no existe un \textbf{procedimiento documentado y reproducible} que, dado un contrato OpenAPI bancario y un Service Domain BIAN emparejado, \textbf{cuantifique} en qué medida se alinean y bajo qué tipologías se desalinean. Hoy la evaluación es manual, parcial o inexistente antes del despliegue.
+  \end{planstatement}
+  \vspace{0.15em}
+  \begin{planpanel}
+  \small
+  \textbf{Operacionalización (P1--P4):} P1 matching estructural (E) · P2 similitud semántica (S) · P3 cobertura (C) · P4 score integrado (\AlignmentScore). \textbf{Artefacto a diseñar:} procedimiento + modelo S/E/C $\rightarrow$ clasificación en [0,1].
+  \end{planpanel}
+  \note{[7:00--7:50] Alex. Decir «insuficiente» en voz alta (PI-12).}
+\end{frame}
+
+% --- 11 OG ---
+\begin{frame}{Objetivo general (técnico) --- insumo, medición y producto}
+  \begin{planstatement}
+  \textbf{Objetivo general:} diseñar un \textbf{modelo de alineación} (S, E, C) y un \textbf{procedimiento reproducible} que, sobre cada instancia \texttt{contrato OpenAPI bancario $\times$ Service Domain BIAN}, calcule el \AlignmentScore{} y la clasificación por niveles.
+  \end{planstatement}
+  \vspace{0.12em}
+  \begin{planpanel}
+  \small
+  \begin{itemize}
+    \item \keyterm{Insumo / base de medición:} par contrato OpenAPI~3.x + extracto SD BIAN emparejado
+    \item \keyterm{Producto del artefacto:} procedimiento documentado + \AlignmentScore{} $\in [0,1]$ + clasificación (Alta $\geq$0{,}80 / Media / Baja / Nula)
+    \item \keyterm{VD del artefacto:} \AlignmentScore{} (rendimiento global del procedimiento)
+    \item \keyterm{Fórmula:} $\AlignmentScore = \alpha\cdot S + \beta\cdot E + \gamma\cdot C$, con $\alpha+\beta+\gamma=1$
+    \item \keyterm{Objetivo superior} (consecuencia, no OG): cuantificar coherencia \textbf{antes} del despliegue
+  \end{itemize}
+  \end{planpanel}
+  \note{[7:50--8:25] Alex. Separar OG técnico vs objetivo superior.}
+\end{frame}
+
+% --- 13 OE ---
+\begin{frame}{Objetivos específicos OE1--OE4 (entrada $\rightarrow$ producto)}
+  \figplancompact{Figura_04_Cadena_Objetivos}
+  \vspace{0.1em}
+  \begin{planpanel}
+  \small
+  \textbf{OE1} Normalizar $\rightarrow$ representaciones comparables · \textbf{OE2} Emparejar $\rightarrow$ E $\in [0,1]$ · \textbf{OE3} Similitud semántica $\rightarrow$ S $\in [0,1]$ · \textbf{OE4} Integrar $\rightarrow$ C, \AlignmentScore{}, tipologías. Cada OE es transformación con \textbf{producto verificable}; no equivale a «programar» ni «experimentar» en abstracto.
+  \end{planpanel}
+  \note{[8:25--9:15] Alex. OE1 normaliza · OE2$\rightarrow$E · OE3$\rightarrow$S · OE4$\rightarrow$C + AlignmentScore.}
+\end{frame}
+
+% --- 13 VI ---
+\begin{frame}{Variables independientes --- factores del investigador (Tabla 5)}
+  \beamertable{%
+  \begin{tabular}{@{}L{0.07\linewidth}L{0.29\linewidth}L{0.57\linewidth}@{}}
+    \rowcolor{tablehead}
+    \tabhead{OE} & \tabhead{Factor (VI)} & \tabhead{Técnica / alternativas de diseño} \\
+    \rowcolor{tablealt} \tabphase{OE1} & Representación intermedia & \textit{Parsing} OpenAPI~3.x; paths/schemas vs behaviors/BO \\
+    \rowcolor{white} \tabphase{OE2} & \textit{Schema matching} & Nombre, ruta, profundidad, operación HTTP (Shvaiko \& Euzenat, 2005) \\
+    \rowcolor{tablealt} \tabphase{OE3} & Similitud semántica & Embeddings / ontología / híbrido (El Bayadh et al., 2015) \\
+    \rowcolor{white} \tabphase{OE4} & Pesos $\alpha$, $\beta$, $\gamma$ & $\alpha+\beta+\gamma=1$; umbrales Alta/Media/Baja/Nula \\
+  \end{tabular}}
+  \vspace{0.1em}
+  {\footnotesize \keyterm{Paradigma:} métricas documentadas --- \textbf{no} ML supervisado. VI legibles en esta slide.}
+  \note{[9:15--9:55] Alex. VI = factores de diseño del investigador.}
+\end{frame}
+
+% --- 14 VD ---
+\begin{frame}{Variables dependientes --- artefacto vs ratios por OE}
+  \begin{planvdartefacto}
+  \AlignmentScore{} $\in [0,1]$ + \textbf{clasificación} (Alta / Media / Baja / Nula).\\
+  Mide el \textbf{rendimiento global} del artefacto sobre cada instancia \texttt{contrato$\times$SD}.\\
+  Fórmula: $\AlignmentScore = \alpha S + \beta E + \gamma C$.
+  \end{planvdartefacto}
+  \vspace{0.12em}
+  \beamertable{%
+  \small
+  \begin{tabular}{@{}L{0.07\linewidth}L{0.32\linewidth}L{0.54\linewidth}@{}}
+    \rowcolor{tablehead}
+    \tabhead{OE} & \tabhead{Ratio parcial (no VD global)} & \tabhead{Rango / fórmula} \\
+    \rowcolor{tablealt} \tabphase{OE1} & Completitud normalización & Extraídos / esperados \\
+    \rowcolor{white} \tabphase{OE2} & StructuralScore (E) & $E \in [0, 1]$ \\
+    \rowcolor{tablealt} \tabphase{OE3} & SemanticScore (S) & $S \in [0, 1]$ \\
+    \rowcolor{white} \tabphase{OE4} & CoverageScore (C) & $C \in [0, 1]$; agrega a \AlignmentScore{} \\
+  \end{tabular}}
+  \note{[9:55--10:35] Alex. VD global = AlignmentScore; ratios OE = parciales.}
+\end{frame}
+
+% --- 15 Metodología ---
+\begin{frame}{Metodología --- hitos / fases con verbos (§4.2 · §4.3)}
+  \beamertable{%
+  \fontsize{11}{13}\selectfont
+  \plantablesetup
+  \begin{tabular}{@{}L{0.9cm}L{1.6cm}L{4.2cm}L{3.8cm}@{}}
+    \rowcolor{tablehead}
+    \tabhead{Fase} & \tabhead{Verbo} & \tabhead{Transformación} & \tabhead{Producto} \\
+    \rowcolor{tablealt} \tabphase{1} & Diseñar & Entradas, scores, umbrales & Modelo S/E/C \\
+    \rowcolor{white} \tabphase{2} & Adquirir + Normalizar & OpenAPI + SD (§4.3) & Repr.\ comparables \\
+    \rowcolor{tablealt} \tabphase{3} & Emparejar & Schema matching (OE2) & StructuralScore E \\
+    \rowcolor{white} \tabphase{4--5} & Calcular / Integrar & S (OE3); C + score (OE4) & \AlignmentScore{} + tipologías \\
+  \end{tabular}}
+  \note{[10:35--11:15] Alex. Adquisición precede normalización; Guía~1 = diseño.}
+\end{frame}
+
+% --- 16 Modelo S/E/C ---
+\begin{frame}{Artefacto --- modelo de alineación S / E / C}
+  \figplancompact{slide17_img01}
+  \vspace{0.1em}
+  \begin{planpanel}
+  \small
+  \textbf{S} (SemanticScore): similitud de significado · \textbf{E} (StructuralScore): correspondencia REST$\leftrightarrow$BIAN · \textbf{C} (CoverageScore): proporción del SD cubierta. \textbf{Técnicas:} \textit{schema matching} (Shvaiko \& Euzenat, 2005) + similitud semántica (embeddings/ontología). \AlignmentScore{} $\rightarrow$ \textbf{Alta} ($\geq$0{,}80) / Media / Baja / Nula.
+  \end{planpanel}
+  \note{[11:15--12:00] Alex. Shvaiko (2005) sustenta E; scores por UA, agregado por contrato$\times$SD.}
+\end{frame}
+
+% --- 17 Matriz de consistencia (Anexo C) ---
+\begin{frame}[t]{Matriz de consistencia --- Anexo C}
+  \vspace{-0.85em}
+  \tablesectiontitle{Problema tecnológico $\rightarrow$ objetivo $\rightarrow$ producto}
+  \beamertablecompact{%
+  \begin{tabularx}{\linewidth}{@{}L{0.05\linewidth}YYY@{}}
+    \rowcolor{tablehead}
+    \tabhead{F} & \tabhead{Problema tecnológico} & \tabhead{Objetivo} & \tabhead{Producto verificable} \\
+    \rowcolor{tablealt} \tabphase{1} & Método insuficiente OpenAPI$\leftrightarrow$BIAN & Diseñar S/E/C & Modelo metodológico (Anexo C) \\
+    \rowcolor{white} \tabphase{2} & Representaciones no comparables & OE1 Normalizar & Representaciones versionadas \\
+    \rowcolor{tablealt} \tabphase{3} & Sin StructuralScore (E) & OE2 Emparejar & Matriz + $E \in [0,1]$ \\
+    \rowcolor{white} \tabphase{4} & Sin SemanticScore (S) & OE3 Similitud & Matriz + $S \in [0,1]$ \\
+    \rowcolor{tablealt} \tabphase{5} & Sin score integrado & OE4 Integrar & $C$; AlignmentScore; clasif. \\
+  \end{tabularx}}
+  \tablesectiontitle{VI · VD · Hipótesis}
+  \beamertablecompact{%
+  \begin{tabularx}{\linewidth}{@{}L{0.05\linewidth}YYY@{}}
+    \rowcolor{tablehead}
+    \tabhead{F} & \tabhead{VI} & \tabhead{VD} & \tabhead{Hipótesis} \\
+    \rowcolor{tablealt} \tabphase{1} & Esquema S/E/C; $\alpha,\beta,\gamma$ & Definición scores & H0: modelo reproducible \\
+    \rowcolor{white} \tabphase{2} & Esquema intermedio & Completitud OE1 & H1 (OE1) \\
+    \rowcolor{tablealt} \tabphase{3} & Schema matching & StructuralScore E & H2 (OE2) \\
+    \rowcolor{white} \tabphase{4} & Similitud semántica & SemanticScore S & H3 (OE3) \\
+    \rowcolor{tablealt} \tabphase{5} & Pesos $\alpha,\beta,\gamma$ & C; AlignmentScore & H4 (OE4) \\
+  \end{tabularx}}
+  \note{[12:00--13:00] Alex. Matriz $\neq$ brecha Cap.\ 3. Señalar columnas; Anexo C completo en PDF del plan.}
+\end{frame}
+
+% --- 18 Brecha ---
+\begin{frame}{Brecha de investigación V1--V5 (§3.6) --- no confundir con matriz}
+  \figplan{Figura_06_Brecha}
+  \figcaption{PI-11: Matriz Anexo C = problema tecnológico del diseño · Brecha V1--V5 = vacíos del estado del arte}
+  \note{[13:20--14:00] Jack: V1--V2 · Alex: V3--V5.}
+\end{frame}
+
+% --- 19 Conclusiones ---
+\begin{frame}{Conclusiones --- relaciones entre conceptos}
+  \begin{planpanel}
+  \begin{itemize}
+    \item \keyterm{Objeto} (contrato) + \keyterm{referencia} (BIAN) + \keyterm{UA} $\rightarrow$ scores S/E/C integrados
+    \item OE1--OE4 encadenan transformaciones con productos verificables
+    \item Matriz Anexo C alinea problema tecnológico, objetivos, VI/VD e hipótesis
+    \item Guía 1 entrega diseño; Tesis 2: artefacto software y validación empírica
+  \end{itemize}
+  \end{planpanel}
+  \note{[14:00--14:30] Jack. Concluir con relaciones, no opinión (ppt-rules).}
+\end{frame}
+
+% --- 20 Recomendaciones ---
+\begin{frame}{Recomendaciones}
+  \begin{planpanel}
+  \begin{itemize}
+    \item Implementar artefacto software según procedimiento §4.2 (Tesis 2)
+    \item Calibrar umbrales 0{,}80/0{,}60/0{,}40 con muestra bancaria representativa
+    \item Validar hipótesis H1--H4 con contratos OpenAPI 3.x públicos (Anexo F)
+  \end{itemize}
+  \end{planpanel}
+  \note{[14:30--14:45] Alex. Breve; continuidad post-Guía 1.}
+\end{frame}
+
+% --- 21 Referencias ---
+\begin{frame}{Referencias citadas en esta exposición}
+  \begin{planpanel}
+  \begin{itemize}
+    \item Casas, L., Pinto, S.\ \& Silva, J.\ (2021). OpenAPI specification survey. \textit{J. Syst. Softw.}
+    \item Shvaiko, P.\ \& Euzenat, J.\ (2005). A survey of schema-based matching approaches. \textit{J. Data Semant.}
+    \item Farzi, H.\ et al.\ (2021). BIAN service landscape. BIAN documentation.
+  \end{itemize}
+  \end{planpanel}
+  \vspace{0.35em}
+  {\large Otras referencias sectoriales (CMA, TSB): ver informe completo.}
+  \note{[14:45--15:00] Jack. PDFs Casas y Shvaiko abiertos. ¿Preguntas?}
+\end{frame}
+
+\end{document}

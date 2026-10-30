@@ -1,0 +1,62 @@
+\subsection{Qué sí cubre la literatura revisada}
+
+Esta subsección sintetiza, de forma transversal, lo que los catorce papers aportan al diseño del
+modelo. No sustituye la lectura por ejes en §\ref{sec:estado-arte}.
+
+\begin{enumerate}
+  \item \textbf{OpenAPI} es el formato dominante para especificar APIs REST (E1). Casas et al.\
+        (2021) mapean 47 artículos que lo confirman; Mainas et al.\ (2023) muestran enriquecimiento
+        semántico viable sobre corpus reales.
+  \item Existen marcos para \textbf{correspondencia entre esquemas} (E2) y \textbf{similitud
+        semántica} (E3). Shvaiko y Euzenat (2005) y El Bayadh et al.\ (2015) ofrecen taxonomías
+        reutilizables; Santos Sousa et al.\ (2026) documentan limitaciones prácticas de
+        \textit{embeddings}.
+  \item La \textbf{arquitectura orientada al dominio} separa modelos de negocio e interfaces
+        técnicas (E4). Schmidt y Thiry (2020) relacionan capacidades de dominio con microservicios,
+        en la misma línea que BIAN como referencia.
+  \item Por el contrario, la literatura de \textbf{testing y seguridad} (E5) es abundante: Ehsan
+        et al.\ (2022) y Golmohammadi et al.\ (2024) usan OpenAPI como entrada a pruebas
+        automatizadas. Esa línea ayuda a \textbf{delimitar} el plan ---calidad operativa en
+        producción no equivale a coherencia documental con BIAN.
+  \item En selección de servicios (E6), Mahanra Rao et al.\ (2025) optimizan ranking por QoS con
+        \textit{embeddings}; el objetivo es consumo, no verificar si un contrato bancario refleja un
+        \ServiceDomain{} de referencia.
+\end{enumerate}
+
+Ninguna línea, sola o en conjunto, responde a la pregunta del plan: \textit{¿en qué medida un
+contrato OpenAPI bancario refleja el modelo de un \ServiceDomain{} BIAN y cómo cuantificarlo de
+forma reproducible?}
+
+\subsection{Vacíos identificados}
+
+\input{tables/tab06-vacios}
+
+La \Cref{fig:brecha} sintetiza la transición desde los ejes del estado del arte hacia los vacíos
+V1--V5 y la oportunidad de investigación.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{Figura_06_Brecha}
+  \caption{De la literatura revisada (E1--E6) a la brecha de investigación (V1--V5)}
+  \label{fig:brecha}
+\end{figure}
+
+\subsection{Oportunidad de investigación}
+
+La brecha abre la oportunidad de \textbf{diseñar un modelo de alineación} documentado en cinco
+fases (Fase~1: diseño; Fases~2--5: transformaciones OE1--OE4). Dado un contrato OpenAPI bancario y
+un \ServiceDomain{} BIAN emparejado, el modelo debe:
+
+\begin{itemize}
+  \item normalizar ambos artefactos a representaciones comparables (OE1);
+  \item calcular \SemanticScore{}, \StructuralScore{} y \CoverageScore{} (OE2--OE3);
+  \item integrar \AlignmentScore{} $= \alpha \cdot S + \beta \cdot E + \gamma \cdot C$ con
+        clasificación interpretativa (Alta / Media / Baja / Nula).
+\end{itemize}
+
+Este plan documenta el \textbf{diseño} del procedimiento. La construcción del artefacto y la
+experimentación empírica quedan fuera de alcance (\Cref{sec:alcances}).
+
+La investigación contribuye a los vacíos V1--V4 con un enfoque reproducible sobre artefactos
+documentales. No sustituye testing operativo (E5) ni certificación regulatoria; tampoco confunde
+calidad \textit{runtime} (E1/E6) con coherencia documental (V5).

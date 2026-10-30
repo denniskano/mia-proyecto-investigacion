@@ -1,0 +1,83 @@
+A Survey of Schema-Based Matching Approaches
+Pavel Shvaiko1 and Jérôme Euzenat2
+1
+
+University of Trento, Povo, Trento, Italy
+pavel@dit.unitn.it
+2
+INRIA, Rhône-Alpes, France
+Jerome.Euzenat@inrialpes.fr
+
+Abstract. Schema and ontology matching is a critical problem in many application domains, such as semantic web, schema/ontology integration, data warehouses, e-commerce, etc. Many different matching solutions have been proposed
+so far. In this paper we present a new classification of schema-based matching
+techniques that builds on the top of state of the art in both schema and ontology
+matching. Some innovations are in introducing new criteria which are based on
+(i) general properties of matching techniques, (ii) interpretation of input information, and (iii) the kind of input information. In particular, we distinguish between
+approximate and exact techniques at schema-level; and syntactic, semantic, and
+external techniques at element- and structure-level. Based on the classification
+proposed we overview some of the recent schema/ontology matching systems
+pointing which part of the solution space they cover. The proposed classification
+provides a common conceptual basis, and, hence, can be used for comparing different existing schema/ontology matching techniques and systems as well as for
+designing new ones, taking advantages of state of the art solutions.
+
+1 Introduction
+Matching is a critical operation in many application domains, such as semantic web,
+schema/ontology integration, data warehouses, e-commerce, query mediation, etc. It
+takes as input two schemas/ontologies, each consisting of a set of discrete entities (e.g.,
+tables, XML elements, classes, properties, rules, predicates), and determines as output
+the relationships (e.g., equivalence, subsumption) holding between these entities.
+Many diverse solutions to the matching problem have been proposed so far, e.g.,
+[2, 5, 21, 23, 40, 46, 49, 50, 52, 57, 76]. Good surveys through the recent years are provided in [39, 62, 75]; while the major contributions of the last decades are presented
+in [3, 41, 42, 66]. The survey of [39] focuses on current state of the art in ontology
+matching. Authors review recent approaches, techniques and tools. The survey of [75]
+concentrates on approaches to ontology-based information integration and discusses
+general matching approaches that are used in information integration systems. However, none of the above mentioned surveys provide a comparative review of the existing
+ontology matching techniques and systems. On the contrary, the survey of [62] is devoted to a classification of database schema matching approaches and a comparative
+
+
+For more information on the topic (e.g., tutorials, relevant events), please visit the Ontology
+Matching web-site at www.OntologyMatching.org
+
+S. Spaccapietra et al. (Eds.): Journal on Data Semantics IV, LNCS 3730, pp. 146–171, 2005.
+c Springer-Verlag Berlin Heidelberg 2005
+
+
+A Survey of Schema-Based Matching Approaches
+
+147
+
+review of matching systems. Notice that these three surveys address the matching problem from different perspectives (artificial intelligence, information systems, databases)
+and analyze disjoint sets of systems.
+This paper aims at considering the above mentioned works together, taking in to account some novel schema/ontology matching approaches, and at providing a common
+conceptual basis for their analysis. Although, there is a difference between schema and
+ontology matching problems (see next section for details), we believe that techniques
+developed for each of them can be of a mutual benefit. Thus, we bring together and
+discuss systematically recent approaches and systems developed in schema and ontology matching domains. We present a new classification of schema/ontology matching
+techniques that builds on the work of [62] augmented in [29, 67] and [28]. Some innovations are in introducing new criteria which are based on (i) general properties
+of matching techniques, (ii) interpretation of input information, and (iii) the kind of
+input information. In particular, we distinguish between approximate and exact techniques at schema-level; and syntactic, external, and semantic techniques at element- and
+structure-level. Based on the classification proposed we provide a comparative review
+of the recent schema/ontology matching systems pointing which part of the solution
+space they cover. In this paper we focus only on schema-based solutions, i.e., matching
+systems exploiting only schema-level information, not instance data.
+The rest of the paper is organized as follows. Section 2 provides, via an example,
+the basic motivations and definitions to the schema/ontology matching problem. Section 3 discusses possible matching dimensions. Section 4 introduces a classification of
+elementary automatic schema-based matching techniques and discusses in detail possible alternatives. Section 5 provides a vision on classifying matching systems. Section 6
+overviews some of the recent schema/ontology matching solutions in light of the classification proposed pointing which part of the solution space they cover. Section 7 reports
+some conclusions and discusses the future work.
+
+2 The Matching Problem
+2.1 Motivating Example
+To motivate the matching problem, let us use two simple XML schemas that are shown
+in Figure 1 and exemplify one of the possible situations which arise, for example, when
+resolving a schema integration task.
+Suppose an e-commerce company needs to finalize a corporate acquisition of another company. To complete the acquisition we have to integrate databases of the two
+companies. The documents of both companies are stored according to XML schemas S
+and S  respectively. Numbers in boxes are the unique identifiers of the XML elements.
+A first step in integrating the schemas is to identify candidates to be merged or to have
+taxonomic relationships under an integrated schema. This step refers to a process of
+schema matching. For example, the elements with labels Office Products in S and in
+S  are the candidates to be merged, while the element with label Digital Cameras in S 
+should be subsumed by the element with label Photo and Cameras in S. Once the correspondences between two schemas have been determined, the next step has to generate
+
+

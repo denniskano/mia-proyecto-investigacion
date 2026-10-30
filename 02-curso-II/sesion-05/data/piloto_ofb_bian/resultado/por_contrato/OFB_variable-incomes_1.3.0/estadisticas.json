@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "OFB_variable-incomes_1.3.0.yml",
+  "source": "BANCO",
+  "contrato": "API Variable Incomes - Open Finance Brasil",
+  "version": "1.3.0",
+  "openapi": "3.0.0",
+  "cantidad_operaciones": 6,
+  "cantidad_schemas": 27,
+  "cantidad_propiedades": 83,
+  "fragmentos_corpus": 159,
+  "operaciones_con_summary": 6,
+  "operaciones_con_description": 6,
+  "operaciones_summary_igual_description": 5,
+  "metodos": {
+    "GET": 6
+  },
+  "tags": {
+    "Product List": 1,
+    "Product Identification": 1,
+    "Balances": 1,
+    "Transactions": 1,
+    "Transactions Current": 1,
+    "Broker Note Details": 1
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/variable-incomes/1.3.0.yml"
+}

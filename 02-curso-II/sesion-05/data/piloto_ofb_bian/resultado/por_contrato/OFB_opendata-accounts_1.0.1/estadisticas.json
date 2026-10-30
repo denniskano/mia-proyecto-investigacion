@@ -1,0 +1,22 @@
+{
+  "archivo_entrada": "OFB_opendata-accounts_1.0.1.yml",
+  "source": "BANCO",
+  "contrato": "API OpenData Accounts do Open Finance Brasil",
+  "version": "1.0.1",
+  "openapi": "3.0.0",
+  "cantidad_operaciones": 2,
+  "cantidad_schemas": 32,
+  "cantidad_propiedades": 92,
+  "fragmentos_corpus": 161,
+  "operaciones_con_summary": 2,
+  "operaciones_con_description": 2,
+  "operaciones_summary_igual_description": 1,
+  "metodos": {
+    "GET": 2
+  },
+  "tags": {
+    "Accounts": 2
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/opendata-accounts/1.0.1.yml"
+}

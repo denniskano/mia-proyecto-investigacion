@@ -1,0 +1,28 @@
+\section{Ámbito y delimitación}
+
+\begin{table}[H]
+  \centering
+  \caption{Ámbito y delimitación del estudio}
+  \label{tab:ambito}
+  \begin{tabular}{@{}p{0.22\textwidth}p{0.68\textwidth}@{}}
+    \toprule
+    \textbf{Dimensión} & \textbf{Delimitación} \\
+    \midrule
+    \textbf{Sector} &
+    Industria bancaria y servicios financieros que adoptan arquitecturas API \\
+    \textbf{Artefactos} &
+    Contratos OpenAPI~3.x y especificaciones BIAN (\ServiceDomain{} en formato publicado por BIAN) \\
+    \textbf{Técnica} &
+    Análisis estructural y similitud semántica (\textit{matching}, \textit{embeddings}, métricas de
+    proximidad) \\
+    \textbf{Alcance geográfico} &
+    No restringido; casos de referencia con documentación pública internacional \\
+    \textbf{Temporal} &
+    Especificaciones vigentes al momento del estudio (2024--2026) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Quedan fuera del ámbito: desarrollo o despliegue de APIs en producción; pruebas de penetración,
+\textit{fuzzing} o auditoría de seguridad operativa; evaluación de rendimiento o disponibilidad en
+\textit{runtime}.

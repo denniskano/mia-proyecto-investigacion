@@ -1,0 +1,92 @@
+\section{Planteamiento del problema}
+\label{sec:planteamiento}
+
+El plan separa \textbf{tres niveles} de problema dentro de la investigación basada en diseño. No
+son tres redacciones del mismo enunciado: cada nivel encadena con el siguiente hasta llegar al
+problema que el artefacto debe resolver.
+
+\subsection{Situación real (problemática)}
+
+Es el §1.2: síntomas del sector bancario ---fragmentación, costos de integración, casos como TSB o
+\textit{open banking} con APIs heterogéneas--- descritos con hechos y cifras. Todavía no es el
+objeto de estudio ni la fila de problema de la matriz.
+
+\subsection{Situación subyacente (problema abstracto)}
+
+Al quitar el contexto del banco concreto permanecen dos \textbf{estructuras jerárquicas}
+comparables: el \textbf{contrato OpenAPI} (\textit{paths}, \textit{operations}, \textit{schemas}) y
+el \textbf{\ServiceDomain{} BIAN} (\Behavior{}, \BusinessObject{}, relaciones de control).
+
+El diagnóstico es de \textbf{correspondencia}: mismos conceptos con nombres distintos, operaciones
+HTTP que no reflejan \textit{behaviors}, esquemas que no cubren \textit{business objects},
+versiones sin trazabilidad (§\ref{sec:problematica}; Tabla~\ref{tab:tipologias}).
+
+En este nivel se fija el \textbf{objeto de estudio} (contrato OpenAPI bancario completo) y la
+\textbf{unidad de análisis} (pares endpoint/schema $\leftrightarrow$ \Behavior{}/\BusinessObject{};
+§\ref{sec:objeto-estudio}). BIAN funciona como \textbf{modelo de referencia} documental frente a la
+capa REST.
+
+\subsection{Problema tecnológico (situación a modificar)}
+
+El \textbf{problema tecnológico} ---el de la matriz de consistencia y del objetivo general del
+Capítulo~\ref{cap:objetivos}--- no coincide con la problemática del sector ni con la brecha
+abstracta. Existen prácticas aisladas de revisión manual y herramientas genéricas de
+\textit{schema matching}, pero \textbf{no hay un método reproducible y adaptado} que, dado un
+contrato OpenAPI bancario y un \ServiceDomain{} BIAN emparejado, calcule de forma sistemática en
+qué medida se alinean y bajo qué tipologías se desalinea. Hoy esa evaluación suele ser manual,
+parcial o simplemente no ocurre antes del despliegue.
+
+Este plan responde en el nivel de la \textbf{necesidad del artefacto}: diseño del
+procedimiento y del modelo S/E/C $\rightarrow$ \AlignmentScore{}. Operar el artefacto en producción
+bancaria queda fuera de alcance (§1.6).
+
+\subsection{Problema de investigación}
+
+Con los niveles anteriores en mente, el \textbf{problema de investigación} queda como pregunta
+medible, distinta de los objetivos:
+
+\begin{quote}
+  \textbf{¿En qué medida y bajo qué tipologías se produce desalineación entre contratos OpenAPI y
+  los modelos de negocio BIAN en arquitecturas API bancarias, y cómo cuantificarla de forma
+  reproducible mediante un modelo de alineación?}
+\end{quote}
+
+Esta pregunta ancla el \textbf{problema tecnológico}; la brecha del estado del arte (Cap.~3 §3.6)
+explica por qué la literatura aún no lo resuelve, sin confundirse con la formulación del problema
+tecnológico en Anexo~C.
+
+Para operacionalizar el problema se plantean las siguientes \textbf{preguntas específicas}:
+
+\begin{table}[H]
+  \centering
+  \caption{Preguntas específicas de investigación}
+  \label{tab:preguntas}
+  \small
+  \begin{tabular}{@{}p{0.06\textwidth}p{0.88\textwidth}@{}}
+    \toprule
+    \textbf{ID} & \textbf{Pregunta} \\
+    \midrule
+    \textbf{P1} &
+    ¿Qué correspondencias estructurales pueden establecerse entre elementos de un contrato OpenAPI
+    (\textit{paths}, \textit{operations}, \textit{schemas}) y los artefactos de un \ServiceDomain{}
+    BIAN? \\
+    \textbf{P2} &
+    ¿Qué grado de similitud semántica existe entre los términos y conceptos de negocio en BIAN y los
+    nombres de recursos, propiedades y descripciones en OpenAPI? \\
+    \textbf{P3} &
+    ¿Qué tipologías de desalineación predominan al comparar ambos artefactos en un mismo dominio de
+    servicio? \\
+    \textbf{P4} &
+    ¿Es posible integrar métricas estructurales y semánticas en un indicador de coherencia global
+    por cada instancia evaluada (par contrato OpenAPI bancario --- \ServiceDomain{} BIAN)? \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+La \Cref{tab:tipologias} resume la tipología de desalineaciones identificadas:
+
+\input{tables/tab02-tipologias}
+
+Las preguntas P1--P4 orientan la investigación; las transformaciones concretas (normalización,
+\textit{matching}, cálculo de \textit{scores}) pasan a los \textbf{objetivos específicos} del
+Capítulo~\ref{cap:objetivos} y a las cinco fases declaradas en Anexo~C.

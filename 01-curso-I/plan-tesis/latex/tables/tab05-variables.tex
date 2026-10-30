@@ -1,0 +1,33 @@
+\begin{table}[H]
+  \centering
+  \caption{Factores y ratios por objetivo específico}
+  \label{tab:variables}
+  \small
+  \begin{tabular}{@{}p{0.08\textwidth}p{0.22\textwidth}p{0.22\textwidth}p{0.36\textwidth}@{}}
+    \toprule
+    \textbf{OE} & \textbf{Factores} & \textbf{Ratios (resultados)} & \textbf{Parámetros de control} \\
+    \midrule
+    \textbf{Artefacto (OG)} &
+    Modelo S/E/C; pesos $\alpha$, $\beta$, $\gamma$ &
+    \textbf{\AlignmentScore{} + clasificación} (VD global del artefacto) &
+    Instancia \texttt{contrato $\times$ SD}; $\alpha+\beta+\gamma=1$; umbrales §1.4 \\
+    \midrule
+    \textbf{OE1} &
+    Esquema de representación intermedia &
+    Completitud de extracción (elementos extraídos / esperados) &
+    Versión fija del contrato OpenAPI y del \ServiceDomain{} BIAN; herramientas de \textit{parsing} fijas \\
+    \textbf{OE2} &
+    Estrategia de \textit{schema matching} &
+    \StructuralScore{} (E) $\in [0, 1]$ &
+    Mismo conjunto normalizado de OE1; umbral de correspondencia fijo \\
+    \textbf{OE3} &
+    Técnica de similitud semántica (embeddings, ontología, híbrido) &
+    \SemanticScore{} (S) $\in [0, 1]$ &
+    Mismo corpus de términos; umbral de similitud fijo \\
+    \textbf{OE4} &
+    Pesos de agregación ($\alpha$, $\beta$, $\gamma$) &
+    \CoverageScore{} (C) (ratio parcial); contribuye a \AlignmentScore{} &
+    $\alpha + \beta + \gamma = 1$ fijos; mismos S, E, C; taxonomía Tabla~\ref{tab:tipologias} \\
+    \bottomrule
+  \end{tabular}
+\end{table}

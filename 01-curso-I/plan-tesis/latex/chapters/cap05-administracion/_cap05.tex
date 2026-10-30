@@ -1,0 +1,118 @@
+\chapter{Administración del plan}
+\label{cap:administracion}
+
+\section{Cronograma}
+
+La \Cref{tab:cronograma} resume las fases de elaboración del plan de tesis y la
+asignación de responsables. Las fases de bibliografía y redacción documentadas corresponden al avance
+al cierre de mayo 2026; las fases finales concentran la metodología, la administración y la
+revisión de cierre antes de la entrega formal.
+
+\input{tables/tab09-cronograma}
+
+\section{Presupuesto}
+
+El plan de tesis es un producto documental académico; no requiere
+inversión en infraestructura productiva. El presupuesto estimado es \textbf{cero soles} en licencias
+y despliegue, dado el uso de herramientas libres (\LaTeX{}, Python, Zotero, Git).
+
+\begin{table}[H]
+  \centering
+  \caption{Presupuesto estimado del plan de tesis}
+  \label{tab:presupuesto}
+  \small
+  \begin{tabular}{@{}p{0.42\textwidth}rr@{}}
+    \toprule
+    \textbf{Ítem} & \textbf{Costo (S/)} & \textbf{Fuente} \\
+    \midrule
+    Licencias de software (\LaTeX{}, Python, Zotero, Git) & 0 & Open source \\
+    Acceso a bases bibliográficas & 0 & Suscripción institucional \\
+    Infraestructura cloud / despliegue API & 0 & Fuera de alcance §1.6 \\
+    Impresión del documento (opcional) & $\leq$ 30 & Recursos personales \\
+    \midrule
+    \textbf{Total estimado} & \textbf{$\leq$ 30} & \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+El costo principal del proyecto es el \textbf{tiempo de dedicación} de los integrantes
+($\approx$ 8--10 horas semanales durante el ciclo académico), distribuido según el cronograma de la
+\Cref{tab:cronograma}.
+
+\section{Financiamiento}
+
+La elaboración del plan de tesis no cuenta con financiamiento externo ni contratos de investigación.
+Las actividades se sostienen con los siguientes medios:
+
+\begin{itemize}
+  \item \textbf{Recursos propios} de los integrantes (equipos personales, conectividad e impresión
+        opcional del documento).
+  \item \textbf{Recursos institucionales} de la Universidad Nacional de Ingeniería: acceso a bases
+        bibliográficas (IEEE Xplore, ACM Digital Library y repositorios académicos) mediante la
+        matrícula de posgrado; uso de plataforma institucional y sesiones de asesoría académica.
+  \item \textbf{Software libre} (\LaTeX{}, Python, Zotero, Git) sin costo de licenciamiento,
+        coherente con el presupuesto de la \Cref{tab:presupuesto}.
+\end{itemize}
+
+No se prevén viáticos, contratación de personal ni adquisición de hardware adicional para el alcance
+delimitado en §1.6 (solo plan de tesis, sin experimentación a escala ni despliegue productivo).
+
+\section{Recursos}
+
+\subsection{Recursos humanos}
+
+\begin{itemize}
+  \item \textbf{Alex Mancilla:} planteamiento del problema, Cap.~1, revisión cruzada de coherencia
+        narrativa y apoyo en exposiciones.
+  \item \textbf{Jack Paitan:} sistematización bibliográfica, marco teórico §3.1--§3.4,
+        diseño metodológico (Cap.~4), administración (Cap.~5), anexos y matrices Excel.
+  \item \textbf{Asesor académico:} retroalimentación sobre coherencia del planteamiento y validación
+        del hilo conductor antes de la entrega formal.
+\end{itemize}
+
+\subsection{Recursos materiales y de software}
+
+\begin{itemize}
+  \item \textbf{Hardware:} equipos personales con acceso a internet (macOS); sin infraestructura
+        de servidor propia.
+  \item \textbf{Software:} \LaTeX{} (MacTeX), Python 3 + \texttt{openpyxl}/\texttt{matplotlib},
+        editor de texto/Git para colaboración, Zotero para gestión bibliográfica.
+  \item \textbf{Fuentes documentales:} contratos OpenAPI~3.x bancarios públicos o de referencia;
+        especificaciones \ServiceDomain{} BIAN; corpus bibliográfico del proyecto.
+  \item \textbf{Acceso académico:} IEEE Xplore, ACM Digital Library y bases institucionales de la
+        universidad para descarga de papers del estado del arte.
+\end{itemize}
+
+\subsection{Recursos bibliográficos}
+
+Catorce papers de estado del arte (Anexo~B), veintidós papers de aporte para sustentar técnicas
+(Cap.~4) y siete referencias de contexto OpenAPI--BIAN. La cadena de búsqueda y criterios de
+selección se documentan en el Anexo~A.
+
+\section{Roles del equipo}
+
+\begin{table}[H]
+  \centering
+  \caption{Distribución de roles del equipo}
+  \label{tab:roles}
+  \small
+  \begin{tabular}{@{}p{0.22\textwidth}p{0.68\textwidth}@{}}
+    \toprule
+    \textbf{Integrante} & \textbf{Responsabilidad principal} \\
+    \midrule
+    Alex Mancilla &
+    Cap.~1 (§1.1--§1.9); coherencia problema--objeto--referencia BIAN; exposición oral;
+    revisión cruzada Cap.~2--3 \\
+    Jack Paitan &
+    Revisión bibliográfica; §3.5--§3.6 y §3.1--§3.4; Cap.~2--4; Cap.~5; anexos A--F; matrices Excel;
+    compilación PDF y entrega formal \\
+    Ambos &
+    Revisión de hilo conductor; matriz de consistencia; cierre del plan; decisiones de alcance
+    (§1.6) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Riesgos}
+
+\input{tables/tab10-riesgos}

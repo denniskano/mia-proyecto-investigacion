@@ -1,0 +1,19 @@
+Esta sección detalla las técnicas previstas por objetivo específico, tomadas del estado del arte
+(§\ref{sec:estado-arte}) y vinculadas a los factores del Capítulo~\ref{cap:objetivos}. El
+procedimiento \textbf{no} emplea aprendizaje supervisado: los scores se obtienen mediante reglas y
+métricas documentadas (\textit{schema matching} y similitud semántica).
+
+\begin{itemize}
+  \item \textbf{OE1:} \textit{parsing} OpenAPI~3.x; extracción de \textit{paths}, operaciones y
+        esquemas; representación intermedia alineada con BIAN (Mainas et al., 2023 como referencia
+        de enriquecimiento semántico).
+  \item \textbf{OE2:} \textit{schema matching} según taxonomía Shvaiko y Euzenat (2005): nombre,
+        ruta, profundidad de esquema, operación HTTP.
+  \item \textbf{OE3:} similitud semántica por embeddings y/o ontología (El Bayadh et al., 2015;
+        Chandrasekaran y Mago, 2022).
+  \item \textbf{OE4:} agregación ponderada $\alpha S + \beta E + \gamma C$ y clasificación por
+        umbrales fijos (§1.4).
+\end{itemize}
+
+Herramientas previstas: Python para prototipo, validadores OpenAPI, bibliotecas de similitud textual.
+La implementación concreta queda fuera del alcance del presente plan (§\ref{sec:alcances}).

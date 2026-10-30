@@ -1,0 +1,53 @@
+\chapter{Matriz de consistencia}
+\label{anexo:c}
+
+La matriz de consistencia vincula \textbf{problema tecnológico}, \textbf{objetivo general
+(técnico)}, las \textbf{cinco fases} del modelo S/E/C, variables, hipótesis, indicadores y
+controles. La Fase~1 corresponde al diseño del procedimiento; no incluye experimentación ni piloto
+único de validación.
+
+\section{Metadatos}
+
+\begin{description}
+  \item[Situación real (problemática):] Síntomas del sector bancario: fragmentación OpenAPI,
+        costos de integración, casos documentados de desalineación entre sistemas (Cap.~1 §1.2).
+        \textbf{No} es el problema de las filas de la matriz.
+  \item[Situación subyacente (abstracto):] Correspondencia entre estructuras OpenAPI y
+        \ServiceDomain{} BIAN; objeto y unidad de análisis (Cap.~1 §1.3--§1.4).
+  \item[Problema tecnológico (matriz):] \textbf{No existe} un método reproducible que cuantifique
+        en qué medida un contrato OpenAPI bancario se alinea con un \ServiceDomain{} BIAN y bajo
+        qué tipologías se desalinea. Pregunta ancla: ¿en qué medida… y cómo cuantificarlo mediante
+        el modelo S/E/C $\rightarrow$ \AlignmentScore{}? (Cap.~1 §1.3; distinto de la brecha del
+        estado del arte, Cap.~3 §3.6).
+  \item[Objetivo superior:] Consecuencia en el mundo real si el artefacto operara: gobernanza y
+        reducción de retrabajo en integraciones (Cap.~2 §2.2).
+  \item[Objetivo general (técnico):] Diseñar el modelo de alineación y el procedimiento que
+        calculen \SemanticScore{} (S), \StructuralScore{} (E), \CoverageScore{} (C) y
+        \AlignmentScore{} (Cap.~2 §2.3).
+\end{description}
+
+\section{Resumen por fase}
+
+\small
+\input{tables/tab-anexo-c-resumen}
+\normalsize
+
+\section{Trazabilidad Cap.~2}
+
+\begin{table}[H]
+  \centering
+  \caption{Vinculación fases del modelo $\rightarrow$ objetivos específicos}
+  \label{tab:anexo-c-trazabilidad}
+  \small
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+    \textbf{Fase modelo} & \textbf{OE} & \textbf{Score / producto} \\
+    \midrule
+    Fase 1 — Diseño & Marco OG & Modelo S/E/C documentado \\
+    Fase 2 — Normalización & OE1 & Representaciones comparables \\
+    Fase 3 — Matching estructural & OE2 & \StructuralScore{} (E) \\
+    Fase 4 — Similitud semántica & OE3 & \SemanticScore{} (S) \\
+    Fase 5 — Integración & OE4 & \CoverageScore{} (C) + \AlignmentScore{} \\
+    \bottomrule
+  \end{tabular}
+\end{table}

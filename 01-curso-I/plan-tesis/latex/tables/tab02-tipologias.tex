@@ -1,0 +1,23 @@
+\begin{table}[H]
+  \centering
+  \caption{Tipología de desalineaciones OpenAPI--BIAN}
+  \label{tab:tipologias}
+  \begin{tabular}{@{}p{0.18\textwidth}p{0.38\textwidth}p{0.32\textwidth}@{}}
+    \toprule
+    \textbf{Tipo} & \textbf{Descripción} & \textbf{Ejemplo ilustrativo} \\
+    \midrule
+    \textbf{Estructural} &
+    Divergencia entre la organización de endpoints/esquemas y la estructura del SD BIAN &
+    Operación \texttt{POST /transfer} sin correspondencia con el \Behavior{} \texttt{Initiate} definido en BIAN \\
+    \textbf{Semántica} &
+    Equivalencia estructural parcial pero significado de negocio distinto &
+    Propiedad \texttt{amount} sin vínculo explícito con \texttt{PaymentAmount} del modelo BIAN \\
+    \textbf{De modelado} &
+    Representación incorrecta o incompleta de entidades de negocio &
+    Esquema que omite atributos obligatorios del \BusinessObject{} BIAN \\
+    \textbf{REST / contrato} &
+    Inconsistencias en el estilo REST que dificultan la interpretación alineada al dominio &
+    Uso de verbos en URLs o recursos que no mapean a \textit{Service Operations} BIAN \\
+    \bottomrule
+  \end{tabular}
+\end{table}

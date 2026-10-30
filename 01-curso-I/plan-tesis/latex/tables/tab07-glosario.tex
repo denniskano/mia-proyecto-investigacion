@@ -1,0 +1,48 @@
+\begin{table}[H]
+  \centering
+  \caption{Mapa semántico --- términos clave del plan de tesis}
+  \label{tab:glosario}
+  \small
+  \begin{tabular}{@{}p{0.22\textwidth}p{0.68\textwidth}@{}}
+    \toprule
+    \textbf{Término} & \textbf{Definición en este plan} \\
+    \midrule
+    API REST &
+    Interfaz que expone recursos y operaciones HTTP con representaciones intercambiables (p.\ ej. JSON). \\
+    Contrato OpenAPI &
+    Documento YAML/JSON (OpenAPI~3.x) que describe \textit{paths}, \textit{operations} y \textit{schemas} de una API. \\
+    BIAN &
+    Estándar de arquitectura bancaria que organiza capacidades en \ServiceDomain{}s de referencia. \\
+    \ServiceDomain{} &
+    Unidad de negocio BIAN descrita por \Behavior{}s, \BusinessObject{}s y relaciones de control. \\
+    \Behavior{} &
+    Acción o capacidad de negocio definida en un \ServiceDomain{} BIAN. \\
+    \BusinessObject{} &
+    Entidad de dominio BIAN (p.\ ej. orden de pago, cuenta) referenciada en el modelo. \\
+    Objeto de estudio &
+    Contrato OpenAPI bancario completo evaluado frente a un \ServiceDomain{} BIAN. \\
+    Unidad de análisis &
+    Par comparable endpoint/operation/schema $\leftrightarrow$ \Behavior{} / \BusinessObject{}. \\
+    Alineación &
+    Grado de correspondencia estructural y semántica entre contrato OpenAPI y \ServiceDomain{} BIAN. \\
+    Desalineación &
+    Divergencia detectable; tipologías: estructural, semántica, modelado, REST/contrato (Tabla~\ref{tab:tipologias}). \\
+    Representación normalizada &
+    Vista intermedia común (tabular, grafo u ontología) de artefactos OpenAPI y BIAN tras OE1. \\
+    \textit{Schema matching} &
+    Técnicas de correspondencia entre esquemas o estructuras; base del \StructuralScore{} (E). \\
+    Similitud semántica &
+    Medida de equivalencia de significado entre términos/conceptos; base del \SemanticScore{} (S). \\
+    \SemanticScore{} (S) &
+    Score $\in [0,1]$ de alineación semántica OpenAPI $\leftrightarrow$ BIAN. \\
+    \StructuralScore{} (E) &
+    Score $\in [0,1]$ de correspondencia estructural REST $\leftrightarrow$ organización del SD. \\
+    \CoverageScore{} (C) &
+    Score $\in [0,1]$ de conceptos BIAN cubiertos por el contrato OpenAPI. \\
+    \AlignmentScore{} &
+    Agregación $\alpha S + \beta E + \gamma C$; clasificación Alta/Media/Baja/Nula. \\
+    \textit{Matching} &
+    Procedimiento que establece correspondencias entre elementos de dos artefactos normalizados. \\
+    \bottomrule
+  \end{tabular}
+\end{table}

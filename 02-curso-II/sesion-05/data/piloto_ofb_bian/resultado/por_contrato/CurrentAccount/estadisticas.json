@@ -1,0 +1,33 @@
+{
+  "archivo_entrada": "CurrentAccount.yaml",
+  "source": "BIAN",
+  "contrato": "Current Account",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 34,
+  "cantidad_schemas": 256,
+  "cantidad_propiedades": 1266,
+  "fragmentos_corpus": 1632,
+  "operaciones_con_summary": 34,
+  "operaciones_con_description": 34,
+  "operaciones_summary_igual_description": 34,
+  "metodos": {
+    "POST": 8,
+    "PUT": 17,
+    "GET": 9
+  },
+  "tags": {
+    "CR - CurrentAccountFacility": 4,
+    "BQ - Interest": 2,
+    "BQ - Charge": 4,
+    "BQ - Sweep": 4,
+    "BQ - DebitandCredit": 4,
+    "BQ - Payment": 5,
+    "BQ - IssuedDevice": 3,
+    "BQ - Booking": 1,
+    "BQ - Deposit": 4,
+    "BQ - AmountBlock": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CurrentAccount.yaml"
+}

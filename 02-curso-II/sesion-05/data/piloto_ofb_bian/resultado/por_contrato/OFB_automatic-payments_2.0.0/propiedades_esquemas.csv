@@ -1,0 +1,719 @@
+﻿source;archivo;schema;property;type;format;ref;description;property_normalized;description_normalized;source_url
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseErrorCreateConsent;errors;array;;;;errors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseErrorCreateConsent;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;422ResponseErrorRecurringConsents;errors;array;;;;errors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;422ResponseErrorRecurringConsents;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;422ResponseErrorCreatePixRecurringPayment;errors;array;;;;errors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;422ResponseErrorCreatePixRecurringPayment;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;422ResponseErrorCreateRecurringPaymentsPaymentId;errors;array;;;;errors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;422ResponseErrorCreateRecurringPaymentsPaymentId;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;BusinessEntity;document;object;;;;document;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringConsent;data;object;;;Objeto contendo as informações de consentimento para a iniciação de pagamento individual.;data;objeto contendo as informações de consentimento para a iniciação de pagamento individual.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPayment;data;;;CreateRecurringPixPaymentData;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;recurringConsentId;string;;;"Identificador único do consentimento de longa duração criado para a iniciação de pagamento solicitada. Deverá ser um URN - Uniform Resource Name. 
+Um URN, conforme definido na [RFC8141](https://tools.ietf.org/html/rfc8141) é um Uniform Resource 
+Identifier - URI - que é atribuído sob o URI scheme ""urn"" e um namespace URN específico, com a intenção de que o URN 
+seja um identificador de recurso persistente e independente da localização. 
+Considerando a string urn:bancoex:C1DD33123 como exemplo para `recurringConsentId` temos:
+- o namespace(urn)
+- o identificador associado ao namespace da instituição transmissora (bancoex)
+- o identificador específico dentro do namespace (C1DD33123).
+Informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [RFC8141](https://tools.ietf.org/html/rfc8141).
+
+[Restrição] Este campo é de preenchimento obrigatório quando o valor do campo authorisationFlow for igual a FIDO_FLOW.
+";recurring consent id;"identificador único do consentimento de longa duração criado para a iniciação de pagamento solicitada. deverá ser um urn uniform resource name. um urn, conforme definido na [rfc8141](https: tools.ietf.org html rfc8141) é um uniform resource identifier uri que é atribuído sob o uri scheme ""urn"" e um namespace urn específico, com a intenção de que o urn seja um identificador de recurso persistente e independente da localização. considerando a string urn:bancoex:c1 dd33123 como exemplo para `recurring consent id` temos: o namespace(urn) o identificador associado ao namespace da instituição transmissora (bancoex) o identificador específico dentro do namespace (c1 dd33123). informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [rfc8141](https: tools.ietf.org html rfc8141). [restrição] este campo é de preenchimento obrigatório quando o valor do campo authorisation flow for igual a fido flow.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;endToEndId;;;EndToEndIdPost;;end to end id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;date;string;date;;Data em que o pagamento será realizado. Uma string com a utilização de timezone UTC-3 (UTC time format).;date;data em que o pagamento será realizado. uma string com a utilização de timezone utc 3 (utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;payment;;;PaymentPix;;payment;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;creditorAccount;object;;;"Objeto que contém a identificação da conta de destino do beneficiário/recebedor.
+
+[Restrição] - Se /data/paymentReference = ""zero"", as informações da conta de crédito enviadas (/data/creditorAccount) devem ser iguais as presentes na conta de crédito informada na criação do consentimento(`/data/recurringConfiguration/automatic/firstPayment/creditorAccount`)
+";creditor account;"objeto que contém a identificação da conta de destino do beneficiário recebedor. [restrição] se data payment reference = ""zero"", as informações da conta de crédito enviadas ( data creditor account) devem ser iguais as presentes na conta de crédito informada na criação do consentimento(` data recurring configuration automatic first payment creditor account`)";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;remittanceInformation;string;;;"Deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.
+";remittance information;deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;cnpjInitiator;string;;;CNPJ do Iniciador de Pagamento devidamente habilitado para a prestação de Serviço de Iniciação no Pix.;cnpj initiator;cnpj do iniciador de pagamento devidamente habilitado para a prestação de serviço de iniciação no pix.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;ibgeTownCode;string;;;"O campo ibgeTownCode no arranjo Pix tem o mesmo comportamento que o campo codMun descrito no item 1.6.6 do manual do Pix.
+
+Caso a informação referente ao município não seja enviada, o PSP do recebedor assumirá que não existem feriados estaduais e municipais no período em questão;
+";ibge town code;"o campo ibge town code no arranjo pix tem o mesmo comportamento que o campo cod mun descrito no item 1.6.6 do manual do pix. caso a informação referente ao município não seja enviada, o psp do recebedor assumirá que não existem feriados estaduais e municipais no período em questão;";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;authorisationFlow;string;;;"Campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado.
+
+[Restrição] Se CIBA ou FIDO, preenchimento obrigatório. Caso o campo não esteja presente no payload, subentende-se que o fluxo de autorização utilizado é o HYBRID_FLOW.
+";authorisation flow;campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado. [restrição] se ciba ou fido, preenchimento obrigatório. caso o campo não esteja presente no payload, subentende se que o fluxo de autorização utilizado é o hybrid flow.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;riskSignals;;;RiskSignalsPayments;;risk signals;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;localInstrument;string;;;"Especifica a forma de iniciação do pagamento
+- MANU - Inserção manual de dados da conta transacional
+- DICT - Inserção manual de chave Pix
+- INIC - Indica que o recebedor (creditor) contratou o Iniciador de Pagamentos especificamente para realizar iniciações de pagamento em que o beneficiário é previamente conhecido
+
+[Restrição] Caso consentimento associado a tentativa de pagamento seja para Pix automático (objeto “automatic” selecionado no oneOf do campo ""/data/recurringConfiguration""), apenas o método MANU é permitido.
+";local instrument;"especifica a forma de iniciação do pagamento manu inserção manual de dados da conta transacional dict inserção manual de chave pix inic indica que o recebedor (creditor) contratou o iniciador de pagamentos especificamente para realizar iniciações de pagamento em que o beneficiário é previamente conhecido [restrição] caso consentimento associado a tentativa de pagamento seja para pix automático (objeto “automatic” selecionado no one of do campo "" data recurring configuration""), apenas o método manu é permitido.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;proxy;string;;;"Chave cadastrada no DICT pertencente ao recebedor. Os tipos de chaves podem ser: telefone, e-mail, cpf/cnpj ou chave aleatória. 
+No caso de telefone celular deve ser informado no padrão E.1641. Para e-mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. 
+No caso de CPF deverá ser informado com 11 números, sem pontos ou traços. Para o caso de CNPJ deverá ser informado com 14 números, sem pontos ou traços. 
+No caso de chave aleatória deve ser informado o UUID gerado pelo DICT, conforme formato especificado na [RFC4122](https://tools.ietf.org/html/rfc4122).
+
+[Restrição] Se localInstrument for igual a DICT ou INIC, o campo proxy deve ser preenchido.
+
+[Restrição] Se informado, a detentora da conta deve validar o proxy no DICT (quando localInstrument for igual a DICT) e validar o objeto creditorAccount. Ação opcional caso o localInstrument for igual a INIC
+
+[Restrição] Caso o campo “/data/localInstrument” seja enviado como “MANU”, o campo “/data/proxy” não deve ser informado
+";proxy;chave cadastrada no dict pertencente ao recebedor. os tipos de chaves podem ser: telefone, e mail, cpf cnpj ou chave aleatória. no caso de telefone celular deve ser informado no padrão e.1641. para e mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. no caso de cpf deverá ser informado com 11 números, sem pontos ou traços. para o caso de cnpj deverá ser informado com 14 números, sem pontos ou traços. no caso de chave aleatória deve ser informado o uuid gerado pelo dict, conforme formato especificado na [rfc4122](https: tools.ietf.org html rfc4122). [restrição] se local instrument for igual a dict ou inic, o campo proxy deve ser preenchido. [restrição] se informado, a detentora da conta deve validar o proxy no dict (quando local instrument for igual a dict) e validar o objeto creditor account. ação opcional caso o local instrument for igual a inic [restrição] caso o campo “ data local instrument” seja enviado como “manu”, o campo “ data proxy” não deve ser informado;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;transactionIdentification;string;;;"Trata-se de um identificador de transação que deve ser retransmitido intacto pelo PSP do pagador ao gerar a ordem de pagamento. 
+Essa informação permitirá ao recebedor identificar e correlacionar a transferência, quando recebida, com a apresentação das instruções ao pagador. 
+Os caracteres permitidos no contexto do Pix para o campo txid (EMV 62-05) são:Letras minúsculas, de 'a' a 'z' Letras maiúsculas, de 'A' a 'z' Dígitos decimais, de '0' a '9'.
+
+[Restrição] Preenchimento condicional de acordo com o conteúdo do campo localInstument:
+- MANU - O campo transactionIdentification não deve ser preenchido;
+- DICT - O campo transactionIdentification não deve ser preenchido;
+- INIC - O campo transactionIdentification deve ser preenchido obrigatoriamente e deve conter até 25 caracteres alfanuméricos ([a-z|A-Z|0-9]).
+";transaction identification;"trata se de um identificador de transação que deve ser retransmitido intacto pelo psp do pagador ao gerar a ordem de pagamento. essa informação permitirá ao recebedor identificar e correlacionar a transferência, quando recebida, com a apresentação das instruções ao pagador. os caracteres permitidos no contexto do pix para o campo txid (emv 62 05) são:letras minúsculas, de 'a' a 'z' letras maiúsculas, de 'a' a 'z' dígitos decimais, de '0' a '9'. [restrição] preenchimento condicional de acordo com o conteúdo do campo local instument: manu o campo transaction identification não deve ser preenchido; dict o campo transaction identification não deve ser preenchido; inic o campo transaction identification deve ser preenchido obrigatoriamente e deve conter até 25 caracteres alfanuméricos ([a z|a z|0 9]).";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;document;object;;;Informações do documento identificador do recebedor da transação.;document;informações do documento identificador do recebedor da transação.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;originalRecurringPaymentId;;;originalRecurringPaymentId;;original recurring payment id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreateRecurringPixPaymentData;paymentReference;string;;;"[Restrição]
+Campo de preenchimento obrigatório caso seja um pagamento de Pix automático, caso não respeitado, a instituição detentora deve retornar erro HTTP 422 com o código DETALHE_PAGAMENTO_INVALIDO.
+
+- Primeiro pagamento: Se for o pagamento inicial especificado em “/data/firstPayment”, preencha o campo com a string fixa “zero”.
+- Semanal: Preencha com W$numSemana-$ano, onde $numSemana representa o número da semana no ano. Exemplo: ""W50-2024"".
+- Mensal: Use M$mês-$ano, onde $mês representa o mês com dois dígitos. Exemplo: ""M09-2024"".
+- Trimestral: Utilize Q$trimestre-$ano, onde $trimestre indica o trimestre do ano (1 a 4).
+  - Janeiro a Março: Q1-$ano (ex.: ""Q1-2024"").
+  - Abril a Junho: Q2-$ano (ex.: ""Q2-2024"").
+  - Julho a Setembro: Q3-$ano (ex.: ""Q3-2024"").
+  - Outubro a Dezembro: Q4-$ano (ex.: ""Q4-2024"").
+- Semestral: Utilize $semestre-$ano, onde $semestre indica o semestre do ano (1 para janeiro a junho e 2 para julho a dezembro).
+  - Janeiro a Junho: S1-$ano (ex.: ""S1-2024"").
+  - Julho a Dezembro: S2-$ano (ex.: ""S2-2024"").
+- Anual: Use Y$ano, apenas com o ano. Exemplo: ""Y2024"".
+  - Exemplo de Formatos:
+    - Primeiro pagamento: ""zero""
+    - Semanal: ""W50-2024""
+    - Mensal: ""M09-2024""
+    - Trimestral: ""Q3-2024""
+    - Semestral: ""S2-2024""
+    - Anual: ""Y2024""
+";payment reference;"[restrição] campo de preenchimento obrigatório caso seja um pagamento de pix automático, caso não respeitado, a instituição detentora deve retornar erro http 422 com o código detalhe pagamento invalido. primeiro pagamento: se for o pagamento inicial especificado em “ data first payment”, preencha o campo com a string fixa “zero”. semanal: preencha com w$num semana $ano, onde $num semana representa o número da semana no ano. exemplo: ""w50 2024"". mensal: use m$mês $ano, onde $mês representa o mês com dois dígitos. exemplo: ""m09 2024"". trimestral: utilize q$trimestre $ano, onde $trimestre indica o trimestre do ano (1 a 4). janeiro a março: q1 $ano (ex.: ""q1 2024""). abril a junho: q2 $ano (ex.: ""q2 2024""). julho a setembro: q3 $ano (ex.: ""q3 2024""). outubro a dezembro: q4 $ano (ex.: ""q4 2024""). semestral: utilize $semestre $ano, onde $semestre indica o semestre do ano (1 para janeiro a junho e 2 para julho a dezembro). janeiro a junho: s1 $ano (ex.: ""s1 2024""). julho a dezembro: s2 $ano (ex.: ""s2 2024""). anual: use y$ano, apenas com o ano. exemplo: ""y2024"". exemplo de formatos: primeiro pagamento: ""zero"" semanal: ""w50 2024"" mensal: ""m09 2024"" trimestral: ""q3 2024"" semestral: ""s2 2024"" anual: ""y2024""";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsPayments;manual;object;;;"Representa a coleta de sinais de risco com a presença do usuário
+
+[Restrição] Obrigatório de ser enviado quando a transação ocorrer na presença do usuário
+";manual;representa a coleta de sinais de risco com a presença do usuário [restrição] obrigatório de ser enviado quando a transação ocorrer na presença do usuário;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsPayments;automatic;object;;;"Representa a coleta de sinais de risco sem a presença do usuário
+
+[Restrição] Obrigatório de ser enviado quando a transação não ocorrer na presença do usuário
+";automatic;representa a coleta de sinais de risco sem a presença do usuário [restrição] obrigatório de ser enviado quando a transação não ocorrer na presença do usuário;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;deviceId;string;;;ID único do dispositivo gerado pela plataforma.;device id;id único do dispositivo gerado pela plataforma.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;isRootedDevice;boolean;;;Indica se o dispositivo atualmente está com permissão de “root”.;is rooted device;indica se o dispositivo atualmente está com permissão de “root”.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;screenBrightness;number;double;;"Indica o nível de brilho da tela do dispositivo.  
+Em dispositivos Android o valor é um inteiro, entre 0 e 255, inclusive;  
+Em dispositivos iOS o valor é um ponto flutuante entre 0.0 e 1.0.
+";screen brightness;"indica o nível de brilho da tela do dispositivo. em dispositivos android o valor é um inteiro, entre 0 e 255, inclusive; em dispositivos i os o valor é um ponto flutuante entre 0.0 e 1.0.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;elapsedTimeSinceBoot;integer;int64;;Indica por quanto tempo (em milissegundos) o dispositivo está ligado.;elapsed time since boot;indica por quanto tempo (em milissegundos) o dispositivo está ligado.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;osVersion;string;;;Versão do sistema operacional.;os version;versão do sistema operacional.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;userTimeZoneOffset;string;;;"Indica a configuração de fuso horário do dispositivo do usuário, com o formato UTC offset: ±hh[:mm]
+";user time zone offset;indica a configuração de fuso horário do dispositivo do usuário, com o formato utc offset: ±hh[:mm];https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;language;string;;;Indica o idioma do dispositivo no formato ISO 639-1.;language;indica o idioma do dispositivo no formato iso 639 1.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;screenDimensions;object;;;Dimensões da tela do dispositivo;screen dimensions;dimensões da tela do dispositivo;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;accountTenure;string;date;;Data de cadastro do cliente na iniciadora.;account tenure;data de cadastro do cliente na iniciadora.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;geolocation;object;;;Dados de geolocalização do cliente enquanto logado na iniciadora;geolocation;dados de geolocalização do cliente enquanto logado na iniciadora;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;isCallingProgress;boolean;;;"Indica chamada ativa no momento do vínculo.
+
+[Restrição] Caso o sinal de risco esteja disponível (cliente permitiu que fosse coletado), o mesmo deverá ser enviado
+";is calling progress;indica chamada ativa no momento do vínculo. [restrição] caso o sinal de risco esteja disponível (cliente permitiu que fosse coletado), o mesmo deverá ser enviado;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;isDevModeEnabled;boolean;;;Indica se o dispositivo está em modo de desenvolvedor.;is dev mode enabled;indica se o dispositivo está em modo de desenvolvedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;isMockGPS;boolean;;;Indica se o dispositivo está usando um GPS falso.;is mock gps;indica se o dispositivo está usando um gps falso.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;isEmulated;boolean;;;Indica se o dispositivo é emulado ou real.;is emulated;indica se o dispositivo é emulado ou real.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;isMonkeyRunner;boolean;;;Indica o uso do MonkeyRunner.;is monkey runner;indica o uso do monkey runner.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;isCharging;boolean;;;Indica se a bateria do dispositivo está sendo carregada.;is charging;indica se a bateria do dispositivo está sendo carregada.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;antennaInformation;string;;;Indica em qual antena o dispositivo está conectado.;antenna information;indica em qual antena o dispositivo está conectado.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;isUsbConnected;boolean;;;Indica se o dispositivo está conectado a outro dispositivo via USB.;is usb connected;indica se o dispositivo está conectado a outro dispositivo via usb.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsents;integrity;object;;;"Informa a integridade do dispositivo e app.  
+No Android, conforme documentação Play API Integrity - [Android](https://developer.android.com/google/play/integrity/overview?hl=pt-br).  
+No iOS, conforme documentação App Attest [iOS](https://developer.apple.com/documentation/devicecheck/establishing_your_app_s_integrity)
+";integrity;informa a integridade do dispositivo e app. no android, conforme documentação play api integrity [android](https: developer.android.com google play integrity overview?hl=pt br). no i os, conforme documentação app attest [i os](https: developer.apple.com documentation devicecheck establishing your app s integrity);https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;deviceId;string;;;"ID único do dispositivo gerado pela plataforma.
+
+[Android] Informação obtida através do [link](https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID).
+
+[iOS] Informação obtida através do [link](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor/).
+";device id;id único do dispositivo gerado pela plataforma. [android] informação obtida através do [link](https: developer.android.com reference android provider settings.secure#android id). [i os] informação obtida através do [link](https: developer.apple.com documentation uikit uidevice 1620059 identifierforvendor ).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;isRootedDevice;boolean;;;"Indica se o dispositivo atualmente está com permissão de “root”.
+
+[Restrição] Campos de envio obrigatório quando o sistema operacional utilizado pelo usuário for Android ou iOS.
+";is rooted device;indica se o dispositivo atualmente está com permissão de “root”. [restrição] campos de envio obrigatório quando o sistema operacional utilizado pelo usuário for android ou i os.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;screenBrightness;number;double;;"Indica o nível de brilho da tela do dispositivo.
+
+[Android] O valor é inteiro, tipicamente entre 0 a 255, podendo a faixa de valores variar de acordo com o fabricante do celular. Referência no [link](https://developer.android.com/reference/android/provider/Settings.System#SCREEN_BRIGHTNESS).
+
+[iOS] O valor é ponto flutuante entre “0.0” e “1.0”. Referência no [link](https://developer.apple.com/documentation/kernel/kern/).
+
+[Restrição] Campos de envio obrigatório quando o sistema operacional utilizado pelo for Android ou iOS.
+";screen brightness;indica o nível de brilho da tela do dispositivo. [android] o valor é inteiro, tipicamente entre 0 a 255, podendo a faixa de valores variar de acordo com o fabricante do celular. referência no [link](https: developer.android.com reference android provider settings.system#screen brightness). [i os] o valor é ponto flutuante entre “0.0” e “1.0”. referência no [link](https: developer.apple.com documentation kernel kern ). [restrição] campos de envio obrigatório quando o sistema operacional utilizado pelo for android ou i os.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;elapsedTimeSinceBoot;integer;int64;;"Indica por quanto tempo (em milissegundos) o dispositivo está ligado.
+
+[Android] Informação obtida através do [link](https://developer.android.com/reference/android/os/SystemClock#elapsedRealtime%28%29).
+
+[iOS] Informação obtida através do [link](https://developer.apple.com/documentation/kernel/kern/).
+
+[Restrição] Campos de envio obrigatório quando o sistema operacional utilizado pelo for Android ou iOS.
+";elapsed time since boot;indica por quanto tempo (em milissegundos) o dispositivo está ligado. [android] informação obtida através do [link](https: developer.android.com reference android os system clock#elapsed realtime%28%29). [i os] informação obtida através do [link](https: developer.apple.com documentation kernel kern ). [restrição] campos de envio obrigatório quando o sistema operacional utilizado pelo for android ou i os.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;osVersion;string;;;"Versão do sistema operacional.
+
+[Android] Informação obtida através do [link](https://developer.android.com/reference/android/os/Build.VERSION#RELEASE).
+
+[iOS] - Informação obtida através do [link](https://developer.apple.com/documentation/uikit/uidevice/1620043-systemversion/).
+";os version;versão do sistema operacional. [android] informação obtida através do [link](https: developer.android.com reference android os build.version#release). [i os] informação obtida através do [link](https: developer.apple.com documentation uikit uidevice 1620043 systemversion ).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;userTimeZoneOffset;string;;;"Indica a configuração de fuso horário do dispositivo do usuário, com o formato UTC offset: ±hh[:mm]. O formato especificado permite a omissão da parte correspondente aos minutos, caso esta última tenha valor zero. Assim, ambos os valores '-03:00' e '-03' são válidos e representam o mesmo fuso horário.
+
+[Android] Informação obtida através do [link](https://developer.android.com/reference/java/time/ZonedDateTime#getOffset()) ou, para versões anteriores à 8.0, [link](https://developer.android.com/reference/java/util/TimeZone#getOffset(long)).
+
+[iOS] Informação obtida através do [link](https://developer.apple.com/documentation/foundation/timezone/).
+";user time zone offset;indica a configuração de fuso horário do dispositivo do usuário, com o formato utc offset: ±hh[:mm]. o formato especificado permite a omissão da parte correspondente aos minutos, caso esta última tenha valor zero. assim, ambos os valores ' 03:00' e ' 03' são válidos e representam o mesmo fuso horário. [android] informação obtida através do [link](https: developer.android.com reference java time zoned date time#get offset()) ou, para versões anteriores à 8.0, [link](https: developer.android.com reference java util time zone#get offset(long)). [i os] informação obtida através do [link](https: developer.apple.com documentation foundation timezone ).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;language;string;;;"Indica o idioma do dispositivo no formato ISO 639-1.
+
+[Android] Informação obtida através do [link](https://developer.android.com/reference/java/util/Locale#getLanguage()).
+
+[iOS] - Informação obtida através do [link](https://developer.apple.com/documentation/foundation/locale/languagecode/).
+";language;indica o idioma do dispositivo no formato iso 639 1. [android] informação obtida através do [link](https: developer.android.com reference java util locale#get language()). [i os] informação obtida através do [link](https: developer.apple.com documentation foundation locale languagecode ).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;screenDimensions;object;;;"Dimensões que o aplicativo ocupa na tela do dispositivo.
+
+[Android] Informação obtida através do [link](https://developer.android.com/reference/android/view/WindowMetrics#getBounds()), ou, para versões anteriores à 11, [link](https://developer.android.com/reference/android/util/DisplayMetrics).
+
+[iOS] - Informação obtida através do [link](https://developer.apple.com/documentation/metal/mtlrasterizationratemap/3088873-screensize/).
+";screen dimensions;dimensões que o aplicativo ocupa na tela do dispositivo. [android] informação obtida através do [link](https: developer.android.com reference android view window metrics#get bounds()), ou, para versões anteriores à 11, [link](https: developer.android.com reference android util display metrics). [i os] informação obtida através do [link](https: developer.apple.com documentation metal mtlrasterizationratemap 3088873 screensize ).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;accountTenure;string;date;;Data de cadastro do cliente na iniciadora.;account tenure;data de cadastro do cliente na iniciadora.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;geolocation;object;;;"Localização do usuário, obtida com seu consentimento.
+
+[Android] Informação obtida através do [link](https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderClient#public-abstract-tasklocation-getlastlocation) considerando as permissões necessárias.
+
+[iOS] Informação obtida através do [link](https://developer.apple.com/documentation/corelocation/).
+
+[Restrição] A ITP deve solicitar ao usuário a permissão para compartilhamento de sua localização. 
+Este campo poderá ser omitido caso o GPS esteja indisponível, isto é, sem sinal, ou em dispositivos sem o hardware necessário; ou caso o usuário negue o consentimento para coleta do dado.
+";geolocation;"localização do usuário, obtida com seu consentimento. [android] informação obtida através do [link](https: developers.google.com android reference com google android gms location fused location provider client#public abstract tasklocation getlastlocation) considerando as permissões necessárias. [i os] informação obtida através do [link](https: developer.apple.com documentation corelocation ). [restrição] a itp deve solicitar ao usuário a permissão para compartilhamento de sua localização. este campo poderá ser omitido caso o gps esteja indisponível, isto é, sem sinal, ou em dispositivos sem o hardware necessário; ou caso o usuário negue o consentimento para coleta do dado.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;isCallingProgress;boolean;;;"Indica chamada ativa no momento da solicitação.
+
+[Android] Informação obtida através do [link](https://developer.android.com/reference/android/media/AudioManager#getMode()).
+
+[iOS] Informação obtida através do [link](https://developer.apple.com/documentation/callkit/).
+
+[Restrição] Caso o sinal de risco esteja disponível (cliente permitiu que fosse coletado), o mesmo deverá ser enviado.
+";is calling progress;indica chamada ativa no momento da solicitação. [android] informação obtida através do [link](https: developer.android.com reference android media audio manager#get mode()). [i os] informação obtida através do [link](https: developer.apple.com documentation callkit ). [restrição] caso o sinal de risco esteja disponível (cliente permitiu que fosse coletado), o mesmo deverá ser enviado.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;isDevModeEnabled;boolean;;;Indica se o dispositivo está em modo de desenvolvedor.;is dev mode enabled;indica se o dispositivo está em modo de desenvolvedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;isMockGPS;boolean;;;"Indica se o dispositivo está usando um GPS falso. Deve ser enviado sempre que exista o campo geolocation com tipo COARSE ou FINE.
+
+[Android] Informação obtida através do [link](https://developer.android.com/reference/android/location/Location.html#isMock()) ou, para versões anteriores à 12, [link](https://developer.android.com/reference/android/location/Location.html#isFromMockProvider()).
+
+[iOS] Informação obtida através dos links: sourceInformation, [link](https://developer.apple.com/documentation/corelocation/cllocation/3861803-sourceinformation). isSimulatedBySoftware, [link](https://developer.apple.com/documentation/corelocation/cllocationsourceinformation/3861807-issimulatedbysoftware).
+";is mock gps;indica se o dispositivo está usando um gps falso. deve ser enviado sempre que exista o campo geolocation com tipo coarse ou fine. [android] informação obtida através do [link](https: developer.android.com reference android location location.html#is mock()) ou, para versões anteriores à 12, [link](https: developer.android.com reference android location location.html#is from mock provider()). [i os] informação obtida através dos links: source information, [link](https: developer.apple.com documentation corelocation cllocation 3861803 sourceinformation). is simulated by software, [link](https: developer.apple.com documentation corelocation cllocationsourceinformation 3861807 issimulatedbysoftware).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;isEmulated;boolean;;;Indica se o dispositivo é emulado ou real.;is emulated;indica se o dispositivo é emulado ou real.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;isMonkeyRunner;boolean;;;Indica o uso do MonkeyRunner.;is monkey runner;indica o uso do monkey runner.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;isCharging;boolean;;;"Indica se a bateria do dispositivo está sendo carregada.
+
+[Android] Informação obtida através do [link](https://developer.android.com/reference/android/os/BatteryManager).
+
+[iOS] Informações obtida através do [link](https://developer.apple.com/documentation/uikit/uidevice/1620045-batterymonitoringenabled/).
+";is charging;indica se a bateria do dispositivo está sendo carregada. [android] informação obtida através do [link](https: developer.android.com reference android os battery manager). [i os] informações obtida através do [link](https: developer.apple.com documentation uikit uidevice 1620045 batterymonitoringenabled ).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;antennaInformation;string;;;Indica em qual antena o dispositivo está conectado.;antenna information;indica em qual antena o dispositivo está conectado.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;isUsbConnected;boolean;;;Indica se o dispositivo está conectado a outro dispositivo via USB.;is usb connected;indica se o dispositivo está conectado a outro dispositivo via usb.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RiskSignalsConsentEdition;integrity;object;;;"Informa a integridade do dispositivo e app.  
+No Android, conforme documentação Play API Integrity - [Android](https://developer.android.com/google/play/integrity/overview?hl=pt-br).  
+No iOS, conforme documentação App Attest [iOS](https://developer.apple.com/documentation/devicecheck/establishing_your_app_s_integrity)
+";integrity;informa a integridade do dispositivo e app. no android, conforme documentação play api integrity [android](https: developer.android.com google play integrity overview?hl=pt br). no i os, conforme documentação app attest [i os](https: developer.apple.com documentation devicecheck establishing your app s integrity);https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreditorAccountConsent;ispb;string;;;"Deve ser preenchido com o ISPB (Identificador do Sistema de Pagamentos Brasileiros) do participante do SPI (Sistema de pagamentos instantâneos) somente com números.
+";ispb;deve ser preenchido com o ispb (identificador do sistema de pagamentos brasileiros) do participante do spi (sistema de pagamentos instantâneos) somente com números.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreditorAccountConsent;issuer;string;;;"Código da Agência emissora da conta sem dígito. 
+(Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, 
+no exercício de atividades da instituição, não podendo ser móvel ou transitória).
+
+[Restrição] Preenchimento obrigatório para os seguintes tipos de conta: CACC (CONTA_DEPOSITO_A_VISTA) e SVGS (CONTA_POUPANCA).
+";issuer;código da agência emissora da conta sem dígito. (agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória). [restrição] preenchimento obrigatório para os seguintes tipos de conta: cacc (conta deposito a vista) e svgs (conta poupanca).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreditorAccountConsent;number;string;;;"Deve ser preenchido com o número da conta transacional do usuário pagador, com dígito verificador (se este existir), 
+se houver valor alfanumérico, este deve ser convertido para 0.
+";number;deve ser preenchido com o número da conta transacional do usuário pagador, com dígito verificador (se este existir), se houver valor alfanumérico, este deve ser convertido para 0.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreditorAccountConsent;accountType;;;EnumAccountTypeConsents;;account type;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreditorAccount;ispb;string;;;"Deve ser preenchido com o ISPB (Identificador do Sistema de Pagamentos Brasileiros) do participante do SPI (Sistema de pagamentos instantâneos) somente com números.
+";ispb;deve ser preenchido com o ispb (identificador do sistema de pagamentos brasileiros) do participante do spi (sistema de pagamentos instantâneos) somente com números.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreditorAccount;issuer;string;;;"Código da Agência emissora da conta sem dígito. 
+(Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, 
+no exercício de atividades da instituição, não podendo ser móvel ou transitória).
+
+[Restrição] Preenchimento obrigatório para os seguintes tipos de conta: CACC (CONTA_DEPOSITO_A_VISTA) e SVGS (CONTA_POUPANCA).
+";issuer;código da agência emissora da conta sem dígito. (agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória). [restrição] preenchimento obrigatório para os seguintes tipos de conta: cacc (conta deposito a vista) e svgs (conta poupanca).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreditorAccount;number;string;;;"Deve ser preenchido com o número da conta transacional do usuário recebedor, com dígito verificador (se este existir),
+se houver valor alfanumérico, este deve ser convertido para 0.
+";number;deve ser preenchido com o número da conta transacional do usuário recebedor, com dígito verificador (se este existir), se houver valor alfanumérico, este deve ser convertido para 0.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;CreditorAccount;accountType;;;EnumAccountTypePayments;;account type;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;DebtorAccount;ispb;string;;;"Deve ser preenchido com o ISPB (Identificador do Sistema de Pagamentos Brasileiros) do participante do SPI (Sistema de pagamentos instantâneos) somente com números.
+";ispb;deve ser preenchido com o ispb (identificador do sistema de pagamentos brasileiros) do participante do spi (sistema de pagamentos instantâneos) somente com números.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;DebtorAccount;issuer;string;;;"Código da Agência emissora da conta sem dígito. 
+(Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, 
+no exercício de atividades da instituição, não podendo ser móvel ou transitória).
+
+[Restrição] Preenchimento obrigatório para os seguintes tipos de conta: CACC (CONTA_DEPOSITO_A_VISTA) e SVGS (CONTA_POUPANCA).
+";issuer;código da agência emissora da conta sem dígito. (agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória). [restrição] preenchimento obrigatório para os seguintes tipos de conta: cacc (conta deposito a vista) e svgs (conta poupanca).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;DebtorAccount;number;string;;;"Deve ser preenchido com o número da conta transacional do usuário pagador, com dígito verificador (se este existir), 
+se houver valor alfanumérico, este deve ser convertido para 0.
+";number;deve ser preenchido com o número da conta transacional do usuário pagador, com dígito verificador (se este existir), se houver valor alfanumérico, este deve ser convertido para 0.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;DebtorAccount;accountType;;;EnumAccountTypeConsents;;account type;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Rejection;rejectedBy;string;;;"Quem iniciou a solicitação de rejeição
+- INICIADORA
+- USUARIO
+- DETENTORA
+";rejected by;quem iniciou a solicitação de rejeição iniciadora usuario detentora;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Rejection;rejectedFrom;string;;;"Canal onde iniciou-se o processo de rejeição 
+- INICIADORA
+- DETENTORA
+";rejected from;canal onde iniciou se o processo de rejeição iniciadora detentora;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Rejection;rejectedAt;string;date-time;;Data e hora em que o consentimento foi rejeitado;rejected at;data e hora em que o consentimento foi rejeitado;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Rejection;reason;;;ConsentRejectionReason;;reason;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentRejection;status;string;;;"Estado atual do consentimento de longa duração
+";status;estado atual do consentimento de longa duração;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentRejection;rejection;object;;;"Objeto contendo as informações de rejeição dos consentimentos. 
+";rejection;objeto contendo as informações de rejeição dos consentimentos.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentRejectionReason;code;string;;;"Código indicador do motivo de rejeição.
+- NAO_INFORMADO
+- FALHA_INFRAESTRUTURA
+- TEMPO_EXPIRADO_AUTORIZACAO
+- REJEITADO_USUARIO
+- CONTAS_ORIGEM_DESTINO_IGUAIS
+- CONTA_NAO_PERMITE_PAGAMENTO
+- SALDO_INSUFICIENTE
+- VALOR_ACIMA_LIMITE
+- AUTENTICACAO_DIVERGENTE
+";code;código indicador do motivo de rejeição. nao informado falha infraestrutura tempo expirado autorizacao rejeitado usuario contas origem destino iguais conta nao permite pagamento saldo insuficiente valor acima limite autenticacao divergente;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentRejectionReason;detail;string;;;"Detalhe sobre o motivo de rejeição indicado no campo `/data/rejection/reason/code`
+- NAO_INFORMADO: Não informada pela detentora de conta;
+- FALHA_INFRAESTRUTURA: [Descrição de qual falha na infraestrutura inviabilizou o processamento];
+- TEMPO_EXPIRADO_AUTORIZACAO: Consentimento expirou antes que o usuário pudesse confirmá-lo;
+- REJEITADO_USUARIO: O usuário rejeitou a autorização do consentimento;
+- CONTAS_ORIGEM_DESTINO_IGUAIS: A conta selecionada é igual à conta destino e não permite realizar esse pagamento;
+- CONTA_NAO_PERMITE_PAGAMENTO: A conta selecionada é do tipo [salario/investimento/liquidação/outros] e não permite realizar esse pagamento;
+- SALDO_INSUFICIENTE: A conta selecionada não possui saldo suficiente para realizar o pagamento;
+- VALOR_ACIMA_LIMITE: O valor ultrapassa o limite estabelecido para permitir a realização de transações pelo cliente;
+- AUTENTICACAO_DIVERGENTE : Usuário autenticado no detentor diverge do usuário autenticado no iniciador;
+";detail;"detalhe sobre o motivo de rejeição indicado no campo ` data rejection reason code` nao informado: não informada pela detentora de conta; falha infraestrutura: [descrição de qual falha na infraestrutura inviabilizou o processamento]; tempo expirado autorizacao: consentimento expirou antes que o usuário pudesse confirmá lo; rejeitado usuario: o usuário rejeitou a autorização do consentimento; contas origem destino iguais: a conta selecionada é igual à conta destino e não permite realizar esse pagamento; conta nao permite pagamento: a conta selecionada é do tipo [salario investimento liquidação outros] e não permite realizar esse pagamento; saldo insuficiente: a conta selecionada não possui saldo suficiente para realizar o pagamento; valor acima limite: o valor ultrapassa o limite estabelecido para permitir a realização de transações pelo cliente; autenticacao divergente : usuário autenticado no detentor diverge do usuário autenticado no iniciador;";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RejectionReasonGet;code;;;EnumRejectionReasonCodeGet;;code;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RejectionReasonGet;detail;string;;;"Detalhe sobre o código identificador do motivo de rejeição.
+
+- SALDO_INSUFICIENTE: A conta selecionada não possui saldo suficiente para realizar o pagamento;
+- VALOR_ACIMA_LIMITE: Valida se o valor ultrapassa o limite estabelecido [na instituição (conta ou canal)/no arranjo] para permitir a realização de transações pelo cliente;
+- VALOR_INVALIDO: O valor enviado não é válido; 
+- NAO_INFORMADO: Não reportado/identificado pela instituição detentora de conta;
+- PAGAMENTO_DIVERGENTE_CONSENTIMENTO: Dados do pagamento divergentes dos dados do consentimento;
+- PAGAMENTO_RECUSADO_DETENTORA: [descrição do motivo de recusa];
+- PAGAMENTO_RECUSADO_SPI: [código de erro conforme tabela de domínios reason PACS.002];
+- CONSENTIMENTO_INVALIDO: Consentimento inválido (em status final);
+- FALHA_INFRAESTRUTURA_SPI: Indica uma falha no Sistema de Pagamentos Instantâneos (SPI);
+- FALHA_INFRAESTRUTURA_ICP: Indica uma falha na Infraestrutura de Chaves Públicas (ICP);
+- FALHA_INFRAESTRUTURA_PSP_RECEBEDOR: Indica uma falha na infraestrutura do Prestador de Serviço de Pagamento (PSP) que recebe o pagamento;
+- FALHA_INFRAESTRUTURA_DETENTORA: indica uma falha na infraestrutura da instituição detentora das informações ou recursos;
+- LIMITE_PERIODO_VALOR_EXCEDIDO – A transação não pode ser realizada pois o valor parametrizado no consentimento foi excedido.
+- LIMITE_PERIODO_QUANTIDADE_EXCEDIDO – A transação não pode ser realizada pois a quantidade parametrizada no consentimento foi excedida.
+- TITULARIDADE_INCONSISTENTE: Conta atualmente não associada ao CPF/CNPJ do consentimento de longa duração.
+- LIMITE_VALOR_TOTAL_CONSENTIMENTO_EXCEDIDO: O valor da transação excede o limite global do consentimento.
+- LIMITE_VALOR_TRANSACAO_CONSENTIMENTO_EXCEDIDO: O valor da transação ultrapassar o limite de valor por transação.
+- CONSENTIMENTO_REVOGADO: O pagamento estava associado a um consentimento que foi revogado.
+- LIMITE_TENTATIVAS_EXCEDIDO: O máximo de tentativas de liquidação permitidas pelo arranjo foi atingido
+- FORA_PRAZO_PERMITIDO: O horário ou período da requisição não permite o agendamento pelo detentor.
+- DETALHE_TENTATIVA_INVALIDO: O parâmetro [nome_do(s)_campo(s)] inseridos para a nova tentativa de pagamento não condizem com o pagamento original que falhou e não são permitidos na nova tentativa de pagamento.
+- DETALHE_PAGAMENTO_INVALIDO: Valida se determinado parâmetro informado obedece as regras de negócio
+";detail;"detalhe sobre o código identificador do motivo de rejeição. saldo insuficiente: a conta selecionada não possui saldo suficiente para realizar o pagamento; valor acima limite: valida se o valor ultrapassa o limite estabelecido [na instituição (conta ou canal) no arranjo] para permitir a realização de transações pelo cliente; valor invalido: o valor enviado não é válido; nao informado: não reportado identificado pela instituição detentora de conta; pagamento divergente consentimento: dados do pagamento divergentes dos dados do consentimento; pagamento recusado detentora: [descrição do motivo de recusa]; pagamento recusado spi: [código de erro conforme tabela de domínios reason pacs.002]; consentimento invalido: consentimento inválido (em status final); falha infraestrutura spi: indica uma falha no sistema de pagamentos instantâneos (spi); falha infraestrutura icp: indica uma falha na infraestrutura de chaves públicas (icp); falha infraestrutura psp recebedor: indica uma falha na infraestrutura do prestador de serviço de pagamento (psp) que recebe o pagamento; falha infraestrutura detentora: indica uma falha na infraestrutura da instituição detentora das informações ou recursos; limite periodo valor excedido – a transação não pode ser realizada pois o valor parametrizado no consentimento foi excedido. limite periodo quantidade excedido – a transação não pode ser realizada pois a quantidade parametrizada no consentimento foi excedida. titularidade inconsistente: conta atualmente não associada ao cpf cnpj do consentimento de longa duração. limite valor total consentimento excedido: o valor da transação excede o limite global do consentimento. limite valor transacao consentimento excedido: o valor da transação ultrapassar o limite de valor por transação. consentimento revogado: o pagamento estava associado a um consentimento que foi revogado. limite tentativas excedido: o máximo de tentativas de liquidação permitidas pelo arranjo foi atingido fora prazo permitido: o horário ou período da requisição não permite o agendamento pelo detentor. detalhe tentativa invalido: o parâmetro [nome do(s) campo(s)] inseridos para a nova tentativa de pagamento não condizem com o pagamento original que falhou e não são permitidos na nova tentativa de pagamento. detalhe pagamento invalido: valida se determinado parâmetro informado obedece as regras de negócio";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RejectionReason;code;;;EnumRejectionReasonCode;;code;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;RejectionReason;detail;string;;;"Detalhe sobre o código identificador do motivo de rejeição.
+
+- SALDO_INSUFICIENTE: A conta selecionada não possui saldo suficiente para realizar o pagamento;
+- VALOR_ACIMA_LIMITE: Valida se o valor ultrapassa o limite estabelecido [na instituição (conta ou canal)/no arranjo] para permitir a realização de transações pelo cliente;
+- VALOR_INVALIDO: O valor enviado não é válido; 
+- NAO_INFORMADO: Não reportado/identificado pela instituição detentora de conta;
+- PAGAMENTO_DIVERGENTE_CONSENTIMENTO: Dados do pagamento divergentes dos dados do consentimento;
+- PAGAMENTO_RECUSADO_DETENTORA: [descrição do motivo de recusa];
+- PAGAMENTO_RECUSADO_SPI: [código de erro conforme tabela de domínios reason PACS.002];
+- CONSENTIMENTO_INVALIDO: Consentimento inválido (em status final);
+- FALHA_INFRAESTRUTURA_SPI: Indica uma falha no Sistema de Pagamentos Instantâneos (SPI);
+- FALHA_INFRAESTRUTURA_ICP: Indica uma falha na Infraestrutura de Chaves Públicas (ICP);
+- FALHA_INFRAESTRUTURA_PSP_RECEBEDOR: Indica uma falha na infraestrutura do Prestador de Serviço de Pagamento (PSP) que recebe o pagamento;
+- FALHA_INFRAESTRUTURA_DETENTORA: indica uma falha na infraestrutura da instituição detentora das informações ou recursos;
+- TITULARIDADE_INCONSISTENTE: Conta atualmente não associada ao CPF/CNPJ do consentimento de longa duração
+- LIMITE_PERIODO_VALOR_EXCEDIDO: A transação não pode ser realizada pois o valor parametrizado no consentimento foi excedido.
+- LIMITE_PERIODO_QUANTIDADE_EXCEDIDO: A transação não pode ser realizada pois a quantidade parametrizada no consentimento foi excedida.
+- LIMITE_VALOR_TOTAL_CONSENTIMENTO_EXCEDIDO: O valor da transação excede o limite global do consentimento.       
+- LIMITE_VALOR_TRANSACAO_CONSENTIMENTO_EXCEDIDO: O valor da transação ultrapassar o limite de valor por transação.
+- LIMITE_TENTATIVAS_EXCEDIDO: O máximo de tentativas de liquidação permitidas pelo arranjo foi atingido.
+- CONSENTIMENTO_REVOGADO: O pagamento estava associado a um consentimento que foi revogado.
+- FORA_PRAZO_PERMITIDO: O horário ou período da requisição não permite o agendamento pelo detentor.
+- DETALHE_TENTATIVA_INVALIDO: O parâmetro [nome_do(s)_campo(s)] inseridos para a nova tentativa de pagamento não condizem com o pagamento original que falhou e não são permitidos na nova tentativa de pagamento.
+- DETALHE_PAGAMENTO_INVALIDO: Valida se determinado parâmetro informado obedece as regras de negócio.
+";detail;"detalhe sobre o código identificador do motivo de rejeição. saldo insuficiente: a conta selecionada não possui saldo suficiente para realizar o pagamento; valor acima limite: valida se o valor ultrapassa o limite estabelecido [na instituição (conta ou canal) no arranjo] para permitir a realização de transações pelo cliente; valor invalido: o valor enviado não é válido; nao informado: não reportado identificado pela instituição detentora de conta; pagamento divergente consentimento: dados do pagamento divergentes dos dados do consentimento; pagamento recusado detentora: [descrição do motivo de recusa]; pagamento recusado spi: [código de erro conforme tabela de domínios reason pacs.002]; consentimento invalido: consentimento inválido (em status final); falha infraestrutura spi: indica uma falha no sistema de pagamentos instantâneos (spi); falha infraestrutura icp: indica uma falha na infraestrutura de chaves públicas (icp); falha infraestrutura psp recebedor: indica uma falha na infraestrutura do prestador de serviço de pagamento (psp) que recebe o pagamento; falha infraestrutura detentora: indica uma falha na infraestrutura da instituição detentora das informações ou recursos; titularidade inconsistente: conta atualmente não associada ao cpf cnpj do consentimento de longa duração limite periodo valor excedido: a transação não pode ser realizada pois o valor parametrizado no consentimento foi excedido. limite periodo quantidade excedido: a transação não pode ser realizada pois a quantidade parametrizada no consentimento foi excedida. limite valor total consentimento excedido: o valor da transação excede o limite global do consentimento. limite valor transacao consentimento excedido: o valor da transação ultrapassar o limite de valor por transação. limite tentativas excedido: o máximo de tentativas de liquidação permitidas pelo arranjo foi atingido. consentimento revogado: o pagamento estava associado a um consentimento que foi revogado. fora prazo permitido: o horário ou período da requisição não permite o agendamento pelo detentor. detalhe tentativa invalido: o parâmetro [nome do(s) campo(s)] inseridos para a nova tentativa de pagamento não condizem com o pagamento original que falhou e não são permitidos na nova tentativa de pagamento. detalhe pagamento invalido: valida se determinado parâmetro informado obedece as regras de negócio.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentEdition;riskSignals;;;RiskSignalsConsentEdition;;risk signals;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentEdition;creditors;array;;;;creditors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentEdition;expirationDateTime;string;date-time;;"Data e hora em que o consentimento deve deixar de ser válido. Uma string com data e hora conforme especificação [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339), sempre com a utilização de timezone UTC(UTC time format). 
+
+[Restrição] Caso esse campo não seja enviado, a instituição detentora deve considerar a extensão do prazo para um período indeterminado; ou; 
+
+Caso enviado, esse campo deve ser, no mínimo, D, sendo D o dia da requisição e o horário deve ser às 23:59:59 (UTC).
+";expiration date time;"data e hora em que o consentimento deve deixar de ser válido. uma string com data e hora conforme especificação [rfc 3339](https: datatracker.ietf.org doc html rfc3339), sempre com a utilização de timezone utc(utc time format). [restrição] caso esse campo não seja enviado, a instituição detentora deve considerar a extensão do prazo para um período indeterminado; ou; caso enviado, esse campo deve ser, no mínimo, d, sendo d o dia da requisição e o horário deve ser às 23:59:59 (utc).";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentEdition;recurringConfiguration;object;;;Campo destinado a configuração dos diferentes produtos de pagamentos recorrentes.;recurring configuration;campo destinado a configuração dos diferentes produtos de pagamentos recorrentes.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentEdition;loggedUser;object;;;"Usuário (pessoa natural) que encontra-se logado na instituição Iniciadora de Pagamento.
+
+[Restrição] Objeto de envio obrigatório para a edição dos parâmetros do consentimento, exceto para o caso de edição exclusiva do campo “/data/creditors/name”.
+";logged user;usuário (pessoa natural) que encontra se logado na instituição iniciadora de pagamento. [restrição] objeto de envio obrigatório para a edição dos parâmetros do consentimento, exceto para o caso de edição exclusiva do campo “ data creditors name”.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentEdition;businessEntity;object;;;"Usuário (pessoa jurídica) que encontra-se logado na instituição Iniciadora de Pagamento. 
+
+[Restrição] Preenchimento obrigatório se usuário logado na instituição Iniciadora de Pagamento for um CNPJ (pessoa jurídica).
+";business entity;usuário (pessoa jurídica) que encontra se logado na instituição iniciadora de pagamento. [restrição] preenchimento obrigatório se usuário logado na instituição iniciadora de pagamento for um cnpj (pessoa jurídica).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentRevocation;status;string;;;"Estado atual do consentimento de longa duração
+";status;estado atual do consentimento de longa duração;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentRevocation;revocation;object;;;Objeto contendo as informações de revogação dos consentimentos de longa duração.;revocation;objeto contendo as informações de revogação dos consentimentos de longa duração.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentRevokedReason;code;string;;;"Código indicador do motivo de revogação.
+- REVOGADO_RECEBEDOR
+- REVOGADO_USUARIO
+- NAO_INFORMADO
+";code;código indicador do motivo de revogação. revogado recebedor revogado usuario nao informado;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ConsentRevokedReason;detail;string;;;"Detalhe sobre o motivo de revogação indicado no campo `/data/revocation/reason/code`.
+- NAO_INFORMADO: Não informada pela detentora de conta;
+- REVOGADO_USUARIO: O usuário pagador revogou a recorrência do consentimento;
+- REVOGADO_RECEBEDOR: O usuário recebedor revogou a recorrência do consentimento.
+";detail;"detalhe sobre o motivo de revogação indicado no campo ` data revocation reason code`. nao informado: não informada pela detentora de conta; revogado usuario: o usuário pagador revogou a recorrência do consentimento; revogado recebedor: o usuário recebedor revogou a recorrência do consentimento.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;AutomaticRequest;automatic;object;;;Definição da configuração de recorrência para pagamentos automáticos;automatic;definição da configuração de recorrência para pagamentos automáticos;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Automatic;automatic;object;;;Definição da configuração de recorrência para pagamentos automáticos;automatic;definição da configuração de recorrência para pagamentos automáticos;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ContractDebtor;name;string;;;Em caso de pessoa natural deve ser informado o nome completo do titular devedor do contrato.;name;em caso de pessoa natural deve ser informado o nome completo do titular devedor do contrato.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ContractDebtor;document;object;;;;document;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;FirstPayment;type;;;EnumPaymentType;;type;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;FirstPayment;date;string;date;;"Define a data alvo da liquidação do pagamento.
+O fuso horário de Brasília deve ser utilizado para criação e racionalização sobre os dados deste campo.
+";date;define a data alvo da liquidação do pagamento. o fuso horário de brasília deve ser utilizado para criação e racionalização sobre os dados deste campo.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;FirstPayment;currency;string;;;"Código da moeda nacional segundo modelo ISO-4217, ou seja, 'BRL'.
+Todos os valores monetários informados estão representados com a moeda vigente do Brasil.
+";currency;código da moeda nacional segundo modelo iso 4217, ou seja, 'brl'. todos os valores monetários informados estão representados com a moeda vigente do brasil.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;FirstPayment;amount;string;;;"Valor da transação com 2 casas decimais.
+";amount;valor da transação com 2 casas decimais.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;FirstPayment;remittanceInformation;string;;;"Deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.
+";remittance information;deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;FirstPayment;creditorAccount;;;CreditorAccountConsent;;creditor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;SweepingRequest;sweeping;object;;;Definição da configuração de recorrência para transferências automáticas de fundos.;sweeping;definição da configuração de recorrência para transferências automáticas de fundos.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Sweeping;sweeping;object;;;Definição da configuração de recorrência para transferências automáticas de fundos.;sweeping;definição da configuração de recorrência para transferências automáticas de fundos.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PeriodicLimits;day;;;Day;;day;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PeriodicLimits;week;;;Week;;week;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PeriodicLimits;month;;;Month;;month;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PeriodicLimits;year;;;Year;;year;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Vrp;vrp;object;;;Definição da configuração de recorrência para realização de transações de valores variáveis;vrp;definição da configuração de recorrência para realização de transações de valores variáveis;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Day;quantityLimit;integer;;;Quantidade limite de transações permitidas para ocorrer durante um dia.;quantity limit;quantidade limite de transações permitidas para ocorrer durante um dia.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Day;transactionLimit;string;;;Valor máximo a ser transacionado diariamente.;transaction limit;valor máximo a ser transacionado diariamente.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Week;quantityLimit;integer;;;Quantidade limite de transações permitidas para ocorrer durante uma semana.;quantity limit;quantidade limite de transações permitidas para ocorrer durante uma semana.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Week;transactionLimit;string;;;Valor máximo a ser transacionado semanalmente.;transaction limit;valor máximo a ser transacionado semanalmente.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Month;quantityLimit;integer;;;Quantidade limite de transações permitidas para ocorrer durante um mês.;quantity limit;quantidade limite de transações permitidas para ocorrer durante um mês.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Month;transactionLimit;string;;;Valor máximo a ser transacionado mensalmente.;transaction limit;valor máximo a ser transacionado mensalmente.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Year;quantityLimit;integer;;;Quantidade limite de transações permitidas para ocorrer durante um ano.;quantity limit;quantidade limite de transações permitidas para ocorrer durante um ano.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Year;transactionLimit;string;;;Valor máximo a ser transacionado por um ano, a partir da data definida no campo `/data/startDateTime`.;transaction limit;valor máximo a ser transacionado por um ano, a partir da data definida no campo ` data start date time`.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;LoggedUser;document;object;;;;document;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;Meta;requestDateTime;string;date-time;;Data e hora da consulta, conforme especificação [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339), formato UTC.;request date time;data e hora da consulta, conforme especificação [rfc 3339](https: datatracker.ietf.org doc html rfc3339), formato utc.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;LinkSingle;self;string;url;;URI completo que gerou a resposta atual.;self;uri completo que gerou a resposta atual.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PaymentPix;amount;string;;;"Valor da transação com 2 casas decimais.
+";amount;valor da transação com 2 casas decimais.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PaymentPix;currency;string;;;"Código da moeda nacional segundo modelo ISO-4217, ou seja, 'BRL'. Todos os valores monetários informados estão representados com a moeda vigente do Brasil.
+";currency;código da moeda nacional segundo modelo iso 4217, ou seja, 'brl'. todos os valores monetários informados estão representados com a moeda vigente do brasil.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PatchPixPayment;data;;;PatchPixPaymentData;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PatchPixPaymentData;status;;;EnumPaymentCancellationStatusType;;status;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PatchPixPaymentData;cancellation;object;;;"Informações gerais sobre o cancelamento.
+";cancellation;informações gerais sobre o cancelamento.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PixPaymentCancellation;reason;;;EnumPaymentCancellationReasonType;;reason;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PixPaymentCancellation;cancelledFrom;;;EnumPaymentCancellationFromType;;cancelled from;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PixPaymentCancellation;cancelledAt;string;date-time;;Data e hora que foi realizado o cancelamento, conforme especificação [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339), formato UTC.;cancelled at;data e hora que foi realizado o cancelamento, conforme especificação [rfc 3339](https: datatracker.ietf.org doc html rfc3339), formato utc.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PixPaymentCancellation;cancelledBy;object;;;Informação relacionada ao usuário pagador que solicitou o cancelamento do pagamento.;cancelled by;informação relacionada ao usuário pagador que solicitou o cancelamento do pagamento.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseError;errors;array;;;;errors;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseError;meta;object;;;Meta informações referente à API requisitada.;meta;meta informações referente à api requisitada.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponsePostRecurringConsent;data;object;;;Objeto contendo as informações de consentimento para a iniciação de pagamento individual.;data;objeto contendo as informações de consentimento para a iniciação de pagamento individual.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponsePostRecurringConsent;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponsePostRecurringConsent;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringConsent;data;object;;;Objeto contendo as informações de consentimento para a iniciação de pagamento individual.;data;objeto contendo as informações de consentimento para a iniciação de pagamento individual.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringConsent;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringConsent;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringConsentPatch;data;object;;;Objeto contendo as informações de consentimento para a iniciação de pagamento individual.;data;objeto contendo as informações de consentimento para a iniciação de pagamento individual.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringConsentPatch;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringConsentPatch;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;PatchRecurringConsent;data;;;;Objeto contendo as informações de rejeição, revogação e edição dos consentimentos;data;objeto contendo as informações de rejeição, revogação e edição dos consentimentos;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsIdPost;data;;;ResponseRecurringPaymentsPostData;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsIdPost;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsIdPost;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsIdRead;data;;;ResponseRecurringPaymentsDataRead;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsIdRead;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsIdRead;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsIdPatch;data;;;ResponseRecurringPaymentsDataPatch;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsIdPatch;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsIdPatch;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPixPayment;data;;;ResponseRecurringPixData;;data;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPixPayment;links;;;LinkSingle;;links;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPixPayment;meta;;;Meta;;meta;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;recurringPaymentId;string;;;"Código ou identificador único informado pela instituição detentora da conta para representar a iniciação de pagamento. O `recurringPaymentId` deve ser diferente do `endToEndId`. 
+Este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.
+";recurring payment id;código ou identificador único informado pela instituição detentora da conta para representar a iniciação de pagamento. o `recurring payment id` deve ser diferente do `end to end id`. este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;recurringConsentId;string;;;"Identificador único do consentimento criado para a iniciação de pagamento solicitada. Deverá ser um URN - Uniform Resource Name.
+Um URN, conforme definido na [RFC8141](https://tools.ietf.org/html/rfc8141) é um Uniform Resource
+Identifier - URI - que é atribuído sob o URI scheme ""urn"" e um namespace URN específico, com a intenção de que o URN
+seja um identificador de recurso persistente e independente da localização.
+Considerando a string urn:bancoex:C1DD33123 como exemplo para `recurringConsentId` temos:
+- o namespace(urn)
+- o identificador associado ao namespace da instituição transmissora (bancoex)
+- o identificador específico dentro do namespace (C1DD33123).
+Informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [RFC8141](https://tools.ietf.org/html/rfc8141).
+
+[Restrição] Este campo é de preenchimento obrigatório quando o valor do campo authorisationFlow for igual a FIDO_FLOW.
+";recurring consent id;"identificador único do consentimento criado para a iniciação de pagamento solicitada. deverá ser um urn uniform resource name. um urn, conforme definido na [rfc8141](https: tools.ietf.org html rfc8141) é um uniform resource identifier uri que é atribuído sob o uri scheme ""urn"" e um namespace urn específico, com a intenção de que o urn seja um identificador de recurso persistente e independente da localização. considerando a string urn:bancoex:c1 dd33123 como exemplo para `recurring consent id` temos: o namespace(urn) o identificador associado ao namespace da instituição transmissora (bancoex) o identificador específico dentro do namespace (c1 dd33123). informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [rfc8141](https: tools.ietf.org html rfc8141). [restrição] este campo é de preenchimento obrigatório quando o valor do campo authorisation flow for igual a fido flow.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;endToEndId;;;EndToEndId;;end to end id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;date;string;;;Data em que o pagamento será realizado. Uma string com a utilização de timezone UTC-3 (UTC time format).;date;data em que o pagamento será realizado. uma string com a utilização de timezone utc 3 (utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;creationDateTime;string;date-time;;"Data e hora em que o pagamento foi criado. 
+Uma string com data e hora conforme especificação [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339), 
+sempre com a utilização de timezone UTC(UTC time format).
+";creation date time;data e hora em que o pagamento foi criado. uma string com data e hora conforme especificação [rfc 3339](https: datatracker.ietf.org doc html rfc3339), sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;statusUpdateDateTime;string;date-time;;"Data e hora em que o pagamento teve o status atualizado. 
+Uma string com data e hora conforme especificação [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339), 
+sempre com a utilização de timezone UTC(UTC time format).
+";status update date time;data e hora em que o pagamento teve o status atualizado. uma string com data e hora conforme especificação [rfc 3339](https: datatracker.ietf.org doc html rfc3339), sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;status;;;EnumPaymentStatusType;;status;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;rejectionReason;;;RejectionReason;;rejection reason;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;cnpjInitiator;string;;;CNPJ do Iniciador de Pagamento devidamente habilitado para a prestação de Serviço de Iniciação no Pix.;cnpj initiator;cnpj do iniciador de pagamento devidamente habilitado para a prestação de serviço de iniciação no pix.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;payment;;;PaymentPix;;payment;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;remittanceInformation;string;;;"Deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.
+";remittance information;deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;creditorAccount;;;CreditorAccount;;creditor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;debtorAccount;;;DebtorAccount;;debtor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;cancellation;;;PixPaymentCancellation;;cancellation;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;authorisationFlow;string;;;"Campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado.
+
+[Restrição] Se CIBA ou FIDO, preenchimento obrigatório. Caso o campo não esteja presente no payload, subentende-se que o fluxo de autorização utilizado é o HYBRID_FLOW.
+";authorisation flow;campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado. [restrição] se ciba ou fido, preenchimento obrigatório. caso o campo não esteja presente no payload, subentende se que o fluxo de autorização utilizado é o hybrid flow.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;localInstrument;string;;;"Especifica a forma de iniciação do pagamento
+- MANU - Inserção manual de dados da conta transacional
+- DICT - Inserção manual de chave Pix
+- INIC - Indica que o recebedor (creditor) contratou o Iniciador de Pagamentos especificamente para realizar iniciações de pagamento em que o beneficiário é previamente conhecido
+
+[Restrição] Caso consentimento associado a tentativa de pagamento seja para Pix automático (objeto “automatic” selecionado no oneOf do campo ""/data/recurringConfiguration""), apenas o método MANU é permitido.
+";local instrument;"especifica a forma de iniciação do pagamento manu inserção manual de dados da conta transacional dict inserção manual de chave pix inic indica que o recebedor (creditor) contratou o iniciador de pagamentos especificamente para realizar iniciações de pagamento em que o beneficiário é previamente conhecido [restrição] caso consentimento associado a tentativa de pagamento seja para pix automático (objeto “automatic” selecionado no one of do campo "" data recurring configuration""), apenas o método manu é permitido.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;proxy;string;;;"Chave cadastrada no DICT pertencente ao recebedor. Os tipos de chaves podem ser: telefone, e-mail, cpf/cnpj ou chave aleatória. 
+No caso de telefone celular deve ser informado no padrão E.1641. Para e-mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. 
+No caso de CPF deverá ser informado com 11 números, sem pontos ou traços. Para o caso de CNPJ deverá ser informado com 14 números, sem pontos ou traços. 
+No caso de chave aleatória deve ser informado o UUID gerado pelo DICT, conforme formato especificado na [RFC4122](https://tools.ietf.org/html/rfc4122).
+
+[Restrição] Se localInstrument for igual a DICT ou INIC, o campo proxy deve ser preenchido.
+
+[Restrição] Se informado, a detentora da conta deve validar o proxy no DICT (quando localInstrument for igual a DICT) e validar o objeto creditorAccount. Ação opcional caso o localInstrument for igual a INIC
+
+[Restrição] Caso o campo “/data/localInstrument” seja enviado como “MANU”, o campo “/data/proxy” não deve ser informado
+";proxy;chave cadastrada no dict pertencente ao recebedor. os tipos de chaves podem ser: telefone, e mail, cpf cnpj ou chave aleatória. no caso de telefone celular deve ser informado no padrão e.1641. para e mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. no caso de cpf deverá ser informado com 11 números, sem pontos ou traços. para o caso de cnpj deverá ser informado com 14 números, sem pontos ou traços. no caso de chave aleatória deve ser informado o uuid gerado pelo dict, conforme formato especificado na [rfc4122](https: tools.ietf.org html rfc4122). [restrição] se local instrument for igual a dict ou inic, o campo proxy deve ser preenchido. [restrição] se informado, a detentora da conta deve validar o proxy no dict (quando local instrument for igual a dict) e validar o objeto creditor account. ação opcional caso o local instrument for igual a inic [restrição] caso o campo “ data local instrument” seja enviado como “manu”, o campo “ data proxy” não deve ser informado;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;transactionIdentification;string;;;"Trata-se de um identificador de transação que deve ser retransmitido intacto pelo PSP do pagador ao gerar a ordem de pagamento. 
+Essa informação permitirá ao recebedor identificar e correlacionar a transferência, quando recebida, com a apresentação das instruções ao pagador. 
+Os caracteres permitidos no contexto do Pix para o campo txid (EMV 62-05) são:Letras minúsculas, de 'a' a 'z' Letras maiúsculas, de 'A' a 'z' Dígitos decimais, de '0' a '9'.
+
+[Restrição] Preenchimento condicional de acordo com o conteúdo do campo “localInstrument”:
+
+MANU - O campo transactionIdentification não deve ser preenchido;  
+DICT - O campo transactionIdentification não deve ser preenchido;  
+INIC - O campo transactionIdentification deve ser preenchido obrigatoriamente e deve conter até 25 caracteres alfanuméricos ([a-z|A-Z|0-9]).
+";transaction identification;"trata se de um identificador de transação que deve ser retransmitido intacto pelo psp do pagador ao gerar a ordem de pagamento. essa informação permitirá ao recebedor identificar e correlacionar a transferência, quando recebida, com a apresentação das instruções ao pagador. os caracteres permitidos no contexto do pix para o campo txid (emv 62 05) são:letras minúsculas, de 'a' a 'z' letras maiúsculas, de 'a' a 'z' dígitos decimais, de '0' a '9'. [restrição] preenchimento condicional de acordo com o conteúdo do campo “local instrument”: manu o campo transaction identification não deve ser preenchido; dict o campo transaction identification não deve ser preenchido; inic o campo transaction identification deve ser preenchido obrigatoriamente e deve conter até 25 caracteres alfanuméricos ([a z|a z|0 9]).";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;document;object;;;Informações do documento identificador do recebedor da transação.;document;informações do documento identificador do recebedor da transação.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;originalRecurringPaymentId;;;originalRecurringPaymentId;;original recurring payment id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsPostData;paymentReference;string;;;"[Restrição]
+Campo de preenchimento obrigatório caso seja um pagamento de Pix automático, caso não respeitado, a instituição detentora deve retornar erro HTTP 422 com o código DETALHE_PAGAMENTO_INVALIDO.
+
+- Primeiro pagamento: Se for o pagamento inicial especificado em “/data/firstPayment”, preencha o campo com a string fixa “zero”.
+- Semanal: Preencha com W$numSemana-$ano, onde $numSemana representa o número da semana no ano. Exemplo: ""W50-2024"".
+- Mensal: Use M$mês-$ano, onde $mês representa o mês com dois dígitos. Exemplo: ""M09-2024"".
+- Trimestral: Utilize Q$trimestre-$ano, onde $trimestre indica o trimestre do ano (1 a 4).
+  - Janeiro a Março: Q1-$ano (ex.: ""Q1-2024"").
+  - Abril a Junho: Q2-$ano (ex.: ""Q2-2024"").
+  - Julho a Setembro: Q3-$ano (ex.: ""Q3-2024"").
+  - Outubro a Dezembro: Q4-$ano (ex.: ""Q4-2024"").
+- Semestral: Utilize $semestre-$ano, onde $semestre indica o semestre do ano (1 para janeiro a junho e 2 para julho a dezembro).
+  - Janeiro a Junho: S1-$ano (ex.: ""S1-2024"").
+  - Julho a Dezembro: S2-$ano (ex.: ""S2-2024"").
+- Anual: Use Y$ano, apenas com o ano. Exemplo: ""Y2024"".
+  - Exemplo de Formatos:
+    - Primeiro pagamento: ""zero""
+    - Semanal: ""W50-2024""
+    - Mensal: ""M09-2024""
+    - Trimestral: ""Q3-2024""
+    - Semestral: ""S2-2024""
+    - Anual: ""Y2024""
+";payment reference;"[restrição] campo de preenchimento obrigatório caso seja um pagamento de pix automático, caso não respeitado, a instituição detentora deve retornar erro http 422 com o código detalhe pagamento invalido. primeiro pagamento: se for o pagamento inicial especificado em “ data first payment”, preencha o campo com a string fixa “zero”. semanal: preencha com w$num semana $ano, onde $num semana representa o número da semana no ano. exemplo: ""w50 2024"". mensal: use m$mês $ano, onde $mês representa o mês com dois dígitos. exemplo: ""m09 2024"". trimestral: utilize q$trimestre $ano, onde $trimestre indica o trimestre do ano (1 a 4). janeiro a março: q1 $ano (ex.: ""q1 2024""). abril a junho: q2 $ano (ex.: ""q2 2024""). julho a setembro: q3 $ano (ex.: ""q3 2024""). outubro a dezembro: q4 $ano (ex.: ""q4 2024""). semestral: utilize $semestre $ano, onde $semestre indica o semestre do ano (1 para janeiro a junho e 2 para julho a dezembro). janeiro a junho: s1 $ano (ex.: ""s1 2024""). julho a dezembro: s2 $ano (ex.: ""s2 2024""). anual: use y$ano, apenas com o ano. exemplo: ""y2024"". exemplo de formatos: primeiro pagamento: ""zero"" semanal: ""w50 2024"" mensal: ""m09 2024"" trimestral: ""q3 2024"" semestral: ""s2 2024"" anual: ""y2024""";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;recurringPaymentId;string;;;"Código ou identificador único informado pela instituição detentora da conta para representar a iniciação de pagamento. O `recurringPaymentId` deve ser diferente do `endToEndId`. 
+Este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.
+";recurring payment id;código ou identificador único informado pela instituição detentora da conta para representar a iniciação de pagamento. o `recurring payment id` deve ser diferente do `end to end id`. este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;recurringConsentId;string;;;"Identificador único do consentimento criado para a iniciação de pagamento solicitada. Deverá ser um URN - Uniform Resource Name.
+Um URN, conforme definido na [RFC8141](https://tools.ietf.org/html/rfc8141) é um Uniform Resource
+Identifier - URI - que é atribuído sob o URI scheme ""urn"" e um namespace URN específico, com a intenção de que o URN
+seja um identificador de recurso persistente e independente da localização.
+Considerando a string urn:bancoex:C1DD33123 como exemplo para `recurringConsentId` temos:
+- o namespace(urn)
+- o identificador associado ao namespace da instituição transmissora (bancoex)
+- o identificador específico dentro do namespace (C1DD33123).
+Informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [RFC8141](https://tools.ietf.org/html/rfc8141).
+
+[Restrição] Este campo é de preenchimento obrigatório quando o valor do campo authorisationFlow for igual a FIDO_FLOW.
+";recurring consent id;"identificador único do consentimento criado para a iniciação de pagamento solicitada. deverá ser um urn uniform resource name. um urn, conforme definido na [rfc8141](https: tools.ietf.org html rfc8141) é um uniform resource identifier uri que é atribuído sob o uri scheme ""urn"" e um namespace urn específico, com a intenção de que o urn seja um identificador de recurso persistente e independente da localização. considerando a string urn:bancoex:c1 dd33123 como exemplo para `recurring consent id` temos: o namespace(urn) o identificador associado ao namespace da instituição transmissora (bancoex) o identificador específico dentro do namespace (c1 dd33123). informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [rfc8141](https: tools.ietf.org html rfc8141). [restrição] este campo é de preenchimento obrigatório quando o valor do campo authorisation flow for igual a fido flow.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;endToEndId;;;EndToEndId;;end to end id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;date;string;;;Data em que o pagamento será realizado. Uma string com a utilização de timezone UTC-3 (UTC time format).;date;data em que o pagamento será realizado. uma string com a utilização de timezone utc 3 (utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;creationDateTime;string;date-time;;"Data e hora em que o pagamento foi criado. 
+Uma string com data e hora conforme especificação [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339), 
+sempre com a utilização de timezone UTC(UTC time format).
+";creation date time;data e hora em que o pagamento foi criado. uma string com data e hora conforme especificação [rfc 3339](https: datatracker.ietf.org doc html rfc3339), sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;statusUpdateDateTime;string;date-time;;"Data e hora em que o pagamento teve o status atualizado. 
+Uma string com data e hora conforme especificação [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339), 
+sempre com a utilização de timezone UTC(UTC time format).
+";status update date time;data e hora em que o pagamento teve o status atualizado. uma string com data e hora conforme especificação [rfc 3339](https: datatracker.ietf.org doc html rfc3339), sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;status;;;EnumPaymentStatusType;;status;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;rejectionReason;;;RejectionReason;;rejection reason;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;cnpjInitiator;string;;;CNPJ do Iniciador de Pagamento devidamente habilitado para a prestação de Serviço de Iniciação no Pix.;cnpj initiator;cnpj do iniciador de pagamento devidamente habilitado para a prestação de serviço de iniciação no pix.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;payment;;;PaymentPix;;payment;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;remittanceInformation;string;;;"Deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.
+";remittance information;deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;creditorAccount;;;CreditorAccount;;creditor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;debtorAccount;;;DebtorAccount;;debtor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;cancellation;;;PixPaymentCancellation;;cancellation;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;authorisationFlow;string;;;"Campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado.
+
+[Restrição] Se CIBA ou FIDO, preenchimento obrigatório. Caso o campo não esteja presente no payload, subentende-se que o fluxo de autorização utilizado é o HYBRID_FLOW.
+";authorisation flow;campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado. [restrição] se ciba ou fido, preenchimento obrigatório. caso o campo não esteja presente no payload, subentende se que o fluxo de autorização utilizado é o hybrid flow.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;transactionIdentification;string;;;"Trata-se de um identificador de transação que deve ser retransmitido intacto pelo PSP do pagador ao gerar a ordem de pagamento. 
+Essa informação permitirá ao recebedor identificar e correlacionar a transferência, quando recebida, com a apresentação das instruções ao pagador. 
+Os caracteres permitidos no contexto do Pix para o campo txid (EMV 62-05) são:Letras minúsculas, de 'a' a 'z' Letras maiúsculas, de 'A' a 'z' Dígitos decimais, de '0' a '9'.
+
+[Restrição] Preenchimento condicional de acordo com o conteúdo do campo “localInstrument”:
+
+MANU - O campo transactionIdentification não deve ser preenchido;  
+DICT - O campo transactionIdentification não deve ser preenchido;  
+INIC - O campo transactionIdentification deve ser preenchido obrigatoriamente e deve conter até 25 caracteres alfanuméricos ([a-z|A-Z|0-9]).
+";transaction identification;"trata se de um identificador de transação que deve ser retransmitido intacto pelo psp do pagador ao gerar a ordem de pagamento. essa informação permitirá ao recebedor identificar e correlacionar a transferência, quando recebida, com a apresentação das instruções ao pagador. os caracteres permitidos no contexto do pix para o campo txid (emv 62 05) são:letras minúsculas, de 'a' a 'z' letras maiúsculas, de 'a' a 'z' dígitos decimais, de '0' a '9'. [restrição] preenchimento condicional de acordo com o conteúdo do campo “local instrument”: manu o campo transaction identification não deve ser preenchido; dict o campo transaction identification não deve ser preenchido; inic o campo transaction identification deve ser preenchido obrigatoriamente e deve conter até 25 caracteres alfanuméricos ([a z|a z|0 9]).";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;document;object;;;Informações do documento identificador do recebedor da transação.;document;informações do documento identificador do recebedor da transação.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;proxy;string;;;"Chave cadastrada no DICT pertencente ao recebedor. Os tipos de chaves podem ser: telefone, e-mail, cpf/cnpj ou chave aleatória. 
+No caso de telefone celular deve ser informado no padrão E.1641. Para e-mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. 
+No caso de CPF deverá ser informado com 11 números, sem pontos ou traços. Para o caso de CNPJ deverá ser informado com 14 números, sem pontos ou traços. 
+No caso de chave aleatória deve ser informado o UUID gerado pelo DICT, conforme formato especificado na [RFC4122](https://tools.ietf.org/html/rfc4122). 
+Se informado, a detentora da conta deve validar o proxy no DICT quando localInstrument for igual a DICT e validar o campo creditorAccount. 
+Esta validação é opcional caso o localInstrument for igual a INIC.
+
+[Restrição] Se localInstrument for igual a DICT, o campo proxy deve ser preenchido.
+
+[Restrição] Caso o campo “/data/localInstrument” seja enviado como “MANU”, o campo “/data/proxy” não deve ser informado
+";proxy;chave cadastrada no dict pertencente ao recebedor. os tipos de chaves podem ser: telefone, e mail, cpf cnpj ou chave aleatória. no caso de telefone celular deve ser informado no padrão e.1641. para e mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. no caso de cpf deverá ser informado com 11 números, sem pontos ou traços. para o caso de cnpj deverá ser informado com 14 números, sem pontos ou traços. no caso de chave aleatória deve ser informado o uuid gerado pelo dict, conforme formato especificado na [rfc4122](https: tools.ietf.org html rfc4122). se informado, a detentora da conta deve validar o proxy no dict quando local instrument for igual a dict e validar o campo creditor account. esta validação é opcional caso o local instrument for igual a inic. [restrição] se local instrument for igual a dict, o campo proxy deve ser preenchido. [restrição] caso o campo “ data local instrument” seja enviado como “manu”, o campo “ data proxy” não deve ser informado;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;localInstrument;string;;;"Especifica a forma de iniciação do pagamento
+- MANU - Inserção manual de dados da conta transacional
+- DICT - Inserção manual de chave Pix
+- INIC - Indica que o recebedor (creditor) contratou o Iniciador de Pagamentos especificamente para realizar iniciações de pagamento em que o beneficiário é previamente conhecido
+
+[Restrição] Caso consentimento associado a tentativa de pagamento seja para Pix automático (objeto “automatic” selecionado no oneOf do campo ""/data/recurringConfiguration""), apenas o método MANU é permitido.
+";local instrument;"especifica a forma de iniciação do pagamento manu inserção manual de dados da conta transacional dict inserção manual de chave pix inic indica que o recebedor (creditor) contratou o iniciador de pagamentos especificamente para realizar iniciações de pagamento em que o beneficiário é previamente conhecido [restrição] caso consentimento associado a tentativa de pagamento seja para pix automático (objeto “automatic” selecionado no one of do campo "" data recurring configuration""), apenas o método manu é permitido.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;originalRecurringPaymentId;;;originalRecurringPaymentId;;original recurring payment id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataRead;paymentReference;string;;;"[Restrição]
+Campo de preenchimento obrigatório caso seja um pagamento de Pix automático, caso não respeitado, a instituição detentora deve retornar erro HTTP 422 com o código DETALHE_PAGAMENTO_INVALIDO.
+
+- Primeiro pagamento: Se for o pagamento inicial especificado em “/data/firstPayment”, preencha o campo com a string fixa “zero”.
+- Semanal: Preencha com W$numSemana-$ano, onde $numSemana representa o número da semana no ano. Exemplo: ""W50-2024"".
+- Mensal: Use M$mês-$ano, onde $mês representa o mês com dois dígitos. Exemplo: ""M09-2024"".
+- Trimestral: Utilize Q$trimestre-$ano, onde $trimestre indica o trimestre do ano (1 a 4).
+  - Janeiro a Março: Q1-$ano (ex.: ""Q1-2024"").
+  - Abril a Junho: Q2-$ano (ex.: ""Q2-2024"").
+  - Julho a Setembro: Q3-$ano (ex.: ""Q3-2024"").
+  - Outubro a Dezembro: Q4-$ano (ex.: ""Q4-2024"").
+- Semestral: Utilize $semestre-$ano, onde $semestre indica o semestre do ano (1 para janeiro a junho e 2 para julho a dezembro).
+  - Janeiro a Junho: S1-$ano (ex.: ""S1-2024"").
+  - Julho a Dezembro: S2-$ano (ex.: ""S2-2024"").
+- Anual: Use Y$ano, apenas com o ano. Exemplo: ""Y2024"".
+  - Exemplo de Formatos:
+    - Primeiro pagamento: ""zero""
+    - Semanal: ""W50-2024""
+    - Mensal: ""M09-2024""
+    - Trimestral: ""Q3-2024""
+    - Semestral: ""S2-2024""
+    - Anual: ""Y2024""
+";payment reference;"[restrição] campo de preenchimento obrigatório caso seja um pagamento de pix automático, caso não respeitado, a instituição detentora deve retornar erro http 422 com o código detalhe pagamento invalido. primeiro pagamento: se for o pagamento inicial especificado em “ data first payment”, preencha o campo com a string fixa “zero”. semanal: preencha com w$num semana $ano, onde $num semana representa o número da semana no ano. exemplo: ""w50 2024"". mensal: use m$mês $ano, onde $mês representa o mês com dois dígitos. exemplo: ""m09 2024"". trimestral: utilize q$trimestre $ano, onde $trimestre indica o trimestre do ano (1 a 4). janeiro a março: q1 $ano (ex.: ""q1 2024""). abril a junho: q2 $ano (ex.: ""q2 2024""). julho a setembro: q3 $ano (ex.: ""q3 2024""). outubro a dezembro: q4 $ano (ex.: ""q4 2024""). semestral: utilize $semestre $ano, onde $semestre indica o semestre do ano (1 para janeiro a junho e 2 para julho a dezembro). janeiro a junho: s1 $ano (ex.: ""s1 2024""). julho a dezembro: s2 $ano (ex.: ""s2 2024""). anual: use y$ano, apenas com o ano. exemplo: ""y2024"". exemplo de formatos: primeiro pagamento: ""zero"" semanal: ""w50 2024"" mensal: ""m09 2024"" trimestral: ""q3 2024"" semestral: ""s2 2024"" anual: ""y2024""";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;recurringPaymentId;string;;;"Código ou identificador único informado pela instituição detentora da conta para representar a iniciação de pagamento. O `recurringPaymentId` deve ser diferente do `endToEndId`. 
+Este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.
+";recurring payment id;código ou identificador único informado pela instituição detentora da conta para representar a iniciação de pagamento. o `recurring payment id` deve ser diferente do `end to end id`. este é o identificador que deverá ser utilizado na consulta ao status da iniciação de pagamento efetuada.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;recurringConsentId;string;;;"Identificador único do consentimento criado para a iniciação de pagamento solicitada. Deverá ser um URN - Uniform Resource Name.
+Um URN, conforme definido na [RFC8141](https://tools.ietf.org/html/rfc8141) é um Uniform Resource
+Identifier - URI - que é atribuído sob o URI scheme ""urn"" e um namespace URN específico, com a intenção de que o URN
+seja um identificador de recurso persistente e independente da localização.
+Considerando a string urn:bancoex:C1DD33123 como exemplo para `recurringConsentId` temos:
+- o namespace(urn)
+- o identificador associado ao namespace da instituição transmissora (bancoex)
+- o identificador específico dentro do namespace (C1DD33123).
+Informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [RFC8141](https://tools.ietf.org/html/rfc8141).
+
+[Restrição] Este campo é de preenchimento obrigatório quando o valor do campo authorisationFlow for igual a FIDO_FLOW.
+";recurring consent id;"identificador único do consentimento criado para a iniciação de pagamento solicitada. deverá ser um urn uniform resource name. um urn, conforme definido na [rfc8141](https: tools.ietf.org html rfc8141) é um uniform resource identifier uri que é atribuído sob o uri scheme ""urn"" e um namespace urn específico, com a intenção de que o urn seja um identificador de recurso persistente e independente da localização. considerando a string urn:bancoex:c1 dd33123 como exemplo para `recurring consent id` temos: o namespace(urn) o identificador associado ao namespace da instituição transmissora (bancoex) o identificador específico dentro do namespace (c1 dd33123). informações mais detalhadas sobre a construção de namespaces devem ser consultadas na [rfc8141](https: tools.ietf.org html rfc8141). [restrição] este campo é de preenchimento obrigatório quando o valor do campo authorisation flow for igual a fido flow.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;endToEndId;;;EndToEndId;;end to end id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;date;string;;;Data em que o pagamento será realizado. Uma string com a utilização de timezone UTC-3 (UTC time format).;date;data em que o pagamento será realizado. uma string com a utilização de timezone utc 3 (utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;creationDateTime;string;date-time;;"Data e hora em que o pagamento foi criado. 
+Uma string com data e hora conforme especificação [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339), 
+sempre com a utilização de timezone UTC(UTC time format).
+";creation date time;data e hora em que o pagamento foi criado. uma string com data e hora conforme especificação [rfc 3339](https: datatracker.ietf.org doc html rfc3339), sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;statusUpdateDateTime;string;date-time;;"Data e hora em que o pagamento teve o status atualizado. 
+Uma string com data e hora conforme especificação [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339), 
+sempre com a utilização de timezone UTC(UTC time format).
+";status update date time;data e hora em que o pagamento teve o status atualizado. uma string com data e hora conforme especificação [rfc 3339](https: datatracker.ietf.org doc html rfc3339), sempre com a utilização de timezone utc(utc time format).;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;status;;;EnumPaymentStatusType;;status;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;rejectionReason;;;RejectionReason;;rejection reason;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;cnpjInitiator;string;;;CNPJ do Iniciador de Pagamento devidamente habilitado para a prestação de Serviço de Iniciação no Pix.;cnpj initiator;cnpj do iniciador de pagamento devidamente habilitado para a prestação de serviço de iniciação no pix.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;payment;;;PaymentPix;;payment;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;remittanceInformation;string;;;"Deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.
+";remittance information;deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;creditorAccount;;;CreditorAccount;;creditor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;debtorAccount;;;DebtorAccount;;debtor account;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;cancellation;;;PixPaymentCancellation;;cancellation;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;authorisationFlow;string;;;"Campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado.
+
+[Restrição] Se CIBA ou FIDO, preenchimento obrigatório. Caso o campo não esteja presente no payload, subentende-se que o fluxo de autorização utilizado é o HYBRID_FLOW.
+";authorisation flow;campo condicional utilizado para identificar o fluxo de autorização em que o pagamento foi solicitado. [restrição] se ciba ou fido, preenchimento obrigatório. caso o campo não esteja presente no payload, subentende se que o fluxo de autorização utilizado é o hybrid flow.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;transactionIdentification;string;;;"Trata-se de um identificador de transação que deve ser retransmitido intacto pelo PSP do pagador ao gerar a ordem de pagamento. 
+Essa informação permitirá ao recebedor identificar e correlacionar a transferência, quando recebida, com a apresentação das instruções ao pagador. 
+Os caracteres permitidos no contexto do Pix para o campo txid (EMV 62-05) são:Letras minúsculas, de 'a' a 'z' Letras maiúsculas, de 'A' a 'z' Dígitos decimais, de '0' a '9'.
+
+[Restrição] Preenchimento condicional de acordo com o conteúdo do campo “localInstrument”:
+
+MANU - O campo transactionIdentification não deve ser preenchido;  
+DICT - O campo transactionIdentification não deve ser preenchido;  
+INIC - O campo transactionIdentification deve ser preenchido obrigatoriamente e deve conter até 25 caracteres alfanuméricos ([a-z|A-Z|0-9]).
+";transaction identification;"trata se de um identificador de transação que deve ser retransmitido intacto pelo psp do pagador ao gerar a ordem de pagamento. essa informação permitirá ao recebedor identificar e correlacionar a transferência, quando recebida, com a apresentação das instruções ao pagador. os caracteres permitidos no contexto do pix para o campo txid (emv 62 05) são:letras minúsculas, de 'a' a 'z' letras maiúsculas, de 'a' a 'z' dígitos decimais, de '0' a '9'. [restrição] preenchimento condicional de acordo com o conteúdo do campo “local instrument”: manu o campo transaction identification não deve ser preenchido; dict o campo transaction identification não deve ser preenchido; inic o campo transaction identification deve ser preenchido obrigatoriamente e deve conter até 25 caracteres alfanuméricos ([a z|a z|0 9]).";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;document;object;;;Informações do documento identificador do recebedor da transação.;document;informações do documento identificador do recebedor da transação.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;proxy;string;;;"Chave cadastrada no DICT pertencente ao recebedor. Os tipos de chaves podem ser: telefone, e-mail, cpf/cnpj ou chave aleatória. 
+No caso de telefone celular deve ser informado no padrão E.1641. Para e-mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. 
+No caso de CPF deverá ser informado com 11 números, sem pontos ou traços. Para o caso de CNPJ deverá ser informado com 14 números, sem pontos ou traços. 
+No caso de chave aleatória deve ser informado o UUID gerado pelo DICT, conforme formato especificado na [RFC4122](https://tools.ietf.org/html/rfc4122). 
+Se informado, a detentora da conta deve validar o proxy no DICT quando localInstrument for igual a DICT e validar o campo creditorAccount. 
+Esta validação é opcional caso o localInstrument for igual a INIC.
+
+[Restrição] Se localInstrument for igual a DICT, o campo proxy deve ser preenchido.
+
+[Restrição] Caso o campo “/data/localInstrument” seja enviado como “MANU”, o campo “/data/proxy” não deve ser informado
+";proxy;chave cadastrada no dict pertencente ao recebedor. os tipos de chaves podem ser: telefone, e mail, cpf cnpj ou chave aleatória. no caso de telefone celular deve ser informado no padrão e.1641. para e mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. no caso de cpf deverá ser informado com 11 números, sem pontos ou traços. para o caso de cnpj deverá ser informado com 14 números, sem pontos ou traços. no caso de chave aleatória deve ser informado o uuid gerado pelo dict, conforme formato especificado na [rfc4122](https: tools.ietf.org html rfc4122). se informado, a detentora da conta deve validar o proxy no dict quando local instrument for igual a dict e validar o campo creditor account. esta validação é opcional caso o local instrument for igual a inic. [restrição] se local instrument for igual a dict, o campo proxy deve ser preenchido. [restrição] caso o campo “ data local instrument” seja enviado como “manu”, o campo “ data proxy” não deve ser informado;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;localInstrument;string;;;"Especifica a forma de iniciação do pagamento
+- MANU - Inserção manual de dados da conta transacional
+- DICT - Inserção manual de chave Pix
+- INIC - Indica que o recebedor (creditor) contratou o Iniciador de Pagamentos especificamente para realizar iniciações de pagamento em que o beneficiário é previamente conhecido
+
+[Restrição] Caso consentimento associado a tentativa de pagamento seja para Pix automático (objeto “automatic” selecionado no oneOf do campo ""/data/recurringConfiguration""), apenas o método MANU é permitido.
+";local instrument;"especifica a forma de iniciação do pagamento manu inserção manual de dados da conta transacional dict inserção manual de chave pix inic indica que o recebedor (creditor) contratou o iniciador de pagamentos especificamente para realizar iniciações de pagamento em que o beneficiário é previamente conhecido [restrição] caso consentimento associado a tentativa de pagamento seja para pix automático (objeto “automatic” selecionado no one of do campo "" data recurring configuration""), apenas o método manu é permitido.";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;originalRecurringPaymentId;;;originalRecurringPaymentId;;original recurring payment id;;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml
+BANCO;OFB_automatic-payments_2.0.0.yml;ResponseRecurringPaymentsDataPatch;paymentReference;string;;;"[Restrição]
+Campo de preenchimento obrigatório caso seja um pagamento de Pix automático, caso não respeitado, a instituição detentora deve retornar erro HTTP 422 com o código DETALHE_PAGAMENTO_INVALIDO.
+
+- Primeiro pagamento: Se for o pagamento inicial especificado em “/data/firstPayment”, preencha o campo com a string fixa “zero”.
+- Semanal: Preencha com W$numSemana-$ano, onde $numSemana representa o número da semana no ano. Exemplo: ""W50-2024"".
+- Mensal: Use M$mês-$ano, onde $mês representa o mês com dois dígitos. Exemplo: ""M09-2024"".
+- Trimestral: Utilize Q$trimestre-$ano, onde $trimestre indica o trimestre do ano (1 a 4).
+  - Janeiro a Março: Q1-$ano (ex.: ""Q1-2024"").
+  - Abril a Junho: Q2-$ano (ex.: ""Q2-2024"").
+  - Julho a Setembro: Q3-$ano (ex.: ""Q3-2024"").
+  - Outubro a Dezembro: Q4-$ano (ex.: ""Q4-2024"").
+- Semestral: Utilize $semestre-$ano, onde $semestre indica o semestre do ano (1 para janeiro a junho e 2 para julho a dezembro).
+  - Janeiro a Junho: S1-$ano (ex.: ""S1-2024"").
+  - Julho a Dezembro: S2-$ano (ex.: ""S2-2024"").
+- Anual: Use Y$ano, apenas com o ano. Exemplo: ""Y2024"".
+  - Exemplo de Formatos:
+    - Primeiro pagamento: ""zero""
+    - Semanal: ""W50-2024""
+    - Mensal: ""M09-2024""
+    - Trimestral: ""Q3-2024""
+    - Semestral: ""S2-2024""
+    - Anual: ""Y2024""
+";payment reference;"[restrição] campo de preenchimento obrigatório caso seja um pagamento de pix automático, caso não respeitado, a instituição detentora deve retornar erro http 422 com o código detalhe pagamento invalido. primeiro pagamento: se for o pagamento inicial especificado em “ data first payment”, preencha o campo com a string fixa “zero”. semanal: preencha com w$num semana $ano, onde $num semana representa o número da semana no ano. exemplo: ""w50 2024"". mensal: use m$mês $ano, onde $mês representa o mês com dois dígitos. exemplo: ""m09 2024"". trimestral: utilize q$trimestre $ano, onde $trimestre indica o trimestre do ano (1 a 4). janeiro a março: q1 $ano (ex.: ""q1 2024""). abril a junho: q2 $ano (ex.: ""q2 2024""). julho a setembro: q3 $ano (ex.: ""q3 2024""). outubro a dezembro: q4 $ano (ex.: ""q4 2024""). semestral: utilize $semestre $ano, onde $semestre indica o semestre do ano (1 para janeiro a junho e 2 para julho a dezembro). janeiro a junho: s1 $ano (ex.: ""s1 2024""). julho a dezembro: s2 $ano (ex.: ""s2 2024""). anual: use y$ano, apenas com o ano. exemplo: ""y2024"". exemplo de formatos: primeiro pagamento: ""zero"" semanal: ""w50 2024"" mensal: ""m09 2024"" trimestral: ""q3 2024"" semestral: ""s2 2024"" anual: ""y2024""";https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/automatic-payments/2.0.0.yml

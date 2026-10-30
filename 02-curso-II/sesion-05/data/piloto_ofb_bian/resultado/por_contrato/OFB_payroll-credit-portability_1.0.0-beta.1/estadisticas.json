@@ -1,0 +1,28 @@
+{
+  "archivo_entrada": "OFB_payroll-credit-portability_1.0.0-beta.1.yml",
+  "source": "BANCO",
+  "contrato": "API Payroll Credit Portability - Open Finance Brasil",
+  "version": "1.0.0-beta.1",
+  "openapi": "3.0.0",
+  "cantidad_operaciones": 8,
+  "cantidad_schemas": 27,
+  "cantidad_propiedades": 46,
+  "fragmentos_corpus": 90,
+  "operaciones_con_summary": 8,
+  "operaciones_con_description": 8,
+  "operaciones_summary_igual_description": 3,
+  "metodos": {
+    "GET": 4,
+    "POST": 3,
+    "PATCH": 1
+  },
+  "tags": {
+    "Account data": 1,
+    "Concurrency Management": 1,
+    "Credit Portability": 3,
+    "Registering Entity": 1,
+    "Payments": 2
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/payroll-credit-portability/1.0.0-beta.1.yml"
+}

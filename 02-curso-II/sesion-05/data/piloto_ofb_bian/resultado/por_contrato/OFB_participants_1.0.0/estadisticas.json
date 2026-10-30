@@ -1,0 +1,22 @@
+{
+  "archivo_entrada": "OFB_participants_1.0.0.yml",
+  "source": "BANCO",
+  "contrato": "Participantes Open Finance Brasil",
+  "version": "1.0.0",
+  "openapi": "3.0.0",
+  "cantidad_operaciones": 1,
+  "cantidad_schemas": 120,
+  "cantidad_propiedades": 475,
+  "fragmentos_corpus": 793,
+  "operaciones_con_summary": 1,
+  "operaciones_con_description": 0,
+  "operaciones_summary_igual_description": 0,
+  "metodos": {
+    "GET": 1
+  },
+  "tags": {
+    "Organisations - Export": 1
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/participants/1.0.0.yml"
+}

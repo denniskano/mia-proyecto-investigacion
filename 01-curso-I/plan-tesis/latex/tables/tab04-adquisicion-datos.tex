@@ -1,0 +1,34 @@
+\begin{table}[H]
+  \centering
+  \caption{Adquisición de datos --- diseño metodológico}
+  \label{tab:adquisicion-datos}
+  \small
+  \begin{tabular}{@{}p{0.26\textwidth}p{0.66\textwidth}@{}}
+    \toprule
+    \textbf{Elemento} & \textbf{En este estudio} \\
+    \midrule
+    Sistema / entorno &
+    Sector bancario; arquitecturas API + modelos de referencia BIAN \\
+    Objeto de estudio &
+    Contrato OpenAPI bancario completo (Cap.~1 §1.4) \\
+    Unidad de análisis &
+    Par comparable endpoint/\allowbreak schema $\leftrightarrow$ \Behavior{}/\BusinessObject{} \\
+    Señal / dato &
+    Archivos OpenAPI (YAML/JSON) + extracto del \ServiceDomain{} BIAN \\
+    Instrumento de medición &
+    Pipeline del modelo (normalización + cálculo S, E, C); \textit{parsing} OpenAPI \\
+    Parámetros controlados &
+    Versión OpenAPI~3.x; dominio SD; idioma de descripciones; herramienta de \textit{parsing} \\
+    Parámetros no controlados &
+    Calidad redaccional del contrato; madurez BIAN del emisor; completitud del SD publicado \\
+    Factores (Cap.~2) &
+    Esquema intermedio; estrategia de matching; técnica semántica; pesos $\alpha,\beta,\gamma$ \\
+    Ratios (resultados) &
+    \StructuralScore{}, \SemanticScore{}, \CoverageScore{}, \AlignmentScore{}, clasificación \\
+    Formato almacenamiento &
+    YAML/JSON versionado en repositorio; metadatos CSV/JSON por instancia \\
+    Tamaño de muestra &
+    Por definir en validación empírica posterior; ilustración actual: Anexo~F (Payment Initiation) \\
+    \bottomrule
+  \end{tabular}
+\end{table}

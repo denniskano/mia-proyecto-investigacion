@@ -1,0 +1,22 @@
+\begin{longtable}{@{}p{0.14\textwidth}p{0.26\textwidth}p{0.26\textwidth}p{0.28\textwidth}@{}}
+\caption{Matriz de consistencia — resumen por fase (Anexo C)} \label{tab:anexo-c} \\
+\toprule
+\textbf{Fase} & \textbf{Objetivo} & \textbf{Producto verificable} & \textbf{Hipótesis (síntesis)} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\textit{(continúa)}} \\
+\midrule
+\textbf{Fase} & \textbf{Objetivo} & \textbf{Producto verificable} & \textbf{Hipótesis (síntesis)} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{\textit{(continúa en la siguiente página)}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+Fase 1 & Diseñar el modelo de alineación OpenAPI $\leftrightarrow$ BIAN, definiendo entradas, componentes de score (S, E, C), fórmula de agregación y criterios de clasificación. & Modelo metodológico documentado: adquisición → normalización → SemanticScore (S) + StructuralScore (E) + CoverageScore (C) → AlignmentScore. & Un modelo estructurado por componentes S, E y C permite calcular de forma reproducible un score de alineación interpretable entre OpenAPI y BIAN. \\
+Fase 2 & Transformar contratos OpenAPI y artefactos BIAN en representaciones normalizadas y comparables sobre un modelo intermedio común. & Conjunto de representaciones normalizadas versionadas (paths, operations, schemas, behaviors, business objects) listas para el cálculo de scores. & La normalización de OpenAPI bancario y BIAN en un modelo intermedio común habilita el cálculo sistemático de los scores S, E y C. \\
+Fase 3 & Calcular el StructuralScore (E): correspondencia estructural entre componentes OpenAPI y artefactos BIAN normalizados. & Matriz de correspondencias estructurales y StructuralScore (E) normalizado [0, 1]. & Las técnicas de schema matching producen un StructuralScore que refleja la correspondencia entre la organización REST y el modelo BIAN. \\
+Fase 4 & Calcular el SemanticScore (S): similitud semántica entre conceptos de negocio BIAN y componentes del contrato OpenAPI. & Matriz de similitud semántica y SemanticScore (S) normalizado [0, 1]. & Las métricas de similitud semántica producen un SemanticScore que discrimina conceptos alineados de desalineaciones semánticas o de modelado. \\
+Fase 5 & Calcular CoverageScore (C), obtener AlignmentScore = $\alpha$--S + $\beta$--E + $\gamma$--C ($\alpha$ + $\beta$ + $\gamma$ = 1) y clasificar el nivel de alineación del contrato OpenAPI. & CoverageScore (C); AlignmentScore; clasificación (Alta $\geq$0,80 -- Media 0,60–0,79 -- Baja 0,40–0,59 -- Nula <0,40); informe de tipologías de desalineación. & La agregación ponderada de S, E y C produce un AlignmentScore interpretable y clasificable por niveles de alineación del contrato OpenAPI bancario. \\
+\end{longtable}

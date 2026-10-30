@@ -1,0 +1,2 @@
+﻿source;archivo;schema;property;type;format;ref;description;property_normalized;description_normalized;source_url
+BANCO;OFB_webhook_1.2.0.yml;RequestBodyWebhook;data;object;;;Informações referentes à chamada realizada.;data;informações referentes à chamada realizada.;https://raw.githubusercontent.com/OpenBanking-Brasil/openapi/main/swagger-apis/webhook/1.2.0.yml

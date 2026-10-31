@@ -1,14 +1,16 @@
 % Estilo común de diapositivas de sesión (PDF / Beamer 16:9). No usar PPTX.
 \usepackage[T1]{fontenc}
 \usepackage[spanish,es-tabla]{babel}
-\usepackage{booktabs}
 \usepackage{array}
+\usepackage{tabularx}
 \usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{tikz}
 \usepackage{xcolor}
 \usepackage{hyperref}
 
 \usetheme{Madrid}
-\usecolortheme{whale}
+\usecolortheme{default}
 \usefonttheme{professionalfonts}
 \usepackage[scaled=0.92]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -18,14 +20,20 @@
 \definecolor{unimuted}{RGB}{99,110,114}
 \definecolor{tablehead}{RGB}{27,54,93}
 \definecolor{tablealt}{RGB}{238,242,247}
+\definecolor{okgreen}{RGB}{30,127,79}
+\definecolor{warngold}{RGB}{180,110,10}
 
+\setbeamercolor{normal text}{fg=black,bg=white}
 \setbeamercolor{structure}{fg=uninavy}
 \setbeamercolor{frametitle}{bg=uninavy,fg=white}
 \setbeamercolor{title}{fg=white,bg=uninavy}
 \setbeamercolor{footline}{fg=unimuted,bg=white}
+\setbeamercolor{itemize item}{fg=uniaccent}
 \setbeamertemplate{navigation symbols}{}
-\setbeamersize{text margin left=10mm, text margin right=10mm}
+\setbeamersize{text margin left=9mm, text margin right=9mm}
 \setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamerfont{normal text}{size=\normalsize}
+\usebeamercolor[fg]{normal text}
 
 \setbeamertemplate{footline}{%
   \leavevmode%
@@ -39,5 +47,14 @@
   }%
 }
 
-\newcommand{\tabhead}[1]{\textcolor{white}{\textbf{#1}}}
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash\color{black}}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash\color{black}}X}
+\newcommand{\thc}[1]{\cellcolor{uninavy}{\color{white}\bfseries #1}}
+\newcommand{\tabhead}[1]{\thc{#1}}
+\newcommand{\ok}{\textcolor{okgreen}{\textbf{Hecho}}}
+\newcommand{\hoy}{\textcolor{warngold}{\textbf{Hoy}}}
+\newcommand{\pend}{\textcolor{unimuted}{Pendiente}}
+
+\setlength{\arrayrulewidth}{0.4pt}
+\arrayrulecolor{uninavy!25}
+\renewcommand{\arraystretch}{1.15}

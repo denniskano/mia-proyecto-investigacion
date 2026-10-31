@@ -12,6 +12,7 @@ Documento de curso (Guía 2 / desarrollo) Grupo 10. Revisión en salas: Trello, 
 | `cuaderno-pruebas.md` | Cuaderno de las primeras pruebas (OE1 + EDA) |
 | `Sesion07_Revision_Avances_slides.tex` | Fuente de la presentación |
 | `Sesion07_Revision_Avances_slides.pdf` | **Presentación** |
+| `REVISION_PARES.md` | Acta de revisión visual |
 
 **Trello / 12 semanas:** `../plan-tesis-v2/cronograma-sprints.md`  
 **Protocolo:** `../plan-tesis-v2/protocolo-empirico.md`  

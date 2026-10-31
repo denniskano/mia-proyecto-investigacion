@@ -34,6 +34,7 @@ mia-proyecto-investigacion/
 | Matriz consistencia OFB | [`02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf`](02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf) |
 | PPT / slides piloto | [`02-curso-II/sesion-05/Sesion05_Operacionalizacion_y_EDA_slides.pdf`](02-curso-II/sesion-05/Sesion05_Operacionalizacion_y_EDA_slides.pdf) |
 | Revisión método (S6) | [`02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf`](02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf) |
+| Revisión avances (S7) | [`02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf`](02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf) |
 | Dataset piloto | [`02-curso-II/sesion-05/data/piloto_ofb_bian/`](02-curso-II/sesion-05/data/piloto_ofb_bian/) |
 | Plan Guía 1 (LaTeX) | [`01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf`](01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf) |
 | Sílabo MIA 403 | [`02-curso-II/material-oficial/silabo/`](02-curso-II/material-oficial/silabo/) |

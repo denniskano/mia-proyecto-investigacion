@@ -2,21 +2,22 @@
 
 Documento de curso (Guía 2 / desarrollo) Grupo 10. Revisa el Capítulo III antes del matching OE2–OE4.
 
+**Las presentaciones de sesión son PDF (Beamer). No se genera PPTX.**
+
 | Archivo | Formato |
 |---------|---------|
-| `image.png` | Lámina oficial del aula (5 puntos a revisar) |
+| `image.png` | Lámina oficial del aula |
 | `Sesion06_Revision_Metodo.md` | Fuente escrita |
 | `Sesion06_Revision_Metodo.pdf` | Informe (pandoc) |
-| `Sesion06_Revision_Metodo.pptx` | Presentación (11 diapositivas) |
-| `Sesion06_Revision_Metodo_slides.pdf` | La misma presentación en PDF |
-| `ppt/build_sesion06.mjs` | Generador del PPTX |
+| `Sesion06_Revision_Metodo_slides.tex` | Fuente de la presentación |
+| `Sesion06_Revision_Metodo_slides.pdf` | **Presentación** |
 
 **Plan v2:** `../plan-tesis-v2/PLAN_TESIS_V2.pdf` §7  
 **Protocolo:** `../plan-tesis-v2/protocolo-empirico.md`  
 **EDA / dataset:** `../sesion-05/`
 
 ```bash
-node ppt/build_sesion06.mjs
+pdflatex Sesion06_Revision_Metodo_slides.tex
 
 pandoc Sesion06_Revision_Metodo.md \
   -o Sesion06_Revision_Metodo.pdf \

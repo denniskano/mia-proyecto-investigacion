@@ -2,7 +2,8 @@
 
 **Naturaleza:** ejecutar el procedimiento diseñado en Guía 1.  
 **Objeto de la tesis:** OpenAPI bancario (igual que Curso I).  
-**Piloto:** Open Finance Brasil × BIAN v14.
+**Piloto:** Open Finance Brasil × BIAN v14.  
+**Presentaciones de sesión:** PDF (Beamer). No se generan `.pptx`.
 
 | Ruta | Qué es |
 |------|--------|
@@ -11,6 +12,7 @@
 | [`sesion-05/`](sesion-05/) | Operacionalización, EDA, PPT, dataset |
 | [`sesion-05/data/piloto_ofb_bian/`](sesion-05/data/piloto_ofb_bian/) | 38 APIs OFB + 3 SD BIAN |
 | [`sesion-06/`](sesion-06/) | Revisión del método (población, instrumentos, procedimiento, viabilidad) |
+| [`sesion-07/`](sesion-07/) | Revisión de avances: Trello, cuaderno, métricas, 2 revistas |
 | [`material-oficial/`](material-oficial/) | Sílabo y PDFs de sesión; las Guías institucionales quedan en local |
 
 Pendientes del sílabo: [`../ESTADO.md`](../ESTADO.md).

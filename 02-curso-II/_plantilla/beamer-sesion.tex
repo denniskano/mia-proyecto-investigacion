@@ -1,0 +1,43 @@
+% Estilo común de diapositivas de sesión (PDF / Beamer 16:9). No usar PPTX.
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\usetheme{Madrid}
+\usecolortheme{whale}
+\usefonttheme{professionalfonts}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{uninavy}{RGB}{27,54,93}
+\definecolor{uniaccent}{RGB}{232,163,23}
+\definecolor{unimuted}{RGB}{99,110,114}
+\definecolor{tablehead}{RGB}{27,54,93}
+\definecolor{tablealt}{RGB}{238,242,247}
+
+\setbeamercolor{structure}{fg=uninavy}
+\setbeamercolor{frametitle}{bg=uninavy,fg=white}
+\setbeamercolor{title}{fg=white,bg=uninavy}
+\setbeamercolor{footline}{fg=unimuted,bg=white}
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=10mm, text margin right=10mm}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.78\paperwidth,ht=2.6ex,dp=1.2ex,leftskip=1em]{footline}%
+      \insertshortauthor{}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.22\paperwidth,ht=2.6ex,dp=1.2ex,rightskip=1em]{footline}%
+      \hfill\insertframenumber{}/\inserttotalframenumber\hspace{1em}%
+    \end{beamercolorbox}%
+  }%
+}
+
+\newcommand{\tabhead}[1]{\textcolor{white}{\textbf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}

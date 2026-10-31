@@ -1,0 +1,140 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\input{../_plantilla/beamer-sesion.tex}
+
+\title{Sesión 7 --- Revisión de avances}
+\subtitle{Trello · cuaderno · métricas · revistas}
+\author[Grupo 10 · Sesión 7 · objeto OpenAPI bancario · oct 2026]{Grupo 10 · Alex Mancilla Antay · Jack Paitan Cano}
+\date{MIA 403 · UNI}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \vspace{1.4em}
+  {\color{uniaccent}\textbf{SESIÓN 7 · SALAS}}\\[0.6em]
+  {\Huge\bfseries\color{uninavy} Revisión de avances}\\[1.1em]
+  Trello (12 semanas) · Cuaderno de pruebas · Métricas · 2 revistas\\[0.8em]
+  {\color{unimuted} Objeto: OpenAPI bancario $\leftrightarrow$ BIAN \quad Piloto: Open Finance Brasil}
+\end{frame}
+
+\begin{frame}{Agenda de la sala}
+\begin{enumerate}
+  \item Plan de trabajo del ciclo (12 semanas) en Trello
+  \item Primeros resultados en el cuaderno (OE1 + EDA)
+  \item Métricas: cuáles, cómo se calculan, criterio de éxito
+  \item Dos revistas candidatas para el artículo
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{1. Trello --- ciclo empírico de 12 semanas}
+{\footnotesize
+\begin{tabular}{llll}
+\rowcolor{tablehead}\tabhead{Ciclo} & \tabhead{Sílabo} & \tabhead{Tarjeta} & \tabhead{Estado}\\
+S1--S4 & 5 & Pares I1--I6 + parser & Hecho\\
+\rowcolor{tablealt}S5--S6 & 5--6 & EDA + revisión del método & Hecho\\
+S7 & 7 & Protocolo + cuaderno & Hoy\\
+\rowcolor{tablealt}S8 & 8 · P4 & Scores v0 de I1 e I4 & Pendiente\\
+S9 & 9 & Defensa intermedia & Pendiente\\
+\rowcolor{tablealt}S10--S11 & 10--11 & 7 instancias $S/E/C$ & Pendiente\\
+S12 & 12--16 & P5--P7 discusión y borrador & Pendiente\\
+\end{tabular}}
+\end{frame}
+
+\begin{frame}{1. Tablero y tarjetas que no se borran}
+Backlog $\to$ Semana actual $\to$ En curso (WIP=2) $\to$ Revisión pareja $\to$ Hecho $\to$ Bloqueado
+\vspace{0.5em}
+\begin{itemize}
+  \item \textbf{LEAKAGE} --- no copiar CR/BQ a OFB; no puntuar BIAN contra sí mismo
+  \item \textbf{VERSIONES} --- accounts 2.4.2 · payments 4.0.0 · BIAN 14.0.0
+  \item \textbf{PARES} --- solo I1--I6 reciben AlignmentScore
+  \item \textbf{SIN-ML} --- no etiquetar Alta/Media/Baja a mano
+\end{itemize}
+\end{frame}
+
+\begin{frame}{2. Cuaderno --- primeras pruebas (no es el score)}
+\textbf{41} contratos \quad \textbf{235} ops \quad \textbf{6\,746} props \quad \textbf{10\,906} corpus
+\vspace{0.45em}
+
+{\small
+\begin{tabular}{L{3.1cm} L{4.4cm} L{4.3cm}}
+\rowcolor{tablehead}\tabhead{Prueba} & \tabhead{Resultado} & \tabhead{Lectura}\\
+HTTP OFB & GET 130/160 & REST de consulta\\
+\rowcolor{tablealt}HTTP BIAN & PUT 36/75 & $E$ no exige el mismo verbo\\
+Sin description & 61,9\,\% (BIAN 90,4\,\%) & $S$ cae sobre el nombre\\
+\rowcolor{tablealt}H1 extracción & 41 YAML parseados & Soportada; H2--H4 pendientes\\
+\end{tabular}}
+\end{frame}
+
+\begin{frame}{3. Métricas adecuadas a la tarea}
+{\small
+\begin{tabular}{L{3.8cm} L{5.2cm} L{2.8cm}}
+\rowcolor{tablehead}\tabhead{Métrica} & \tabhead{Pregunta} & \tabhead{Rol}\\
+Completitud OE1 & ¿El parser recuperó el YAML? & Reproducibilidad\\
+\rowcolor{tablealt}$E$ StructuralScore & ¿La jerarquía REST refleja el SD? & P1 / H2\\
+$S$ SemanticScore & ¿Los conceptos significan lo mismo? & P2 / H3\\
+\rowcolor{tablealt}$C$ CoverageScore & ¿Cuánto del SD cubre el contrato? & Insumo P3/P4\\
+AlignmentScore + nivel & ¿Cuánto se alinea la instancia? & VD · P4 / H4\\
+\end{tabular}}
+\vspace{0.5em}
+
+No entran: F1 supervisado, encuestas, latencia, ``mismos PUT que BIAN''.
+\end{frame}
+
+\begin{frame}{3. Cómo se calculan e interpretan}
+Unidad = instancia contrato OFB $\times$ SD BIAN. Oficial: pesos $1/3$.
+\vspace{0.35em}
+
+{\small
+$E=(\sum e_{\mathrm{pair}}+0\cdot\mathrm{ops\ sin\ par})/n_{\mathrm{OFB}}$\\
+$S=$ promedio de similitud de los pares oficiales de $E$\\
+$C=(\mathrm{CR+BQ\ con\ par})/(\mathrm{CR+BQ\ del\ SD})$ \quad AlignmentScore $=(S+E+C)/3$
+}
+\vspace{0.4em}
+
+{\footnotesize
+\begin{tabular}{lll}
+\rowcolor{tablehead}\tabhead{Score} & \tabhead{Nivel} & \tabhead{Lectura}\\
+$\ge 0{,}80$ & Alta & Cobertura usable del SD\\
+\rowcolor{tablealt}$0{,}60$--$0{,}79$ & Media & Parcial; declarar tipología\\
+$0{,}40$--$0{,}59$ & Baja & Desalineación dominante\\
+\rowcolor{tablealt}$< 0{,}40$ & Nula & Casi sin correspondencia\\
+\end{tabular}}
+\end{frame}
+
+\begin{frame}{3. Criterios verificables de éxito}
+{\footnotesize
+\begin{tabular}{L{2.6cm} L{5.6cm} L{3.6cm}}
+\rowcolor{tablehead}\tabhead{Hito} & \tabhead{Sí / no si\ldots} & \tabhead{Evidencia}\\
+Hoy · S7 & 41 YAML + cuaderno + protocolo & \texttt{inventario.json}\\
+\rowcolor{tablealt}Sem.\ 8 · P4 & OE1 firmado y I1+I4 con score v0 & \texttt{scores.json}\\
+Sem.\ 9 & Defensa 8--10 min con EDA + 2 instancias & 8 slides\\
+\rowcolor{tablealt}Sem.\ 11 & 7 instancias + sensibilidad & \texttt{resumen\_instancias.csv}\\
+Sem.\ 16 · P7 & Borrador v2; OFB $\neq$ toda la tesis & PDF + git\\
+\end{tabular}}
+\vspace{0.5em}
+
+Falla si se reporta BIAN$\leftrightarrow$BIAN, se inventa un SD para loans o no hay commit.
+\end{frame}
+
+\begin{frame}{4. Dos revistas para el artículo}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{1. Journal of Web Semantics}\\
+{\small Elsevier. Schema/ontology matching y servicios semánticos.\\
+Paper: AlignmentScore + tipologías.}
+\end{column}
+\begin{column}{0.48\textwidth}
+\textbf{2. Semantic Web Journal}\\
+{\small IOS Press, open access. Web semántica aplicada y reproducibilidad.\\
+Paper: piloto OFB público + $S/E/C$.}
+\end{column}
+\end{columns}
+\vspace{0.9em}
+
+Se envía después de P5 (con scores). No revistas de fuzzing ni solo de regulación OFB.
+\end{frame}
+
+\begin{frame}{Pedido a la sala}
+El ciclo de 12 semanas está en Trello. El cuaderno ya tiene las primeras pruebas (41 contratos). Las métricas son $S$, $E$, $C$ y AlignmentScore. Las revistas son \emph{Journal of Web Semantics} y \emph{Semantic Web Journal}. El score v0 de I1 e I4 es la semana 8.
+\end{frame}
+
+\end{document}

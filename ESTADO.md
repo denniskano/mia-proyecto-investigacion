@@ -26,6 +26,7 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 | Piloto OFB × BIAN | 38 APIs + 3 SD · 41 YAML · 235 ops | Hecho |
 | EDA Sesión 5 | `02-curso-II/sesion-05/` | Hecho |
 | Revisión método Sesión 6 | `02-curso-II/sesion-06/` | Hecho (papel) |
+| Revisión avances Sesión 7 | `02-curso-II/sesion-07/` | Hecho (papel + cuaderno) |
 
 ## Pendiente (sílabo MIA 403)
 

@@ -33,7 +33,7 @@ El ciclo empírico de 12 semanas del PPT (`Plan_Tesis_AlineacionBIAN.pptx`) se *
 | 4 | Cap. II | Modelo conceptual OFB (REST GET) vs. BIAN (CR/BQ) | Jack | **Borrador** §5; falta figura propia |
 | 5 | Operacionalización | Matriz 8 cols OFB; congelar I1–I6 (n = 7 scores) | Jack | **Hecho** (`matriz-consistencia-ofb.md`) |
 | 6 | Cap. III | Diseño ejecutable; amenazas actualizadas | Jack | **Hecho** (`sesion-06/` + §7 + `protocolo-empirico.md`) |
-| 7 | Protocolo | Congelar versiones; baseline estructural (sin embeddings) | Jack | Protocolo v1; script matching v0 |
+| 7 | Protocolo | Congelar versiones; baseline estructural (sin embeddings) | Jack | **Hecho** (papel: `sesion-07/` + protocolo v1); falta script matching v0 |
 | 8 | **P4** | Plan PDF + piloto OE1 + **I1 e I4 con score v0** | Ambos | Entrega aula + zip piloto |
 
 **Criterio de la semana 8:** no hace falta AlignmentScore definitivo de las 6 instancias; sí I1 (`accounts` × SavingsAccount) e I4 (`payments` × PaymentOrderInitiation).

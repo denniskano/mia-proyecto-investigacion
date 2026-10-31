@@ -25,6 +25,7 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 | Parser OE1 | `02-curso-II/sesion-05/data/piloto_ofb_bian/procesar_openapi.py` | Hecho |
 | Piloto OFB × BIAN | 38 APIs + 3 SD · 41 YAML · 235 ops | Hecho |
 | EDA Sesión 5 | `02-curso-II/sesion-05/` | Hecho |
+| Revisión método Sesión 6 | `02-curso-II/sesion-06/` | Hecho (papel) |
 
 ## Pendiente (sílabo MIA 403)
 

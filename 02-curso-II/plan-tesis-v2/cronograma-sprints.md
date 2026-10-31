@@ -32,7 +32,7 @@ El ciclo empírico de 12 semanas del PPT (`Plan_Tesis_AlineacionBIAN.pptx`) se *
 | 3 | Estado del arte | Añadir fila OFB vs. open banking al Anexo B (no rehacer 14 papers) | Alex | Pendiente: 1 párrafo + 2–3 citas OFB/BCB |
 | 4 | Cap. II | Modelo conceptual OFB (REST GET) vs. BIAN (CR/BQ) | Jack | **Borrador** §5; falta figura propia |
 | 5 | Operacionalización | Matriz 8 cols OFB; congelar I1–I6 (n = 7 scores) | Jack | **Hecho** (`matriz-consistencia-ofb.md`) |
-| 6 | Cap. III | Diseño ejecutable; amenazas actualizadas | Jack | §7 + `protocolo-empirico.md` v0 |
+| 6 | Cap. III | Diseño ejecutable; amenazas actualizadas | Jack | **Hecho** (`sesion-06/` + §7 + `protocolo-empirico.md`) |
 | 7 | Protocolo | Congelar versiones; baseline estructural (sin embeddings) | Jack | Protocolo v1; script matching v0 |
 | 8 | **P4** | Plan PDF + piloto OE1 + **I1 e I4 con score v0** | Ambos | Entrega aula + zip piloto |
 

@@ -9,16 +9,22 @@
 \begin{document}
 
 \begin{frame}[plain]
-  \vspace{1.4em}
-  {\color{uniaccent}\textbf{SESIÓN 6}}\\[0.6em]
-  {\Huge\bfseries\color{uninavy} Revisión del método}\\[0.25em]
-  {\Large (Capítulo III)}\\[1.1em]
-  Población · instrumentos · procedimiento · análisis · viabilidad\\[0.8em]
-  {\color{unimuted} Objeto: OpenAPI bancario $\leftrightarrow$ BIAN \quad Piloto: Open Finance Brasil}
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uninavy] (current page.south west) rectangle (current page.north east);
+    \fill[uniaccent] (current page.south west) rectangle ([xshift=4.5mm]current page.north west);
+  \end{tikzpicture}
+  \vspace{1.1em}
+  {\color{uniaccent}\large\bfseries SESIÓN 6}\\[0.85em]
+  {\Huge\bfseries\color{white} Revisión del método}\\[0.25em]
+  {\Large\color{white} (Capítulo III)}\\[1.15em]
+  {\large\color{white} Población \quad\textcolor{uniaccent}{·}\quad Instrumentos \quad\textcolor{uniaccent}{·}\quad Procedimiento \quad\textcolor{uniaccent}{·}\quad Viabilidad}\\[1.3em]
+  {\color{white!75} Objeto: OpenAPI bancario $\leftrightarrow$ BIAN \qquad Piloto: Open Finance Brasil}\\[0.35em]
+  {\color{white!75} Grupo 10 · Alex Mancilla Antay · Jack Paitan Cano · MIA 403 · UNI}
 \end{frame}
 
 \begin{frame}{Cinco puntos de la lámina}
-\begin{enumerate}
+\vspace{0.4em}
+\begin{enumerate}\itemsep0.7em
   \item Población, muestra o fuentes y criterios de selección
   \item Técnicas e instrumentos de recolección
   \item Procedimiento claro y reproducible
@@ -27,122 +33,203 @@
 \end{enumerate}
 \end{frame}
 
-\begin{frame}{1. Tres capas: no confundir objeto y piloto}
+\begin{frame}[t]{1. Tres capas: no confundir objeto y piloto}
+\vspace{0.15em}
 {\small
-\begin{tabular}{>{\bfseries}l L{4.6cm} L{4.4cm}}
-\rowcolor{tablehead}\tabhead{Capa} & \tabhead{Qué es} & \tabhead{Qué no es}\\
+\begin{tabularx}{\linewidth}{|L{3.2cm}|Y|Y|}
+\hline
+\thc{Capa} & \thc{Qué es} & \thc{Qué no es}\\
+\hline
 Población (tesis) & OpenAPI bancario $\times$ SD BIAN & Un estándar de un país\\
-\rowcolor{tablealt}Universo del piloto & 38 APIs OFB + 3 SD BIAN v14 & Todo el catálogo BIAN\\
+\rowcolor{tablealt}
+Universo del piloto & 38 APIs OFB + 3 SD BIAN v14 & Todo el catálogo BIAN\\
 Muestra de scores & 7 instancias I1--I6 & Las otras 33 APIs OFB\\
-\end{tabular}}
-\vspace{0.7em}
+\hline
+\end{tabularx}}
+\vspace{0.28em}
 
-OFB es estándar de industria, no el YAML de un banco. El objeto no cambia.
+{\small OFB es estándar de industria, no el YAML de un banco. El objeto no cambia.}
+\vspace{0.22em}
 
-{\small Incluye: OpenAPI 3.x público y pares naturales accounts/payments.\\
-Excluye de este piloto: banco emisor, Open Banking UK, inventar SD para loans.}
+{\footnotesize
+\begin{tabularx}{\linewidth}{|L{2.2cm}|Y|}
+\hline
+\thc{Alcance} & \thc{Regla de este piloto}\\
+\hline
+Incluye & OpenAPI 3.x público y pares naturales accounts / payments\\
+\rowcolor{tablealt}
+Excluye & Banco emisor, Open Banking UK, inventar SD para loans\\
+\hline
+\end{tabularx}}
 \end{frame}
 
-\begin{frame}{1. Muestra empírica ($n=7$)}
-\textbf{41} contratos \quad \textbf{235} operaciones \quad \textbf{7} instancias \quad \textbf{33} APIs solo OE1
+\begin{frame}[t]{1. Muestra empírica ($n=7$)}
+\vspace{0.1em}
+\begin{tabularx}{\linewidth}{YYYY}
+\thc{41} & \thc{235} & \thc{7} & \thc{33}\\
+\rowcolor{tablealt}
+\centering\color{black} contratos & \centering\color{black} operaciones & \centering\color{black} instancias & \centering\arraybackslash\color{black} APIs solo OE1\\
+\end{tabularx}
 \vspace{0.5em}
 
 {\small
-\begin{tabular}{lll}
-\rowcolor{tablehead}\tabhead{ID} & \tabhead{OFB} & \tabhead{BIAN}\\
+\begin{tabularx}{\linewidth}{|L{2.3cm}|Y|Y|}
+\hline
+\thc{ID} & \thc{OFB} & \thc{BIAN}\\
+\hline
 I1 / I2 & accounts 2.4.2 & SavingsAccount / CurrentAccount\\
-\rowcolor{tablealt}I3a / I3b & opendata-accounts 1.0.1 & SavingsAccount / CurrentAccount\\
+\rowcolor{tablealt}
+I3a / I3b & opendata-accounts 1.0.1 & SavingsAccount / CurrentAccount\\
 I4 / I5 / I6 & payments / automatic-payments / enrollments & PaymentOrderInitiation\\
-\end{tabular}}
-\vspace{0.6em}
+\hline
+\end{tabularx}}
+\vspace{0.4em}
 
-I1/I2 e I3a/I3b no son independientes: mismo YAML OFB, dos referencias.
+{\small I1/I2 e I3a/I3b no son independientes: mismo YAML OFB, dos referencias.}
 \end{frame}
 
-\begin{frame}{2. Recolección: artefactos, no encuestas}
+\begin{frame}[t]{2. Recolección: artefactos, no encuestas}
+\vspace{0.15em}
 {\small
-\begin{tabular}{L{3.4cm} L{4.0cm} L{4.4cm}}
-\rowcolor{tablehead}\tabhead{Técnica} & \tabhead{Instrumento} & \tabhead{Salida}\\
+\begin{tabularx}{\linewidth}{|L{3.3cm}|L{4.1cm}|Y|}
+\hline
+\thc{Técnica} & \thc{Instrumento} & \thc{Salida}\\
+\hline
 Adquisición versionada & YAML oficiales + git & 38 OFB + 3 BIAN\\
-\rowcolor{tablealt}Parsing OpenAPI 3.x & \texttt{procesar\_openapi.py} & ops, schemas, \$ref\\
+\rowcolor{tablealt}
+Parsing OpenAPI 3.x & procesar\_openapi.py & ops, schemas, \$ref\\
 Normalización & mismo parser & CSV listos para matching\\
-\rowcolor{tablealt}Inventario & \texttt{inventario.json} & 41 / 235 / 6746 / 10906\\
-\end{tabular}}
-\vspace{0.7em}
+\rowcolor{tablealt}
+Inventario & inventario.json & 41 / 235 / 6746 / 10906\\
+\hline
+\end{tabularx}}
+\vspace{0.5em}
 
-Ética: YAML públicos. Sin PII. Citar OFB y BIAN.\\
-Aún no existen \texttt{pares\_estructurales.csv} ni \texttt{scores.json}.
+{\small Ética: YAML públicos. Sin PII. Citar OFB y BIAN.}\\[0.25em]
+{\small Aún no existen pares\_estructurales.csv ni scores.json.}
 \end{frame}
 
-\begin{frame}{3. Procedimiento reproducible}
-\centering
-OE1 parsear $\rightarrow$ OE2 $E$ $\rightarrow$ OE3 $S$ $\rightarrow$ OE4 $C$ + AlignmentScore
-\vspace{0.7em}
+\begin{frame}[t]{3. Procedimiento reproducible}
+\vspace{0.12em}
+{\small
+\begin{tabularx}{\linewidth}{YYYY}
+\thc{OE1} & \thc{OE2} & \thc{OE3} & \thc{OE4}\\
+\rowcolor{tablealt}
+\centering\color{black} parsear & \centering\color{black} E estructural & \centering\color{black} S semántico & \centering\arraybackslash\color{black} C + score\\
+\end{tabularx}}
+\vspace{0.22em}
 
-\raggedright
-Design science · cuantitativo sobre documentos · sin ML supervisado.\\
-Baseline semana 8: $E$ por Jaccard/path/HTTP; $S$ léxico. Embeddings en semana 11.\\
-AlignmentScore $=(S+E+C)/3$. Ops OFB sin par aportan 0 a $E$.
-\vspace{0.6em}
-
-\textbf{\color{uninavy} Prohibido:} BIAN$\leftrightarrow$BIAN como resultado · copiar CR/BQ a OFB · etiquetar niveles a mano.
-\end{frame}
-
-\begin{frame}{4. Análisis $\leftrightarrow$ preguntas, OE e hipótesis}
 {\footnotesize
-\begin{tabular}{lllll}
-\rowcolor{tablehead}\tabhead{Pregunta} & \tabhead{OE} & \tabhead{Técnica} & \tabhead{H} & \tabhead{Ahora}\\
-P1 estructura & OE2 & Schema matching $\to E$ & H2 & Pendiente\\
-\rowcolor{tablealt}P2 semántica & OE3 & Léxico / embeddings $\to S$ & H3 & Pendiente\\
+\begin{itemize}\itemsep0.06em
+  \item Design science · documentos · sin ML supervisado
+  \item Sem.\ 8: E Jaccard/path/HTTP y S léxico \quad Sem.\ 11: embeddings
+  \item AlignmentScore = (S + E + C) / 3 \quad Ops sin par aportan 0 a E
+\end{itemize}}
+\vspace{0.12em}
+
+{\footnotesize\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{\linewidth}{|L{3.1cm}|Y|}
+\hline
+\thc{Prohibido} & \thc{Por qué}\\
+\hline
+BIAN $\leftrightarrow$ BIAN & No es resultado banco--BIAN\\
+\rowcolor{tablealt}
+Copiar CR/BQ a OFB & Leakage de la referencia\\
+Etiquetar a mano & No hay clasificador supervisado\\
+\hline
+\end{tabularx}}
+\end{frame}
+
+\begin{frame}[t]{4. Análisis $\leftrightarrow$ preguntas, OE e hipótesis}
+\vspace{0.15em}
+{\footnotesize
+\begin{tabularx}{\linewidth}{|L{2.55cm}|L{1.35cm}|Y|L{1.15cm}|L{2.15cm}|}
+\hline
+\thc{Pregunta} & \thc{OE} & \thc{Técnica} & \thc{H} & \thc{Ahora}\\
+\hline
+P1 estructura & OE2 & Schema matching $\to$ E & H2 & \pend\\
+\rowcolor{tablealt}
+P2 semántica & OE3 & Léxico / embeddings $\to$ S & H3 & \pend\\
 P3 tipologías & OE4 & Pares + Tabla 2 & --- & EDA\\
-\rowcolor{tablealt}P4 score & OE4 & $\alpha S+\beta E+\gamma C$ & H4 & Pendiente\\
-¿Se puede medir? & OE1 & Parser + completitud & H1 & Soportada\\
-\end{tabular}}
-\vspace{0.7em}
+\rowcolor{tablealt}
+P4 score & OE4 & $\alpha$S+$\beta$E+$\gamma$C & H4 & \pend\\
+¿Se puede medir? & OE1 & Parser + completitud & H1 & \textcolor{okgreen}{\textbf{Soportada}}\\
+\hline
+\end{tabularx}}
+\vspace{0.45em}
 
-VD = AlignmentScore + \{Alta $\ge 0{,}80$ · Media · Baja · Nula $< 0{,}40$\}.
+{\small VD = AlignmentScore + nivel: Alta 0,80 o más · Media · Baja · Nula menos de 0,40.}
 \end{frame}
 
-\begin{frame}{5. Viabilidad: EDA ya corrido (Sesión 5)}
-{\small
-\begin{tabular}{L{3.2cm} L{4.2cm} L{4.4cm}}
-\rowcolor{tablehead}\tabhead{Hallazgo} & \tabhead{Dato} & \tabhead{Implicación}\\
-OFB es consulta & GET 130/160 & $E$ no exige el mismo verbo\\
-\rowcolor{tablealt}BIAN es control & PUT 36/75 & Asimetría REST vs CR/BQ\\
-Texto BIAN pobre & 90,4\,\% props sin description & $S$ cae sobre el nombre\\
-\rowcolor{tablealt}Summary = description & 75/75 ops BIAN & Una copia en el corpus\\
+\begin{frame}[t]{5. Viabilidad: EDA ya corrido (Sesión 5)}
+\vspace{0.08em}
+{\footnotesize\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\linewidth}{|L{3.15cm}|L{4.15cm}|Y|}
+\hline
+\thc{Hallazgo} & \thc{Dato} & \thc{Implicación}\\
+\hline
+OFB es consulta & GET 130 / 160 & E no exige el mismo verbo\\
+\rowcolor{tablealt}
+BIAN es control & PUT 36 / 75 & Asimetría REST vs CR/BQ\\
+Texto BIAN pobre & 90,4\,\% props sin description & S cae sobre el nombre\\
+\rowcolor{tablealt}
+Summary = description & 75 / 75 ops BIAN & Una copia en el corpus\\
 Gap de referencia & loans / cards / financings & No inventar SD\\
-\end{tabular}}
-\vspace{0.6em}
+\hline
+\end{tabularx}}
+\vspace{0.28em}
 
-$C$ de I1 será baja (6 GET vs 1 CR + 9 BQ). Hallazgo, no fallo del parser.
+{\small C de I1 será baja (6 GET vs 1 CR + 9 BQ). Hallazgo, no fallo del parser.}
 \end{frame}
 
-\begin{frame}{Checklist de la lámina}
+\begin{frame}[t]{Checklist de la lámina}
+\vspace{0.2em}
 {\small
-\begin{tabular}{L{4.2cm} L{2.8cm} L{4.8cm}}
-\rowcolor{tablehead}\tabhead{Punto} & \tabhead{¿Cubierto?} & \tabhead{Dónde}\\
-Población y criterios & Sí & Plan v2 §3--4\\
-\rowcolor{tablealt}Instrumentos & Sí & Parser + CSV\\
-Procedimiento & Sí & \texttt{protocolo-empirico.md}\\
-\rowcolor{tablealt}Análisis $\leftrightarrow$ OE / H & Sí & Esta §4\\
-Viabilidad EDA / piloto & Sí, sin scores & Sesión 5\\
-\end{tabular}}
+\begin{tabularx}{\linewidth}{|L{4.3cm}|L{2.6cm}|Y|}
+\hline
+\thc{Punto} & \thc{¿Cubierto?} & \thc{Dónde}\\
+\hline
+Población y criterios & \textcolor{okgreen}{\textbf{Sí}} & Plan v2 §3--4\\
+\rowcolor{tablealt}
+Instrumentos & \textcolor{okgreen}{\textbf{Sí}} & Parser + CSV\\
+Procedimiento & \textcolor{okgreen}{\textbf{Sí}} & protocolo-empirico.md\\
+\rowcolor{tablealt}
+Análisis $\leftrightarrow$ OE / H & \textcolor{okgreen}{\textbf{Sí}} & Esta §4\\
+Viabilidad EDA / piloto & \textcolor{okgreen}{\textbf{Sí, sin scores}} & Sesión 5\\
+\hline
+\end{tabularx}}
 \end{frame}
 
-\begin{frame}{Qué falta (no es de esta lámina)}
-\begin{itemize}
-  \item Sem.\ 7 --- Firmar OE1 por YAML · matching estructural v0
-  \item Sem.\ 8 · P4 --- Scores v0 de I1 e I4
-  \item Sem.\ 9 --- Defensa intermedia
-  \item Sem.\ 10--11 --- Las 7 instancias con $S$, $E$, $C$
-\end{itemize}
+\begin{frame}[t]{Qué falta (no es de esta lámina)}
+\vspace{0.25em}
+{\small
+\begin{tabularx}{\linewidth}{|L{2.6cm}|Y|L{2.3cm}|}
+\hline
+\thc{Cuándo} & \thc{Qué} & \thc{Estado}\\
+\hline
+Sem.\ 7 & Firmar OE1 por YAML · matching estructural v0 & \pend\\
+\rowcolor{tablealt}
+Sem.\ 8 · P4 & Scores v0 de I1 e I4 & \pend\\
+Sem.\ 9 & Defensa intermedia & \pend\\
+\rowcolor{tablealt}
+Sem.\ 10--11 & Las 7 instancias con S, E y C & \pend\\
+\hline
+\end{tabularx}}
 \end{frame}
 
-\begin{frame}{En una frase}
-El método está revisado y es ejecutable: población = OpenAPI bancario $\times$ BIAN; muestra = 7 instancias OFB; evidencia = EDA de 41 contratos.
-
-AlignmentScore se calcula a partir de la semana 8.
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uninavy] (current page.south west) rectangle (current page.north east);
+    \fill[uniaccent] (current page.south west) rectangle ([xshift=4.5mm]current page.north west);
+  \end{tikzpicture}
+  \vspace{0.9em}
+  {\color{uniaccent}\large\bfseries En una frase}\\[0.7em]
+  {\Large\color{white} El método está revisado y es ejecutable.}\\[0.45em]
+  {\large\color{white} Población = OpenAPI bancario $\times$ BIAN.\\
+  Muestra = 7 instancias OFB.\\
+  Evidencia = EDA de 41 contratos.}\\[0.7em]
+  {\large\color{uniaccent} AlignmentScore se calcula a partir de la semana 8.}\\[0.9em]
+  {\color{white!70} Grupo 10 · fuente: Sesion06\_Revision\_Metodo.md}
 \end{frame}
 
 \end{document}

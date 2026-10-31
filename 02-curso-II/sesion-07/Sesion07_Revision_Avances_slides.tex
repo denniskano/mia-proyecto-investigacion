@@ -14,7 +14,7 @@
     \fill[uniaccent] (current page.south west) rectangle ([xshift=4.5mm]current page.north west);
   \end{tikzpicture}
   \vspace{1.1em}
-  {\color{uniaccent}\large\bfseries SESIÓN 7 · SALAS}\\[0.85em]
+  {\color{uniaccent}\large\bfseries SESIÓN 7}\\[0.85em]
   {\Huge\bfseries\color{white} Revisión de avances}\\[1.15em]
   {\large\color{white} Trello (12 semanas) \quad\textcolor{uniaccent}{·}\quad Cuaderno \quad\textcolor{uniaccent}{·}\quad Métricas \quad\textcolor{uniaccent}{·}\quad 2 revistas}\\[1.3em]
   {\color{white!75} Objeto: OpenAPI bancario $\leftrightarrow$ BIAN \qquad Piloto: Open Finance Brasil}\\[0.35em]
@@ -34,7 +34,7 @@
 \begin{frame}[t]{1. Trello --- ciclo empírico de 12 semanas}
 \vspace{0.2em}
 {\footnotesize
-\begin{tabularx}{\linewidth}{|L{1.85cm}|L{1.7cm}|Y|L{2.15cm}|}
+\begin{tabularx}{\linewidth}{|L{1.7cm}|L{2.15cm}|Y|L{2.15cm}|}
 \hline
 \thc{Ciclo} & \thc{Sílabo} & \thc{Tarjeta} & \thc{Estado}\\
 \hline
@@ -109,7 +109,7 @@ E StructuralScore & ¿La jerarquía REST refleja el SD? & P1 / H2\\
 S SemanticScore & ¿Los conceptos significan lo mismo? & P2 / H3\\
 \rowcolor{tablealt}
 C CoverageScore & ¿Cuánto del SD cubre el contrato? & Insumo P3/P4\\
-AlignmentScore + nivel & ¿Cuánto se alinea la instancia? & VD · P4 / H4\\
+AlignmentScore & ¿Cuánto se alinea la instancia? & VD · P4 / H4\\
 \hline
 \end{tabularx}}
 \vspace{0.55em}
@@ -143,8 +143,8 @@ menos de 0,40 & Nula & Casi sin correspondencia\\
 \end{frame}
 
 \begin{frame}[t]{3. Criterios verificables de éxito}
-\vspace{0.15em}
-{\small
+\vspace{0.08em}
+{\footnotesize\renewcommand{\arraystretch}{1.08}
 \begin{tabularx}{\linewidth}{|L{2.35cm}|Y|L{3.15cm}|}
 \hline
 \thc{Hito} & \thc{Se cumple si} & \thc{Evidencia}\\
@@ -158,7 +158,7 @@ Sem.\ 11 & Siete instancias + sensibilidad de pesos & resumen\_instancias.csv\\
 Sem.\ 16 · P7 & Borrador v2; OFB no es toda la tesis & PDF + git\\
 \hline
 \end{tabularx}}
-\vspace{0.45em}
+\vspace{0.28em}
 
 {\small Falla si se reporta BIAN$\leftrightarrow$BIAN, se inventa un SD para loans o no hay commit.}
 \end{frame}
@@ -200,9 +200,13 @@ Sem.\ 16 · P7 & Borrador v2; OFB no es toda la tesis & PDF + git\\
     \fill[uniaccent] (current page.south west) rectangle ([xshift=4.5mm]current page.north west);
   \end{tikzpicture}
   \vspace{0.9em}
-  {\color{uniaccent}\large\bfseries Pedido a la sala}\\[0.8em]
-  {\Large\color{white} El ciclo de 12 semanas está en Trello. El cuaderno ya tiene las primeras pruebas (41 contratos). Las métricas son S, E, C y AlignmentScore. Las revistas son \emph{Journal of Web Semantics} y \emph{Semantic Web Journal}.}\\[0.9em]
-  {\large\color{uniaccent} El score v0 de I1 e I4 es la semana 8.}\\[1.1em]
+  {\color{uniaccent}\large\bfseries Pedido a la sala}\\[0.65em]
+  {\large\color{white}
+  Trello: ciclo de 12 semanas.\\[0.28em]
+  Cuaderno: 41 contratos ya parseados.\\[0.28em]
+  Métricas: S, E, C y AlignmentScore.\\[0.28em]
+  Revistas: \emph{Journal of Web Semantics} y \emph{Semantic Web Journal}.}\\[0.7em]
+  {\large\color{uniaccent} El score v0 de I1 e I4 es la semana 8.}\\[0.9em]
   {\color{white!70} Grupo 10 · fuente: Sesion07\_Revision\_Avances.md}
 \end{frame}
 

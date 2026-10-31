@@ -5,6 +5,7 @@ Documento de curso (Guía 2 / desarrollo) Grupo 10. El plan vigente está en `..
 | Archivo | Formato |
 |---------|---------|
 | `Sesion05_Operacionalizacion_y_EDA_slides.pdf` | **Presentación** (PDF) |
+| `LIBRETO_SLIDES.md` | Libreto oral (19 diapositivas, 12–14 min) |
 | `Sesion05_Operacionalizacion_y_EDA.md` | Fuente escrita (detalle) |
 | `Sesion05_Operacionalizacion_y_EDA.pdf` | Informe largo (pandoc) |
 | `ppt/build_sesion05.mjs` | Generador del PPTX |

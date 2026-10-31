@@ -11,6 +11,8 @@ Documento de curso (Guía 2 / desarrollo) Grupo 10. Revisa el Capítulo III ante
 | `Sesion06_Revision_Metodo.pdf` | Informe (pandoc) |
 | `Sesion06_Revision_Metodo_slides.tex` | Fuente de la presentación |
 | `Sesion06_Revision_Metodo_slides.pdf` | **Presentación** |
+| `LIBRETO_SLIDES.md` | Libreto oral (11 diapositivas, 8–10 min) |
+| `REVISION_PARES.md` | Acta de revisión visual |
 
 **Plan v2:** `../plan-tesis-v2/PLAN_TESIS_V2.pdf` §7  
 **Protocolo:** `../plan-tesis-v2/protocolo-empirico.md`  

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Empaqueta la carpeta Informe Guía 1 para Google Drive — Grupo 9.2."""
+"""Empaqueta la carpeta Informe Guía 1 para Google Drive — Grupo 10."""
 
 from __future__ import annotations
 
@@ -12,8 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 PLAN = ROOT / "plan-tesis"
 V3 = ROOT
-OUT = PLAN / "entrega" / "Informe_Guia1_Grupo9.2"
-ZIP_PATH = PLAN / "entrega" / "Informe_Guia1_Grupo9.2.zip"
+OUT = PLAN / "entrega" / "Informe_Guia1_Grupo10"
+ZIP_PATH = PLAN / "entrega" / "Informe_Guia1_Grupo10.zip"
 
 SKIP_DIR_NAMES = {".git", "build", "entrega", "__pycache__", ".venv-excel", "node_modules"}
 SKIP_FILE_SUFFIXES = {".aux", ".log", ".fls", ".fdb_latexmk", ".out", ".toc", ".lof", ".lot"}
@@ -117,9 +117,9 @@ def pack_fuentes() -> None:
     dst = OUT / DIR_FUENTES
     dst.mkdir(parents=True, exist_ok=True)
 
-    pdf = PLAN / "latex" / "build" / "Plan_Tesis_Grupo9.2.pdf"
+    pdf = PLAN / "latex" / "build" / "Plan_Tesis_Grupo10.pdf"
     if pdf.exists():
-        shutil.copy2(pdf, dst / "Plan de tesis Grupo 9.2.pdf")
+        shutil.copy2(pdf, dst / "Plan de tesis Grupo 10.pdf")
     else:
         print(f"  [aviso] Compilar antes: {pdf}")
 
@@ -138,9 +138,9 @@ def pack_fuentes() -> None:
 def pack_matriz() -> None:
     dst = OUT / DIR_MATRIZ
     dst.mkdir(parents=True, exist_ok=True)
-    xlsx = PLAN / "anexos" / "Matriz_Consistencia_Grupo9.2.xlsx"
+    xlsx = PLAN / "anexos" / "Matriz_Consistencia_Grupo10.xlsx"
     if xlsx.exists():
-        shutil.copy2(xlsx, dst / "Matriz de consistencia Grupo 9.2.xlsx")
+        shutil.copy2(xlsx, dst / "Matriz de consistencia Grupo 10.xlsx")
     else:
         print(f"  [aviso] Falta: {xlsx}")
 

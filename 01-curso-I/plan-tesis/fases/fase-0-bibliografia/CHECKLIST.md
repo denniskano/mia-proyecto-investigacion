@@ -12,7 +12,7 @@
 | Fichas `fichas/*.md` (estado **completada**) | 14 / 14 ✅ |
 | Mapa de ejes (`EJES_ESTADO_DEL_ARTE.md`) | ✅ |
 | Plantilla (`PLANTILLA_FICHA.md`) | ✅ |
-| Excel Anexo B (`anexos/Matriz_Papers_EstadoDelArte_Grupo9.2.xlsx`) | ✅ sincronizado desde fichas |
+| Excel Anexo B (`anexos/Matriz_Papers_EstadoDelArte_Grupo10.xlsx`) | ✅ sincronizado desde fichas |
 | Borrador §3.5–3.6 | ✅ `EJES_ESTADO_DEL_ARTE.md` + `../fase-c-marco-teorico/CAPITULO_03_ESTADO_DEL_ARTE.md` |
 
 ---

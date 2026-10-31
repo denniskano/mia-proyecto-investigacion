@@ -1,4 +1,4 @@
-# Datos del objeto de estudio — Grupo 9.2
+# Datos del objeto de estudio — Grupo 10
 
 Artefactos **documentales** recolectados para el plan de tesis (contratos OpenAPI bancarios vs.
 referencia BIAN). Copia canónica usada en Anexo F y en la entrega Guía 1 (`02_Datos_objeto_estudio/`).

@@ -12,7 +12,7 @@
 | Bloque | Estado | Notas |
 |--------|--------|-------|
 | Resumen + Abstract + §1.1 | ✅ | Tanda previa (Jack) |
-| §1.2 Problemática | ✅ | Agente A — PI-11, TSB, CMA, tono Grupo 9.2 |
+| §1.2 Problemática | ✅ | Agente A — PI-11, TSB, CMA, tono Grupo 10 |
 | §1.3 Planteamiento | ✅ | Agente A — tres niveles + matriz vs. brecha |
 | §1.4 Objeto (narrativo) | ✅ | Agente A — Anexo F, ontología interna |
 | §1.7 Justificación | ✅ | Agente A |
@@ -30,7 +30,7 @@
 
 1. ~~Cap. 2 §2.4: factores / ratios (PI-11 M8)~~ ✅ 2026-07-02
 2. ~~Relectura oral Alex ↔ Jack~~ ✅ `REVISION_ORAL_ALEX_JACK.md` · 10 correcciones aplicadas
-3. ~~Regenerar entrega Drive~~ ✅ `Informe_Guia1_Grupo9.2.zip`
+3. ~~Regenerar entrega Drive~~ ✅ `Informe_Guia1_Grupo10.zip`
 
 ---
 
@@ -62,4 +62,4 @@ python3 herramientas/scripts/build_entrega_guia01.py   # si aplica
 
 ## Siguiente paso Turnitin
 
-Subir `latex/build/Plan_Tesis_Grupo9.2.pdf` completo (Cap. 1–3 reescritos). Comparar **solo el total IA** con el 49% inicial.
+Subir `latex/build/Plan_Tesis_Grupo10.pdf` completo (Cap. 1–3 reescritos). Comparar **solo el total IA** con el 49% inicial.

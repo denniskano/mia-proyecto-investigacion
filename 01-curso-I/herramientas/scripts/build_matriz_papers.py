@@ -14,7 +14,7 @@ from openpyxl.utils import get_column_letter
 from papers_estado_del_arte import EJES, PAPERS
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "plan-tesis/anexos/Matriz_Papers_EstadoDelArte_Grupo9.2.xlsx"
+OUT = ROOT / "plan-tesis/anexos/Matriz_Papers_EstadoDelArte_Grupo10.xlsx"
 FICHAS_DIR = ROOT / "plan-tesis/fases/fase-0-bibliografia/fichas"
 
 HEADERS = [
@@ -181,7 +181,7 @@ def build():
 
     ws.merge_cells("A2:M2")
     ws["A2"] = (
-        "Grupo 9.2 — Fase 0 · Columnas 6–11 sincronizadas desde fichas Markdown"
+        "Grupo 10 — Fase 0 · Columnas 6–11 sincronizadas desde fichas Markdown"
     )
     ws["A2"].alignment = Alignment(horizontal="center")
     ws["A2"].font = Font(italic=True, size=10)

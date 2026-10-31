@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera Figuras 1 y 2 para Fase B — Grupo 9.2."""
+"""Genera Figuras 1 y 2 para Fase B — Grupo 10."""
 
 from pathlib import Path
 

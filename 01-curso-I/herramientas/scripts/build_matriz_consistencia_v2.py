@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Matriz de consistencia v2 — columnas institucionales (8 cols). Grupo 9.2."""
+"""Matriz de consistencia v2 — columnas institucionales (8 cols). Grupo 10."""
 
 from pathlib import Path
 
@@ -8,7 +8,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "plan-tesis/anexos/Matriz_Consistencia_Grupo9.2_v2.xlsx"
+OUT = ROOT / "plan-tesis/anexos/Matriz_Consistencia_Grupo10_v2.xlsx"
 
 HEADERS = [
     "Problema de Estudio",
@@ -27,7 +27,7 @@ META = {
         "Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN "
         "mediante análisis estructural y similitud semántica"
     ),
-    "grupo": "Grupo 9.2 — Alex Mancilla · Jack Paitan",
+    "grupo": "Grupo 10 — Alex Mancilla · Jack Paitan",
     "objetivo_general": (
         "Diseñar un modelo de alineación (SemanticScore S, StructuralScore E, CoverageScore C) "
         "y un procedimiento reproducible que, sobre cada instancia "

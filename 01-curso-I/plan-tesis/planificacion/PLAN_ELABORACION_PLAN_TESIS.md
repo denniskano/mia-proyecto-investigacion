@@ -1,4 +1,4 @@
-# Plan de elaboración del Plan de Tesis — Grupo 9.2
+# Plan de elaboración del Plan de Tesis — Grupo 10
 
 **Tema:** Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN mediante análisis estructural y similitud semántica.
 
@@ -6,7 +6,7 @@
 **Tipo de investigación:** Tecnológica (investigación basada en diseño — no encuestas ni población/muestra al estilo Sampieri)  
 **Producto del curso:** Plan de tesis (Guía N°01) — **solo este documento**; construcción/experimentación queda fuera de alcance (§1.6)
 
-**Documento maestro:** `../latex/build/Plan_Tesis_Grupo9.2.pdf` (57 pp.)  
+**Documento maestro:** `../latex/build/Plan_Tesis_Grupo10.pdf` (57 pp.)  
 **Fuentes revisadas:** transcripciones PI-01 a PI-11 · bibliografía en `../../bibliografia/`  
 **Índice del proyecto:** `../README.md` · estado consolidado: `ESTADO_INFORME.md`  
 **Última actualización:** 2026-07-02
@@ -196,8 +196,8 @@ Borrador Markdown fuente §3.5–§3.6: `fases/fase-c-marco-teorico/CAPITULO_03_
 | Anexo | Excel / fuente | LaTeX |
 |-------|----------------|-------|
 | A — String búsqueda | ✅ redactado | ✅ `anexo-a.tex` |
-| B — Matriz papers | ✅ `Matriz_Papers_EstadoDelArte_Grupo9.2.xlsx` | ✅ `anexo-b.tex` |
-| C — Matriz consistencia | ✅ `Matriz_Consistencia_Grupo9.2.xlsx` | ✅ `anexo-c.tex` |
+| B — Matriz papers | ✅ `Matriz_Papers_EstadoDelArte_Grupo10.xlsx` | ✅ `anexo-b.tex` |
+| C — Matriz consistencia | ✅ `Matriz_Consistencia_Grupo10.xlsx` | ✅ `anexo-c.tex` |
 | D — Operación variables | ✅ | ✅ `anexo-d.tex` |
 | E — Diseño factorial | N/A | ✅ `anexo-e.tex` |
 | F — Ejemplos OpenAPI/BIAN | ✅ | ✅ `anexo-f.tex` |
@@ -313,7 +313,7 @@ Regenerar Fig. 4–6: `herramientas/scripts/build_figuras_fase_cd.py` · Fig. 1�
 
 ---
 
-## 4. Asignación sugerida Grupo 9.2
+## 4. Asignación sugerida Grupo 10
 
 | Actividad | Responsable | Estado |
 |-----------|-------------|--------|

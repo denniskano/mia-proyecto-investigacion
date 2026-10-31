@@ -13,7 +13,7 @@ Alimenta **Anexo B**, **Tabla 5** (§3.5) y la **brecha** (§3.6).
 | Archivo | Descripción |
 |---------|-------------|
 | `fichas/*.md` | Una ficha por paper (formato §3.5.2) |
-| `../../anexos/Matriz_Papers_EstadoDelArte_Grupo9.2.xlsx` | Matriz consolidada (Anexo B) |
+| `../../anexos/Matriz_Papers_EstadoDelArte_Grupo10.xlsx` | Matriz consolidada (Anexo B) |
 | `EJES_ESTADO_DEL_ARTE.md` | Mapa paper → eje temático |
 | `CHECKLIST.md` | Progreso por paper |
 

@@ -1,6 +1,6 @@
-# Plan de tesis — Grupo 9.2
+# Plan de tesis — Grupo 10
 
-**PDF Guía 1:** `latex/build/Plan_Tesis_Grupo9.2.pdf` (57 pp.)  
+**PDF Guía 1:** `latex/build/Plan_Tesis_Grupo10.pdf` (57 pp.)  
 **Plan v2 (MIA 403):** [`../../02-curso-II/plan-tesis-v2/`](../../02-curso-II/plan-tesis-v2/) · objeto = OpenAPI bancario · piloto = OFB
 **Plan maestro:** `planificacion/PLAN_ELABORACION_PLAN_TESIS.md`  
 **Estado consolidado:** `planificacion/ESTADO_INFORME.md`
@@ -50,7 +50,7 @@ Requisitos: MacTeX o TeX Live (`pdflatex`, `latexmk`).
 
 ```bash
 cd latex && make pdf
-# Salida: build/Plan_Tesis_Grupo9.2.pdf (copia de main.pdf; no usar latexmk sin make)
+# Salida: build/Plan_Tesis_Grupo10.pdf (copia de main.pdf; no usar latexmk sin make)
 ```
 
 ## Repositorio Git
@@ -79,7 +79,7 @@ cd plan-tesis/latex && make pdf
 python3 herramientas/scripts/build_entrega_guia01.py
 ```
 
-Genera `entrega/Informe_Guia1_Grupo9.2/` (5 carpetas, sin README internos) y `.zip`.
+Genera `entrega/Informe_Guia1_Grupo10/` (5 carpetas, sin README internos) y `.zip`.
 
 ## Capítulos en LaTeX
 

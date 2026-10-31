@@ -1,4 +1,4 @@
-# Exposición — Plan de Tesis Grupo 9.2
+# Exposición — Plan de Tesis Grupo 10
 
 **Integrantes:** Alex Mancilla · Jack Paitan  
 **Tema:** Alineación OpenAPI bancario ↔ Service Domains BIAN · modelo S/E/C
@@ -10,7 +10,7 @@ Materiales para las sesiones de exposición del curso (PI-13 / PI-14): **23 y 30
 ## Presentación oficial (proyectar en clase)
 
 ```text
-Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf
+Exposicion_Plan_Tesis_Grupo10-beamer.pdf
 ```
 
 **22 slides · 15 min · Beamer LaTeX** (slides 2–4 no oral · punto rojo)
@@ -27,7 +27,7 @@ cd exposicion/latex && make pdf
 
 | Archivo / carpeta | Uso |
 |-------------------|-----|
-| **`Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf`** | **Presentación oficial** |
+| **`Exposicion_Plan_Tesis_Grupo10-beamer.pdf`** | **Presentación oficial** |
 | [`LIBRETO_EXPOSICION_COMPLETO.md`](LIBRETO_EXPOSICION_COMPLETO.md) | Libreto oral slide por slide |
 | [`ppt/GUION_15MIN_AMPLIADO.md`](ppt/GUION_15MIN_AMPLIADO.md) | Timing 15 min (22 slides Beamer) |
 | [`GUIA_EXPOSICION_JULIO.md`](GUIA_EXPOSICION_JULIO.md) | Guía sesiones 23/30 jul |
@@ -36,7 +36,7 @@ cd exposicion/latex && make pdf
 | [`ppt/`](ppt/) | Guiones auxiliares · PPT solo fuente de figuras |
 | [`referencias/`](referencias/) | Notas papers demo en vivo (Casas, Shvaiko) |
 
-**Respaldo informe completo** (si preguntan detalle): `../latex/build/Plan_Tesis_Grupo9.2.pdf`
+**Respaldo informe completo** (si preguntan detalle): `../latex/build/Plan_Tesis_Grupo10.pdf`
 
 ---
 

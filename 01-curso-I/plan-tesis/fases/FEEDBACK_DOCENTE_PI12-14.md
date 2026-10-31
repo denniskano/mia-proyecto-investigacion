@@ -1,4 +1,4 @@
-# Retroalimentación docente — Grupo 9.2 (PI-12 + PI-13 + PI-14)
+# Retroalimentación docente — Grupo 10 (PI-12 + PI-13 + PI-14)
 
 **Fuentes:**
 - `transcriptions/MAE SE-A PI-12.txt` — redacción, IA generativa, estructura del documento
@@ -9,13 +9,13 @@
 **Integrantes:** Alex Mancilla · Jack Paitan  
 **Última actualización:** 2026-07-22
 
-> **PI-14 — Grupo 9.2:** El docente llamó al grupo pero **no hubo exposición** (ausentes en el turno). Los criterios de PI-14 aplican igual para las fechas **23 y 30 julio**.
+> **PI-14 — Grupo 10:** El docente llamó al grupo pero **no hubo exposición** (ausentes en el turno). Los criterios de PI-14 aplican igual para las fechas **23 y 30 julio**.
 
 ---
 
 ## 1. Mensajes centrales (nuevos vs PI-10/11)
 
-| # | Idea del docente | Implicación Grupo 9.2 |
+| # | Idea del docente | Implicación Grupo 10 |
 |---|------------------|------------------------|
 | R1 | Texto bien escrito ≠ bien razonado; detecta **IA** por párrafos largos, generalidades y palabras rebuscadas | Pulir §1.2–§1.3; segundo Turnitin; redacción propia por sección |
 | R2 | **Párrafos cortos:** 1 oración + complemento; oraciones 20–30 palabras; máx. 5–6 líneas | Acortar bloques en `02-problematica.tex`, §3.5 |
@@ -129,4 +129,4 @@ El documento usa **autor-año manual** en el cuerpo (no `\cite{}`). Las **19** e
 
 ---
 
-*Documento interno Grupo 9.2 — acta PI-12/13/14. Complementa checklists Fase H y `ESTADO_INFORME.md`.*
+*Documento interno Grupo 10 — acta PI-12/13/14. Complementa checklists Fase H y `ESTADO_INFORME.md`.*

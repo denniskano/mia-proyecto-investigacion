@@ -1,7 +1,7 @@
 # Checklist — Fase D (Capítulo 2)
 
 **LaTeX:** `../../latex/chapters/cap02-objetivos/_cap02.tex`  
-**Matriz:** `../../anexos/Matriz_Consistencia_Grupo9.2.xlsx` (Anexo C)  
+**Matriz:** `../../anexos/Matriz_Consistencia_Grupo10.xlsx` (Anexo C)  
 **Compilar:** `cd ../../latex && make pdf`  
 **Estado Fase D:** ✅ **cerrada** (revisión cruzada · 2026-05-28)
 

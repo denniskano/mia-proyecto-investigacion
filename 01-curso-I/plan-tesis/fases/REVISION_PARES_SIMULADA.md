@@ -1,6 +1,6 @@
-# Revisión de pares simulada — Grupo 9.2
+# Revisión de pares simulada — Grupo 10
 
-**Documento:** `latex/build/Plan_Tesis_Grupo9.2.pdf` (~57 pp.)  
+**Documento:** `latex/build/Plan_Tesis_Grupo10.pdf` (~57 pp.)  
 **Fecha:** 2026-07-22  
 **Participantes:** Docente (criterios PI-10–14 + rúbrica plan) · Jack Paitan · Alex Mancilla  
 **Formato:** cada agente lee el PDF completo; luego cruzan hallazgos en 15 min.
@@ -164,4 +164,4 @@
 
 ---
 
-*Documento interno Grupo 9.2 — complementa `FEEDBACK_DOCENTE_PI12-14.md` y `ESTADO_INFORME.md`.*
+*Documento interno Grupo 10 — complementa `FEEDBACK_DOCENTE_PI12-14.md` y `ESTADO_INFORME.md`.*

@@ -9,7 +9,7 @@ El docente pide mostrar **≥2 citas** del plan y el **pasaje exacto** en el pap
 | **Cita en plan** | §1.2 Problemática |
 | **Idea a señalar** | Solo 40 % de estudios aborda un dominio concreto; mayoría usa APIs genéricas |
 | **DOI** | 10.1109/SCCC54552.2021.9650408 |
-| **Copia local** | `../../entrega/Informe_Guia1_Grupo9.2/01 Papers y resumenes/` (resumen) · PDF en Zotero |
+| **Copia local** | `../../entrega/Informe_Guia1_Grupo10/01 Papers y resumenes/` (resumen) · PDF en Zotero |
 
 **Quién expone:** Alex
 

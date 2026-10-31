@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera Matriz de Consistencia (Anexo C) — Grupo 9.2."""
+"""Genera Matriz de Consistencia (Anexo C) — Grupo 10."""
 
 from pathlib import Path
 
@@ -8,7 +8,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "plan-tesis/anexos/Matriz_Consistencia_Grupo9.2.xlsx"
+OUT = ROOT / "plan-tesis/anexos/Matriz_Consistencia_Grupo10.xlsx"
 
 HEADERS = [
     "Fase",
@@ -195,7 +195,7 @@ META = {
         "Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN "
         "mediante análisis estructural y similitud semántica"
     ),
-    "grupo": "Grupo 9.2 — Alex Mancilla · Jack Paitan",
+    "grupo": "Grupo 10 — Alex Mancilla · Jack Paitan",
     "problema_tecnologico": (
         "No existe un método reproducible que cuantifique en qué medida un contrato OpenAPI "
         "bancario se alinea con un Service Domain BIAN y bajo qué tipologías se desalinea."

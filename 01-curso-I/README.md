@@ -4,7 +4,7 @@
 
 | Ruta | Qué es |
 |------|--------|
-| `plan-tesis/latex/build/Plan_Tesis_Grupo9.2.pdf` | Informe Guía 1 (57 pp.) |
+| `plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf` | Informe Guía 1 (57 pp.) |
 | `plan-tesis/` | Repo Git del plan LaTeX, anexos, exposición |
 | `bibliografia/` | PDFs de papers |
 | `guias-institucionales/` | Guía N°01 / N°02 (copias del primer curso) |

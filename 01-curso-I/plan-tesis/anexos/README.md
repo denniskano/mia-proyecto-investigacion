@@ -1,10 +1,10 @@
-# Anexos del plan de tesis — Grupo 9.2
+# Anexos del plan de tesis — Grupo 10
 
 | Anexo | Archivo | Estado |
 |-------|---------|--------|
-| **B — Matriz de papers (estado del arte)** | `Matriz_Papers_EstadoDelArte_Grupo9.2.xlsx` | ✅ 14 fichas sincronizadas (Fase 0) |
-| **C — Matriz de consistencia** | `Matriz_Consistencia_Grupo9.2.xlsx` · `.pdf` (v1, 10 cols + resumen OG-OE) | ✅ Excel + PDF |
-| **C — Matriz v2 (institucional)** | `Matriz_Consistencia_Grupo9.2_v2.xlsx` · `_v2.pdf` (8 cols) | ✅ Solo `anexos/` |
+| **B — Matriz de papers (estado del arte)** | `Matriz_Papers_EstadoDelArte_Grupo10.xlsx` | ✅ 14 fichas sincronizadas (Fase 0) |
+| **C — Matriz de consistencia** | `Matriz_Consistencia_Grupo10.xlsx` · `.pdf` (v1, 10 cols + resumen OG-OE) | ✅ Excel + PDF |
+| **C — Matriz v2 (institucional)** | `Matriz_Consistencia_Grupo10_v2.xlsx` · `_v2.pdf` (8 cols) | ✅ Solo `anexos/` |
 | **Figuras — Modelo de alineación** | `figuras_alineacion_openapi_bian.pdf` | ✅ Fuente · páginas en `../figuras/modelo-alineacion/` |
 | Guía exposición matriz v1 | `GUIA_EXPOSICION_MATRIZ_CONSISTENCIA.md` | ✅ Guion oral (10 cols) |
 | Guía exposición matriz v2 | `GUIA_EXPOSICION_MATRIZ_CONSISTENCIA_v2.md` | ✅ Guion oral (8 cols) |
@@ -25,8 +25,8 @@ herramientas/.venv-excel/bin/python3 herramientas/scripts/export_matriz_consiste
 # Matriz v2 — Excel (8 columnas) + PDF
 herramientas/.venv-excel/bin/python3 herramientas/scripts/build_matriz_consistencia_v2.py
 herramientas/.venv-excel/bin/python3 herramientas/scripts/export_matriz_consistencia_pdf.py \
-  --xlsx plan-tesis/anexos/Matriz_Consistencia_Grupo9.2_v2.xlsx \
-  --pdf plan-tesis/anexos/Matriz_Consistencia_Grupo9.2_v2.pdf \
+  --xlsx plan-tesis/anexos/Matriz_Consistencia_Grupo10_v2.xlsx \
+  --pdf plan-tesis/anexos/Matriz_Consistencia_Grupo10_v2.pdf \
   --header-row 5 --intro-rows 3 --no-resumen
 ```
 

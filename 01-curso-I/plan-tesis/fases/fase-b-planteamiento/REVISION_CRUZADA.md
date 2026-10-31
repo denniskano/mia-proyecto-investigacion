@@ -1,9 +1,9 @@
-# Revisión cruzada — Capítulo 1 (Grupo 9.2)
+# Revisión cruzada — Capítulo 1 (Grupo 10)
 
 **Fecha:** 2026-05-28  
 **Revisores:** Alex Mancilla → Cap. 1 LaTeX · Jack Paitan → validación y correcciones  
 **Criterios:** `CHECKLIST.md`, `FEEDBACK_DOCENTE_PI10.md`, `NOTAS_EQUIPO.md`  
-**Fuente:** `../../latex/chapters/cap01-planteamiento/` · PDF `../../latex/build/Plan_Tesis_Grupo9.2.pdf`
+**Fuente:** `../../latex/chapters/cap01-planteamiento/` · PDF `../../latex/build/Plan_Tesis_Grupo10.pdf`
 
 ---
 

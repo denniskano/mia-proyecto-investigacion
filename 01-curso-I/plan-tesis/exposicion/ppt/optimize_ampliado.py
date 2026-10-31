@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-LEGACY — Obsoleto. Presentación oral oficial: ../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf
+LEGACY — Obsoleto. Presentación oral oficial: ../Exposicion_Plan_Tesis_Grupo10-beamer.pdf
 Guion: ../LIBRETO_EXPOSICION_COMPLETO.md · GUION_15MIN_AMPLIADO.md
 
-Optimiza Exposicion_Plan_Tesis_Grupo9.2-ampliado.pptx (versión anterior, no usar en clase):
+Optimiza Exposicion_Plan_Tesis_Grupo10-ampliado.pptx (versión anterior, no usar en clase):
 - 15 min de exposición (notas orales por slide)
 - ppt-rules: Fuentes NO se expone; resto según guion
 - Elimina duplicados de imágenes Alex (misma sección)
@@ -19,9 +19,9 @@ from pptx.enum.text import PP_ALIGN
 from pptx.util import Inches, Pt
 
 ROOT = Path(__file__).resolve().parent
-INPUT = ROOT / "Exposicion_Plan_Tesis_Grupo9.2-ampliado.pptx"
-OUTPUT = ROOT / "Exposicion_Plan_Tesis_Grupo9.2-ampliado.pptx"
-BACKUP = ROOT / "Exposicion_Plan_Tesis_Grupo9.2-ampliado.backup.pptx"
+INPUT = ROOT / "Exposicion_Plan_Tesis_Grupo10-ampliado.pptx"
+OUTPUT = ROOT / "Exposicion_Plan_Tesis_Grupo10-ampliado.pptx"
+BACKUP = ROOT / "Exposicion_Plan_Tesis_Grupo10-ampliado.backup.pptx"
 
 FONT = "Calibri"
 
@@ -82,7 +82,7 @@ def fix_title_slide(slide) -> None:
             lines = [
                 "Investigación tecnológica · Design Science",
                 "IEEE: Knowledge Representation · ACM: Semantic networks",
-                "Grupo 9.2 — Alex Mancilla · Jack Paitan · UNI · Julio 2026",
+                "Grupo 10 — Alex Mancilla · Jack Paitan · UNI · Julio 2026",
             ]
             for i, line in enumerate(lines):
                 p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()

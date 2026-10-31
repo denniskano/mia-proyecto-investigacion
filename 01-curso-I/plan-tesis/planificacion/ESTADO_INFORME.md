@@ -1,6 +1,6 @@
-# Estado del informe — Plan de Tesis Guía 1 (Grupo 9.2)
+# Estado del informe — Plan de Tesis Guía 1 (Grupo 10)
 
-**PDF:** `latex/build/Plan_Tesis_Grupo9.2.pdf` (~58 pp.)  
+**PDF:** `latex/build/Plan_Tesis_Grupo10.pdf` (~58 pp.)  
 **Alcance:** solo Tesis 1 · **no** construcción ni experimentación (§1.6)  
 **Última sincronización:** 2026-07-22 (revisión de pares + correcciones P1/P2)
 
@@ -50,7 +50,7 @@
 |---|-------|-------------|--------------|
 | 1 | Segundo envío Turnitin (comparar % IA vs 49%) | Ambos | `REVISION_TURNITIN_IA.md` |
 | 2 | Subir PDF + `.bib` + paper al aula virtual | Ambos | `fase-g-administracion/CHECKLIST.md` |
-| 3 | Regenerar/subir zip Drive si aplica | Jack | `entrega/Informe_Guia1_Grupo9.2.zip` ✅ 2026-07-23 |
+| 3 | Regenerar/subir zip Drive si aplica | Jack | `entrega/Informe_Guia1_Grupo10.zip` ✅ 2026-07-23 |
 
 ### Prioridad 2 — calidad / curso
 

@@ -7,4 +7,4 @@ cd 01-curso-I
 python3 herramientas/scripts/build_entrega_guia01.py
 ```
 
-Salida: `Informe_Guia1_Grupo9.2/` y `.zip` (sin README internos).
+Salida: `Informe_Guia1_Grupo10/` y `.zip` (sin README internos).

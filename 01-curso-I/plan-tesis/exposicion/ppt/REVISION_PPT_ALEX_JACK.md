@@ -1,10 +1,10 @@
 # Revisión cruzada PPT — Alex Mancilla ↔ Jack Paitan
 
-> **Presentación oral oficial (30 jul):** [`../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf`](../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf)  
+> **Presentación oral oficial (30 jul):** [`../Exposicion_Plan_Tesis_Grupo10-beamer.pdf`](../Exposicion_Plan_Tesis_Grupo10-beamer.pdf)  
 > **Guion:** [`../LIBRETO_EXPOSICION_COMPLETO.md`](../LIBRETO_EXPOSICION_COMPLETO.md) · [`GUION_15MIN_AMPLIADO.md`](GUION_15MIN_AMPLIADO.md)  
-> Este documento revisa el **PPT fuente de figuras** (`Exposicion_Plan_Tesis_Grupo9.2.pptx`), no el PDF que se proyecta en clase.
+> Este documento revisa el **PPT fuente de figuras** (`Exposicion_Plan_Tesis_Grupo10.pptx`), no el PDF que se proyecta en clase.
 
-**Archivo revisado:** `Exposicion_Plan_Tesis_Grupo9.2.pptx` (regenerado post-revisión)  
+**Archivo revisado:** `Exposicion_Plan_Tesis_Grupo10.pptx` (regenerado post-revisión)  
 **Referencia:** `ppt-rules.pptx` · `rubrica-exposicion.png`  
 **Fecha:** 2026-07-22
 
@@ -126,4 +126,4 @@ Combinar sin perder matriz:
 
 ---
 
-*Acta interna Grupo 9.2 — complementa `NOTAS_ORAL_RUBRICA.md` y `GUIA_EXPOSICION_JULIO.md`. Exposición oral: Beamer PDF.*
+*Acta interna Grupo 10 — complementa `NOTAS_ORAL_RUBRICA.md` y `GUIA_EXPOSICION_JULIO.md`. Exposición oral: Beamer PDF.*

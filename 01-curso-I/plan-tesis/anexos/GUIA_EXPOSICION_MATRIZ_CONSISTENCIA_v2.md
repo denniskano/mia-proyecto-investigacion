@@ -1,8 +1,8 @@
 # Guía para exponer la Matriz de Consistencia (v2)
 
-**Grupo 9.2** · Alex Mancilla · Jack Paitan  
+**Grupo 10** · Alex Mancilla · Jack Paitan  
 **Documento de apoyo** (no es el entregable formal; complementa el Excel/PDF v2)  
-**Archivos:** `Matriz_Consistencia_Grupo9.2_v2.xlsx` · `Matriz_Consistencia_Grupo9.2_v2.pdf`  
+**Archivos:** `Matriz_Consistencia_Grupo10_v2.xlsx` · `Matriz_Consistencia_Grupo10_v2.pdf`  
 **Modelo de alineación (figuras):** `figuras_alineacion_openapi_bian.pdf`  
 **Matriz v1 (10 columnas + resumen OG–OE):** `GUIA_EXPOSICION_MATRIZ_CONSISTENCIA.md`
 
@@ -206,7 +206,7 @@ La v1 detalla más columnas operativas (métricas, estados) y trae hoja **Resume
 
 ## 7. Checklist antes de exponer (v2)
 
-- [ ] PDF o Excel v2 abierto (`Matriz_Consistencia_Grupo9.2_v2.pdf`)
+- [ ] PDF o Excel v2 abierto (`Matriz_Consistencia_Grupo10_v2.pdf`)
 - [ ] Saber ubicar las **8 columnas** y recorrer **una fila** de punta a punta en &lt; 2 min
 - [ ] OG completo (Fila 1) y frase «VD artefacto = AlignmentScore + clasificación»
 - [ ] OE1 = adquirir **y** normalizar; orden del pipeline
@@ -230,4 +230,4 @@ La v1 detalla más columnas operativas (métricas, estados) y trae hoja **Resume
 
 ---
 
-*Documento de apoyo Grupo 9.2 — alineado con `Matriz_Consistencia_Grupo9.2_v2.xlsx`, `build_matriz_consistencia_v2.py` y el plan LaTeX post PI-16.*
+*Documento de apoyo Grupo 10 — alineado con `Matriz_Consistencia_Grupo10_v2.xlsx`, `build_matriz_consistencia_v2.py` y el plan LaTeX post PI-16.*

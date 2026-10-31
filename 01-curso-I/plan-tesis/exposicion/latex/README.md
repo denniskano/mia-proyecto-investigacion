@@ -1,6 +1,6 @@
 # Exposición Beamer — presentación oficial
 
-PDF oficial del Grupo 9.2: **`../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf`** (**22 slides**; slides **2** y **3** no oral · punto rojo).
+PDF oficial del Grupo 10: **`../Exposicion_Plan_Tesis_Grupo10-beamer.pdf`** (**22 slides**; slides **2** y **3** no oral · punto rojo).
 
 **Guiones:** [`../LIBRETO_EXPOSICION_COMPLETO.md`](../LIBRETO_EXPOSICION_COMPLETO.md) · [`../ppt/GUION_15MIN_AMPLIADO.md`](../ppt/GUION_15MIN_AMPLIADO.md)
 
@@ -19,7 +19,7 @@ Requisitos: MacTeX/TeX Live + `../ppt/.venv` (python-pptx).
 
 | Slides Beamer | Origen |
 |---------------|--------|
-| 4–10, 17 | Imágenes extraídas de `../ppt/Exposicion_Plan_Tesis_Grupo9.2.pptx` → `ppt-images/` |
+| 4–10, 17 | Imágenes extraídas de `../ppt/Exposicion_Plan_Tesis_Grupo10.pptx` → `ppt-images/` |
 | 13, 19 | Informe: `../../figuras/cap02/Figura_04_Cadena_Objetivos.png`, `../../figuras/cap03/Figura_06_Brecha.png` |
 
 Extracción automática PPT vía `extract_ppt_images.py`.

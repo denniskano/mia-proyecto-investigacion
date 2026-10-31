@@ -55,4 +55,4 @@
 
 El paquete v2 ya se puede usar como P4 (plan + protocolo + evidencia OE1). Antes de la semana 8 falta: (i) párrafo de estado del arte OFB, (ii) figura del modelo conceptual, (iii) scores v0 de I1 e I4, (iv) limpiar el `.md` de Sesión 5 para que no contradiga el piloto ampliado.
 
-*Grupo 9.2 · revisión aplicada el 30 oct 2026.*
+*Grupo 10 · revisión aplicada el 30 oct 2026.*

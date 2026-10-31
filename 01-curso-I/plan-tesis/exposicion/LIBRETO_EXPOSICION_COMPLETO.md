@@ -1,6 +1,6 @@
-# Libreto completo — Exposición Plan de Tesis Grupo 9.2
+# Libreto completo — Exposición Plan de Tesis Grupo 10
 
-**Presentación oficial:** `Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf` (**22 slides**)  
+**Presentación oficial:** `Exposicion_Plan_Tesis_Grupo10-beamer.pdf` (**22 slides**)  
 **Duración:** 15:00 (**19 slides orales**; **omitir slides 2, 3 y 4**)  
 **Integrantes:** Alex Mancilla · Jack Paitan  
 **Regla:** señalar la diapositiva al hablar. El público no conoce el plan: **explicar cada sigla la primera vez que aparezca**.
@@ -19,7 +19,7 @@
 
 **Diapositiva:** Título + IEEE/ACM
 
-> Buenas [tardes/noches]. Somos el Grupo 9.2 — Alex Mancilla y Jack Paitan.  
+> Buenas [tardes/noches]. Somos el Grupo 10 — Alex Mancilla y Jack Paitan.  
 >  
 > Nuestro plan de tesis estudia qué tan bien **coinciden** dos descripciones del mismo negocio bancario: por un lado, el **contrato OpenAPI** — es decir, el archivo **YAML o JSON** con el que el banco **publica** su API REST (rutas, operaciones y esquemas de datos); por otro, el **Service Domain BIAN** — un bloque del modelo de referencia **BIAN** (*Banking Industry Architecture Network*), que estandariza capacidades bancarias como pagos o cuentas.  
 >  
@@ -536,4 +536,4 @@
 
 ---
 
-*Libreto Grupo 9.2 — sincronizado con `Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf` y `ppt/GUION_15MIN_AMPLIADO.md`.*
+*Libreto Grupo 10 — sincronizado con `Exposicion_Plan_Tesis_Grupo10-beamer.pdf` y `ppt/GUION_15MIN_AMPLIADO.md`.*

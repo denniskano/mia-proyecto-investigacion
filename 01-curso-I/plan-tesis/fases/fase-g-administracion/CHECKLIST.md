@@ -1,7 +1,7 @@
 # Checklist — Fase G (Cap. 5 + anexos + referencias)
 
 **LaTeX:** `../../latex/chapters/cap05-administracion/` · `../../latex/anexos/` · `../../latex/frontmatter/referencias.tex`  
-**PDF:** `../../latex/build/Plan_Tesis_Grupo9.2.pdf` (~55 pp.)  
+**PDF:** `../../latex/build/Plan_Tesis_Grupo10.pdf` (~55 pp.)  
 **Estado Fase G:** ✅ **cerrada** (2026-05-28)
 
 **Prerequisitos:** Fases 0, B, C, D, E, F ✅
@@ -58,7 +58,7 @@
 
 ## Entrega plataforma (PI-03)
 
-- [ ] Subir PDF `Plan_Tesis_Grupo9.2.pdf`
+- [ ] Subir PDF `Plan_Tesis_Grupo10.pdf`
 - [ ] Subir `referencias.bib` o export Zotero
 - [ ] Subir al menos 1 paper clave (p. ej. Casas 2021)
 - [ ] Opcional: Excel Anexos B y C + `figuras_alineacion_openapi_bian.pdf`

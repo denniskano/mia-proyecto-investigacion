@@ -1,6 +1,6 @@
 # Guion 15 min — Presentación oficial Beamer PDF
 
-**Archivo:** [`../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf`](../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf) (**22 slides**)  
+**Archivo:** [`../Exposicion_Plan_Tesis_Grupo10-beamer.pdf`](../Exposicion_Plan_Tesis_Grupo10-beamer.pdf) (**22 slides**)  
 **Libreto oral:** [`../LIBRETO_EXPOSICION_COMPLETO.md`](../LIBRETO_EXPOSICION_COMPLETO.md)  
 **Regenerar:** `cd ../latex && make pdf`  
 **En clase:** slide **1 → 5** (omitir slides 2, 3 y 4 · punto rojo)
@@ -41,4 +41,4 @@
 - [ ] Ensayo cronometrado saltando slides 2, 3 y 4
 - [ ] PDF Casas + Shvaiko abiertos
 - [ ] PDF Anexo C para matriz si preguntan detalle
-- [ ] Proyectar `Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf` pantalla completa
+- [ ] Proyectar `Exposicion_Plan_Tesis_Grupo10-beamer.pdf` pantalla completa

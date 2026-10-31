@@ -1,4 +1,4 @@
-# Figuras del plan de tesis — Grupo 9.2
+# Figuras del plan de tesis — Grupo 10
 
 **Carpeta canónica** para incluir imágenes en LaTeX (`\graphicspath` apunta aquí).
 

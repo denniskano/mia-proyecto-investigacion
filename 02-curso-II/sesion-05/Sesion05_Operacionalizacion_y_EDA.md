@@ -1,13 +1,13 @@
 ---
 title: "Sesión 5 — Operacionalización, instrumentos y EDA del piloto OFB"
-author: "Grupo 9.2 · Alex Mancilla Antay · Jack Paitan Cano"
+author: "Grupo 10 · Alex Mancilla Antay · Jack Paitan Cano"
 subtitle: "Objeto: OpenAPI bancario ↔ BIAN · Piloto: Open Finance Brasil"
 lang: es
 ---
 
 # Sesión 5 — Operacionalización e instrumentos · EDA del piloto OFB
 
-**Grupo 9.2** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
 **Programa:** Maestría en Inteligencia Artificial · UNI · MIA 403  
 **Objeto de la tesis:** contratos **OpenAPI bancarios** frente a Service Domains BIAN.  
 **Piloto de esta sesión:** catálogo **Open Finance Brasil (OFB)** + tres SD BIAN v14.  
@@ -204,4 +204,4 @@ Cuando existan scores en I1–I6, los niveles se asignan **después** de los umb
 | `data/piloto_ofb_bian/` | Corpus OFB + BIAN |
 | `data/piloto_ofb_bian/README.md` | Lista de 38 APIs |
 
-*Grupo 9.2 · Sesión 5 · piloto Open Finance Brasil · objeto OpenAPI bancario · octubre 2026.*
+*Grupo 10 · Sesión 5 · piloto Open Finance Brasil · objeto OpenAPI bancario · octubre 2026.*

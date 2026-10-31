@@ -1,4 +1,4 @@
-PDF = build/Plan_Tesis_Grupo9.2.pdf
+PDF = build/Plan_Tesis_Grupo10.pdf
 MAIN = main.tex
 
 .PHONY: pdf clean open

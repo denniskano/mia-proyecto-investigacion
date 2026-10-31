@@ -1,8 +1,8 @@
 # Guía de exposición — Julio 2026 (PI-13 / PI-14)
 
-**Grupo 9.2:** Alex Mancilla · Jack Paitan  
+**Grupo 10:** Alex Mancilla · Jack Paitan  
 **Tema:** Alineación contratos OpenAPI bancarios ↔ Service Domains BIAN · modelo S/E/C  
-**PDF:** `../latex/build/Plan_Tesis_Grupo9.2.pdf`
+**PDF:** `../latex/build/Plan_Tesis_Grupo10.pdf`
 
 ---
 
@@ -105,7 +105,7 @@ Decir explícito: «S/E/C se calculan por **unidad de análisis**; el score glob
 
 ## 7. Exposición final con presentación Beamer (30 jul)
 
-**Archivo para presentar:** [`Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf`](Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf) (**22 slides** · **15 min**)  
+**Archivo para presentar:** [`Exposicion_Plan_Tesis_Grupo10-beamer.pdf`](Exposicion_Plan_Tesis_Grupo10-beamer.pdf) (**22 slides** · **15 min**)  
 **Guion resumido:** [`ppt/GUION_15MIN_AMPLIADO.md`](ppt/GUION_15MIN_AMPLIADO.md)  
 **Libreto completo:** [`LIBRETO_EXPOSICION_COMPLETO.md`](LIBRETO_EXPOSICION_COMPLETO.md)  
 **Regenerar PDF:** `cd latex && make pdf`
@@ -154,4 +154,4 @@ Ensayar **una vez completa** grabando pantalla (5 min) y revisar si las ideas «
 
 ---
 
-*Guía operativa Grupo 9.2 — sesiones 23/30 jul 2026. Complementa `../planificacion/REVISION_ORAL_ALEX_JACK.md` y `../fases/FEEDBACK_DOCENTE_PI12-14.md`.*
+*Guía operativa Grupo 10 — sesiones 23/30 jul 2026. Complementa `../planificacion/REVISION_ORAL_ALEX_JACK.md` y `../fases/FEEDBACK_DOCENTE_PI12-14.md`.*

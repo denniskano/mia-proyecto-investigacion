@@ -46,6 +46,32 @@ _build_*/
 # Entrega Guía 1 regenerable (zip ~170 MB)
 01-curso-I/plan-tesis/entrega/Informe_Guia1_Grupo9.2/
 01-curso-I/plan-tesis/entrega/Informe_Guia1_Grupo9.2.zip
+01-curso-I/plan-tesis/entrega/Informe_Guia1_Grupo10/
+01-curso-I/plan-tesis/entrega/Informe_Guia1_Grupo10.zip
+
+# PDFs oficiales del aula y material de clase (pesados / duplicados)
+**/GUIA*.pdf
+**/GUÍA*.pdf
+00-archivo/introduccion/*.pdf
+00-archivo/clases/**
+00-archivo/base-bibliografica/*
+!00-archivo/base-bibliografica/README.md
+00-archivo/piloto-extracto-inicial/*.pptx
+00-archivo/piloto-extracto-inicial/*.zip
+01-curso-I/guias-institucionales/*.pdf
+01-curso-I/bibliografia/otros/
+
+# PPT obsoletos y backups de exposición
+**/*.backup.pptx
+**/*.bk.pptx
+**/*-ampliado.pptx
+**/*-ampliado.backup.pptx
+01-curso-I/plan-tesis/exposicion/ppt/Exposicion_Plan_Tesis_Grupo9.2.pptx
+01-curso-I/plan-tesis/exposicion/ppt/Exposicion_Plan_Tesis_Grupo9.2-v2.pptx
+01-curso-I/plan-tesis/exposicion/ppt/Exposicion_Plan_Tesis_Grupo10.pptx
+01-curso-I/plan-tesis/exposicion/ppt/Exposicion_Plan_Tesis_Grupo10-v2.pptx
+01-curso-I/plan-tesis/exposicion/Exposicion_Plan_Tesis_Grupo9.2.pdf
+01-curso-I/plan-tesis/exposicion/Exposicion_Plan_Tesis_Grupo10.pdf
 
 # Repo GitHub previo del plan (metadatos locales; no subir)
 01-curso-I/plan-tesis/.git-github-denniskano/
@@ -53,3 +79,6 @@ _build_*/
 # Temporales Office
 **/~$*.xlsx
 **/~$*.docx
+
+# Libro de contexto >5 MB (solo local)
+01-curso-I/bibliografia/contexto-openapi-bian/Bhatia*.pdf

@@ -35,7 +35,7 @@ No existe un umbral oficial publicado por Turnitin. Objetivo práctico tras una 
 
 ## Checklist por párrafo (aplicar en cada revisión)
 
-- [ ] ¿Puedo citar **una decisión del Grupo 9.2** (matriz, Anexo F, feedback docente)?
+- [ ] ¿Puedo citar **una decisión del Grupo 10** (matriz, Anexo F, feedback docente)?
 - [ ] ¿Hay al menos **un dato, tabla, figura o cita** anclada al proyecto?
 - [ ] ¿Varío longitud de oraciones (cortas + largas)?
 - [ ] ¿Evité encadenar «Sin embargo / Además / Por tanto / En este sentido»?
@@ -50,7 +50,7 @@ No existe un umbral oficial publicado por Turnitin. Objetivo práctico tras una 
 |--------|-----|
 | `fases/fase-0-bibliografia/fichas/*.md` | Estado del arte |
 | `FEEDBACK_DOCENTE_PI10.md` / `PI11.md` | Planteamiento y niveles |
-| `anexos/Matriz_Consistencia_Grupo9.2.xlsx` | Objetivos y fases |
+| `anexos/Matriz_Consistencia_Grupo10.xlsx` | Objetivos y fases |
 | `datos-objeto-estudio/` + Anexo F | Ejemplos concretos |
 | Transcripciones PI-10, PI-11 | Formulaciones usadas en exposición oral |
 

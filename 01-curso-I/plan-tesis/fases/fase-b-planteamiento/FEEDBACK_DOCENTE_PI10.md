@@ -1,4 +1,4 @@
-# Retroalimentación docente — Grupo 9.2
+# Retroalimentación docente — Grupo 10
 
 **Fuente principal:** exposición en clase · transcripción `transcriptions/MAE SE-A PI-10.txt`  
 **Tema expuesto:** alineación OpenAPI ↔ BIAN en APIs bancarias · matriz de consistencia  
@@ -92,7 +92,7 @@
 | ID | Qué | Evidencia |
 |----|-----|-----------|
 | V3, M6 | Cap. 2 objetivos = transformadores S/E/C | `latex/chapters/cap02-objetivos/` · Fase D ✅ |
-| — | Fig. 1–3 en PDF del plan | `latex/build/Plan_Tesis_Grupo9.2.pdf` |
+| — | Fig. 1–3 en PDF del plan | `latex/build/Plan_Tesis_Grupo10.pdf` |
 | — | Fig. 4 cadena objetivos | `figuras/cap02/` · Cap. 2 §2.6 |
 | — | Fig. 6 brecha estado del arte | `figuras/cap03/` · Cap. 3 §3.6 |
 | I6 (parcial) | Estado del arte sistematizado por ejes | Cap. 3 §3.5–§3.6 · Fase C ✅ |
@@ -125,4 +125,4 @@
 
 ---
 
-*Documento interno Grupo 9.2 — acta PI-10 + seguimiento vivo. Complementa `NOTAS_EQUIPO.md` y checklists por fase.*
+*Documento interno Grupo 10 — acta PI-10 + seguimiento vivo. Complementa `NOTAS_EQUIPO.md` y checklists por fase.*

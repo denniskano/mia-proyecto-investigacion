@@ -1,7 +1,7 @@
-# Ejes del estado del arte — Grupo 9.2
+# Ejes del estado del arte — Grupo 10
 
 Mapa y **síntesis por eje** para Cap. 3 §3.5–3.6.  
-Detalle paper a paper: `fichas/` y Anexo B (`Matriz_Papers_EstadoDelArte_Grupo9.2.xlsx`).  
+Detalle paper a paper: `fichas/` y Anexo B (`Matriz_Papers_EstadoDelArte_Grupo10.xlsx`).  
 Borrador narrativo Fase C: `../fase-c-marco-teorico/CAPITULO_03_ESTADO_DEL_ARTE.md`.
 
 ---

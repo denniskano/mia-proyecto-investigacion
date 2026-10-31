@@ -1,7 +1,7 @@
-PDF = build/Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf
+PDF = build/Exposicion_Plan_Tesis_Grupo10-beamer.pdf
 MAIN = exposicion_beamer.tex
-OUT_COPY = ../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf
-PPT = ../ppt/Exposicion_Plan_Tesis_Grupo9.2.pptx
+OUT_COPY = ../Exposicion_Plan_Tesis_Grupo10-beamer.pdf
+PPT = ../ppt/Exposicion_Plan_Tesis_Grupo10.pptx
 VENV_PY = ../ppt/.venv/bin/python3
 
 .PHONY: pdf clean open images

@@ -25,9 +25,9 @@ cd plan-tesis/latex && make pdf
 ```
 
 Salidas:
-- Plan de tesis PDF → `plan-tesis/latex/build/Plan_Tesis_Grupo9.2.pdf`
+- Plan de tesis PDF → `plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf`
 - Figuras Cap. 1 → `plan-tesis/figuras/cap01/` (vía symlinks desde Fase B)
 - Figuras Cap. 2–3 → `plan-tesis/figuras/cap02/`, `cap03/` (Fase C/D/E)
-- Fase 0 → `plan-tesis/fases/fase-0-bibliografia/fichas/` + `plan-tesis/anexos/Matriz_Papers_EstadoDelArte_Grupo9.2.xlsx`
-- Anexo C → `plan-tesis/anexos/Matriz_Consistencia_Grupo9.2.xlsx`
-- Entrega Guía 1 → `plan-tesis/entrega/Informe_Guia1_Grupo9.2/` (+ `.zip`)
+- Fase 0 → `plan-tesis/fases/fase-0-bibliografia/fichas/` + `plan-tesis/anexos/Matriz_Papers_EstadoDelArte_Grupo10.xlsx`
+- Anexo C → `plan-tesis/anexos/Matriz_Consistencia_Grupo10.xlsx`
+- Entrega Guía 1 → `plan-tesis/entrega/Informe_Guia1_Grupo10/` (+ `.zip`)

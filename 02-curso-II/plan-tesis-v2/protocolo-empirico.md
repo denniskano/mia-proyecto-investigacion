@@ -1,6 +1,6 @@
 # Protocolo empírico — OFB × BIAN (semana 7 en adelante)
 
-**Grupo 9.2** · MIA 403 · Plan de tesis v2  
+**Grupo 10** · MIA 403 · Plan de tesis v2  
 **Objeto de la tesis:** contrato OpenAPI **bancario**  
 **Referencia:** Service Domain **BIAN v14** (SavingsAccount, CurrentAccount, PaymentOrderInitiation)  
 **Muestra / piloto:** catálogo **Open Finance Brasil**  

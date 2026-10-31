@@ -1,8 +1,8 @@
 # Guía para exponer la Matriz de Consistencia
 
-**Grupo 9.2** · Alex Mancilla · Jack Paitan  
+**Grupo 10** · Alex Mancilla · Jack Paitan  
 **Documento de apoyo** (no es el entregable formal; complementa el Excel)  
-**Archivo Excel:** `Matriz_Consistencia_Grupo9.2.xlsx`  
+**Archivo Excel:** `Matriz_Consistencia_Grupo10.xlsx`  
 **Modelo de alineación (figuras):** `figuras_alineacion_openapi_bian.pdf`
 
 ---
@@ -163,4 +163,4 @@ El **AlignmentScore** y su clasificación por niveles de alineación.
 
 ---
 
-*Documento de apoyo Grupo 9.2 — alineado con `Matriz_Consistencia_Grupo9.2.xlsx` y `figuras_alineacion_openapi_bian.pdf`.*
+*Documento de apoyo Grupo 10 — alineado con `Matriz_Consistencia_Grupo10.xlsx` y `figuras_alineacion_openapi_bian.pdf`.*

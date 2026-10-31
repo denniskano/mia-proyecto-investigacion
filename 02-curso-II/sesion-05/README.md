@@ -1,6 +1,6 @@
 # Sesión 5 — Operacionalización e instrumentos · EDA
 
-Documento de curso (Guía 2 / desarrollo) Grupo 9.2. El plan vigente está en `../plan-tesis-v2/`.
+Documento de curso (Guía 2 / desarrollo) Grupo 10. El plan vigente está en `../plan-tesis-v2/`.
 
 | Archivo | Formato |
 |---------|---------|

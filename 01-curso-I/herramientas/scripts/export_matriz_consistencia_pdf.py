@@ -10,8 +10,8 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_XLSX = ROOT / "plan-tesis/anexos/Matriz_Consistencia_Grupo9.2.xlsx"
-DEFAULT_PDF = ROOT / "plan-tesis/anexos/Matriz_Consistencia_Grupo9.2.pdf"
+DEFAULT_XLSX = ROOT / "plan-tesis/anexos/Matriz_Consistencia_Grupo10.xlsx"
+DEFAULT_PDF = ROOT / "plan-tesis/anexos/Matriz_Consistencia_Grupo10.pdf"
 
 
 def latex_escape(text: str) -> str:

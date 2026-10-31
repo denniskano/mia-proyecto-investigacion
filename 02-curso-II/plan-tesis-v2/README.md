@@ -1,6 +1,6 @@
 # Plan de tesis v2 — Proyecto de Investigación II (MIA 403)
 
-**Grupo 9.2** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
 **Curso:** MIA 403 · 2026-2  
 **Continuidad:** Guía 1 vive en `../../01-curso-I/plan-tesis/` (LaTeX). Esta carpeta es el **plan vigente** del segundo curso: ejecutable + protocolo + evidencia piloto.
 
@@ -12,7 +12,7 @@
 | `cronograma-sprints.md` | Hoja de ruta 16 semanas (Trello) |
 | `protocolo-empirico.md` | Protocolo paso a paso (semana 7+) |
 | `matriz-consistencia-ofb.md` | Matriz institucional 8 columnas, alcance OFB |
-| `Matriz_Consistencia_OFB_Grupo9.2.xlsx` / `.pdf` | Misma matriz, entrega institucional |
+| `Matriz_Consistencia_OFB_Grupo10.xlsx` / `.pdf` | Misma matriz, entrega institucional |
 
 **Objeto de la tesis (se mantiene):** contratos **OpenAPI bancarios** frente a Service Domains BIAN.  
 **Piloto MIA 403:** catálogo **Open Finance Brasil (OFB)** — muestra empírica, no redefinición del objeto. En este curso no se añaden YAML de un banco emisor ni Open Banking UK.

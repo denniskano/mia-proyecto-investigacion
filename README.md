@@ -1,6 +1,6 @@
 # Alineación OpenAPI bancario ↔ BIAN
 
-**Grupo 9.2** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
 **Programa:** Maestría en Inteligencia Artificial · UNI
 
 | | |
@@ -31,10 +31,10 @@ mia-proyecto-investigacion/
 | Qué necesitas | Ruta |
 |---------------|------|
 | **Plan vigente (Curso II)** | [`02-curso-II/plan-tesis-v2/PLAN_TESIS_V2.pdf`](02-curso-II/plan-tesis-v2/PLAN_TESIS_V2.pdf) |
-| Matriz consistencia OFB | [`02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo9.2.pdf`](02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo9.2.pdf) |
+| Matriz consistencia OFB | [`02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf`](02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf) |
 | PPT / slides piloto | [`02-curso-II/sesion-05/Sesion05_Operacionalizacion_y_EDA_slides.pdf`](02-curso-II/sesion-05/Sesion05_Operacionalizacion_y_EDA_slides.pdf) |
 | Dataset piloto | [`02-curso-II/sesion-05/data/piloto_ofb_bian/`](02-curso-II/sesion-05/data/piloto_ofb_bian/) |
-| Plan Guía 1 (LaTeX) | [`01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo9.2.pdf`](01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo9.2.pdf) |
+| Plan Guía 1 (LaTeX) | [`01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf`](01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf) |
 | Sílabo MIA 403 | [`02-curso-II/material-oficial/silabo/`](02-curso-II/material-oficial/silabo/) |
 
 ## Continuidad en una frase

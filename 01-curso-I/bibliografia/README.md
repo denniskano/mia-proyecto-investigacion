@@ -1,4 +1,4 @@
-# Bibliografía — Grupo 9.2
+# Bibliografía — Grupo 10
 
 Papers clasificados para el plan de tesis. Importar a **Zotero** con las mismas etiquetas.
 
@@ -21,4 +21,4 @@ Papers clasificados para el plan de tesis. Importar a **Zotero** con las mismas 
 
 - Carpeta de trabajo: `plan-tesis/fases/fase-0-bibliografia/`
 - Una ficha por paper en `fichas/`
-- Excel consolidado: `plan-tesis/anexos/Matriz_Papers_EstadoDelArte_Grupo9.2.xlsx`
+- Excel consolidado: `plan-tesis/anexos/Matriz_Papers_EstadoDelArte_Grupo10.xlsx`

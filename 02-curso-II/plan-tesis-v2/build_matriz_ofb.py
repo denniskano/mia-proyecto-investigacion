@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Matriz de consistencia Plan v2 — objeto OpenAPI bancario; piloto OFB. Grupo 9.2."""
+"""Matriz de consistencia Plan v2 — objeto OpenAPI bancario; piloto OFB. Grupo 10."""
 
 from pathlib import Path
 
@@ -7,7 +7,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
-OUT = Path(__file__).resolve().parent / "Matriz_Consistencia_OFB_Grupo9.2.xlsx"
+OUT = Path(__file__).resolve().parent / "Matriz_Consistencia_OFB_Grupo10.xlsx"
 
 HEADERS = [
     "Problema de Estudio",
@@ -33,7 +33,7 @@ META = {
         "Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN "
         "mediante análisis estructural y similitud semántica (piloto: Open Finance Brasil)"
     ),
-    "grupo": "Grupo 9.2 — Alex Mancilla Antay · Jack Paitan Cano · objeto = OpenAPI bancario · referencia = BIAN · piloto = OFB",
+    "grupo": "Grupo 10 — Alex Mancilla Antay · Jack Paitan Cano · objeto = OpenAPI bancario · referencia = BIAN · piloto = OFB",
 }
 
 ROWS = [

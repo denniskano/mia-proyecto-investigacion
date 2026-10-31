@@ -1,6 +1,6 @@
 ---
 title: "Plan de tesis v2 — Alineación OpenAPI bancario ↔ BIAN (piloto OFB)"
-author: "Grupo 9.2 · Alex Mancilla Antay · Jack Paitan Cano"
+author: "Grupo 10 · Alex Mancilla Antay · Jack Paitan Cano"
 subtitle: "MIA 403 · Proyecto de Investigación II · 2026-2"
 lang: es
 ---
@@ -12,7 +12,7 @@ lang: es
 
 **Autores:** Alex Mancilla Antay · Jack Paitan Cano  
 **Programa:** Maestría en Inteligencia Artificial · UNI · MIA 403 (2026-2)  
-**Prerrequisito:** Plan Guía 1 (`../../01-curso-I/plan-tesis/latex/`, Grupo 9.2)  
+**Prerrequisito:** Plan Guía 1 (`../../01-curso-I/plan-tesis/latex/`, Grupo 10)  
 **Producto de curso:** Plan de Tesis para trámite + protocolo empírico + evidencia piloto (P4, semanas 8–9)
 
 ---
@@ -313,4 +313,4 @@ Cronograma semanal: `cronograma-sprints.md`.
 - Sesión 5: `../sesion-05/`
 - Sílabo: `../material-oficial/silabo/MIA-403_Proyecto_de_Investigacion_II_Silabo_v_2.pdf`
 
-*Grupo 9.2 · Plan de tesis v2 · octubre 2026 · objeto = OpenAPI bancario · referencia = BIAN · piloto = OFB.*
+*Grupo 10 · Plan de tesis v2 · octubre 2026 · objeto = OpenAPI bancario · referencia = BIAN · piloto = OFB.*

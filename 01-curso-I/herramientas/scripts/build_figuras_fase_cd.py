@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera Figuras 4 (Cap. 2) y 6 (Cap. 3) — Grupo 9.2."""
+"""Genera Figuras 4 (Cap. 2) y 6 (Cap. 3) — Grupo 10."""
 
 from pathlib import Path
 

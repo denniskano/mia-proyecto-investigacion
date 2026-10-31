@@ -1,4 +1,4 @@
-# Resumen de cambios — Grupo 9.2  
+# Resumen de cambios — Grupo 10  
 **Plan de tesis:** *Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN*  
 **Integrantes:** Alex Mancilla Antay · Jack Paitan Cano  
 **Referencia:** observaciones de la sesión de exposición MAE SE-A PI-16  
@@ -7,7 +7,7 @@
 
 Estimado docente:
 
-En atención a las observaciones formuladas durante nuestra exposición del plan de tesis, el Grupo 9.2 ha actualizado el **informe (Guía 1)** y la **presentación Beamer**. A continuación detallamos los cambios realizados, organizados según los puntos discutidos en la sesión.
+En atención a las observaciones formuladas durante nuestra exposición del plan de tesis, el Grupo 10 ha actualizado el **informe (Guía 1)** y la **presentación Beamer**. A continuación detallamos los cambios realizados, organizados según los puntos discutidos en la sesión.
 
 ---
 
@@ -103,7 +103,7 @@ En atención a las observaciones formuladas durante nuestra exposición del plan
 
 | Documento | Ubicación |
 |-----------|-----------|
-| Presentación Beamer (PDF) | `plan-tesis/exposicion/Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf` |
+| Presentación Beamer (PDF) | `plan-tesis/exposicion/Exposicion_Plan_Tesis_Grupo10-beamer.pdf` |
 | Fuente Beamer | `plan-tesis/exposicion/latex/exposicion_beamer.tex` |
 | Cap. 2 — Objetivos | `plan-tesis/latex/chapters/cap02-objetivos/_cap02.tex` |
 | Tabla 5 — Variables | `plan-tesis/latex/tables/tab05-variables.tex` |
@@ -123,5 +123,5 @@ En atención a las observaciones formuladas durante nuestra exposición del plan
 
 Quedamos atentos a sus comentarios adicionales.
 
-**Grupo 9.2** · Alex Mancilla · Jack Paitan  
+**Grupo 10** · Alex Mancilla · Jack Paitan  
 Universidad Nacional de Ingeniería · Maestría en Inteligencia Artificial · Lima, 2026

@@ -4,7 +4,7 @@
 
 | Archivo | Uso |
 |---------|-----|
-| **`../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf`** | **Proyectar en clase** — 22 slides (saltar slides **2** y **3**) |
+| **`../Exposicion_Plan_Tesis_Grupo10-beamer.pdf`** | **Proyectar en clase** — 22 slides (saltar slides **2** y **3**) |
 
 ## Guiones (alineados al Beamer PDF)
 
@@ -17,9 +17,9 @@
 
 | Archivo | Uso |
 |---------|-----|
-| `Exposicion_Plan_Tesis_Grupo9.2.pptx` | Fuente de figuras para Beamer (`latex/extract_ppt_images.py`) |
-| `Exposicion_Plan_Tesis_Grupo9.2-v2.pptx` | Experimento PptxGenJS (no oficial) |
-| `Exposicion_Plan_Tesis_Grupo9.2-ampliado.pptx` | Versión anterior (obsoleta) |
+| `Exposicion_Plan_Tesis_Grupo10.pptx` | Fuente de figuras para Beamer (`latex/extract_ppt_images.py`) |
+| `Exposicion_Plan_Tesis_Grupo10-v2.pptx` | Experimento PptxGenJS (no oficial) |
+| `Exposicion_Plan_Tesis_Grupo10-ampliado.pptx` | Versión anterior (obsoleta) |
 
 ## Regenerar PDF oficial
 

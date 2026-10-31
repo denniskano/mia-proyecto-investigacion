@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Genera Exposicion_Plan_Tesis_Grupo9.2-v2.pptx con PptxGenJS.
+ * Genera Exposicion_Plan_Tesis_Grupo10-v2.pptx con PptxGenJS.
  * Estrategia: master slide + zonas (título / cuerpo / pie) + layouts split (texto + figura).
  * No modifica PPT existentes.
  */
@@ -12,7 +12,7 @@ import pptxgen from "pptxgenjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ASSETS = path.join(__dirname, "assets");
-const OUTPUT = path.join(__dirname, "Exposicion_Plan_Tesis_Grupo9.2-v2.pptx");
+const OUTPUT = path.join(__dirname, "Exposicion_Plan_Tesis_Grupo10-v2.pptx");
 
 const C = {
   navy: "1B365D",
@@ -28,7 +28,7 @@ const C = {
 };
 
 const FONT = "Arial";
-const FOOTER = "Grupo 9.2 · Plan de Tesis · UNI · Jul 2026";
+const FOOTER = "Grupo 10 · Plan de Tesis · UNI · Jul 2026";
 
 let slideNum = 0;
 
@@ -251,10 +251,10 @@ function addTableSlide(pptx, title, headers, rows, notes, colW) {
 function build() {
   const pptx = new pptxgen();
   pptx.layout = "LAYOUT_WIDE";
-  pptx.author = "Grupo 9.2 — Alex Mancilla · Jack Paitan";
+  pptx.author = "Grupo 10 — Alex Mancilla · Jack Paitan";
   pptx.company = "Universidad Nacional de Ingeniería";
   pptx.subject = "Plan de Tesis — Alineación OpenAPI ↔ BIAN";
-  pptx.title = "Exposición Plan de Tesis Grupo 9.2 (v2)";
+  pptx.title = "Exposición Plan de Tesis Grupo 10 (v2)";
 
   defineMasters(pptx);
 
@@ -277,7 +277,7 @@ function build() {
       [
         { text: "Investigación tecnológica · Design Science", options: { breakLine: true } },
         { text: "IEEE: Knowledge Representation · ACM: Semantic networks", options: { breakLine: true } },
-        { text: "Grupo 9.2 — Alex Mancilla · Jack Paitan", options: { breakLine: true } },
+        { text: "Grupo 10 — Alex Mancilla · Jack Paitan", options: { breakLine: true } },
         { text: "Universidad Nacional de Ingeniería · Julio 2026", options: { breakLine: true } },
       ],
       { x: 0.8, y: 3.6, w: 11, h: 2.2, fontSize: 20, color: C.accent, fontFace: FONT }

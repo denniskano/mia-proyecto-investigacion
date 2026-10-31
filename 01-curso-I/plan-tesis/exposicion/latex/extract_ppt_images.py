@@ -9,10 +9,10 @@ from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 ROOT = Path(__file__).resolve().parent
-PPT = ROOT.parent / "ppt" / "Exposicion_Plan_Tesis_Grupo9.2.pptx"
+PPT = ROOT.parent / "ppt" / "Exposicion_Plan_Tesis_Grupo10.pptx"
 OUT = ROOT / "ppt-images"
 
-# Slides con figuras en Exposicion_Plan_Tesis_Grupo9.2.pptx
+# Slides con figuras en Exposicion_Plan_Tesis_Grupo10.pptx
 SLIDES = [*range(4, 12), 13, 17, 20]
 
 

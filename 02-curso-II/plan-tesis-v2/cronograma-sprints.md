@@ -1,6 +1,6 @@
 # Cronograma 16 semanas — MIA 403 (Trello)
 
-**Grupo 9.2** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
 **Tablero sugerido:** listas `Backlog` · `Semana N` · `En curso` · `Hecho` · `Bloqueado`  
 **Etiquetas:** `P1`–`P7` (producto sílabo) · `OE1`–`OE4` · `OFB` · `BIAN` · `defensa`
 

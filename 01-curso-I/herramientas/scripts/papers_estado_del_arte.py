@@ -1,4 +1,4 @@
-"""Catálogo de los 14 papers de estado del arte — Grupo 9.2."""
+"""Catálogo de los 14 papers de estado del arte — Grupo 10."""
 
 PAPERS = [
     {

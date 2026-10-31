@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * PPT Sesión 5 — operacionalización + EDA. Grupo 9.2
+ * PPT Sesión 5 — operacionalización + EDA. Grupo 10
  */
 
 import path from "node:path";
@@ -27,7 +27,7 @@ const C = {
 };
 
 const FONT = "Arial";
-const FOOTER = "Grupo 9.2 · Sesión 5 · Piloto OFB × BIAN · objeto OpenAPI bancario · Oct 2026";
+const FOOTER = "Grupo 10 · Sesión 5 · Piloto OFB × BIAN · objeto OpenAPI bancario · Oct 2026";
 
 function footer(slide) {
   slide.addShape("rect", { x: 0, y: 7.05, w: 13.333, h: 0.02, fill: { color: C.muted } });
@@ -122,7 +122,7 @@ async function main() {
   const pptx = new pptxgen();
   pptx.defineLayout({ name: "WIDE", width: 13.333, height: 7.5 });
   pptx.layout = "WIDE";
-  pptx.author = "Grupo 9.2 — Alex Mancilla · Jack Paitan";
+  pptx.author = "Grupo 10 — Alex Mancilla · Jack Paitan";
   pptx.title = "Sesión 5 — Operacionalización e instrumentos · EDA";
   pptx.subject = "Alineación OpenAPI bancario ↔ BIAN";
 
@@ -152,7 +152,7 @@ async function main() {
       fontFace: FONT,
     });
     s.addText(
-      "Objeto: OpenAPI bancario ↔ BIAN  ·  Piloto: Open Finance Brasil (38 APIs)\nGrupo 9.2  ·  Alex Mancilla Antay  ·  Jack Paitan Cano  ·  MIA 403 · UNI",
+      "Objeto: OpenAPI bancario ↔ BIAN  ·  Piloto: Open Finance Brasil (38 APIs)\nGrupo 10  ·  Alex Mancilla Antay  ·  Jack Paitan Cano  ·  MIA 403 · UNI",
       {
         x: 0.7,
         y: 4.1,
@@ -164,7 +164,7 @@ async function main() {
       }
     );
     s.addNotes(
-      "Documento de apoyo de la Sesión 5. No sustituye el plan LaTeX. El PPT de plan de trabajo figura como Grupo 10; el plan vigente es Grupo 9.2."
+      "Documento de apoyo de la Sesión 5. No sustituye el plan LaTeX. Identidad vigente: Grupo 10."
     );
   }
 
@@ -843,7 +843,7 @@ async function main() {
         fontFace: FONT,
       }
     );
-    s.addText("Grupo 9.2  ·  Alex Mancilla  ·  Jack Paitan  ·  fuente escrita: Sesion05_Operacionalizacion_y_EDA.md", {
+    s.addText("Grupo 10  ·  Alex Mancilla  ·  Jack Paitan  ·  fuente escrita: Sesion05_Operacionalizacion_y_EDA.md", {
       x: 0.7,
       y: 5.3,
       w: 11.5,

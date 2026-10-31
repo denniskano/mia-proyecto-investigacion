@@ -1,4 +1,4 @@
-# Revisión cruzada — Fichas estado del arte (Grupo 9.2)
+# Revisión cruzada — Fichas estado del arte (Grupo 10)
 
 **Fecha simulada:** 2026-05-28  
 **Revisores:** Alex Mancilla → fichas de Jack · Jack Paitan → fichas de Alex  
@@ -54,7 +54,7 @@
 1. **StructuralScore (E)** solo cuando el aporte sea correspondencia REST (paths/operations/schemas) ↔ BIAN; no confundir con estructura ontológica genérica.
 2. **SemanticScore (S)** vía embeddings/ontología/similitud léxica; Mainas aporta **representación**, no score predefinido.
 3. **Papers E5/E6** en §3.5: rol de **delimitación** explícita, no como solución parcial.
-4. **Citas:** usar año del catálogo Grupo 9.2; nota al pie si publicación difiere (Chandrasekaran 2022; Golmohammadi 2024).
+4. **Citas:** usar año del catálogo Grupo 10; nota al pie si publicación difiere (Chandrasekaran 2022; Golmohammadi 2024).
 
 ---
 

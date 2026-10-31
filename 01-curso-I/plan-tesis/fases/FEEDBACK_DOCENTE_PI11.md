@@ -1,4 +1,4 @@
-# Retroalimentación docente — Grupo 9.2 (PI-11 + Clase 04)
+# Retroalimentación docente — Grupo 10 (PI-11 + Clase 04)
 
 **Fuentes:**
 - Transcripción `transcriptions/MAE SE-A PI-11.txt` (sesión adquisición de datos · exposición Jack Paitan / Alex Mancilla)
@@ -14,7 +14,7 @@
 
 ## 1. Mensajes centrales del docente
 
-| # | Idea del docente | Implicación para Grupo 9.2 |
+| # | Idea del docente | Implicación para Grupo 10 |
 |---|------------------|----------------------------|
 | M1 | **No hay un solo problema**; hay varios según el nivel (real → subyacente → tecnológico → artefacto → operación) | Separar claramente problemática, abstracción y problema tecnológico en Cap. 1 |
 | M2 | El problema del **estado del arte (Cap. 3)** ≠ el problema de la **matriz de consistencia**; están vinculados pero **no son lo mismo** | Matriz = problema **tecnológico** (construir método de alineación); brecha V1–V5 ≠ fila experimental |
@@ -29,7 +29,7 @@
 
 ---
 
-## 2. Retroalimentación directa al Grupo 9.2 (PI-11 en clase)
+## 2. Retroalimentación directa al Grupo 10 (PI-11 en clase)
 
 ### A. Problemática y niveles del problema
 
@@ -56,7 +56,7 @@
 
 Definición del curso: **población** = conjunto completo de **mediciones** sobre UA; **muestra** = subconjunto observado.
 
-| Concepto | En Grupo 9.2 |
+| Concepto | En Grupo 10 |
 |----------|--------------|
 | **UA** | Par comparable **endpoint/operation/schema ↔ Behavior/BusinessObject** (instancia de medición dentro de un contrato × SD) |
 | **Atributos medidos** | Correspondencia estructural (E), semántica (S), cobertura (C) |
@@ -200,7 +200,7 @@ El docente pide anticipar en el plan:
 
 ---
 
-## 8. Respuestas rápidas para el curso (Grupo 9.2)
+## 8. Respuestas rápidas para el curso (Grupo 10)
 
 **¿En qué nivel se resuelve el problema?**  
 En la **necesidad del artefacto** (diseño, construcción y verificación del método de alineación), no en la operación en producción bancaria.
@@ -222,4 +222,4 @@ Si el artefacto existiera, los equipos de arquitectura/API podrían **cuantifica
 
 ---
 
-*Documento interno Grupo 9.2 — acta PI-11 + Clase 04. Complementa `FEEDBACK_DOCENTE_PI10.md`, checklists por fase y `planificacion/PLAN_ELABORACION_PLAN_TESIS.md`.*
+*Documento interno Grupo 10 — acta PI-11 + Clase 04. Complementa `FEEDBACK_DOCENTE_PI10.md`, checklists por fase y `planificacion/PLAN_ELABORACION_PLAN_TESIS.md`.*

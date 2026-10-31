@@ -1,4 +1,4 @@
-# Estado del proyecto — Grupo 9.2
+# Estado del proyecto — Grupo 10
 
 Actualizado: 30 oct 2026.
 
@@ -11,7 +11,7 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 - Estado del arte (14 papers)
 - Metodología *design science* (Cap. 4)
 - Matriz de consistencia institucional (8 columnas)
-- Informe LaTeX: `01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo9.2.pdf`
+- Informe LaTeX: `01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf`
 
 ## En curso (Curso II · MIA 403 · semanas ~5)
 
@@ -19,7 +19,7 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 |---------|-------|--------|
 | Diagnóstico Guía 1 → Guía 2 | `02-curso-II/plan-tesis-v2/diagnostico-guia1-a-guia2.md` | Hecho |
 | Plan de tesis v2 | `02-curso-II/plan-tesis-v2/PLAN_TESIS_V2.pdf` | Hecho (papel) |
-| Matriz OFB (8 cols) | `02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo9.2.pdf` | Hecho |
+| Matriz OFB (8 cols) | `02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf` | Hecho |
 | Protocolo empírico | `02-curso-II/plan-tesis-v2/protocolo-empirico.md` | Hecho (v1) |
 | Cronograma 16 semanas | `02-curso-II/plan-tesis-v2/cronograma-sprints.md` | Hecho |
 | Parser OE1 | `02-curso-II/sesion-05/data/piloto_ofb_bian/procesar_openapi.py` | Hecho |

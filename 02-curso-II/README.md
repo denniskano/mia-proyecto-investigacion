@@ -10,6 +10,6 @@
 | [`plan-tesis-v2/`](plan-tesis-v2/) | Protocolo, matriz, cronograma, diagnóstico |
 | [`sesion-05/`](sesion-05/) | Operacionalización, EDA, PPT, dataset |
 | [`sesion-05/data/piloto_ofb_bian/`](sesion-05/data/piloto_ofb_bian/) | 38 APIs OFB + 3 SD BIAN |
-| [`material-oficial/`](material-oficial/) | Sílabo, Guías, PDFs de sesión 2/4/5 |
+| [`material-oficial/`](material-oficial/) | Sílabo y PDFs de sesión; las Guías institucionales quedan en local |
 
 Pendientes del sílabo: [`../ESTADO.md`](../ESTADO.md).

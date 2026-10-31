@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera Exposicion_Plan_Tesis_Grupo9.2.pptx según ppt-rules.pptx (Grupo 9.2)."""
+"""Genera Exposicion_Plan_Tesis_Grupo10.pptx según ppt-rules.pptx (Grupo 10)."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ from pptx.util import Inches, Pt
 ROOT = Path(__file__).resolve().parent
 ASSETS = ROOT / "assets"
 TEMPLATE = ROOT / "ppt-rules.pptx"
-OUTPUT = ROOT / "Exposicion_Plan_Tesis_Grupo9.2.pptx"
+OUTPUT = ROOT / "Exposicion_Plan_Tesis_Grupo10.pptx"
 
 FONT = "Calibri"
 BODY = Pt(22)
@@ -158,7 +158,7 @@ def build():
         [
             "Investigación tecnológica · Design Science",
             "IEEE: Knowledge Representation · ACM: Semantic networks",
-            "Grupo 9.2 — Alex Mancilla · Jack Paitan",
+            "Grupo 10 — Alex Mancilla · Jack Paitan",
             "Universidad Nacional de Ingeniería · Julio 2026",
         ]
     ):

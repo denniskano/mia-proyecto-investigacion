@@ -39,4 +39,4 @@ No se añaden en este curso YAML de un banco emisor ni Open Banking UK; eso no r
 
 ## Criterio de salida de la semana 1
 
-Grupo 9.2 puede decir en una frase: *la tesis mide alineación de contratos OpenAPI bancarios frente a BIAN; en este curso el piloto es Open Finance Brasil × tres SD v14, sobre los pares I1–I6*.
+Grupo 10 puede decir en una frase: *la tesis mide alineación de contratos OpenAPI bancarios frente a BIAN; en este curso el piloto es Open Finance Brasil × tres SD v14, sobre los pares I1–I6*.

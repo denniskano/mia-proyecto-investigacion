@@ -1,6 +1,6 @@
 # Notas orales — exposición final (30 jul)
 
-> **Presentación oficial:** [`../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf`](../Exposicion_Plan_Tesis_Grupo9.2-beamer.pdf) (**22 slides** · Beamer LaTeX)  
+> **Presentación oficial:** [`../Exposicion_Plan_Tesis_Grupo10-beamer.pdf`](../Exposicion_Plan_Tesis_Grupo10-beamer.pdf) (**22 slides** · Beamer LaTeX)  
 > **Guion completo:** [`../LIBRETO_EXPOSICION_COMPLETO.md`](../LIBRETO_EXPOSICION_COMPLETO.md)  
 > **Timing:** [`GUION_15MIN_AMPLIADO.md`](GUION_15MIN_AMPLIADO.md)
 

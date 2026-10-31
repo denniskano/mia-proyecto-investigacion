@@ -1,4 +1,4 @@
-# Plan de Tesis — LaTeX (Grupo 9.2)
+# Plan de Tesis — LaTeX (Grupo 10)
 
 Documento colaborativo Alex Mancilla · Jack Paitan.
 
@@ -9,7 +9,7 @@ Desde la raíz del repo (`plan-tesis/`):
 ```bash
 cd latex
 make pdf
-# Salida: build/Plan_Tesis_Grupo9.2.pdf
+# Salida: build/Plan_Tesis_Grupo10.pdf
 ```
 
 Figuras en `../figuras/` (ver `../figuras/README.md`). No commitear `build/` — ver `../.gitignore`.

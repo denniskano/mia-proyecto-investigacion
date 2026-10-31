@@ -1,4 +1,4 @@
-# Normas, estándares y guías del tema — Grupo 9.2
+# Normas, estándares y guías del tema — Grupo 10
 
 Material de **referencia normativa y sectorial** vinculado al plan de tesis:
 

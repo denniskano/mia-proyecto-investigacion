@@ -59,7 +59,7 @@
         <mxCell id="v0" value="&lt;b&gt;matching_v0.py&lt;/b&gt;&lt;br&gt;I1–I6 oficiales (n = 7)&lt;br&gt;S léxico  ·  E greedy  ·  C CR/BQ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
           <mxGeometry x="838" y="150" width="316" height="110" as="geometry"/>
         </mxCell>
-        <mxCell id="s1" value="&lt;b&gt;matching_s1.py&lt;/b&gt;&lt;br&gt;MiniLM sobre pares OE2 congelados&lt;br&gt;E y C no se recalcan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E8A323;strokeWidth=2;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
+        <mxCell id="s1" value="&lt;b&gt;matching_s1.py&lt;/b&gt;&lt;br&gt;MiniLM sobre pares OE2 congelados&lt;br&gt;E y C no se recalculan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E8A323;strokeWidth=2;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
           <mxGeometry x="838" y="280" width="316" height="100" as="geometry"/>
         </mxCell>
         <mxCell id="mapa" value="&lt;b&gt;mapa_ofb_bian.py&lt;/b&gt;&lt;br&gt;Catálogo extra (no sustituye n = 7)&lt;br&gt;loans × Loan  ·  cards × CreditCard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">

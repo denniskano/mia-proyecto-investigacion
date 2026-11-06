@@ -7,6 +7,8 @@
 
 Plan vigente: `../plan-tesis-v2/PLAN_TESIS_V2.pdf`.  
 Presentación: `Piloto_OFB_BIAN_slides.pdf` (Beamer; no PPTX).  
+Arquitectura: `figuras/arquitectura-piloto.drawio` (editable) · `figuras/arquitectura-piloto.png`.  
+Gráficos: `figuras/grafico-{fuentes,sec,semantico,alignment,catalogo}.png`.  
 Objeto de la tesis (no cambia): OpenAPI bancario. OFB es solo este piloto.
 
 ## Totales (parser)

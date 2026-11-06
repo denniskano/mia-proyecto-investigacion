@@ -82,7 +82,7 @@ def main() -> None:
         (1616, "3. Matching"),
         (2396, "4. Scores"),
     ]
-    col_w, col_top, col_h = 748, 150, 1320
+    col_w, col_top, col_h = 748, 150, 1188
     for x, label in cols:
         rounded(d, (x, col_top, x + col_w, col_top + col_h), 18, ALT, NAVY, 3)
         d.rectangle((x, col_top, x + col_w, col_top + 78), fill=NAVY)
@@ -91,17 +91,17 @@ def main() -> None:
     boxes = [
         (80, 260, 780, 480, WHITE, NAVY, ["Open Finance Brasil", "38 YAML  ·  160 operaciones", "accounts, payments, loans, cards…"], False),
         (80, 510, 780, 760, WHITE, NAVY, ["BIAN v14", "258 Service Domains  ·  4 580 ops", "descargar_bian.py  ·  release 14.0.0"], False),
-        (80, 790, 780, 1000, WHITE, GOLD, ["Reglas de adquisición", "Sin banco emisor  ·  sin recorte de 12 ops", "No se inventa un Service Domain"], False),
+        (80, 790, 780, 1260, WHITE, GOLD, ["Reglas de adquisición", "Sin banco emisor  ·  sin recorte de 12 ops", "No se inventa un Service Domain"], False),
         (860, 260, 1560, 480, WHITE, NAVY, ["procesar_openapi.py", "OpenAPI 3.x  ·  $ref anidados", "ops, schemas, propiedades, corpus"], False),
         (860, 510, 1560, 720, WHITE, NAVY, ["Representación intermedia", "CSV por contrato + consolidado", "inventario.json"], False),
-        (860, 750, 1560, 960, GREEN, GREEN, ["OE1 firmado  ·  296 / 296 YAML", "ops y schemas = 1,00", "Parser 100 % ≠ AlignmentScore Alto"], True),
+        (860, 750, 1560, 1260, GREEN, GREEN, ["OE1 firmado  ·  296 / 296 YAML", "ops y schemas = 1,00", "Parser 100 % ≠ AlignmentScore Alto"], True),
         (1640, 260, 2340, 480, WHITE, NAVY, ["matching_v0.py", "I1–I6 oficiales (n = 7)", "S léxico  ·  E greedy  ·  C CR/BQ"], False),
-        (1640, 510, 2340, 720, WHITE, GOLD, ["matching_s1.py  ·  MiniLM", "S sobre pares OE2 congelados", "E y C no se recalcan"], False),
-        (1640, 750, 2340, 980, WHITE, NAVY, ["mapa_ofb_bian.py", "Catálogo extra (no sustituye n = 7)", "loans × Loan  ·  cards × CreditCard"], False),
+        (1640, 510, 2340, 720, WHITE, GOLD, ["matching_s1.py  ·  MiniLM", "S sobre pares OE2 congelados", "E y C no se recalculan"], False),
+        (1640, 750, 2340, 1260, WHITE, NAVY, ["mapa_ofb_bian.py", "Catálogo extra (no sustituye n = 7)", "loans × Loan  ·  cards × CreditCard"], False),
         (2420, 260, 3120, 460, GOLD, GOLD, ["AlignmentScore = (S + E + C) / 3", "Alta ≥ 0,80   Media   Baja", "Nula < 0,40"], False),
         (2420, 490, 3120, 680, WHITE, NAVY, ["resultado/matching/", "I1–I6  ·  oe1_firma.json", "CIERRE_PILOTO.md"], False),
         (2420, 710, 3120, 880, WHITE, NAVY, ["resultado/matching_s1/", "S MiniLM de I1–I6"], False),
-        (2420, 910, 3120, 1080, WHITE, NAVY, ["resultado/matching/catalogo/", "MAPA.md  ·  cards Baja 0,46"], False),
+        (2420, 910, 3120, 1260, WHITE, NAVY, ["resultado/matching/catalogo/", "MAPA.md  ·  cards Baja 0,46"], False),
     ]
     for x0, y0, x1, y1, fill, outline, lines, on_green in boxes:
         rounded(d, (x0, y0, x1, y1), 16, fill, outline, 4)
@@ -118,26 +118,26 @@ def main() -> None:
         chevron(d, 798, y)
         chevron(d, 1578, y)
         chevron(d, 2358, y)
-    chevron(d, 1578, 850)
-    chevron(d, 2358, 850)
+    chevron(d, 1578, 980)
+    chevron(d, 2358, 980)
 
-    rounded(d, (56, 1500, 3144, 1620), 16, NAVY, NAVY, 2)
+    rounded(d, (56, 1370, 3144, 1490), 16, NAVY, NAVY, 2)
     d.text(
-        (W / 2, 1536),
+        (W / 2, 1406),
         "Prohibido: copiar CR/BQ a OFB   ·   BIAN ↔ BIAN como banco   ·   inventar un SD   ·   etiquetar Alta/Media/Baja a mano",
         font=small,
         fill=WHITE,
         anchor="ma",
     )
     d.text(
-        (W / 2, 1584),
+        (W / 2, 1454),
         "I1–I6 no se reemplazan   ·   no se puntúa 38 OFB × 258 SD",
         font=small,
         fill=GOLD,
         anchor="ma",
     )
     d.text(
-        (W / 2, 1688),
+        (W / 2, 1568),
         "Dorado = experimento IA (MiniLM)    ·    Verde = OE1 cerrado    ·    Blanco = artefactos del piloto",
         font=tiny,
         fill=MUTED,

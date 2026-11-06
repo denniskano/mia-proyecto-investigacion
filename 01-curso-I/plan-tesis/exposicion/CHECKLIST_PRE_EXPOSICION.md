@@ -5,7 +5,7 @@ Usar **5 min antes** de compartir pantalla. Las slides son **autocontenidas** (P
 ## Documento
 
 - [ ] **Presentación oficial:** `Exposicion_Plan_Tesis_Grupo10-beamer.pdf` (22 slides; avanzar **1 → 5**, omitir 2–4 con punto rojo)
-- [ ] PDF plan de respaldo: `../latex/build/Plan_Tesis_Grupo10.pdf` (Anexo C si preguntan matriz)
+- [ ] PDF plan de respaldo: `../latex/build/Plan_Tesis_Grupo10_30.pdf` (Anexo C si preguntan matriz)
 
 ## Referencias (demostración en vivo)
 

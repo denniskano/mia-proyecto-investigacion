@@ -2,7 +2,7 @@
 
 **Grupo 10:** Alex Mancilla · Dennis Jack Paitan  
 **Tema:** Alineación contratos OpenAPI bancarios ↔ Service Domains BIAN · modelo S/E/C  
-**PDF:** `../latex/build/Plan_Tesis_Grupo10.pdf`
+**PDF:** `../latex/build/Plan_Tesis_Grupo10_30.pdf`
 
 ---
 

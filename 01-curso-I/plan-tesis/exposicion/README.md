@@ -36,7 +36,7 @@ cd exposicion/latex && make pdf
 | [`ppt/`](ppt/) | Guiones auxiliares · PPT solo fuente de figuras |
 | [`referencias/`](referencias/) | Notas papers demo en vivo (Casas, Shvaiko) |
 
-**Respaldo informe completo** (si preguntan detalle): `../latex/build/Plan_Tesis_Grupo10.pdf`
+**Respaldo informe completo** (si preguntan detalle): `../latex/build/Plan_Tesis_Grupo10_30.pdf`
 
 ---
 

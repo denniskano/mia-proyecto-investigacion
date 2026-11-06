@@ -56,13 +56,13 @@
   \marcadorNoExponer
   \begin{planpanel}
   \small
-  La industria bancaria utiliza contratos OpenAPI para documentar e integrar APIs entre canales digitales, fintechs y socios de negocio. Paralelamente, BIAN publica contratos OpenAPI de referencia para estandarizar las capacidades bancarias y promover la interoperabilidad entre entidades (Bhatia, 2022; Farzi, 2021).
+  El plan mide, con un número reproducible, si un contrato OpenAPI bancario y el \ServiceDomain{} BIAN emparejado hablan del mismo negocio. OpenAPI es el YAML o JSON (\textit{paths}, verbos, \textit{schemas}). BIAN parte el negocio en \ServiceDomain{}s, con \textit{behaviors} y \textit{business objects} (Farzi, 2021; Casas et al., 2021).
 
   \vspace{0.35em}
-  Sin embargo, actualmente no existe un procedimiento objetivo que permita medir el grado de alineación entre un contrato OpenAPI implementado por un banco y el contrato OpenAPI de referencia propuesto por BIAN para un mismo Service Domain.
+  \keyterm{Alineación} es ese cruce: \SemanticScore{}, \StructuralScore{}, \CoverageScore{} y $\AlignmentScore{}=\alpha S+\beta E+\gamma C$.
 
   \vspace{0.35em}
-  En respuesta a esta necesidad, la presente investigación propone un modelo de medición de la alineación basado en tres dimensiones: SemanticScore, StructuralScore y CoverageScore, integradas en un AlignmentScore, con el propósito de cuantificar de manera objetiva y reproducible el nivel de alineación entre ambos contratos OpenAPI.
+  Guía~1 diseña el procedimiento y lo deja en el Anexo~C. El parser y los scores quedan para Tesis~2. TSB (2018) y el \textit{open banking} británico (CMA, 2016) son síntomas; el objeto es el contrato, no el banco.
   \end{planpanel}
   \note{NO EXPONER. Saltar en clase (1 $\rightarrow$ 5).}
 \end{frame}

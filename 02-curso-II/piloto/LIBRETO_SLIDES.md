@@ -6,6 +6,42 @@
 
 Decir los números de la lámina. No adelantar el gráfico de la siguiente. Si preguntan por Turnitin (87 % de similitud o el % de IA): es el plan de Guía 1, no este piloto. Si preguntan por Alta: nadie llega a 0,80.
 
+## Abreviaturas
+
+| Sigla | Significado en este piloto |
+|---|---|
+| OFB | Open Finance Brasil. La muestra: 38 APIs públicas, no un banco emisor. |
+| BIAN | Banking Industry Architecture Network. La referencia: catálogo de Service Domains, release 14.0.0. |
+| SD | Service Domain. Un dominio de negocio BIAN (SavingsAccount, PaymentOrderInitiation, CreditCard). |
+| YAML | El archivo del contrato OpenAPI. OFB y BIAN entran así. |
+| JSON | El inventario y la firma de OE1 (`inventario.json`, `oe1_firma.json`). |
+| API | La interfaz que describe el contrato. OFB publica 38. |
+| HTTP | El verbo de la operación: GET, PUT, POST. E no exige que OFB y BIAN usen el mismo. |
+| GET | Consulta. Casi todas las operaciones OFB. |
+| PUT | Escritura o control del recurso. Verbo dominante en BIAN. |
+| POST | Creación. En I4, `POST /pix/payments` es el que toca el control record. |
+| CSV | Tabla plana por contrato que sale del parser. Ahí no se copian tags CR/BQ. |
+| OE1 | Objetivo específico 1: normalizar. En el piloto es el parser y la firma 296/296. |
+| S | SemanticScore. Similitud de significado, solo sobre los pares que ya armó E. |
+| E | StructuralScore. Emparejamiento greedy uno a uno de operaciones. Sin par, entra como 0. |
+| C | CoverageScore. Cobertura del catálogo del SD: CR y BQ con par, sobre el total de CR y BQ. |
+| v0 | Corrida léxica (Jaccard + TF-IDF). Las siete instancias quedan Nula. |
+| v1 | La misma E y la misma C. Solo cambia S, con MiniLM. |
+| MiniLM | `paraphrase-multilingual-MiniLM-L12-v2`. Embeddings de frase que cruzan portugués y inglés. |
+| TF-IDF | Peso léxico de un token según cuánto se repite en el texto y cuán raro es en el corpus. Baseline de S v0, junto con Jaccard. |
+| GPU | Tarjeta gráfica. v0 no la usa. |
+| GPT | Modelo generativo. No entra en el piloto. |
+| BERT | Modelo de lenguaje que aquí no se entrena. MiniLM es un primo chico y ya viene entrenado; no lo ajustamos. |
+| CR | Control Record. Ficha principal del Service Domain. En el YAML de BIAN el tag es `CR - …`. |
+| BQ | Behavior Qualifier. Comportamiento alrededor de esa ficha (cargo, depósito). Tag `BQ - …`. |
+| I1–I6 | Las siete instancias oficiales. I3 se parte en I3a (Savings) e I3b (Current). |
+| FIDO | Fast Identity Online. Mecanismo de enrollments: alta de un dispositivo, no una orden de pago. |
+| Pix | Sistema brasileño de pagos instantáneos. En I4, `POST /pix/payments`. |
+| IA | En la pregunta de Turnitin: texto marcado como escrito con inteligencia artificial. Es el plan de Guía 1, no estas láminas. |
+| n | Tamaño de la muestra oficial: 7 instancias (I1, I2, I3a, I3b, I4, I5, I6). |
+| `$ref` | Referencia interna de OpenAPI a un schema ya definido. El parser las resuelve. |
+| PDF | Este libreto acompaña a `Piloto_OFB_BIAN_slides.pdf`. |
+
 | # | Lámina | Quién | Tiempo |
 |---|--------|-------|--------|
 | 1 | Portada | Alex | 0:30 |

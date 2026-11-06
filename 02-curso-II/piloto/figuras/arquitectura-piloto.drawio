@@ -1,0 +1,134 @@
+<mxfile host="app.diagrams.net" modified="2026-11-06T21:05:00.000Z" agent="Grupo10" version="22.1.0" type="device">
+  <diagram id="piloto-arquitectura" name="Arquitectura del piloto">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="titulo" value="Arquitectura del piloto  ·  OFB × BIAN v14" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontStyle=1;fontColor=#1B365D;" vertex="1" parent="1">
+          <mxGeometry x="40" y="12" width="1520" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitulo" value="Objeto: contrato OpenAPI bancario  ·  Muestra: Open Finance Brasil  ·  Referencia: catálogo BIAN 14.0.0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#636E72;" vertex="1" parent="1">
+          <mxGeometry x="40" y="48" width="1520" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1B365D;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="28" y="84" width="360" height="640" as="geometry"/>
+        </mxCell>
+        <mxCell id="col1h" value="1. Fuentes oficiales" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1B365D;fontColor=#FFFFFF;strokeColor=#1B365D;fontStyle=1;fontSize=16;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="28" y="84" width="360" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="ofb" value="&lt;b&gt;Open Finance Brasil&lt;/b&gt;&lt;br&gt;38 YAML  ·  160 operaciones&lt;br&gt;&lt;font color='#636E72'&gt;accounts, payments, loans, cards…&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="316" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="bian" value="&lt;b&gt;BIAN v14&lt;/b&gt;&lt;br&gt;258 Service Domains  ·  4 580 ops&lt;br&gt;&lt;font color='#636E72'&gt;bian-official/public  ·  release 14.0.0&lt;/font&gt;&lt;br&gt;&lt;font color='#1E7F4F'&gt;descargar_bian.py&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="50" y="280" width="316" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="fuente-nota" value="Sin YAML de un banco emisor.&lt;br&gt;Sin recorte de 12 operaciones.&lt;br&gt;No se inventa un Service Domain." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E8A323;strokeWidth=2;fontFamily=Helvetica;fontSize=12;align=center;verticalAlign=middle;arcSize=8;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="430" width="316" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="fuente-scripts" value="fuentes/ofb/  ·  fuentes/bian/" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=#636E72;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="540" width="316" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1B365D;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="422" y="84" width="360" height="640" as="geometry"/>
+        </mxCell>
+        <mxCell id="col2h" value="2. Parser OE1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1B365D;fontColor=#FFFFFF;strokeColor=#1B365D;fontStyle=1;fontSize=16;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="422" y="84" width="360" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="parser" value="&lt;b&gt;procesar_openapi.py&lt;/b&gt;&lt;br&gt;OpenAPI 3.x  ·  $ref anidados&lt;br&gt;ops, schemas, propiedades, corpus" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="444" y="150" width="316" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="inventario" value="&lt;b&gt;Representación intermedia&lt;/b&gt;&lt;br&gt;CSV por contrato + consolidado&lt;br&gt;inventario.json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="444" y="280" width="316" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="firma" value="&lt;b&gt;OE1 firmado&lt;/b&gt;&lt;br&gt;296 / 296 YAML&lt;br&gt;ops y schemas = 1,00" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E7F4F;fontColor=#FFFFFF;strokeColor=#1E7F4F;fontFamily=Helvetica;fontSize=14;align=center;verticalAlign=middle;arcSize=8;fontStyle=0;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="444" y="400" width="316" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="parser-nota" value="Parser al 100 % no implica&lt;br&gt;AlignmentScore Alto." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#636E72;" vertex="1" parent="1">
+          <mxGeometry x="444" y="510" width="316" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1B365D;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="816" y="84" width="360" height="640" as="geometry"/>
+        </mxCell>
+        <mxCell id="col3h" value="3. Matching" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1B365D;fontColor=#FFFFFF;strokeColor=#1B365D;fontStyle=1;fontSize=16;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="816" y="84" width="360" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="v0" value="&lt;b&gt;matching_v0.py&lt;/b&gt;&lt;br&gt;I1–I6 oficiales (n = 7)&lt;br&gt;S léxico  ·  E greedy  ·  C CR/BQ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="838" y="150" width="316" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="s1" value="&lt;b&gt;matching_s1.py&lt;/b&gt;&lt;br&gt;MiniLM sobre pares OE2 congelados&lt;br&gt;E y C no se recalcan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E8A323;strokeWidth=2;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="838" y="280" width="316" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="mapa" value="&lt;b&gt;mapa_ofb_bian.py&lt;/b&gt;&lt;br&gt;Catálogo extra (no sustituye n = 7)&lt;br&gt;loans × Loan  ·  cards × CreditCard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="838" y="400" width="316" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="match-nota" value="No se puntúa 38 OFB × 258 SD." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#636E72;" vertex="1" parent="1">
+          <mxGeometry x="838" y="530" width="316" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1B365D;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="84" width="362" height="640" as="geometry"/>
+        </mxCell>
+        <mxCell id="col4h" value="4. Scores" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1B365D;fontColor=#FFFFFF;strokeColor=#1B365D;fontStyle=1;fontSize=16;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="84" width="362" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="score" value="&lt;b&gt;AlignmentScore = (S + E + C) / 3&lt;/b&gt;&lt;br&gt;Alta ≥ 0,80  ·  Media  ·  Baja  ·  Nula &amp;lt; 0,40" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8A323;fontColor=#1B365D;strokeColor=#E8A323;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=8;fontStyle=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="1232" y="150" width="318" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="out-i" value="&lt;b&gt;resultado/matching/&lt;/b&gt;&lt;br&gt;I1–I6  ·  oe1_firma.json&lt;br&gt;CIERRE_PILOTO.md" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=12;align=center;verticalAlign=middle;arcSize=8;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="1232" y="260" width="318" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="out-s1" value="&lt;b&gt;resultado/matching_s1/&lt;/b&gt;&lt;br&gt;S MiniLM de I1–I6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=12;align=center;verticalAlign=middle;arcSize=8;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="1232" y="368" width="318" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="out-cat" value="&lt;b&gt;resultado/matching/catalogo/&lt;/b&gt;&lt;br&gt;MAPA.md  ·  credit-cards Baja 0,46" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=12;align=center;verticalAlign=middle;arcSize=8;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="1232" y="456" width="318" height="72" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="footer" value="Prohibido: copiar CR/BQ a OFB  ·  BIAN ↔ BIAN como banco  ·  inventar un SD  ·  etiquetar Alta/Media/Baja a mano  ·  I1–I6 no se reemplazan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1B365D;fontColor=#FFFFFF;strokeColor=#1B365D;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="28" y="744" width="1544" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="leyenda" value="Dorado = experimento IA (MiniLM)  ·  Verde = OE1 cerrado  ·  Blanco = artefactos del piloto" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=#636E72;" vertex="1" parent="1">
+          <mxGeometry x="28" y="800" width="1544" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e-ofb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1B365D;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" edge="1" parent="1" source="ofb" target="parser">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-bian" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1B365D;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.65;entryDx=0;entryDy=0;" edge="1" parent="1" source="bian" target="parser">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-p-inv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1B365D;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="parser" target="inventario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-inv-firma" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1B365D;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="inventario" target="firma">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-p-v0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1B365D;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="inventario" target="v0">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-p-s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#E8A323;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="inventario" target="s1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-p-mapa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1B365D;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="inventario" target="mapa">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-v0-sc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1B365D;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="v0" target="score">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-s1-out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#E8A323;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="s1" target="out-s1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-mapa-cat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1B365D;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="mapa" target="out-cat">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-sc-i" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1B365D;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="score" target="out-i">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

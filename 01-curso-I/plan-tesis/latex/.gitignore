@@ -1,4 +1,7 @@
-build/
+# Auxiliar de latexmk; los PDF de entrega sí se versionan.
+build/*
+!build/Plan_Tesis_Grupo10.pdf
+!build/Plan_Tesis_Grupo10_sin_caratula.pdf
 *.aux
 *.fdb_latexmk
 *.fls

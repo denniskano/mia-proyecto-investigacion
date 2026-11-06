@@ -1,23 +1,17 @@
 \section{Justificación e importancia}
 
-Esta sección explica por qué conviene medir la coherencia OpenAPI--BIAN \textbf{antes} de integrar.
-No repite las definiciones del §1.1 ni la casuística del §\ref{sec:problematica}.
+Si cada \textit{release} de una API puede alejarse del modelo de negocio acordado, conviene
+detectarlo en el YAML, no en producción. Farzi (2021) y Bhatia (2022) describen esa deriva entre
+producto, integración y gobernanza cuando BIAN y el contrato no se rastrean.
 
-En arquitectura bancaria, cada \textit{release} puede desplazar la interfaz REST respecto al modelo
-de negocio acordado. Farzi (2021) y Bhatia (2022) muestran que, sin trazabilidad entre capacidades
-BIAN y contratos publicados, la deriva se acumula entre equipos de producto, integración y
-gobernanza.
+Revisar a mano no escala con decenas de APIs y socios. Por eso el grupo puntúa la coherencia con
+\AlignmentScore{} y las preguntas P1--P4 (§\ref{sec:planteamiento}): una cola de revisión puede
+ordenarse con evidencia (Shabbir et al., 2025), no con intuición.
 
-Medir esa deriva solo con revisiones manuales no escala cuando coexisten decenas de APIs y socios
-externos. El plan propone cuantificar la coherencia mediante \AlignmentScore{} y las preguntas
-P1--P4 (§\ref{sec:planteamiento}), de modo que una revisión documental pueda priorizarse con
-evidencia objetiva (Shabbir et al., 2025).
+OpenAPI como artefacto técnico ya está maduro (Casas et al., 2021). Lo que escasea es un método
+que lo cruce, de forma sistemática, con un \ServiceDomain{} BIAN. El procedimiento y la matriz
+(Anexo~C) son esa pieza.
 
-La literatura confirma la madurez de OpenAPI como artefacto técnico (Casas et al., 2021), pero la
-intersección sistemática OpenAPI--BIAN sigue delgada. Este estudio aporta el procedimiento
-reproducible y la matriz de consistencia (Anexo~C) que cierra esa brecha metodológica.
-
-El diseño descansa en representación del conocimiento, alineación de esquemas y similitud semántica
----las mismas líneas que operacionalizan S y el \textit{matching} estructural E---. Deliberadamente
-no sustituye testing \textit{runtime} ni certificación regulatoria (eje E5, §\ref{sec:estado-arte}):
-evalúa coherencia \textbf{documental} antes del despliegue.
+S y E se apoyan en alineación de esquemas y similitud semántica. No pretendemos reemplazar pruebas
+\textit{runtime} ni un sello regulatorio (eje E5, §\ref{sec:estado-arte}). El foco es documental:
+¿este contrato, ahora, refleja este SD?

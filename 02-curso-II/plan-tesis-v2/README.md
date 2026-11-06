@@ -1,6 +1,6 @@
 # Plan de tesis v2 — Proyecto de Investigación II (MIA 403)
 
-**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Curso:** MIA 403 · 2026-2  
 **Continuidad:** Guía 1 vive en `../../01-curso-I/plan-tesis/` (LaTeX). Esta carpeta es el **plan vigente** del segundo curso: ejecutable + protocolo + evidencia piloto.
 

@@ -1,16 +1,18 @@
 \chapter*{Resumen}
 \addcontentsline{toc}{chapter}{Resumen}
 
-Los bancos publican APIs como contratos OpenAPI (YAML/JSON). BIAN ordena el negocio en
-\ServiceDomain{}s con \textit{behaviors} y \textit{business objects}. Esas dos capas las escriben
-equipos distintos y rara vez se comprueba, antes de integrar, si el contrato REST coincide con el
-modelo de referencia.
+Queremos saber, \textbf{antes} de integrar, si el YAML de una API bancaria cuenta el mismo negocio
+que el \ServiceDomain{} BIAN con el que se la empareja. Hoy esa pregunta se responde a ojo, o no se
+responde.
 
-Este plan define \textbf{cómo} medir esa correspondencia: \SemanticScore{} (S),
-\StructuralScore{} (E), \CoverageScore{} (C) y un \AlignmentScore{} agregado, con trazabilidad en
-la matriz de consistencia (Anexo~C). El alcance se limita a artefactos documentales (contrato +
-extracto BIAN); no se implementa el artefacto ni se evalúa seguridad operativa de APIs en
-producción (§\ref{sec:alcances}).
+El Grupo~10 diseña un procedimiento para puntuarla. Tres componentes ---similitud de significado
+(\SemanticScore{}, S), correspondencia de jerarquía REST (\StructuralScore{}, E) y cobertura de
+conceptos BIAN (\CoverageScore{}, C)--- se agregan en un \AlignmentScore{} por instancia
+\texttt{contrato $\times$ Service Domain}. La matriz de consistencia (Anexo~C) traza cada paso.
+
+En esta Guía~1 no construimos el software ni medimos un piloto: documentamos \textbf{cómo} se
+calcularía. Tampoco evaluamos latencia, \textit{fuzzing} ni seguridad en producción
+(§\ref{sec:alcances}).
 
 \vspace{0.5cm}
 \noindent\textbf{Palabras clave:} \palabrasClaveES.

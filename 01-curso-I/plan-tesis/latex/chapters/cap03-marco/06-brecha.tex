@@ -1,38 +1,31 @@
 \subsection{Qué sí cubre la literatura revisada}
 
-Esta subsección sintetiza, de forma transversal, lo que los catorce papers aportan al diseño del
-modelo. No sustituye la lectura por ejes en §\ref{sec:estado-arte}.
+Los catorce papers, leídos en cruz y no eje por eje, dejan esto:
 
 \begin{enumerate}
-  \item \textbf{OpenAPI} es el formato dominante para especificar APIs REST (E1). Casas et al.\
-        (2021) mapean 47 artículos que lo confirman; Mainas et al.\ (2023) muestran enriquecimiento
-        semántico viable sobre corpus reales.
-  \item Existen marcos para \textbf{correspondencia entre esquemas} (E2) y \textbf{similitud
-        semántica} (E3). Shvaiko y Euzenat (2005) y El Bayadh et al.\ (2015) ofrecen taxonomías
-        reutilizables; Santos Sousa et al.\ (2026) documentan limitaciones prácticas de
-        \textit{embeddings}.
-  \item La \textbf{arquitectura orientada al dominio} separa modelos de negocio e interfaces
-        técnicas (E4). Schmidt y Thiry (2020) relacionan capacidades de dominio con microservicios,
-        en la misma línea que BIAN como referencia.
-  \item Por el contrario, la literatura de \textbf{testing y seguridad} (E5) es abundante: Ehsan
-        et al.\ (2022) y Golmohammadi et al.\ (2024) usan OpenAPI como entrada a pruebas
-        automatizadas. Esa línea ayuda a \textbf{delimitar} el plan ---calidad operativa en
-        producción no equivale a coherencia documental con BIAN.
-  \item En selección de servicios (E6), Mahanra Rao et al.\ (2025) optimizan ranking por QoS con
-        \textit{embeddings}; el objetivo es consumo, no verificar si un contrato bancario refleja un
-        \ServiceDomain{} de referencia.
+  \item OpenAPI es el formato con el que se especifica REST (E1). Casas et al.\ (2021) lo muestran
+        en 47 artículos; Mainas et al.\ (2023) prueban que se puede enriquecer semánticamente sobre
+        corpus reales.
+  \item Hay marcos para cruzar esquemas (E2) y para medir significado (E3). Shvaiko y Euzenat
+        (2005) y El Bayadh et al.\ (2015) se pueden reutilizar; Santos Sousa et al.\ (2026) ya
+        documentaron dónde fallan los \textit{embeddings}.
+  \item E4 separa dominio e interfaz. Schmidt y Thiry (2020) hablan de microservicios; BIAN juega
+        el mismo papel como referencia de capacidad.
+  \item E5 es otro oficio. Ehsan et al.\ (2022) y Golmohammadi et al.\ (2024) usan OpenAPI para
+        probar APIs vivas. Eso recorta el plan: calidad operativa $\neq$ coherencia con BIAN.
+  \item E6 (Mahanra Rao et al., 2025) rankea servicios por QoS. Consume descripciones; no pregunta
+        si el YAML bancario refleja un \ServiceDomain{}.
 \end{enumerate}
 
-Ninguna línea, sola o en conjunto, responde a la pregunta del plan: \textit{¿en qué medida un
-contrato OpenAPI bancario refleja el modelo de un \ServiceDomain{} BIAN y cómo cuantificarlo de
-forma reproducible?}
+La pregunta del grupo sigue sin respuesta en ese corpus: \textit{¿en qué medida un contrato
+OpenAPI bancario refleja un \ServiceDomain{} BIAN, y cómo se puntúa eso de modo que otro pueda
+repetirlo?}
 
 \subsection{Vacíos identificados}
 
 \input{tables/tab06-vacios}
 
-La \Cref{fig:brecha} sintetiza la transición desde los ejes del estado del arte hacia los vacíos
-V1--V5 y la oportunidad de investigación.
+La \Cref{fig:brecha} pasa de E1--E6 a los vacíos V1--V5.
 
 \begin{figure}[H]
   \centering
@@ -43,20 +36,11 @@ V1--V5 y la oportunidad de investigación.
 
 \subsection{Oportunidad de investigación}
 
-La brecha abre la oportunidad de \textbf{diseñar un modelo de alineación} documentado en cinco
-fases (Fase~1: diseño; Fases~2--5: transformaciones OE1--OE4). Dado un contrato OpenAPI bancario y
-un \ServiceDomain{} BIAN emparejado, el modelo debe:
+Ahí cabe diseñar el modelo en cinco fases (Fase~1: diseño; 2--5: OE1--OE4). Dado un contrato y un
+SD emparejado, hay que normalizar (OE1), calcular S, E y C (OE2--OE3) e integrar
+\AlignmentScore{} $= \alpha \cdot S + \beta \cdot E + \gamma \cdot C$ con Alta / Media / Baja /
+Nula.
 
-\begin{itemize}
-  \item normalizar ambos artefactos a representaciones comparables (OE1);
-  \item calcular \SemanticScore{}, \StructuralScore{} y \CoverageScore{} (OE2--OE3);
-  \item integrar \AlignmentScore{} $= \alpha \cdot S + \beta \cdot E + \gamma \cdot C$ con
-        clasificación interpretativa (Alta / Media / Baja / Nula).
-\end{itemize}
-
-Este plan documenta el \textbf{diseño} del procedimiento. La construcción del artefacto y la
-experimentación empírica quedan fuera de alcance (\Cref{sec:alcances}).
-
-La investigación contribuye a los vacíos V1--V4 con un enfoque reproducible sobre artefactos
-documentales. No sustituye testing operativo (E5) ni certificación regulatoria; tampoco confunde
-calidad \textit{runtime} (E1/E6) con coherencia documental (V5).
+Guía~1 escribe ese diseño. El código y el experimento empírico no entran
+(\Cref{sec:alcances}). Aportamos a V1--V4 sobre documentos; no a testing (E5) ni a sellos
+regulatorios.

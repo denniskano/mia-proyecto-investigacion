@@ -82,7 +82,7 @@ def fix_title_slide(slide) -> None:
             lines = [
                 "Investigación tecnológica · Design Science",
                 "IEEE: Knowledge Representation · ACM: Semantic networks",
-                "Grupo 10 — Alex Mancilla · Jack Paitan · UNI · Julio 2026",
+                "Grupo 10 — Alex Mancilla · Dennis Jack Paitan · UNI · Julio 2026",
             ]
             for i, line in enumerate(lines):
                 p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()

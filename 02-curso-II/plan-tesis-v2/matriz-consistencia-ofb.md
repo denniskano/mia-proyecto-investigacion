@@ -1,6 +1,6 @@
 # Matriz de consistencia — Plan v2 (piloto OFB)
 
-**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Formato:** 8 columnas institucionales (Sesión 2 / matriz v2).  
 **Objeto (tesis, se mantiene):** contratos OpenAPI **bancarios** frente a Service Domains BIAN.  
 **Muestra (piloto MIA 403):** catálogo **Open Finance Brasil**.

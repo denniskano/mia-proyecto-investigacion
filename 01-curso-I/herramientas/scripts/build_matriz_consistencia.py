@@ -195,7 +195,7 @@ META = {
         "Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN "
         "mediante análisis estructural y similitud semántica"
     ),
-    "grupo": "Grupo 10 — Alex Mancilla · Jack Paitan",
+    "grupo": "Grupo 10 — Alex Mancilla · Dennis Jack Paitan",
     "problema_tecnologico": (
         "No existe un método reproducible que cuantifique en qué medida un contrato OpenAPI "
         "bancario se alinea con un Service Domain BIAN y bajo qué tipologías se desalinea."

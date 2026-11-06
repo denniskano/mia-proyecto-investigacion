@@ -122,7 +122,7 @@ async function main() {
   const pptx = new pptxgen();
   pptx.defineLayout({ name: "WIDE", width: 13.333, height: 7.5 });
   pptx.layout = "WIDE";
-  pptx.author = "Grupo 10 — Alex Mancilla · Jack Paitan";
+  pptx.author = "Grupo 10 — Alex Mancilla · Dennis Jack Paitan";
   pptx.title = "Sesión 5 — Operacionalización e instrumentos · EDA";
   pptx.subject = "Alineación OpenAPI bancario ↔ BIAN";
 
@@ -152,7 +152,7 @@ async function main() {
       fontFace: FONT,
     });
     s.addText(
-      "Objeto: OpenAPI bancario ↔ BIAN  ·  Piloto: Open Finance Brasil (38 APIs)\nGrupo 10  ·  Alex Mancilla Antay  ·  Jack Paitan Cano  ·  MIA 403 · UNI",
+      "Objeto: OpenAPI bancario ↔ BIAN  ·  Piloto: Open Finance Brasil (38 APIs)\nGrupo 10  ·  Alex Mancilla Antay  ·  Dennis Jack Paitan Cano  ·  MIA 403 · UNI",
       {
         x: 0.7,
         y: 4.1,
@@ -843,7 +843,7 @@ async function main() {
         fontFace: FONT,
       }
     );
-    s.addText("Grupo 10  ·  Alex Mancilla  ·  Jack Paitan  ·  fuente escrita: Sesion05_Operacionalizacion_y_EDA.md", {
+    s.addText("Grupo 10  ·  Alex Mancilla  ·  Dennis Jack Paitan  ·  fuente escrita: Sesion05_Operacionalizacion_y_EDA.md", {
       x: 0.7,
       y: 5.3,
       w: 11.5,

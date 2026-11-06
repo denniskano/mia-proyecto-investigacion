@@ -1,6 +1,6 @@
 # Guía para exponer la Matriz de Consistencia
 
-**Grupo 10** · Alex Mancilla · Jack Paitan  
+**Grupo 10** · Alex Mancilla · Dennis Jack Paitan  
 **Documento de apoyo** (no es el entregable formal; complementa el Excel)  
 **Archivo Excel:** `Matriz_Consistencia_Grupo10.xlsx`  
 **Modelo de alineación (figuras):** `figuras_alineacion_openapi_bian.pdf`

@@ -1,7 +1,7 @@
 # Revisión cruzada — Fase D (Capítulo 2)
 
 **Fecha:** 2026-05-28  
-**Revisor:** Jack Paitan → Cap. 2 objetivos (Alex)  
+**Revisor:** Dennis Jack Paitan → Cap. 2 objetivos (Alex)  
 **Validación:** Alex Mancilla → correcciones aplicadas  
 **Criterios:** `CHECKLIST.md`, `build_matriz_consistencia.py`, `FEEDBACK_DOCENTE_PI10.md`, Cap. 1
 

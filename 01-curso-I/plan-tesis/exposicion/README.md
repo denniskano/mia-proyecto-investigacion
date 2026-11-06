@@ -1,6 +1,6 @@
 # Exposición — Plan de Tesis Grupo 10
 
-**Integrantes:** Alex Mancilla · Jack Paitan  
+**Integrantes:** Alex Mancilla · Dennis Jack Paitan  
 **Tema:** Alineación OpenAPI bancario ↔ Service Domains BIAN · modelo S/E/C
 
 Materiales para las sesiones de exposición del curso (PI-13 / PI-14): **23 y 30 jul 2026**.

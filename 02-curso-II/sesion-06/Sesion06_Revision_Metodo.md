@@ -1,13 +1,13 @@
 ---
 title: "Sesión 6 — Revisión del método (Capítulo III)"
-author: "Grupo 10 · Alex Mancilla Antay · Jack Paitan Cano"
+author: "Grupo 10 · Alex Mancilla Antay · Dennis Jack Paitan Cano"
 subtitle: "Objeto: OpenAPI bancario ↔ BIAN · Piloto: Open Finance Brasil"
 lang: es
 ---
 
 # Sesión 6 — Revisión del método
 
-**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Programa:** Maestría en Inteligencia Artificial · UNI · MIA 403  
 **Objeto de la tesis:** contratos **OpenAPI bancarios** frente a Service Domains BIAN.  
 **Piloto:** catálogo **Open Finance Brasil (OFB)** × tres SD BIAN v14.  

@@ -2,7 +2,7 @@
 
 **Fecha:** 2026-05-28  
 **Revisor:** Alex Mancilla → Cap. 3 §3.5–§3.6 (Jack)  
-**Validación:** Jack Paitan → correcciones aplicadas  
+**Validación:** Dennis Jack Paitan → correcciones aplicadas  
 **Criterios:** `CHECKLIST.md`, `CAPITULO_03_ESTADO_DEL_ARTE.md`, `EJES_ESTADO_DEL_ARTE.md`, Cap. 1
 
 ---

@@ -1,119 +1,77 @@
-El estado del arte se organiza en \textbf{seis ejes} (E1--E6) del Anexo~B. Cada eje responde a una
-pregunta sobre OpenAPI, \textit{matching} estructural o semántico, arquitectura de servicios o
-delimitación del foco. La \Cref{tab:sintesis-ejes} resume hallazgos convergentes; el Anexo~B detalla
-cada paper.
+El estado del arte se parte en \textbf{seis ejes} (E1--E6) del Anexo~B. Cada uno responde a una
+pregunta distinta: ¿OpenAPI alcanza?, ¿hay matching estructural?, ¿semántico?, ¿cómo se cortan
+dominio e interfaz?, ¿el testing REST es nuestro problema?, ¿y la recomendación de servicios?
+La \Cref{tab:sintesis-ejes} resume; el Anexo~B baja a cada paper.
 
 \subsection{Eje E1 --- OpenAPI como estándar}
 
-\textbf{Papers:} Casas et al.\ (2021), Mainas et al.\ (2023), Santos y Casas (2025).
+Casas et al.\ (2021), Mainas et al.\ (2023) y Santos y Casas (2025).
 
-Casas et al.\ (2021) realizan un mapeo sistemático de 47 artículos primarios (2011--2020) sobre
-usos de OpenAPI/Swagger. Confirman que es el \textbf{estándar de facto} para describir APIs REST de
-forma \textit{machine-readable}: el 68\,\% de los trabajos mapeados propone herramientas o
-automatización; el 43\,\% mejora documentación. Sin embargo, ningún estudio del eje vincula esos
-contratos con modelos de referencia de negocio bancario tipo BIAN.
+El mapeo de Casas ---47 artículos primarios, 2011--2020--- deja a OpenAPI/Swagger como estándar de
+facto para describir REST de forma \textit{machine-readable}. El 68\,\% de esos trabajos propone
+herramientas; el 43\,\% mejora documentación. Ninguno cruza el contrato con un modelo de negocio
+bancario tipo BIAN. Ese silencio es, para nosotros, el dato.
 
-Mainas et al.\ (2023) avanzan hacia \textbf{OpenAPI enriquecido semánticamente}. Proponen
-anotaciones (\texttt{x-refersTo}, \texttt{x-kindOf}, \texttt{x-mapsTo}, etc.), ontología REST/Hydra,
-traducción OpenAPI $\rightarrow$ RDF y consultas SPARQL sobre un corpus de más de 300 contratos de
-SwaggerHub. Aportan \textbf{técnicas de representación y normalización} candidatas para calcular
-\SemanticScore{}; no definen S ni \AlignmentScore{}, y operan en dominio genérico sin
-\ServiceDomain{} BIAN.
+Mainas et al.\ (2023) anotan contratos (\texttt{x-refersTo}, \texttt{x-kindOf}, \texttt{x-mapsTo}),
+traducen OpenAPI a RDF y consultan SPARQL sobre más de 300 especificaciones de SwaggerHub. Sirve
+como técnica de representación para S. No definen S ni \AlignmentScore{}, y el corpus no es banca.
 
-Santos y Casas (2025), mediante Design Science Research, construyen un catálogo de 59 métricas de
-\textbf{API Gateway} (latencia, tráfico, errores) evaluadas en 68 productos comerciales. Delimitan un
-borde útil para este estudio: la calidad operativa en producción \textbf{no equivale} a la coherencia
-documental OpenAPI $\leftrightarrow$ modelo de negocio.
+Santos y Casas (2025), con Design Science, catalogan 59 métricas de API Gateway (latencia, tráfico,
+errores) en 68 productos. Útil para no confundir: calidad en producción \textbf{no} es coherencia
+documental OpenAPI $\leftrightarrow$ BIAN.
 
-\textbf{Conclusión E1:} OpenAPI está maduro como artefacto técnico; la literatura no resuelve su
-\textbf{alineación} con capacidades de negocio estandarizadas en banca.
+OpenAPI está listo como artefacto. La literatura no lo alinea con capacidades bancarias
+estandarizadas.
 
 \subsection{Eje E2 --- Matching estructural}
 
-\textbf{Paper:} Shvaiko y Euzenat (2005).
-
-Shvaiko y Euzenat (2005) sistematizan el \textbf{\textit{schema matching}} en una taxonomía que
-cruza aproximación exacta/approximada, evidencia sintáctica/semántica/externa y nivel
-elemento/estructura. El marco es anterior a OpenAPI y JSON Schema ---no aborda contratos REST ni
-dominios bancarios---, pero fundamenta el \StructuralScore{} al contrastar \textit{paths},
-\textit{operations} y \textit{schemas} con la organización de un \ServiceDomain{} BIAN
-(\Behavior{}, \BusinessObject{}) como problema de correspondencia entre esquemas.
-
-\textbf{Conclusión E2:} Existe base teórica sólida para correspondencias estructurales; falta
-aplicarla a \textbf{pares OpenAPI bancario $\leftrightarrow$ BIAN} con métrica reproducible.
+Un paper ancla el eje: Shvaiko y Euzenat (2005). Taxonomía de \textit{schema matching}
+(exacta/aproximada, sintáctica/semántica/externa, elemento/estructura). Es anterior a OpenAPI y a
+JSON Schema. Aun así, es la base de E: \textit{paths} y \textit{schemas} contra \Behavior{} y
+\BusinessObject{}. Lo que falta no es teoría de matching; es aplicarla al par
+\textbf{OpenAPI bancario $\leftrightarrow$ BIAN} con una métrica que se pueda repetir.
 
 \subsection{Eje E3 --- Matching semántico y ontologías}
 
-\textbf{Papers:} El Bayadh et al.\ (2015), Chandrasekaran y Mago (2022), Santos Sousa et al.\ (2026).
+El Bayadh et al.\ (2015), Chandrasekaran y Mago (2022), Santos Sousa et al.\ (2026).
 
-Tres líneas convergen. El Bayadh et al.\ (2015) clasifican \textbf{alineación ontológica} en medidas
-terminológicas, estructurales, extensionales y semánticas; advierten que ninguna medida aislada basta.
-Chandrasekaran y Mago (2022) trazan la evolución de \textbf{similitud semántica}
-desde recursos léxicos hasta \textit{embeddings} y \textit{transformers}. Santos Sousa
-et al.\ (2026) revisan \textbf{\textit{embeddings} para ontology matching}, con limitaciones de
-supervisión, escalabilidad y correspondencias complejas.
+Tres líneas, ninguna sobre nuestros artefactos. El Bayadh clasifica alineación ontológica
+(terminológica, estructural, extensional, semántica) y avisa que una sola medida no basta.
+Chandrasekaran y Mago recorren la similitud semántica desde WordNet hasta \textit{transformers}.
+Santos Sousa et al.\ (2026) revisan \textit{embeddings} para ontology matching y listan supervisión,
+escala y correspondencias complejas como límites.
 
-Ninguno aborda OpenAPI ni BIAN directamente; todos aportan técnicas candidatas para
-\SemanticScore{} y, en parte, cobertura conceptual (\CoverageScore{}).
-
-\textbf{Conclusión E3:} La similitud semántica está bien documentada; no existe propuesta integrada
-que la aplique a \textbf{vocabulario OpenAPI bancario vs.\ conceptos BIAN} dentro de un modelo de
-alineación único.
+Candidatos claros para S y, en parte, para C. Nadie los junta sobre vocabulario OpenAPI bancario
+frente a conceptos BIAN dentro de un solo modelo.
 
 \subsection{Eje E4 --- Microservicios e interfaces}
 
-\textbf{Paper:} Schmidt y Thiry (2020).
+Schmidt y Thiry (2020): 27 estudios primarios de 715 registros (2013--2019) sobre identificación de
+microservicios con MDE y DDD. Explica por qué un \ServiceDomain{} BIAN puede ser referencia de
+negocio y la API, la capa que lo expone. Casi nadie integra MDE y DDD a la vez; nadie mide
+coherencia contrato--BIAN. La arquitectura relaciona dominio e interfaz; no cuantifica el desfase.
 
-Schmidt y Thiry (2020) revisan 27 estudios primarios (de 715 registros, 2013--2019) sobre
-estrategias de \textbf{identificación de microservicios} con MDE y DDD. La síntesis muestra cómo la
-descomposición desde modelos de dominio hacia límites de servicio contextualiza por qué los
-\ServiceDomain{} BIAN son referencia de negocio y las APIs su capa de exposición. Pocos trabajos
-integran MDE y DDD conjuntamente; ninguno mide coherencia entre contrato OpenAPI y modelo BIAN.
+\subsection{Eje E5 --- Testing y calidad API (borde)}
 
-\textbf{Conclusión E4:} La literatura arquitectónica relaciona dominio e interfaces; \textbf{no
-cuantifica} desalineación OpenAPI--BIAN.
+Ehsan et al.\ (2022), Golmohammadi et al.\ (2024), Otieno y Araka (2026), Tanveer et al.\ (2025),
+Vitorino et al.\ (2025).
 
-\subsection{Eje E5 --- Testing y calidad API (borde del estudio)}
+Aquí OpenAPI es \textbf{entrada} a pruebas, no pieza a contrastar con un SD. Ehsan et al.\ cubren
+16 artículos de testing RESTful; la métrica reina es \textit{code coverage}. Golmohammadi et al.\
+leen 92 papers (\textit{fuzzing}, \textit{search-based}, model-based) que generan casos sobre
+endpoints ya vivos. Otieno y Araka (2026) ponen ML en testing y se quejan de datasets chicos.
+Tanveer et al.\ (2025) van a vulnerabilidades; Vitorino et al.\ (2025), a datos adversariales.
 
-\textbf{Papers:} Ehsan et al.\ (2022), Golmohammadi et al.\ (2024), Otieno y Araka (2026); Tanveer
-et al.\ (2025), Vitorino et al.\ (2025).
-
-Cinco revisiones sistemáticas cubren \textbf{testing REST}, ML para pruebas, \textbf{vulnerabilidades}
-y generación adversarial de datos. En todos los casos OpenAPI entra como \textbf{entrada} a pruebas
-automatizadas, no como artefacto a contrastar con un \ServiceDomain{} BIAN.
-
-Ehsan et al.\ (2022) incluyen 16 artículos sobre metodologías de testing RESTful. La
-\textit{code coverage} es la métrica principal de efectividad.
-
-Golmohammadi et al.\ (2024) analizan 92 papers con taxonomía de técnicas (\textit{fuzzing},
-\textit{search-based}, model-based). La mayoría consume contratos OpenAPI para generar casos de
-prueba sobre endpoints ya desplegados.
-
-Otieno y Araka (2026) revisan ML aplicado a testing RESTful; reportan datasets pequeños y costo de
-etiquetado como limitaciones recurrentes.
-
-Tanveer et al.\ (2025) sistematizan detección de vulnerabilidades en APIs REST; el foco es seguridad
-\textit{runtime}, ajeno al \AlignmentScore{} documental.
-
-Vitorino et al.\ (2025) abordan aprendizaje adversarial para pruebas automatizadas. Confirman que la
-literatura de calidad operativa \textbf{no sustituye} un procedimiento de alineación OpenAPI--BIAN.
-
-\textbf{Conclusión E5:} Confirma la delimitación del plan (\Cref{sec:alcances}): testing, seguridad
-y QoS operativa \textbf{quedan fuera}; el producto central es el \AlignmentScore{} documental.
+Ese corpus delimita el plan (\Cref{sec:alcances}): testing, seguridad y QoS operativa se quedan
+fuera. El producto es el \AlignmentScore{} documental.
 
 \subsection{Eje E6 --- Selección y recomendación de servicios}
 
-\textbf{Paper:} Mahanra Rao et al.\ (2025).
-
-Mahanra Rao et al.\ (2025) revisan 25 estudios (2020--2024, PRISMA) sobre enfoques
-\textbf{BERT/transformers} para selección y recomendación de servicios web con foco en predicción de
-QoS. La representación semántica de descripciones de servicio es adyacente a S, pero el objetivo es
-\textbf{ranking/consumo}, no validar un contrato frente a un \ServiceDomain{} de referencia. Los
-autores señalan alto costo computacional, datasets limitados e interpretabilidad reducida.
-
-\textbf{Conclusión E6:} Contexto semántico de servicios; \textbf{no sustituye} un modelo de
-alineación OpenAPI $\leftrightarrow$ BIAN.
+Mahanra Rao et al.\ (2025): 25 estudios (2020--2024, PRISMA) con BERT/transformers para seleccionar
+servicios web según QoS. La representación semántica de descripciones se parece a S; el objetivo es
+\textbf{ranking}, no validar un contrato contra un SD. Costo de cómputo alto, datasets cortos,
+poca interpretabilidad. Adyacente; no es nuestro modelo.
 
 \input{tables/tab06-sintesis-ejes}
 
-La Tabla~7 (Anexo~B) detalla objetivo, técnicas, métricas y limitaciones \textbf{paper por paper}.
+La Tabla~7 (Anexo~B) baja objetivo, técnicas, métricas y límites \textbf{paper por paper}.

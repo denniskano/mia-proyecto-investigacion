@@ -2,7 +2,7 @@
 
 **Presentación:** `Sesion05_Operacionalizacion_y_EDA_slides.pdf` (**19 diapositivas**)  
 **Duración:** 12–14 minutos (todas se exponen; la 9 es puente, 10 s)  
-**Integrantes:** Alex Mancilla · Jack Paitan  
+**Integrantes:** Alex Mancilla · Dennis Jack Paitan  
 **Regla:** señalar la diapositiva al hablar. Explicar cada sigla la primera vez.
 
 **Frase de ancla:** el objeto de la tesis no es OFB. OFB es la **muestra** con la que se ejecuta el procedimiento.  
@@ -28,7 +28,7 @@
 
 **Diapositiva:** Portada navy — Operacionalización, instrumentos y EDA
 
-> Buenas [tardes/noches]. Grupo 10, Alex Mancilla y Jack Paitan.  
+> Buenas [tardes/noches]. Grupo 10, Alex Mancilla y Dennis Jack Paitan.  
 >  
 > Esta sesión cierra dos cosas **antes** del matching: la **operacionalización** de las variables y el **EDA** — análisis exploratorio de datos — del piloto.  
 >  

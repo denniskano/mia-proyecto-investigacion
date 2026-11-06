@@ -1,6 +1,6 @@
 # Resumen de cambios — Grupo 10  
 **Plan de tesis:** *Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN*  
-**Integrantes:** Alex Mancilla Antay · Jack Paitan Cano  
+**Integrantes:** Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Referencia:** observaciones de la sesión de exposición MAE SE-A PI-16  
 
 ---
@@ -123,5 +123,5 @@ En atención a las observaciones formuladas durante nuestra exposición del plan
 
 Quedamos atentos a sus comentarios adicionales.
 
-**Grupo 10** · Alex Mancilla · Jack Paitan  
+**Grupo 10** · Alex Mancilla · Dennis Jack Paitan  
 Universidad Nacional de Ingeniería · Maestría en Inteligencia Artificial · Lima, 2026

@@ -1,4 +1,4 @@
-# Relectura oral simulada — Alex Mancilla ↔ Jack Paitan
+# Relectura oral simulada — Alex Mancilla ↔ Dennis Jack Paitan
 
 **Fecha:** 2026-07-02  
 **Contexto:** Turnitin 2% similitud · 49% IA · segundo envío pendiente  

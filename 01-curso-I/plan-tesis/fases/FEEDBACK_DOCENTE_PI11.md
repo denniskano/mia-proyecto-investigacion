@@ -1,11 +1,11 @@
 # Retroalimentación docente — Grupo 10 (PI-11 + Clase 04)
 
 **Fuentes:**
-- Transcripción `transcriptions/MAE SE-A PI-11.txt` (sesión adquisición de datos · exposición Jack Paitan / Alex Mancilla)
+- Transcripción `transcriptions/MAE SE-A PI-11.txt` (sesión adquisición de datos · exposición Dennis Jack Paitan / Alex Mancilla)
 - PDF `clases/class-04/class 04. adquisicion de datos.pdf` (Unidad 3 · medición, señales, experimento, población/muestra, protocolo)
 
 **Complementa:** `fase-b-planteamiento/FEEDBACK_DOCENTE_PI10.md`  
-**Integrantes:** Alex Mancilla · Jack Paitan  
+**Integrantes:** Alex Mancilla · Dennis Jack Paitan  
 **Última actualización:** 2026-07-02
 
 > **Contexto docente:** El informe Guía 1 entregado **aún no fue revisado** en detalle, pero el docente anticipa que **habrá que reestructurar** el documento según los niveles de investigación y la separación problemática → diagnóstico → problema tecnológico. La guía institucional es **lo mínimo**; el curso exige más.

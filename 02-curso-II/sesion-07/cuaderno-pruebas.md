@@ -1,6 +1,6 @@
 # Cuaderno de pruebas — piloto OFB × BIAN
 
-**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Fecha de esta entrada:** 30 oct 2026  
 **Corrida:** `procesar_openapi.py` sobre `../sesion-05/data/piloto_ofb_bian/`  
 **Commit de referencia:** el de `inventario.json` (41 / 235 / 6 746 / 10 906)

@@ -1,6 +1,6 @@
 ---
 title: "Plan de tesis v2 — Alineación OpenAPI bancario ↔ BIAN (piloto OFB)"
-author: "Grupo 10 · Alex Mancilla Antay · Jack Paitan Cano"
+author: "Grupo 10 · Alex Mancilla Antay · Dennis Jack Paitan Cano"
 subtitle: "MIA 403 · Proyecto de Investigación II · 2026-2"
 lang: es
 ---
@@ -10,7 +10,7 @@ lang: es
 **Título (tesis):** Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN, mediante análisis estructural y similitud semántica.  
 **Piloto (MIA 403):** catálogo **Open Finance Brasil (OFB)** × tres Service Domains BIAN v14. OFB no sustituye el objeto: es la **muestra empírica** con la que se ejecuta el procedimiento.
 
-**Autores:** Alex Mancilla Antay · Jack Paitan Cano  
+**Autores:** Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Programa:** Maestría en Inteligencia Artificial · UNI · MIA 403 (2026-2)  
 **Prerrequisito:** Plan Guía 1 (`../../01-curso-I/plan-tesis/latex/`, Grupo 10)  
 **Producto de curso:** Plan de Tesis para trámite + protocolo empírico + evidencia piloto (P4, semanas 8–9)
@@ -19,7 +19,7 @@ lang: es
 
 ## 1. Continuidad Guía 1 → Guía 2
 
-La Guía 1 documentó el **diseño** del modelo S/E/C → AlignmentScore y dejó fuera la construcción del artefacto y la experimentación a escala (§1.6 del plan v1). El sílabo MIA 403 exige ahora **ejecutar** el procedimiento, producir evidencia y llegar a un **borrador integral de tesis**.
+En Guía 1 el Grupo 10 dejó escrito *cómo* se calcula S/E/C → AlignmentScore y, a propósito, no construyó el parser ni midió un piloto (§1.6 del plan v1). MIA 403 pide lo que faltaba: **correr** el procedimiento, mostrar evidencia y llegar a un borrador de tesis.
 
 | Dimensión | Guía 1 (MIA 303) | Guía 2 / Plan v2 (MIA 403) |
 |-----------|------------------|----------------------------|
@@ -30,9 +30,7 @@ La Guía 1 documentó el **diseño** del modelo S/E/C → AlignmentScore y dejó
 | VD del artefacto | AlignmentScore + clasificación (definida) | AlignmentScore + clasificación (**calculada** en el piloto OFB × BIAN) |
 | Software | Fuera de alcance | Parser OE1 hecho; matching OE2–OE4 a construir |
 
-**Qué se hereda sin reescribir:** título, objeto (OpenAPI bancario), planteamiento tecnológico, P1–P4, modelo S/E/C, umbrales, tipologías, estado del arte (14 papers), Anexo C/D, distinción objeto / unidad / producto.
-
-**Qué cambia:** se **ejecuta** el procedimiento sobre un piloto. La muestra de este curso es OFB (estándar multi-institución de open finance brasileño, no el YAML de un banco emisor). En MIA 403 no se añaden Nordea, CommBank ni Open Banking UK; eso no convierte a OFB en el objeto de la tesis. Un contrato de otro banco quedaría dentro del objeto y fuera de **este** piloto.
+Se hereda el título, el objeto (OpenAPI bancario), P1–P4, S/E/C, umbrales, los 14 papers y la matriz. Lo nuevo es el **piloto**: 38 APIs de Open Finance Brasil frente a tres SD BIAN v14. OFB es estándar de industria, no el YAML de Itaú ni de un banco peruano, y no estrecha el objeto. Nordea, CommBank u Open Banking UK no entran en **este** curso; un contrato de otro banco seguiría siendo objeto de la tesis y quedaría fuera de la muestra actual.
 
 ---
 
@@ -119,7 +117,7 @@ OFB es un **estándar de industria** (open finance brasileño), no el YAML de It
 
 ### 3.7 Justificación
 
-Sin un score reproducible, la coherencia entre un OpenAPI bancario y BIAN se revisa a mano. El plan v2 aporta (i) un corpus piloto público y legal (OFB, sin PII), (ii) el procedimiento ya operacionalizado y (iii) la primera evidencia empírica, no solo los ejemplos ilustrativos de Guía 1.
+Mientras el cruce OpenAPI–BIAN se haga a mano, no hay cómo priorizar una cola de APIs ni cómo defender un número en la defensa. Este curso aporta un corpus que se puede citar (OFB, YAML públicos, sin PII), el parser ya corrido y —a partir de la semana 8— scores de I1 e I4. Guía 1 solo tenía ejemplos; aquí hay inventario (`41` contratos) y un protocolo.
 
 ### 3.8 Alcance y delimitaciones
 
@@ -227,14 +225,11 @@ Criterio oral: parser al 100 % **no** implica AlignmentScore Alto.
 
 ## 7. Diseño metodológico (Capítulo III)
 
-- **Tipo:** investigación tecnológica / *design science*.
-- **Enfoque:** cuantitativo sobre artefactos documentales (no encuestas).
-- **No** es clasificación supervisada.
-- **Población (tesis):** pares posibles contrato OpenAPI bancario × SD BIAN.
-- **Muestra (piloto MIA 403):** siete instancias de medición sobre OFB (§4.1: I1, I2, I3a, I3b, I4, I5, I6).
-- **Técnicas:** parsing OpenAPI 3.x; schema matching (Shvaiko y Euzenat, 2005); similitud semántica (embeddings/coseno o léxica); agregación lineal.
-- **Instrumentos:** `procesar_openapi.py`; matrices CSV; script de matching (a construir); repositorio Git.
-- **Ética:** solo YAML públicos; Ley 29733 no aplica (sin PII de clientes). Citar OFB y BIAN.
+Investigación tecnológica (*design science*). Se puntúan documentos, no personas: no hay encuesta ni runtime. Tampoco hay un clasificador que aprenda Alta/Media/Baja.
+
+La población de la tesis son los pares posibles *contrato OpenAPI bancario × SD BIAN*. La muestra de **este** curso son las siete instancias OFB de §4.1 (I1, I2, I3a, I3b, I4, I5, I6). Técnicas: parser OpenAPI 3.x, schema matching (Shvaiko y Euzenat, 2005), similitud léxica o embeddings, promedio S/E/C. Instrumentos: `procesar_openapi.py`, CSV, Git; el script de matching se construye en semanas 7–8.
+
+YAML públicos. Ley 29733 no aplica. Se cita OFB y BIAN.
 
 **Amenazas (actualizadas)**
 
@@ -283,7 +278,7 @@ El detalle paso a paso está en `protocolo-empirico.md`.
 | Rol | Responsabilidad v2 |
 |-----|-------------------|
 | Alex Mancilla | Cap. I reencuadre, exposición, validez de propósito |
-| Jack Paitan | Dataset, parser, protocolo, matching, Cap. III–resultados |
+| Dennis Jack Paitan | Dataset, parser, protocolo, matching, Cap. III–resultados |
 | Ambos | Matriz, defensa semanas 9 y 16, Turnitin |
 
 Presupuesto: software libre; sin cloud productivo. Tiempo: ~8–10 h/semana × 16 semanas.

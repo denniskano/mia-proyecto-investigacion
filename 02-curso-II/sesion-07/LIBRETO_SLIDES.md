@@ -2,7 +2,7 @@
 
 **Presentación:** `Sesion07_Revision_Avances_slides.pdf` (**10 diapositivas**)  
 **Duración:** 8–10 minutos (todas se exponen)  
-**Integrantes:** Alex Mancilla · Jack Paitan  
+**Integrantes:** Alex Mancilla · Dennis Jack Paitan  
 **Regla:** señalar la diapositiva al hablar. Explicar cada sigla la primera vez.
 
 **Frase de ancla:** la tesis mide OpenAPI bancario ↔ BIAN; OFB es el piloto.  
@@ -28,7 +28,7 @@
 
 **Diapositiva:** Portada navy — Revisión de avances
 
-> Buenas [tardes/noches]. Grupo 10, Alex Mancilla y Jack Paitan.  
+> Buenas [tardes/noches]. Grupo 10, Alex Mancilla y Dennis Jack Paitan.  
 >  
 > Esta sala revisa **avances**, no el matching final. Cuatro bloques: el Trello de 12 semanas, el cuaderno de primeras pruebas, las métricas y dos revistas.  
 >  

@@ -1,7 +1,7 @@
 # Revisión cruzada — Fichas estado del arte (Grupo 10)
 
 **Fecha simulada:** 2026-05-28  
-**Revisores:** Alex Mancilla → fichas de Jack · Jack Paitan → fichas de Alex  
+**Revisores:** Alex Mancilla → fichas de Jack · Dennis Jack Paitan → fichas de Alex  
 **Criterios:** `PLANTILLA_FICHA.md`, `EJES_ESTADO_DEL_ARTE.md`, Cap. 1 LaTeX (`latex/chapters/cap01-planteamiento/`)
 
 ---

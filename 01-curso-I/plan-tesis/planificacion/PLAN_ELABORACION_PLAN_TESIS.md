@@ -2,7 +2,7 @@
 
 **Tema:** Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN mediante análisis estructural y similitud semántica.
 
-**Integrantes:** Alex Mancilla · Jack Paitan  
+**Integrantes:** Alex Mancilla · Dennis Jack Paitan  
 **Tipo de investigación:** Tecnológica (investigación basada en diseño — no encuestas ni población/muestra al estilo Sampieri)  
 **Producto del curso:** Plan de tesis (Guía N°01) — **solo este documento**; construcción/experimentación queda fuera de alcance (§1.6)
 

@@ -1,21 +1,19 @@
 \section{Planteamiento del problema}
 \label{sec:planteamiento}
 
-El plan separa \textbf{tres niveles} de problema dentro de la investigación basada en diseño. No
-son tres redacciones del mismo enunciado: cada nivel encadena con el siguiente hasta llegar al
-problema que el artefacto debe resolver.
+Tres capas, no tres frases para lo mismo. El docente las pidió distintas (PI-11): el dolor del
+sector, el diagnóstico abstracto y el hueco que el artefacto debe tapar.
 
 \subsection{Situación real (problemática)}
 
-Es el §1.2: síntomas del sector bancario ---fragmentación, costos de integración, casos como TSB o
-\textit{open banking} con APIs heterogéneas--- descritos con hechos y cifras. Todavía no es el
-objeto de estudio ni la fila de problema de la matriz.
+El §1.2 ya trajo TSB, CMA y las cifras de Casas y Golmohammadi. Ahí aún no hay objeto de estudio
+ni fila de la matriz: hay síntomas.
 
 \subsection{Situación subyacente (problema abstracto)}
 
-Al quitar el contexto del banco concreto permanecen dos \textbf{estructuras jerárquicas}
-comparables: el \textbf{contrato OpenAPI} (\textit{paths}, \textit{operations}, \textit{schemas}) y
-el \textbf{\ServiceDomain{} BIAN} (\Behavior{}, \BusinessObject{}, relaciones de control).
+Si se quita el banco concreto quedan dos jerarquías: el \textbf{contrato OpenAPI}
+(\textit{paths}, \textit{operations}, \textit{schemas}) y el \textbf{\ServiceDomain{} BIAN}
+(\Behavior{}, \BusinessObject{}, control).
 
 El diagnóstico es de \textbf{correspondencia}: mismos conceptos con nombres distintos, operaciones
 HTTP que no reflejan \textit{behaviors}, esquemas que no cubren \textit{business objects},
@@ -36,9 +34,8 @@ contrato OpenAPI bancario y un \ServiceDomain{} BIAN emparejado, calcule de form
 qué medida se alinean y bajo qué tipologías se desalinea. Hoy esa evaluación suele ser manual,
 parcial o simplemente no ocurre antes del despliegue.
 
-Este plan responde en el nivel de la \textbf{necesidad del artefacto}: diseño del
-procedimiento y del modelo S/E/C $\rightarrow$ \AlignmentScore{}. Operar el artefacto en producción
-bancaria queda fuera de alcance (§1.6).
+El Grupo~10 responde en ese nivel: diseñar el procedimiento S/E/C $\rightarrow$ \AlignmentScore{}.
+Ponerlo a correr en un banco no entra en Guía~1 (§1.6).
 
 \subsection{Problema de investigación}
 

@@ -1,14 +1,16 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-Banks document REST APIs with OpenAPI contracts. BIAN describes business capabilities through
-Service Domains, behaviors and business objects. Teams maintain both layers without a repeatable
-check that the technical contract matches the reference business model before integration.
+Group~10 asks a practical question: does a bank's OpenAPI contract describe the same capability as
+the BIAN Service Domain chosen as reference? The check, when it happens at all, is still a manual
+review.
 
-This thesis plan specifies a measurement procedure: SemanticScore (S), StructuralScore (E),
-CoverageScore (C) and an aggregated AlignmentScore, traced in the consistency matrix (Appendix~C).
-Scope is limited to documentary artifacts (OpenAPI contract plus BIAN excerpt). We do not
-implement the tool in production nor assess live API security (§\ref{sec:alcances}).
+We specify a scoring procedure rather than a production tool. SemanticScore (S), StructuralScore
+(E) and CoverageScore (C) feed an AlignmentScore for each pair
+\texttt{OpenAPI contract $\times$ Service Domain}. Appendix~C holds the consistency matrix.
+
+Guide~1 stops at design. We do not ship code, run a bank pilot, or score live API security
+(§\ref{sec:alcances}).
 
 \vspace{0.5cm}
 \noindent\textbf{Keywords:} \palabrasClaveEN.

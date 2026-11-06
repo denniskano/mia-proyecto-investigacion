@@ -2,7 +2,7 @@
 
 **Fuente principal:** exposición en clase · transcripción `transcriptions/MAE SE-A PI-10.txt`  
 **Tema expuesto:** alineación OpenAPI ↔ BIAN en APIs bancarias · matriz de consistencia  
-**Integrantes:** Alex Mancilla · Jack Paitan  
+**Integrantes:** Alex Mancilla · Dennis Jack Paitan  
 **Seguimiento:** Fases B–D (`CHECKLIST.md`, `REVISION_CRUZADA.md`) · `planificacion/PLAN_ELABORACION_PLAN_TESIS.md`  
 **Última actualización pendientes:** 2026-07-02
 

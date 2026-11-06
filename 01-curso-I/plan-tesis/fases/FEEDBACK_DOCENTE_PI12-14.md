@@ -6,7 +6,7 @@
 - `transcriptions/MAE SE-A PI-14.txt` — exposiciones continuación; calendario y rúbrica final
 
 **Complementa:** `FEEDBACK_DOCENTE_PI10.md`, `FEEDBACK_DOCENTE_PI11.md`  
-**Integrantes:** Alex Mancilla · Jack Paitan  
+**Integrantes:** Alex Mancilla · Dennis Jack Paitan  
 **Última actualización:** 2026-07-22
 
 > **PI-14 — Grupo 10:** El docente llamó al grupo pero **no hubo exposición** (ausentes en el turno). Los criterios de PI-14 aplican igual para las fechas **23 y 30 julio**.

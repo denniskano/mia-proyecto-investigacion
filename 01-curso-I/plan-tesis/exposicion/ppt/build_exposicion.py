@@ -158,7 +158,7 @@ def build():
         [
             "Investigación tecnológica · Design Science",
             "IEEE: Knowledge Representation · ACM: Semantic networks",
-            "Grupo 10 — Alex Mancilla · Jack Paitan",
+            "Grupo 10 — Alex Mancilla · Dennis Jack Paitan",
             "Universidad Nacional de Ingeniería · Julio 2026",
         ]
     ):

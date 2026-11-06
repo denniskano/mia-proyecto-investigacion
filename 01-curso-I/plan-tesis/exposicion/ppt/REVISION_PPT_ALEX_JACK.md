@@ -1,4 +1,4 @@
-# Revisión cruzada PPT — Alex Mancilla ↔ Jack Paitan
+# Revisión cruzada PPT — Alex Mancilla ↔ Dennis Jack Paitan
 
 > **Presentación oral oficial (30 jul):** [`../Exposicion_Plan_Tesis_Grupo10-beamer.pdf`](../Exposicion_Plan_Tesis_Grupo10-beamer.pdf)  
 > **Guion:** [`../LIBRETO_EXPOSICION_COMPLETO.md`](../LIBRETO_EXPOSICION_COMPLETO.md) · [`GUION_15MIN_AMPLIADO.md`](GUION_15MIN_AMPLIADO.md)  

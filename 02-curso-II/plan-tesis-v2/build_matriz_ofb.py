@@ -33,7 +33,7 @@ META = {
         "Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN "
         "mediante análisis estructural y similitud semántica (piloto: Open Finance Brasil)"
     ),
-    "grupo": "Grupo 10 — Alex Mancilla Antay · Jack Paitan Cano · objeto = OpenAPI bancario · referencia = BIAN · piloto = OFB",
+    "grupo": "Grupo 10 — Alex Mancilla Antay · Dennis Jack Paitan Cano · objeto = OpenAPI bancario · referencia = BIAN · piloto = OFB",
 }
 
 ROWS = [

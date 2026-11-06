@@ -1,63 +1,30 @@
 \section{Problemática}
 \label{sec:problematica}
 
-Esta sección corresponde a la \textbf{situación real}: síntomas observables del sector ---casos,
-cifras, costos--- antes de abstraer el objeto o formular el problema tecnológico (§\ref{sec:planteamiento}).
+Los síntomas están en el sector, no todavía en nuestra matriz. Un caso alcanza: en 2018 la
+migración de plataformas del TSB (Reino Unido) dejó sin servicio a cerca de \textbf{1,9 millones
+de clientes}. Los informes públicos hablan de \textbf{cientos de millones de libras} y de semanas
+con operación restringida (House of Commons Treasury Committee, 2018). El expediente no nombra
+OpenAPI ni BIAN. Sí muestra qué ocurre cuando negocio y tecnología se mueven sin una
+correspondencia que se pueda verificar: retrabajo, adaptadores de ensayo--error, daño reputacional.
 
-Durante años la integración bancaria dependió de acuerdos cerrados, contratos \textit{ad hoc} y
-documentación dispare. El resultado fueron silos, modelos duplicados y poca reutilización de
-capacidades entre líneas de negocio y socios tecnológicos.
+En \textit{open banking} el patrón es más seco. Desde 2018 la regulación británica obligó a nueve
+bancos de \textit{retail} a exponer APIs (CMA, 2016). Converger esas interfaces con un modelo de
+negocio de referencia sigue siendo, en la práctica, un asunto de gobernanza, no de publicar un
+Swagger.
 
-OpenAPI y las APIs REST unificaron \textit{cómo} se describe técnicamente una interfaz (Casas et
-al., 2021). Describir operaciones HTTP no garantiza, sin embargo, que la API exprese el mismo
-concepto de negocio en todos los equipos.
+Casas et al.\ (2021) mapearon 47 estudios primarios: solo el 40\,\% ancla un dominio concreto; el
+resto trabaja APIs genéricas. Golmohammadi et al.\ (2024), sobre 92 trabajos de prueba REST,
+subrayan el costo de validar servicios \textbf{ya} desplegados y la escasez de casos industriales
+reproducibles. Farzi (2021) acerca BIAN a la agilidad bancaria y admite la distancia entre el
+\textit{to-be} y lo que realmente corre.
 
-\textbf{Casuística observable.} Casas et al.\ (2021) mapearon 47 estudios primarios: solo el
-40\,\% aborda un dominio concreto; la mayoría trabaja con APIs genéricas. Esa proporción resume una
-heterogeneidad de modelado que persiste pese a la adopción de OpenAPI.
+En el día a día el desajuste se ve así. Desarrollo publica el OpenAPI pensando en el \textit{sprint}.
+Arquitectura conserva BIAN. Los nombres no coinciden (\texttt{PaymentOrder} frente a
+\texttt{paymentRequest}). Un PUT del SD no tiene GET equivalente en el contrato, o al revés. Las
+versiones del YAML no apuntan a una revisión del modelo. La revisión, cuando existe, es una
+lectura humana o una herramienta genérica de \textit{schema matching}.
 
-Golmohammadi et al.\ (2024) revisaron 92 trabajos sobre prueba de APIs REST. Subrayan el
-\textbf{costo} de validar servicios ya desplegados y la escasez de casos industriales
-reproducibles.
-
-En \textit{open banking}, la regulación británica obligó desde 2018 a nueve grandes bancos de
-\textit{retail} a exponer APIs estandarizadas (CMA, 2016). Converger esas interfaces con modelos de
-negocio de referencia sigue siendo, en la práctica, un ejercicio de gobernanza más que de despliegue
-de especificaciones.
-
-Como \textbf{episodio documentado}, la migración de plataformas del TSB (Reino Unido, 2018) dejó
-temporalmente sin servicio a cerca de \textbf{1,9 millones de clientes}. Los costes públicos hablan
-de \textbf{cientos de millones de libras} y de semanas con operación restringida (House of Commons
-Treasury Committee, 2018).
-
-El episodio no cita OpenAPI ni BIAN, pero ilustra el \textbf{dolor operativo} cuando negocio y
-tecnología evolucionan sin correspondencia verificable: retrabajo, ensayo--error en adaptadores,
-riesgo reputacional y regulatorio.
-
-Farzi (2021) vincula arquitectura empresarial y modelos como BIAN con la agilidad bancaria. Advierte
-barreras de madurez, heterogeneidad de implementaciones y distancia entre la arquitectura
-\textit{to-be} y lo desplegado.
-
-En el día a día, desarrollo publica contratos OpenAPI pensando en la implementación inmediata;
-arquitectura y negocio conservan BIAN como referencia. La sincronización entre ambos planos sigue
-siendo manual, parcial y sin métrica objetiva de coherencia.
-
-Shabbir et al.\ (2025) señalan que la calidad industrial de las APIs depende de consistencia,
-usabilidad y mantenibilidad. Esos requisitos se resienten cuando la documentación técnica no refleja
-el dominio de negocio. En arquitecturas API bancarias eso se traduce en:
-
-\begin{itemize}
-  \item \textbf{Fragmentación semántica:} mismos conceptos nombrados de forma distinta entre
-        OpenAPI y BIAN (p.\ ej., \texttt{PaymentOrder} frente a \texttt{paymentRequest}).
-  \item \textbf{Inconsistencias estructurales:} operaciones HTTP que no corresponden a
-        \textit{behaviors} del \ServiceDomain{}.
-  \item \textbf{Deriva documental:} versiones de contratos OpenAPI sin trazabilidad respecto al
-        modelo BIAN de referencia.
-  \item \textbf{Evaluación no sistemática:} revisiones manuales o herramientas genéricas no
-        adaptadas al par contrato OpenAPI bancario --- \ServiceDomain{} BIAN antes del despliegue.
-\end{itemize}
-
-Los síntomas condicionan gobernanza, interoperabilidad en ecosistemas abiertos y la confianza de
-\textit{stakeholders} en que una API representa una capacidad bancaria estandarizada. Por ello el
-§\ref{sec:planteamiento} pasa al diagnóstico subyacente y al problema tecnológico que ancla la
-matriz (Anexo~C).
+Shabbir et al.\ (2025) recuerdan que consistencia y mantenibilidad se resienten cuando la
+documentación técnica no refleja el dominio. Eso es el dolor que el §\ref{sec:planteamiento}
+convierte en problema tecnológico y que el Anexo~C formula como fila de la matriz.

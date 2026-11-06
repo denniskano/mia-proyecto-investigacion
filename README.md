@@ -1,6 +1,6 @@
 # Alineación OpenAPI bancario ↔ BIAN
 
-**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Programa:** Maestría en Inteligencia Artificial · UNI
 
 | | |

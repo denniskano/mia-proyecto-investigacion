@@ -77,6 +77,10 @@ Subir PDF actualizado a Turnitin **solo** cuando hayan reescrito un bloque enter
 
 ---
 
+**Actualización 6 nov 2026:** el indicador (~50 % IA) no bajó con la tanda de julio si el narrativo sigue el mismo molde. Acta nueva: `02-curso-II/plan-tesis-v2/REVISION_PARES_TURNITIN_IA.md` (Guía 1 + Plan v2). No usar humanizadores.
+
+---
+
 ## Seguimiento
 
 | Fecha | Acción | Responsable |

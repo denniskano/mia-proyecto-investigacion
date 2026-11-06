@@ -1,6 +1,6 @@
 # Plan de Tesis — LaTeX (Grupo 10)
 
-Documento colaborativo Alex Mancilla · Jack Paitan.
+Documento colaborativo Alex Mancilla · Dennis Jack Paitan.
 
 ## Compilar
 

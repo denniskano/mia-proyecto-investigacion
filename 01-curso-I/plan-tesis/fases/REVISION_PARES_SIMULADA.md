@@ -2,7 +2,7 @@
 
 **Documento:** `latex/build/Plan_Tesis_Grupo10.pdf` (~57 pp.)  
 **Fecha:** 2026-07-22  
-**Participantes:** Docente (criterios PI-10–14 + rúbrica plan) · Jack Paitan · Alex Mancilla  
+**Participantes:** Docente (criterios PI-10–14 + rúbrica plan) · Dennis Jack Paitan · Alex Mancilla  
 **Formato:** cada agente lee el PDF completo; luego cruzan hallazgos en 15 min.
 
 **Correcciones aplicadas tras esta revisión:** E5 (§3.5), §3.2 REST, §1.7 justificación, §3.6 brecha, §4.7 amenazas a la validez — ver §8.
@@ -69,7 +69,7 @@
 
 ---
 
-## 3. Agente 2 — Jack Paitan
+## 3. Agente 2 — Dennis Jack Paitan
 
 *Rol: Cap. 1, resumen, abstract, Anexo C; en exposición lleva problema + brecha.*
 

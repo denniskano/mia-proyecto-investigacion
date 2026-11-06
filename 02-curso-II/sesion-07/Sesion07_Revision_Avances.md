@@ -1,13 +1,13 @@
 ---
 title: "Sesión 7 — Revisión de avances"
-author: "Grupo 10 · Alex Mancilla Antay · Jack Paitan Cano"
+author: "Grupo 10 · Alex Mancilla Antay · Dennis Jack Paitan Cano"
 subtitle: "Trello · primeros resultados · métricas · revistas"
 lang: es
 ---
 
 # Sesión 7 — Revisión de avances
 
-**Grupo 10** · Alex Mancilla Antay · Jack Paitan Cano  
+**Grupo 10** · Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Programa:** Maestría en Inteligencia Artificial · UNI · MIA 403  
 **Objeto de la tesis:** contratos **OpenAPI bancarios** frente a Service Domains BIAN.  
 **Piloto:** Open Finance Brasil × 3 SD BIAN v14.  

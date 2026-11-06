@@ -2,7 +2,7 @@
 
 **Presentación:** `Sesion06_Revision_Metodo_slides.pdf` (**11 diapositivas**)  
 **Duración:** 8–10 minutos (todas se exponen)  
-**Integrantes:** Alex Mancilla · Jack Paitan  
+**Integrantes:** Alex Mancilla · Dennis Jack Paitan  
 **Regla:** señalar la diapositiva al hablar. Explicar cada sigla la primera vez.
 
 **Frase de ancla:** el objeto de la tesis es *OpenAPI bancario × BIAN*; Open Finance Brasil es solo el piloto.  
@@ -27,7 +27,7 @@
 
 **Diapositiva:** Portada — Revisión del método (Capítulo III)
 
-> Buenas [tardes/noches]. Somos el Grupo 10, Alex Mancilla y Jack Paitan.  
+> Buenas [tardes/noches]. Somos el Grupo 10, Alex Mancilla y Dennis Jack Paitan.  
 >  
 > Esta lámina revisa el **Capítulo III**: población, instrumentos, procedimiento, análisis y viabilidad.  
 >  

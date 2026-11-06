@@ -251,7 +251,7 @@ function addTableSlide(pptx, title, headers, rows, notes, colW) {
 function build() {
   const pptx = new pptxgen();
   pptx.layout = "LAYOUT_WIDE";
-  pptx.author = "Grupo 10 — Alex Mancilla · Jack Paitan";
+  pptx.author = "Grupo 10 — Alex Mancilla · Dennis Jack Paitan";
   pptx.company = "Universidad Nacional de Ingeniería";
   pptx.subject = "Plan de Tesis — Alineación OpenAPI ↔ BIAN";
   pptx.title = "Exposición Plan de Tesis Grupo 10 (v2)";
@@ -277,7 +277,7 @@ function build() {
       [
         { text: "Investigación tecnológica · Design Science", options: { breakLine: true } },
         { text: "IEEE: Knowledge Representation · ACM: Semantic networks", options: { breakLine: true } },
-        { text: "Grupo 10 — Alex Mancilla · Jack Paitan", options: { breakLine: true } },
+        { text: "Grupo 10 — Alex Mancilla · Dennis Jack Paitan", options: { breakLine: true } },
         { text: "Universidad Nacional de Ingeniería · Julio 2026", options: { breakLine: true } },
       ],
       { x: 0.8, y: 3.6, w: 11, h: 2.2, fontSize: 20, color: C.accent, fontFace: FONT }

@@ -148,7 +148,7 @@ Mientras el cruce OpenAPI–BIAN se haga a mano, no hay cómo priorizar una cola
 
 ## 4. Universo del piloto y muestra (Sesión 5)
 
-Fuente: `../sesion-05/data/piloto_ofb_bian/`.
+Fuente: `../piloto/`.
 
 | Lado | Contratos | Operaciones |
 |------|-----------|-------------|

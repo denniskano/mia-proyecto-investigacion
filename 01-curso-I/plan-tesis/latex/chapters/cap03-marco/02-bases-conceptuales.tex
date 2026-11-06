@@ -1,40 +1,30 @@
-Vocabulario de trabajo. Las definiciones operativas están en §1.1 y §1.4; el mapa, en
-§\ref{sec:glosario}.
+Lo que el grupo usa con un sentido fijo. El glosario tabular está en §\ref{sec:glosario}; las
+operativas, en §1.1 y §1.4.
 
 \subsection{API REST y contrato OpenAPI}
 
-En este plan, el \textbf{contrato OpenAPI} (YAML/JSON) es el artefacto concreto que el banco
-publica para describir su API: \textit{paths}, operaciones, \textit{schemas} y metadatos legibles
-por herramientas de documentación y análisis. En banca suele documentar pagos, cuentas o préstamos
-\textbf{antes} de exponer el servicio a canales digitales o socios \textit{fintech}.
-
-Casas et al.\ (2021) confirman OpenAPI como estándar de facto en APIs web. La capa REST subyacente
----recursos, verbos HTTP y representaciones serializadas en \textit{schemas}--- se toma como
-\textbf{contexto}, no como objeto de estudio: lo que se evalúa es el contrato publicado, no la
-arquitectura de despliegue ni el tráfico en producción.
+El banco no nos entrega el microservicio. Entrega un YAML (o JSON) OpenAPI: \textit{paths},
+verbos, \textit{schemas}. Eso es lo que se parsea. REST ---recursos, HTTP, JSON--- es el paisaje,
+no el objeto. Casas et al.\ (2021) ya dejaron OpenAPI como estándar de facto; nosotros no
+volvemos a demostrar eso.
 
 \subsection{Modelo de referencia BIAN}
 
-\textbf{BIAN} organiza capacidades bancarias en \ServiceDomain{}s: unidades de negocio descritas
-mediante \Behavior{}s (acciones), \BusinessObject{}s (entidades) y relaciones de control. En este
-plan, BIAN actúa como \textbf{modelo de referencia} para contrastar si un contrato OpenAPI bancario
-refleja la semántica y la estructura esperadas del dominio (Farzi, 2021). No se evalúan
-implementaciones en código ni despliegues productivos.
+BIAN parte el banco en \ServiceDomain{}s. Cada uno trae \Behavior{}s, \BusinessObject{}s y
+control (Farzi, 2021). En este plan el SD es la vara. No se puntúa el código de un core ni el
+despliegue en un proveedor.
 
 \subsection{Alineación, coherencia y desalineación}
 
-\textbf{Alineación} designa el grado de correspondencia estructural y semántica entre un contrato
-OpenAPI bancario y un \ServiceDomain{} BIAN emparejado. \textbf{Coherencia} se emplea como sinónimo
-operativo cuando el \AlignmentScore{} integrado alcanza niveles Altos o Medios según la escala del
-modelo. \textbf{Desalineación} agrupa las divergencias detectables; la tipología (estructural,
-semántica, de modelado, REST/contrato) se define en el Capítulo~1 (Tabla~\ref{tab:tipologias}).
+\textbf{Alineación} es el grado de correspondencia YAML $\leftrightarrow$ SD. Si el
+\AlignmentScore{} cae en Alta o Media, hablamos de coherencia operativa, no de un sello
+regulatorio. \textbf{Desalineación} es el resto: estructural, semántica, de modelado o
+REST/contrato (Tabla~\ref{tab:tipologias}).
 
 \subsection{Modelo de puntuación}
 
-El \textbf{modelo de alineación} propuesto descompone la evaluación en tres componentes ---
-\SemanticScore{} (S), \StructuralScore{} (E) y \CoverageScore{} (C) --- agregados en
-\AlignmentScore{} mediante pesos $\alpha$, $\beta$ y $\gamma$. La \Cref{fig:bases-conceptuales}
-resume la relación entre capa técnica (OpenAPI), capa de negocio (BIAN) y producto del modelo.
+Tres números, no uno mágico: S, E y C, con pesos $\alpha$, $\beta$, $\gamma$. La
+\Cref{fig:bases-conceptuales} coloca el contrato a un lado, el SD al otro y el score al medio.
 
 \begin{figure}[H]
   \centering

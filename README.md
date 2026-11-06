@@ -23,7 +23,8 @@ mia-proyecto-investigacion/
 └── 02-curso-II/              ← MIA 403 · plan v2 + piloto OFB (ejecución)
     ├── material-oficial/     ← sílabo, guías, PDFs de sesión
     ├── plan-tesis-v2/        ← plan ejecutable vigente
-    └── sesion-05/            ← operacionalización + EDA + dataset
+    ├── piloto/               ← dataset OFB × BIAN + matching v0
+    └── sesion-05/            ← operacionalización + EDA
 ```
 
 ## Dónde abrir cada cosa
@@ -35,7 +36,7 @@ mia-proyecto-investigacion/
 | PPT / slides piloto | [`02-curso-II/sesion-05/Sesion05_Operacionalizacion_y_EDA_slides.pdf`](02-curso-II/sesion-05/Sesion05_Operacionalizacion_y_EDA_slides.pdf) |
 | Revisión método (S6) | [`02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf`](02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf) |
 | Revisión avances (S7) | [`02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf`](02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf) |
-| Dataset piloto | [`02-curso-II/sesion-05/data/piloto_ofb_bian/`](02-curso-II/sesion-05/data/piloto_ofb_bian/) |
+| Dataset piloto | [`02-curso-II/piloto/`](02-curso-II/piloto/) |
 | Plan Guía 1 (LaTeX) | [`01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf`](01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf) |
 | Sílabo MIA 403 | [`02-curso-II/material-oficial/silabo/`](02-curso-II/material-oficial/silabo/) |
 

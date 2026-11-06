@@ -1,9 +1,7 @@
 \subsection{Adquisición de datos}
 
-Los datos no provienen de campo clínico ni de encuestas: son \textbf{artefactos digitales}
-(contratos OpenAPI en YAML/JSON y material de referencia BIAN) que el procedimiento trata como
-representaciones documentales comparables. Cada instancia debe identificarse de forma unívoca (p. ej.
-\texttt{\{fuente\}\_\{service-domain\}\_\{version\}}).
+No hay encuesta. Hay YAML/JSON OpenAPI y material BIAN. Cada instancia lleva un id, p.\ ej.\
+\texttt{\{fuente\}\_\{service-domain\}\_\{version\}}.
 
 \input{tables/tab04-adquisicion-datos}
 
@@ -20,7 +18,5 @@ emparejados con un \ServiceDomain{} BIAN declarado en la documentación del caso
         sintéticos o anonimizados (Anexo~F).
 \end{itemize}
 
-La \textbf{población teórica} abarca todas las instancias de medición posibles sobre pares
-OpenAPI $\leftrightarrow$ BIAN en ese universo; la \textbf{muestra empírica} será el subconjunto de
-contratos/pares seleccionados según representatividad de dominios (pagos, cuentas, préstamos, etc.),
-sin fijar un piloto único obligatorio.
+La población es todo par OpenAPI $\leftrightarrow$ SD que cumpla eso. La muestra, un recorte
+(pagos, cuentas, préstamos\ldots). Guía~1 no clava un piloto único.

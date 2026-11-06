@@ -1,0 +1,7 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+paymentsPostConsents;POST;/consents;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+paymentsGetConsentsConsentId;GET;/consents/{consentId};;;;;0.0;0.0;False;0.0;0.0;0.0;False
+paymentsPostPixPayments;POST;/pix/payments;Initiate;POST;/PaymentOrderInitiation/Initiate;CR - PaymentOrderInitiationTransaction;0.1429;0.8;True;1.0;1.0;0.6071;True
+paymentsGetPixPaymentsPaymentId;GET;/pix/payments/{paymentId};Retrieve;GET;/PaymentOrderInitiation/{paymentorderinitiationid}/Retrieve;CR - PaymentOrderInitiationTransaction;0.1667;0.8;True;1.0;1.0;0.6167;True
+paymentsPatchPixPaymentsPaymentId;PATCH;/pix/payments/{paymentId};Update;PUT;/PaymentOrderInitiation/{paymentorderinitiationid}/Update;CR - PaymentOrderInitiationTransaction;0.1429;0.8;True;0.5;1.0;0.5071;True
+paymentsPatchPixPaymentsConsentId;PATCH;/pix/payments/consents/{consentId};;;;;0.0;0.0;False;0.0;0.0;0.0;False

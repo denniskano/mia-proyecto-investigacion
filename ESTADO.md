@@ -22,8 +22,9 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 | Matriz OFB (8 cols) | `02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf` | Hecho |
 | Protocolo empírico | `02-curso-II/plan-tesis-v2/protocolo-empirico.md` | Hecho (v1) |
 | Cronograma 16 semanas | `02-curso-II/plan-tesis-v2/cronograma-sprints.md` | Hecho |
-| Parser OE1 | `02-curso-II/sesion-05/data/piloto_ofb_bian/procesar_openapi.py` | Hecho |
-| Piloto OFB × BIAN | 38 APIs + 3 SD · 41 YAML · 235 ops | Hecho |
+| Parser OE1 | `02-curso-II/piloto/procesar_openapi.py` | Hecho |
+| Matching v0 (P4) | `02-curso-II/piloto/matching_v0.py` + `resultado/matching/` | Hecho |
+| Piloto OFB × BIAN | `02-curso-II/piloto/` · 38 APIs + 3 SD · 41 YAML · 235 ops | Hecho |
 | EDA Sesión 5 | `02-curso-II/sesion-05/` | Hecho |
 | Revisión método Sesión 6 | `02-curso-II/sesion-06/` | Hecho (papel) |
 | Revisión avances Sesión 7 | `02-curso-II/sesion-07/` | Hecho (papel + cuaderno) |

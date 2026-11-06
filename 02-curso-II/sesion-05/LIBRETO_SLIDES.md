@@ -13,8 +13,8 @@
 ## Antes de empezar
 
 - [ ] PDF de las diapositivas abierto (19 páginas)
-- [ ] Si preguntan catálogo: `data/piloto_ofb_bian/README.md`
-- [ ] Si preguntan números: `data/piloto_ofb_bian/resultado/inventario.json`
+- [ ] Si preguntan catálogo: `../piloto/README.md`
+- [ ] Si preguntan números: `../piloto/resultado/inventario.json`
 - [ ] Reloj: Parte A (láminas 1–8) ~6 min; Parte B (9–19) ~7 min
 
 | Quién | Láminas |
@@ -151,7 +151,7 @@
 
 **Diapositiva:** Parte B — EDA (puente navy)
 
-> Pasamos a datos. 41 contratos, 235 operaciones, carpeta `piloto_ofb_bian`.
+> Pasamos a datos. 41 contratos, 235 operaciones, carpeta `02-curso-II/piloto`.
 
 **Acción:** no detenerse.
 

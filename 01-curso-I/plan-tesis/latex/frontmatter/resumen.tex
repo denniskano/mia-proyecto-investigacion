@@ -1,18 +1,18 @@
 \chapter*{Resumen}
 \addcontentsline{toc}{chapter}{Resumen}
 
-Queremos saber, \textbf{antes} de integrar, si el YAML de una API bancaria cuenta el mismo negocio
-que el \ServiceDomain{} BIAN con el que se la empareja. Hoy esa pregunta se responde a ojo, o no se
-responde.
+En un banco el YAML de la API sale a producción y casi nadie cruza, con un número, si ese archivo
+cuenta el mismo negocio que el \ServiceDomain{} BIAN que arquitectura tiene en la pared. El
+expediente TSB (1,9 millones de clientes, 2018) y el \textit{open banking} británico (CMA, 2016) se
+usan aquí como síntomas, no como objeto.
 
-El Grupo~10 diseña un procedimiento para puntuarla. Tres componentes ---similitud de significado
-(\SemanticScore{}, S), correspondencia de jerarquía REST (\StructuralScore{}, E) y cobertura de
-conceptos BIAN (\CoverageScore{}, C)--- se agregan en un \AlignmentScore{} por instancia
-\texttt{contrato $\times$ Service Domain}. La matriz de consistencia (Anexo~C) traza cada paso.
+Trabajamos sobre el contrato. \SemanticScore{} (S) mira nombres y textos; \StructuralScore{} (E),
+si \textit{paths} y verbos se parecen a \textit{behaviors}; \CoverageScore{} (C), qué parte del
+catálogo BIAN aparece en el YAML. Los tres entran en \AlignmentScore{}. El Anexo~C dice qué fila
+de la matriz corresponde a cada paso.
 
-En esta Guía~1 no construimos el software ni medimos un piloto: documentamos \textbf{cómo} se
-calcularía. Tampoco evaluamos latencia, \textit{fuzzing} ni seguridad en producción
-(§\ref{sec:alcances}).
+Esta Guía~1 no corre el parser ni puntúa un piloto. Deja escrito \textbf{cómo} se calcularía.
+Latencia, \textit{fuzzing} y seguridad en vivo no entran (§\ref{sec:alcances}).
 
 \vspace{0.5cm}
 \noindent\textbf{Palabras clave:} \palabrasClaveES.

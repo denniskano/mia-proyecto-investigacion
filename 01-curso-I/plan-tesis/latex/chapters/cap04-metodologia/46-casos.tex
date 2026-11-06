@@ -1,9 +1,7 @@
-Los casos de estudio para validación empírica se elegirán por \textbf{representatividad de dominio},
-no como piloto único del plan. El Anexo~F (\textit{Payment Initiation}) muestra el formato esperado de
-entrada/salida: pares \texttt{POST /payment-orders} $\leftrightarrow$ \Behavior{} \texttt{Initiate},
-etc.
+Los casos se eligen por dominio, no porque el Anexo~F sea ``el piloto''. Ese anexo
+(\textit{Payment Initiation}) solo muestra el formato: un \texttt{POST /payment-orders} frente a
+un \Behavior{} \texttt{Initiate}, y así.
 
-Este plan documenta que cada caso aportará: (a)~identificador de instancia; (b)~contrato
-OpenAPI; (c)~extracto BIAN; (d)~tabla de pares UA evaluados; (e)~scores S, E, C y
-\AlignmentScore{} esperados como salida del artefacto. La ejecución y el tamaño de muestra
-permanecen fuera del alcance (§1.6).
+Cada caso debería dejar: id de instancia, YAML, extracto BIAN, tabla de pares y los cuatro
+números (S, E, C, \AlignmentScore{}). Cuántos casos y cuáles se corren no se decide en Guía~1
+(§1.6).

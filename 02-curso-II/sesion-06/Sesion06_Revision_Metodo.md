@@ -54,7 +54,7 @@ OFB es un **estándar de industria**, no el YAML de un banco emisor. Entra como 
 | Muestra | [OpenBanking-Brasil/openapi](https://github.com/OpenBanking-Brasil/openapi) · `swagger-apis` | Última **estable** por API (solo `payroll-credit-portability` es beta) |
 | Referencia | [bian-official/public](https://github.com/bian-official/public) · release 14.0.0 | YAML completo del SD (no el recorte de 12 operaciones) |
 
-Ruta: `../sesion-05/data/piloto_ofb_bian/` (`fuentes/ofb/` + `fuentes/bian/`).
+Ruta: `../piloto/` (`fuentes/ofb/` + `fuentes/bian/`).
 
 ### 1.3 Criterios de inclusión / exclusión
 

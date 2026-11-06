@@ -4,7 +4,7 @@
 **Objeto de la tesis:** contrato OpenAPI **bancario**  
 **Referencia:** Service Domain **BIAN v14** (SavingsAccount, CurrentAccount, PaymentOrderInitiation)  
 **Muestra / piloto:** catálogo **Open Finance Brasil**  
-**Dataset:** `../sesion-05/data/piloto_ofb_bian/`
+**Dataset:** `../piloto/`
 
 Este protocolo ejecuta el Anexo C de Guía 1 sobre el corpus OFB ya parseado. No introduce otros emisores en **este** piloto; eso no reduce el objeto de la tesis a OFB.
 

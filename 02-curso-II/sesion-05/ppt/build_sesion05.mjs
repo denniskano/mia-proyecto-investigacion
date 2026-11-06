@@ -486,7 +486,7 @@ async function main() {
       color: C.white,
       fontFace: FONT,
     });
-    s.addText("Dataset: sesion-05/data/piloto_ofb_bian/\n41 contratos · 235 operaciones · 3 SD BIAN v14 + 38 APIs Open Finance Brasil", {
+    s.addText("Dataset: 02-curso-II/piloto/\n41 contratos · 235 operaciones · 3 SD BIAN v14 + 38 APIs Open Finance Brasil", {
       x: 0.7,
       y: 4.55,
       w: 11.5,
@@ -509,7 +509,7 @@ async function main() {
     s.addTable(
       [
         headerRow(["Atributo", "Valor"]),
-        row(["Carpeta", "sesion-05/data/piloto_ofb_bian/  (fuentes/ofb + fuentes/bian)"], false),
+        row(["Carpeta", "02-curso-II/piloto/  (fuentes/ofb + fuentes/bian)"], false),
         row(["BIAN v14", "SavingsAccount 34 · CurrentAccount 34 · PaymentOrderInitiation 7 (75 ops)"], true),
         row(["Open Finance Brasil", "38 APIs (última estable) · 160 ops · cuentas, pagos, créditos, tarjetas, open data…"], false),
         row(["Criterio OFB", "Última versión estable por carpeta swagger-apis (1 beta: payroll-credit-portability)"], true),
@@ -618,7 +618,7 @@ async function main() {
     s.addShape("roundRect", { x: 7.7, y: 1.2, w: 5.15, h: 5.4, fill: { color: C.card }, rectRadius: 0.08 });
     s.addText("Scope enriquecido", { x: 7.9, y: 1.4, w: 4.8, h: 0.4, fontSize: 16, bold: true, color: C.navy, fontFace: FONT });
     s.addText(
-      "38 APIs OFB: cuentas, pagos, créditos, tarjetas, consentimientos, open data, inversiones, seguros, pensiones…\n\nPares listos con BIAN actual: accounts↔Savings/Current y payments↔PaymentOrderInitiation.\n\nHueco: loans, credit-cards, financings no tienen SD BIAN en este piloto.\n\nCatálogo en data/piloto_ofb_bian/README.md.",
+      "38 APIs OFB: cuentas, pagos, créditos, tarjetas, consentimientos, open data, inversiones, seguros, pensiones…\n\nPares listos con BIAN actual: accounts↔Savings/Current y payments↔PaymentOrderInitiation.\n\nHueco: loans, credit-cards, financings no tienen SD BIAN en este piloto.\n\nCatálogo en 02-curso-II/piloto/README.md.",
       { x: 7.9, y: 1.95, w: 4.8, h: 4.3, fontSize: 14, color: C.text, fontFace: FONT }
     );
   }

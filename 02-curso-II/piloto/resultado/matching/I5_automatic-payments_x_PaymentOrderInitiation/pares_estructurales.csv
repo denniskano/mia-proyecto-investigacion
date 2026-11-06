@@ -1,0 +1,8 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+automaticPaymentsPostRecurringConsents;POST;/recurring-consents;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+automaticPaymentsGetRecurringConsentsConsentId;GET;/recurring-consents/{recurringConsentId};;;;;0.0;0.0;False;0.0;0.0;0.0;False
+automaticPaymentsPatchRecurringConsentsConsentId;PATCH;/recurring-consents/{recurringConsentId};;;;;0.0;0.0;False;0.0;0.0;0.0;False
+automaticPaymentsPostPixRecurringPayments;POST;/pix/recurring-payments;Initiate;POST;/PaymentOrderInitiation/Initiate;CR - PaymentOrderInitiationTransaction;0.125;0.8;True;1.0;1.0;0.6;True
+automaticPaymentsGetPixRecurringPayments;GET;/pix/recurring-payments;Retrieve;GET;/PaymentOrderInitiation/{paymentorderinitiationid}/Retrieve;CR - PaymentOrderInitiationTransaction;0.1429;0.8;True;1.0;1.0;0.6071;True
+automaticPaymentsGetPixRecurringPaymentsPaymentId;GET;/pix/recurring-payments/{recurringPaymentId};RetrieveCompliance;GET;/PaymentOrderInitiation/{paymentorderinitiationid}/Compliance/{complianceid}/Retrieve;BQ - Compliance;0.1429;0.8;True;1.0;0.6667;0.5571;True
+automaticPaymentsPatchPixRecurringPaymentsPaymentId;PATCH;/pix/recurring-payments/{recurringPaymentId};Update;PUT;/PaymentOrderInitiation/{paymentorderinitiationid}/Update;CR - PaymentOrderInitiationTransaction;0.125;0.8;True;0.5;1.0;0.5;True

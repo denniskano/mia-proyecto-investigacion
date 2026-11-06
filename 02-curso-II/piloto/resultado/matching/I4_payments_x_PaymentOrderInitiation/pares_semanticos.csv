@@ -1,0 +1,7 @@
+﻿ofb_operation_id;bian_operation_id;s_jaccard;s_tfidf;s_pair;ofb_texto;bian_texto
+paymentsPostConsents;;0.0;0.0;0.0;criar consentimento para a iniciação de pagamento. método de criação do consentimento para a iniciação de pagamento.;
+paymentsGetConsentsConsentId;;0.0;0.0;0.0;consultar consentimento para iniciação de pagamento. método para consulta do consentimento para a iniciação de pagamento.;
+paymentsPostPixPayments;Initiate;0.0;0.0;0.0;criar iniciação de pagamento. método para criar uma iniciação de pagamento.;initiate a payment transaction
+paymentsGetPixPaymentsPaymentId;Retrieve;0.0;0.0;0.0;consultar iniciação de pagamento. método para consultar uma iniciação de pagamento.;retrieve details about a payment transaction
+paymentsPatchPixPaymentsPaymentId;Update;0.0;0.0;0.0;cancelar iniciação de pagamento. esse endpoint deve ser usado para cancelar, a pedido do cliente pagador, as transações que estejam em uma das seguintes situações: agendada com sucesso (schd) ou retida para análise (pdng). caso a requisição;update details of a payment transaction instruction
+paymentsPatchPixPaymentsConsentId;;0.0;0.0;0.0;cancelar todos os pagamentos referentes ao mesmo consentimento. esse endpoint deve ser usado para cancelar, a pedido do cliente pagador, as transações que estejam em uma das seguintes situações: agendada com sucesso (schd) ou retida para an;

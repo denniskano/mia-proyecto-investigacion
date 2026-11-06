@@ -1,23 +1,17 @@
 \section{Objeto de estudio}
 \label{sec:objeto-estudio}
 
-El \textbf{objeto} no es un banco ni BIAN entero. Son los \textbf{contratos OpenAPI~3.x} con los
-que el sector bancario describe sus APIs: YAML o JSON que se pueden parsear y contrastar con un
-modelo de referencia, antes de formular el problema tecnológico (§1.3).
+El \textbf{objeto} es el YAML (o JSON) OpenAPI~3.x con el que un banco, un integrador o un
+catálogo describe la API. Se puede parsear. Se puede poner al lado de un \ServiceDomain{}. No es
+el banco, no es BIAN entero y no es el \textit{backend}.
 
-Quedan fuera del objeto la organización BIAN en su totalidad, el código de \textit{backends} y la
-infraestructura de despliegue. BIAN entra como \textbf{modelo de referencia} (\ServiceDomain{}:
-\textit{behaviors}, \textit{business objects}, relaciones de control) contra el cual se leen los
-contratos.
+BIAN entra como \textbf{referencia}: \textit{behaviors}, \textit{business objects}, control. El
+consorcio también publica OpenAPI de muestra; esos YAML no son el objeto. El objeto es el
+contrato \textbf{bancario} que se evalúa. El Anexo~F lo muestra con \textit{Payment Initiation}
+sin convertirlo en el único caso.
 
-BIAN también publica contratos OpenAPI de referencia, pero el estudio no reduce el estándar a su
-capa REST: el \ServiceDomain{} expresa el negocio y el \textbf{contrato OpenAPI bancario}
----del banco, de un integrador o de un catálogo--- es la \textbf{capa técnica evaluada}. Esa
-distinción orienta la lectura del contrato frente al \ServiceDomain{} y se ilustra en Anexo~F.
-
-Para evitar ambigüedades, se distinguen tres niveles. La \Cref{fig:ontologia} resume la relación
-entre objeto, referencia BIAN, unidad de análisis y producto del modelo; el detalle tabular sigue
-en la \Cref{tab:objeto-unidad-producto}.
+Tres niveles, porque si se mezclan el score no se interpreta. La \Cref{fig:ontologia} y la
+\Cref{tab:objeto-unidad-producto} los separan.
 
 \input{chapters/cap01-planteamiento/fig-ontologia}
 
@@ -38,10 +32,9 @@ en la \Cref{tab:objeto-unidad-producto}.
   \end{tabular}
 \end{table}
 
-En el procedimiento propuesto, el \textbf{objeto} es el archivo de entrada (el contrato); la
-\textbf{unidad de análisis} es cada par procesado dentro de él (endpoint--
-\Behavior{}, esquema--\BusinessObject{}, etc.); el \textbf{producto} agrega esos resultados en
-\AlignmentScore{} y clasificación por instancia \texttt{contrato} $\times$ \ServiceDomain{}.
+El archivo es el objeto. Cada par endpoint--\Behavior{} o esquema--\BusinessObject{} es la
+unidad. El \AlignmentScore{} y el nivel (Alta/Media/Baja/Nula) se reportan por instancia
+\texttt{contrato} $\times$ \ServiceDomain{}.
 
 Cada instancia se identifica de forma unívoca, p. ej.
 \texttt{\{fuente\}\_\{service-domain\}\_\{version\}}, coherente con la adquisición de datos del
@@ -64,9 +57,8 @@ genérico.
 
 \subsection{Producto central: modelo de alineación}
 
-El \textbf{resultado esperado} ---lo que la matriz y el Capítulo~\ref{cap:objetivos} declaran como
-producto--- es un \textbf{modelo de alineación}. Dado un contrato OpenAPI bancario y un
-\ServiceDomain{} BIAN emparejado, debe calcular:
+Lo que la matriz pide como producto es el \textbf{modelo}, no un dashboard. Entrada: un contrato
+y un SD emparejado. Salida:
 
 \begin{table}[H]
   \centering
@@ -104,6 +96,5 @@ La \Cref{fig:alignment-score} ilustra el cálculo del score de alineación.
   \label{fig:alignment-score}
 \end{figure}
 
-Esas cinco fases de transformación ---diseño, normalización, cálculo de E, S y C, integración en
-\AlignmentScore{}--- coinciden con la matriz de consistencia (Anexo~C) y con la cadena OE1--OE4 del
-Capítulo~\ref{cap:objetivos}.
+Diseño, normalización, E, S, C y el score integrado: eso es Anexo~C y OE1--OE4
+(Capítulo~\ref{cap:objetivos}).

@@ -1,8 +1,8 @@
 \section{Introducción}
 
 El plan arranca de una decisión del grupo: \textbf{medir} si un contrato OpenAPI bancario y un
-\ServiceDomain{} BIAN emparejado hablan del mismo negocio, y hacerlo con un número reproducible,
-no con una revisión ad hoc.
+\ServiceDomain{} BIAN emparejado hablan del mismo negocio. Un número, no una reunión de
+arquitectura que termina en ``parece alineado''.
 
 OpenAPI es el archivo YAML o JSON con \textit{paths}, verbos HTTP y \textit{schemas} (Casas et al.,
 2021; Santos et al., 2020). BIAN ---\textit{Banking Industry Architecture Network}--- parte el
@@ -20,11 +20,11 @@ El sector ya mostró el costo de no hacerlo. TSB (2018) y el \textit{open bankin
 banco--- se fija en §\ref{sec:objeto-estudio}; el problema tecnológico, en
 §\ref{sec:planteamiento}.
 
-Guía~1 \textbf{diseña} el procedimiento y lo deja trazado en el Anexo~C. Construir el parser y
-correr scores queda para Tesis~2 (§\ref{sec:alcances}).
+Guía~1 \textbf{diseña} el procedimiento y lo deja en el Anexo~C. El parser y los scores se corren
+en Tesis~2 (§\ref{sec:alcances}).
 
-La \Cref{fig:contexto} sitúa el flujo: APIs bancarias, BIAN como referencia, OpenAPI como entrada,
-S/E/C como salida.
+La \Cref{fig:contexto} pone las piezas en una sola vista: APIs, BIAN, el YAML de entrada y S/E/C
+de salida.
 
 \begin{figure}[H]
   \centering
@@ -33,6 +33,5 @@ S/E/C como salida.
   \label{fig:contexto}
 \end{figure}
 
-Sigue la situación real (§\ref{sec:problematica}), luego el planteamiento y el objeto. Objetivos,
-marco y método ocupan los capítulos~\ref{cap:objetivos}--\ref{cap:metodologia}; el Capítulo~5
-administra el plan.
+TSB y CMA van en §\ref{sec:problematica}. El objeto, en §\ref{sec:objeto-estudio}. Objetivos,
+marco y método ocupan lo que resta del documento.

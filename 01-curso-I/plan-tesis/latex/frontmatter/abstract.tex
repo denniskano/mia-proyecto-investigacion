@@ -1,15 +1,14 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-Group~10 asks a practical question: does a bank's OpenAPI contract describe the same capability as
-the BIAN Service Domain chosen as reference? The check, when it happens at all, is still a manual
-review.
+OpenAPI files go live. BIAN Service Domains stay in architecture decks. We have not seen a
+published score that puts the two artefacts side by side before release.
 
-We specify a scoring procedure rather than a production tool. SemanticScore (S), StructuralScore
-(E) and CoverageScore (C) feed an AlignmentScore for each pair
-\texttt{OpenAPI contract $\times$ Service Domain}. Appendix~C holds the consistency matrix.
+Group~10 writes that score. Meaning (S), REST shape versus BIAN behaviours (E), and how much of
+the Service Domain the YAML covers (C) feed AlignmentScore. The consistency matrix is Appendix~C,
+not a slogan in the introduction.
 
-Guide~1 stops at design. We do not ship code, run a bank pilot, or score live API security
+Guide~1 is the design. Parser, bank pilot and runtime security are later work
 (§\ref{sec:alcances}).
 
 \vspace{0.5cm}

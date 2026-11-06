@@ -1,7 +1,5 @@
-El procedimiento sigue las cinco fases del modelo (Anexo~C), alineadas con OE1--OE4. La
-\textbf{adquisición de artefactos} (Cap.~4 §4.3) precede a la normalización: contratos OpenAPI y
-material BIAN se identifican, versionan y almacenan antes del \textit{parsing}. Este capítulo
-documenta el diseño del procedimiento; su ejecución a escala queda fuera del alcance (§1.6).
+Cinco fases, las del Anexo~C. Primero se identifica y versiona el YAML y el extracto BIAN
+(§4.3); después se parsea. Aquí se escribe el diseño. Correrlo a escala es §1.6.
 
 \begin{enumerate}
   \item \textbf{Fase 1 --- Diseñar el modelo:} definir entradas, scores S/E/C, fórmula de
@@ -32,9 +30,7 @@ aparece en la \Cref{fig:cadena-objetivos} (Cap.~2).
 
 \subsection{Protocolo de validación empírica (fuera de alcance)}
 
-Para una validación empírica posterior, el protocolo escrito contemplará: (1)~instrumento de captura
-(repositorio de contratos); (2)~infraestructura (\textit{parsing}, almacenamiento);
-(3)~condiciones de registro; (4)~tamaño y representatividad de la muestra; (5)~etiquetado de pares
-OpenAPI$\leftrightarrow$BIAN (juicio experto o \textit{ground truth} documentado);
-(6)~aspectos éticos/legales; (7)~evaluación del desempeño del sistema (precisión vs.\ referencia,
-análisis de falsos positivos/negativos en matching).
+Cuando se corra, hará falta un repositorio de contratos, el parser, un registro de instancia y
+versión, un criterio de muestra (no un YAML suelto) y ---si se compara contra un humano--- un
+criterio de par ``correcto'' escrito, no improvisado. Ley 29733: sin PII. Precisión contra esa
+referencia y falsos pares se reportan ahí, no en Guía~1.

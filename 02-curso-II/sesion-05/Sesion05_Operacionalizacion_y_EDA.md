@@ -11,7 +11,7 @@ lang: es
 **Programa:** Maestría en Inteligencia Artificial · UNI · MIA 403  
 **Objeto de la tesis:** contratos **OpenAPI bancarios** frente a Service Domains BIAN.  
 **Piloto de esta sesión:** catálogo **Open Finance Brasil (OFB)** + tres SD BIAN v14.  
-**Dataset:** `data/piloto_ofb_bian/` (`fuentes/ofb/` + `fuentes/bian/`).
+**Dataset:** `../piloto/` (`fuentes/ofb/` + `fuentes/bian/`).
 
 Este documento **no sustituye** el plan LaTeX ni el Plan v2. Cierra la operacionalización y el EDA **antes** del matching OE2–OE4.
 
@@ -122,7 +122,7 @@ Propiedades: 6 746. Corpus: 10 906 fragmentos.
 
 Las otras **33** APIs OFB (loans, credit-cards, financings, consents, …) entran en el inventario OE1. No reciben AlignmentScore mientras no haya SD BIAN emparejado.
 
-Catálogo OFB completo: `data/piloto_ofb_bian/README.md`.
+Catálogo OFB completo: `../piloto/README.md`.
 
 ### B.2 Distribuciones
 
@@ -201,7 +201,7 @@ Cuando existan scores en I1–I6, los niveles se asignan **después** de los umb
 |-----------|-----|
 | `../../01-curso-I/plan-tesis/latex/` | Guía 1 |
 | `../plan-tesis-v2/PLAN_TESIS_V2.pdf` | Plan v2 (MIA 403) |
-| `data/piloto_ofb_bian/` | Corpus OFB + BIAN |
-| `data/piloto_ofb_bian/README.md` | Lista de 38 APIs |
+| `../piloto/` | Corpus OFB + BIAN |
+| `../piloto/README.md` | Lista de 38 APIs |
 
 *Grupo 10 · Sesión 5 · piloto Open Finance Brasil · objeto OpenAPI bancario · octubre 2026.*

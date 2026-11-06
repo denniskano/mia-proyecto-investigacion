@@ -4,7 +4,7 @@
 **Referencia:** 3 Service Domains BIAN v14 (completos).  
 **No hay** recorte de 12 operaciones ni YAML de un banco emisor.
 
-Plan vigente: `../../../plan-tesis-v2/PLAN_TESIS_V2.pdf`.  
+Plan vigente: `../plan-tesis-v2/PLAN_TESIS_V2.pdf`.  
 Objeto de la tesis (no cambia): OpenAPI bancario. OFB es solo este piloto.
 
 ## Totales
@@ -17,11 +17,12 @@ Objeto de la tesis (no cambia): OpenAPI bancario. OFB es solo este piloto.
 | Corpus | — | — | **10906** |
 
 ```
-piloto_ofb_bian/
+02-curso-II/piloto/
   fuentes/ofb/     38 YAML OFB_*
   fuentes/bian/    SavingsAccount, CurrentAccount, PaymentOrderInitiation
-  resultado/       CSV + inventario.json
+  resultado/       CSV + inventario.json + matching/
   procesar_openapi.py
+  matching_v0.py
 ```
 
 Fuente OFB: [OpenBanking-Brasil/openapi](https://github.com/OpenBanking-Brasil/openapi) · `swagger-apis`.  

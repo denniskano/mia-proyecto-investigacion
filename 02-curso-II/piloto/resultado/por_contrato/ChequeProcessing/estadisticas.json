@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "ChequeProcessing.yaml",
+  "source": "BIAN",
+  "contrato": "Cheque Processing",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 13,
+  "cantidad_schemas": 37,
+  "cantidad_propiedades": 126,
+  "fragmentos_corpus": 194,
+  "operaciones_con_summary": 13,
+  "operaciones_con_description": 13,
+  "operaciones_summary_igual_description": 13,
+  "metodos": {
+    "PUT": 7,
+    "POST": 2,
+    "GET": 4
+  },
+  "tags": {
+    "CR - ChequeProcessingOperatingSession": 7,
+    "BQ - FinancialTransactionInitiation": 2,
+    "BQ - ChequeExceptionHandling": 3,
+    "BQ - ChequeExtraction": 1
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/ChequeProcessing.yaml"
+}

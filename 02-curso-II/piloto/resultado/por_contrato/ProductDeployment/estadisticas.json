@@ -1,0 +1,31 @@
+{
+  "archivo_entrada": "ProductDeployment.yaml",
+  "source": "BIAN",
+  "contrato": "Product Deployment",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 36,
+  "cantidad_schemas": 64,
+  "cantidad_propiedades": 167,
+  "fragmentos_corpus": 288,
+  "operaciones_con_summary": 36,
+  "operaciones_con_description": 36,
+  "operaciones_summary_igual_description": 36,
+  "metodos": {
+    "POST": 1,
+    "PUT": 27,
+    "GET": 8
+  },
+  "tags": {
+    "CR - ProductandServiceDeploymentDevelopment": 8,
+    "BQ - Systems": 4,
+    "BQ - ITOperations": 4,
+    "BQ - HROperations": 4,
+    "BQ - SalesandMarketing": 4,
+    "BQ - Servicing": 4,
+    "BQ - Production": 4,
+    "BQ - ProductionSupport": 4
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/ProductDeployment.yaml"
+}

@@ -1,0 +1,30 @@
+{
+  "archivo_entrada": "ChannelActivityAnalysis.yaml",
+  "source": "BIAN",
+  "contrato": "Channel Activity Analysis",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 16,
+  "cantidad_schemas": 17,
+  "cantidad_propiedades": 45,
+  "fragmentos_corpus": 86,
+  "operaciones_con_summary": 16,
+  "operaciones_con_description": 16,
+  "operaciones_summary_igual_description": 16,
+  "metodos": {
+    "PUT": 8,
+    "POST": 1,
+    "GET": 7
+  },
+  "tags": {
+    "CR - ChannelActivityAnalysis": 4,
+    "BQ - CustomerFraud": 2,
+    "BQ - MerchantFraud": 2,
+    "BQ - MerchantBehavior": 2,
+    "BQ - CustomerBehavior": 2,
+    "BQ - Bot": 2,
+    "BQ - DeviceError": 2
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/ChannelActivityAnalysis.yaml"
+}

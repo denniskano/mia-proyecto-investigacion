@@ -18,26 +18,24 @@ modelo:
         \AlignmentScore{} con clasificación por niveles.
 \end{itemize}
 
-Quedan fuera de esta línea de base las implementaciones en producción, el tráfico \textit{runtime} y
-los artefactos de testing automatizado (delimitación §1.6). Los ejemplos del Cap.~1 (Tabla~1.4,
-Anexo~F) ilustran el procedimiento pero \textbf{no fijan un caso piloto único}: el diseño aplica a
-cualquier par contrato OpenAPI bancario --- \ServiceDomain{} BIAN que cumpla los criterios de
-inclusión definidos en el plan.
+Quedan fuera las implementaciones en producción, el tráfico \textit{runtime} y el testing
+automatizado (\Cref{sec:alcances}). La Tabla~1.4 y el Anexo~F muestran el formato del cálculo.
+No eligen el piloto: entra cualquier par contrato OpenAPI bancario --- \ServiceDomain{} BIAN que
+cumpla los criterios de inclusión del plan.
 
 \section{Objetivo superior}
 
-El \textbf{objetivo superior} es lo que pasaría en un banco \textit{si} el modelo existiera y se
-usara. No es el objetivo técnico de Guía~1. Sirve para no perder de vista por qué importa:
+El objetivo superior describe el uso en un banco, si el modelo llegara a usarse. No es el objetivo
+técnico de Guía~1.
 
 \begin{quote}
-  Contar con un procedimiento verificable que permita a equipos de arquitectura y gobernanza de APIs
-  \textbf{cuantificar la coherencia} entre contratos OpenAPI y modelos BIAN \textbf{antes} del
-  despliegue o la certificación, reduciendo retrabajo en adaptadores, ensayo--error en integraciones
-  y deriva entre la capa técnica y el modelo de negocio de referencia.
+  Que un equipo de arquitectura pueda medir, sobre el contrato y antes del despliegue, cuánto
+  coincide ese OpenAPI con el modelo BIAN de referencia. El resultado esperado es menos adaptadores
+  rehechos a ciegas y menos deriva entre la API publicada y el negocio que BIAN describe.
 \end{quote}
 
-Guía~1 no pone eso en producción (§1.6). Entrega el modelo y el procedimiento. El software y el
-piloto a escala son otra entrega.
+Guía~1 no instala ese procedimiento en un banco (\Cref{sec:alcances}). Deja el modelo y los pasos.
+El software y un piloto a escala son otra entrega.
 
 \section{Objetivo general (técnico)}
 
@@ -75,15 +73,15 @@ OE1--OE4 son transformaciones, no deseos. Encajan en las cinco fases del modelo
     \textbf{OE2} &
     Alineación estructural (P1) &
     Representaciones normalizadas &
-    Matriz de correspondencias + \StructuralScore{} (E) $\in [0, 1]$ \\
+    Matriz de correspondencias + \StructuralScore{} $\in [0, 1]$ \\
     \textbf{OE3} &
     Alineación semántica (P2) &
     Representaciones normalizadas &
-    Matriz de similitud + \SemanticScore{} (S) $\in [0, 1]$ \\
+    Matriz de similitud + \SemanticScore{} $\in [0, 1]$ \\
     \textbf{OE4} &
     Evaluación integrada (P3--P4) &
-    \StructuralScore{} (E), \SemanticScore{} (S) y representaciones normalizadas (OE1) &
-    \CoverageScore{} (C); \AlignmentScore{}; clasificación (Alta/Media/Baja/Nula); tipologías \\
+    \StructuralScore{}, \SemanticScore{} y representaciones normalizadas (OE1) &
+    \CoverageScore{}; \AlignmentScore{}; clasificación (Alta/Media/Baja/Nula); tipologías \\
     \bottomrule
   \end{tabular}
 \end{table}

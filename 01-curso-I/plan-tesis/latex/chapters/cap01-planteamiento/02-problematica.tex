@@ -1,30 +1,28 @@
 \section{Problemática}
 \label{sec:problematica}
 
-Los síntomas están en el sector, no todavía en nuestra matriz. Un caso alcanza: en 2018 la
-migración de plataformas del TSB (Reino Unido) dejó sin servicio a cerca de \textbf{1,9 millones
-de clientes}. Los informes públicos hablan de \textbf{cientos de millones de libras} y de semanas
-con operación restringida (House of Commons Treasury Committee, 2018). El expediente no nombra
-OpenAPI ni BIAN. Sí muestra qué ocurre cuando negocio y tecnología se mueven sin una
-correspondencia que se pueda verificar: retrabajo, adaptadores de ensayo--error, daño reputacional.
+En abril de 2018 el TSB migró la plataforma y cerca de 1,9 millones de clientes se quedaron sin
+servicio. El informe de la Cámara de los Comunes cifra el episodio en cientos de millones de libras
+y en semanas de operación restringida (House of Commons Treasury Committee, 2018). No habla de
+OpenAPI ni de BIAN. Documenta otra cosa: el costo de cambiar el sistema cuando negocio y tecnología
+no tienen una correspondencia que se pueda revisar. Retrabajo, adaptadores armados a prueba y error,
+daño de reputación.
 
-En \textit{open banking} el patrón es más seco. Desde 2018 la regulación británica obligó a nueve
-bancos de \textit{retail} a exponer APIs (CMA, 2016). Converger esas interfaces con un modelo de
-negocio de referencia sigue siendo, en la práctica, un asunto de gobernanza, no de publicar un
-Swagger.
+El \textit{open banking} británico es un caso distinto. La orden de la CMA (2016) obligó, a partir
+de 2018, a nueve bancos de \textit{retail} a exponer APIs. Publicar el Swagger no dice cómo se
+compara esa interfaz con un modelo de negocio de referencia. Esa comparación sigue en la gobernanza
+del banco, no en el archivo.
 
-Casas et al.\ (2021) mapearon 47 estudios primarios: solo el 40\,\% ancla un dominio concreto; el
-resto trabaja APIs genéricas. Golmohammadi et al.\ (2024), sobre 92 trabajos de prueba REST,
-subrayan el costo de validar servicios \textbf{ya} desplegados y la escasez de casos industriales
-reproducibles. Farzi (2021) acerca BIAN a la agilidad bancaria y admite la distancia entre el
-\textit{to-be} y lo que realmente corre.
+En lo que leímos, el hueco se repite con otros números. Casas et al.\ (2021) mapean 47 estudios
+primarios y solo el 40\,\% ancla un dominio; el resto trabaja APIs genéricas. Golmohammadi et al.\
+(2024) revisan 92 trabajos de prueba REST: validar un servicio ya desplegado sale caro, y los casos
+industriales que se pueden repetir son pocos. Farzi (2021) acerca BIAN a la agilidad del banco y
+deja abierta la distancia entre el \textit{to-be} y lo que corre.
 
-En el día a día el desajuste se ve así. Desarrollo publica el OpenAPI pensando en el \textit{sprint}.
-Arquitectura conserva BIAN. Los nombres no coinciden (\texttt{PaymentOrder} frente a
-\texttt{paymentRequest}). Un PUT del SD no tiene GET equivalente en el contrato, o al revés. Las
-versiones del YAML no apuntan a una revisión del modelo. La revisión, cuando existe, es una
-lectura humana o una herramienta genérica de \textit{schema matching}.
-
-Shabbir et al.\ (2025) recuerdan que consistencia y mantenibilidad se resienten cuando la
-documentación técnica no refleja el dominio. Eso es el dolor que el §\ref{sec:planteamiento}
-convierte en problema tecnológico y que el Anexo~C formula como fila de la matriz.
+En un contrato el desajuste no es un ensayo. Arquitectura guarda el \ServiceDomain{}; desarrollo
+versiona el YAML del \textit{sprint}. Para la misma orden aparecen \texttt{PaymentOrder} y
+\texttt{paymentRequest}. Un \Behavior{} declarado con PUT no tiene el GET en el contrato, o al
+revés, y la versión nueva del archivo no dispara una revisión del modelo. Cuando hay revisión, es
+lectura humana o un \textit{schema matcher} que no conoce el SD. Shabbir et al.\ (2025) atan ese
+desfase a la consistencia y a la mantenibilidad de la documentación. El
+§\ref{sec:planteamiento} lo formula como problema tecnológico; el Anexo~C, como fila de la matriz.

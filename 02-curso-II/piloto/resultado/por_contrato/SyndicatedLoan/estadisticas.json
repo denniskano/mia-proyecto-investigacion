@@ -1,0 +1,28 @@
+{
+  "archivo_entrada": "SyndicatedLoan.yaml",
+  "source": "BIAN",
+  "contrato": "Syndicated Loan",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 24,
+  "cantidad_schemas": 58,
+  "cantidad_propiedades": 179,
+  "fragmentos_corpus": 278,
+  "operaciones_con_summary": 24,
+  "operaciones_con_description": 24,
+  "operaciones_summary_igual_description": 24,
+  "metodos": {
+    "PUT": 17,
+    "POST": 2,
+    "GET": 5
+  },
+  "tags": {
+    "CR - SyndicatedLoanFacility": 7,
+    "BQ - Fulfillment": 4,
+    "BQ - Origination": 4,
+    "BQ - Syndicate": 4,
+    "BQ - InstrumentDesign": 5
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/SyndicatedLoan.yaml"
+}

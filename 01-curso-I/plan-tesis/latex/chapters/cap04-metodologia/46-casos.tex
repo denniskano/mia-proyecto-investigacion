@@ -1,7 +1,6 @@
-Los casos se eligen por dominio, no porque el Anexo~F sea ``el piloto''. Ese anexo
-(\textit{Payment Initiation}) solo muestra el formato: un \texttt{POST /payment-orders} frente a
-un \Behavior{} \texttt{Initiate}, y así.
+El criterio de elección es el dominio (pagos, cuentas, préstamos), no el Anexo~F. Ese anexo solo
+fija el formato con un ejemplo, \textit{Payment Initiation}: el \texttt{POST /payment-orders} del
+contrato frente al \Behavior{} \texttt{Initiate}.
 
-Cada caso debería dejar: id de instancia, YAML, extracto BIAN, tabla de pares y los cuatro
-números (S, E, C, \AlignmentScore{}). Cuántos casos y cuáles se corren no se decide en Guía~1
-(§1.6).
+De cada caso se guarda el id de instancia, el YAML, el extracto BIAN, la tabla de pares y los
+cuatro números. Cuántos casos se corren, y cuáles, no se cierra en Guía~1 (\Cref{sec:alcances}).

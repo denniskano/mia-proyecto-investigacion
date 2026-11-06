@@ -1,0 +1,31 @@
+{
+  "archivo_entrada": "IssuedDeviceAdministration.yaml",
+  "source": "BIAN",
+  "contrato": "Issued Device Administration",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 39,
+  "cantidad_schemas": 74,
+  "cantidad_propiedades": 222,
+  "fragmentos_corpus": 370,
+  "operaciones_con_summary": 39,
+  "operaciones_con_description": 39,
+  "operaciones_summary_igual_description": 39,
+  "metodos": {
+    "POST": 6,
+    "PUT": 25,
+    "GET": 8
+  },
+  "tags": {
+    "CR - IssuedDeviceAllocation": 5,
+    "BQ - PasswordAssignment": 6,
+    "BQ - QuestionAssignment": 6,
+    "BQ - BiometricAssignment": 5,
+    "BQ - DeviceAssignment": 4,
+    "BQ - ReaderAssignment": 4,
+    "BQ - ChequesAssignment": 4,
+    "BQ - TokenAssignment": 5
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/IssuedDeviceAdministration.yaml"
+}

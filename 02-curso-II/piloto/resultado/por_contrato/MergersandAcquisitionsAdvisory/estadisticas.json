@@ -1,0 +1,25 @@
+{
+  "archivo_entrada": "MergersandAcquisitionsAdvisory.yaml",
+  "source": "BIAN",
+  "contrato": "Mergers and Acquisitions Advisory",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 15,
+  "cantidad_schemas": 47,
+  "cantidad_propiedades": 124,
+  "fragmentos_corpus": 191,
+  "operaciones_con_summary": 15,
+  "operaciones_con_description": 15,
+  "operaciones_summary_igual_description": 15,
+  "metodos": {
+    "PUT": 9,
+    "POST": 2,
+    "GET": 4
+  },
+  "tags": {
+    "BQ - MergerandAcquisition": 7,
+    "CR - MergersAndAcquisitionAdvice": 8
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/MergersandAcquisitionsAdvisory.yaml"
+}

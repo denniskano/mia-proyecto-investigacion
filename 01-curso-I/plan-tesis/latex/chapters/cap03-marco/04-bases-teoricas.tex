@@ -1,42 +1,39 @@
-Estas bases no repiten el estado del arte. Toman de §\ref{sec:estado-arte} los papers que
-\textbf{fundan} S, E o C, y los atan a OE1--OE4 y al Capítulo~4.
+Estas bases no repiten el comentario de §\ref{sec:estado-arte}. Dejan, de esos papers, solo lo
+que entra en el cálculo de S, E o C.
 
 \subsection{Correspondencia estructural (\textit{schema matching})}
 
-Shvaiko y Euzenat (2005) proponen una taxonomía multidimensional del \textbf{\textit{schema
-matching}}: técnicas aproximadas o exactas a nivel de esquema; evidencia sintáctica, semántica o
-externa a nivel de elemento y estructura; grado de automatización. El marco es anterior a OpenAPI y
-JSON Schema, pero fundamenta el cálculo del \StructuralScore{} al contrastar \textit{paths},
-\textit{operations} y \textit{schemas} con la organización de \Behavior{}s y \BusinessObject{}s del
-\ServiceDomain{} de referencia.
+Shvaiko y Euzenat (2005) arman la taxonomía en tres cortes que usamos tal cual: \textit{matching}
+aproximado o exacto; evidencia sintáctica, semántica o externa; grano de elemento o de estructura,
+más el grado de automatización. El artículo es anterior a OpenAPI y a JSON Schema. Igual fija qué
+se compara en el \StructuralScore{}: \textit{paths}, \textit{operations} y \textit{schemas}
+contra \Behavior{}s y \BusinessObject{}s del \ServiceDomain{}.
 
 \subsection{Alineación ontológica y similitud semántica}
 
-El Bayadh et al.\ (2015) clasifican enfoques de \textbf{alineación ontológica} en cuatro familias:
-medidas terminológicas, estructurales, extensionales y semánticas. Ninguna medida aislada basta;
-combinaciones fijas pueden ser subóptimas, lo que justifica un diseño explícito de pesos en el
-modelo S/E/C propuesto.
+El Bayadh et al.\ (2015) agrupan la alineación ontológica en medidas terminológicas,
+estructurales, extensionales y semánticas, y muestran que una medida sola no alcanza. Por eso los
+pesos del modelo S/E/C quedan escritos en el plan, no heredados de un solo paper.
 
-Chandrasekaran y Mago (2022) trazan la evolución de la \textbf{similitud semántica} desde recursos
-léxicos (WordNet) hacia \textit{embeddings} y modelos transformadores. Santos Sousa et al.\ (2026)
-catalogan el uso de \textit{embeddings} en ontology matching, señalando limitaciones de supervisión,
-escalabilidad y correspondencias complejas.
-
-Estas líneas aportan candidatos para el \SemanticScore{} y, en parte, para estimar cobertura
-conceptual (\CoverageScore{}), siempre sobre vocabulario extraído del contrato OpenAPI y del modelo
-BIAN normalizado.
+Chandrasekaran y Mago (2022) pasan revista a la similitud semántica desde WordNet hasta
+\textit{embeddings} y \textit{transformers}. Santos Sousa et al.\ (2026) revisan
+\textit{embeddings} en \textit{ontology matching} y marcan supervisión, escalabilidad y
+correspondencias complejas como límites. De ahí salen candidatos para el \SemanticScore{} y, con
+menos fuerza, para el \CoverageScore{}. El vocabulario sale del contrato y del SD ya
+normalizados, no de un corpus general.
 
 \subsection{Representación enriquecida de contratos}
 
-Mainas et al.\ (2023) ---citados en el eje E1--- proponen anotaciones semánticas
-(\texttt{x-refersTo}, \texttt{x-kindOf}, etc.), ontología REST/Hydra y traducción OpenAPI
-$\rightarrow$ RDF como vía de \textbf{representación enriquecida}.
+Mainas et al.\ (2023), ya citados en el eje E1, proponen anotaciones (\texttt{x-refersTo},
+\texttt{x-kindOf}, entre otras), una ontología REST/Hydra y la traducción OpenAPI
+$\rightarrow$ RDF.
 
-Evaluaron más de 300 contratos de SwaggerHub con consultas SPARQL. Los tiempos de traducción superan
-1~s para YAML de más de 200 líneas. En este plan se consideran como técnicas de normalización
-candidatas (Cap.~4), no como definición previa del \SemanticScore{}.
+Sobre más de 300 contratos de SwaggerHub, la traducción pasa de 1~s cuando el YAML supera unas
+200 líneas. En el Capítulo~\ref{cap:metodologia} entran como opción de normalización (OE1). No
+definen el \SemanticScore{}.
 
 \subsection{Relación con el modelo propuesto}
 
-E2 y E3, solos, no son el producto. El grupo los mete en un procedimiento que entrega S, E, C y
-\AlignmentScore{} sobre YAML bancario. Por qué hace falta esa unión: §\ref{sec:brecha}.
+E2 aporta el corte estructural y E3, los candidatos de S y de C. El procedimiento que los junta,
+con umbrales, está en el Capítulo~\ref{cap:metodologia} y en el Anexo~C. Por qué hace falta
+juntarlos: §\ref{sec:brecha}.

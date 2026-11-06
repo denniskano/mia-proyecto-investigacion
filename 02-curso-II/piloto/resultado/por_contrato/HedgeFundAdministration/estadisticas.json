@@ -1,0 +1,33 @@
+{
+  "archivo_entrada": "HedgeFundAdministration.yaml",
+  "source": "BIAN",
+  "contrato": "Hedge Fund Administration",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 62,
+  "cantidad_schemas": 74,
+  "cantidad_propiedades": 260,
+  "fragmentos_corpus": 416,
+  "operaciones_con_summary": 62,
+  "operaciones_con_description": 62,
+  "operaciones_summary_igual_description": 62,
+  "metodos": {
+    "POST": 1,
+    "PUT": 41,
+    "GET": 20
+  },
+  "tags": {
+    "CR - HedgeFundAdministrativePlan": 8,
+    "BQ - FundAccounting": 6,
+    "BQ - FundEnrolmentCertification": 6,
+    "BQ - FundDevelopment": 6,
+    "BQ - FundInvestor_MiddleandBackOfficeService": 6,
+    "BQ - FundInflowsandOutflow": 6,
+    "BQ - FundFinancialReporting": 6,
+    "BQ - FundManagement": 6,
+    "BQ - FundPerformanceFee": 6,
+    "BQ - FundTaxAdministration": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/HedgeFundAdministration.yaml"
+}

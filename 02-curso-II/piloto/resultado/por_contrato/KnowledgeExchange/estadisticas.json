@@ -1,0 +1,29 @@
+{
+  "archivo_entrada": "KnowledgeExchange.yaml",
+  "source": "BIAN",
+  "contrato": "Knowledge Exchange",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 23,
+  "cantidad_schemas": 39,
+  "cantidad_propiedades": 141,
+  "fragmentos_corpus": 223,
+  "operaciones_con_summary": 23,
+  "operaciones_con_description": 23,
+  "operaciones_summary_igual_description": 23,
+  "metodos": {
+    "PUT": 15,
+    "POST": 2,
+    "GET": 6
+  },
+  "tags": {
+    "CR - IntellectualPropertyExchangeOperatingSession": 7,
+    "BQ - IndexingandPublication": 3,
+    "BQ - CaptureandClassification": 6,
+    "BQ - Review_RefinementandEditing": 3,
+    "BQ - Archiving": 1,
+    "BQ - MaintenanceandAccessAdministration": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/KnowledgeExchange.yaml"
+}

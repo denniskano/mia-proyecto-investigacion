@@ -1,0 +1,32 @@
+{
+  "archivo_entrada": "MutualFundAdministration.yaml",
+  "source": "BIAN",
+  "contrato": "Mutual Fund Administration",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 56,
+  "cantidad_schemas": 73,
+  "cantidad_propiedades": 252,
+  "fragmentos_corpus": 400,
+  "operaciones_con_summary": 56,
+  "operaciones_con_description": 56,
+  "operaciones_summary_igual_description": 56,
+  "metodos": {
+    "PUT": 37,
+    "POST": 1,
+    "GET": 18
+  },
+  "tags": {
+    "CR - MutualFundAdministrativePlan": 8,
+    "BQ - FundAccounting": 6,
+    "BQ - FundDevelopment": 6,
+    "BQ - FundEnrolment": 6,
+    "BQ - FundFinancialReporting": 6,
+    "BQ - FundInflowsandOutflow": 6,
+    "BQ - FundInvestor_MiddleandBackOfficeService": 6,
+    "BQ - FundManagementFee": 6,
+    "BQ - FundTaxAdministration": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/MutualFundAdministration.yaml"
+}

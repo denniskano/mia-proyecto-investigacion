@@ -1,0 +1,376 @@
+﻿source;archivo;element_type;element_id;field;raw_text;normalized_text;path;source_url
+BIAN;FinancialAccounting.yaml;operation;Initiate;summary;InCR Initiate a financial accounting log;initiate a financial accounting log;/FinancialAccounting/Initiate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;operation;Update;summary;UpCR Update details for an active financial account;update details for an active financial account;/FinancialAccounting/{financialaccountingid}/Update;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;operation;Control;summary;CoCR Control the processing of the log (e.g. suspend);control the processing of the log (e.g. suspend);/FinancialAccounting/{financialaccountingid}/Control;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;operation;Retrieve;summary;ReCR Retrieve information about the log;retrieve information about the log;/FinancialAccounting/{financialaccountingid}/Retrieve;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;operation;CaptureLedgerPosting;summary;CaBQ Post to the financial account;ca bq post to the financial account;/FinancialAccounting/{financialaccountingid}/LedgerPosting/{ledgerpostingid}/Capture;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;operation;RetrieveLedgerPosting;summary;ReBQ Retrieve details of postings from the account;retrieve details of postings from the account;/FinancialAccounting/{financialaccountingid}/LedgerPosting/{ledgerpostingid}/Retrieve;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;operation;UpdateLedgerPosting;summary;UpBQ Update details of a posting (repair);update details of a posting (repair);/FinancialAccounting/{financialaccountingid}/LedgerPosting/{ledgerpostingid}/Update;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;HTTPError;description;Status Attributes;status attributes;#/components/schemas/HTTPError;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;HTTPError.status_code;name;status_code;status code;#/components/schemas/HTTPError/properties/status_code;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;HTTPError.status;name;status;status;#/components/schemas/HTTPError/properties/status;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;HTTPError.message;name;message;message;#/components/schemas/HTTPError/properties/message;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Currencycode.Currencycode;name;Currencycode;currencycode;#/components/schemas/Currencycode/properties/Currencycode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Currencycode.Currencycode;description;"A code identifying a currency according to ISO-4217.
+A currency is a system of money in general use in a particular country.
+
+Code allocated to a currency, by a maintenance agency, under an international identification scheme as described in the latest edition of the international standard ISO 4217 ""Codes for the representation of currencies and funds"". Valid currency codes are registered with the ISO 4217 Maintenance Agency, and consist of three contiguous letters. (ISO20022)
+
+";"a code identifying a currency according to iso 4217. a currency is a system of money in general use in a particular country. code allocated to a currency, by a maintenance agency, under an international identification scheme as described in the latest edition of the international standard iso 4217 ""codes for the representation of currencies and funds"". valid currency codes are registered with the iso 4217 maintenance agency, and consist of three contiguous letters. (iso20022)";#/components/schemas/Currencycode/properties/Currencycode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Amounttypevalues;description;">
+* `Principal` - 
+* `Actual` - Actual amount.
+* `Estimated` - Estimated amount (the final amount could be above or below).
+* `Maximum` - Maximum amount (the final amount must be less or equal).
+* `Default` - Default amount.
+* `Replacement` - Replacement amount.
+* `Incremental` - Incremental amount for reservation.
+* `Decremental` - Decremental amount for reservation.
+* `Reserved` - Reserved or updated reserved amount for reservation.
+* `Available` - 
+* `Used` - 
+* `DuePayable` - 
+* `Minimum` - 
+* `Open` - The amount is open.(ISO20022)
+* `Unknown` - The amount is unkown.(ISO20022)
+* `Fixed` - The amount represents a fixed value.(ISO20022)
+";> * `principal` * `actual` actual amount. * `estimated` estimated amount (the final amount could be above or below). * `maximum` maximum amount (the final amount must be less or equal). * `default` default amount. * `replacement` replacement amount. * `incremental` incremental amount for reservation. * `decremental` decremental amount for reservation. * `reserved` reserved or updated reserved amount for reservation. * `available` * `used` * `due payable` * `minimum` * `open` the amount is open.(iso20022) * `unknown` the amount is unkown.(iso20022) * `fixed` the amount represents a fixed value.(iso20022);#/components/schemas/Amounttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Amount;description;The posting amount as a credit-debit pair;the posting amount as a credit debit pair;#/components/schemas/Amount;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Amount.AmountValue;name;AmountValue;amount value;#/components/schemas/Amount/properties/AmountValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Amount.AmountCurrency;name;AmountCurrency;amount currency;#/components/schemas/Amount/properties/AmountCurrency;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Amount.DecimalPointPosition;name;DecimalPointPosition;decimal point position;#/components/schemas/Amount/properties/DecimalPointPosition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Amount.DecimalPointPosition;description;"Decimal point position starts calulating from the right
+";decimal point position starts calulating from the right;#/components/schemas/Amount/properties/DecimalPointPosition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Amount.AmountType;name;AmountType;amount type;#/components/schemas/Amount/properties/AmountType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Datetimetypevalues;description;">
+* `MaturityDate` - 
+* `InitiatedDate` - 
+* `RequestedDate` - 
+* `ExecutedDate` - 
+* `OpenDate` - 
+* `CloseDate` - 
+* `ExpiryDate` - 
+* `EffectiveDate` - 
+* `CreatingDate` - 
+* `ActivationDate` - 
+* `DeactivationDate` - 
+* `BlockingDate` - 
+* `SendingDate` - 
+* `ValidFromDate` - 
+* `ValidToDate` - 
+* `ReceivingDate` - 
+* `SigningDate` - 
+* `DueDate` - 
+* `ValueDate` - 
+* `FulfillmentDate` - 
+* `EntryDate` - 
+";> * `maturity date` * `initiated date` * `requested date` * `executed date` * `open date` * `close date` * `expiry date` * `effective date` * `creating date` * `activation date` * `deactivation date` * `blocking date` * `sending date` * `valid from date` * `valid to date` * `receiving date` * `signing date` * `due date` * `value date` * `fulfillment date` * `entry date`;#/components/schemas/Datetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Datetime;description;The date and time of the posting;the date and time of the posting;#/components/schemas/Datetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Datetime.DateTimeContent;name;DateTimeContent;date time content;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Datetime.DateTimeContent;description;The particular date and time point in the progression of time;the particular date and time point in the progression of time;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Datetime.TimeZoneCode;name;TimeZoneCode;time zone code;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Datetime.TimeZoneCode;description;The time zone to which the date time refers.;the time zone to which the date time refers.;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Datetime.DaylightSavingIndicator;name;DaylightSavingIndicator;daylight saving indicator;#/components/schemas/Datetime/properties/DaylightSavingIndicator;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Datetime.DateTimeType;name;DateTimeType;date time type;#/components/schemas/Datetime/properties/DateTimeType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;LedgerPosting;description;"A collection of the events/transactions recorded by the log
+
+Examples: Customer life event, Servicing event";a collection of the events transactions recorded by the log examples: customer life event, servicing event;#/components/schemas/LedgerPosting;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;LedgerPosting.PostingDirection;name;PostingDirection;posting direction;#/components/schemas/LedgerPosting/properties/PostingDirection;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;LedgerPosting.PostingDirection;description;Defines the posting location in the account ledger according to the chart of accounts (e.g. based on customer, transaction type);defines the posting location in the account ledger according to the chart of accounts (e.g. based on customer, transaction type);#/components/schemas/LedgerPosting/properties/PostingDirection;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;LedgerPosting.PostingAmount(creditdebitpair);name;PostingAmount(creditdebitpair);posting amount(creditdebitpair);#/components/schemas/LedgerPosting/properties/PostingAmount(creditdebitpair);https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;LedgerPosting.PostingValueDate;name;PostingValueDate;posting value date;#/components/schemas/LedgerPosting/properties/PostingValueDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;LedgerPosting.PostingResult;name;PostingResult;posting result;#/components/schemas/LedgerPosting/properties/PostingResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;LedgerPosting.PostingResult;description;Any confirmation notification;any confirmation notification;#/components/schemas/LedgerPosting/properties/PostingResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Accounttypevalues;description;">
+* `DebitAccount` - 
+* `CreditAccount` - 
+* `VostroAcount` - In correspondent banking, an account held by one bank on behalf of another bank (the customer bank); the customer bank regards this account as its nostro account. (ECB)
+* `NostroAccount` - In correspondent banking, an account held by a customer bank on the books of another bank acting as a service provider. The other bank regards this account as a loro account. (ECB)
+* `PaymentAccount` - 
+* `SettlementAccount` - A specific purpose account used to post debit and credit entries as a result of the transaction. (ISO20022)
+
+Account which is used for settlement. (ISO20022)
+* `SavingAccount` - 
+* `CurrentAccount` - 
+* `CashAccount` - 
+* `LoanAccount` - 
+* `IndividualAccount` - 
+* `JointAccount` - 
+* `LiquidationAccount` - 
+* `ProvisionAccount` - 
+* `PartnershipAccount` - 
+* `InvestmentAccount` - 
+";"> * `debit account` * `credit account` * `vostro acount` in correspondent banking, an account held by one bank on behalf of another bank (the customer bank); the customer bank regards this account as its nostro account. (ecb) * `nostro account` in correspondent banking, an account held by a customer bank on the books of another bank acting as a service provider. the other bank regards this account as a loro account. (ecb) * `payment account` * `settlement account` a specific purpose account used to post debit and credit entries as a result of the transaction. (iso20022) account which is used for settlement. (iso20022) * `saving account` * `current account` * `cash account` * `loan account` * `individual account` * `joint account` * `liquidation account` * `provision account` * `partnership account` * `investment account`";#/components/schemas/Accounttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Involvedparty;description;"Reference to an entity that assigns and manages the identification.
+tReference to the organization or agency that issued the identifier (e.g., DMV, Passport Office).";reference to an entity that assigns and manages the identification. t reference to the organization or agency that issued the identifier (e.g., dmv, passport office).;#/components/schemas/Involvedparty;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Involvedparty.PartyReference;name;PartyReference;party reference;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Involvedparty.PartyReference;description;Reference to a Party who plays a specific role;reference to a party who plays a specific role;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Involvedparty.InvolvementReference;name;InvolvementReference;involvement reference;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Involvedparty.InvolvementReference;description;Reference to a specific Role that is played by a Party;reference to a specific role that is played by a party;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Identifier.IdentifierValue;name;IdentifierValue;identifier value;#/components/schemas/Identifier/properties/IdentifierValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Identifier.IdentifierValue;description;tThe actual unique code or number (e.g., passport number, drivers license number).;t the actual unique code or number (e.g., passport number, drivers license number).;#/components/schemas/Identifier/properties/IdentifierValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Identifier.IdentifierIssuerReference;name;IdentifierIssuerReference;identifier issuer reference;#/components/schemas/Identifier/properties/IdentifierIssuerReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Identifier.IdentifierStartDate;name;IdentifierStartDate;identifier start date;#/components/schemas/Identifier/properties/IdentifierStartDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Identifier.IdentifierEndDate;name;IdentifierEndDate;identifier end date;#/components/schemas/Identifier/properties/IdentifierEndDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Productidentificationtypevalues;description;">
+* `ISINCode` - 
+* `PackageCode` - 
+* `Buyersitemnumber` - Product identifier assigned by the buyer.
+* `Commercialdescriptioncodename` - A code to identify a product based on applicable commercial conditions.
+* `EAN` - The unique EAN (European Article Number) code.
+* `Harmonizedtariffcodename` - Classification of goods as developed by the Customs Cooperation council.
+* `Manufacturersitemnumber` - Product identifier as assigned by the manufacturer.
+* `Modelnumber` - Reference number assigned by the manufacturer to differentiate variations in similar products in a class or group.
+* `Partnumber` - Reference assigned by the manufacturer to a product part.
+* `Quotacategory` - Product identifier used by the retail industry.
+* `Stylenumber` - Identification of the style of a product.
+* `Suppliersitemnumber` - Number assigned to an article by the supplier of that article.
+* `Universalproductcode` - Number assigned to a manufacturer's product by the Product Code Council.
+";> * `isincode` * `package code` * `buyersitemnumber` product identifier assigned by the buyer. * `commercialdescriptioncodename` a code to identify a product based on applicable commercial conditions. * `ean` the unique ean (european article number) code. * `harmonizedtariffcodename` classification of goods as developed by the customs cooperation council. * `manufacturersitemnumber` product identifier as assigned by the manufacturer. * `modelnumber` reference number assigned by the manufacturer to differentiate variations in similar products in a class or group. * `partnumber` reference assigned by the manufacturer to a product part. * `quotacategory` product identifier used by the retail industry. * `stylenumber` identification of the style of a product. * `suppliersitemnumber` number assigned to an article by the supplier of that article. * `universalproductcode` number assigned to a manufacturer's product by the product code council.;#/components/schemas/Productidentificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Productidentification;description;The identifier of product e.g. ISIN Code.;the identifier of product e.g. isin code.;#/components/schemas/Productidentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Productidentification.ProductIdentification;name;ProductIdentification;product identification;#/components/schemas/Productidentification/properties/ProductIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Productidentification.ProductIdentificationType;name;ProductIdentificationType;product identification type;#/components/schemas/Productidentification/properties/ProductIdentificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Bankingproducttypevalues;description;">
+* `LoanProduct` - 
+* `CurrentAccountProduct` - 
+* `SavingAccountProduct` - 
+* `BrokeredProduct` - 
+* `TermDepositProduct` - 
+";> * `loan product` * `current account product` * `saving account product` * `brokered product` * `term deposit product`;#/components/schemas/Bankingproducttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Datetimeperiod;description;Period of time during which the status is valid.;period of time during which the status is valid.;#/components/schemas/Datetimeperiod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Datetimeperiod.FromDateTime;name;FromDateTime;from date time;#/components/schemas/Datetimeperiod/properties/FromDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Datetimeperiod.ToDateTime;name;ToDateTime;to date time;#/components/schemas/Datetimeperiod/properties/ToDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Status.StatusReason;name;StatusReason;status reason;#/components/schemas/Status/properties/StatusReason;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Status.StatusReason;description;Specifies the reasons for the status.;specifies the reasons for the status.;#/components/schemas/Status/properties/StatusReason;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Status.StatusDateTime;name;StatusDateTime;status date time;#/components/schemas/Status/properties/StatusDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Status.StatusValidityPeriod;name;StatusValidityPeriod;status validity period;#/components/schemas/Status/properties/StatusValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Status.StatusInvolvedPartyReference;name;StatusInvolvedPartyReference;status involved party reference;#/components/schemas/Status/properties/StatusInvolvedPartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Productstatustypevalues;description;">
+* `Initiated` - 
+* `Announced` - 
+* `Sold` - 
+* `Obsolete` - 
+* `Active` - 
+";> * `initiated` * `announced` * `sold` * `obsolete` * `active`;#/components/schemas/Productstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Productstatus;description;Refers to the lifecycle of a product (e.g., initiated, announced, active, obsolete, withdrawn).;refers to the lifecycle of a product (e.g., initiated, announced, active, obsolete, withdrawn).;#/components/schemas/Productstatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Productstatus.ProductStatus;name;ProductStatus;product status;#/components/schemas/Productstatus/properties/ProductStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Productstatus.ProductStatusType;name;ProductStatusType;product status type;#/components/schemas/Productstatus/properties/ProductStatusType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Name;description;"The name of Product. 
+
+Open Banking: 
+The name of the product used for marketing purposes from a customer perspective. I.e. what the customer would recognise.";the name of product. open banking: the name of the product used for marketing purposes from a customer perspective. i.e. what the customer would recognise.;#/components/schemas/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Name.Name;name;Name;name;#/components/schemas/Name/properties/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Name.Name;description;A name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (UN/CEFAT);a name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (un cefat);#/components/schemas/Name/properties/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Financialinstrumenttypevalues;description;">
+* `Loan` - 
+* `Bond` - 
+* `Deposit` - 
+* `Stock` - 
+* `Option` - 
+* `Share` - 
+* `Debt` - Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified. (ISO20022)
+
+Any type of instrument primarily classified as debt can be considered a debt instrument. Debt instruments are tools an individual, government entity, or business entity can utilize for the purpose of obtaining capital. Debt instruments provide capital to an entity that promises to repay the capital over time. Credit cards, credit lines, loans, and bonds can all be types of debt instruments. (Investopedia)
+* `Letterofcredit` - Instrument issued by a bank substituting its name and credit standing for that of its customer. A letter of credit is a written undertaking of the bank, issued for the account of a customer (the applicant), to honour a demand for payment, upon the beneficiary's compliance with the terms and conditions set forth in the undertaking. (ISO20022)
+* `Security` - Financial instruments representing a sum of rights of the investor vis-a-vis the issuer. (ISO20022)
+* `Derivative` - 
+";> * `loan` * `bond` * `deposit` * `stock` * `option` * `share` * `debt` financial instruments evidencing moneys owed by the issuer to the holder on terms as specified. (iso20022) any type of instrument primarily classified as debt can be considered a debt instrument. debt instruments are tools an individual, government entity, or business entity can utilize for the purpose of obtaining capital. debt instruments provide capital to an entity that promises to repay the capital over time. credit cards, credit lines, loans, and bonds can all be types of debt instruments. (investopedia) * `letterofcredit` instrument issued by a bank substituting its name and credit standing for that of its customer. a letter of credit is a written undertaking of the bank, issued for the account of a customer (the applicant), to honour a demand for payment, upon the beneficiary's compliance with the terms and conditions set forth in the undertaking. (iso20022) * `security` financial instruments representing a sum of rights of the investor vis a vis the issuer. (iso20022) * `derivative`;#/components/schemas/Financialinstrumenttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Financialinstrumentidentificationtypevalues;description;">
+* `NASDAQ` - 
+* `ISIN` - 
+";> * `nasdaq` * `isin`;#/components/schemas/Financialinstrumentidentificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Financialinstrumentidentification.FinancialInstrumentIdentification;name;FinancialInstrumentIdentification;financial instrument identification;#/components/schemas/Financialinstrumentidentification/properties/FinancialInstrumentIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Financialinstrumentidentification.FinancialInstrumentIdentificationType;name;FinancialInstrumentIdentificationType;financial instrument identification type;#/components/schemas/Financialinstrumentidentification/properties/FinancialInstrumentIdentificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Financialinstrumentdatetimetypevalues;description;">
+* `CouponDate` - Next payment date of an interest bearing financial instrument.(ISO20022)
+* `ExpiryDate` - Date on which a privilege expires.(ISO20022)
+* `FloatingRateFixingDate` - Date at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue.(ISO20022)
+* `MaturityDate` - Planned final repayment date at the time of issuance.(ISO20022)
+* `IssueDate` - Date at which the security was made available.(ISO20022)
+* `NextCallableDate` - Next date at which the issuer has the right to pay the security prior to maturity.(ISO20022)
+* `PutableDate` - Date at which the holder has the right to ask for redemption of the security prior to final maturity.(ISO20022)
+* `DatedDate` - First date at which a security begins to accrue interest.(ISO20022)
+* `FirstPaymentDate` - Date at which the first interest payment is due to holders of the security.(ISO20022)
+";> * `coupon date` next payment date of an interest bearing financial instrument.(iso20022) * `expiry date` date on which a privilege expires.(iso20022) * `floating rate fixing date` date at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue.(iso20022) * `maturity date` planned final repayment date at the time of issuance.(iso20022) * `issue date` date at which the security was made available.(iso20022) * `next callable date` next date at which the issuer has the right to pay the security prior to maturity.(iso20022) * `putable date` date at which the holder has the right to ask for redemption of the security prior to final maturity.(iso20022) * `dated date` first date at which a security begins to accrue interest.(iso20022) * `first payment date` date at which the first interest payment is due to holders of the security.(iso20022);#/components/schemas/Financialinstrumentdatetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Financialinstrumentdatetime;description;Key dates of financial instrument;key dates of financial instrument;#/components/schemas/Financialinstrumentdatetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Financialinstrumentdatetime.FinancialInstrumentDate;name;FinancialInstrumentDate;financial instrument date;#/components/schemas/Financialinstrumentdatetime/properties/FinancialInstrumentDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Financialinstrumentdatetime.FinancialInstrumentDateType;name;FinancialInstrumentDateType;financial instrument date type;#/components/schemas/Financialinstrumentdatetime/properties/FinancialInstrumentDateType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Assettypevalues;description;">
+* `TangibleAsset` - It has a physical form and can be touched or seen.
+* `IntangibleAsset` - It doesn't have a physical form but hold value
+* `OperatingAsset` - Used in the day-to-day operations of the business.
+* `Non-OperatingAsset` - Not used in core business operations but still provide value
+* `CurrentAsset` - Expected to be converted into cash within one year.
+* `Non-Current(Fixed)Asset` - Provide value over the long term (more than one year).
+* `PersonalAsset` - Owned by individuals and not related to a business.
+* `BusinessAsset` - Owned by a business and used to generate revenue.
+";> * `tangible asset` it has a physical form and can be touched or seen. * `intangible asset` it doesn't have a physical form but hold value * `operating asset` used in the day to day operations of the business. * `non operating asset` not used in core business operations but still provide value * `current asset` expected to be converted into cash within one year. * `non current(fixed)asset` provide value over the long term (more than one year). * `personal asset` owned by individuals and not related to a business. * `business asset` owned by a business and used to generate revenue.;#/components/schemas/Assettypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Assetclassificationtypevalues.Assetclassificationtypevalues;name;Assetclassificationtypevalues;assetclassificationtypevalues;#/components/schemas/Assetclassificationtypevalues/properties/Assetclassificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Assetsubclassificationtypevalues;description;">
+* `Subassetclass` - Sub-asset class.(ISO20022)
+* `Timetomaturitybucket` - Time to maturity bucket.(ISO20022)
+* `Optiontimetomaturitybucket` - Time to maturity bucket of the option.(ISO20022)
+* `Swaptimetomaturitybucket` - Time to maturity bucket of the swap.(ISO20022)
+* `Underlyinginstrumentidentification` - Underlying instrument identification, such as an ISIN code.(ISO20022)
+* `Underlyingbondissuer` - Issuer of the underlying bond.(ISO20022)
+* `Underlyinginterestrate` - Underlying interest rate.(ISO20022)
+* `Underlyingbondterm` - Term of the underlying bond.(ISO20022)
+* `Assetclass` - Asset class.(ISO20022)
+* `Underlyingindexidentification` - Underlying index identification such as an ISIN or an index name.(ISO20022)
+* `Interestratetermofcontract` - Interest rate term of contract.(ISO20022)
+* `Underlyingreferenceentity` - Underlying reference entity.(ISO20022)
+* `Sovereignandpublictypeissuer` - Issuer of sovereign and public type.(ISO20022)
+* `Irdnotionalcurrency1` - Interest rate derivative notional currency 1.(ISO20022)
+* `Fexnotionalcurrency1` - Foreign exchange derivative notional currency 1.(ISO20022)
+* `Cfdnotionalcurrency1` - Contract for difference notional currency 1.(ISO20022)
+* `Fexnotionalcurrency2` - Foreign exchange derivative notional currency 2.(ISO20022)
+* `Irdnotionalcurrency2` - Interest rate derivative notional currency 2.(ISO20022)
+* `Cfdnotionalcurrency2` - Contract for difference notional currency 2.(ISO20022)
+* `Swaptionnotionalcurrency` - Notional currency of the swaption.(ISO20022)
+* `Creditnotionalcurrency` - Credit derivative notional currency.(ISO20022)
+* `Commoditynotionalcurrency` - Commodity derivative notional currency.(ISO20022)
+* `Contracttype` - Contract type.(ISO20022)
+* `Baseproduct` - Base product.(ISO20022)
+* `Subproduct` - Sub product.(ISO20022)
+* `Furthersubproduct` - Further sub product.(ISO20022)
+* `Deliverycashlocation` - Delivery cash settlement location.(ISO20022)
+* `Deliverysettlementtype` - Delivery settlement type.(ISO20022)
+* `Sizespecificationrelatedtofreightsubtype` - Size specification related to freight subtype.(ISO20022)
+* `Specificroutetimecharteraverage` - Specific route time charter average.(ISO20022)
+* `Equityunderlyingtype` - Equity derivative underlying type.(ISO20022)
+* `Parameter` - Parameter.(ISO20022)
+* `Inflationindexcodename` - Inflation index code or name.(ISO20022)
+* `ISIN` - Instrument identification.(ISO20022)
+* `Underlyingindexcdssubclassidentification` - Sub class of the underlying index credit default swap (CDS).(ISO20022)
+* `Underlyingtype` - Underlying type.(ISSO20022)
+";> * `subassetclass` sub asset class.(iso20022) * `timetomaturitybucket` time to maturity bucket.(iso20022) * `optiontimetomaturitybucket` time to maturity bucket of the option.(iso20022) * `swaptimetomaturitybucket` time to maturity bucket of the swap.(iso20022) * `underlyinginstrumentidentification` underlying instrument identification, such as an isin code.(iso20022) * `underlyingbondissuer` issuer of the underlying bond.(iso20022) * `underlyinginterestrate` underlying interest rate.(iso20022) * `underlyingbondterm` term of the underlying bond.(iso20022) * `assetclass` asset class.(iso20022) * `underlyingindexidentification` underlying index identification such as an isin or an index name.(iso20022) * `interestratetermofcontract` interest rate term of contract.(iso20022) * `underlyingreferenceentity` underlying reference entity.(iso20022) * `sovereignandpublictypeissuer` issuer of sovereign and public type.(iso20022) * `irdnotionalcurrency1` interest rate derivative notional currency 1.(iso20022) * `fexnotionalcurrency1` foreign exchange derivative notional currency 1.(iso20022) * `cfdnotionalcurrency1` contract for difference notional currency 1.(iso20022) * `fexnotionalcurrency2` foreign exchange derivative notional currency 2.(iso20022) * `irdnotionalcurrency2` interest rate derivative notional currency 2.(iso20022) * `cfdnotionalcurrency2` contract for difference notional currency 2.(iso20022) * `swaptionnotionalcurrency` notional currency of the swaption.(iso20022) * `creditnotionalcurrency` credit derivative notional currency.(iso20022) * `commoditynotionalcurrency` commodity derivative notional currency.(iso20022) * `contracttype` contract type.(iso20022) * `baseproduct` base product.(iso20022) * `subproduct` sub product.(iso20022) * `furthersubproduct` further sub product.(iso20022) * `deliverycashlocation` delivery cash settlement location.(iso20022) * `deliverysettlementtype` delivery settlement type.(iso20022) * `sizespecificationrelatedtofreightsubtype` size specification related to freight subtype.(iso20022) * `specificroutetimecharteraverage` specific route time charter average.(iso20022) * `equityunderlyingtype` equity derivative underlying type.(iso20022) * `parameter` parameter.(iso20022) * `inflationindexcodename` inflation index code or name.(iso20022) * `isin` instrument identification.(iso20022) * `underlyingindexcdssubclassidentification` sub class of the underlying index credit default swap (cds).(iso20022) * `underlyingtype` underlying type.(isso20022);#/components/schemas/Assetsubclassificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Product;description;Reference to the associated product or service for which this is the underlying accounting;reference to the associated product or service for which this is the underlying accounting;#/components/schemas/Product;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.ProductIdentification;name;ProductIdentification;product identification;#/components/schemas/Product/properties/ProductIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.ProductType;name;ProductType;product type;#/components/schemas/Product/properties/ProductType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.ProductLifecycleStatus;name;ProductLifecycleStatus;product lifecycle status;#/components/schemas/Product/properties/ProductLifecycleStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.ProductPriority;name;ProductPriority;product priority;#/components/schemas/Product/properties/ProductPriority;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.ProductDescription;name;ProductDescription;product description;#/components/schemas/Product/properties/ProductDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.ProductDescription;description;A detailed explanation or commentary of product.;a detailed explanation or commentary of product.;#/components/schemas/Product/properties/ProductDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.ProductVersion;name;ProductVersion;product version;#/components/schemas/Product/properties/ProductVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.ProductName;name;ProductName;product name;#/components/schemas/Product/properties/ProductName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.FinancialInstrumentType;name;FinancialInstrumentType;financial instrument type;#/components/schemas/Product/properties/FinancialInstrumentType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.FinancialInstrumentIdentification;name;FinancialInstrumentIdentification;financial instrument identification;#/components/schemas/Product/properties/FinancialInstrumentIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.FinancialInstrumentName;name;FinancialInstrumentName;financial instrument name;#/components/schemas/Product/properties/FinancialInstrumentName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.FinancialInstrumentDate;name;FinancialInstrumentDate;financial instrument date;#/components/schemas/Product/properties/FinancialInstrumentDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetTitle;name;AssetTitle;asset title;#/components/schemas/Product/properties/AssetTitle;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetIdentification;name;AssetIdentification;asset identification;#/components/schemas/Product/properties/AssetIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetType;name;AssetType;asset type;#/components/schemas/Product/properties/AssetType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetDescription;name;AssetDescription;asset description;#/components/schemas/Product/properties/AssetDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetDescription;description;Description of the asset ;description of the asset;#/components/schemas/Product/properties/AssetDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetStatus;name;AssetStatus;asset status;#/components/schemas/Product/properties/AssetStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetDate;name;AssetDate;asset date;#/components/schemas/Product/properties/AssetDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetClassification;name;AssetClassification;asset classification;#/components/schemas/Product/properties/AssetClassification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetClassification;description;Classification of the asset.(ISO20022);classification of the asset.(iso20022);#/components/schemas/Product/properties/AssetClassification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetClassificationType;name;AssetClassificationType;asset classification type;#/components/schemas/Product/properties/AssetClassificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetSubClassificationType;name;AssetSubClassificationType;asset sub classification type;#/components/schemas/Product/properties/AssetSubClassificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Product.AssetSubClassification;name;AssetSubClassification;asset sub classification;#/components/schemas/Product/properties/AssetSubClassification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Organisationidentificationtypevalues;description;">
+* `LEI` - Legal Entity Identifier is a code allocated to a party as described in ISO 17442 ""Financial Services - Legal Entity Identifier (LEI)"".
+* `ELF` - Entity Legal Forms is a code allocated to a party as described in ISO 20275 ""Financial services  Entity legal forms (ELF)"". 
+* `MIC` - Market Identifier Code. Identification of a financial market, as stipulated in the norm ISO 10383 ""Codes for exchanges and market identifications"".
+* `BICFI` - Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 ""Banking - Banking telecommunication messages - Business identifier code (BIC)"".
+* `Bankpartyidentification` - Unique and unambiguous assignment made by a specific bank or similar financial institution to identify a relationship as defined between the bank and its client.
+* `Centralbankidentificationnumber` - A unique identification number assigned by a central bank to identify an organisation.
+* `Clearingidentificationnumber` - A unique identification number assigned by a clearing house to identify an organisation
+* `Certificateofincorporationnumber` - A unique identification number assigned by a designated authority to a certificate of incorporation and used to identify an organisation.
+* `Countryidentificationcode` - Country authority given organisation identification (e.g., corporate registration number)
+* `Customernumber` - Number assigned by an issuer to identify a customer.
+Number assigned by a party to identify a creditor or debtor relationship.
+* `Datauniversalnumberingsystem` - A unique identification number provided by Dun & Bradstreet to identify an organisation.
+* `Employeridentificationnumber` - Number assigned by a registration authority to an employer.
+* `Gs1glnidentifier` - Global Location Number. A non-significant reference number used to identify legal entities, functional entities, or physical entities according to GS1 numbering scheme rules.The number is used to retrieve detailed information that is linked to it.
+* `SIREN` - The SIREN number is a 9 digit code assigned by INSEE, the French National Institute for Statistics and Economic Studies, to identify an organisation in France.
+* `SIRET` - The SIRET number is a 14 digit code assigned by INSEE, the French National Institute for Statistics and Economic Studies, to identify an organisation unit in France. It consists of the SIREN number, followed by a five digit classification number, to identify the local geographical unit of that entity
+* `Taxidentificationnumber` - Number assigned by a tax authority to identify an organisation.
+* `EANGLN` - Global Location Number. A non-significant reference number used to identify legal entities, functional entities, or physical entities according to the European Association for Numbering (EAN) numbering scheme rules. The number is used to retrieve detailed information that is linked to it. (iso20022)
+";"> * `lei` legal entity identifier is a code allocated to a party as described in iso 17442 ""financial services legal entity identifier (lei)"". * `elf` entity legal forms is a code allocated to a party as described in iso 20275 ""financial services entity legal forms (elf)"". * `mic` market identifier code. identification of a financial market, as stipulated in the norm iso 10383 ""codes for exchanges and market identifications"". * `bicfi` code allocated to a financial institution by the iso 9362 registration authority as described in iso 9362 ""banking banking telecommunication messages business identifier code (bic)"". * `bankpartyidentification` unique and unambiguous assignment made by a specific bank or similar financial institution to identify a relationship as defined between the bank and its client. * `centralbankidentificationnumber` a unique identification number assigned by a central bank to identify an organisation. * `clearingidentificationnumber` a unique identification number assigned by a clearing house to identify an organisation * `certificateofincorporationnumber` a unique identification number assigned by a designated authority to a certificate of incorporation and used to identify an organisation. * `countryidentificationcode` country authority given organisation identification (e.g., corporate registration number) * `customernumber` number assigned by an issuer to identify a customer. number assigned by a party to identify a creditor or debtor relationship. * `datauniversalnumberingsystem` a unique identification number provided by dun & bradstreet to identify an organisation. * `employeridentificationnumber` number assigned by a registration authority to an employer. * `gs1glnidentifier` global location number. a non significant reference number used to identify legal entities, functional entities, or physical entities according to gs1 numbering scheme rules.the number is used to retrieve detailed information that is linked to it. * `siren` the siren number is a 9 digit code assigned by insee, the french national institute for statistics and economic studies, to identify an organisation in france. * `siret` the siret number is a 14 digit code assigned by insee, the french national institute for statistics and economic studies, to identify an organisation unit in france. it consists of the siren number, followed by a five digit classification number, to identify the local geographical unit of that entity * `taxidentificationnumber` number assigned by a tax authority to identify an organisation. * `eangln` global location number. a non significant reference number used to identify legal entities, functional entities, or physical entities according to the european association for numbering (ean) numbering scheme rules. the number is used to retrieve detailed information that is linked to it. (iso20022)";#/components/schemas/Organisationidentificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Organisationidentification.OrganisationIdentificationType;name;OrganisationIdentificationType;organisation identification type;#/components/schemas/Organisationidentification/properties/OrganisationIdentificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Organisationidentification.OrganisationIdentification;name;OrganisationIdentification;organisation identification;#/components/schemas/Organisationidentification/properties/OrganisationIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Organisationdatetimetypevalues;description;">
+* `RegistrationDate` - Date and time at which a given organisation was officially registered. (ISO20022)
+* `EstablishmentDate` - Date when the organisation was established. ISO20022
+* `EntityExpirationDate` - The date the Legal Entity ceased operation or was merged. ISO20022
+";> * `registration date` date and time at which a given organisation was officially registered. (iso20022) * `establishment date` date when the organisation was established. iso20022 * `entity expiration date` the date the legal entity ceased operation or was merged. iso20022;#/components/schemas/Organisationdatetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Organisationdatetime.OrganisatioDate;name;OrganisatioDate;organisatio date;#/components/schemas/Organisationdatetime/properties/OrganisatioDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Organisationdatetime.OrganisatioDateType;name;OrganisatioDateType;organisatio date type;#/components/schemas/Organisationdatetime/properties/OrganisatioDateType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Organisationtypevalues;description;">
+* `LegalEntity` - 
+* `Authority` - 
+* `OrganisationUnit` - 
+* `FinancialInstitution` - 
+* `Charity` - 
+* `GovernmentBody` - 
+";> * `legal entity` * `authority` * `organisation unit` * `financial institution` * `charity` * `government body`;#/components/schemas/Organisationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Organisationnametypevalues;description;">
+* `ShortName` - 
+* `TradingName` - 
+* `LegalName` - 
+";> * `short name` * `trading name` * `legal name`;#/components/schemas/Organisationnametypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Organisationname.Name;name;Name;name;#/components/schemas/Organisationname/properties/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;Organisationname.NameType;name;NameType;name type;#/components/schemas/Organisationname/properties/NameType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Organisationlegalstructuretypevalues;description;">
+* `Corporation` - Legal structure is a corporation.
+* `Individual` - Legal structure is an individual.
+* `Supranational` - Legal structure is a supranational.
+* `Sovereign` - Legal structure is a sovereign.
+* `Municipal` - Legal structure is a municipal.
+* `Province` - Legal structure is a province.
+* `State` - Legal structure is a state.
+* `County` - Legal structure is a county.
+* `Partnership` - Legal structure is a partnership.
+* `Financialinstitution` - Legal structure is a financial institution.
+* `National` - Legal structure is a state.
+";> * `corporation` legal structure is a corporation. * `individual` legal structure is an individual. * `supranational` legal structure is a supranational. * `sovereign` legal structure is a sovereign. * `municipal` legal structure is a municipal. * `province` legal structure is a province. * `state` legal structure is a state. * `county` legal structure is a county. * `partnership` legal structure is a partnership. * `financialinstitution` legal structure is a financial institution. * `national` legal structure is a state.;#/components/schemas/Organisationlegalstructuretypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;BusinessUnit;description;Reference to the owning business unit and associated business activity;reference to the owning business unit and associated business activity;#/components/schemas/BusinessUnit;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.BusinessFunction;name;BusinessFunction;business function;#/components/schemas/BusinessUnit/properties/BusinessFunction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.Goal;name;Goal;goal;#/components/schemas/BusinessUnit/properties/Goal;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.OrganisationStructureHierarchy;name;OrganisationStructureHierarchy;organisation structure hierarchy;#/components/schemas/BusinessUnit/properties/OrganisationStructureHierarchy;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.OrganisationStructureHierarchy;description;Description of the structure of a company. ISO20022;description of the structure of a company. iso20022;#/components/schemas/BusinessUnit/properties/OrganisationStructureHierarchy;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.OrganisationIdentification;name;OrganisationIdentification;organisation identification;#/components/schemas/BusinessUnit/properties/OrganisationIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.OrganisationSector;name;OrganisationSector;organisation sector;#/components/schemas/BusinessUnit/properties/OrganisationSector;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.OrganisationSector;description;Sector of business of the organisation, for example, pharmaceutical. (ISO20022);sector of business of the organisation, for example, pharmaceutical. (iso20022);#/components/schemas/BusinessUnit/properties/OrganisationSector;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.LegalEntityIndicator;name;LegalEntityIndicator;legal entity indicator;#/components/schemas/BusinessUnit/properties/LegalEntityIndicator;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.OrganisationDate;name;OrganisationDate;organisation date;#/components/schemas/BusinessUnit/properties/OrganisationDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.OrganisationType;name;OrganisationType;organisation type;#/components/schemas/BusinessUnit/properties/OrganisationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.OrganisationName;name;OrganisationName;organisation name;#/components/schemas/BusinessUnit/properties/OrganisationName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;BusinessUnit.OrganisationLegalStructure;name;OrganisationLegalStructure;organisation legal structure;#/components/schemas/BusinessUnit/properties/OrganisationLegalStructure;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;Rulesettypevalues;description;">
+* `Policy` - Rule that governs business execution.
+
+The set of basic principles and associated guidelines, formulated and enforced by the governing body of an organization, to direct and limit its actions in pursuit of long-term goals. (Business Dictionary)
+
+* `Regulation` - A rule used to carry out a law (FIBO)
+
+Business Dictionary: a rule (with or without the coercive power of law) employed in controlling, directing, or managing an activity, organization, or system. 
+
+The set of rules and legislation governing certain actions. 
+https://financial-dictionary.thefreedictionary.com/Regulatory
+* `Law` - A binding rule that the courts will enforce.
+A system of rules and guidelines which are enforced through social institutions to govern behavior. (FIBO)
+
+* `Guideline` - A recommended practice (adapted from Business Dictionary)
+A general rule, principle, or piece of advice.
+* `Criterion` - A principle or standard by which something may be judged or decided.
+
+Read more: http://www.businessdictionary.com/definition/criterion.html
+* `Standard` - A rule considered by an authority or by general consent as a basis of comparison
+";> * `policy` rule that governs business execution. the set of basic principles and associated guidelines, formulated and enforced by the governing body of an organization, to direct and limit its actions in pursuit of long term goals. (business dictionary) * `regulation` a rule used to carry out a law (fibo) business dictionary: a rule (with or without the coercive power of law) employed in controlling, directing, or managing an activity, organization, or system. the set of rules and legislation governing certain actions. https: financial dictionary.thefreedictionary.com regulatory * `law` a binding rule that the courts will enforce. a system of rules and guidelines which are enforced through social institutions to govern behavior. (fibo) * `guideline` a recommended practice (adapted from business dictionary) a general rule, principle, or piece of advice. * `criterion` a principle or standard by which something may be judged or decided. read more: http: www.businessdictionary.com definition criterion.html * `standard` a rule considered by an authority or by general consent as a basis of comparison;#/components/schemas/Rulesettypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;RuleSet;description;Reference to applicable account booking rules;reference to applicable account booking rules;#/components/schemas/RuleSet;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;RuleSet.RuleSetDefinition;name;RuleSetDefinition;rule set definition;#/components/schemas/RuleSet/properties/RuleSetDefinition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;RuleSet.RuleSetInterpretation;name;RuleSetInterpretation;rule set interpretation;#/components/schemas/RuleSet/properties/RuleSetInterpretation;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;RuleSet.RuleSetType;name;RuleSetType;rule set type;#/components/schemas/RuleSet/properties/RuleSetType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;RuleSet.RuleSetName;name;RuleSetName;rule set name;#/components/schemas/RuleSet/properties/RuleSetName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;RuleSet.RuleSetIdentification;name;RuleSetIdentification;rule set identification;#/components/schemas/RuleSet/properties/RuleSetIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;RuleSet.RuleSetLifecycleStatus;name;RuleSetLifecycleStatus;rule set lifecycle status;#/components/schemas/RuleSet/properties/RuleSetLifecycleStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;schema;FinancialBookingLog;description;Maintain a log of transactions or activity, typically a financial account/journal or a log of activity to support behavioral analysis within Financial Accounting. ;maintain a log of transactions or activity, typically a financial account journal or a log of activity to support behavioral analysis within financial accounting.;#/components/schemas/FinancialBookingLog;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;FinancialBookingLog.FinancialAccountType;name;FinancialAccountType;financial account type;#/components/schemas/FinancialBookingLog/properties/FinancialAccountType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;FinancialBookingLog.ProductandServiceReference;name;ProductandServiceReference;productand service reference;#/components/schemas/FinancialBookingLog/properties/ProductandServiceReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;FinancialBookingLog.BusinessUnitReference;name;BusinessUnitReference;business unit reference;#/components/schemas/FinancialBookingLog/properties/BusinessUnitReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;FinancialBookingLog.ChartofAccountBookingRules;name;ChartofAccountBookingRules;chartof account booking rules;#/components/schemas/FinancialBookingLog/properties/ChartofAccountBookingRules;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;FinancialBookingLog.BaseCurrency;name;BaseCurrency;base currency;#/components/schemas/FinancialBookingLog/properties/BaseCurrency;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml
+BIAN;FinancialAccounting.yaml;property;FinancialBookingLog.Status;name;Status;status;#/components/schemas/FinancialBookingLog/properties/Status;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialAccounting.yaml

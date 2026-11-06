@@ -1,0 +1,13 @@
+﻿ofb_operation_id;bian_operation_id;s_jaccard;s_tfidf;s_pair;ofb_texto;bian_texto
+getPersonalAccounts;;0.0;0.0;0.0;obtém dados das contas pessoa natural obtém dados das contas;
+getBusinessAccounts;;0.0;0.0;0.0;obtém dados das contas pessoa jurídica;
+getPersonalLoans;;0.0;0.0;0.0;obtém dados sobre empréstimos pessoa natural;
+getBusinessLoans;;0.0;0.0;0.0;obtém dados sobre empréstimos pessoa jurídica;
+getPersonalCreditCards;;0.0;0.0;0.0;obtém dados sobre cartões de crédito pessoa natural;
+getBusinessCreditCards;;0.0;0.0;0.0;obtém dados sobre cartões de crédito pessoa jurídica;
+getPersonalFinancings;;0.0;0.0;0.0;obtém a lista de financiamentos de pessoa natural. obtém a lista de financiamentos de pessoa natural;
+getBusinessFinancings;;0.0;0.0;0.0;obtém a lista de financiamentos de pessoa jurídica.;
+getPersonalInvoiceFinancings;;0.0;0.0;0.0;obtém a lista de adiantamento de recebíveis de pessoa natural.;
+getBusinessInvoiceFinancings;;0.0;0.0;0.0;obtém a lista de adiantamento de recebíveis de pessoa jurídica.;
+getPersonalUnarrangedAccountOverdraft;;0.0;0.0;0.0;obtém a lista de adiantamento de depositante de pessoa natural.;
+getBusinessUnarrangedAccountOverdraft;;0.0;0.0;0.0;obtém a lista de adiantamento de depositante de pessoa jurídica.;

@@ -1,0 +1,30 @@
+{
+  "archivo_entrada": "DocumentDirectory.yaml",
+  "source": "BIAN",
+  "contrato": "Document Directory",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 44,
+  "cantidad_schemas": 73,
+  "cantidad_propiedades": 211,
+  "fragmentos_corpus": 354,
+  "operaciones_con_summary": 44,
+  "operaciones_con_description": 44,
+  "operaciones_summary_igual_description": 44,
+  "metodos": {
+    "PUT": 23,
+    "GET": 14,
+    "POST": 7
+  },
+  "tags": {
+    "CR - DocumentDirectoryEntry": 8,
+    "BQ - DocumentAmendmentProperties": 6,
+    "BQ - DocumentArchivingProperties": 6,
+    "BQ - DocumentReferenceProperties": 6,
+    "BQ - DocumentUpdateHistoryProperties": 6,
+    "BQ - DocumentVerificationProperties": 6,
+    "BQ - DocumentVersionProperties": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/DocumentDirectory.yaml"
+}

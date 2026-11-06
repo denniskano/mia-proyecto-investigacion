@@ -1,0 +1,25 @@
+{
+  "archivo_entrada": "CompetitorAnalysis.yaml",
+  "source": "BIAN",
+  "contrato": "Competitor Analysis",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 6,
+  "cantidad_schemas": 40,
+  "cantidad_propiedades": 149,
+  "fragmentos_corpus": 206,
+  "operaciones_con_summary": 6,
+  "operaciones_con_description": 6,
+  "operaciones_summary_igual_description": 6,
+  "metodos": {
+    "POST": 2,
+    "GET": 2,
+    "PUT": 2
+  },
+  "tags": {
+    "BQ - ProductCompetitiveAnalysis": 2,
+    "CR - CompetitorAnalysis": 4
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CompetitorAnalysis.yaml"
+}

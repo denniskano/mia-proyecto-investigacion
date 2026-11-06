@@ -1,0 +1,6 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+financingsGetContracts;GET;/contracts;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+financingsGetContractsContractId;GET;/contracts/{contractId};;;;;0.0;0.0;False;0.0;0.0;0.0;False
+financingsGetContractsContractIdWarranties;GET;/contracts/{contractId}/warranties;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+financingsGetContractsContractIdScheduledInstalments;GET;/contracts/{contractId}/scheduled-instalments;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+financingsGetContractsContractIdPayments;GET;/contracts/{contractId}/payments;;;;;0.0;0.0;False;0.0;0.0;0.0;False

@@ -1,0 +1,25 @@
+{
+  "archivo_entrada": "CashConcentration.yaml",
+  "source": "BIAN",
+  "contrato": "Cash Concentration",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 16,
+  "cantidad_schemas": 122,
+  "cantidad_propiedades": 346,
+  "fragmentos_corpus": 503,
+  "operaciones_con_summary": 16,
+  "operaciones_con_description": 16,
+  "operaciones_summary_igual_description": 16,
+  "metodos": {
+    "PUT": 9,
+    "GET": 4,
+    "POST": 3
+  },
+  "tags": {
+    "CR - AccountBalanceSweepingFacility": 9,
+    "BQ - CashTransfer": 7
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CashConcentration.yaml"
+}

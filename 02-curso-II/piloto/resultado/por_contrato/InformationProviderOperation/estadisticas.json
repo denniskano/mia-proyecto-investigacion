@@ -1,0 +1,24 @@
+{
+  "archivo_entrada": "InformationProviderOperation.yaml",
+  "source": "BIAN",
+  "contrato": "Information Provider Operation",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 8,
+  "cantidad_schemas": 24,
+  "cantidad_propiedades": 84,
+  "fragmentos_corpus": 129,
+  "operaciones_con_summary": 8,
+  "operaciones_con_description": 8,
+  "operaciones_summary_igual_description": 8,
+  "metodos": {
+    "POST": 1,
+    "GET": 2,
+    "PUT": 5
+  },
+  "tags": {
+    "CR - InformationFeedOperatingSession": 8
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InformationProviderOperation.yaml"
+}

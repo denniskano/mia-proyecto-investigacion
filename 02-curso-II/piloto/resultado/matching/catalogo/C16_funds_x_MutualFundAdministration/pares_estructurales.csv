@@ -1,0 +1,6 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+fundsGetInvestments;GET;/investments;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+fundsGetInvestmentsInvestmentId;GET;/investments/{investmentId};;;;;0.0;0.0;False;0.0;0.0;0.0;False
+fundsGetInvestmentsInvestmentIdBalances;GET;/investments/{investmentId}/balances;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+fundsGetInvestmentsInvestmentIdTransactions;GET;/investments/{investmentId}/transactions;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+fundsGetInvestmentsInvestmentIdTransactionsCurrent;GET;/investments/{investmentId}/transactions-current;;;;;0.0;0.0;False;0.0;0.0;0.0;False

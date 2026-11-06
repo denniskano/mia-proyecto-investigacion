@@ -1,0 +1,28 @@
+{
+  "archivo_entrada": "PaymentRail.yaml",
+  "source": "BIAN",
+  "contrato": "Payment Rail",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 36,
+  "cantidad_schemas": 36,
+  "cantidad_propiedades": 139,
+  "fragmentos_corpus": 230,
+  "operaciones_con_summary": 36,
+  "operaciones_con_description": 36,
+  "operaciones_summary_igual_description": 36,
+  "metodos": {
+    "PUT": 21,
+    "POST": 5,
+    "GET": 10
+  },
+  "tags": {
+    "CR - PaymentRailOperatingSession": 8,
+    "BQ - InboundTransaction": 7,
+    "BQ - OutboundTransaction": 7,
+    "BQ - PaymentAccountReconciliation": 7,
+    "BQ - PaymentClearingandSettlement": 7
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/PaymentRail.yaml"
+}

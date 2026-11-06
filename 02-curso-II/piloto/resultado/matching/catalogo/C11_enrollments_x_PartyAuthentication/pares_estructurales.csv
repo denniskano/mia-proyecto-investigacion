@@ -1,0 +1,9 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+postEnrollments;POST;/enrollments;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getEnrollment;GET;/enrollments/{enrollmentId};;;;;0.0;0.0;False;0.0;0.0;0.0;False
+deleteEnrollment;PATCH;/enrollments/{enrollmentId};;;;;0.0;0.0;False;0.0;0.0;0.0;False
+enrollmentCreateFidoRegistrationOptions;POST;/enrollments/{enrollmentId}/fido-registration-options;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+enrollmentRegisterFidoCredential;POST;/enrollments/{enrollmentId}/fido-registration;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+enrollmentCreateFidoSigningOptions;POST;/enrollments/{enrollmentId}/fido-sign-options;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+riskSignals;POST;/enrollments/{enrollmentId}/risk-signals;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+authorizeConsent;POST;/consents/{consentId}/authorise;;;;;0.0;0.0;False;0.0;0.0;0.0;False

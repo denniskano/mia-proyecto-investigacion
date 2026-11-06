@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "MarketInformationManagement.yaml",
+  "source": "BIAN",
+  "contrato": "Market Information Management",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 16,
+  "cantidad_schemas": 31,
+  "cantidad_propiedades": 97,
+  "fragmentos_corpus": 158,
+  "operaciones_con_summary": 16,
+  "operaciones_con_description": 16,
+  "operaciones_summary_igual_description": 16,
+  "metodos": {
+    "PUT": 10,
+    "GET": 4,
+    "POST": 2
+  },
+  "tags": {
+    "CR - FinancialMarketInformationAdministrativePlan": 8,
+    "BQ - Improvement": 1,
+    "BQ - Reporting": 6,
+    "BQ - Consolidation": 1
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/MarketInformationManagement.yaml"
+}

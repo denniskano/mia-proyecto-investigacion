@@ -8,7 +8,7 @@
 | **Tesis** | Alineación entre contratos **OpenAPI bancarios** y modelos de referencia **BIAN**, mediante análisis estructural y similitud semántica (S / E / C → AlignmentScore). |
 | **Objeto** | Contrato OpenAPI **bancario** (no cambia). |
 | **Referencia** | Service Domain BIAN. |
-| **Piloto (ahora)** | Catálogo **Open Finance Brasil** × 3 SD BIAN v14. |
+| **Piloto (ahora)** | Catálogo **Open Finance Brasil** × **258** SD BIAN v14 (I1–I6 = n = 7). |
 
 Este directorio es el **hilo único** del proyecto: Curso I (diseño) → Curso II (ejecución). Empieza por aquí y luego por `ESTADO.md`.
 
@@ -33,7 +33,7 @@ mia-proyecto-investigacion/
 |---------------|------|
 | **Plan vigente (Curso II)** | [`02-curso-II/plan-tesis-v2/PLAN_TESIS_V2.pdf`](02-curso-II/plan-tesis-v2/PLAN_TESIS_V2.pdf) |
 | Matriz consistencia OFB | [`02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf`](02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf) |
-| PPT / slides piloto | [`02-curso-II/sesion-05/Sesion05_Operacionalizacion_y_EDA_slides.pdf`](02-curso-II/sesion-05/Sesion05_Operacionalizacion_y_EDA_slides.pdf) |
+| PDF / slides piloto | [`02-curso-II/piloto/Piloto_OFB_BIAN_slides.pdf`](02-curso-II/piloto/Piloto_OFB_BIAN_slides.pdf) |
 | Revisión método (S6) | [`02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf`](02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf) |
 | Revisión avances (S7) | [`02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf`](02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf) |
 | Dataset piloto | [`02-curso-II/piloto/`](02-curso-II/piloto/) |

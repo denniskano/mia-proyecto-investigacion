@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "Commissions.yaml",
+  "source": "BIAN",
+  "contrato": "Commissions",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 17,
+  "cantidad_schemas": 131,
+  "cantidad_propiedades": 394,
+  "fragmentos_corpus": 557,
+  "operaciones_con_summary": 17,
+  "operaciones_con_description": 17,
+  "operaciones_summary_igual_description": 17,
+  "metodos": {
+    "GET": 4,
+    "PUT": 11,
+    "POST": 2
+  },
+  "tags": {
+    "CR - CommissionTransaction": 7,
+    "BQ - Confirmation": 4,
+    "BQ - Calculation": 3,
+    "BQ - Payment": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Commissions.yaml"
+}

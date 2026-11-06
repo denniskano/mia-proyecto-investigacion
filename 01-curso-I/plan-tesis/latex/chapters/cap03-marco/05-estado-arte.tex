@@ -1,77 +1,71 @@
-El estado del arte se parte en \textbf{seis ejes} (E1--E6) del Anexo~B. Cada uno responde a una
-pregunta distinta: ¿OpenAPI alcanza?, ¿hay matching estructural?, ¿semántico?, ¿cómo se cortan
-dominio e interfaz?, ¿el testing REST es nuestro problema?, ¿y la recomendación de servicios?
-La \Cref{tab:sintesis-ejes} resume; el Anexo~B baja a cada paper.
+Seis ejes (E1--E6), los del Anexo~B. No responden la misma pregunta. E1 mira si OpenAPI ya es el
+formato con el que se describe REST. E2 y E3 dicen de dónde pueden salir E y S. E4 separa dominio
+e interfaz. E5 y E6 quedan al borde: hablan de pruebas y de ranking, no del cruce con un SD. La
+\Cref{tab:sintesis-ejes} junta el recorte. El detalle de cada paper está en el Anexo~B.
 
 \subsection{Eje E1 --- OpenAPI como estándar}
 
-Casas et al.\ (2021), Mainas et al.\ (2023) y Santos y Casas (2025).
+Casas et al.\ (2021) mapean 47 artículos primarios entre 2011 y 2020. OpenAPI/Swagger queda como
+el estándar de facto para describir REST de forma \textit{machine-readable}. El 68\,\% de esos
+trabajos propone herramientas y el 43\,\% mejora la documentación. En ese conjunto no aparece un
+modelo de negocio bancario del tipo BIAN.
 
-El mapeo de Casas ---47 artículos primarios, 2011--2020--- deja a OpenAPI/Swagger como estándar de
-facto para describir REST de forma \textit{machine-readable}. El 68\,\% de esos trabajos propone
-herramientas; el 43\,\% mejora documentación. Ninguno cruza el contrato con un modelo de negocio
-bancario tipo BIAN. Ese silencio es, para nosotros, el dato.
+Mainas et al.\ (2023) anotan contratos (\texttt{x-refersTo}, \texttt{x-kindOf},
+\texttt{x-mapsTo}), pasan OpenAPI a RDF y consultan con SPARQL. El corpus supera las 300
+especificaciones de SwaggerHub y no es de banca. Lo usamos como pista de representación para S,
+no como definición del score.
 
-Mainas et al.\ (2023) anotan contratos (\texttt{x-refersTo}, \texttt{x-kindOf}, \texttt{x-mapsTo}),
-traducen OpenAPI a RDF y consultan SPARQL sobre más de 300 especificaciones de SwaggerHub. Sirve
-como técnica de representación para S. No definen S ni \AlignmentScore{}, y el corpus no es banca.
-
-Santos y Casas (2025), con Design Science, catalogan 59 métricas de API Gateway (latencia, tráfico,
-errores) en 68 productos. Útil para no confundir: calidad en producción \textbf{no} es coherencia
-documental OpenAPI $\leftrightarrow$ BIAN.
-
-OpenAPI está listo como artefacto. La literatura no lo alinea con capacidades bancarias
-estandarizadas.
+Santos y Casas (2025), con \textit{Design Science}, catalogan 59 métricas de API Gateway
+(latencia, tráfico, errores) en 68 productos. Quedan anotadas para no mezclarlas con la coherencia
+documental: miden el \textit{gateway} en producción.
 
 \subsection{Eje E2 --- Matching estructural}
 
-Un paper ancla el eje: Shvaiko y Euzenat (2005). Taxonomía de \textit{schema matching}
-(exacta/aproximada, sintáctica/semántica/externa, elemento/estructura). Es anterior a OpenAPI y a
-JSON Schema. Aun así, es la base de E: \textit{paths} y \textit{schemas} contra \Behavior{} y
-\BusinessObject{}. Lo que falta no es teoría de matching; es aplicarla al par
-\textbf{OpenAPI bancario $\leftrightarrow$ BIAN} con una métrica que se pueda repetir.
+El eje se apoya en un solo paper, Shvaiko y Euzenat (2005). La taxonomía separa \textit{matching}
+exacto y aproximado, evidencia sintáctica, semántica o externa, y el grano elemento frente a
+estructura. Es anterior a OpenAPI y a JSON Schema. Para el \StructuralScore{} tomamos de ahí el
+contraste de \textit{paths} y \textit{schemas} contra \Behavior{}s y \BusinessObject{}s. La
+taxonomía no trae una métrica lista para el par bancario; el cálculo se escribe en el
+Capítulo~\ref{cap:metodologia}.
 
 \subsection{Eje E3 --- Matching semántico y ontologías}
 
-El Bayadh et al.\ (2015), Chandrasekaran y Mago (2022), Santos Sousa et al.\ (2026).
-
-Tres líneas, ninguna sobre nuestros artefactos. El Bayadh clasifica alineación ontológica
-(terminológica, estructural, extensional, semántica) y avisa que una sola medida no basta.
-Chandrasekaran y Mago recorren la similitud semántica desde WordNet hasta \textit{transformers}.
-Santos Sousa et al.\ (2026) revisan \textit{embeddings} para ontology matching y listan supervisión,
-escala y correspondencias complejas como límites.
-
-Candidatos claros para S y, en parte, para C. Nadie los junta sobre vocabulario OpenAPI bancario
-frente a conceptos BIAN dentro de un solo modelo.
+El Bayadh et al.\ (2015), Chandrasekaran y Mago (2022) y Santos Sousa et al.\ (2026) no trabajan
+contratos bancarios. El primero advierte que una sola medida de alineación ontológica se queda
+corta; las cuatro familias están en §\ref{sec:bases-teoricas} y no se repiten aquí. Chandrasekaran
+y Mago recorren la similitud desde WordNet hasta \textit{transformers}. Santos Sousa et al.\ (2026)
+listan, para \textit{embeddings} en \textit{ontology matching}, tres límites que nos importan:
+supervisión, escala y correspondencias complejas. Esos tres papers son candidatos de técnica para
+S y, en parte, para C.
 
 \subsection{Eje E4 --- Microservicios e interfaces}
 
-Schmidt y Thiry (2020): 27 estudios primarios de 715 registros (2013--2019) sobre identificación de
-microservicios con MDE y DDD. Explica por qué un \ServiceDomain{} BIAN puede ser referencia de
-negocio y la API, la capa que lo expone. Casi nadie integra MDE y DDD a la vez; nadie mide
-coherencia contrato--BIAN. La arquitectura relaciona dominio e interfaz; no cuantifica el desfase.
+Schmidt y Thiry (2020) parten de 715 registros y se quedan con 27 estudios primarios (2013--2019)
+sobre cómo se identifican microservicios con MDE y DDD. El dato que usamos es la separación: el
+\ServiceDomain{} puede ser la referencia de negocio y la API, la capa que lo expone. En su muestra
+casi no hay trabajos que integren MDE y DDD a la vez. No reportan una métrica de coherencia
+contrato--BIAN. El eje solo justifica que las dos capas no se confundan.
 
 \subsection{Eje E5 --- Testing y calidad API (borde)}
 
-Ehsan et al.\ (2022), Golmohammadi et al.\ (2024), Otieno y Araka (2026), Tanveer et al.\ (2025),
-Vitorino et al.\ (2025).
+Cinco papers, y OpenAPI entra como insumo de prueba. Ehsan et al.\ (2022) cubren 16 artículos de
+testing RESTful; la métrica que más se repite es \textit{code coverage}. Golmohammadi et al.\
+(2024) leen 92 papers (\textit{fuzzing}, \textit{search-based}, \textit{model-based}) que generan
+casos sobre endpoints ya desplegados. Otieno y Araka (2026) ponen aprendizaje automático en el
+testing y señalan \textit{datasets} chicos. Tanveer et al.\ (2025) van a vulnerabilidades.
+Vitorino et al.\ (2025), a datos adversariales.
 
-Aquí OpenAPI es \textbf{entrada} a pruebas, no pieza a contrastar con un SD. Ehsan et al.\ cubren
-16 artículos de testing RESTful; la métrica reina es \textit{code coverage}. Golmohammadi et al.\
-leen 92 papers (\textit{fuzzing}, \textit{search-based}, model-based) que generan casos sobre
-endpoints ya vivos. Otieno y Araka (2026) ponen ML en testing y se quejan de datasets chicos.
-Tanveer et al.\ (2025) van a vulnerabilidades; Vitorino et al.\ (2025), a datos adversariales.
-
-Ese corpus delimita el plan (\Cref{sec:alcances}): testing, seguridad y QoS operativa se quedan
-fuera. El producto es el \AlignmentScore{} documental.
+Ese cuerpo es el que deja fuera del plan el testing, la seguridad y la QoS operativa
+(\Cref{sec:alcances}).
 
 \subsection{Eje E6 --- Selección y recomendación de servicios}
 
-Mahanra Rao et al.\ (2025): 25 estudios (2020--2024, PRISMA) con BERT/transformers para seleccionar
-servicios web según QoS. La representación semántica de descripciones se parece a S; el objetivo es
-\textbf{ranking}, no validar un contrato contra un SD. Costo de cómputo alto, datasets cortos,
-poca interpretabilidad. Adyacente; no es nuestro modelo.
+Mahanra Rao et al.\ (2025) revisan 25 estudios (2020--2024, PRISMA) que usan BERT o
+\textit{transformers} para elegir servicios web según QoS. La representación semántica de las
+descripciones se parece a lo que haríamos en S, pero el resultado es un ranking, no un contraste
+contra un \ServiceDomain{}. Reportan costo de cómputo alto, \textit{datasets} cortos y poca
+interpretabilidad. Queda como vecino, no como técnica del modelo.
 
 \input{tables/tab06-sintesis-ejes}
 
-La Tabla~7 (Anexo~B) baja objetivo, técnicas, métricas y límites \textbf{paper por paper}.
+El Anexo~B baja objetivo, técnicas, métricas y límites de cada paper. Esta sección no lo duplica.

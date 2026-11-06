@@ -1,0 +1,202 @@
+﻿source;archivo;element_type;element_id;field;raw_text;normalized_text;path;source_url
+BIAN;FraudEvaluation.yaml;operation;Evaluate;summary;EvCR Start a fraud evaluation for a production transaction set;ev cr start a fraud evaluation for a production transaction set;/FraudEvaluation/Evaluate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;operation;Exchange;summary;EcCR Accept, verify, reject a fraud evaluation;ec cr accept, verify, reject a fraud evaluation;/FraudEvaluation/{fraudevaluationid}/Exchange;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;operation;Execute;summary;ExCR Perform an automated action to an active evaluation (e.g. upload additional data);ex cr perform an automated action to an active evaluation (e.g. upload additional data);/FraudEvaluation/{fraudevaluationid}/Execute;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;operation;RetrieveRuleSetsandDecisionTrees;summary;ReBQ Retrieve details about rule set or decision tree based tests applied;retrieve details about rule set or decision tree based tests applied;/FraudEvaluation/{fraudevaluationid}/RuleSetsandDecisionTrees/{rulesetsanddecisiontreesid}/Retrieve;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;operation;Grant;summary;GrCR Obtain permission to act on/apply the assessment (if appropriate);gr cr obtain permission to act on apply the assessment (if appropriate);/FraudEvaluation/{fraudevaluationid}/Grant;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;operation;Request;summary;RqCR Request manual intervention to an active assessment (e.g. change test make-up);rq cr request manual intervention to an active assessment (e.g. change test make up);/FraudEvaluation/{fraudevaluationid}/Request;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;operation;Retrieve;summary;ReCr Retrieve details about a fraud evaluation assessment;retrieve details about a fraud evaluation assessment;/FraudEvaluation/{fraudevaluationid}/Retrieve;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;operation;RetrieveModels;summary;ReBQ Retrieve details about model based tests applied;retrieve details about model based tests applied;/FraudEvaluation/{fraudevaluationid}/Models/{modelsid}/Retrieve;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;HTTPError;description;Status Attributes;status attributes;#/components/schemas/HTTPError;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;HTTPError.status_code;name;status_code;status code;#/components/schemas/HTTPError/properties/status_code;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;HTTPError.status;name;status;status;#/components/schemas/HTTPError/properties/status;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;HTTPError.message;name;message;message;#/components/schemas/HTTPError/properties/message;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Testtypevalues;description;">
+* `ProductEligibilityTest` - 
+* `NextBestProductTest` - 
+* `IssuedDeviceTest` - 
+* `CardHolderAuthenticationTest` - 
+* `CardFundsAvailableTest` - 
+* `CardTransactionFraudTest` - 
+* `CardStand-InAuthorizationTest` - 
+* `ExternalAccessRequestTest` - 
+* `SuitabilityTest` - 
+* `LegalComplianceTest` - 
+* `RegulatoryComplianceTest` - 
+* `SystemFunctionalTest` - 
+* `SystemProductionTest` - 
+* `SystemBusinessRiskTest` - 
+* `SystemOperationsTest` - 
+* `CreditPolicyComplianceTest` - 
+* `RuleSetAndDecisionTreeTest` - 
+* `ModelBasedTests` - 
+* `AssetAndLiabilityValuationTest` - 
+* `LiquidityAndCashFlowTest` - 
+* `RiskTest` - 
+* `SensitivityTest` - 
+";> * `product eligibility test` * `next best product test` * `issued device test` * `card holder authentication test` * `card funds available test` * `card transaction fraud test` * `card stand in authorization test` * `external access request test` * `suitability test` * `legal compliance test` * `regulatory compliance test` * `system functional test` * `system production test` * `system business risk test` * `system operations test` * `credit policy compliance test` * `rule set and decision tree test` * `model based tests` * `asset and liability valuation test` * `liquidity and cash flow test` * `risk test` * `sensitivity test`;#/components/schemas/Testtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Test;description;The production transaction assessment test results, including reference to any potential fraud transactions - note this can be a real-time dataset;the production transaction assessment test results, including reference to any potential fraud transactions note this can be a real time dataset;#/components/schemas/Test;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Test.TestResult;name;TestResult;test result;#/components/schemas/Test/properties/TestResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Test.TestGuidance;name;TestGuidance;test guidance;#/components/schemas/Test/properties/TestGuidance;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Test.TestType;name;TestType;test type;#/components/schemas/Test/properties/TestType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Test.TestDescription;name;TestDescription;test description;#/components/schemas/Test/properties/TestDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Workproducttypevalues;description;">
+* `Document` - 
+* `WorkingPaper` - 
+* `ActivityLog` - 
+* `Form` - 
+* `File` - File of consolidated notes, evaluations and recommendations for the work task
+* `MeetingSchedule` - 
+* `MeetingMinute` - 
+";> * `document` * `working paper` * `activity log` * `form` * `file` file of consolidated notes, evaluations and recommendations for the work task * `meeting schedule` * `meeting minute`;#/components/schemas/Workproducttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Involvedparty;description;"Reference to an entity that assigns and manages the identification.
+tReference to the organization or agency that issued the identifier (e.g., DMV, Passport Office).";reference to an entity that assigns and manages the identification. t reference to the organization or agency that issued the identifier (e.g., dmv, passport office).;#/components/schemas/Involvedparty;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Involvedparty.PartyReference;name;PartyReference;party reference;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Involvedparty.PartyReference;description;Reference to a Party who plays a specific role;reference to a party who plays a specific role;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Involvedparty.InvolvementReference;name;InvolvementReference;involvement reference;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Involvedparty.InvolvementReference;description;Reference to a specific Role that is played by a Party;reference to a specific role that is played by a party;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Datetimetypevalues;description;">
+* `MaturityDate` - 
+* `InitiatedDate` - 
+* `RequestedDate` - 
+* `ExecutedDate` - 
+* `OpenDate` - 
+* `CloseDate` - 
+* `ExpiryDate` - 
+* `EffectiveDate` - 
+* `CreatingDate` - 
+* `ActivationDate` - 
+* `DeactivationDate` - 
+* `BlockingDate` - 
+* `SendingDate` - 
+* `ValidFromDate` - 
+* `ValidToDate` - 
+* `ReceivingDate` - 
+* `SigningDate` - 
+* `DueDate` - 
+* `ValueDate` - 
+* `FulfillmentDate` - 
+* `EntryDate` - 
+";> * `maturity date` * `initiated date` * `requested date` * `executed date` * `open date` * `close date` * `expiry date` * `effective date` * `creating date` * `activation date` * `deactivation date` * `blocking date` * `sending date` * `valid from date` * `valid to date` * `receiving date` * `signing date` * `due date` * `value date` * `fulfillment date` * `entry date`;#/components/schemas/Datetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Datetime;description;The date when the identifier became valid.;the date when the identifier became valid.;#/components/schemas/Datetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Datetime.DateTimeContent;name;DateTimeContent;date time content;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Datetime.DateTimeContent;description;The particular date and time point in the progression of time;the particular date and time point in the progression of time;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Datetime.TimeZoneCode;name;TimeZoneCode;time zone code;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Datetime.TimeZoneCode;description;The time zone to which the date time refers.;the time zone to which the date time refers.;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Datetime.DaylightSavingIndicator;name;DaylightSavingIndicator;daylight saving indicator;#/components/schemas/Datetime/properties/DaylightSavingIndicator;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Datetime.DateTimeType;name;DateTimeType;date time type;#/components/schemas/Datetime/properties/DateTimeType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Identifier.IdentifierValue;name;IdentifierValue;identifier value;#/components/schemas/Identifier/properties/IdentifierValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Identifier.IdentifierValue;description;tThe actual unique code or number (e.g., passport number, drivers license number).;t the actual unique code or number (e.g., passport number, drivers license number).;#/components/schemas/Identifier/properties/IdentifierValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Identifier.IdentifierIssuerReference;name;IdentifierIssuerReference;identifier issuer reference;#/components/schemas/Identifier/properties/IdentifierIssuerReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Identifier.IdentifierStartDate;name;IdentifierStartDate;identifier start date;#/components/schemas/Identifier/properties/IdentifierStartDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Identifier.IdentifierEndDate;name;IdentifierEndDate;identifier end date;#/components/schemas/Identifier/properties/IdentifierEndDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Workproduct;description;Work documentation, forms and schedules produced and referenced during the assessment task;work documentation, forms and schedules produced and referenced during the assessment task;#/components/schemas/Workproduct;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Workproduct.WorkProductType;name;WorkProductType;work product type;#/components/schemas/Workproduct/properties/WorkProductType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Workproduct.WorkProductIdentifoication;name;WorkProductIdentifoication;work product identifoication;#/components/schemas/Workproduct/properties/WorkProductIdentifoication;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Models;description;"All kind of verifications 
+
+Examples: Password verification";all kind of verifications examples: password verification;#/components/schemas/Models;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Models.ModelsTestResult;name;ModelsTestResult;models test result;#/components/schemas/Models/properties/ModelsTestResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Models.ModelsTestWorkProduct;name;ModelsTestWorkProduct;models test work product;#/components/schemas/Models/properties/ModelsTestWorkProduct;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;RuleSetsandDecisionTrees;description;"All kind of verifications 
+
+Examples: Password verification";all kind of verifications examples: password verification;#/components/schemas/RuleSetsandDecisionTrees;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;RuleSetsandDecisionTrees.RuleSetsAndDecisionTreesTestResult;name;RuleSetsAndDecisionTreesTestResult;rule sets and decision trees test result;#/components/schemas/RuleSetsandDecisionTrees/properties/RuleSetsAndDecisionTreesTestResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;RuleSetsandDecisionTrees.RuleSetsAndDecisionTreesTestWorkProduct;name;RuleSetsAndDecisionTreesTestWorkProduct;rule sets and decision trees test work product;#/components/schemas/RuleSetsandDecisionTrees/properties/RuleSetsAndDecisionTreesTestWorkProduct;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Duration;description;The time the session was active;the time the session was active;#/components/schemas/Duration;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Duration.Duration;name;Duration;duration;#/components/schemas/Duration/properties/Duration;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Duration.Duration;description;A duration is the specification of a length of time without a fixed start or end time, expressed in Gregorian calendar time units (Year, Month, Week, Day) and Hours, Minutes or Seconds. (UN/CEFACT);a duration is the specification of a length of time without a fixed start or end time, expressed in gregorian calendar time units (year, month, week, day) and hours, minutes or seconds. (un cefact);#/components/schemas/Duration/properties/Duration;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Datetimeperiod;description;Period of time during which the status is valid.;period of time during which the status is valid.;#/components/schemas/Datetimeperiod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Datetimeperiod.FromDateTime;name;FromDateTime;from date time;#/components/schemas/Datetimeperiod/properties/FromDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Datetimeperiod.ToDateTime;name;ToDateTime;to date time;#/components/schemas/Datetimeperiod/properties/ToDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Status.StatusReason;name;StatusReason;status reason;#/components/schemas/Status/properties/StatusReason;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Status.StatusReason;description;Specifies the reasons for the status.;specifies the reasons for the status.;#/components/schemas/Status/properties/StatusReason;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Status.StatusDateTime;name;StatusDateTime;status date time;#/components/schemas/Status/properties/StatusDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Status.StatusValidityPeriod;name;StatusValidityPeriod;status validity period;#/components/schemas/Status/properties/StatusValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Status.StatusInvolvedPartyReference;name;StatusInvolvedPartyReference;status involved party reference;#/components/schemas/Status/properties/StatusInvolvedPartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Name.Name;name;Name;name;#/components/schemas/Name/properties/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Name.Name;description;A name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (UN/CEFAT);a name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (un cefat);#/components/schemas/Name/properties/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Sessiontypevalues;description;">
+* `ContactHandlingSession` - 
+* `CustomerDialogueSession` - 
+* `ChannelOperatingSession` - 
+* `GatewayOperatingSession` - 
+* `SwitchOperatingSession` - 
+* `DeviceOperatingSession` - 
+* `InterbankTransactionOperatingSession` - 
+* `CorrespondenceOperatingSession` - 
+* `InteractiveHelpOperatingSession` - 
+* `ACHOperatingSession` - 
+";> * `contact handling session` * `customer dialogue session` * `channel operating session` * `gateway operating session` * `switch operating session` * `device operating session` * `interbank transaction operating session` * `correspondence operating session` * `interactive help operating session` * `achoperating session`;#/components/schemas/Sessiontypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Sessiontype;description;Specifies the classification of session like Customer Contact Session, Channel Operating Session, Device Operating Session, etc.;specifies the classification of session like customer contact session, channel operating session, device operating session, etc.;#/components/schemas/Sessiontype;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Sessiontype.SessionTypeName;name;SessionTypeName;session type name;#/components/schemas/Sessiontype/properties/SessionTypeName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Sessiontype.SessionType;name;SessionType;session type;#/components/schemas/Sessiontype/properties/SessionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Schedule.ScheduleType;name;ScheduleType;schedule type;#/components/schemas/Schedule/properties/ScheduleType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Session;description;Reference to the product fulfillment production session for which on-line fraud evaluation is performed;reference to the product fulfillment production session for which on line fraud evaluation is performed;#/components/schemas/Session;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Session.SessionDuration;name;SessionDuration;session duration;#/components/schemas/Session/properties/SessionDuration;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Session.SessionDateAndTime;name;SessionDateAndTime;session date and time;#/components/schemas/Session/properties/SessionDateAndTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Session.SessionStatus;name;SessionStatus;session status;#/components/schemas/Session/properties/SessionStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Session.SessionType;name;SessionType;session type;#/components/schemas/Session/properties/SessionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Session.SessionScheduel;name;SessionScheduel;session scheduel;#/components/schemas/Session/properties/SessionScheduel;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Session.SessionIdentification;name;SessionIdentification;session identification;#/components/schemas/Session/properties/SessionIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Profile;description;Details the types of fraud evaluation tests applied;details the types of fraud evaluation tests applied;#/components/schemas/Profile;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Profile.Profile;name;Profile;profile;#/components/schemas/Profile/properties/Profile;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Profile.Profile;description;A brief description of the characteristics of something or someone. (Business Dictionary);a brief description of the characteristics of something or someone. (business dictionary);#/components/schemas/Profile/properties/Profile;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Transactiondatetimetypevalues;description;">
+* `ExecutedDate` - 
+* `FulfillmentDate` - 
+* `InitiatedDate` - 
+* `CancelledDate` - 
+* `ApprovedDate` - 
+* `ValueDate` - 
+* `BookingDate` - 
+";> * `executed date` * `fulfillment date` * `initiated date` * `cancelled date` * `approved date` * `value date` * `booking date`;#/components/schemas/Transactiondatetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Transactiondatetime;description;"The Date that the transaction has occurred or is planned to occur.
+A characteristic of transaction which refers to the LifecycleDate of transaction (e.g., initiated date, executed date, fulfillment date). ";the date that the transaction has occurred or is planned to occur. a characteristic of transaction which refers to the lifecycle date of transaction (e.g., initiated date, executed date, fulfillment date).;#/components/schemas/Transactiondatetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Transactiondatetime.TransactionDate;name;TransactionDate;transaction date;#/components/schemas/Transactiondatetime/properties/TransactionDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Transactiondatetime.TransactionDateType;name;TransactionDateType;transaction date type;#/components/schemas/Transactiondatetime/properties/TransactionDateType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Transactiontypevalues;description;">
+* `FinancialTransaction` - 
+* `BusinessTransaction` - 
+* `BankingTransaction` - 
+* `AccountingTransaction` - 
+* `BookingTransaction` - 
+* `AllocationTransaction` - 
+* `DeliveryTransaction` - 
+* `ProductionTransaction` - 
+";> * `financial transaction` * `business transaction` * `banking transaction` * `accounting transaction` * `booking transaction` * `allocation transaction` * `delivery transaction` * `production transaction`;#/components/schemas/Transactiontypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Transactionstatustypevalues;description;">
+* `Initiated` - 
+* `Executed` - 
+* `Cancelled` - 
+* `Confirmed` - 
+* `Suspended` - 
+* `Pending` - 
+* `Completed` - 
+* `Notified` - 
+* `Booked` - 
+* `Rejected` - 
+";> * `initiated` * `executed` * `cancelled` * `confirmed` * `suspended` * `pending` * `completed` * `notified` * `booked` * `rejected`;#/components/schemas/Transactionstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;Transactionstatus;description;A characteristic of transaction which refers to the LifecycleStatus of transaction (e.g., initiated, executed, confirmed, cancelled, etc.) ;a characteristic of transaction which refers to the lifecycle status of transaction (e.g., initiated, executed, confirmed, cancelled, etc.);#/components/schemas/Transactionstatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Transactionstatus.TransactionStatus;name;TransactionStatus;transaction status;#/components/schemas/Transactionstatus/properties/TransactionStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;Transactionstatus.TransactionStatusType;name;TransactionStatusType;transaction status type;#/components/schemas/Transactionstatus/properties/TransactionStatusType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;ProductionTransaction;description;Reference to the one or more production transactions isolated by the fraud evaluation tests;reference to the one or more production transactions isolated by the fraud evaluation tests;#/components/schemas/ProductionTransaction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;ProductionTransaction.TransactionIdentification;name;TransactionIdentification;transaction identification;#/components/schemas/ProductionTransaction/properties/TransactionIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;ProductionTransaction.TransactionDate;name;TransactionDate;transaction date;#/components/schemas/ProductionTransaction/properties/TransactionDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;ProductionTransaction.TransactionType;name;TransactionType;transaction type;#/components/schemas/ProductionTransaction/properties/TransactionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;ProductionTransaction.TransactionDescription;name;TransactionDescription;transaction description;#/components/schemas/ProductionTransaction/properties/TransactionDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;ProductionTransaction.TransactionDescription;description;A detailed explanation or commentary of transaction.;a detailed explanation or commentary of transaction.;#/components/schemas/ProductionTransaction/properties/TransactionDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;ProductionTransaction.TransactionStatus;name;TransactionStatus;transaction status;#/components/schemas/ProductionTransaction/properties/TransactionStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;ProductionTransaction.TransactionName;name;TransactionName;transaction name;#/components/schemas/ProductionTransaction/properties/TransactionName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;schema;FraudEvaluationAssessment;description;To test or assess an entity, possibly against some formal qualification or certification requirement within Fraud Evaluation. ;to test or assess an entity, possibly against some formal qualification or certification requirement within fraud evaluation.;#/components/schemas/FraudEvaluationAssessment;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.ProductProductionSessionReference;name;ProductProductionSessionReference;product production session reference;#/components/schemas/FraudEvaluationAssessment/properties/ProductProductionSessionReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationTestProfile;name;FraudEvaluationTestProfile;fraud evaluation test profile;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationTestProfile;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationEnsembleTechniqueType;name;FraudEvaluationEnsembleTechniqueType;fraud evaluation ensemble technique type;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationEnsembleTechniqueType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationEnsembleTechniqueType;description;The type of technique use to combine results of the different tests used to detect out of pattern behavior;the type of technique use to combine results of the different tests used to detect out of pattern behavior;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationEnsembleTechniqueType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationEnsembleTechniqueDefinition;name;FraudEvaluationEnsembleTechniqueDefinition;fraud evaluation ensemble technique definition;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationEnsembleTechniqueDefinition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationEnsembleTechniqueDefinition;description;The definition of how the constituent rule set/decision tree and model test are combined to compete the assessment;the definition of how the constituent rule set decision tree and model test are combined to compete the assessment;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationEnsembleTechniqueDefinition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationTransactionConsolidationRecord;name;FraudEvaluationTransactionConsolidationRecord;fraud evaluation transaction consolidation record;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationTransactionConsolidationRecord;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationTransactionConsolidationRecord;description;The production transaction details that are submitted for fraud evaluation - note this will typically be a real-time dataset;the production transaction details that are submitted for fraud evaluation note this will typically be a real time dataset;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationTransactionConsolidationRecord;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationProductionAnomalyRecord;name;FraudEvaluationProductionAnomalyRecord;fraud evaluation production anomaly record;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationProductionAnomalyRecord;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationProductionAnomalyRecord;description;Details of detected out of pattern production activity that could be fraud;details of detected out of pattern production activity that could be fraud;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationProductionAnomalyRecord;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml
+BIAN;FraudEvaluation.yaml;property;FraudEvaluationAssessment.FraudEvaluationProductionAnomalyProductionTransactionReference;name;FraudEvaluationProductionAnomalyProductionTransactionReference;fraud evaluation production anomaly production transaction reference;#/components/schemas/FraudEvaluationAssessment/properties/FraudEvaluationProductionAnomalyProductionTransactionReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FraudEvaluation.yaml

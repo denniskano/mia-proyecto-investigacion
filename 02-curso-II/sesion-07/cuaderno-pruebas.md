@@ -65,3 +65,38 @@ python3 procesar_openapi.py --fuentes fuentes resultado
 - Autoalineación BIAN↔BIAN — **prohibida** como resultado.
 
 **Próxima entrada del cuaderno:** scores v0 de I1 (`accounts` × SavingsAccount) e I4 (`payments` × PaymentOrderInitiation).
+
+---
+
+## Entrada 4 — Catálogo BIAN v14 completo (6 nov 2026)
+
+**Comando**
+
+```
+python3 descargar_bian.py
+.venv/bin/python procesar_openapi.py --fuentes fuentes resultado
+.venv/bin/python matching_v0.py
+.venv/bin/python mapa_ofb_bian.py
+```
+
+**Totales** (`resultado/inventario.json`)
+
+| | BIAN | OFB | Total |
+|--|------|-----|-------|
+| Contratos | **258** | 38 | **296** |
+| Operaciones | 4 580 | 160 | **4 740** |
+| Propiedades | — | — | **67 388** |
+| Corpus | — | — | **100 328** |
+
+OE1: **296/296** firmados (`resultado/matching/oe1_firma.json`).
+
+**Qué cambió:** el hueco de loans/cards era de disco (solo 3 YAML BIAN), no de BIAN. Ahora hay SD oficiales:
+
+| OFB | BIAN oficial | Pares v0 | Nivel |
+|-----|--------------|----------|-------|
+| credit-cards | CreditCard | 7/7 | Baja (0,46) |
+| loans | Loan | 4/5 | Nula (0,27) |
+
+I1–I6 **no** se reemplazan. No se puntúa 38 × 258. No se inventa un SD.
+
+Mapa: `../piloto/resultado/matching/catalogo/MAPA.md`.

@@ -1,6 +1,6 @@
 # Estado del proyecto — Grupo 10
 
-Actualizado: 30 oct 2026.
+Actualizado: 6 nov 2026.
 
 ## Hecho (Curso I · MIA 303 · Guía 1)
 
@@ -20,11 +20,13 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 | Diagnóstico Guía 1 → Guía 2 | `02-curso-II/plan-tesis-v2/diagnostico-guia1-a-guia2.md` | Hecho |
 | Plan de tesis v2 | `02-curso-II/plan-tesis-v2/PLAN_TESIS_V2.pdf` | Hecho (papel) |
 | Matriz OFB (8 cols) | `02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf` | Hecho |
-| Protocolo empírico | `02-curso-II/plan-tesis-v2/protocolo-empirico.md` | Hecho (v1) |
+| Protocolo empírico | `02-curso-II/plan-tesis-v2/protocolo-empirico.md` | Hecho (catálogo 258 SD) |
 | Cronograma 16 semanas | `02-curso-II/plan-tesis-v2/cronograma-sprints.md` | Hecho |
-| Parser OE1 | `02-curso-II/piloto/procesar_openapi.py` | Hecho |
-| Matching v0 (P4) | `02-curso-II/piloto/matching_v0.py` + `resultado/matching/` | Hecho |
-| Piloto OFB × BIAN | `02-curso-II/piloto/` · 38 APIs + 3 SD · 41 YAML · 235 ops | Hecho |
+| Parser OE1 | `02-curso-II/piloto/procesar_openapi.py` | Hecho · 296/296 firmados |
+| Matching v0 (P4) | `02-curso-II/piloto/matching_v0.py` + `resultado/matching/` | Hecho (I1–I6) |
+| Catálogo extra OFB→SD | `02-curso-II/piloto/resultado/matching/catalogo/` | Hecho (sin inventar SD) |
+| MiniLM S v1 | `02-curso-II/piloto/matching_s1.py` | Hecho (pares OE2 de I1–I6) |
+| Piloto OFB × BIAN | `02-curso-II/piloto/` · 38 APIs + **258 SD** · 296 YAML · 4 740 ops | Hecho |
 | EDA Sesión 5 | `02-curso-II/sesion-05/` | Hecho |
 | Revisión método Sesión 6 | `02-curso-II/sesion-06/` | Hecho (papel) |
 | Revisión avances Sesión 7 | `02-curso-II/sesion-07/` | Hecho (papel + cuaderno) |
@@ -35,10 +37,10 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 |------|----------|-----------|
 | 3 | P2 estado del arte | 1 párrafo OFB / BCB en Anexo B (no rehacer 14 papers) |
 | 4 | Cap. II | Figura del modelo conceptual OFB (GET) vs BIAN (CR/BQ) |
-| 6–7 | Cap. III + protocolo v1 | Firmar completitud OE1 por contrato |
-| 8 | **P4** examen parcial | Scores **v0** de I1 (`accounts` × SavingsAccount) e I4 (`payments` × PaymentOrderInitiation) |
+| 6–7 | Cap. III + protocolo v1 | OE1 firmado (296/296) |
+| 8 | **P4** examen parcial | Scores **v0** de I1 e I4 · catálogo BIAN v14 |
 | 9 | Defensa intermedia | 8 slides (guion en el cronograma) |
-| 10–11 | Resultados v1 | E, S, C y AlignmentScore de las **7** instancias |
+| 10–11 | Resultados v1 | E, S, C de las **7** instancias + MiniLM |
 | 12 | **P5** discusión | Tipologías + literatura + limitaciones |
 | 13–14 | **P6** borrador v1 | Integrar Caps. I–III + Turnitin |
 | 15 | Defensa simulada | 12–15 min |
@@ -49,7 +51,8 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 - Estrechar el objeto de la tesis a OFB
 - Puntuar BIAN contra sí mismo y llamarlo resultado
 - Copiar tags CR/BQ al lado OFB
-- Inventar SD BIAN para loans / cards
+- Inventar SD BIAN (loans/cards ya tienen `Loan.yaml` / `CreditCard.yaml`)
+- Puntuar 38 OFB × 258 SD
 - Usar el recorte de 12 operaciones (ya eliminado del piloto)
 
 ## Frase para el docente

@@ -1,0 +1,34 @@
+{
+  "archivo_entrada": "ConsumerLoan.yaml",
+  "source": "BIAN",
+  "contrato": "Consumer Loan",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 29,
+  "cantidad_schemas": 241,
+  "cantidad_propiedades": 1025,
+  "fragmentos_corpus": 1357,
+  "operaciones_con_summary": 29,
+  "operaciones_con_description": 29,
+  "operaciones_summary_igual_description": 29,
+  "metodos": {
+    "POST": 3,
+    "PUT": 16,
+    "GET": 10
+  },
+  "tags": {
+    "CR - ConsumerLoanFacility": 4,
+    "BQ - Interest": 2,
+    "BQ - Charge": 3,
+    "BQ - Disbursement": 1,
+    "BQ - Maintenance": 2,
+    "BQ - DebitandCredit": 4,
+    "BQ - Repayment": 4,
+    "BQ - AmountBlock": 3,
+    "BQ - IssuedDevice": 3,
+    "BQ - Booking": 1,
+    "BQ - Modification": 2
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/ConsumerLoan.yaml"
+}

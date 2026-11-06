@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "ChequeLockBox.yaml",
+  "source": "BIAN",
+  "contrato": "Cheque Lock Box",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 25,
+  "cantidad_schemas": 132,
+  "cantidad_propiedades": 506,
+  "fragmentos_corpus": 687,
+  "operaciones_con_summary": 25,
+  "operaciones_con_description": 25,
+  "operaciones_summary_igual_description": 25,
+  "metodos": {
+    "GET": 7,
+    "PUT": 14,
+    "POST": 4
+  },
+  "tags": {
+    "CR - LockBoxFacility": 8,
+    "BQ - IssueResolution": 7,
+    "BQ - Payment": 7,
+    "BQ - TransactionBatch": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/ChequeLockBox.yaml"
+}

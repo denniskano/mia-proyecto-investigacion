@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "DealerDesk.yaml",
+  "source": "BIAN",
+  "contrato": "Dealer Desk",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 29,
+  "cantidad_schemas": 35,
+  "cantidad_propiedades": 133,
+  "fragmentos_corpus": 215,
+  "operaciones_con_summary": 29,
+  "operaciones_con_description": 29,
+  "operaciones_summary_igual_description": 29,
+  "metodos": {
+    "PUT": 17,
+    "POST": 4,
+    "GET": 8
+  },
+  "tags": {
+    "CR - DealerDeskOperatingSession": 8,
+    "BQ - DealerDeskConsolidatedPositionTracking": 7,
+    "BQ - DealerDeskTradingAssignmentandLimits": 7,
+    "BQ - InformationFeedAdministration": 7
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/DealerDesk.yaml"
+}

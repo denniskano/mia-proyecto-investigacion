@@ -1,0 +1,26 @@
+{
+  "archivo_entrada": "CorporateLease.yaml",
+  "source": "BIAN",
+  "contrato": "Corporate Lease",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 18,
+  "cantidad_schemas": 53,
+  "cantidad_propiedades": 139,
+  "fragmentos_corpus": 220,
+  "operaciones_con_summary": 18,
+  "operaciones_con_description": 18,
+  "operaciones_summary_igual_description": 18,
+  "metodos": {
+    "PUT": 13,
+    "POST": 2,
+    "GET": 3
+  },
+  "tags": {
+    "CR - CorporateLeaseFacility": 7,
+    "BQ - Administration": 5,
+    "BQ - Fulfill": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CorporateLease.yaml"
+}

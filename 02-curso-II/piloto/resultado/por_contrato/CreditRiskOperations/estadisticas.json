@@ -1,0 +1,25 @@
+{
+  "archivo_entrada": "CreditRiskOperations.yaml",
+  "source": "BIAN",
+  "contrato": "Credit Risk Operations",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 10,
+  "cantidad_schemas": 90,
+  "cantidad_propiedades": 282,
+  "fragmentos_corpus": 409,
+  "operaciones_con_summary": 10,
+  "operaciones_con_description": 10,
+  "operaciones_summary_igual_description": 10,
+  "metodos": {
+    "PUT": 5,
+    "POST": 2,
+    "GET": 3
+  },
+  "tags": {
+    "CR - TradingCreditPositionMeasurement": 5,
+    "BQ - TradingCounterpartyCreditLimitIndicator": 5
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CreditRiskOperations.yaml"
+}

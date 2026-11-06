@@ -1,0 +1,13 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+getPersonalAccounts;GET;/personal-accounts;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getBusinessAccounts;GET;/business-accounts;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getPersonalLoans;GET;/personal-loans;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getBusinessLoans;GET;/business-loans;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getPersonalCreditCards;GET;/personal-credit-cards;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getBusinessCreditCards;GET;/business-credit-cards;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getPersonalFinancings;GET;/personal-financings;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getBusinessFinancings;GET;/business-financings;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getPersonalInvoiceFinancings;GET;/personal-invoice-financings;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getBusinessInvoiceFinancings;GET;/business-invoice-financings;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getPersonalUnarrangedAccountOverdraft;GET;/personal-unarranged-account-overdraft;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getBusinessUnarrangedAccountOverdraft;GET;/business-unarranged-account-overdraft;;;;;0.0;0.0;False;0.0;0.0;0.0;False

@@ -3,10 +3,10 @@
   "ofb": "OFB_accounts_2.4.2.yml",
   "bian": "CurrentAccount.yaml",
   "prioridad": "semana-10-11",
-  "git_commit": "24d1644ed4cdb7fc80da6f88800b9c87225100ed",
+  "git_commit": "ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747",
   "parser_id": "procesar_openapi.py",
   "embedding_model": "tfidf+jaccard-lexical-v0",
-  "fecha": "2026-11-06T20:09:56Z",
+  "fecha": "2026-11-06T21:00:02Z",
   "umbrales": {
     "jaccard_nombre": 0.4,
     "jaccard_con_http": 0.25,

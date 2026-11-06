@@ -1,0 +1,30 @@
+{
+  "archivo_entrada": "CustomerEventHistory.yaml",
+  "source": "BIAN",
+  "contrato": "Customer Event History",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 22,
+  "cantidad_schemas": 58,
+  "cantidad_propiedades": 216,
+  "fragmentos_corpus": 329,
+  "operaciones_con_summary": 22,
+  "operaciones_con_description": 22,
+  "operaciones_summary_igual_description": 22,
+  "metodos": {
+    "PUT": 14,
+    "GET": 7,
+    "POST": 1
+  },
+  "tags": {
+    "BQ - Relationship": 3,
+    "CR - CustomerEventLog": 4,
+    "BQ - Sales": 3,
+    "BQ - Servicing": 3,
+    "BQ - ProductProcessing": 3,
+    "BQ - Fraud": 3,
+    "BQ - Life": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerEventHistory.yaml"
+}

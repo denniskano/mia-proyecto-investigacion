@@ -1,0 +1,106 @@
+﻿source;archivo;element_type;element_id;field;raw_text;normalized_text;path;source_url
+BIAN;InteractiveHelp.yaml;operation;InitiateHelpServiceSelection;summary;InBQ Initiate an interactive help service exchange;initiate an interactive help service exchange;/InteractiveHelp/{interactivehelpid}/HelpServiceSelection/Initiate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;operation;RetrieveHelpServiceSelection;summary;ReBQ Retrieve details about an interactive help service exchange;retrieve details about an interactive help service exchange;/InteractiveHelp/{interactivehelpid}/HelpServiceSelection/{helpserviceselectionid}/Retrieve;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;operation;CaptureHelpServiceSelection;summary;CaBQ Capture user feedback relating to the service exchange;ca bq capture user feedback relating to the service exchange;/InteractiveHelp/{interactivehelpid}/HelpServiceSelection/{helpserviceselectionid}/Capture;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;operation;ExecuteHelpServiceSelection;summary;ExBQ Execute an automated action within the exchange;execute an automated action within the exchange;/InteractiveHelp/{interactivehelpid}/HelpServiceSelection/{helpserviceselectionid}/Execute;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;schema;HTTPError;description;Status Attributes;status attributes;#/components/schemas/HTTPError;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HTTPError.status_code;name;status_code;status code;#/components/schemas/HTTPError/properties/status_code;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HTTPError.status;name;status;status;#/components/schemas/HTTPError/properties/status;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HTTPError.message;name;message;message;#/components/schemas/HTTPError/properties/message;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;schema;Producttypevalues;description;">
+* `BankingProduct` - 
+* `InsuranceProduct` - 
+";> * `banking product` * `insurance product`;#/components/schemas/Producttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;schema;Productfeaturetypevalues;description;">
+* `Bankingservice` - A classification that distinguishes between instances of product features according to the core banking services, functionality and/or objectives of banking.
+
+e.g. deposit services, exchange services, etc.
+
+The primary reason for the contract with the client are the banking services. These services can be classified as follows:
+1. Selling services
+2. Financial Instruments Exchange
+3. Financial Stock Management
+4. Financial Transfers
+5. Financial Risk Transfer
+6. Business Operating
+7. Advisory
+8. Reporting
+
+
+* `Administrationservice` - A classification that distinguishes between instances of product features according to administrative tasks related to the Banking Product or Service.
+* `Accessservice` - A classification that distinguishes between product features according to way of the banking services can be accessed.
+
+The access to services becomes more and more important in the evolving markets. 
+We need to separate different parts:
+1. The physical access to the infrastructure that allows access to the bank (where)
+2. The authorization of different parties to use the services of the bank (who)
+3. The agreed procedure to have access to different services (how)
+4. The services that are available for the different parties (what)
+
+* `Pricefeature` - A classification that distinguishes between instances of product features according to the cost/profit that is related to Banking Products or Services.
+
+In all commercial offerings, there is an agreed cost for both parties (e.g. the interest arrangements are in both directions). The pricing structure of products or packages is a service that gives the possibility to the client to adapt his costs to his individual situation.
+We see different generic categories in the pricing structure of the different products.
+1. Compensations
+2. Prices
+3. Fees
+4. Discounts
+";> * `bankingservice` a classification that distinguishes between instances of product features according to the core banking services, functionality and or objectives of banking. e.g. deposit services, exchange services, etc. the primary reason for the contract with the client are the banking services. these services can be classified as follows: 1. selling services 2. financial instruments exchange 3. financial stock management 4. financial transfers 5. financial risk transfer 6. business operating 7. advisory 8. reporting * `administrationservice` a classification that distinguishes between instances of product features according to administrative tasks related to the banking product or service. * `accessservice` a classification that distinguishes between product features according to way of the banking services can be accessed. the access to services becomes more and more important in the evolving markets. we need to separate different parts: 1. the physical access to the infrastructure that allows access to the bank (where) 2. the authorization of different parties to use the services of the bank (who) 3. the agreed procedure to have access to different services (how) 4. the services that are available for the different parties (what) * `pricefeature` a classification that distinguishes between instances of product features according to the cost profit that is related to banking products or services. in all commercial offerings, there is an agreed cost for both parties (e.g. the interest arrangements are in both directions). the pricing structure of products or packages is a service that gives the possibility to the client to adapt his costs to his individual situation. we see different generic categories in the pricing structure of the different products. 1. compensations 2. prices 3. fees 4. discounts;#/components/schemas/Productfeaturetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;schema;Task;description;The user provided result of the interactive help service, including interaction statistics such as exchange frequency and duration;the user provided result of the interactive help service, including interaction statistics such as exchange frequency and duration;#/components/schemas/Task;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Task.Task;name;Task;task;#/components/schemas/Task/properties/Task;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;schema;Involvedparty;description;Reference to the employee, business unit providing service feedback;reference to the employee, business unit providing service feedback;#/components/schemas/Involvedparty;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Involvedparty.PartyReference;name;PartyReference;party reference;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Involvedparty.PartyReference;description;Reference to a Party who plays a specific role;reference to a party who plays a specific role;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Involvedparty.InvolvementReference;name;InvolvementReference;involvement reference;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Involvedparty.InvolvementReference;description;Reference to a specific Role that is played by a Party;reference to a specific role that is played by a party;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;schema;Datetimetypevalues;description;">
+* `MaturityDate` - 
+* `InitiatedDate` - 
+* `RequestedDate` - 
+* `ExecutedDate` - 
+* `OpenDate` - 
+* `CloseDate` - 
+* `ExpiryDate` - 
+* `EffectiveDate` - 
+* `CreatingDate` - 
+* `ActivationDate` - 
+* `DeactivationDate` - 
+* `BlockingDate` - 
+* `SendingDate` - 
+* `ValidFromDate` - 
+* `ValidToDate` - 
+* `ReceivingDate` - 
+* `SigningDate` - 
+* `DueDate` - 
+* `ValueDate` - 
+* `FulfillmentDate` - 
+* `EntryDate` - 
+";> * `maturity date` * `initiated date` * `requested date` * `executed date` * `open date` * `close date` * `expiry date` * `effective date` * `creating date` * `activation date` * `deactivation date` * `blocking date` * `sending date` * `valid from date` * `valid to date` * `receiving date` * `signing date` * `due date` * `value date` * `fulfillment date` * `entry date`;#/components/schemas/Datetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;schema;Datetime;description;The date, time (and duration) of the service usage;the date, time (and duration) of the service usage;#/components/schemas/Datetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Datetime.DateTimeContent;name;DateTimeContent;date time content;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Datetime.DateTimeContent;description;The particular date and time point in the progression of time;the particular date and time point in the progression of time;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Datetime.TimeZoneCode;name;TimeZoneCode;time zone code;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Datetime.TimeZoneCode;description;The time zone to which the date time refers.;the time zone to which the date time refers.;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Datetime.DaylightSavingIndicator;name;DaylightSavingIndicator;daylight saving indicator;#/components/schemas/Datetime/properties/DaylightSavingIndicator;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;Datetime.DateTimeType;name;DateTimeType;date time type;#/components/schemas/Datetime/properties/DateTimeType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;schema;HelpServiceSelection;description;"The collection of operational serivces/functions offered by the operational facility
+
+Examples: messages, capture, routines";the collection of operational serivces functions offered by the operational facility examples: messages, capture, routines;#/components/schemas/HelpServiceSelection;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionInteractionType;name;HelpSelectionInteractionType;help selection interaction type;#/components/schemas/HelpServiceSelection/properties/HelpSelectionInteractionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionInteractionType;description;The type of session provides context for filtering content (e.g. employee, self-service customer);the type of session provides context for filtering content (e.g. employee, self service customer);#/components/schemas/HelpServiceSelection/properties/HelpSelectionInteractionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionProductandServiceType;name;HelpSelectionProductandServiceType;help selection productand service type;#/components/schemas/HelpServiceSelection/properties/HelpSelectionProductandServiceType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionProductFeatureType;name;HelpSelectionProductFeatureType;help selection product feature type;#/components/schemas/HelpServiceSelection/properties/HelpSelectionProductFeatureType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.SessionDialogueRecord;name;SessionDialogueRecord;session dialogue record;#/components/schemas/HelpServiceSelection/properties/SessionDialogueRecord;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.SessionDialogueRecord;description;The session dialogue log of actions during the contact to this point can be mined for key words that might improve the help selection;the session dialogue log of actions during the contact to this point can be mined for key words that might improve the help selection;#/components/schemas/HelpServiceSelection/properties/SessionDialogueRecord;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionKeyWordMenu;name;HelpSelectionKeyWordMenu;help selection key word menu;#/components/schemas/HelpServiceSelection/properties/HelpSelectionKeyWordMenu;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionKeyWordMenu;description;An interactive exchange can be supported where the service presents a menu of selection options or key words to narrow the search;an interactive exchange can be supported where the service presents a menu of selection options or key words to narrow the search;#/components/schemas/HelpServiceSelection/properties/HelpSelectionKeyWordMenu;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionKeyWordSelection;name;HelpSelectionKeyWordSelection;help selection key word selection;#/components/schemas/HelpServiceSelection/properties/HelpSelectionKeyWordSelection;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionKeyWordSelection;description;The selected keyword or menu option;the selected keyword or menu option;#/components/schemas/HelpServiceSelection/properties/HelpSelectionKeyWordSelection;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.InteractiveHelp;name;InteractiveHelp;interactive help;#/components/schemas/HelpServiceSelection/properties/InteractiveHelp;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.InteractiveHelp;description;The returned interactive help in any suitable form;the returned interactive help in any suitable form;#/components/schemas/HelpServiceSelection/properties/InteractiveHelp;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionTaskResult;name;HelpSelectionTaskResult;help selection task result;#/components/schemas/HelpServiceSelection/properties/HelpSelectionTaskResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionFeedback;name;HelpSelectionFeedback;help selection feedback;#/components/schemas/HelpServiceSelection/properties/HelpSelectionFeedback;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.HelpSelectionFeedback;description;User provided commentary on the service provided;user provided commentary on the service provided;#/components/schemas/HelpServiceSelection/properties/HelpSelectionFeedback;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.EmployeeorBusinessUnitReference;name;EmployeeorBusinessUnitReference;employeeor business unit reference;#/components/schemas/HelpServiceSelection/properties/EmployeeorBusinessUnitReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;property;HelpServiceSelection.DateandTime;name;DateandTime;dateand time;#/components/schemas/HelpServiceSelection/properties/DateandTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml
+BIAN;InteractiveHelp.yaml;schema;interactiveHelpServiceOperatingSession;description;Operate equipment and/or a largely automated facility within Interactive Help. ;operate equipment and or a largely automated facility within interactive help.;#/components/schemas/interactiveHelpServiceOperatingSession;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/InteractiveHelp.yaml

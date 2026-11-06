@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "RegulatoryReporting.yaml",
+  "source": "BIAN",
+  "contrato": "Regulatory Reporting",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 13,
+  "cantidad_schemas": 52,
+  "cantidad_propiedades": 135,
+  "fragmentos_corpus": 214,
+  "operaciones_con_summary": 13,
+  "operaciones_con_description": 13,
+  "operaciones_summary_igual_description": 13,
+  "metodos": {
+    "PUT": 8,
+    "GET": 4,
+    "POST": 1
+  },
+  "tags": {
+    "CR - RegulatoryComplianceAdministrativePlan": 4,
+    "BQ - Consolidation": 2,
+    "BQ - Authoring": 3,
+    "BQ - Enquiries": 4
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/RegulatoryReporting.yaml"
+}

@@ -1,0 +1,29 @@
+{
+  "archivo_entrada": "CorporateTrustServices.yaml",
+  "source": "BIAN",
+  "contrato": "Corporate Trust Services",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 43,
+  "cantidad_schemas": 126,
+  "cantidad_propiedades": 374,
+  "fragmentos_corpus": 571,
+  "operaciones_con_summary": 43,
+  "operaciones_con_description": 43,
+  "operaciones_summary_igual_description": 43,
+  "metodos": {
+    "PUT": 25,
+    "POST": 6,
+    "GET": 12
+  },
+  "tags": {
+    "CR - CorporateTrustServicesFacility": 8,
+    "BQ - ProjectFinance": 7,
+    "BQ - Escrow": 7,
+    "BQ - CourtLiaison": 7,
+    "BQ - Financing": 7,
+    "BQ - LoanAgencyandAdministration": 7
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CorporateTrustServices.yaml"
+}

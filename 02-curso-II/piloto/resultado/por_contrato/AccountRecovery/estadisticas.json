@@ -1,0 +1,29 @@
+{
+  "archivo_entrada": "AccountRecovery.yaml",
+  "source": "BIAN",
+  "contrato": "Account Recovery",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 17,
+  "cantidad_schemas": 126,
+  "cantidad_propiedades": 356,
+  "fragmentos_corpus": 525,
+  "operaciones_con_summary": 17,
+  "operaciones_con_description": 17,
+  "operaciones_summary_igual_description": 17,
+  "metodos": {
+    "PUT": 11,
+    "POST": 1,
+    "GET": 5
+  },
+  "tags": {
+    "BQ - Writedown": 2,
+    "BQ - Negotiation": 4,
+    "BQ - Modification": 3,
+    "BQ - Planning": 2,
+    "CR - AccountRecoveryProcedure": 4,
+    "BQ - Assessment": 2
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/AccountRecovery.yaml"
+}

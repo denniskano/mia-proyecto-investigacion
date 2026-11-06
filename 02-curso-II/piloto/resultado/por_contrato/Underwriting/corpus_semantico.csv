@@ -1,0 +1,878 @@
+﻿source;archivo;element_type;element_id;field;raw_text;normalized_text;path;source_url
+BIAN;Underwriting.yaml;operation;Evaluate;summary;EvCR Evaluate an underwriting decision;ev cr evaluate an underwriting decision;/Underwriting/Evaluate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;operation;Update;summary;UpCR Update details for an underwriting assessment;update details for an underwriting assessment;/Underwriting/{underwritingid}/Update;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;operation;Execute;summary;ExCR Execute an automated task for an assessment (e.g. submit transactions);ex cr execute an automated task for an assessment (e.g. submit transactions);/Underwriting/{underwritingid}/Execute;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;operation;Request;summary;RqCR Request manual intervention in an assessment (e.g. discussion);rq cr request manual intervention in an assessment (e.g. discussion);/Underwriting/{underwritingid}/Request;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;operation;Exchange;summary;EcCR Accept, reject verify etc. an underwriting assessment;ec cr accept, reject verify etc. an underwriting assessment;/Underwriting/{underwritingid}/Exchange;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;operation;Grant;summary;GrCR Obtain grant of authority from underwriting;gr cr obtain grant of authority from underwriting;/Underwriting/{underwritingid}/Grant;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;operation;Retrieve;summary;ReCR Retrieve details about an underwriting assessment;retrieve details about an underwriting assessment;/Underwriting/{underwritingid}/Retrieve;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;HTTPError;description;Status Attributes;status attributes;#/components/schemas/HTTPError;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;HTTPError.status_code;name;status_code;status code;#/components/schemas/HTTPError/properties/status_code;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;HTTPError.status;name;status;status;#/components/schemas/HTTPError/properties/status;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;HTTPError.message;name;message;message;#/components/schemas/HTTPError/properties/message;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Rulesettypevalues;description;">
+* `Policy` - Rule that governs business execution.
+
+The set of basic principles and associated guidelines, formulated and enforced by the governing body of an organization, to direct and limit its actions in pursuit of long-term goals. (Business Dictionary)
+
+* `Regulation` - A rule used to carry out a law (FIBO)
+
+Business Dictionary: a rule (with or without the coercive power of law) employed in controlling, directing, or managing an activity, organization, or system. 
+
+The set of rules and legislation governing certain actions. 
+https://financial-dictionary.thefreedictionary.com/Regulatory
+* `Law` - A binding rule that the courts will enforce.
+A system of rules and guidelines which are enforced through social institutions to govern behavior. (FIBO)
+
+* `Guideline` - A recommended practice (adapted from Business Dictionary)
+A general rule, principle, or piece of advice.
+* `Criterion` - A principle or standard by which something may be judged or decided.
+
+Read more: http://www.businessdictionary.com/definition/criterion.html
+* `Standard` - A rule considered by an authority or by general consent as a basis of comparison
+";> * `policy` rule that governs business execution. the set of basic principles and associated guidelines, formulated and enforced by the governing body of an organization, to direct and limit its actions in pursuit of long term goals. (business dictionary) * `regulation` a rule used to carry out a law (fibo) business dictionary: a rule (with or without the coercive power of law) employed in controlling, directing, or managing an activity, organization, or system. the set of rules and legislation governing certain actions. https: financial dictionary.thefreedictionary.com regulatory * `law` a binding rule that the courts will enforce. a system of rules and guidelines which are enforced through social institutions to govern behavior. (fibo) * `guideline` a recommended practice (adapted from business dictionary) a general rule, principle, or piece of advice. * `criterion` a principle or standard by which something may be judged or decided. read more: http: www.businessdictionary.com definition criterion.html * `standard` a rule considered by an authority or by general consent as a basis of comparison;#/components/schemas/Rulesettypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Name.Name;name;Name;name;#/components/schemas/Name/properties/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Name.Name;description;A name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (UN/CEFAT);a name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (un cefat);#/components/schemas/Name/properties/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Involvedparty;description;"Reference to an entity that assigns and manages the identification.
+tReference to the organization or agency that issued the identifier (e.g., DMV, Passport Office).";reference to an entity that assigns and manages the identification. t reference to the organization or agency that issued the identifier (e.g., dmv, passport office).;#/components/schemas/Involvedparty;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Involvedparty.PartyReference;name;PartyReference;party reference;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Involvedparty.PartyReference;description;Reference to a Party who plays a specific role;reference to a party who plays a specific role;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Involvedparty.InvolvementReference;name;InvolvementReference;involvement reference;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Involvedparty.InvolvementReference;description;Reference to a specific Role that is played by a Party;reference to a specific role that is played by a party;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Datetimetypevalues;description;">
+* `MaturityDate` - 
+* `InitiatedDate` - 
+* `RequestedDate` - 
+* `ExecutedDate` - 
+* `OpenDate` - 
+* `CloseDate` - 
+* `ExpiryDate` - 
+* `EffectiveDate` - 
+* `CreatingDate` - 
+* `ActivationDate` - 
+* `DeactivationDate` - 
+* `BlockingDate` - 
+* `SendingDate` - 
+* `ValidFromDate` - 
+* `ValidToDate` - 
+* `ReceivingDate` - 
+* `SigningDate` - 
+* `DueDate` - 
+* `ValueDate` - 
+* `FulfillmentDate` - 
+* `EntryDate` - 
+";> * `maturity date` * `initiated date` * `requested date` * `executed date` * `open date` * `close date` * `expiry date` * `effective date` * `creating date` * `activation date` * `deactivation date` * `blocking date` * `sending date` * `valid from date` * `valid to date` * `receiving date` * `signing date` * `due date` * `value date` * `fulfillment date` * `entry date`;#/components/schemas/Datetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Datetime;description;The date when the identifier became valid.;the date when the identifier became valid.;#/components/schemas/Datetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Datetime.DateTimeContent;name;DateTimeContent;date time content;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Datetime.DateTimeContent;description;The particular date and time point in the progression of time;the particular date and time point in the progression of time;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Datetime.TimeZoneCode;name;TimeZoneCode;time zone code;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Datetime.TimeZoneCode;description;The time zone to which the date time refers.;the time zone to which the date time refers.;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Datetime.DaylightSavingIndicator;name;DaylightSavingIndicator;daylight saving indicator;#/components/schemas/Datetime/properties/DaylightSavingIndicator;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Datetime.DateTimeType;name;DateTimeType;date time type;#/components/schemas/Datetime/properties/DateTimeType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Identifier.IdentifierValue;name;IdentifierValue;identifier value;#/components/schemas/Identifier/properties/IdentifierValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Identifier.IdentifierValue;description;tThe actual unique code or number (e.g., passport number, drivers license number).;t the actual unique code or number (e.g., passport number, drivers license number).;#/components/schemas/Identifier/properties/IdentifierValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Identifier.IdentifierIssuerReference;name;IdentifierIssuerReference;identifier issuer reference;#/components/schemas/Identifier/properties/IdentifierIssuerReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Identifier.IdentifierStartDate;name;IdentifierStartDate;identifier start date;#/components/schemas/Identifier/properties/IdentifierStartDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Identifier.IdentifierEndDate;name;IdentifierEndDate;identifier end date;#/components/schemas/Identifier/properties/IdentifierEndDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Datetimeperiod;description;Period of time during which the status is valid.;period of time during which the status is valid.;#/components/schemas/Datetimeperiod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Datetimeperiod.FromDateTime;name;FromDateTime;from date time;#/components/schemas/Datetimeperiod/properties/FromDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Datetimeperiod.ToDateTime;name;ToDateTime;to date time;#/components/schemas/Datetimeperiod/properties/ToDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Status.StatusReason;name;StatusReason;status reason;#/components/schemas/Status/properties/StatusReason;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Status.StatusReason;description;Specifies the reasons for the status.;specifies the reasons for the status.;#/components/schemas/Status/properties/StatusReason;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Status.StatusDateTime;name;StatusDateTime;status date time;#/components/schemas/Status/properties/StatusDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Status.StatusValidityPeriod;name;StatusValidityPeriod;status validity period;#/components/schemas/Status/properties/StatusValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Status.StatusInvolvedPartyReference;name;StatusInvolvedPartyReference;status involved party reference;#/components/schemas/Status/properties/StatusInvolvedPartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;RuleSet;description;Guidelines provided for applying for an underwriting decision - list submission requirements;guidelines provided for applying for an underwriting decision list submission requirements;#/components/schemas/RuleSet;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;RuleSet.RuleSetDefinition;name;RuleSetDefinition;rule set definition;#/components/schemas/RuleSet/properties/RuleSetDefinition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;RuleSet.RuleSetInterpretation;name;RuleSetInterpretation;rule set interpretation;#/components/schemas/RuleSet/properties/RuleSetInterpretation;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;RuleSet.RuleSetType;name;RuleSetType;rule set type;#/components/schemas/RuleSet/properties/RuleSetType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;RuleSet.RuleSetName;name;RuleSetName;rule set name;#/components/schemas/RuleSet/properties/RuleSetName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;RuleSet.RuleSetIdentification;name;RuleSetIdentification;rule set identification;#/components/schemas/RuleSet/properties/RuleSetIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;RuleSet.RuleSetLifecycleStatus;name;RuleSetLifecycleStatus;rule set lifecycle status;#/components/schemas/RuleSet/properties/RuleSetLifecycleStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Requirement;description;Outlines the employment details required;outlines the employment details required;#/components/schemas/Requirement;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Requirement.RequirementType;name;RequirementType;requirement type;#/components/schemas/Requirement/properties/RequirementType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Financialdocumenttypevalues;description;">
+* `Meteredserviceinvoice` - Document is an invoice claiming payment for the supply of metered services, for example gas or electricity supplied to a fixed meter.
+* `Creditnoterelatedtofinancialadjustment` - Document is a credit note for the final amount settled for a commercial transaction.
+* `Debitnoterelatedtofinancialadjustment` - Document is a debit note for the final amount settled for a commercial transaction.
+* `Commercialinvoice` - Document is an invoice.
+* `Creditnote` - Document is a credit note.
+* `Debitnote` - Document is a debit note.
+* `Hireinvoice` - Document is an invoice for the hiring of human resources or renting goods or equipment.
+* `Selfbilledinvoice` - Document is an invoice issued by the debtor.
+* `Remittanceadvicemessage` - Document is a remittance advice sent separately from the current transaction.
+* `Relatedpaymentinstruction` - Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario.
+* `Commercialcontract` - Document is an agreement between the parties, stipulating the terms and conditions of the delivery of goods or services.
+* `Foreignexchangedealreference` - Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers.
+* `Statementofaccount` - Document is a statement of the transactions posted to the debtor's account at the supplier.
+* `Dispatchadvice` - Document is a dispatch advice.
+* `Purchaseorder` - Document is a purchase order.
+* `Structuredcommunicationreference` - Document is a structured communication reference provided by the creditor to identify the referred transaction.
+* `Billoflading` - Document is a shipping notice.
+* `Voucher` - Document is an electronic payment document.
+* `Accountreceivableopenitem` - Document is a payment that applies to a specific source document.
+* `Tradeservicesutilitytransaction` - Document is a transaction identifier as assigned by the Trade Services Utility.
+* `Cashierreceipt` - When the Sale system print the Cashier copy of the Payment receipt.
+* `Customerreceipt` - When the Sale System requires   the POI system to print the Customer receipt.
+* `Journal` - When the POI or the Sale System wants to store a message on the journal printer or electronic journal of the Sale Terminal (it is sometimes a Sale Logging/Journal Printer).
+* `Salereceipt` - When the Sale System requires the POI system to print the Sale receipt.
+";> * `meteredserviceinvoice` document is an invoice claiming payment for the supply of metered services, for example gas or electricity supplied to a fixed meter. * `creditnoterelatedtofinancialadjustment` document is a credit note for the final amount settled for a commercial transaction. * `debitnoterelatedtofinancialadjustment` document is a debit note for the final amount settled for a commercial transaction. * `commercialinvoice` document is an invoice. * `creditnote` document is a credit note. * `debitnote` document is a debit note. * `hireinvoice` document is an invoice for the hiring of human resources or renting goods or equipment. * `selfbilledinvoice` document is an invoice issued by the debtor. * `remittanceadvicemessage` document is a remittance advice sent separately from the current transaction. * `relatedpaymentinstruction` document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario. * `commercialcontract` document is an agreement between the parties, stipulating the terms and conditions of the delivery of goods or services. * `foreignexchangedealreference` document is a pre agreed or pre arranged foreign exchange transaction to which the payment transaction refers. * `statementofaccount` document is a statement of the transactions posted to the debtor's account at the supplier. * `dispatchadvice` document is a dispatch advice. * `purchaseorder` document is a purchase order. * `structuredcommunicationreference` document is a structured communication reference provided by the creditor to identify the referred transaction. * `billoflading` document is a shipping notice. * `voucher` document is an electronic payment document. * `accountreceivableopenitem` document is a payment that applies to a specific source document. * `tradeservicesutilitytransaction` document is a transaction identifier as assigned by the trade services utility. * `cashierreceipt` when the sale system print the cashier copy of the payment receipt. * `customerreceipt` when the sale system requires the poi system to print the customer receipt. * `journal` when the poi or the sale system wants to store a message on the journal printer or electronic journal of the sale terminal (it is sometimes a sale logging journal printer). * `salereceipt` when the sale system requires the poi system to print the sale receipt.;#/components/schemas/Financialdocumenttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Documentdatetimetypevalues;description;">
+* `CreationDate` - 
+* `CapturingDate` - 
+* `VersionDate` - 
+* `ValueDate` - 
+* `IssueDate` - 
+";> * `creation date` * `capturing date` * `version date` * `value date` * `issue date`;#/components/schemas/Documentdatetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Document;description;Lists required documentation (e.g. for proof of identity, assets, collateral);lists required documentation (e.g. for proof of identity, assets, collateral);#/components/schemas/Document;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentIdentification;name;DocumentIdentification;document identification;#/components/schemas/Document/properties/DocumentIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentVersion;name;DocumentVersion;document version;#/components/schemas/Document/properties/DocumentVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentType;name;DocumentType;document type;#/components/schemas/Document/properties/DocumentType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentStatus;name;DocumentStatus;document status;#/components/schemas/Document/properties/DocumentStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentDateTime;name;DocumentDateTime;document date time;#/components/schemas/Document/properties/DocumentDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentName;name;DocumentName;document name;#/components/schemas/Document/properties/DocumentName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentDateTimeType;name;DocumentDateTimeType;document date time type;#/components/schemas/Document/properties/DocumentDateTimeType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentPurpose;name;DocumentPurpose;document purpose;#/components/schemas/Document/properties/DocumentPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentPurpose;description;Specifies the function of the document. (ISO20022);specifies the function of the document. (iso20022);#/components/schemas/Document/properties/DocumentPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentFormat;name;DocumentFormat;document format;#/components/schemas/Document/properties/DocumentFormat;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentSubject;name;DocumentSubject;document subject;#/components/schemas/Document/properties/DocumentSubject;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentDescription;name;DocumentDescription;document description;#/components/schemas/Document/properties/DocumentDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Document.DocumentValidityPeriod;name;DocumentValidityPeriod;document validity period;#/components/schemas/Document/properties/DocumentValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Transactiondatetimetypevalues;description;">
+* `ExecutedDate` - 
+* `FulfillmentDate` - 
+* `InitiatedDate` - 
+* `CancelledDate` - 
+* `ApprovedDate` - 
+* `ValueDate` - 
+* `BookingDate` - 
+";> * `executed date` * `fulfillment date` * `initiated date` * `cancelled date` * `approved date` * `value date` * `booking date`;#/components/schemas/Transactiondatetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Transactiondatetime;description;"The Date that the transaction has occurred or is planned to occur.
+A characteristic of transaction which refers to the LifecycleDate of transaction (e.g., initiated date, executed date, fulfillment date). ";the date that the transaction has occurred or is planned to occur. a characteristic of transaction which refers to the lifecycle date of transaction (e.g., initiated date, executed date, fulfillment date).;#/components/schemas/Transactiondatetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transactiondatetime.TransactionDate;name;TransactionDate;transaction date;#/components/schemas/Transactiondatetime/properties/TransactionDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transactiondatetime.TransactionDateType;name;TransactionDateType;transaction date type;#/components/schemas/Transactiondatetime/properties/TransactionDateType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Transactiontypevalues;description;">
+* `FinancialTransaction` - 
+* `BusinessTransaction` - 
+* `BankingTransaction` - 
+* `AccountingTransaction` - 
+* `BookingTransaction` - 
+* `AllocationTransaction` - 
+* `DeliveryTransaction` - 
+* `ProductionTransaction` - 
+";> * `financial transaction` * `business transaction` * `banking transaction` * `accounting transaction` * `booking transaction` * `allocation transaction` * `delivery transaction` * `production transaction`;#/components/schemas/Transactiontypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Transactionstatustypevalues;description;">
+* `Initiated` - 
+* `Executed` - 
+* `Cancelled` - 
+* `Confirmed` - 
+* `Suspended` - 
+* `Pending` - 
+* `Completed` - 
+* `Notified` - 
+* `Booked` - 
+* `Rejected` - 
+";> * `initiated` * `executed` * `cancelled` * `confirmed` * `suspended` * `pending` * `completed` * `notified` * `booked` * `rejected`;#/components/schemas/Transactionstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Transactionstatus;description;A characteristic of transaction which refers to the LifecycleStatus of transaction (e.g., initiated, executed, confirmed, cancelled, etc.) ;a characteristic of transaction which refers to the lifecycle status of transaction (e.g., initiated, executed, confirmed, cancelled, etc.);#/components/schemas/Transactionstatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transactionstatus.TransactionStatus;name;TransactionStatus;transaction status;#/components/schemas/Transactionstatus/properties/TransactionStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transactionstatus.TransactionStatusType;name;TransactionStatusType;transaction status type;#/components/schemas/Transactionstatus/properties/TransactionStatusType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Actiontypevalues;description;">
+* `Initiate` - 
+* `Execute` - 
+* `Create` - 
+* `Transfer` - 
+* `Pay` - 
+* `Deliver` - 
+* `Apply` - 
+* `Calculate` - 
+";> * `initiate` * `execute` * `create` * `transfer` * `pay` * `deliver` * `apply` * `calculate`;#/components/schemas/Actiontypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Geographicalareatypevalues;description;">
+* `Continent` - 
+* `Country` - 
+* `State` - 
+* `District` - 
+* `Province` - 
+* `Town` - 
+* `City` - 
+* `Region` - 
+";> * `continent` * `country` * `state` * `district` * `province` * `town` * `city` * `region`;#/components/schemas/Geographicalareatypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationDescription;name;LocationDescription;location description;#/components/schemas/Location/properties/LocationDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationDescription;description;A description of the property, particularly if it has landmark characteristics.;a description of the property, particularly if it has landmark characteristics.;#/components/schemas/Location/properties/LocationDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationDateTime;name;LocationDateTime;location date time;#/components/schemas/Location/properties/LocationDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationStatus;name;LocationStatus;location status;#/components/schemas/Location/properties/LocationStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationType;name;LocationType;location type;#/components/schemas/Location/properties/LocationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationZoningType;name;LocationZoningType;location zoning type;#/components/schemas/Location/properties/LocationZoningType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationZoningType;description;The planning or zoning status (e.g. residential, commercial, industrial).;the planning or zoning status (e.g. residential, commercial, industrial).;#/components/schemas/Location/properties/LocationZoningType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationNeighborhoodType;name;LocationNeighborhoodType;location neighborhood type;#/components/schemas/Location/properties/LocationNeighborhoodType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationNeighborhoodType;description;The general purpose and neighborhood of the property  (e.g. residential, industrial, commercial).;the general purpose and neighborhood of the property (e.g. residential, industrial, commercial).;#/components/schemas/Location/properties/LocationNeighborhoodType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationConstructionType;name;LocationConstructionType;location construction type;#/components/schemas/Location/properties/LocationConstructionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationConstructionType;description;The construction approach for a property at the location (e.g. era and architecture as might be used in valuation).;the construction approach for a property at the location (e.g. era and architecture as might be used in valuation).;#/components/schemas/Location/properties/LocationConstructionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationOccupancyType;name;LocationOccupancyType;location occupancy type;#/components/schemas/Location/properties/LocationOccupancyType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationOccupancyType;description;The type of occupancy (e.g. residency, business, retail, entertainment).;the type of occupancy (e.g. residency, business, retail, entertainment).;#/components/schemas/Location/properties/LocationOccupancyType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationValue;name;LocationValue;location value;#/components/schemas/Location/properties/LocationValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationValue;description;The estimated (book) value of the property at the location - rental and purchase as appropriate.;the estimated (book) value of the property at the location rental and purchase as appropriate.;#/components/schemas/Location/properties/LocationValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationCapacity;name;LocationCapacity;location capacity;#/components/schemas/Location/properties/LocationCapacity;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationCapacity;description;An indication of the size or scale of the property where appropriate (e.g. 4 bedroom, 600 seat auditorium, 40 cover restaurant).;an indication of the size or scale of the property where appropriate (e.g. 4 bedroom, 600 seat auditorium, 40 cover restaurant).;#/components/schemas/Location/properties/LocationCapacity;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationIdentification;name;LocationIdentification;location identification;#/components/schemas/Location/properties/LocationIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationAddress;name;LocationAddress;location address;#/components/schemas/Location/properties/LocationAddress;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationAddress;description;Reference to the address of location;reference to the address of location;#/components/schemas/Location/properties/LocationAddress;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationName;name;LocationName;location name;#/components/schemas/Location/properties/LocationName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationTimeZone;name;LocationTimeZone;location time zone;#/components/schemas/Location/properties/LocationTimeZone;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Location.LocationTimeZone;description;Local time zone.;local time zone.;#/components/schemas/Location/properties/LocationTimeZone;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Action.Action;name;Action;action;#/components/schemas/Action/properties/Action;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Action.Action;description;"An event related to the behaviour performed by an actor. 
+
+Comment:
+An actor can be a party or a machine
+An action Includes various types of requests, orders and financial transactions. Includes responses where appropriate.
+An action is an event which means that the concept describes the result of acting.";an event related to the behaviour performed by an actor. comment: an actor can be a party or a machine an action includes various types of requests, orders and financial transactions. includes responses where appropriate. an action is an event which means that the concept describes the result of acting.;#/components/schemas/Action/properties/Action;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Transaction;description;…;…;#/components/schemas/Transaction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.TransactionIdentification;name;TransactionIdentification;transaction identification;#/components/schemas/Transaction/properties/TransactionIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.TransactionDate;name;TransactionDate;transaction date;#/components/schemas/Transaction/properties/TransactionDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.TransactionType;name;TransactionType;transaction type;#/components/schemas/Transaction/properties/TransactionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.TransactionDescription;name;TransactionDescription;transaction description;#/components/schemas/Transaction/properties/TransactionDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.TransactionDescription;description;A detailed explanation or commentary of transaction.;a detailed explanation or commentary of transaction.;#/components/schemas/Transaction/properties/TransactionDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.TransactionStatus;name;TransactionStatus;transaction status;#/components/schemas/Transaction/properties/TransactionStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.TransactionName;name;TransactionName;transaction name;#/components/schemas/Transaction/properties/TransactionName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.ActionType;name;ActionType;action type;#/components/schemas/Transaction/properties/ActionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventType;name;EventType;event type;#/components/schemas/Transaction/properties/EventType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventDateTime;name;EventDateTime;event date time;#/components/schemas/Transaction/properties/EventDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventDescription;name;EventDescription;event description;#/components/schemas/Transaction/properties/EventDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventSource;name;EventSource;event source;#/components/schemas/Transaction/properties/EventSource;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventLocation;name;EventLocation;event location;#/components/schemas/Transaction/properties/EventLocation;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventAction;name;EventAction;event action;#/components/schemas/Transaction/properties/EventAction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventStatus;name;EventStatus;event status;#/components/schemas/Transaction/properties/EventStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventValue;name;EventValue;event value;#/components/schemas/Transaction/properties/EventValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventValidityPeriod;name;EventValidityPeriod;event validity period;#/components/schemas/Transaction/properties/EventValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Transaction.EventIdentification;name;EventIdentification;event identification;#/components/schemas/Transaction/properties/EventIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Productidentificationtypevalues;description;">
+* `ISINCode` - 
+* `PackageCode` - 
+* `Buyersitemnumber` - Product identifier assigned by the buyer.
+* `Commercialdescriptioncodename` - A code to identify a product based on applicable commercial conditions.
+* `EAN` - The unique EAN (European Article Number) code.
+* `Harmonizedtariffcodename` - Classification of goods as developed by the Customs Cooperation council.
+* `Manufacturersitemnumber` - Product identifier as assigned by the manufacturer.
+* `Modelnumber` - Reference number assigned by the manufacturer to differentiate variations in similar products in a class or group.
+* `Partnumber` - Reference assigned by the manufacturer to a product part.
+* `Quotacategory` - Product identifier used by the retail industry.
+* `Stylenumber` - Identification of the style of a product.
+* `Suppliersitemnumber` - Number assigned to an article by the supplier of that article.
+* `Universalproductcode` - Number assigned to a manufacturer's product by the Product Code Council.
+";> * `isincode` * `package code` * `buyersitemnumber` product identifier assigned by the buyer. * `commercialdescriptioncodename` a code to identify a product based on applicable commercial conditions. * `ean` the unique ean (european article number) code. * `harmonizedtariffcodename` classification of goods as developed by the customs cooperation council. * `manufacturersitemnumber` product identifier as assigned by the manufacturer. * `modelnumber` reference number assigned by the manufacturer to differentiate variations in similar products in a class or group. * `partnumber` reference assigned by the manufacturer to a product part. * `quotacategory` product identifier used by the retail industry. * `stylenumber` identification of the style of a product. * `suppliersitemnumber` number assigned to an article by the supplier of that article. * `universalproductcode` number assigned to a manufacturer's product by the product code council.;#/components/schemas/Productidentificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Productidentification;description;The identifier of product e.g. ISIN Code.;the identifier of product e.g. isin code.;#/components/schemas/Productidentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Productidentification.ProductIdentification;name;ProductIdentification;product identification;#/components/schemas/Productidentification/properties/ProductIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Productidentification.ProductIdentificationType;name;ProductIdentificationType;product identification type;#/components/schemas/Productidentification/properties/ProductIdentificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Bankingproducttypevalues;description;">
+* `LoanProduct` - 
+* `CurrentAccountProduct` - 
+* `SavingAccountProduct` - 
+* `BrokeredProduct` - 
+* `TermDepositProduct` - 
+";> * `loan product` * `current account product` * `saving account product` * `brokered product` * `term deposit product`;#/components/schemas/Bankingproducttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Productstatustypevalues;description;">
+* `Initiated` - 
+* `Announced` - 
+* `Sold` - 
+* `Obsolete` - 
+* `Active` - 
+";> * `initiated` * `announced` * `sold` * `obsolete` * `active`;#/components/schemas/Productstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Productstatus;description;Refers to the lifecycle of a product (e.g., initiated, announced, active, obsolete, withdrawn).;refers to the lifecycle of a product (e.g., initiated, announced, active, obsolete, withdrawn).;#/components/schemas/Productstatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Productstatus.ProductStatus;name;ProductStatus;product status;#/components/schemas/Productstatus/properties/ProductStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Productstatus.ProductStatusType;name;ProductStatusType;product status type;#/components/schemas/Productstatus/properties/ProductStatusType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Financialinstrumenttypevalues;description;">
+* `Loan` - 
+* `Bond` - 
+* `Deposit` - 
+* `Stock` - 
+* `Option` - 
+* `Share` - 
+* `Debt` - Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified. (ISO20022)
+
+Any type of instrument primarily classified as debt can be considered a debt instrument. Debt instruments are tools an individual, government entity, or business entity can utilize for the purpose of obtaining capital. Debt instruments provide capital to an entity that promises to repay the capital over time. Credit cards, credit lines, loans, and bonds can all be types of debt instruments. (Investopedia)
+* `Letterofcredit` - Instrument issued by a bank substituting its name and credit standing for that of its customer. A letter of credit is a written undertaking of the bank, issued for the account of a customer (the applicant), to honour a demand for payment, upon the beneficiary's compliance with the terms and conditions set forth in the undertaking. (ISO20022)
+* `Security` - Financial instruments representing a sum of rights of the investor vis-a-vis the issuer. (ISO20022)
+* `Derivative` - 
+";> * `loan` * `bond` * `deposit` * `stock` * `option` * `share` * `debt` financial instruments evidencing moneys owed by the issuer to the holder on terms as specified. (iso20022) any type of instrument primarily classified as debt can be considered a debt instrument. debt instruments are tools an individual, government entity, or business entity can utilize for the purpose of obtaining capital. debt instruments provide capital to an entity that promises to repay the capital over time. credit cards, credit lines, loans, and bonds can all be types of debt instruments. (investopedia) * `letterofcredit` instrument issued by a bank substituting its name and credit standing for that of its customer. a letter of credit is a written undertaking of the bank, issued for the account of a customer (the applicant), to honour a demand for payment, upon the beneficiary's compliance with the terms and conditions set forth in the undertaking. (iso20022) * `security` financial instruments representing a sum of rights of the investor vis a vis the issuer. (iso20022) * `derivative`;#/components/schemas/Financialinstrumenttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Financialinstrumentidentificationtypevalues;description;">
+* `NASDAQ` - 
+* `ISIN` - 
+";> * `nasdaq` * `isin`;#/components/schemas/Financialinstrumentidentificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Financialinstrumentidentification.FinancialInstrumentIdentification;name;FinancialInstrumentIdentification;financial instrument identification;#/components/schemas/Financialinstrumentidentification/properties/FinancialInstrumentIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Financialinstrumentidentification.FinancialInstrumentIdentificationType;name;FinancialInstrumentIdentificationType;financial instrument identification type;#/components/schemas/Financialinstrumentidentification/properties/FinancialInstrumentIdentificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Financialinstrumentdatetimetypevalues;description;">
+* `CouponDate` - Next payment date of an interest bearing financial instrument.(ISO20022)
+* `ExpiryDate` - Date on which a privilege expires.(ISO20022)
+* `FloatingRateFixingDate` - Date at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue.(ISO20022)
+* `MaturityDate` - Planned final repayment date at the time of issuance.(ISO20022)
+* `IssueDate` - Date at which the security was made available.(ISO20022)
+* `NextCallableDate` - Next date at which the issuer has the right to pay the security prior to maturity.(ISO20022)
+* `PutableDate` - Date at which the holder has the right to ask for redemption of the security prior to final maturity.(ISO20022)
+* `DatedDate` - First date at which a security begins to accrue interest.(ISO20022)
+* `FirstPaymentDate` - Date at which the first interest payment is due to holders of the security.(ISO20022)
+";> * `coupon date` next payment date of an interest bearing financial instrument.(iso20022) * `expiry date` date on which a privilege expires.(iso20022) * `floating rate fixing date` date at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue.(iso20022) * `maturity date` planned final repayment date at the time of issuance.(iso20022) * `issue date` date at which the security was made available.(iso20022) * `next callable date` next date at which the issuer has the right to pay the security prior to maturity.(iso20022) * `putable date` date at which the holder has the right to ask for redemption of the security prior to final maturity.(iso20022) * `dated date` first date at which a security begins to accrue interest.(iso20022) * `first payment date` date at which the first interest payment is due to holders of the security.(iso20022);#/components/schemas/Financialinstrumentdatetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Financialinstrumentdatetime;description;Key dates of financial instrument;key dates of financial instrument;#/components/schemas/Financialinstrumentdatetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Financialinstrumentdatetime.FinancialInstrumentDate;name;FinancialInstrumentDate;financial instrument date;#/components/schemas/Financialinstrumentdatetime/properties/FinancialInstrumentDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Financialinstrumentdatetime.FinancialInstrumentDateType;name;FinancialInstrumentDateType;financial instrument date type;#/components/schemas/Financialinstrumentdatetime/properties/FinancialInstrumentDateType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Assettypevalues;description;">
+* `TangibleAsset` - It has a physical form and can be touched or seen.
+* `IntangibleAsset` - It doesn't have a physical form but hold value
+* `OperatingAsset` - Used in the day-to-day operations of the business.
+* `Non-OperatingAsset` - Not used in core business operations but still provide value
+* `CurrentAsset` - Expected to be converted into cash within one year.
+* `Non-Current(Fixed)Asset` - Provide value over the long term (more than one year).
+* `PersonalAsset` - Owned by individuals and not related to a business.
+* `BusinessAsset` - Owned by a business and used to generate revenue.
+";> * `tangible asset` it has a physical form and can be touched or seen. * `intangible asset` it doesn't have a physical form but hold value * `operating asset` used in the day to day operations of the business. * `non operating asset` not used in core business operations but still provide value * `current asset` expected to be converted into cash within one year. * `non current(fixed)asset` provide value over the long term (more than one year). * `personal asset` owned by individuals and not related to a business. * `business asset` owned by a business and used to generate revenue.;#/components/schemas/Assettypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Assetclassificationtypevalues.Assetclassificationtypevalues;name;Assetclassificationtypevalues;assetclassificationtypevalues;#/components/schemas/Assetclassificationtypevalues/properties/Assetclassificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Assetsubclassificationtypevalues;description;">
+* `Subassetclass` - Sub-asset class.(ISO20022)
+* `Timetomaturitybucket` - Time to maturity bucket.(ISO20022)
+* `Optiontimetomaturitybucket` - Time to maturity bucket of the option.(ISO20022)
+* `Swaptimetomaturitybucket` - Time to maturity bucket of the swap.(ISO20022)
+* `Underlyinginstrumentidentification` - Underlying instrument identification, such as an ISIN code.(ISO20022)
+* `Underlyingbondissuer` - Issuer of the underlying bond.(ISO20022)
+* `Underlyinginterestrate` - Underlying interest rate.(ISO20022)
+* `Underlyingbondterm` - Term of the underlying bond.(ISO20022)
+* `Assetclass` - Asset class.(ISO20022)
+* `Underlyingindexidentification` - Underlying index identification such as an ISIN or an index name.(ISO20022)
+* `Interestratetermofcontract` - Interest rate term of contract.(ISO20022)
+* `Underlyingreferenceentity` - Underlying reference entity.(ISO20022)
+* `Sovereignandpublictypeissuer` - Issuer of sovereign and public type.(ISO20022)
+* `Irdnotionalcurrency1` - Interest rate derivative notional currency 1.(ISO20022)
+* `Fexnotionalcurrency1` - Foreign exchange derivative notional currency 1.(ISO20022)
+* `Cfdnotionalcurrency1` - Contract for difference notional currency 1.(ISO20022)
+* `Fexnotionalcurrency2` - Foreign exchange derivative notional currency 2.(ISO20022)
+* `Irdnotionalcurrency2` - Interest rate derivative notional currency 2.(ISO20022)
+* `Cfdnotionalcurrency2` - Contract for difference notional currency 2.(ISO20022)
+* `Swaptionnotionalcurrency` - Notional currency of the swaption.(ISO20022)
+* `Creditnotionalcurrency` - Credit derivative notional currency.(ISO20022)
+* `Commoditynotionalcurrency` - Commodity derivative notional currency.(ISO20022)
+* `Contracttype` - Contract type.(ISO20022)
+* `Baseproduct` - Base product.(ISO20022)
+* `Subproduct` - Sub product.(ISO20022)
+* `Furthersubproduct` - Further sub product.(ISO20022)
+* `Deliverycashlocation` - Delivery cash settlement location.(ISO20022)
+* `Deliverysettlementtype` - Delivery settlement type.(ISO20022)
+* `Sizespecificationrelatedtofreightsubtype` - Size specification related to freight subtype.(ISO20022)
+* `Specificroutetimecharteraverage` - Specific route time charter average.(ISO20022)
+* `Equityunderlyingtype` - Equity derivative underlying type.(ISO20022)
+* `Parameter` - Parameter.(ISO20022)
+* `Inflationindexcodename` - Inflation index code or name.(ISO20022)
+* `ISIN` - Instrument identification.(ISO20022)
+* `Underlyingindexcdssubclassidentification` - Sub class of the underlying index credit default swap (CDS).(ISO20022)
+* `Underlyingtype` - Underlying type.(ISSO20022)
+";> * `subassetclass` sub asset class.(iso20022) * `timetomaturitybucket` time to maturity bucket.(iso20022) * `optiontimetomaturitybucket` time to maturity bucket of the option.(iso20022) * `swaptimetomaturitybucket` time to maturity bucket of the swap.(iso20022) * `underlyinginstrumentidentification` underlying instrument identification, such as an isin code.(iso20022) * `underlyingbondissuer` issuer of the underlying bond.(iso20022) * `underlyinginterestrate` underlying interest rate.(iso20022) * `underlyingbondterm` term of the underlying bond.(iso20022) * `assetclass` asset class.(iso20022) * `underlyingindexidentification` underlying index identification such as an isin or an index name.(iso20022) * `interestratetermofcontract` interest rate term of contract.(iso20022) * `underlyingreferenceentity` underlying reference entity.(iso20022) * `sovereignandpublictypeissuer` issuer of sovereign and public type.(iso20022) * `irdnotionalcurrency1` interest rate derivative notional currency 1.(iso20022) * `fexnotionalcurrency1` foreign exchange derivative notional currency 1.(iso20022) * `cfdnotionalcurrency1` contract for difference notional currency 1.(iso20022) * `fexnotionalcurrency2` foreign exchange derivative notional currency 2.(iso20022) * `irdnotionalcurrency2` interest rate derivative notional currency 2.(iso20022) * `cfdnotionalcurrency2` contract for difference notional currency 2.(iso20022) * `swaptionnotionalcurrency` notional currency of the swaption.(iso20022) * `creditnotionalcurrency` credit derivative notional currency.(iso20022) * `commoditynotionalcurrency` commodity derivative notional currency.(iso20022) * `contracttype` contract type.(iso20022) * `baseproduct` base product.(iso20022) * `subproduct` sub product.(iso20022) * `furthersubproduct` further sub product.(iso20022) * `deliverycashlocation` delivery cash settlement location.(iso20022) * `deliverysettlementtype` delivery settlement type.(iso20022) * `sizespecificationrelatedtofreightsubtype` size specification related to freight subtype.(iso20022) * `specificroutetimecharteraverage` specific route time charter average.(iso20022) * `equityunderlyingtype` equity derivative underlying type.(iso20022) * `parameter` parameter.(iso20022) * `inflationindexcodename` inflation index code or name.(iso20022) * `isin` instrument identification.(iso20022) * `underlyingindexcdssubclassidentification` sub class of the underlying index credit default swap (cds).(iso20022) * `underlyingtype` underlying type.(isso20022);#/components/schemas/Assetsubclassificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Product;description;The associated product instance for the underwriting decision;the associated product instance for the underwriting decision;#/components/schemas/Product;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.ProductIdentification;name;ProductIdentification;product identification;#/components/schemas/Product/properties/ProductIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.ProductType;name;ProductType;product type;#/components/schemas/Product/properties/ProductType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.ProductLifecycleStatus;name;ProductLifecycleStatus;product lifecycle status;#/components/schemas/Product/properties/ProductLifecycleStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.ProductPriority;name;ProductPriority;product priority;#/components/schemas/Product/properties/ProductPriority;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.ProductDescription;name;ProductDescription;product description;#/components/schemas/Product/properties/ProductDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.ProductDescription;description;A detailed explanation or commentary of product.;a detailed explanation or commentary of product.;#/components/schemas/Product/properties/ProductDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.ProductVersion;name;ProductVersion;product version;#/components/schemas/Product/properties/ProductVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.ProductName;name;ProductName;product name;#/components/schemas/Product/properties/ProductName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.FinancialInstrumentType;name;FinancialInstrumentType;financial instrument type;#/components/schemas/Product/properties/FinancialInstrumentType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.FinancialInstrumentIdentification;name;FinancialInstrumentIdentification;financial instrument identification;#/components/schemas/Product/properties/FinancialInstrumentIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.FinancialInstrumentName;name;FinancialInstrumentName;financial instrument name;#/components/schemas/Product/properties/FinancialInstrumentName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.FinancialInstrumentDate;name;FinancialInstrumentDate;financial instrument date;#/components/schemas/Product/properties/FinancialInstrumentDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetTitle;name;AssetTitle;asset title;#/components/schemas/Product/properties/AssetTitle;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetIdentification;name;AssetIdentification;asset identification;#/components/schemas/Product/properties/AssetIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetType;name;AssetType;asset type;#/components/schemas/Product/properties/AssetType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetDescription;name;AssetDescription;asset description;#/components/schemas/Product/properties/AssetDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetDescription;description;Description of the asset ;description of the asset;#/components/schemas/Product/properties/AssetDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetStatus;name;AssetStatus;asset status;#/components/schemas/Product/properties/AssetStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetDate;name;AssetDate;asset date;#/components/schemas/Product/properties/AssetDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetClassification;name;AssetClassification;asset classification;#/components/schemas/Product/properties/AssetClassification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetClassification;description;Classification of the asset.(ISO20022);classification of the asset.(iso20022);#/components/schemas/Product/properties/AssetClassification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetClassificationType;name;AssetClassificationType;asset classification type;#/components/schemas/Product/properties/AssetClassificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetSubClassificationType;name;AssetSubClassificationType;asset sub classification type;#/components/schemas/Product/properties/AssetSubClassificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Product.AssetSubClassification;name;AssetSubClassification;asset sub classification;#/components/schemas/Product/properties/AssetSubClassification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Date.DateContent;name;DateContent;date content;#/components/schemas/Date/properties/DateContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Currencycode.Currencycode;name;Currencycode;currencycode;#/components/schemas/Currencycode/properties/Currencycode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Currencycode.Currencycode;description;"A code identifying a currency according to ISO-4217.
+A currency is a system of money in general use in a particular country.
+
+Code allocated to a currency, by a maintenance agency, under an international identification scheme as described in the latest edition of the international standard ISO 4217 ""Codes for the representation of currencies and funds"". Valid currency codes are registered with the ISO 4217 Maintenance Agency, and consist of three contiguous letters. (ISO20022)
+
+";"a code identifying a currency according to iso 4217. a currency is a system of money in general use in a particular country. code allocated to a currency, by a maintenance agency, under an international identification scheme as described in the latest edition of the international standard iso 4217 ""codes for the representation of currencies and funds"". valid currency codes are registered with the iso 4217 maintenance agency, and consist of three contiguous letters. (iso20022)";#/components/schemas/Currencycode/properties/Currencycode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Amounttypevalues;description;">
+* `Principal` - 
+* `Actual` - Actual amount.
+* `Estimated` - Estimated amount (the final amount could be above or below).
+* `Maximum` - Maximum amount (the final amount must be less or equal).
+* `Default` - Default amount.
+* `Replacement` - Replacement amount.
+* `Incremental` - Incremental amount for reservation.
+* `Decremental` - Decremental amount for reservation.
+* `Reserved` - Reserved or updated reserved amount for reservation.
+* `Available` - 
+* `Used` - 
+* `DuePayable` - 
+* `Minimum` - 
+* `Open` - The amount is open.(ISO20022)
+* `Unknown` - The amount is unkown.(ISO20022)
+* `Fixed` - The amount represents a fixed value.(ISO20022)
+";> * `principal` * `actual` actual amount. * `estimated` estimated amount (the final amount could be above or below). * `maximum` maximum amount (the final amount must be less or equal). * `default` default amount. * `replacement` replacement amount. * `incremental` incremental amount for reservation. * `decremental` decremental amount for reservation. * `reserved` reserved or updated reserved amount for reservation. * `available` * `used` * `due payable` * `minimum` * `open` the amount is open.(iso20022) * `unknown` the amount is unkown.(iso20022) * `fixed` the amount represents a fixed value.(iso20022);#/components/schemas/Amounttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Amount.AmountValue;name;AmountValue;amount value;#/components/schemas/Amount/properties/AmountValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Amount.AmountCurrency;name;AmountCurrency;amount currency;#/components/schemas/Amount/properties/AmountCurrency;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Amount.DecimalPointPosition;name;DecimalPointPosition;decimal point position;#/components/schemas/Amount/properties/DecimalPointPosition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Amount.DecimalPointPosition;description;"Decimal point position starts calulating from the right
+";decimal point position starts calulating from the right;#/components/schemas/Amount/properties/DecimalPointPosition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Amount.AmountType;name;AmountType;amount type;#/components/schemas/Amount/properties/AmountType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Arrangementtypevalues;description;">
+* `SweepArrangement` - An arrangement into which is promised for the set-up and execution of structured sweeps to and from the facility to a linked account.
+* `WithdrawalArrangement` - An arrangement into which is promised to deliver Withdraw Service  to take fund out of an account. 
+* `DepositArrangement` - An arrangement into which is promised to deliver Deposit Service  to place funds into an account for safekeeping. 
+* `InterestArrangement` - An arrangement into which is promised to apply a pricing element expressed in a percentage  to a principal amount.
+* `FeeArrangement` - An arrangement into which is promised to apply a charge for services rendered. 
+* `LienArrangement` - An arrangement into which is promised for placing a lien or block on the account for a specified purpose, amount, and period. 
+* `InformationArrangement` - An arrangement concerning the information the bank will provide about the agreement/account
+* `PaymentArrangement` - An arrangement into which is promised to deliver a specific payment service including regular payments, standing orders, direct debits and bill pay instructions. 
+* `EntitlementArrangement` - Right or obligation linked to the involvement of a party in an agreement
+* `PeriodArrangement` - 
+* `CollateralArrangement` - An arrangement into which is promised for handling the oversight of the allocation, valuation and administration of collateral associated with the facility. 
+* `LimitArrangement` - An arrangement to limit something
+e.g., the number of transaction per week, the amount of money allowed to withdraw per week/day and etc. 
+* `AccessArrangement` - An arrangement that allows or restricts the access to a service or product, channel or device through a specific access point
+* `CardPaymentArrangement` - An arrangement into which is promised to deliver Card payment Service to execute payment transactions through a payment card, including online payments. 
+* `StandingOrderArrangement` - An arrangement into which is promised to deliver Standing Order Service to make regular transfers on given dates to a named beneﬁciary. 
+* `OverdraftArrangement` - An arrangement into which is promised to deliver Overdraft Service  that allows fund transfer even if there is no provision on the account. 
+* `RepaymentArrangement` - An arrangement into which is promised for paying back money previously borrowed from a lender. 
+* `StatementArrangement` - An arrangement into which is promised to deliver a reporting service on payment transactions registered on an account. 
+* `CreditTransferArrangement` - An arrangement into which is promised to allow a payer to transfer fund to a beneficiary. 
+* `ProductAndServiceArrangement` - 
+* `FactoringArrangement` - 
+* `RolloverArrangement` - Arrangement stipulating the modalities for an automatic renewal of the agreement
+
+i.e. the replacement of the agreement with a new one without renewed negociation and witout explicit agreement of the customer 
+* `RestructuringArrangement` - 
+* `InsuranceArrangement` - 
+* `CollectionArrangement` - An arrangement into which is promised to collect past-due debts from borrowers
+* `UnderwritingArrangement` - A contractual agreement between parties that commits the underwriter to assuming risk.
+* `TerminationArrangement` - 
+* `MaturityArrangement` - 
+* `AdministrativeArrangement` - 
+";> * `sweep arrangement` an arrangement into which is promised for the set up and execution of structured sweeps to and from the facility to a linked account. * `withdrawal arrangement` an arrangement into which is promised to deliver withdraw service to take fund out of an account. * `deposit arrangement` an arrangement into which is promised to deliver deposit service to place funds into an account for safekeeping. * `interest arrangement` an arrangement into which is promised to apply a pricing element expressed in a percentage to a principal amount. * `fee arrangement` an arrangement into which is promised to apply a charge for services rendered. * `lien arrangement` an arrangement into which is promised for placing a lien or block on the account for a specified purpose, amount, and period. * `information arrangement` an arrangement concerning the information the bank will provide about the agreement account * `payment arrangement` an arrangement into which is promised to deliver a specific payment service including regular payments, standing orders, direct debits and bill pay instructions. * `entitlement arrangement` right or obligation linked to the involvement of a party in an agreement * `period arrangement` * `collateral arrangement` an arrangement into which is promised for handling the oversight of the allocation, valuation and administration of collateral associated with the facility. * `limit arrangement` an arrangement to limit something e.g., the number of transaction per week, the amount of money allowed to withdraw per week day and etc. * `access arrangement` an arrangement that allows or restricts the access to a service or product, channel or device through a specific access point * `card payment arrangement` an arrangement into which is promised to deliver card payment service to execute payment transactions through a payment card, including online payments. * `standing order arrangement` an arrangement into which is promised to deliver standing order service to make regular transfers on given dates to a named beneﬁciary. * `overdraft arrangement` an arrangement into which is promised to deliver overdraft service that allows fund transfer even if there is no provision on the account. * `repayment arrangement` an arrangement into which is promised for paying back money previously borrowed from a lender. * `statement arrangement` an arrangement into which is promised to deliver a reporting service on payment transactions registered on an account. * `credit transfer arrangement` an arrangement into which is promised to allow a payer to transfer fund to a beneficiary. * `product and service arrangement` * `factoring arrangement` * `rollover arrangement` arrangement stipulating the modalities for an automatic renewal of the agreement i.e. the replacement of the agreement with a new one without renewed negociation and witout explicit agreement of the customer * `restructuring arrangement` * `insurance arrangement` * `collection arrangement` an arrangement into which is promised to collect past due debts from borrowers * `underwriting arrangement` a contractual agreement between parties that commits the underwriter to assuming risk. * `termination arrangement` * `maturity arrangement` * `administrative arrangement`;#/components/schemas/Arrangementtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Arrangementstatustypevalues;description;">
+* `Requested` - 
+* `Proposed` - 
+* `Offered` - 
+* `Accepted` - 
+* `Cancelled` - 
+* `Fulfilled` - 
+* `Terminated` - 
+";> * `requested` * `proposed` * `offered` * `accepted` * `cancelled` * `fulfilled` * `terminated`;#/components/schemas/Arrangementstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Arrangementstatus;description;A characteristic of arrangement which refers to the LifecycleStatus of arrangement (e.g., requested, proposed, offered, accepted, cancelled, terminated, fulfilled, etc.);a characteristic of arrangement which refers to the lifecycle status of arrangement (e.g., requested, proposed, offered, accepted, cancelled, terminated, fulfilled, etc.);#/components/schemas/Arrangementstatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Arrangementstatus.ArrangementStatus;name;ArrangementStatus;arrangement status;#/components/schemas/Arrangementstatus/properties/ArrangementStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Arrangementstatus.ArrangementStatusType;name;ArrangementStatusType;arrangement status type;#/components/schemas/Arrangementstatus/properties/ArrangementStatusType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Subject.Subject;name;Subject;subject;#/components/schemas/Subject/properties/Subject;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Subject.Subject;description;A thing that is discussed or dealt whit in agreement/arrangement about doing or not doing (as action) something.;a thing that is discussed or dealt whit in agreement arrangement about doing or not doing (as action) something.;#/components/schemas/Subject/properties/Subject;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;LoanArrangement;description;The proposed loan terms;the proposed loan terms;#/components/schemas/LoanArrangement;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.LoanOriginationDate;name;LoanOriginationDate;loan origination date;#/components/schemas/LoanArrangement/properties/LoanOriginationDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.LoanMaturityDate;name;LoanMaturityDate;loan maturity date;#/components/schemas/LoanArrangement/properties/LoanMaturityDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.LoanEndDate;name;LoanEndDate;loan end date;#/components/schemas/LoanArrangement/properties/LoanEndDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.LoanAmount;name;LoanAmount;loan amount;#/components/schemas/LoanArrangement/properties/LoanAmount;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.LoanArrangementType;name;LoanArrangementType;loan arrangement type;#/components/schemas/LoanArrangement/properties/LoanArrangementType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.ArrangementAction;name;ArrangementAction;arrangement action;#/components/schemas/LoanArrangement/properties/ArrangementAction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.ArrangementStartDate;name;ArrangementStartDate;arrangement start date;#/components/schemas/LoanArrangement/properties/ArrangementStartDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.ArrangementEndDate;name;ArrangementEndDate;arrangement end date;#/components/schemas/LoanArrangement/properties/ArrangementEndDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.ArrangementStatus;name;ArrangementStatus;arrangement status;#/components/schemas/LoanArrangement/properties/ArrangementStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.ArrangementSubjectMatter;name;ArrangementSubjectMatter;arrangement subject matter;#/components/schemas/LoanArrangement/properties/ArrangementSubjectMatter;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.Arrangementtype;name;Arrangementtype;arrangementtype;#/components/schemas/LoanArrangement/properties/Arrangementtype;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;LoanArrangement.ArrangementIdentification;name;ArrangementIdentification;arrangement identification;#/components/schemas/LoanArrangement/properties/ArrangementIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Partyprofiletypevalues;description;">
+* `CommercialProfile` - 
+* `KYCProfile` - 
+* `RiskProfile` - 
+* `FinancialProfile` - 
+";> * `commercial profile` * `kycprofile` * `risk profile` * `financial profile`;#/components/schemas/Partyprofiletypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Partytypevalues;description;">
+* `Person` - Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person'). ISO20022
+* `Organisation` - Organised structure that is set up for a particular purpose. For example, a business, government body, department, charity, or financial institution. ISO20022
+";> * `person` human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person'). iso20022 * `organisation` organised structure that is set up for a particular purpose. for example, a business, government body, department, charity, or financial institution. iso20022;#/components/schemas/Partytypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Partyidentificationtypevalues;description;">
+* `Taxidentificationnumber` - Number assigned by a tax authority to an entity.
+* `Nationalregistrationnumber` - Number assigned by a national registration authority to an entity. In Singapore this is known as the NRIC. (ISO20022)
+* `Registrationauthorityidentification` - An identifier for the Legal Entity in a business registry in the jurisdiction of legal registration, or in the appropriate registration authority. (ISO20022)
+* `LEI(LegalEntityIdentifier)` - 
+* `Alienregistrationnumber` - Number assigned by a government agency to identify foreign nationals.
+* `Passportnumber` - Number assigned by a passport authority.
+* `Taxexemptidentificationnumber` - Number assigned to a tax exempt entity.
+* `Corporateidentification` - Number assigned to a corporate entity.
+* `Driverlicensenumber` - Number assigned to a driver's license.
+* `Foreigninvestmentidentitynumber` - Number assigned to a foreign investor (other than the alien number).
+* `Socialsecuritynumber` - Number assigned by a social security agency.
+* `Identitycardnumber` - Number assigned by a national authority to an identity card.
+* `Concat` - Number assigned by an issuer to identify a customer via the concatenation of the birthdate and characters of the first name and surname.
+* `Nationalregistrationidentificationnumber` - National registration identification number. In Singapore this is known as the NRIC.
+";> * `taxidentificationnumber` number assigned by a tax authority to an entity. * `nationalregistrationnumber` number assigned by a national registration authority to an entity. in singapore this is known as the nric. (iso20022) * `registrationauthorityidentification` an identifier for the legal entity in a business registry in the jurisdiction of legal registration, or in the appropriate registration authority. (iso20022) * `lei(legal entity identifier)` * `alienregistrationnumber` number assigned by a government agency to identify foreign nationals. * `passportnumber` number assigned by a passport authority. * `taxexemptidentificationnumber` number assigned to a tax exempt entity. * `corporateidentification` number assigned to a corporate entity. * `driverlicensenumber` number assigned to a driver's license. * `foreigninvestmentidentitynumber` number assigned to a foreign investor (other than the alien number). * `socialsecuritynumber` number assigned by a social security agency. * `identitycardnumber` number assigned by a national authority to an identity card. * `concat` number assigned by an issuer to identify a customer via the concatenation of the birthdate and characters of the first name and surname. * `nationalregistrationidentificationnumber` national registration identification number. in singapore this is known as the nric.;#/components/schemas/Partyidentificationtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Partyidentification.PartyIdentificationType;name;PartyIdentificationType;party identification type;#/components/schemas/Partyidentification/properties/PartyIdentificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Partyidentification.PartyIdentification;name;PartyIdentification;party identification;#/components/schemas/Partyidentification/properties/PartyIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Partylegalstructuretypevalues;description;">
+* `Individual` - 
+* `CommunityInterestCompany` - 
+* `CharitableIncorporatedOrganisation` - 
+* `Co-Operative` - 
+* `Charity` - 
+* `GeneralPartnership` - 
+* `LimitedLiabilityPartnership` - 
+* `ScottishLimitedPartnership` - 
+* `LimitedPartnership` - 
+* `PrivateLimitedCompany` - 
+* `PublicLimitedCompany` - 
+* `Sole(SoleTrader)` - 
+";> * `individual` * `community interest company` * `charitable incorporated organisation` * `co operative` * `charity` * `general partnership` * `limited liability partnership` * `scottish limited partnership` * `limited partnership` * `private limited company` * `public limited company` * `sole(sole trader)`;#/components/schemas/Partylegalstructuretypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Industrycode;description;Economical activity of Party (ISO20022);economical activity of party (iso20022);#/components/schemas/Industrycode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Industrycode.Industrycode;name;Industrycode;industrycode;#/components/schemas/Industrycode/properties/Industrycode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Industrycode.Industrycode;description;Code to identify economic activities by ISIC (United Nations International Standard Industrial Classification of all Economic Activities).;code to identify economic activities by isic (united nations international standard industrial classification of all economic activities).;#/components/schemas/Industrycode/properties/Industrycode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Party.PartyName;name;PartyName;party name;#/components/schemas/Party/properties/PartyName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Party.PartyType;name;PartyType;party type;#/components/schemas/Party/properties/PartyType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Party.PartyDateTime;name;PartyDateTime;party date time;#/components/schemas/Party/properties/PartyDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Party.PartyIdentification;name;PartyIdentification;party identification;#/components/schemas/Party/properties/PartyIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Party.PartyLegalStructureType;name;PartyLegalStructureType;party legal structure type;#/components/schemas/Party/properties/PartyLegalStructureType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Party.PartyActivityIndicator;name;PartyActivityIndicator;party activity indicator;#/components/schemas/Party/properties/PartyActivityIndicator;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Profile.Profile;name;Profile;profile;#/components/schemas/Profile/properties/Profile;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Profile.Profile;description;A brief description of the characteristics of something or someone. (Business Dictionary);a brief description of the characteristics of something or someone. (business dictionary);#/components/schemas/Profile/properties/Profile;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;PartyProfile;description;Reference details known about the customer;reference details known about the customer;#/components/schemas/PartyProfile;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.PartyProfileType;name;PartyProfileType;party profile type;#/components/schemas/PartyProfile/properties/PartyProfileType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.MoneyLaunderingCheck;name;MoneyLaunderingCheck;money laundering check;#/components/schemas/PartyProfile/properties/MoneyLaunderingCheck;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.MoneyLaunderingCheck;description;Status of an identity check to prevent money laundering. This includes the counter-terrorism check. (ISO20022);status of an identity check to prevent money laundering. this includes the counter terrorism check. (iso20022);#/components/schemas/PartyProfile/properties/MoneyLaunderingCheck;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.CreditRating;name;CreditRating;credit rating;#/components/schemas/PartyProfile/properties/CreditRating;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.RiskLevel;name;RiskLevel;risk level;#/components/schemas/PartyProfile/properties/RiskLevel;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.RiskLevel;description;Specifies the customers money laundering risk. (ISO20022);specifies the customers money laundering risk. (iso20022);#/components/schemas/PartyProfile/properties/RiskLevel;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.DueDiligenceCheck;name;DueDiligenceCheck;due diligence check;#/components/schemas/PartyProfile/properties/DueDiligenceCheck;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.DueDiligenceCheck;description;Specifies the type of due diligence checks carried out on a party. ;specifies the type of due diligence checks carried out on a party.;#/components/schemas/PartyProfile/properties/DueDiligenceCheck;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.SourceOfWealth;name;SourceOfWealth;source of wealth;#/components/schemas/PartyProfile/properties/SourceOfWealth;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.SourceOfWealth;description;Indicates the main sources of the money. (ISO20022);indicates the main sources of the money. (iso20022);#/components/schemas/PartyProfile/properties/SourceOfWealth;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.PartyReference;name;PartyReference;party reference;#/components/schemas/PartyProfile/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;PartyProfile.ProfileReference;name;ProfileReference;profile reference;#/components/schemas/PartyProfile/properties/ProfileReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Productstandardtermandconditiontypevalues;description;">
+* `ProductGeneralTermAndCondition` - A value of Product TermAndCondition Type whereby product general terms and conditions will be defined.
+* `ProductContextSpecificTermAndCondition` - A value of Product TermAndCondition Type whereby product context specific terms and conditions (e.g., regulation, market, sale) will be defined.
+
+* `ProductCombinationTermAndCondition` - Banks often offer product combinations (also called bundled products, composite products, or cross-sell packages)-and these do typically come with their own set of terms and conditions in addition to the standard T&Cs of each individual product.
+
+Eligibility for the Combo
+Customer must meet eligibility for each individual product
+Sometimes limited to specific customer segments (e.g., salaried, NRIs, SMEs)
+
+2)   Bundled Benefits
+Preferential pricing (e.g., discounted interest rate on loan)
+Waiver of certain fees (e.g., annual fee on credit card if salary account is active)
+Linked rewards or loyalty programs
+
+3)   Conditional Benefits
+Benefits may apply only if all products are active
+
+4)  Cross-Product Dependencies
+
+Closure or default of one product (e.g., closing savings account) may:
+Trigger loss of benefit on other products
+Cause re-pricing of interest rates
+Lead to automatic closure or cancellation of linked product(s)
+* `ProductPricingAndFeeTermAndCondition` - Interest rates (fixed/variable; APR for loans)
+
+Fee structure:
+
+Account opening fee
+Maintenance charges
+Prepayment/foreclosure charges
+Processing fees (for loans/credit)
+
+Penalties (e.g., late payment, insufficient funds)
+* `ProductMatchingTermAndCondition` - A Product Matching Condition is a set of predefined eligibility and suitability criteria used to identify and recommend products or bundled offerings that align with a customers profile, needs, and risk tolerance.
+* `ProductEligibilityTermAndCondition` - Minimum age requirement
+Residency/citizenship
+Income/employment conditions (for credit products)
+KYC compliance
+* `ProductRepaymentTermAndCondition` - EMI schedule
+Grace period
+Early payment terms
+Interest calculation method (reducing balance, flat rate)
+* `ProductDocumentationRequiredTermAndCondition` - Proof of identity
+Proof of address
+Income documents (if applicable)
+Product-specific forms
+";"> * `product general term and condition` a value of product term and condition type whereby product general terms and conditions will be defined. * `product context specific term and condition` a value of product term and condition type whereby product context specific terms and conditions (e.g., regulation, market, sale) will be defined. * `product combination term and condition` banks often offer product combinations (also called bundled products, composite products, or cross sell packages) and these do typically come with their own set of terms and conditions in addition to the standard t&cs of each individual product. eligibility for the combo customer must meet eligibility for each individual product sometimes limited to specific customer segments (e.g., salaried, nris, smes) 2) bundled benefits preferential pricing (e.g., discounted interest rate on loan) waiver of certain fees (e.g., annual fee on credit card if salary account is active) linked rewards or loyalty programs 3) conditional benefits benefits may apply only if all products are active 4) cross product dependencies closure or default of one product (e.g., closing savings account) may: trigger loss of benefit on other products cause re pricing of interest rates lead to automatic closure or cancellation of linked product(s) * `product pricing and fee term and condition` interest rates (fixed variable; apr for loans) fee structure: account opening fee maintenance charges prepayment foreclosure charges processing fees (for loans credit) penalties (e.g., late payment, insufficient funds) * `product matching term and condition` a product matching condition is a set of predefined eligibility and suitability criteria used to identify and recommend products or bundled offerings that align with a customers profile, needs, and risk tolerance. * `product eligibility term and condition` minimum age requirement residency citizenship income employment conditions (for credit products) kyc compliance * `product repayment term and condition` emi schedule grace period early payment terms interest calculation method (reducing balance, flat rate) * `product documentation required term and condition` proof of identity proof of address income documents (if applicable) product specific forms";#/components/schemas/Productstandardtermandconditiontypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Producttermandconditiontype.ProductTermAndConditionTypeValues;name;ProductTermAndConditionTypeValues;product term and condition type values;#/components/schemas/Producttermandconditiontype/properties/ProductTermAndConditionTypeValues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Producttermandconditiontype.ProductTermAndConditionTypeName;name;ProductTermAndConditionTypeName;product term and condition type name;#/components/schemas/Producttermandconditiontype/properties/ProductTermAndConditionTypeName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Producttermandconditiontype.ProductTermAndConditionTypeDescription;name;ProductTermAndConditionTypeDescription;product term and condition type description;#/components/schemas/Producttermandconditiontype/properties/ProductTermAndConditionTypeDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Conditionstatustypevalues;description;">
+* `Defined` - Condition is authored or configured
+* `Pending` - Awaiting approval or validation
+* `Activated` - Live and ready for evaluation
+* `Evaluated` - Assessed in context of process or event
+* `Fulfilled` - Condition criteria met
+* `Violated` - Condition criteria not met
+* `Expired` - No longer valid due to time/version limits
+* `Archived` - Retired from use, retained for audit/history
+";> * `defined` condition is authored or configured * `pending` awaiting approval or validation * `activated` live and ready for evaluation * `evaluated` assessed in context of process or event * `fulfilled` condition criteria met * `violated` condition criteria not met * `expired` no longer valid due to time version limits * `archived` retired from use, retained for audit history;#/components/schemas/Conditionstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Termandconditiontypevalues;description;">
+* `CommissionTermAndCondition` - Commission terms for workforce/employee commission processing
+* `LegalTermAndCondition` - Covers the legal considerations of the agreement
+* `RegulatoryTermAndCondition` - Covers the regulatory considerations of the agreement
+* `PolicyTermAndCondition` - Covers the corporate policies and requirements considerations of the agreement
+* `RestrictionTermAndCondition` - Details channel access restrictions for products and services
+* `PreferenceTermAndCondition` - Customer channel/device usage preferences
+* `InvestmentTermAndCondition` - Terms making up the agreement that govern the management of the investment portfolio. Note that there may be many different types of terms and clauses making up the overall policy
+* `MandateTermAndCondition` - Reference to the terms in force for a specific customer for this service provider
+* `OperationalTermAndCondition` - 
+* `ProductTermAndCondition` - 
+* `AgreementTermAndCondition` - 
+* `RelationshipTermAndCondition` - 
+* `ConfidentialTermAndCondition` - 
+";> * `commission term and condition` commission terms for workforce employee commission processing * `legal term and condition` covers the legal considerations of the agreement * `regulatory term and condition` covers the regulatory considerations of the agreement * `policy term and condition` covers the corporate policies and requirements considerations of the agreement * `restriction term and condition` details channel access restrictions for products and services * `preference term and condition` customer channel device usage preferences * `investment term and condition` terms making up the agreement that govern the management of the investment portfolio. note that there may be many different types of terms and clauses making up the overall policy * `mandate term and condition` reference to the terms in force for a specific customer for this service provider * `operational term and condition` * `product term and condition` * `agreement term and condition` * `relationship term and condition` * `confidential term and condition`;#/components/schemas/Termandconditiontypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Featuretypevalues;description;">
+* `FeeFeature` - This refers to the functionality in a system or platform that manages, calculates, or displays fees associated with specific transactions or services.
+* `InterestFeature` - This feature calculates and tracks interest earnings or charges on accounts, loans, or investments over time.
+* `WithdrawalFeature` - The withdraw feature typically refers to an option or functionality that allows users to retrieve or remove something from a system or platform.
+* `DepositFeature` - This refers to a functionality that allows users to add funds to an account or system, often by transferring money from another source.
+* `SweepFeature` - 
+* `LienFeature` - 
+* `PaymentFeature` - This refers to the functionality that facilitates or tracks the transfer of funds for a purchase or settlement of dues.
+* `RepaymentFeature` - This feature facilitates or manages the process of paying back borrowed funds, such as loans, credit card balances, or advances.
+* `LimitFeature` - This feature sets, monitors, or enforces restrictions on the maximum amount that can be accessed, spent, or transacted within a system.
+* `OverdraftFeature` - This functionality allows users to withdraw more money than what is available in their account balance, often up to a predefined limit.
+* `StatementFeature` - The statement feature refers to a functionality in banking, finance, or digital platforms that provides users with a detailed record of their transactions or activities over a specific period.
+* `CurrencyExchangeFeature` - This feature enables users to convert funds from one currency to another at prevailing exchange rates, often within financial or payment platforms.
+* `PriceFeature` - This feature involves displaying or managing the price of goods, services, or financial instruments within a platform.
+";> * `fee feature` this refers to the functionality in a system or platform that manages, calculates, or displays fees associated with specific transactions or services. * `interest feature` this feature calculates and tracks interest earnings or charges on accounts, loans, or investments over time. * `withdrawal feature` the withdraw feature typically refers to an option or functionality that allows users to retrieve or remove something from a system or platform. * `deposit feature` this refers to a functionality that allows users to add funds to an account or system, often by transferring money from another source. * `sweep feature` * `lien feature` * `payment feature` this refers to the functionality that facilitates or tracks the transfer of funds for a purchase or settlement of dues. * `repayment feature` this feature facilitates or manages the process of paying back borrowed funds, such as loans, credit card balances, or advances. * `limit feature` this feature sets, monitors, or enforces restrictions on the maximum amount that can be accessed, spent, or transacted within a system. * `overdraft feature` this functionality allows users to withdraw more money than what is available in their account balance, often up to a predefined limit. * `statement feature` the statement feature refers to a functionality in banking, finance, or digital platforms that provides users with a detailed record of their transactions or activities over a specific period. * `currency exchange feature` this feature enables users to convert funds from one currency to another at prevailing exchange rates, often within financial or payment platforms. * `price feature` this feature involves displaying or managing the price of goods, services, or financial instruments within a platform.;#/components/schemas/Featuretypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.ConditionIdentification;name;ConditionIdentification;condition identification;#/components/schemas/Condition/properties/ConditionIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.ConditionName;name;ConditionName;condition name;#/components/schemas/Condition/properties/ConditionName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.ConditionValidityPeriod;name;ConditionValidityPeriod;condition validity period;#/components/schemas/Condition/properties/ConditionValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.ConditionDateAndTime;name;ConditionDateAndTime;condition date and time;#/components/schemas/Condition/properties/ConditionDateAndTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.ConditionStatus;name;ConditionStatus;condition status;#/components/schemas/Condition/properties/ConditionStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.ConditionDescription;name;ConditionDescription;condition description;#/components/schemas/Condition/properties/ConditionDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.ConditionType;name;ConditionType;condition type;#/components/schemas/Condition/properties/ConditionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.FeatureType;name;FeatureType;feature type;#/components/schemas/Condition/properties/FeatureType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.FeatureIdentification;name;FeatureIdentification;feature identification;#/components/schemas/Condition/properties/FeatureIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.FeatureName;name;FeatureName;feature name;#/components/schemas/Condition/properties/FeatureName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.FeatureLifecycleStatus;name;FeatureLifecycleStatus;feature lifecycle status;#/components/schemas/Condition/properties/FeatureLifecycleStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Condition.FeatureDescription;name;FeatureDescription;feature description;#/components/schemas/Condition/properties/FeatureDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Productfeaturetypevalues;description;">
+* `Bankingservice` - A classification that distinguishes between instances of product features according to the core banking services, functionality and/or objectives of banking.
+
+e.g. deposit services, exchange services, etc.
+
+The primary reason for the contract with the client are the banking services. These services can be classified as follows:
+1. Selling services
+2. Financial Instruments Exchange
+3. Financial Stock Management
+4. Financial Transfers
+5. Financial Risk Transfer
+6. Business Operating
+7. Advisory
+8. Reporting
+
+
+* `Administrationservice` - A classification that distinguishes between instances of product features according to administrative tasks related to the Banking Product or Service.
+* `Accessservice` - A classification that distinguishes between product features according to way of the banking services can be accessed.
+
+The access to services becomes more and more important in the evolving markets. 
+We need to separate different parts:
+1. The physical access to the infrastructure that allows access to the bank (where)
+2. The authorization of different parties to use the services of the bank (who)
+3. The agreed procedure to have access to different services (how)
+4. The services that are available for the different parties (what)
+
+* `Pricefeature` - A classification that distinguishes between instances of product features according to the cost/profit that is related to Banking Products or Services.
+
+In all commercial offerings, there is an agreed cost for both parties (e.g. the interest arrangements are in both directions). The pricing structure of products or packages is a service that gives the possibility to the client to adapt his costs to his individual situation.
+We see different generic categories in the pricing structure of the different products.
+1. Compensations
+2. Prices
+3. Fees
+4. Discounts
+";> * `bankingservice` a classification that distinguishes between instances of product features according to the core banking services, functionality and or objectives of banking. e.g. deposit services, exchange services, etc. the primary reason for the contract with the client are the banking services. these services can be classified as follows: 1. selling services 2. financial instruments exchange 3. financial stock management 4. financial transfers 5. financial risk transfer 6. business operating 7. advisory 8. reporting * `administrationservice` a classification that distinguishes between instances of product features according to administrative tasks related to the banking product or service. * `accessservice` a classification that distinguishes between product features according to way of the banking services can be accessed. the access to services becomes more and more important in the evolving markets. we need to separate different parts: 1. the physical access to the infrastructure that allows access to the bank (where) 2. the authorization of different parties to use the services of the bank (who) 3. the agreed procedure to have access to different services (how) 4. the services that are available for the different parties (what) * `pricefeature` a classification that distinguishes between instances of product features according to the cost profit that is related to banking products or services. in all commercial offerings, there is an agreed cost for both parties (e.g. the interest arrangements are in both directions). the pricing structure of products or packages is a service that gives the possibility to the client to adapt his costs to his individual situation. we see different generic categories in the pricing structure of the different products. 1. compensations 2. prices 3. fees 4. discounts;#/components/schemas/Productfeaturetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;ProductTermAndCondition;description;Definition of the terms under which the customer eligible for the loan;definition of the terms under which the customer eligible for the loan;#/components/schemas/ProductTermAndCondition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;ProductTermAndCondition.ProductTermAndConditionType;name;ProductTermAndConditionType;product term and condition type;#/components/schemas/ProductTermAndCondition/properties/ProductTermAndConditionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;ProductTermAndCondition.ConditionReference;name;ConditionReference;condition reference;#/components/schemas/ProductTermAndCondition/properties/ConditionReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;ProductTermAndCondition.ProductReference;name;ProductReference;product reference;#/components/schemas/ProductTermAndCondition/properties/ProductReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;ProductTermAndCondition.ProductFeatureType;name;ProductFeatureType;product feature type;#/components/schemas/ProductTermAndCondition/properties/ProductFeatureType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;ProductTermAndCondition.ProductFeatureSpecification;name;ProductFeatureSpecification;product feature specification;#/components/schemas/ProductTermAndCondition/properties/ProductFeatureSpecification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;ProductTermAndCondition.ProductFeatureIdentification;name;ProductFeatureIdentification;product feature identification;#/components/schemas/ProductTermAndCondition/properties/ProductFeatureIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;ProductTermAndCondition.ProductFeatureName;name;ProductFeatureName;product feature name;#/components/schemas/ProductTermAndCondition/properties/ProductFeatureName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;ProductTermAndCondition.ProductFeatureLifecycleStatus;name;ProductFeatureLifecycleStatus;product feature lifecycle status;#/components/schemas/ProductTermAndCondition/properties/ProductFeatureLifecycleStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Reporttypevalues;description;">
+* `FinancialReport` - 
+* `BusinessReport` - 
+* `ManagementReport` - 
+* `Statement` - 
+* `MaintenanceReport` - 
+* `RegulatoryReport` - 
+* `TaxReport` - 
+* `AnalysisReport` - 
+";> * `financial report` * `business report` * `management report` * `statement` * `maintenance report` * `regulatory report` * `tax report` * `analysis report`;#/components/schemas/Reporttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Report;description;The customer's employment record;the customer's employment record;#/components/schemas/Report;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Report.ReportType;name;ReportType;report type;#/components/schemas/Report/properties/ReportType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Report.ReportValidityPeriod;name;ReportValidityPeriod;report validity period;#/components/schemas/Report/properties/ReportValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Report.ReportVersion;name;ReportVersion;report version;#/components/schemas/Report/properties/ReportVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Report.ReportDateTime;name;ReportDateTime;report date time;#/components/schemas/Report/properties/ReportDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Report.ReportFormat;name;ReportFormat;report format;#/components/schemas/Report/properties/ReportFormat;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;CustomerStatement;description;The customers historical income statement (for individuals);the customers historical income statement (for individuals);#/components/schemas/CustomerStatement;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerStatement.CustomerStatementType;name;CustomerStatementType;customer statement type;#/components/schemas/CustomerStatement/properties/CustomerStatementType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Assessmenttypevalues;description;">
+* `Valuation` - 
+* `Matching` - 
+* `Authorization` - An evaluation whether a party or system is allowed to do something.
+
+The consent given by a participant (or a third party acting on behalf of that participant) in order to transfer funds or securities. (ECB)
+
+Authorization is a mechanism by which a computer system determines whether to allow or deny specific action to a user. Authorization is often controlled by rather complex rules and algorithms, usually specified as part of an access control model. Authorization often follows (and required) authentication, however, authentication and authorization are two separate mechanisms. In rare cases, ""authorization"" is understood as a process of allowing access, granting permissions or giving approval. Such as ""authorization"" of a request to join a group. (ISO/IEC 24760-1:2019 - IT Security and Privacy)
+* `Authentication` - An evaluation whether a party or system is what it claims to be.
+
+A security mechanism for verifying: 1) the identity of an individual or other entity (including verification by means of a computer or computer application); and 2) the level of authority of that person or entity (i.e. the ability of that person or entity to perform specific tasks or activities). (ECB)
+
+Authentication is a mechanism by which a computer system checks that the user is really the one she or he claims to be. Authentication can be implemented by a broad variety of mechanisms broadly divided into three categories: something you know, something you have, something you are. Traditionally, authentication is done by the means of by username and password. Authentication is often followed by authorization, however, authentication and authorization are two separate mechanisms. (ISO/IEC 24760-1:2019 - IT Security and Privacy)
+* `QualityAssurance` - 
+* `Audit` - 
+* `ComplianceCheck` - 
+* `FundingCheck` - 
+* `SuitabilityCheck` - 
+* `PerformanceCheck` - 
+* `ImpactAssessment` - 
+* `RiskAssessment` - 
+* `Rating` - 
+* `UnderwritingAssessment` - 
+* `Qualification` - 
+* `Verification` - A process establishing that a particular information is correct, while the meaning of ""information"" and ""correct"" varies from context to context. When dealing with identity information, this usually means formal verification of identity attributes, checking the schema, identifier uniqueness and referential integrity. However, verification may mean deeper verification, such as checking that the information is true and up-to-date.  (ISO/IEC 24760-1:2019 - IT Security and Privacy)
+
+* `KYCAssessment` - An assessment conducted by businesses and financial institutions to verify and confirm the identity of their customers or clients. The primary purpose of a KYC check is to prevent illegal activities, such as money laundering, terrorist financing, and fraud, by ensuring that customers are who they claim to be.
+* `PEPAssessment` - A PEP check, or ""Politically Exposed Person"" check, is an assessment conducted by used by businesses, financial institutions, and government agencies to identify individuals who hold prominent public positions or have significant political influence. The purpose of a PEP check is to assess and manage the potential risks associated with doing business with these individuals, as they may be more susceptible to corruption, money laundering, or other illicit activities.
+* `AMLAssessment` - An AML (Anti-Money Laundering) check is an assessment conducted by businesses, financial institutions, and other organizations to prevent and detect money laundering and the financing of criminal activities. The main purpose of an AML check is to ensure that financial transactions and business relationships are not being used to disguise the illegal origins of funds.
+* `EligibilityCheck` - Determines whether a person or case meets the criteria or preconditions to qualify for a benefit, service, or action.
+* `ExternalAgencyCheck` - 
+* `EntitlementCheck` - Determines what benefit, amount, or service the person is actually entitled to receive once eligibility is confirmed.
+";"> * `valuation` * `matching` * `authorization` an evaluation whether a party or system is allowed to do something. the consent given by a participant (or a third party acting on behalf of that participant) in order to transfer funds or securities. (ecb) authorization is a mechanism by which a computer system determines whether to allow or deny specific action to a user. authorization is often controlled by rather complex rules and algorithms, usually specified as part of an access control model. authorization often follows (and required) authentication, however, authentication and authorization are two separate mechanisms. in rare cases, ""authorization"" is understood as a process of allowing access, granting permissions or giving approval. such as ""authorization"" of a request to join a group. (iso iec 24760 1:2019 it security and privacy) * `authentication` an evaluation whether a party or system is what it claims to be. a security mechanism for verifying: 1) the identity of an individual or other entity (including verification by means of a computer or computer application); and 2) the level of authority of that person or entity (i.e. the ability of that person or entity to perform specific tasks or activities). (ecb) authentication is a mechanism by which a computer system checks that the user is really the one she or he claims to be. authentication can be implemented by a broad variety of mechanisms broadly divided into three categories: something you know, something you have, something you are. traditionally, authentication is done by the means of by username and password. authentication is often followed by authorization, however, authentication and authorization are two separate mechanisms. (iso iec 24760 1:2019 it security and privacy) * `quality assurance` * `audit` * `compliance check` * `funding check` * `suitability check` * `performance check` * `impact assessment` * `risk assessment` * `rating` * `underwriting assessment` * `qualification` * `verification` a process establishing that a particular information is correct, while the meaning of ""information"" and ""correct"" varies from context to context. when dealing with identity information, this usually means formal verification of identity attributes, checking the schema, identifier uniqueness and referential integrity. however, verification may mean deeper verification, such as checking that the information is true and up to date. (iso iec 24760 1:2019 it security and privacy) * `kycassessment` an assessment conducted by businesses and financial institutions to verify and confirm the identity of their customers or clients. the primary purpose of a kyc check is to prevent illegal activities, such as money laundering, terrorist financing, and fraud, by ensuring that customers are who they claim to be. * `pepassessment` a pep check, or ""politically exposed person"" check, is an assessment conducted by used by businesses, financial institutions, and government agencies to identify individuals who hold prominent public positions or have significant political influence. the purpose of a pep check is to assess and manage the potential risks associated with doing business with these individuals, as they may be more susceptible to corruption, money laundering, or other illicit activities. * `amlassessment` an aml (anti money laundering) check is an assessment conducted by businesses, financial institutions, and other organizations to prevent and detect money laundering and the financing of criminal activities. the main purpose of an aml check is to ensure that financial transactions and business relationships are not being used to disguise the illegal origins of funds. * `eligibility check` determines whether a person or case meets the criteria or preconditions to qualify for a benefit, service, or action. * `external agency check` * `entitlement check` determines what benefit, amount, or service the person is actually entitled to receive once eligibility is confirmed.";#/components/schemas/Assessmenttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Schedule.ScheduleType;name;ScheduleType;schedule type;#/components/schemas/Schedule/properties/ScheduleType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Model.ModelType;name;ModelType;model type;#/components/schemas/Model/properties/ModelType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Model.ModelType;description;The type or category of model  ;the type or category of model;#/components/schemas/Model/properties/ModelType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Model.ModelPurpose;name;ModelPurpose;model purpose;#/components/schemas/Model/properties/ModelPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Model.ModelPurpose;description;A description of the model that clarifies the intended analysis/insights provided;a description of the model that clarifies the intended analysis insights provided;#/components/schemas/Model/properties/ModelPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Model.ModelVersion;name;ModelVersion;model version;#/components/schemas/Model/properties/ModelVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Model.ModelName;name;ModelName;model name;#/components/schemas/Model/properties/ModelName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Model.ModelDateAndTime;name;ModelDateAndTime;model date and time;#/components/schemas/Model/properties/ModelDateAndTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Model.ModelStatus;name;ModelStatus;model status;#/components/schemas/Model/properties/ModelStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;CustomerCreditRatingAssessment;description;Reference to the bank's credit assessment of the customer;reference to the bank's credit assessment of the customer;#/components/schemas/CustomerCreditRatingAssessment;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.CreditRatingAssessmentType;name;CreditRatingAssessmentType;credit rating assessment type;#/components/schemas/CustomerCreditRatingAssessment/properties/CreditRatingAssessmentType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentType;name;AssessmentType;assessment type;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentMethod;name;AssessmentMethod;assessment method;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentMethod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentSchedule;name;AssessmentSchedule;assessment schedule;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentSchedule;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentDescription;name;AssessmentDescription;assessment description;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentModel;name;AssessmentModel;assessment model;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentModel;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentDateTime;name;AssessmentDateTime;assessment date time;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentResult;name;AssessmentResult;assessment result;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentSupportingDocument;name;AssessmentSupportingDocument;assessment supporting document;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentSupportingDocument;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentRepresentingDocument;name;AssessmentRepresentingDocument;assessment representing document;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentRepresentingDocument;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentRequiredAdjustment;name;AssessmentRequiredAdjustment;assessment required adjustment;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentRequiredAdjustment;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentRequiredAdjustment;description;Change that the assessment reveals is needed.;change that the assessment reveals is needed.;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentRequiredAdjustment;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentRequirement;name;AssessmentRequirement;assessment requirement;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentRequirement;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentExpiryDate;name;AssessmentExpiryDate;assessment expiry date;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentExpiryDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentStatus;name;AssessmentStatus;assessment status;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CustomerCreditRatingAssessment.AssessmentIdentification;name;AssessmentIdentification;assessment identification;#/components/schemas/CustomerCreditRatingAssessment/properties/AssessmentIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Collateraltypevalues;description;">
+* `Letterofcredit` - Instrument issued by a bank substituting its name and credit standing for that of its customer. A letter of credit is a written undertaking of the bank, issued for the account of a customer (the applicant), to honour a demand for payment, upon the beneficiary's compliance with the terms and conditions set forth in the undertaking.
+* `Cash` - Collateral type is cash.
+* `Securities` - Collateral type is securities.
+* `Physicalentities` - Collateral type are physical entities, for example, airplanes for debt issued by the airline industry.
+* `Insurance` - Collateral type is an insurance contract.
+* `Stockcertificate` - Collateral type is stock certificates.
+* `Bond` - Collateral type is bonds.
+* `Bankguarantee` - Collateral type is a bank guarantee.
+* `Other` - Other assets that could be used as collateral.
+* `Commodity` - Collateral type is commodities.
+* `Automobile` - Collateral type is automobile.
+* `Industrialvehicle` - Collateral type is industrial vehicle.
+* `Commercialtruck` - Collateral type is commercial track.
+* `Railvehicle` - Collateral type is rail vehicle.
+* `Nauticalcommercialvehicle` - Collateral type is nautical commercial vehicle.
+* `Nauticalleisurevehicle` - Collateral type is nautical leisure vehicle.
+* `Aeroplane` - Collateral type is aeroplane.
+* `Machinetool` - Collateral type is machine.
+* `Industrialequipment` - Collateral type is industrial equipment.
+* `Officeequipment` - Collateral type is office equipment.
+* `Itequipment` - Collateral type is IT equipment.
+* `Medicalequipment` - Collateral type is medical equipment.
+* `Energyrelatedequipment` - Collateral type is energy related equipment.
+* `Commercialbuilding` - Collateral type is commercial building.
+";> * `letterofcredit` instrument issued by a bank substituting its name and credit standing for that of its customer. a letter of credit is a written undertaking of the bank, issued for the account of a customer (the applicant), to honour a demand for payment, upon the beneficiary's compliance with the terms and conditions set forth in the undertaking. * `cash` collateral type is cash. * `securities` collateral type is securities. * `physicalentities` collateral type are physical entities, for example, airplanes for debt issued by the airline industry. * `insurance` collateral type is an insurance contract. * `stockcertificate` collateral type is stock certificates. * `bond` collateral type is bonds. * `bankguarantee` collateral type is a bank guarantee. * `other` other assets that could be used as collateral. * `commodity` collateral type is commodities. * `automobile` collateral type is automobile. * `industrialvehicle` collateral type is industrial vehicle. * `commercialtruck` collateral type is commercial track. * `railvehicle` collateral type is rail vehicle. * `nauticalcommercialvehicle` collateral type is nautical commercial vehicle. * `nauticalleisurevehicle` collateral type is nautical leisure vehicle. * `aeroplane` collateral type is aeroplane. * `machinetool` collateral type is machine. * `industrialequipment` collateral type is industrial equipment. * `officeequipment` collateral type is office equipment. * `itequipment` collateral type is it equipment. * `medicalequipment` collateral type is medical equipment. * `energyrelatedequipment` collateral type is energy related equipment. * `commercialbuilding` collateral type is commercial building.;#/components/schemas/Collateraltypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Collateralassetstatustypevalues;description;">
+* `Offered` - 
+* `UnderAssessment` - 
+* `Transferred` - 
+* `Allocated` - 
+* `FreeForAllocation` - 
+* `AllocatedToAnotherLoan` - 
+* `IssuedForExecution` - 
+";> * `offered` * `under assessment` * `transferred` * `allocated` * `free for allocation` * `allocated to another loan` * `issued for execution`;#/components/schemas/Collateralassetstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;CollateralAsset;description;Reference to the customers collateral holdings that are available;reference to the customers collateral holdings that are available;#/components/schemas/CollateralAsset;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.CollateralAssetIdentification;name;CollateralAssetIdentification;collateral asset identification;#/components/schemas/CollateralAsset/properties/CollateralAssetIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.CollateralAssetType;name;CollateralAssetType;collateral asset type;#/components/schemas/CollateralAsset/properties/CollateralAssetType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.CollateralAssetStatus;name;CollateralAssetStatus;collateral asset status;#/components/schemas/CollateralAsset/properties/CollateralAssetStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetTitle;name;AssetTitle;asset title;#/components/schemas/CollateralAsset/properties/AssetTitle;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetIdentification;name;AssetIdentification;asset identification;#/components/schemas/CollateralAsset/properties/AssetIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetType;name;AssetType;asset type;#/components/schemas/CollateralAsset/properties/AssetType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetDescription;name;AssetDescription;asset description;#/components/schemas/CollateralAsset/properties/AssetDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetDescription;description;Description of the asset ;description of the asset;#/components/schemas/CollateralAsset/properties/AssetDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetStatus;name;AssetStatus;asset status;#/components/schemas/CollateralAsset/properties/AssetStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetDate;name;AssetDate;asset date;#/components/schemas/CollateralAsset/properties/AssetDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetClassification;name;AssetClassification;asset classification;#/components/schemas/CollateralAsset/properties/AssetClassification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetClassification;description;Classification of the asset.(ISO20022);classification of the asset.(iso20022);#/components/schemas/CollateralAsset/properties/AssetClassification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetClassificationType;name;AssetClassificationType;asset classification type;#/components/schemas/CollateralAsset/properties/AssetClassificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetSubClassificationType;name;AssetSubClassificationType;asset sub classification type;#/components/schemas/CollateralAsset/properties/AssetSubClassificationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAsset.AssetSubClassification;name;AssetSubClassification;asset sub classification;#/components/schemas/CollateralAsset/properties/AssetSubClassification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Rate.RateValue;name;RateValue;rate value;#/components/schemas/Rate/properties/RateValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Rate.RateUnit;name;RateUnit;rate unit;#/components/schemas/Rate/properties/RateUnit;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Rate.RateUnit;description;"The unit of measure like Percentage or BPS
+
+Basis points (BPS) refers to a common unit of measure for interest rates and other percentages in finance.";the unit of measure like percentage or bps basis points (bps) refers to a common unit of measure for interest rates and other percentages in finance.;#/components/schemas/Rate/properties/RateUnit;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Rate.RatePeriod;name;RatePeriod;rate period;#/components/schemas/Rate/properties/RatePeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Rate.RateCapitalUnit;name;RateCapitalUnit;rate capital unit;#/components/schemas/Rate/properties/RateCapitalUnit;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;CollateralAssetValuation;description;The valuation of the collateral (applying the required loan to asset ratio);the valuation of the collateral (applying the required loan to asset ratio);#/components/schemas/CollateralAssetValuation;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.CollateralAssetValuationStatus;name;CollateralAssetValuationStatus;collateral asset valuation status;#/components/schemas/CollateralAssetValuation/properties/CollateralAssetValuationStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.CollateralAssetValuationDate;name;CollateralAssetValuationDate;collateral asset valuation date;#/components/schemas/CollateralAssetValuation/properties/CollateralAssetValuationDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.CollateralAssetValuationAmount;name;CollateralAssetValuationAmount;collateral asset valuation amount;#/components/schemas/CollateralAssetValuation/properties/CollateralAssetValuationAmount;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.CollateralAssetValuationCurrency;name;CollateralAssetValuationCurrency;collateral asset valuation currency;#/components/schemas/CollateralAssetValuation/properties/CollateralAssetValuationCurrency;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValue;name;AssetValue;asset value;#/components/schemas/CollateralAssetValuation/properties/AssetValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValue;description;A value of some value aspect of an Asset. ;a value of some value aspect of an asset.;#/components/schemas/CollateralAssetValuation/properties/AssetValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValueType;name;AssetValueType;asset value type;#/components/schemas/CollateralAssetValuation/properties/AssetValueType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValueType;description;"reference to the type of value expressed in the valuation.
+this can be ratio, qualifier, amounts, etc.";reference to the type of value expressed in the valuation. this can be ratio, qualifier, amounts, etc.;#/components/schemas/CollateralAssetValuation/properties/AssetValueType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValuationType;name;AssetValuationType;asset valuation type;#/components/schemas/CollateralAssetValuation/properties/AssetValuationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValuationType;description;"Type of a particular valuation. Possible types are ad hoc-external valuer, ad hoc-internal valuer, scheduö
+led external valuer, scheduled internal valuer";type of a particular valuation. possible types are ad hoc external valuer, ad hoc internal valuer, scheduö led external valuer, scheduled internal valuer;#/components/schemas/CollateralAssetValuation/properties/AssetValuationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValuationDate;name;AssetValuationDate;asset valuation date;#/components/schemas/CollateralAssetValuation/properties/AssetValuationDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValuationRate;name;AssetValuationRate;asset valuation rate;#/components/schemas/CollateralAssetValuation/properties/AssetValuationRate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValuationStatus;name;AssetValuationStatus;asset valuation status;#/components/schemas/CollateralAssetValuation/properties/AssetValuationStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AssetValuationValidityPeriod;name;AssetValuationValidityPeriod;asset valuation validity period;#/components/schemas/CollateralAssetValuation/properties/AssetValuationValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;CollateralAssetValuation.AsseValuationAmount;name;AsseValuationAmount;asse valuation amount;#/components/schemas/CollateralAssetValuation/properties/AsseValuationAmount;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;UnderwritingAssessment;description;Details of the underwriting decision;details of the underwriting decision;#/components/schemas/UnderwritingAssessment;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.UnderwritingAssessmentIdentifier;name;UnderwritingAssessmentIdentifier;underwriting assessment identifier;#/components/schemas/UnderwritingAssessment/properties/UnderwritingAssessmentIdentifier;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentType;name;AssessmentType;assessment type;#/components/schemas/UnderwritingAssessment/properties/AssessmentType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentMethod;name;AssessmentMethod;assessment method;#/components/schemas/UnderwritingAssessment/properties/AssessmentMethod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentSchedule;name;AssessmentSchedule;assessment schedule;#/components/schemas/UnderwritingAssessment/properties/AssessmentSchedule;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentDescription;name;AssessmentDescription;assessment description;#/components/schemas/UnderwritingAssessment/properties/AssessmentDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentModel;name;AssessmentModel;assessment model;#/components/schemas/UnderwritingAssessment/properties/AssessmentModel;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentDateTime;name;AssessmentDateTime;assessment date time;#/components/schemas/UnderwritingAssessment/properties/AssessmentDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentResult;name;AssessmentResult;assessment result;#/components/schemas/UnderwritingAssessment/properties/AssessmentResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentSupportingDocument;name;AssessmentSupportingDocument;assessment supporting document;#/components/schemas/UnderwritingAssessment/properties/AssessmentSupportingDocument;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentRepresentingDocument;name;AssessmentRepresentingDocument;assessment representing document;#/components/schemas/UnderwritingAssessment/properties/AssessmentRepresentingDocument;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentRequiredAdjustment;name;AssessmentRequiredAdjustment;assessment required adjustment;#/components/schemas/UnderwritingAssessment/properties/AssessmentRequiredAdjustment;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentRequiredAdjustment;description;Change that the assessment reveals is needed.;change that the assessment reveals is needed.;#/components/schemas/UnderwritingAssessment/properties/AssessmentRequiredAdjustment;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentRequirement;name;AssessmentRequirement;assessment requirement;#/components/schemas/UnderwritingAssessment/properties/AssessmentRequirement;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentExpiryDate;name;AssessmentExpiryDate;assessment expiry date;#/components/schemas/UnderwritingAssessment/properties/AssessmentExpiryDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentStatus;name;AssessmentStatus;assessment status;#/components/schemas/UnderwritingAssessment/properties/AssessmentStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;UnderwritingAssessment.AssessmentIdentification;name;AssessmentIdentification;assessment identification;#/components/schemas/UnderwritingAssessment/properties/AssessmentIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Workproducttypevalues;description;">
+* `Document` - 
+* `WorkingPaper` - 
+* `ActivityLog` - 
+* `Form` - 
+* `File` - File of consolidated notes, evaluations and recommendations for the work task
+* `MeetingSchedule` - 
+* `MeetingMinute` - 
+";> * `document` * `working paper` * `activity log` * `form` * `file` file of consolidated notes, evaluations and recommendations for the work task * `meeting schedule` * `meeting minute`;#/components/schemas/Workproducttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;schema;Workproduct;description;Work documentation, forms and schedules produced and referenced during the task;work documentation, forms and schedules produced and referenced during the task;#/components/schemas/Workproduct;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Workproduct.WorkProductType;name;WorkProductType;work product type;#/components/schemas/Workproduct/properties/WorkProductType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml
+BIAN;Underwriting.yaml;property;Workproduct.WorkProductIdentifoication;name;WorkProductIdentifoication;work product identifoication;#/components/schemas/Workproduct/properties/WorkProductIdentifoication;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/Underwriting.yaml

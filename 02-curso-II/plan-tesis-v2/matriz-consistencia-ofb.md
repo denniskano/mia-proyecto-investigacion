@@ -8,7 +8,7 @@
 **Título del estudio:** Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN, mediante análisis estructural y similitud semántica.
 
 **Objetivo general (se copia en la Fase 1; las demás filas indican cómo contribuyen):**  
-Calcular, sobre cada instancia `contrato OpenAPI bancario × Service Domain BIAN`, el AlignmentScore ∈ [0, 1] y la clasificación (Alta / Media / Baja / Nula), mediante S, E y C. En este curso la verificación se hace sobre el corpus piloto (38 APIs OFB + 3 SD BIAN v14).
+Calcular, sobre cada instancia `contrato OpenAPI bancario × Service Domain BIAN`, el AlignmentScore ∈ [0, 1] y la clasificación (Alta / Media / Baja / Nula), mediante S, E y C. En este curso la verificación se hace sobre el corpus piloto (38 APIs OFB + 258 SD BIAN v14; score oficial = I1–I6).
 
 ---
 
@@ -34,9 +34,9 @@ Calcular, sobre cada instancia `contrato OpenAPI bancario × Service Domain BIAN
 | **3. OE** | **OE1** — Adquirir YAML OFB y BIAN versionados y normalizarlos (parser → CSV). |
 | **4. Hipótesis** | **H1:** la normalización habilita el cálculo sistemático de S, E y C. *(piloto: soportada a nivel de extracción)* |
 | **5. Variables** | VI: esquema intermedio tabular. **VD ratio OE1:** completitud (extraídos/esperados). Control: versiones congeladas. |
-| **6. Metodología** | Fase 2. Universo: 38 APIs OFB + 3 SD. Muestra: 7 instancias (I1–I6, I3 desdoblada). |
+| **6. Metodología** | Fase 2. Universo: 38 APIs OFB + 258 SD. Muestra oficial: 7 instancias (I1–I6, I3 desdoblada). |
 | **7. Técnicas** | `procesar_openapi.py`; OpenAPI 3.x; `$ref` anidados; metadatos `{OFB\|BIAN}_{api}_{versión}`. |
-| **8. Resultados** | 41 contratos, 235 ops, 6 746 props, 10 906 textos; informe de completitud por contrato. |
+| **8. Resultados** | 296 contratos, 4 740 ops, 67 388 props, 100 328 textos; OE1 296/296 firmado. |
 
 ## Fase 3 — OE2 Emparejar estructuras
 

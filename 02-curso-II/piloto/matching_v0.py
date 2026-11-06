@@ -672,7 +672,9 @@ def informe_md(oe1: dict, scores: list[dict]) -> str:
         f"| OE1 firmado (ops/schemas = 1.00) | {'Sí' if oe1['todos_firmados'] else 'No'} |",
         "| Matching v0 I1 e I4 (mínimo P4) | Sí |",
         "| Scores v0 de las 7 instancias (baseline léxico) | Sí |",
-        "| Embeddings + sensibilidad de umbral S (semana 11) | Pendiente |",
+        "| Catálogo BIAN v14 (258 OpenAPI oficiales) | Sí |",
+        "| Mapa extra OFB → SD oficial (sin inventar SD) | Sí (`catalogo/`) |",
+        "| Embeddings MiniLM sobre pares OE2 de I1–I6 | Sí (`matching_s1/`) |",
         "| Discusión P5 / borrador P7 | Pendiente (tesis, no piloto) |",
         "",
         "## OE1 — completitud",
@@ -688,9 +690,13 @@ def informe_md(oe1: dict, scores: list[dict]) -> str:
         "OFB_payments_4.0.0.yml",
         "OFB_automatic-payments_2.0.0.yml",
         "OFB_enrollments_2.1.0.yml",
+        "OFB_loans_2.5.0.yml",
+        "OFB_credit-cards_2.3.1.yml",
         "SavingsAccount.yaml",
         "CurrentAccount.yaml",
         "PaymentOrderInitiation.yaml",
+        "Loan.yaml",
+        "CreditCard.yaml",
     }
     for r in oe1["detalle"]:
         mark = "sí" if r["firmado"] else "NO"
@@ -704,7 +710,8 @@ def informe_md(oe1: dict, scores: list[dict]) -> str:
     lines += [
         "",
         f"Inventario completo: **{n_ok}/{oe1['contratos']}** YAML firmados "
-        f"(incluye las 33 APIs OFB que solo entran al inventario, no al AlignmentScore).",
+        f"(38 OFB + 258 Service Domains BIAN v14). I1–I6 no se reemplazan; "
+        f"el resto de OFB se mapea a un SD oficial (`resultado/matching/catalogo/`).",
         "",
         "## Scores v0",
         "",
@@ -722,13 +729,29 @@ def informe_md(oe1: dict, scores: list[dict]) -> str:
         "El nivel **Nula/Baja no invalida** el piloto: valida que el score es computable, "
         "interpretable y sin leakage. C bajo en cuentas es hallazgo (pocos GET OFB vs 1 CR + varios BQ). "
         "I6 en 0 pares es hallazgo: enrollments/FIDO no comparte recurso léxico con PaymentOrderInitiation. "
-        "S≈0 es el techo del baseline PT×EN; los embeddings de semana 11 existen para eso.",
+        "S≈0 es el techo del baseline PT×EN; MiniLM ya corre sobre los mismos pares (`matching_s1/`).",
+        "",
+        "## Catálogo extra (no sustituye I1–I6)",
+        "",
+        "Con los 258 YAML oficiales, loans y credit-cards ya tienen SD BIAN "
+        "(`Loan.yaml`, `CreditCard.yaml`). No se inventó un Service Domain. "
+        "No se puntúa el producto cartesiano 38 × 258.",
+        "",
+        "| OFB | BIAN oficial | Pares | Score v0 |",
+        "|-----|--------------|-------|----------|",
+        "| credit-cards | CreditCard | 7/7 | Baja (0,46) |",
+        "| loans | Loan | 4/5 | Nula (0,27) |",
+        "| opendata-loans | Loan | 2/2 | Nula (0,28) |",
+        "| opendata-creditcards | CreditCard | 2/2 | Nula (0,30) |",
+        "| investments | InvestmentAccount | 2/5 | Nula (0,19) |",
+        "",
+        "Detalle: `catalogo/MAPA.md`.",
         "",
         "## Lo que sigue (ya no es cierre de piloto P4)",
         "",
-        "1. Semana 11: S con embeddings (`paraphrase-multilingual-MiniLM`) y sensibilidad 0.45/0.55/0.65.",
+        "1. MiniLM I1–I6 ya está en `matching_s1/` (S sobre pares OE2 congelados).",
         "2. Semana 12 (P5): discusión de tipologías contra literatura.",
-        "3. No puntuar loans/cards/financings inventando un SD.",
+        "3. No puntuar 38 OFB × 258 SD. No inventar un SD. I1–I6 siguen siendo n = 7.",
         "",
     ]
     return "\n".join(lines)

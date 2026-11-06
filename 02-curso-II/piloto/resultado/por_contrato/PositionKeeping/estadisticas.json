@@ -1,0 +1,25 @@
+{
+  "archivo_entrada": "PositionKeeping.yaml",
+  "source": "BIAN",
+  "contrato": "Position Keeping",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 7,
+  "cantidad_schemas": 82,
+  "cantidad_propiedades": 258,
+  "fragmentos_corpus": 373,
+  "operaciones_con_summary": 7,
+  "operaciones_con_description": 7,
+  "operaciones_summary_igual_description": 7,
+  "metodos": {
+    "POST": 1,
+    "PUT": 4,
+    "GET": 2
+  },
+  "tags": {
+    "CR - FinancialPositionLog": 4,
+    "BQ - FinancialTransactionCapture": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/PositionKeeping.yaml"
+}

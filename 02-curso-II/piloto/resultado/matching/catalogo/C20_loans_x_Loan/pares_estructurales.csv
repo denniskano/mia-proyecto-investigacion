@@ -1,0 +1,6 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+loansGetContracts;GET;/contracts;RetrieveDisbursement;GET;/Loan/{loanid}/Disbursement/{disbursementid}/Retrieve;BQ - Disbursement;0.3333;0.0;False;1.0;0.3333;0.3833;True
+loansGetContractsContractId;GET;/contracts/{contractId};RetrieveInterest;GET;/Loan/{loanid}/Interest/{interestid}/Retrieve;BQ - Interest;0.3333;0.0;False;1.0;0.3333;0.3833;True
+loansGetContractsContractIdWarranties;GET;/contracts/{contractId}/warranties;RetrieveCharge;GET;/Loan/{loanid}/Charge/{chargeid}/Retrieve;BQ - Charge;0.25;0.0;False;1.0;0.6667;0.4;True
+loansGetContractsContractIdScheduledInstalments;GET;/contracts/{contractId}/scheduled-instalments;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+loansGetContractsContractIdPayments;GET;/contracts/{contractId}/payments;Retrieve;GET;/Loan/{loanid}/Retrieve;CR - LoanFacility;0.25;0.0;False;1.0;1.0;0.45;True

@@ -5,6 +5,8 @@
 **Criterios:** sílabo MIA 403 · Guía 1 (LaTeX) · piloto Sesión 5 (`inventario.json`) · consistencia interna  
 **Veredicto:** **aprobable con correcciones aplicadas**. El diseño OFB × BIAN es coherente; había errores de cifra, de n muestral y de etiquetas P5/P6 que ya se corrigieron en esta pasada.
 
+**Post-scriptum (6 nov 2026):** el piloto vigente ya no es 41 YAML / 3 SD. Catálogo BIAN v14 = 258 OpenAPI; inventario = 296/296. Loans/cards tienen SD oficiales. I1–I6 no se reemplazan. Ver `../piloto/`.
+
 ---
 
 ## Lo que está bien (no tocar)

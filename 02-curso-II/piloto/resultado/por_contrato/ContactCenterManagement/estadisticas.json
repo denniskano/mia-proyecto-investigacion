@@ -1,0 +1,26 @@
+{
+  "archivo_entrada": "ContactCenterManagement.yaml",
+  "source": "BIAN",
+  "contrato": "Contact Center Management",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 12,
+  "cantidad_schemas": 43,
+  "cantidad_propiedades": 133,
+  "fragmentos_corpus": 213,
+  "operaciones_con_summary": 12,
+  "operaciones_con_description": 12,
+  "operaciones_summary_igual_description": 12,
+  "metodos": {
+    "PUT": 7,
+    "POST": 2,
+    "GET": 3
+  },
+  "tags": {
+    "CR - ContactCenterManagementPlan": 5,
+    "BQ - Performance": 3,
+    "BQ - Troubleshooting": 4
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/ContactCenterManagement.yaml"
+}

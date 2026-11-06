@@ -1,23 +1,17 @@
-Catorce trabajos, seis ejes (E1--E6), ficha a ficha en el Anexo~B. Aquí solo cuatro líneas; el
-detalle va en §\ref{sec:estado-arte} y la brecha en §\ref{sec:brecha}.
+Catorce trabajos, seis ejes. Las fichas están en el Anexo~B; aquí solo el recorte que usa el
+plan. El comentario por paper está en §\ref{sec:estado-arte}.
 
 \begin{enumerate}
-  \item \textbf{Madurez de OpenAPI.} Casas et al.\ (2021) confirman, en 47 artículos (2011--2020),
-        que OpenAPI/Swagger es el estándar de facto para APIs REST. Su uso incluye generación,
-        pruebas y gobernanza. Ninguno aborda coherencia con modelos de negocio bancarios como BIAN.
-  \item \textbf{Correspondencia estructural y semántica.} Shvaiko y Euzenat (2005) sistematizan
-        \textit{schema matching}; El Bayadh et al.\ (2015), Chandrasekaran y Mago (2022) y Santos
-        Sousa et al.\ (2026) cubren alineación ontológica y similitud semántica. Son técnicas
-        aplicables por separado, pero ninguna las integra en un score único sobre el par bancario.
-  \item \textbf{Separación dominio--interfaz.} Schmidt y Thiry (2020), en 27 estudios sobre
-        microservicios con MDE y DDD, muestran cómo las capacidades de dominio se traducen en
-        límites de servicio. Ese marco justifica contrastar modelos de negocio e interfaces REST sin
-        confundir la capa OpenAPI con el \ServiceDomain{} BIAN completo.
-  \item \textbf{Delimitación del foco.} Las revisiones de testing, seguridad y selección de
-        servicios (ejes E5 y E6) usan OpenAPI con fines operativos ---cobertura, vulnerabilidades,
-        ranking por QoS--- distintos a la alineación documental (véase \Cref{sec:alcances}).
+  \item \textbf{Madurez de OpenAPI.} En 47 artículos (2011--2020), Casas et al.\ (2021) tratan
+        OpenAPI/Swagger como el estándar de facto de las APIs REST: generación, pruebas y
+        gobernanza. Coherencia con un modelo de negocio bancario no entra en esa revisión.
+  \item \textbf{Correspondencia.} Shvaiko y Euzenat (2005) ordenan el \textit{schema matching}.
+        El Bayadh et al.\ (2015), Chandrasekaran y Mago (2022) y Santos Sousa et al.\ (2026)
+        cubren alineación ontológica y similitud. Llegan por separado. El score único del par
+        contrato--SD se define en este plan, no en esos papers.
+  \item \textbf{Dominio e interfaz.} Schmidt y Thiry (2020) revisan 27 estudios de microservicios
+        con MDE y DDD. Sirve para no tratar el YAML como si fuera el \ServiceDomain{}.
+  \item \textbf{Lo que no es el foco.} Testing, seguridad y selección de servicios (E5 y E6) usan
+        OpenAPI para cobertura, vulnerabilidades o ranking por QoS. Eso se excluye en
+        \Cref{sec:alcances}.
 \end{enumerate}
-
-Hay piezas: E en schema matching, S en ontologías, C a medias en cobertura ontológica. Nadie las
-junta sobre un YAML bancario y un SD BIAN y entrega un nivel. Eso se arma en
-§\ref{sec:estado-arte} y se recorta en §\ref{sec:brecha}.

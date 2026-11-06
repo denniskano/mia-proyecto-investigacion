@@ -11,6 +11,7 @@ lang: es
 **Programa:** Maestría en Inteligencia Artificial · UNI · MIA 403  
 **Objeto de la tesis:** contratos **OpenAPI bancarios** frente a Service Domains BIAN.  
 **Piloto de esta sesión:** catálogo **Open Finance Brasil (OFB)** + tres SD BIAN v14.  
+**Piloto vigente (6 nov 2026):** 38 OFB + **258** SD · `../piloto/` (296 YAML). Las cifras 41/235 de este documento son las de la semana 5.  
 **Dataset:** `../piloto/` (`fuentes/ofb/` + `fuentes/bian/`).
 
 Este documento **no sustituye** el plan LaTeX ni el Plan v2. Cierra la operacionalización y el EDA **antes** del matching OE2–OE4.

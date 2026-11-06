@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "LocationDataManagement.yaml",
+  "source": "BIAN",
+  "contrato": "Location Data Management",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 14,
+  "cantidad_schemas": 25,
+  "cantidad_propiedades": 70,
+  "fragmentos_corpus": 125,
+  "operaciones_con_summary": 14,
+  "operaciones_con_description": 14,
+  "operaciones_summary_igual_description": 14,
+  "metodos": {
+    "POST": 1,
+    "PUT": 9,
+    "GET": 4
+  },
+  "tags": {
+    "CR - LocationDirectoryEntry": 7,
+    "BQ - Location": 3,
+    "BQ - Use": 2,
+    "BQ - Occupancy": 2
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/LocationDataManagement.yaml"
+}

@@ -1,0 +1,3 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+getPersonalInvoiceFinancings;GET;/personal-invoice-financings;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+getBusinessInvoiceFinancings;GET;/business-invoice-financings;;;;;0.0;0.0;False;0.0;0.0;0.0;False

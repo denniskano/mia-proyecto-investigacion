@@ -1,0 +1,3 @@
+﻿ofb_operation_id;bian_operation_id;s_jaccard;s_tfidf;s_pair;ofb_texto;bian_texto
+getPersonalUnarrangedAccountOverdraft;RetrieveCharge;0.0;0.0;0.0;obtém a lista de adiantamento de depositante de pessoa natural.;retrieve information about a service fee applied to the account
+getBusinessUnarrangedAccountOverdraft;Retrieve;0.0;0.0;0.0;obtém a lista de adiantamento de depositante de pessoa jurídica.;retrieve information about a current account either standard canned reports or selected instance attribute values

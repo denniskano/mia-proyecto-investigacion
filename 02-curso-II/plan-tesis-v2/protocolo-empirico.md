@@ -2,7 +2,7 @@
 
 **Grupo 10** · MIA 403 · Plan de tesis v2  
 **Objeto de la tesis:** contrato OpenAPI **bancario**  
-**Referencia:** Service Domain **BIAN v14** (SavingsAccount, CurrentAccount, PaymentOrderInitiation)  
+**Referencia:** catálogo **BIAN v14** (258 OpenAPI oficiales; I1–I6 usan SavingsAccount, CurrentAccount, PaymentOrderInitiation)  
 **Muestra / piloto:** catálogo **Open Finance Brasil**  
 **Dataset:** `../piloto/`
 
@@ -19,18 +19,19 @@ Este protocolo ejecuta el Anexo C de Guía 1 sobre el corpus OFB ya parseado. No
 | OFB I4 | `OFB_payments_4.0.0.yml` | 4.0.0 |
 | OFB I5 | `OFB_automatic-payments_2.0.0.yml` | 2.0.0 |
 | OFB I6 | `OFB_enrollments_2.1.0.yml` | 2.1.0 |
-| BIAN | `SavingsAccount.yaml` · `CurrentAccount.yaml` · `PaymentOrderInitiation.yaml` | 14.0.0 |
+| BIAN I1–I6 | `SavingsAccount.yaml` · `CurrentAccount.yaml` · `PaymentOrderInitiation.yaml` | 14.0.0 |
+| BIAN catálogo | 258 YAML de `bian-official/public` release 14.0.0 | 14.0.0 |
 | Parser | `procesar_openapi.py` | hash Git de la corrida |
 
-Registrar en bitácora: commit, fecha, comando `run_batch`, totales de `inventario.json` (41 / 235 / 6746 / 10906).
+Registrar en bitácora: commit, fecha, comando `run_batch`, totales de `inventario.json` (296 / 4 740 / 67 388 / 100 328).
 
 Si se re-parsea, **no** se mezclan CSV de corridas distintas.
 
 ---
 
-## 1. OE1 — Completitud (ya extraído; falta firmar)
+## 1. OE1 — Completitud (firmado: 296/296)
 
-Por cada YAML de I1–I6 y de los 3 SD:
+Por cada YAML en `fuentes/ofb/` y `fuentes/bian/` (38 OFB + 258 SD):
 
 1. Contar en el YAML fuente: paths × methods, schemas en `components`, propiedades (tras resolver `$ref` anidados).
 2. Comparar con `por_contrato/<id>/estadisticas.json`.
@@ -143,7 +144,7 @@ Tipologías (Tabla 2 Guía 1): estructural, semántica, de modelado, REST/contra
 | I5 | automatic-payments 2.0.0 | PaymentOrderInitiation | Semana 10–11 |
 | I6 | enrollments 2.1.0 | PaymentOrderInitiation | Semana 10–11 |
 
-Las otras **33** APIs OFB (38 − 5 YAML usados en I1–I6): inventario OE1 y mapa de *gap* (loans, credit-cards, financings sin SD en el piloto). **No** se calcula AlignmentScore inventando un SD.
+Las otras APIs OFB (38 − 5 YAML usados en I1–I6) entran al inventario OE1 y a un **mapa extra** contra SD **oficiales** (`Loan.yaml`, `CreditCard.yaml`, etc.). Ese mapa **no** sustituye I1–I6 (n = 7). **No** se calcula AlignmentScore inventando un SD ni se puntúa el producto 38 × 258.
 
 ---
 
@@ -183,4 +184,4 @@ resultado/matching/
 | Semana 9 | Defensa con EDA + 2 instancias |
 | Semana 11 | Siete instancias con S/E/C + sensibilidad de pesos (insumo de Resultados v1) |
 | Semana 12 (P5) | Discusión avanzada (sílabo): tipologías, literatura, limitaciones |
-| Semana 16 (P7) | Borrador con tablas, tipologías y limitaciones (piloto OFB no agota OpenAPI bancario; 3 SD) |
+| Semana 16 (P7) | Borrador con tablas, tipologías y limitaciones (piloto OFB no agota OpenAPI bancario; n = 7 oficiales) |

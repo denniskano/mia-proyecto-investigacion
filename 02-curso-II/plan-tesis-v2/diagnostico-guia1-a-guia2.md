@@ -27,16 +27,16 @@ No se añaden en este curso YAML de un banco emisor ni Open Banking UK; eso no r
 | Falta contrato “banco” en Sesión 5 (texto viejo) | Sí — 38 APIs OFB ya parseadas | Hecho |
 | Matching E / S | No (solo protocolo) | Semanas 7–11 |
 | AlignmentScore (7 instancias) | No | Semanas 8 (I1, I4) y 11 (resto) |
-| SD BIAN para loans/cards | No — se declara gap | Fuera de piloto v3 |
+| SD BIAN para loans/cards | Sí — `Loan.yaml` / `CreditCard.yaml` oficiales (mapa extra; no sustituye I1–I6) | Hecho |
 | Borrador integral | No | Semana 16 |
 
 ## Riesgos que el diagnóstico no puede eliminar
 
-1. 160 ops OFB vs. 75 BIAN (3 SD): C global sobre 38 APIs sería un error de unidad.
+1. 160 ops OFB vs. 4 580 BIAN (258 SD): C global o el producto 38 × 258 sería un error de unidad.
 2. El piloto OFB no es un banco peruano ni agota OpenAPI bancario: validez externa acotada.
 3. BIAN summary = description: riesgo de inflar S.
 4. Sin etiquetas expertas: no hay *ground truth* supervisado.
 
 ## Criterio de salida de la semana 1
 
-Grupo 10 puede decir en una frase: *la tesis mide alineación de contratos OpenAPI bancarios frente a BIAN; en este curso el piloto es Open Finance Brasil × tres SD v14, sobre los pares I1–I6*.
+Grupo 10 puede decir en una frase: *la tesis mide alineación de contratos OpenAPI bancarios frente a BIAN; en este curso el piloto es Open Finance Brasil × catálogo BIAN v14 (258 SD), con score oficial en los pares I1–I6*.

@@ -1,18 +1,13 @@
-Por objetivo, tomadas del §\ref{sec:estado-arte} y de los factores del Capítulo~\ref{cap:objetivos}.
-No hay aprendizaje supervisado: S y E salen de reglas de \textit{schema matching} y de similitud,
-no de un modelo etiquetado.
+Las técnicas salen de §\ref{sec:estado-arte} y de los factores del Capítulo~\ref{cap:objetivos}.
+No entrenamos un modelo: no hay etiquetas. S y E se calculan con reglas de \textit{schema matching}
+y con una medida de similitud.
 
-\begin{itemize}
-  \item \textbf{OE1:} \textit{parsing} OpenAPI~3.x; extracción de \textit{paths}, operaciones y
-        esquemas; representación intermedia alineada con BIAN (Mainas et al., 2023 como referencia
-        de enriquecimiento semántico).
-  \item \textbf{OE2:} \textit{schema matching} según taxonomía Shvaiko y Euzenat (2005): nombre,
-        ruta, profundidad de esquema, operación HTTP.
-  \item \textbf{OE3:} similitud semántica por embeddings y/o ontología (El Bayadh et al., 2015;
-        Chandrasekaran y Mago, 2022).
-  \item \textbf{OE4:} agregación ponderada $\alpha S + \beta E + \gamma C$ y clasificación por
-        umbrales fijos (§1.4).
-\end{itemize}
+OE1 parsea OpenAPI~3.x y saca \textit{paths}, operaciones y esquemas hacia una representación
+intermedia. Mainas et al.\ (2023) quedan como referencia de enriquecimiento, no como paso
+obligatorio. OE2 compara nombre, ruta, profundidad y verbo HTTP, siguiendo los cortes de Shvaiko
+y Euzenat (2005). OE3 estima similitud con \textit{embeddings} u ontología (El Bayadh et al.,
+2015; Chandrasekaran y Mago, 2022). OE4 agrega $\alpha S + \beta E + \gamma C$ y clasifica con
+los umbrales de §1.4.
 
-Python, un validador OpenAPI y una librería de similitud. El código no se entrega en este
-documento (§\ref{sec:alcances}).
+Herramientas previstas: Python, un validador OpenAPI y una librería de similitud. El código no
+forma parte de esta Guía (\Cref{sec:alcances}).

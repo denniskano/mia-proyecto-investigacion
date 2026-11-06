@@ -1,0 +1,29 @@
+{
+  "archivo_entrada": "EnterpriseArchitecture.yaml",
+  "source": "BIAN",
+  "contrato": "Enterprise Architecture",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 27,
+  "cantidad_schemas": 30,
+  "cantidad_propiedades": 96,
+  "fragmentos_corpus": 165,
+  "operaciones_con_summary": 27,
+  "operaciones_con_description": 27,
+  "operaciones_summary_igual_description": 27,
+  "metodos": {
+    "PUT": 20,
+    "GET": 6,
+    "POST": 1
+  },
+  "tags": {
+    "CR - EnterpriseArchitectureSpecification": 7,
+    "BQ - TechnologyInfrastructure": 4,
+    "BQ - BusinessArchitecture": 4,
+    "BQ - ApplicationArchitecture": 4,
+    "BQ - Organization": 4,
+    "BQ - InformationArchitecture": 4
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/EnterpriseArchitecture.yaml"
+}

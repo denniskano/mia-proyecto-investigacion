@@ -1,0 +1,26 @@
+{
+  "archivo_entrada": "TradingBookOversight.yaml",
+  "source": "BIAN",
+  "contrato": "Trading Book Oversight",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 20,
+  "cantidad_schemas": 70,
+  "cantidad_propiedades": 207,
+  "fragmentos_corpus": 311,
+  "operaciones_con_summary": 20,
+  "operaciones_con_description": 20,
+  "operaciones_summary_igual_description": 20,
+  "metodos": {
+    "PUT": 13,
+    "GET": 6,
+    "POST": 1
+  },
+  "tags": {
+    "CR - TradingPositionManagementPlan": 8,
+    "BQ - TradingBookAnalysisandReporting": 6,
+    "BQ - TradingBookRiskMitigation": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/TradingBookOversight.yaml"
+}

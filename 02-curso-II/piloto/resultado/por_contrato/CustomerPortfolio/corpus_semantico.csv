@@ -1,0 +1,610 @@
+﻿source;archivo;element_type;element_id;field;raw_text;normalized_text;path;source_url
+BIAN;CustomerPortfolio.yaml;operation;Evaluate;summary;EvCR Evaluate customer portfolio performance;ev cr evaluate customer portfolio performance;/CustomerPortfolio/Evaluate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;operation;Update;summary;UpCR Update settings or content for customer portfolio analysis activity;update settings or content for customer portfolio analysis activity;/CustomerPortfolio/{customerportfolioid}/Update;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;operation;Request;summary;RqCR Request manual intervention in the customer portfolio analysis activity;rq cr request manual intervention in the customer portfolio analysis activity;/CustomerPortfolio/{customerportfolioid}/Request;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;operation;Retrieve;summary;ReCR Retrieve details about customer portfolio analysis activity;retrieve details about customer portfolio analysis activity;/CustomerPortfolio/{customerportfolioid}/Retrieve;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;operation;EvaluatePerformanceAnalysis;summary;EvBQ Evaluate customer portfolio performance using a specific type of analysis;ev bq evaluate customer portfolio performance using a specific type of analysis;/CustomerPortfolio/{customerportfolioid}/PerformanceAnalysis/Evaluate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;operation;UpdatePerformanceAnalysis;summary;UpBQ Update details of a specific customer portfolio performance analysis;update details of a specific customer portfolio performance analysis;/CustomerPortfolio/{customerportfolioid}/PerformanceAnalysis/{performanceanalysisid}/Update;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;operation;ExchangePerformanceAnalysis;summary;EcBQ Accept, reject, verify, etc. customer portfolio analysis;ec bq accept, reject, verify, etc. customer portfolio analysis;/CustomerPortfolio/{customerportfolioid}/PerformanceAnalysis/{performanceanalysisid}/Exchange;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;operation;ExecutePerformanceAnalysis;summary;ExBQ Execute an automated action against on-going analysis;execute an automated action against on going analysis;/CustomerPortfolio/{customerportfolioid}/PerformanceAnalysis/{performanceanalysisid}/Execute;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;operation;RequestPerformanceAnalysis;summary;RqBQ Request manual intervention to on-going analysis;rq bq request manual intervention to on going analysis;/CustomerPortfolio/{customerportfolioid}/PerformanceAnalysis/{performanceanalysisid}/Request;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;operation;RetrievePerformanceAnalysis;summary;ReBQ Retrieve details about a specific customer portfolio performance analysis;retrieve details about a specific customer portfolio performance analysis;/CustomerPortfolio/{customerportfolioid}/PerformanceAnalysis/{performanceanalysisid}/Retrieve;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;HTTPError;description;Status Attributes;status attributes;#/components/schemas/HTTPError;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;HTTPError.status_code;name;status_code;status code;#/components/schemas/HTTPError/properties/status_code;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;HTTPError.status;name;status;status;#/components/schemas/HTTPError/properties/status;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;HTTPError.message;name;message;message;#/components/schemas/HTTPError/properties/message;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Involvedparty;description;"Reference to an entity that assigns and manages the identification.
+tReference to the organization or agency that issued the identifier (e.g., DMV, Passport Office).";reference to an entity that assigns and manages the identification. t reference to the organization or agency that issued the identifier (e.g., dmv, passport office).;#/components/schemas/Involvedparty;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Involvedparty.PartyReference;name;PartyReference;party reference;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Involvedparty.PartyReference;description;Reference to a Party who plays a specific role;reference to a party who plays a specific role;#/components/schemas/Involvedparty/properties/PartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Involvedparty.InvolvementReference;name;InvolvementReference;involvement reference;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Involvedparty.InvolvementReference;description;Reference to a specific Role that is played by a Party;reference to a specific role that is played by a party;#/components/schemas/Involvedparty/properties/InvolvementReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Datetimetypevalues;description;">
+* `MaturityDate` - 
+* `InitiatedDate` - 
+* `RequestedDate` - 
+* `ExecutedDate` - 
+* `OpenDate` - 
+* `CloseDate` - 
+* `ExpiryDate` - 
+* `EffectiveDate` - 
+* `CreatingDate` - 
+* `ActivationDate` - 
+* `DeactivationDate` - 
+* `BlockingDate` - 
+* `SendingDate` - 
+* `ValidFromDate` - 
+* `ValidToDate` - 
+* `ReceivingDate` - 
+* `SigningDate` - 
+* `DueDate` - 
+* `ValueDate` - 
+* `FulfillmentDate` - 
+* `EntryDate` - 
+";> * `maturity date` * `initiated date` * `requested date` * `executed date` * `open date` * `close date` * `expiry date` * `effective date` * `creating date` * `activation date` * `deactivation date` * `blocking date` * `sending date` * `valid from date` * `valid to date` * `receiving date` * `signing date` * `due date` * `value date` * `fulfillment date` * `entry date`;#/components/schemas/Datetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Datetime;description;The date when the identifier became valid.;the date when the identifier became valid.;#/components/schemas/Datetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Datetime.DateTimeContent;name;DateTimeContent;date time content;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Datetime.DateTimeContent;description;The particular date and time point in the progression of time;the particular date and time point in the progression of time;#/components/schemas/Datetime/properties/DateTimeContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Datetime.TimeZoneCode;name;TimeZoneCode;time zone code;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Datetime.TimeZoneCode;description;The time zone to which the date time refers.;the time zone to which the date time refers.;#/components/schemas/Datetime/properties/TimeZoneCode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Datetime.DaylightSavingIndicator;name;DaylightSavingIndicator;daylight saving indicator;#/components/schemas/Datetime/properties/DaylightSavingIndicator;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Datetime.DateTimeType;name;DateTimeType;date time type;#/components/schemas/Datetime/properties/DateTimeType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Identifier;description;An identifier that allows to uniquely refer to an instance of a Document.;an identifier that allows to uniquely refer to an instance of a document.;#/components/schemas/Identifier;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Identifier.IdentifierValue;name;IdentifierValue;identifier value;#/components/schemas/Identifier/properties/IdentifierValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Identifier.IdentifierValue;description;tThe actual unique code or number (e.g., passport number, drivers license number).;t the actual unique code or number (e.g., passport number, drivers license number).;#/components/schemas/Identifier/properties/IdentifierValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Identifier.IdentifierIssuerReference;name;IdentifierIssuerReference;identifier issuer reference;#/components/schemas/Identifier/properties/IdentifierIssuerReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Identifier.IdentifierStartDate;name;IdentifierStartDate;identifier start date;#/components/schemas/Identifier/properties/IdentifierStartDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Identifier.IdentifierEndDate;name;IdentifierEndDate;identifier end date;#/components/schemas/Identifier/properties/IdentifierEndDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Financialdocumenttypevalues;description;">
+* `Meteredserviceinvoice` - Document is an invoice claiming payment for the supply of metered services, for example gas or electricity supplied to a fixed meter.
+* `Creditnoterelatedtofinancialadjustment` - Document is a credit note for the final amount settled for a commercial transaction.
+* `Debitnoterelatedtofinancialadjustment` - Document is a debit note for the final amount settled for a commercial transaction.
+* `Commercialinvoice` - Document is an invoice.
+* `Creditnote` - Document is a credit note.
+* `Debitnote` - Document is a debit note.
+* `Hireinvoice` - Document is an invoice for the hiring of human resources or renting goods or equipment.
+* `Selfbilledinvoice` - Document is an invoice issued by the debtor.
+* `Remittanceadvicemessage` - Document is a remittance advice sent separately from the current transaction.
+* `Relatedpaymentinstruction` - Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario.
+* `Commercialcontract` - Document is an agreement between the parties, stipulating the terms and conditions of the delivery of goods or services.
+* `Foreignexchangedealreference` - Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers.
+* `Statementofaccount` - Document is a statement of the transactions posted to the debtor's account at the supplier.
+* `Dispatchadvice` - Document is a dispatch advice.
+* `Purchaseorder` - Document is a purchase order.
+* `Structuredcommunicationreference` - Document is a structured communication reference provided by the creditor to identify the referred transaction.
+* `Billoflading` - Document is a shipping notice.
+* `Voucher` - Document is an electronic payment document.
+* `Accountreceivableopenitem` - Document is a payment that applies to a specific source document.
+* `Tradeservicesutilitytransaction` - Document is a transaction identifier as assigned by the Trade Services Utility.
+* `Cashierreceipt` - When the Sale system print the Cashier copy of the Payment receipt.
+* `Customerreceipt` - When the Sale System requires   the POI system to print the Customer receipt.
+* `Journal` - When the POI or the Sale System wants to store a message on the journal printer or electronic journal of the Sale Terminal (it is sometimes a Sale Logging/Journal Printer).
+* `Salereceipt` - When the Sale System requires the POI system to print the Sale receipt.
+";> * `meteredserviceinvoice` document is an invoice claiming payment for the supply of metered services, for example gas or electricity supplied to a fixed meter. * `creditnoterelatedtofinancialadjustment` document is a credit note for the final amount settled for a commercial transaction. * `debitnoterelatedtofinancialadjustment` document is a debit note for the final amount settled for a commercial transaction. * `commercialinvoice` document is an invoice. * `creditnote` document is a credit note. * `debitnote` document is a debit note. * `hireinvoice` document is an invoice for the hiring of human resources or renting goods or equipment. * `selfbilledinvoice` document is an invoice issued by the debtor. * `remittanceadvicemessage` document is a remittance advice sent separately from the current transaction. * `relatedpaymentinstruction` document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario. * `commercialcontract` document is an agreement between the parties, stipulating the terms and conditions of the delivery of goods or services. * `foreignexchangedealreference` document is a pre agreed or pre arranged foreign exchange transaction to which the payment transaction refers. * `statementofaccount` document is a statement of the transactions posted to the debtor's account at the supplier. * `dispatchadvice` document is a dispatch advice. * `purchaseorder` document is a purchase order. * `structuredcommunicationreference` document is a structured communication reference provided by the creditor to identify the referred transaction. * `billoflading` document is a shipping notice. * `voucher` document is an electronic payment document. * `accountreceivableopenitem` document is a payment that applies to a specific source document. * `tradeservicesutilitytransaction` document is a transaction identifier as assigned by the trade services utility. * `cashierreceipt` when the sale system print the cashier copy of the payment receipt. * `customerreceipt` when the sale system requires the poi system to print the customer receipt. * `journal` when the poi or the sale system wants to store a message on the journal printer or electronic journal of the sale terminal (it is sometimes a sale logging journal printer). * `salereceipt` when the sale system requires the poi system to print the sale receipt.;#/components/schemas/Financialdocumenttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Datetimeperiod;description;Period of time during which the status is valid.;period of time during which the status is valid.;#/components/schemas/Datetimeperiod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Datetimeperiod.FromDateTime;name;FromDateTime;from date time;#/components/schemas/Datetimeperiod/properties/FromDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Datetimeperiod.ToDateTime;name;ToDateTime;to date time;#/components/schemas/Datetimeperiod/properties/ToDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Status;description;Status of the document (e.g. delivered, paid, etc.). ISO20022;status of the document (e.g. delivered, paid, etc.). iso20022;#/components/schemas/Status;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Status.StatusReason;name;StatusReason;status reason;#/components/schemas/Status/properties/StatusReason;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Status.StatusReason;description;Specifies the reasons for the status.;specifies the reasons for the status.;#/components/schemas/Status/properties/StatusReason;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Status.StatusDateTime;name;StatusDateTime;status date time;#/components/schemas/Status/properties/StatusDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Status.StatusValidityPeriod;name;StatusValidityPeriod;status validity period;#/components/schemas/Status/properties/StatusValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Status.StatusInvolvedPartyReference;name;StatusInvolvedPartyReference;status involved party reference;#/components/schemas/Status/properties/StatusInvolvedPartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Name.Name;name;Name;name;#/components/schemas/Name/properties/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Name.Name;description;A name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (UN/CEFAT);a name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (un cefat);#/components/schemas/Name/properties/Name;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Documentdatetimetypevalues;description;">
+* `CreationDate` - 
+* `CapturingDate` - 
+* `VersionDate` - 
+* `ValueDate` - 
+* `IssueDate` - 
+";> * `creation date` * `capturing date` * `version date` * `value date` * `issue date`;#/components/schemas/Documentdatetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Document;description;Refers to a document used in the analysis;refers to a document used in the analysis;#/components/schemas/Document;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentIdentification;name;DocumentIdentification;document identification;#/components/schemas/Document/properties/DocumentIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentVersion;name;DocumentVersion;document version;#/components/schemas/Document/properties/DocumentVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentType;name;DocumentType;document type;#/components/schemas/Document/properties/DocumentType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentStatus;name;DocumentStatus;document status;#/components/schemas/Document/properties/DocumentStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentDateTime;name;DocumentDateTime;document date time;#/components/schemas/Document/properties/DocumentDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentName;name;DocumentName;document name;#/components/schemas/Document/properties/DocumentName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentDateTimeType;name;DocumentDateTimeType;document date time type;#/components/schemas/Document/properties/DocumentDateTimeType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentPurpose;name;DocumentPurpose;document purpose;#/components/schemas/Document/properties/DocumentPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentPurpose;description;Specifies the function of the document. (ISO20022);specifies the function of the document. (iso20022);#/components/schemas/Document/properties/DocumentPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentFormat;name;DocumentFormat;document format;#/components/schemas/Document/properties/DocumentFormat;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentSubject;name;DocumentSubject;document subject;#/components/schemas/Document/properties/DocumentSubject;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentDescription;name;DocumentDescription;document description;#/components/schemas/Document/properties/DocumentDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Document.DocumentValidityPeriod;name;DocumentValidityPeriod;document validity period;#/components/schemas/Document/properties/DocumentValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Reporttypevalues;description;">
+* `FinancialReport` - 
+* `BusinessReport` - 
+* `ManagementReport` - 
+* `Statement` - 
+* `MaintenanceReport` - 
+* `RegulatoryReport` - 
+* `TaxReport` - 
+* `AnalysisReport` - 
+";> * `financial report` * `business report` * `management report` * `statement` * `maintenance report` * `regulatory report` * `tax report` * `analysis report`;#/components/schemas/Reporttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;AnalysisReport;description;Refers to a report used in the analysis like Market Research Report;refers to a report used in the analysis like market research report;#/components/schemas/AnalysisReport;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisReport.AnalysisReportDatetime;name;AnalysisReportDatetime;analysis report datetime;#/components/schemas/AnalysisReport/properties/AnalysisReportDatetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisReport.ReportType;name;ReportType;report type;#/components/schemas/AnalysisReport/properties/ReportType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisReport.ReportValidityPeriod;name;ReportValidityPeriod;report validity period;#/components/schemas/AnalysisReport/properties/ReportValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisReport.ReportVersion;name;ReportVersion;report version;#/components/schemas/AnalysisReport/properties/ReportVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisReport.ReportDateTime;name;ReportDateTime;report date time;#/components/schemas/AnalysisReport/properties/ReportDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisReport.ReportFormat;name;ReportFormat;report format;#/components/schemas/AnalysisReport/properties/ReportFormat;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Workproducttypevalues;description;">
+* `Document` - 
+* `WorkingPaper` - 
+* `ActivityLog` - 
+* `Form` - 
+* `File` - File of consolidated notes, evaluations and recommendations for the work task
+* `MeetingSchedule` - 
+* `MeetingMinute` - 
+";> * `document` * `working paper` * `activity log` * `form` * `file` file of consolidated notes, evaluations and recommendations for the work task * `meeting schedule` * `meeting minute`;#/components/schemas/Workproducttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Workproduct;description;Refers to work documentation, forms and schedules produced and referenced during the analysis;refers to work documentation, forms and schedules produced and referenced during the analysis;#/components/schemas/Workproduct;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Workproduct.WorkProductType;name;WorkProductType;work product type;#/components/schemas/Workproduct/properties/WorkProductType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Workproduct.WorkProductIdentifoication;name;WorkProductIdentifoication;work product identifoication;#/components/schemas/Workproduct/properties/WorkProductIdentifoication;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Task;description;Refers to a task for doing the analysis;refers to a task for doing the analysis;#/components/schemas/Task;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Task.Task;name;Task;task;#/components/schemas/Task/properties/Task;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;AnalysisModel;description;Refers to a model used in the analysis Like Customer Behavior Model;refers to a model used in the analysis like customer behavior model;#/components/schemas/AnalysisModel;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisModel.ModelType;name;ModelType;model type;#/components/schemas/AnalysisModel/properties/ModelType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisModel.ModelType;description;The type or category of model  ;the type or category of model;#/components/schemas/AnalysisModel/properties/ModelType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisModel.ModelPurpose;name;ModelPurpose;model purpose;#/components/schemas/AnalysisModel/properties/ModelPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisModel.ModelPurpose;description;A description of the model that clarifies the intended analysis/insights provided;a description of the model that clarifies the intended analysis insights provided;#/components/schemas/AnalysisModel/properties/ModelPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisModel.ModelVersion;name;ModelVersion;model version;#/components/schemas/AnalysisModel/properties/ModelVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisModel.ModelName;name;ModelName;model name;#/components/schemas/AnalysisModel/properties/ModelName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisModel.ModelDateAndTime;name;ModelDateAndTime;model date and time;#/components/schemas/AnalysisModel/properties/ModelDateAndTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;AnalysisModel.ModelStatus;name;ModelStatus;model status;#/components/schemas/AnalysisModel/properties/ModelStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Log;description;Refers to a log used in the  analysis like Event Log;refers to a log used in the analysis like event log;#/components/schemas/Log;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Log.LogType;name;LogType;log type;#/components/schemas/Log/properties/LogType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Log.LogPeriod;name;LogPeriod;log period;#/components/schemas/Log/properties/LogPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Log.LogDate;name;LogDate;log date;#/components/schemas/Log/properties/LogDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Log.LogIdentification;name;LogIdentification;log identification;#/components/schemas/Log/properties/LogIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Analysistypevalues;description;">
+* `PerformanceAnalysis` - 
+* `ActivityAnalysis` - 
+* `RevenueAnalysis` - 
+* `CostAnalysis` - 
+* `PredictiveAnalysis` - 
+* `BehavioralAnalysis` - 
+* `ProfitabilityAnalysis` - 
+* `CompetitiveAnalysis` - 
+* `CohortAnalysis` - 
+* `SegmentAnalysis` - 
+* `SWOTAnalysis` - 
+* `Benchmarking` - 
+* `PositioningAnalysis` - 
+* `ScenarioAnalysis` - 
+* `IntelligenceGathering` - 
+* `Profiling` - 
+";> * `performance analysis` * `activity analysis` * `revenue analysis` * `cost analysis` * `predictive analysis` * `behavioral analysis` * `profitability analysis` * `competitive analysis` * `cohort analysis` * `segment analysis` * `swotanalysis` * `benchmarking` * `positioning analysis` * `scenario analysis` * `intelligence gathering` * `profiling`;#/components/schemas/Analysistypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;ProfitabilityAnalysis;description;"Def 1. It involves evaluating the profitability of customer segment (cohorts) over time. 
+
+This analysis helps businesses understand how various customer groups contribute to overall profitability. It assesses which customer segments contribute the most to the company's profits and identify less profitable segments
+
+Purpose:
+
+To assess the financial contribution of different customer segments over time.
+To identify high-value customer groups and optimize profitability.
+
+Def 2. It involves evaluating the profitability of individual customers.  It assesses how much profit a company earns from each customer after accounting for the costs associated with acquiring and serving them.";def 1. it involves evaluating the profitability of customer segment (cohorts) over time. this analysis helps businesses understand how various customer groups contribute to overall profitability. it assesses which customer segments contribute the most to the company's profits and identify less profitable segments purpose: to assess the financial contribution of different customer segments over time. to identify high value customer groups and optimize profitability. def 2. it involves evaluating the profitability of individual customers. it assesses how much profit a company earns from each customer after accounting for the costs associated with acquiring and serving them.;#/components/schemas/ProfitabilityAnalysis;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.ProfitabilityAnalysisDocumentReference;name;ProfitabilityAnalysisDocumentReference;profitability analysis document reference;#/components/schemas/ProfitabilityAnalysis/properties/ProfitabilityAnalysisDocumentReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.ProfitabilityAnalysisReportReference;name;ProfitabilityAnalysisReportReference;profitability analysis report reference;#/components/schemas/ProfitabilityAnalysis/properties/ProfitabilityAnalysisReportReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.ProfitabilityAnalysisInvolvedPartyReference;name;ProfitabilityAnalysisInvolvedPartyReference;profitability analysis involved party reference;#/components/schemas/ProfitabilityAnalysis/properties/ProfitabilityAnalysisInvolvedPartyReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.ProfitabilityAnalysisWorkProduct;name;ProfitabilityAnalysisWorkProduct;profitability analysis work product;#/components/schemas/ProfitabilityAnalysis/properties/ProfitabilityAnalysisWorkProduct;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.ProfitabilityAnalysisTask;name;ProfitabilityAnalysisTask;profitability analysis task;#/components/schemas/ProfitabilityAnalysis/properties/ProfitabilityAnalysisTask;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.ProfitabilityAnalysisModelReference;name;ProfitabilityAnalysisModelReference;profitability analysis model reference;#/components/schemas/ProfitabilityAnalysis/properties/ProfitabilityAnalysisModelReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.ProfitabilityAnalysisLogReference;name;ProfitabilityAnalysisLogReference;profitability analysis log reference;#/components/schemas/ProfitabilityAnalysis/properties/ProfitabilityAnalysisLogReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.ProfitabilityAnalysisType;name;ProfitabilityAnalysisType;profitability analysis type;#/components/schemas/ProfitabilityAnalysis/properties/ProfitabilityAnalysisType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.CustomerPortfolioAnalysisInstanceReference;name;CustomerPortfolioAnalysisInstanceReference;customer portfolio analysis instance reference;#/components/schemas/ProfitabilityAnalysis/properties/CustomerPortfolioAnalysisInstanceReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProfitabilityAnalysis.ProfitabilityAnalysisInstanceReference;name;ProfitabilityAnalysisInstanceReference;profitability analysis instance reference;#/components/schemas/ProfitabilityAnalysis/properties/ProfitabilityAnalysisInstanceReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Model;description;Reference to the performance analysis model used;reference to the performance analysis model used;#/components/schemas/Model;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Model.ModelType;name;ModelType;model type;#/components/schemas/Model/properties/ModelType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Model.ModelType;description;The type or category of model  ;the type or category of model;#/components/schemas/Model/properties/ModelType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Model.ModelPurpose;name;ModelPurpose;model purpose;#/components/schemas/Model/properties/ModelPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Model.ModelPurpose;description;A description of the model that clarifies the intended analysis/insights provided;a description of the model that clarifies the intended analysis insights provided;#/components/schemas/Model/properties/ModelPurpose;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Model.ModelVersion;name;ModelVersion;model version;#/components/schemas/Model/properties/ModelVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Model.ModelName;name;ModelName;model name;#/components/schemas/Model/properties/ModelName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Model.ModelDateAndTime;name;ModelDateAndTime;model date and time;#/components/schemas/Model/properties/ModelDateAndTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Model.ModelStatus;name;ModelStatus;model status;#/components/schemas/Model/properties/ModelStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Report;description;The data file, report of customer related transaction details used in the analysis;the data file, report of customer related transaction details used in the analysis;#/components/schemas/Report;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Report.ReportType;name;ReportType;report type;#/components/schemas/Report/properties/ReportType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Report.ReportValidityPeriod;name;ReportValidityPeriod;report validity period;#/components/schemas/Report/properties/ReportValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Report.ReportVersion;name;ReportVersion;report version;#/components/schemas/Report/properties/ReportVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Report.ReportDateTime;name;ReportDateTime;report date time;#/components/schemas/Report/properties/ReportDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Report.ReportFormat;name;ReportFormat;report format;#/components/schemas/Report/properties/ReportFormat;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Marketresearchviewpointtypevalues;description;">
+* `CustomerViewpoint` - 
+* `CompetitorViewpoint` - 
+* `MarketDynamicsViewpoint` - 
+* `ProductServiceViewpoint` - 
+* `GeographicViewpoint` - 
+* `EconomicAndPoliticalViewpoint` - 
+* `TechnologicalViewpoint` - 
+* `EnvironmentalAndSustainabilityViewpoint` - 
+* `ChannelAndDistributionViewpoint` - 
+* `FinancialViewpoint` - 
+";> * `customer viewpoint` * `competitor viewpoint` * `market dynamics viewpoint` * `product service viewpoint` * `geographic viewpoint` * `economic and political viewpoint` * `technological viewpoint` * `environmental and sustainability viewpoint` * `channel and distribution viewpoint` * `financial viewpoint`;#/components/schemas/Marketresearchviewpointtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Marketresearchreporttypevalues;description;">
+* `IndustryReport` - 
+* `MarketResearchReport` - 
+* `ConsumerInsightsReport` - 
+* `CompetitiveAnalysisReport` - 
+* `TrendAnalysisReport` - 
+* `ProductServiceReport` - 
+* `BrandAnalysisReport` - 
+* `CustomerSatisfactionAndLoyaltyReport` - 
+* `FeasibilityStudies` - 
+* `EconomicAnalysisReport` - 
+* `TechnologyAndInnovationReport` - 
+* `GeographicMarketReport` - 
+* `EnvironmentalAndSustainabilityReport` - 
+";> * `industry report` * `market research report` * `consumer insights report` * `competitive analysis report` * `trend analysis report` * `product service report` * `brand analysis report` * `customer satisfaction and loyalty report` * `feasibility studies` * `economic analysis report` * `technology and innovation report` * `geographic market report` * `environmental and sustainability report`;#/components/schemas/Marketresearchreporttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;MarketResearchReport;description;The content of selected financial market research report or market transaction database in any suitable form used for comparisons when appropriate;the content of selected financial market research report or market transaction database in any suitable form used for comparisons when appropriate;#/components/schemas/MarketResearchReport;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.MarketResearchReportContent;name;MarketResearchReportContent;market research report content;#/components/schemas/MarketResearchReport/properties/MarketResearchReportContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.MarketResearchViewpointType;name;MarketResearchViewpointType;market research viewpoint type;#/components/schemas/MarketResearchReport/properties/MarketResearchViewpointType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.MarketResearchReportPeriod;name;MarketResearchReportPeriod;market research report period;#/components/schemas/MarketResearchReport/properties/MarketResearchReportPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.MarketResearchReportVersion;name;MarketResearchReportVersion;market research report version;#/components/schemas/MarketResearchReport/properties/MarketResearchReportVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.MarketResearchReportVersion;description;Version of the market research report;version of the market research report;#/components/schemas/MarketResearchReport/properties/MarketResearchReportVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.MarketResearchReportType;name;MarketResearchReportType;market research report type;#/components/schemas/MarketResearchReport/properties/MarketResearchReportType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.ReportType;name;ReportType;report type;#/components/schemas/MarketResearchReport/properties/ReportType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.ReportValidityPeriod;name;ReportValidityPeriod;report validity period;#/components/schemas/MarketResearchReport/properties/ReportValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.ReportVersion;name;ReportVersion;report version;#/components/schemas/MarketResearchReport/properties/ReportVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.ReportDateTime;name;ReportDateTime;report date time;#/components/schemas/MarketResearchReport/properties/ReportDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;MarketResearchReport.ReportFormat;name;ReportFormat;report format;#/components/schemas/MarketResearchReport/properties/ReportFormat;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;PerformanceAnalysis;description;"Def 1. It involves evaluating the profitability of customer segment (cohorts) over time. 
+
+This analysis helps businesses understand how various customer groups contribute to overall profitability. It assesses which customer segments contribute the most to the company's profits and identify less profitable segments
+
+Purpose:
+
+To assess the financial contribution of different customer segments over time.
+To identify high-value customer groups and optimize profitability.
+
+Def 2. It involves evaluating the profitability of individual customers.  It assesses how much profit a company earns from each customer after accounting for the costs associated with acquiring and serving them.";def 1. it involves evaluating the profitability of customer segment (cohorts) over time. this analysis helps businesses understand how various customer groups contribute to overall profitability. it assesses which customer segments contribute the most to the company's profits and identify less profitable segments purpose: to assess the financial contribution of different customer segments over time. to identify high value customer groups and optimize profitability. def 2. it involves evaluating the profitability of individual customers. it assesses how much profit a company earns from each customer after accounting for the costs associated with acquiring and serving them.;#/components/schemas/PerformanceAnalysis;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisType;name;PerformanceAnalysisType;performance analysis type;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisTask;name;PerformanceAnalysisTask;performance analysis task;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisTask;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisRequestSpecification;name;PerformanceAnalysisRequestSpecification;performance analysis request specification;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisRequestSpecification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisRequestSpecification;description;The specific details of the performance analysis (can be a default/standard analysis or a specialist/ad-hoc request);the specific details of the performance analysis (can be a default standard analysis or a specialist ad hoc request);#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisRequestSpecification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisModelReference;name;PerformanceAnalysisModelReference;performance analysis model reference;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisModelReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisProductandServiceActivityReport;name;PerformanceAnalysisProductandServiceActivityReport;performance analysis productand service activity report;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisProductandServiceActivityReport;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisFinancialMarketResearchReport;name;PerformanceAnalysisFinancialMarketResearchReport;performance analysis financial market research report;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisFinancialMarketResearchReport;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisWorkProducts;name;PerformanceAnalysisWorkProducts;performance analysis work products;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisWorkProducts;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisWorkProducts;description;Work documentation, forms and schedules produced and referenced during the analysis;work documentation, forms and schedules produced and referenced during the analysis;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisWorkProducts;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisRequestResult;name;PerformanceAnalysisRequestResult;performance analysis request result;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisRequestResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisRequestResult;description;The output from executing the selected performance analysis;the output from executing the selected performance analysis;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisRequestResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.CustomerPortfolioAnalysisInstanceReference;name;CustomerPortfolioAnalysisInstanceReference;customer portfolio analysis instance reference;#/components/schemas/PerformanceAnalysis/properties/CustomerPortfolioAnalysisInstanceReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;PerformanceAnalysis.PerformanceAnalysisInstanceReference;name;PerformanceAnalysisInstanceReference;performance analysis instance reference;#/components/schemas/PerformanceAnalysis/properties/PerformanceAnalysisInstanceReference;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Goaltypevalues;description;">
+* `Short-TermGoal` - 
+* `Long-TermGoal` - 
+* `BusinessGoal` - 
+* `PerformanceGoal` - 
+* `FinancialGoal` - 
+* `OutcomeGoal` - 
+* `SMARTGoal` - 
+";> * `short term goal` * `long term goal` * `business goal` * `performance goal` * `financial goal` * `outcome goal` * `smartgoal`;#/components/schemas/Goaltypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Goaldatetimetypevalues;description;">
+* `SettingDate` - 
+* `PlanningDate` - 
+* `StartDate` - 
+* `ReviewDate` - 
+* `CompletionDate` - 
+";> * `setting date` * `planning date` * `start date` * `review date` * `completion date`;#/components/schemas/Goaldatetimetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Goaldatetime;description;The key dates and times of Goal like Setting Data, Planning Date, Start Date, Review Date, Completion Date.;the key dates and times of goal like setting data, planning date, start date, review date, completion date.;#/components/schemas/Goaldatetime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goaldatetime.GoalDateAndTime;name;GoalDateAndTime;goal date and time;#/components/schemas/Goaldatetime/properties/GoalDateAndTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goaldatetime.GoalDateAndTimeType;name;GoalDateAndTimeType;goal date and time type;#/components/schemas/Goaldatetime/properties/GoalDateAndTimeType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Goalstatustypevalues;description;">
+* `Setting` - 
+* `Planning` - 
+* `Execution` - 
+* `MonitoringAndEvaluation` - 
+* `CompletionOrAchievement` - 
+* `MaintenanceOrSustainment` - 
+* `ClosureOrRenewal` - 
+";> * `setting` * `planning` * `execution` * `monitoring and evaluation` * `completion or achievement` * `maintenance or sustainment` * `closure or renewal`;#/components/schemas/Goalstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Goalstatus;description;The lifecycle status of Goal like Goal Setting, Planning, Execution, Monitoring and Evaluation, Completion or Achievement, Maintenance or Sustainment, Closure or Renewal;the lifecycle status of goal like goal setting, planning, execution, monitoring and evaluation, completion or achievement, maintenance or sustainment, closure or renewal;#/components/schemas/Goalstatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goalstatus.GoalStatus;name;GoalStatus;goal status;#/components/schemas/Goalstatus/properties/GoalStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goalstatus.GoalStatusType;name;GoalStatusType;goal status type;#/components/schemas/Goalstatus/properties/GoalStatusType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Goal;description;Definition of the performance goals for defined customer segments/cohorts as defined by senior management functions (target/anticipated and actual as assessed).;definition of the performance goals for defined customer segments cohorts as defined by senior management functions (target anticipated and actual as assessed).;#/components/schemas/Goal;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goal.GoalType;name;GoalType;goal type;#/components/schemas/Goal/properties/GoalType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goal.GoalDefinition;name;GoalDefinition;goal definition;#/components/schemas/Goal/properties/GoalDefinition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goal.GoalDefinition;description;The definition of Goal;the definition of goal;#/components/schemas/Goal/properties/GoalDefinition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goal.GoalName;name;GoalName;goal name;#/components/schemas/Goal/properties/GoalName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goal.GoalDateAndTime;name;GoalDateAndTime;goal date and time;#/components/schemas/Goal/properties/GoalDateAndTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Goal.GoalStatus;name;GoalStatus;goal status;#/components/schemas/Goal/properties/GoalStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Schedule;description;The schedule for performing customer portfolio analysis for the enterprise or division;the schedule for performing customer portfolio analysis for the enterprise or division;#/components/schemas/Schedule;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Schedule.ScheduleType;name;ScheduleType;schedule type;#/components/schemas/Schedule/properties/ScheduleType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Customerportfolioanalysistypevalues;description;">
+* `ProfitabilityAnalysis` - It involves evaluating the profitability of different customer segments (cohorts) over time. This analysis helps businesses understand how various customer groups contribute to overall profitability.
+
+Assess which customer segments contribute the most to the company's profits and identify less profitable segments
+
+Purpose:
+
+To assess the financial contribution of different customer segments over time.
+To identify high-value customer groups and optimize profitability.
+
+The main goal is to determine the profitability of individual customers or customer segments. 
+It assesses how much profit a company earns from each customer after accounting for the costs associated with acquiring and serving them.
+
+* `PerformanceAnalysis` - Customer cohort performance analysis combines the principles of cohort analysis with performance metrics to assess and optimize customer behavior and business outcomes over time. This approach helps businesses understand how different cohorts perform in terms of revenue generation, engagement, and other key performance indicators (KPIs).
+
+Purpose:
+
+To evaluate and understand customer behavior over time.
+To track various performance metrics that indicate customer engagement, satisfaction, and retention.
+
+The primary aim is to evaluate and understand how individual customers or customer segments interact with a business's products or services.
+It focuses on metrics related to customer behavior, satisfaction, engagement, and retention.
+";> * `profitability analysis` it involves evaluating the profitability of different customer segments (cohorts) over time. this analysis helps businesses understand how various customer groups contribute to overall profitability. assess which customer segments contribute the most to the company's profits and identify less profitable segments purpose: to assess the financial contribution of different customer segments over time. to identify high value customer groups and optimize profitability. the main goal is to determine the profitability of individual customers or customer segments. it assesses how much profit a company earns from each customer after accounting for the costs associated with acquiring and serving them. * `performance analysis` customer cohort performance analysis combines the principles of cohort analysis with performance metrics to assess and optimize customer behavior and business outcomes over time. this approach helps businesses understand how different cohorts perform in terms of revenue generation, engagement, and other key performance indicators (kpis). purpose: to evaluate and understand customer behavior over time. to track various performance metrics that indicate customer engagement, satisfaction, and retention. the primary aim is to evaluate and understand how individual customers or customer segments interact with a business's products or services. it focuses on metrics related to customer behavior, satisfaction, engagement, and retention.;#/components/schemas/Customerportfolioanalysistypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Date;description;The date/time the performance report was completed;the date time the performance report was completed;#/components/schemas/Date;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Date.DateContent;name;DateContent;date content;#/components/schemas/Date/properties/DateContent;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Directoryentrydatetypevalues;description;">
+* `OpenDate` - 
+* `RefreshDate` - 
+";> * `open date` * `refresh date`;#/components/schemas/Directoryentrydatetypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;DocumentDirectoryEntry;description;Reference to associated performance analysis reporting documents;reference to associated performance analysis reporting documents;#/components/schemas/DocumentDirectoryEntry;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;DocumentDirectoryEntry.DocumentDirectoryEntryIdentification;name;DocumentDirectoryEntryIdentification;document directory entry identification;#/components/schemas/DocumentDirectoryEntry/properties/DocumentDirectoryEntryIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;DocumentDirectoryEntry.DocumentDirectoryEntryIdentification;description;Identification allowing the retrieval of a document from a Document Directory;identification allowing the retrieval of a document from a document directory;#/components/schemas/DocumentDirectoryEntry/properties/DocumentDirectoryEntryIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;DocumentDirectoryEntry.DirectoryEntryDateType;name;DirectoryEntryDateType;directory entry date type;#/components/schemas/DocumentDirectoryEntry/properties/DirectoryEntryDateType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;DocumentDirectoryEntry.DirectoryEntryDate;name;DirectoryEntryDate;directory entry date;#/components/schemas/DocumentDirectoryEntry/properties/DirectoryEntryDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;DocumentDirectoryEntry.DirectoryEntryStatus;name;DirectoryEntryStatus;directory entry status;#/components/schemas/DocumentDirectoryEntry/properties/DirectoryEntryStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;CustomerPortfolioAnalysis;description;Reference to the customer portfolio analysis;reference to the customer portfolio analysis;#/components/schemas/CustomerPortfolioAnalysis;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolioAnalysis.CustomerPortfolioAnalysisType;name;CustomerPortfolioAnalysisType;customer portfolio analysis type;#/components/schemas/CustomerPortfolioAnalysis/properties/CustomerPortfolioAnalysisType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolioAnalysis.AnalysisType;name;AnalysisType;analysis type;#/components/schemas/CustomerPortfolioAnalysis/properties/AnalysisType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolioAnalysis.AnalysisResult;name;AnalysisResult;analysis result;#/components/schemas/CustomerPortfolioAnalysis/properties/AnalysisResult;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolioAnalysis.AnalysisPeriod;name;AnalysisPeriod;analysis period;#/components/schemas/CustomerPortfolioAnalysis/properties/AnalysisPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolioAnalysis.AnalysisDateTime;name;AnalysisDateTime;analysis date time;#/components/schemas/CustomerPortfolioAnalysis/properties/AnalysisDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolioAnalysis.AnalysisSpecification;name;AnalysisSpecification;analysis specification;#/components/schemas/CustomerPortfolioAnalysis/properties/AnalysisSpecification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolioAnalysis.AnalysisSchedule;name;AnalysisSchedule;analysis schedule;#/components/schemas/CustomerPortfolioAnalysis/properties/AnalysisSchedule;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Budgettypevalues;description;">
+* `OperatingBudget` - 
+* `FinancialBudget` - 
+* `ResourceBudget` - 
+";> * `operating budget` * `financial budget` * `resource budget`;#/components/schemas/Budgettypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Budgettype;description;A Classification value that specifies the type of Budget;a classification value that specifies the type of budget;#/components/schemas/Budgettype;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgettype.BudgetTypeName;name;BudgetTypeName;budget type name;#/components/schemas/Budgettype/properties/BudgetTypeName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgettype.BudgetType;name;BudgetType;budget type;#/components/schemas/Budgettype/properties/BudgetType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Currencycode.Currencycode;name;Currencycode;currencycode;#/components/schemas/Currencycode/properties/Currencycode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Currencycode.Currencycode;description;"A code identifying a currency according to ISO-4217.
+A currency is a system of money in general use in a particular country.
+
+Code allocated to a currency, by a maintenance agency, under an international identification scheme as described in the latest edition of the international standard ISO 4217 ""Codes for the representation of currencies and funds"". Valid currency codes are registered with the ISO 4217 Maintenance Agency, and consist of three contiguous letters. (ISO20022)
+
+";"a code identifying a currency according to iso 4217. a currency is a system of money in general use in a particular country. code allocated to a currency, by a maintenance agency, under an international identification scheme as described in the latest edition of the international standard iso 4217 ""codes for the representation of currencies and funds"". valid currency codes are registered with the iso 4217 maintenance agency, and consist of three contiguous letters. (iso20022)";#/components/schemas/Currencycode/properties/Currencycode;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Amounttypevalues;description;">
+* `Principal` - 
+* `Actual` - Actual amount.
+* `Estimated` - Estimated amount (the final amount could be above or below).
+* `Maximum` - Maximum amount (the final amount must be less or equal).
+* `Default` - Default amount.
+* `Replacement` - Replacement amount.
+* `Incremental` - Incremental amount for reservation.
+* `Decremental` - Decremental amount for reservation.
+* `Reserved` - Reserved or updated reserved amount for reservation.
+* `Available` - 
+* `Used` - 
+* `DuePayable` - 
+* `Minimum` - 
+* `Open` - The amount is open.(ISO20022)
+* `Unknown` - The amount is unkown.(ISO20022)
+* `Fixed` - The amount represents a fixed value.(ISO20022)
+";> * `principal` * `actual` actual amount. * `estimated` estimated amount (the final amount could be above or below). * `maximum` maximum amount (the final amount must be less or equal). * `default` default amount. * `replacement` replacement amount. * `incremental` incremental amount for reservation. * `decremental` decremental amount for reservation. * `reserved` reserved or updated reserved amount for reservation. * `available` * `used` * `due payable` * `minimum` * `open` the amount is open.(iso20022) * `unknown` the amount is unkown.(iso20022) * `fixed` the amount represents a fixed value.(iso20022);#/components/schemas/Amounttypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Amount.AmountValue;name;AmountValue;amount value;#/components/schemas/Amount/properties/AmountValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Amount.AmountCurrency;name;AmountCurrency;amount currency;#/components/schemas/Amount/properties/AmountCurrency;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Amount.DecimalPointPosition;name;DecimalPointPosition;decimal point position;#/components/schemas/Amount/properties/DecimalPointPosition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Amount.DecimalPointPosition;description;"Decimal point position starts calulating from the right
+";decimal point position starts calulating from the right;#/components/schemas/Amount/properties/DecimalPointPosition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Amount.AmountType;name;AmountType;amount type;#/components/schemas/Amount/properties/AmountType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Actiontypevalues;description;">
+* `Initiate` - 
+* `Execute` - 
+* `Create` - 
+* `Transfer` - 
+* `Pay` - 
+* `Deliver` - 
+* `Apply` - 
+* `Calculate` - 
+";> * `initiate` * `execute` * `create` * `transfer` * `pay` * `deliver` * `apply` * `calculate`;#/components/schemas/Actiontypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Geographicalareatypevalues;description;">
+* `Continent` - 
+* `Country` - 
+* `State` - 
+* `District` - 
+* `Province` - 
+* `Town` - 
+* `City` - 
+* `Region` - 
+";> * `continent` * `country` * `state` * `district` * `province` * `town` * `city` * `region`;#/components/schemas/Geographicalareatypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationDescription;name;LocationDescription;location description;#/components/schemas/Location/properties/LocationDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationDescription;description;A description of the property, particularly if it has landmark characteristics.;a description of the property, particularly if it has landmark characteristics.;#/components/schemas/Location/properties/LocationDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationDateTime;name;LocationDateTime;location date time;#/components/schemas/Location/properties/LocationDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationStatus;name;LocationStatus;location status;#/components/schemas/Location/properties/LocationStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationType;name;LocationType;location type;#/components/schemas/Location/properties/LocationType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationZoningType;name;LocationZoningType;location zoning type;#/components/schemas/Location/properties/LocationZoningType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationZoningType;description;The planning or zoning status (e.g. residential, commercial, industrial).;the planning or zoning status (e.g. residential, commercial, industrial).;#/components/schemas/Location/properties/LocationZoningType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationNeighborhoodType;name;LocationNeighborhoodType;location neighborhood type;#/components/schemas/Location/properties/LocationNeighborhoodType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationNeighborhoodType;description;The general purpose and neighborhood of the property  (e.g. residential, industrial, commercial).;the general purpose and neighborhood of the property (e.g. residential, industrial, commercial).;#/components/schemas/Location/properties/LocationNeighborhoodType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationConstructionType;name;LocationConstructionType;location construction type;#/components/schemas/Location/properties/LocationConstructionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationConstructionType;description;The construction approach for a property at the location (e.g. era and architecture as might be used in valuation).;the construction approach for a property at the location (e.g. era and architecture as might be used in valuation).;#/components/schemas/Location/properties/LocationConstructionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationOccupancyType;name;LocationOccupancyType;location occupancy type;#/components/schemas/Location/properties/LocationOccupancyType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationOccupancyType;description;The type of occupancy (e.g. residency, business, retail, entertainment).;the type of occupancy (e.g. residency, business, retail, entertainment).;#/components/schemas/Location/properties/LocationOccupancyType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationValue;name;LocationValue;location value;#/components/schemas/Location/properties/LocationValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationValue;description;The estimated (book) value of the property at the location - rental and purchase as appropriate.;the estimated (book) value of the property at the location rental and purchase as appropriate.;#/components/schemas/Location/properties/LocationValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationCapacity;name;LocationCapacity;location capacity;#/components/schemas/Location/properties/LocationCapacity;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationCapacity;description;An indication of the size or scale of the property where appropriate (e.g. 4 bedroom, 600 seat auditorium, 40 cover restaurant).;an indication of the size or scale of the property where appropriate (e.g. 4 bedroom, 600 seat auditorium, 40 cover restaurant).;#/components/schemas/Location/properties/LocationCapacity;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationIdentification;name;LocationIdentification;location identification;#/components/schemas/Location/properties/LocationIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationAddress;name;LocationAddress;location address;#/components/schemas/Location/properties/LocationAddress;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationAddress;description;Reference to the address of location;reference to the address of location;#/components/schemas/Location/properties/LocationAddress;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationName;name;LocationName;location name;#/components/schemas/Location/properties/LocationName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationTimeZone;name;LocationTimeZone;location time zone;#/components/schemas/Location/properties/LocationTimeZone;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Location.LocationTimeZone;description;Local time zone.;local time zone.;#/components/schemas/Location/properties/LocationTimeZone;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.ActionType;name;ActionType;action type;#/components/schemas/Action/properties/ActionType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventType;name;EventType;event type;#/components/schemas/Action/properties/EventType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventDateTime;name;EventDateTime;event date time;#/components/schemas/Action/properties/EventDateTime;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventDescription;name;EventDescription;event description;#/components/schemas/Action/properties/EventDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventSource;name;EventSource;event source;#/components/schemas/Action/properties/EventSource;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventLocation;name;EventLocation;event location;#/components/schemas/Action/properties/EventLocation;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventAction;name;EventAction;event action;#/components/schemas/Action/properties/EventAction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventStatus;name;EventStatus;event status;#/components/schemas/Action/properties/EventStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventValue;name;EventValue;event value;#/components/schemas/Action/properties/EventValue;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventValidityPeriod;name;EventValidityPeriod;event validity period;#/components/schemas/Action/properties/EventValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Action.EventIdentification;name;EventIdentification;event identification;#/components/schemas/Action/properties/EventIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Arrangementstatustypevalues;description;">
+* `Requested` - 
+* `Proposed` - 
+* `Offered` - 
+* `Accepted` - 
+* `Cancelled` - 
+* `Fulfilled` - 
+* `Terminated` - 
+";> * `requested` * `proposed` * `offered` * `accepted` * `cancelled` * `fulfilled` * `terminated`;#/components/schemas/Arrangementstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Arrangementstatus;description;A characteristic of arrangement which refers to the LifecycleStatus of arrangement (e.g., requested, proposed, offered, accepted, cancelled, terminated, fulfilled, etc.);a characteristic of arrangement which refers to the lifecycle status of arrangement (e.g., requested, proposed, offered, accepted, cancelled, terminated, fulfilled, etc.);#/components/schemas/Arrangementstatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Arrangementstatus.ArrangementStatus;name;ArrangementStatus;arrangement status;#/components/schemas/Arrangementstatus/properties/ArrangementStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Arrangementstatus.ArrangementStatusType;name;ArrangementStatusType;arrangement status type;#/components/schemas/Arrangementstatus/properties/ArrangementStatusType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Subject.Subject;name;Subject;subject;#/components/schemas/Subject/properties/Subject;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Subject.Subject;description;A thing that is discussed or dealt whit in agreement/arrangement about doing or not doing (as action) something.;a thing that is discussed or dealt whit in agreement arrangement about doing or not doing (as action) something.;#/components/schemas/Subject/properties/Subject;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Arrangementtypevalues;description;">
+* `SweepArrangement` - An arrangement into which is promised for the set-up and execution of structured sweeps to and from the facility to a linked account.
+* `WithdrawalArrangement` - An arrangement into which is promised to deliver Withdraw Service  to take fund out of an account. 
+* `DepositArrangement` - An arrangement into which is promised to deliver Deposit Service  to place funds into an account for safekeeping. 
+* `InterestArrangement` - An arrangement into which is promised to apply a pricing element expressed in a percentage  to a principal amount.
+* `FeeArrangement` - An arrangement into which is promised to apply a charge for services rendered. 
+* `LienArrangement` - An arrangement into which is promised for placing a lien or block on the account for a specified purpose, amount, and period. 
+* `InformationArrangement` - An arrangement concerning the information the bank will provide about the agreement/account
+* `PaymentArrangement` - An arrangement into which is promised to deliver a specific payment service including regular payments, standing orders, direct debits and bill pay instructions. 
+* `EntitlementArrangement` - Right or obligation linked to the involvement of a party in an agreement
+* `PeriodArrangement` - 
+* `CollateralArrangement` - An arrangement into which is promised for handling the oversight of the allocation, valuation and administration of collateral associated with the facility. 
+* `LimitArrangement` - An arrangement to limit something
+e.g., the number of transaction per week, the amount of money allowed to withdraw per week/day and etc. 
+* `AccessArrangement` - An arrangement that allows or restricts the access to a service or product, channel or device through a specific access point
+* `CardPaymentArrangement` - An arrangement into which is promised to deliver Card payment Service to execute payment transactions through a payment card, including online payments. 
+* `StandingOrderArrangement` - An arrangement into which is promised to deliver Standing Order Service to make regular transfers on given dates to a named beneﬁciary. 
+* `OverdraftArrangement` - An arrangement into which is promised to deliver Overdraft Service  that allows fund transfer even if there is no provision on the account. 
+* `RepaymentArrangement` - An arrangement into which is promised for paying back money previously borrowed from a lender. 
+* `StatementArrangement` - An arrangement into which is promised to deliver a reporting service on payment transactions registered on an account. 
+* `CreditTransferArrangement` - An arrangement into which is promised to allow a payer to transfer fund to a beneficiary. 
+* `ProductAndServiceArrangement` - 
+* `FactoringArrangement` - 
+* `RolloverArrangement` - Arrangement stipulating the modalities for an automatic renewal of the agreement
+
+i.e. the replacement of the agreement with a new one without renewed negociation and witout explicit agreement of the customer 
+* `RestructuringArrangement` - 
+* `InsuranceArrangement` - 
+* `CollectionArrangement` - An arrangement into which is promised to collect past-due debts from borrowers
+* `UnderwritingArrangement` - A contractual agreement between parties that commits the underwriter to assuming risk.
+* `TerminationArrangement` - 
+* `MaturityArrangement` - 
+* `AdministrativeArrangement` - 
+";> * `sweep arrangement` an arrangement into which is promised for the set up and execution of structured sweeps to and from the facility to a linked account. * `withdrawal arrangement` an arrangement into which is promised to deliver withdraw service to take fund out of an account. * `deposit arrangement` an arrangement into which is promised to deliver deposit service to place funds into an account for safekeeping. * `interest arrangement` an arrangement into which is promised to apply a pricing element expressed in a percentage to a principal amount. * `fee arrangement` an arrangement into which is promised to apply a charge for services rendered. * `lien arrangement` an arrangement into which is promised for placing a lien or block on the account for a specified purpose, amount, and period. * `information arrangement` an arrangement concerning the information the bank will provide about the agreement account * `payment arrangement` an arrangement into which is promised to deliver a specific payment service including regular payments, standing orders, direct debits and bill pay instructions. * `entitlement arrangement` right or obligation linked to the involvement of a party in an agreement * `period arrangement` * `collateral arrangement` an arrangement into which is promised for handling the oversight of the allocation, valuation and administration of collateral associated with the facility. * `limit arrangement` an arrangement to limit something e.g., the number of transaction per week, the amount of money allowed to withdraw per week day and etc. * `access arrangement` an arrangement that allows or restricts the access to a service or product, channel or device through a specific access point * `card payment arrangement` an arrangement into which is promised to deliver card payment service to execute payment transactions through a payment card, including online payments. * `standing order arrangement` an arrangement into which is promised to deliver standing order service to make regular transfers on given dates to a named beneﬁciary. * `overdraft arrangement` an arrangement into which is promised to deliver overdraft service that allows fund transfer even if there is no provision on the account. * `repayment arrangement` an arrangement into which is promised for paying back money previously borrowed from a lender. * `statement arrangement` an arrangement into which is promised to deliver a reporting service on payment transactions registered on an account. * `credit transfer arrangement` an arrangement into which is promised to allow a payer to transfer fund to a beneficiary. * `product and service arrangement` * `factoring arrangement` * `rollover arrangement` arrangement stipulating the modalities for an automatic renewal of the agreement i.e. the replacement of the agreement with a new one without renewed negociation and witout explicit agreement of the customer * `restructuring arrangement` * `insurance arrangement` * `collection arrangement` an arrangement into which is promised to collect past due debts from borrowers * `underwriting arrangement` a contractual agreement between parties that commits the underwriter to assuming risk. * `termination arrangement` * `maturity arrangement` * `administrative arrangement`;#/components/schemas/Arrangementtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Budgetarrangement;description;An arrangement which is specifying an estimate of costs, revenues, and resources over a specified period, reflecting a reading of future financial conditions and goals. (adapted from Business Dictionary);an arrangement which is specifying an estimate of costs, revenues, and resources over a specified period, reflecting a reading of future financial conditions and goals. (adapted from business dictionary);#/components/schemas/Budgetarrangement;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgetarrangement.BudgetType;name;BudgetType;budget type;#/components/schemas/Budgetarrangement/properties/BudgetType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgetarrangement.BudgetAmount;name;BudgetAmount;budget amount;#/components/schemas/Budgetarrangement/properties/BudgetAmount;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgetarrangement.ArrangementAction;name;ArrangementAction;arrangement action;#/components/schemas/Budgetarrangement/properties/ArrangementAction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgetarrangement.ArrangementStartDate;name;ArrangementStartDate;arrangement start date;#/components/schemas/Budgetarrangement/properties/ArrangementStartDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgetarrangement.ArrangementEndDate;name;ArrangementEndDate;arrangement end date;#/components/schemas/Budgetarrangement/properties/ArrangementEndDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgetarrangement.ArrangementStatus;name;ArrangementStatus;arrangement status;#/components/schemas/Budgetarrangement/properties/ArrangementStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgetarrangement.ArrangementSubjectMatter;name;ArrangementSubjectMatter;arrangement subject matter;#/components/schemas/Budgetarrangement/properties/ArrangementSubjectMatter;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgetarrangement.Arrangementtype;name;Arrangementtype;arrangementtype;#/components/schemas/Budgetarrangement/properties/Arrangementtype;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Budgetarrangement.ArrangementIdentification;name;ArrangementIdentification;arrangement identification;#/components/schemas/Budgetarrangement/properties/ArrangementIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Plannedaction;description;An action that is arranged in a plan for doing or achieving something ;an action that is arranged in a plan for doing or achieving something;#/components/schemas/Plannedaction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Plannedaction.ArrangementAction;name;ArrangementAction;arrangement action;#/components/schemas/Plannedaction/properties/ArrangementAction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Plannedaction.ArrangementStartDate;name;ArrangementStartDate;arrangement start date;#/components/schemas/Plannedaction/properties/ArrangementStartDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Plannedaction.ArrangementEndDate;name;ArrangementEndDate;arrangement end date;#/components/schemas/Plannedaction/properties/ArrangementEndDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Plannedaction.ArrangementStatus;name;ArrangementStatus;arrangement status;#/components/schemas/Plannedaction/properties/ArrangementStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Plannedaction.ArrangementSubjectMatter;name;ArrangementSubjectMatter;arrangement subject matter;#/components/schemas/Plannedaction/properties/ArrangementSubjectMatter;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Plannedaction.Arrangementtype;name;Arrangementtype;arrangementtype;#/components/schemas/Plannedaction/properties/Arrangementtype;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Plannedaction.ArrangementIdentification;name;ArrangementIdentification;arrangement identification;#/components/schemas/Plannedaction/properties/ArrangementIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Plantypevalues;description;">
+* `AdministrativePlan` - 
+* `ManagementPlan` - 
+* `StratgyPlan` - 
+* `FinancialPlan` - 
+* `DevelopmentPlan` - 
+";> * `administrative plan` * `management plan` * `stratgy plan` * `financial plan` * `development plan`;#/components/schemas/Plantypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Strategy;description;Strategy set for the portfolio.(ISO20022);strategy set for the portfolio.(iso20022);#/components/schemas/Strategy;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Strategy.PlanGoal;name;PlanGoal;plan goal;#/components/schemas/Strategy/properties/PlanGoal;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Strategy.PlanBudget;name;PlanBudget;plan budget;#/components/schemas/Strategy/properties/PlanBudget;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Strategy.PlannedAction;name;PlannedAction;planned action;#/components/schemas/Strategy/properties/PlannedAction;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Strategy.PlanType;name;PlanType;plan type;#/components/schemas/Strategy/properties/PlanType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Strategy.PlanValidityPeriod;name;PlanValidityPeriod;plan validity period;#/components/schemas/Strategy/properties/PlanValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Strategy.PlanDescription;name;PlanDescription;plan description;#/components/schemas/Strategy/properties/PlanDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;CustomerPortfolio;description;Reference to a customer portfolio;reference to a customer portfolio;#/components/schemas/CustomerPortfolio;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolio.PortfolioIdentification;name;PortfolioIdentification;portfolio identification;#/components/schemas/CustomerPortfolio/properties/PortfolioIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolio.PortfolioName;name;PortfolioName;portfolio name;#/components/schemas/CustomerPortfolio/properties/PortfolioName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolio.PortfolioStrategy;name;PortfolioStrategy;portfolio strategy;#/components/schemas/CustomerPortfolio/properties/PortfolioStrategy;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;CustomerPortfolio.PortfolioDescription;name;PortfolioDescription;portfolio description;#/components/schemas/CustomerPortfolio/properties/PortfolioDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Rulesettypevalues;description;">
+* `Policy` - Rule that governs business execution.
+
+The set of basic principles and associated guidelines, formulated and enforced by the governing body of an organization, to direct and limit its actions in pursuit of long-term goals. (Business Dictionary)
+
+* `Regulation` - A rule used to carry out a law (FIBO)
+
+Business Dictionary: a rule (with or without the coercive power of law) employed in controlling, directing, or managing an activity, organization, or system. 
+
+The set of rules and legislation governing certain actions. 
+https://financial-dictionary.thefreedictionary.com/Regulatory
+* `Law` - A binding rule that the courts will enforce.
+A system of rules and guidelines which are enforced through social institutions to govern behavior. (FIBO)
+
+* `Guideline` - A recommended practice (adapted from Business Dictionary)
+A general rule, principle, or piece of advice.
+* `Criterion` - A principle or standard by which something may be judged or decided.
+
+Read more: http://www.businessdictionary.com/definition/criterion.html
+* `Standard` - A rule considered by an authority or by general consent as a basis of comparison
+";> * `policy` rule that governs business execution. the set of basic principles and associated guidelines, formulated and enforced by the governing body of an organization, to direct and limit its actions in pursuit of long term goals. (business dictionary) * `regulation` a rule used to carry out a law (fibo) business dictionary: a rule (with or without the coercive power of law) employed in controlling, directing, or managing an activity, organization, or system. the set of rules and legislation governing certain actions. https: financial dictionary.thefreedictionary.com regulatory * `law` a binding rule that the courts will enforce. a system of rules and guidelines which are enforced through social institutions to govern behavior. (fibo) * `guideline` a recommended practice (adapted from business dictionary) a general rule, principle, or piece of advice. * `criterion` a principle or standard by which something may be judged or decided. read more: http: www.businessdictionary.com definition criterion.html * `standard` a rule considered by an authority or by general consent as a basis of comparison;#/components/schemas/Rulesettypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;RuleSet;description;Reference to the criteria used to categorize and evaluate the customers within a business's overall customer base;reference to the criteria used to categorize and evaluate the customers within a business's overall customer base;#/components/schemas/RuleSet;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;RuleSet.RuleSetDefinition;name;RuleSetDefinition;rule set definition;#/components/schemas/RuleSet/properties/RuleSetDefinition;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;RuleSet.RuleSetInterpretation;name;RuleSetInterpretation;rule set interpretation;#/components/schemas/RuleSet/properties/RuleSetInterpretation;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;RuleSet.RuleSetType;name;RuleSetType;rule set type;#/components/schemas/RuleSet/properties/RuleSetType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;RuleSet.RuleSetName;name;RuleSetName;rule set name;#/components/schemas/RuleSet/properties/RuleSetName;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;RuleSet.RuleSetIdentification;name;RuleSetIdentification;rule set identification;#/components/schemas/RuleSet/properties/RuleSetIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;RuleSet.RuleSetLifecycleStatus;name;RuleSetLifecycleStatus;rule set lifecycle status;#/components/schemas/RuleSet/properties/RuleSetLifecycleStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Productagreementtypevalues;description;">
+* `CurrentAccountAgreement` - 
+* `SavingsAccountAgreement` - 
+* `BrokeredProductAgreement` - 
+* `ConsumerLoanAgreement` - 
+* `MortgageLoanAgreement` - 
+* `DirectDebitServiceAgreement` - 
+* `TermDepositAgreement` - 
+";> * `current account agreement` * `savings account agreement` * `brokered product agreement` * `consumer loan agreement` * `mortgage loan agreement` * `direct debit service agreement` * `term deposit agreement`;#/components/schemas/Productagreementtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Agreementtypevalues;description;">
+* `CustomerAgreement` - 
+* `SupplierAgreement` - 
+* `BrokerAgreement` - 
+* `SalesAgreement` - 
+* `PurchaseAgreement` - 
+* `MaintenanceAgreement` - 
+* `ProductAgreement` - 
+* `ResourceAgreement` - 
+* `PartnerAgreement` - 
+* `MasterAgreement` - 
+* `BilateralAgreement` - 
+* `RepurchaseAgreement` - 
+";> * `customer agreement` * `supplier agreement` * `broker agreement` * `sales agreement` * `purchase agreement` * `maintenance agreement` * `product agreement` * `resource agreement` * `partner agreement` * `master agreement` * `bilateral agreement` * `repurchase agreement`;#/components/schemas/Agreementtypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Agreementstatustypevalues;description;">
+* `Offered` - 
+* `Confirmed` - 
+* `Completed` - 
+* `Signed` - 
+* `Terminated` - 
+* `Rejected` - 
+";> * `offered` * `confirmed` * `completed` * `signed` * `terminated` * `rejected`;#/components/schemas/Agreementstatustypevalues;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;Agreementstatus;description;A characteristic of agreement which refers to the LifecycleStatus of agreement (e.g., potential, offered, confirmed, completed, signed, terminated).;a characteristic of agreement which refers to the lifecycle status of agreement (e.g., potential, offered, confirmed, completed, signed, terminated).;#/components/schemas/Agreementstatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Agreementstatus.AgreementStatus;name;AgreementStatus;agreement status;#/components/schemas/Agreementstatus/properties/AgreementStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;Agreementstatus.AgreementStatusType;name;AgreementStatusType;agreement status type;#/components/schemas/Agreementstatus/properties/AgreementStatusType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;schema;ProductAgreement;description;Reference to the customer product involved in Portfolio;reference to the customer product involved in portfolio;#/components/schemas/ProductAgreement;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.ProductAgreementType;name;ProductAgreementType;product agreement type;#/components/schemas/ProductAgreement/properties/ProductAgreementType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.ProductAgreementIdentification;name;ProductAgreementIdentification;product agreement identification;#/components/schemas/ProductAgreement/properties/ProductAgreementIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.AgreementSignedDate;name;AgreementSignedDate;agreement signed date;#/components/schemas/ProductAgreement/properties/AgreementSignedDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.AgreementType;name;AgreementType;agreement type;#/components/schemas/ProductAgreement/properties/AgreementType;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.AgreementValidityPeriod;name;AgreementValidityPeriod;agreement validity period;#/components/schemas/ProductAgreement/properties/AgreementValidityPeriod;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.AgreementVersion;name;AgreementVersion;agreement version;#/components/schemas/ProductAgreement/properties/AgreementVersion;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.AgreementStatus;name;AgreementStatus;agreement status;#/components/schemas/ProductAgreement/properties/AgreementStatus;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.AgreementSubjectMatter;name;AgreementSubjectMatter;agreement subject matter;#/components/schemas/ProductAgreement/properties/AgreementSubjectMatter;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.AgreementIdentification;name;AgreementIdentification;agreement identification;#/components/schemas/ProductAgreement/properties/AgreementIdentification;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.AgreementDate;name;AgreementDate;agreement date;#/components/schemas/ProductAgreement/properties/AgreementDate;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml
+BIAN;CustomerPortfolio.yaml;property;ProductAgreement.AgreementDescription;name;AgreementDescription;agreement description;#/components/schemas/ProductAgreement/properties/AgreementDescription;https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerPortfolio.yaml

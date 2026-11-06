@@ -1,0 +1,3 @@
+﻿ofb_operation_id;bian_operation_id;s_coseno;s_ge_045;s_ge_055;s_ge_065;ofb_texto;bian_texto
+getPersonalAccounts;RetrieveCharge;0.3912;False;False;False;Obtém dados das contas pessoa natural Obtém dados das contas;ReBQ Retrieve information about a service fee applied to the account
+getBusinessAccounts;Retrieve;0.5211;True;False;False;Obtém dados das contas pessoa jurídica;ReCR Retrieve information about a current account - either standard canned reports or selected instance attribute values

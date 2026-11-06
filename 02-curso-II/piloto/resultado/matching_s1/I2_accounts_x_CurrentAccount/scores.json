@@ -1,0 +1,103 @@
+{
+  "id": "I2",
+  "ofb": "OFB_accounts_2.4.2.yml",
+  "bian": "CurrentAccount.yaml",
+  "prioridad": "semana-10-11",
+  "git_commit": "ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747",
+  "parser_id": "procesar_openapi.py",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "text_field": "raw_text (fallback: normalized_text / operation_id)",
+  "pares_estructurales": "congelados de matching v0 (OE2)",
+  "fecha": "2026-11-06T20:50:09Z",
+  "S_v0_lexico": 0.0099,
+  "S": 0.5306,
+  "E": 0.4736,
+  "E_estrella": 0.5683,
+  "C": 0.5,
+  "AlignmentScore_v0": 0.3278,
+  "AlignmentScore": 0.5014,
+  "nivel_v0": "Nula",
+  "nivel": "Baja",
+  "n_pares": 5,
+  "n_operaciones_ofb": 6,
+  "catalogo_cr_bq": [
+    "CR - CurrentAccountFacility",
+    "BQ - Interest",
+    "BQ - Charge",
+    "BQ - Sweep",
+    "BQ - DebitandCredit",
+    "BQ - Payment",
+    "BQ - IssuedDevice",
+    "BQ - Booking",
+    "BQ - Deposit",
+    "BQ - AmountBlock"
+  ],
+  "catalogo_cubierto": [
+    "CR - CurrentAccountFacility",
+    "BQ - Interest",
+    "BQ - Charge",
+    "BQ - Payment",
+    "BQ - Deposit"
+  ],
+  "umbrales": {
+    "coseno_semantico": 0.55,
+    "sensibilidad_coseno": [
+      0.45,
+      0.55,
+      0.65
+    ],
+    "nivel_alta": 0.8,
+    "nivel_media": 0.6,
+    "nivel_baja": 0.4
+  },
+  "pesos_oficiales": {
+    "alpha": 0.3333333333333333,
+    "beta": 0.3333333333333333,
+    "gamma": 0.3333333333333333
+  },
+  "sensibilidad_umbral_S": [
+    {
+      "umbral": 0.45,
+      "pares_sobre_umbral": 5,
+      "fraccion": 1.0,
+      "S_si_bajo_umbral_es_cero": 0.5306,
+      "AlignmentScore_con_S_clip": 0.5014
+    },
+    {
+      "umbral": 0.55,
+      "pares_sobre_umbral": 2,
+      "fraccion": 0.4,
+      "S_si_bajo_umbral_es_cero": 0.2358,
+      "AlignmentScore_con_S_clip": 0.4031
+    },
+    {
+      "umbral": 0.65,
+      "pares_sobre_umbral": 0,
+      "fraccion": 0.0,
+      "S_si_bajo_umbral_es_cero": 0.0,
+      "AlignmentScore_con_S_clip": 0.3245
+    }
+  ],
+  "sensibilidad_pesos": [
+    {
+      "alpha": 0.5,
+      "beta": 0.3,
+      "gamma": 0.2,
+      "AlignmentScore": 0.5074,
+      "nivel": "Baja"
+    },
+    {
+      "alpha": 0.2,
+      "beta": 0.5,
+      "gamma": 0.3,
+      "AlignmentScore": 0.4929,
+      "nivel": "Baja"
+    }
+  ],
+  "leakage": {
+    "cr_bq_copiados_a_ofb": false,
+    "bian_contra_bian": false,
+    "etiquetado_manual_ml": false,
+    "pares_semanticos_sueltos": false
+  }
+}

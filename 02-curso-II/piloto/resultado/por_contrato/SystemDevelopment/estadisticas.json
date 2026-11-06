@@ -1,0 +1,29 @@
+{
+  "archivo_entrada": "SystemDevelopment.yaml",
+  "source": "BIAN",
+  "contrato": "System Development",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 31,
+  "cantidad_schemas": 20,
+  "cantidad_propiedades": 57,
+  "fragmentos_corpus": 128,
+  "operaciones_con_summary": 31,
+  "operaciones_con_description": 31,
+  "operaciones_summary_igual_description": 31,
+  "metodos": {
+    "PUT": 24,
+    "POST": 1,
+    "GET": 6
+  },
+  "tags": {
+    "CR - ITSystemDevelopment": 6,
+    "BQ - FunctionalSpecification": 5,
+    "BQ - TechnicalSpecification": 5,
+    "BQ - SoftwareandDataSpecification": 5,
+    "BQ - TestingSpecification": 5,
+    "BQ - UsageSpecification": 5
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/SystemDevelopment.yaml"
+}

@@ -1,0 +1,25 @@
+{
+  "archivo_entrada": "BranchCurrencyManagement.yaml",
+  "source": "BIAN",
+  "contrato": "Branch Currency Management",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 12,
+  "cantidad_schemas": 65,
+  "cantidad_propiedades": 178,
+  "fragmentos_corpus": 273,
+  "operaciones_con_summary": 12,
+  "operaciones_con_description": 12,
+  "operaciones_summary_igual_description": 12,
+  "metodos": {
+    "PUT": 8,
+    "POST": 2,
+    "GET": 2
+  },
+  "tags": {
+    "CR - BranchCashAllocation": 6,
+    "BQ - InventoryAllocation": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/BranchCurrencyManagement.yaml"
+}

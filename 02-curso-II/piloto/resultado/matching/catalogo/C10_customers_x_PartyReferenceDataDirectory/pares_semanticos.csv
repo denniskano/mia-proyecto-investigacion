@@ -1,0 +1,7 @@
+﻿ofb_operation_id;bian_operation_id;s_jaccard;s_tfidf;s_pair;ofb_texto;bian_texto
+customersGetPersonalIdentifications;;0.0;0.0;0.0;obtém os registros de identificação da pessoa natural. método para obter os registros de identificação da pessoa natural mantidos na instituição transmissora.;
+customersGetPersonalQualifications;;0.0;0.0;0.0;obtém os registros de qualificação da pessoa natural. método para obter os registros de qualificação da pessoa natural mantidos na instituição transmissora.;
+customersGetPersonalFinancialRelations;;0.0;0.0;0.0;obtém os registros de relacionamentos com a instituição financeira e de representantes da pessoa natural. método para obter registros de relacionamentos com a instituição financeira e de representantes da pessoa natural mantidos na institui;
+customersGetBusinessIdentifications;;0.0;0.0;0.0;obtém os registros de identificação da pessoa jurídica. método para obter os registros de identificação da pessoa jurídica mantidos na instituição transmissora;
+customersGetBusinessQualifications;;0.0;0.0;0.0;obtém os registros de qualificação da pessoa jurídica. método para obter os registros de qualificação da pessoa jurídica mantidos na instituição transmissora.;
+customersGetBusinessFinancialRelations;;0.0;0.0;0.0;obtém os registros de relacionamentos com a instituição financeira e de representantes da pessoa jurídica. método para obter registros de relacionamentos com a instituição financeira e de representantes da pessoa jurídica mantidos na instit;

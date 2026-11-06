@@ -1,0 +1,31 @@
+{
+  "archivo_entrada": "CardClearing.yaml",
+  "source": "BIAN",
+  "contrato": "Card Clearing",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 13,
+  "cantidad_schemas": 156,
+  "cantidad_propiedades": 427,
+  "fragmentos_corpus": 627,
+  "operaciones_con_summary": 13,
+  "operaciones_con_description": 13,
+  "operaciones_summary_igual_description": 13,
+  "metodos": {
+    "POST": 1,
+    "PUT": 4,
+    "GET": 8
+  },
+  "tags": {
+    "CR - CardClearingProcedure": 3,
+    "BQ - Capture": 2,
+    "BQ - Addressing": 1,
+    "BQ - FXConversion": 1,
+    "BQ - Charge": 3,
+    "BQ - Matching": 1,
+    "BQ - Reconciliation": 1,
+    "BQ - Routing": 1
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CardClearing.yaml"
+}

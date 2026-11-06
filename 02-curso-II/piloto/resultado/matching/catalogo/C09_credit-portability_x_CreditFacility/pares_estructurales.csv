@@ -1,0 +1,7 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+creditPortabilityPostPortabilities;POST;/portabilities;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+creditPortabilityGetPortabilitiesByPortabilityId;GET;/portabilities/{portabilityId};;;;;0.0;0.0;False;0.0;0.0;0.0;False
+creditPortabilityPatchPortabilitiesPortabilityIdCancel;PATCH;/portabilities/{portabilityId}/cancel;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+creditPortabilityGetCreditOperationsContratIdPortabilityEligibility;GET;/credit-operations/{contractId}/portability-eligibility;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+creditPortabilityGetAccountData;GET;/portabilities/{portabilityId}/account-data;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+creditPortabilityPostPortabilitiesPortabilityIdPayment;POST;/portabilities/{portabilityId}/payment;;;;;0.0;0.0;False;0.0;0.0;0.0;False

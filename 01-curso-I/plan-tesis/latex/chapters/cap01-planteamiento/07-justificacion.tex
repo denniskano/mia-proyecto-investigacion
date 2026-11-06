@@ -1,17 +1,16 @@
 \section{Justificación e importancia}
 
-Si cada \textit{release} de una API puede alejarse del modelo de negocio acordado, conviene
-detectarlo en el YAML, no en producción. Farzi (2021) y Bhatia (2022) describen esa deriva entre
-producto, integración y gobernanza cuando BIAN y el contrato no se rastrean.
+Farzi (2021) y Bhatia (2022) describen la deriva entre producto, integración y gobernanza cuando
+el contrato y BIAN dejan de rastrearse. Un \textit{release} puede alejarse del modelo de negocio
+sin que eso se mida hasta producción. Con decenas de APIs y de socios, leer el Swagger a mano no
+ordena la cola de revisión.
 
-Revisar a mano no escala con decenas de APIs y socios. Por eso el grupo puntúa la coherencia con
-\AlignmentScore{} y las preguntas P1--P4 (§\ref{sec:planteamiento}): una cola de revisión puede
-ordenarse con evidencia (Shabbir et al., 2025), no con intuición.
+\AlignmentScore{}, junto con P1--P4 (§\ref{sec:planteamiento}), pone un número sobre el YAML.
+Shabbir et al.\ (2025) piden exactamente eso para consistencia y mantenibilidad: evidencia, no el
+parecer de una reunión de arquitectura. Casas et al.\ (2021) ya dejan OpenAPI maduro como
+artefacto. Lo que este plan agrega es el cruce con un \ServiceDomain{} y un procedimiento que
+otro pueda repetir (Anexo~C).
 
-OpenAPI como artefacto técnico ya está maduro (Casas et al., 2021). Falta el cruce con un
-\ServiceDomain{} BIAN y un número que se pueda repetir. El procedimiento y la matriz (Anexo~C)
-son esa pieza.
-
-S y E se apoyan en alineación de esquemas y similitud semántica. No pretendemos reemplazar pruebas
-\textit{runtime} ni un sello regulatorio (eje E5, §\ref{sec:estado-arte}). El foco es documental:
-¿este contrato, ahora, refleja este SD?
+S y E salen de \textit{schema matching} y de similitud semántica. No reemplazan pruebas de
+\textit{runtime} ni una certificación (eje E5, §\ref{sec:estado-arte}). La pregunta, en la
+práctica, es si esta versión del contrato refleja este SD.

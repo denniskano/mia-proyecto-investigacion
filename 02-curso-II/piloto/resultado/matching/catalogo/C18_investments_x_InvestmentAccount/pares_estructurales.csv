@@ -1,0 +1,6 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+investmentsGetFunds;GET;/funds;Retrieve;GET;/InvestmentAccount/{investmentaccountid}/Retrieve;CR - InvestmentAccountFacility;0.25;0.0;False;1.0;0.5;0.375;True
+investmentsGetFixedIncomeBank;GET;/bank-fixed-incomes;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+investmentsGetFixedIncomeCredit;GET;/credit-fixed-incomes;RetrieveDebitandCredit;GET;/InvestmentAccount/{investmentaccountid}/DebitandCredit/{debitandcreditid}/Retrieve;BQ - DebitandCredit;0.2857;0.1667;False;1.0;0.3333;0.406;True
+investmentsGetVariableIncome;GET;/variable-incomes;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+investmentsGetTreasure;GET;/treasure-titles;;;;;0.0;0.0;False;0.0;0.0;0.0;False

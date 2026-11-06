@@ -1,0 +1,8 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+creditCardsGetAccounts;GET;/accounts;RetrieveRepayment;GET;/CreditCard/{creditcardid}/Repayment/{repaymentid}/Retrieve;BQ - Repayment;0.5;0.0;False;1.0;0.3333;0.45;True
+creditCardsGetAccountsCreditCardAccountId;GET;/accounts/{creditCardAccountId};RetrieveCreditPlan;GET;/CreditCard/{creditcardid}/CreditPlan/{creditplanid}/Retrieve;BQ - CreditPlan;0.4;0.0;False;1.0;0.3333;0.41;True
+creditCardsGetAccountsCreditCardAccountIdBills;GET;/accounts/{creditCardAccountId}/bills;Retrieve;GET;/CreditCard/{creditcardid}/Retrieve;CR - CreditCardFacility;0.4;0.0;False;1.0;1.0;0.51;True
+creditCardsGetAccountsCreditCardAccountIdBillsBillIdTransactions;GET;/accounts/{creditCardAccountId}/bills/{billId}/transactions;RetrieveBilling;GET;/CreditCard/{creditcardid}/Billing/{billingid}/Retrieve;BQ - Billing;0.3333;0.0;False;1.0;1.0;0.4833;True
+creditCardsGetAccountsCreditCardAccountIdLimits;GET;/accounts/{creditCardAccountId}/limits;RetrieveCharge;GET;/CreditCard/{creditcardid}/Charge/{chargeid}/Retrieve;BQ - Charge;0.4;0.0;False;1.0;0.6667;0.46;True
+creditCardsGetAccountsCreditCardAccountIdTransactions;GET;/accounts/{creditCardAccountId}/transactions;RetrieveInterest;GET;/CreditCard/{creditcardid}/Interest/{interestid}/Retrieve;BQ - Interest;0.4;0.0;False;1.0;0.6667;0.46;True
+creditCardsGetAccountsCreditCardAccountIdTransactionsCurrent;GET;/accounts/{creditCardAccountId}/transactions-current;RetrieveCardPayment;GET;/CreditCard/{creditcardid}/CardPayment/{cardpaymentid}/Retrieve;BQ - CardPayment;0.2857;0.0;False;1.0;0.6667;0.4143;True

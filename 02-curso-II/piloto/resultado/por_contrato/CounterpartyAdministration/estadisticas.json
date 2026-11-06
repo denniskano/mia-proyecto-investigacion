@@ -1,0 +1,26 @@
+{
+  "archivo_entrada": "CounterpartyAdministration.yaml",
+  "source": "BIAN",
+  "contrato": "Counterparty Administration",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 19,
+  "cantidad_schemas": 60,
+  "cantidad_propiedades": 183,
+  "fragmentos_corpus": 280,
+  "operaciones_con_summary": 19,
+  "operaciones_con_description": 19,
+  "operaciones_summary_igual_description": 19,
+  "metodos": {
+    "PUT": 10,
+    "POST": 3,
+    "GET": 6
+  },
+  "tags": {
+    "CR - CounterpartyDirectoryEntry": 7,
+    "BQ - CounterpartyEntityReference": 6,
+    "BQ - CounterpartyPermittedTransaction": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CounterpartyAdministration.yaml"
+}

@@ -1,0 +1,14 @@
+﻿ofb_operation_id;bian_operation_id;s_coseno;s_ge_045;s_ge_055;s_ge_065;ofb_texto;bian_texto
+postEnrollments;;0.0;False;False;False;Criar vínculo de conta. Método para criar um novo vínculo de conta. Retorna um enrollment em status AWAITING_RISK_SIGNALS.;
+getEnrollment;;0.0;False;False;False;Consultar vínculo de conta. Método para consultar um vínculo de conta para iniciação de pagamento sem redirecionamento.;
+deleteEnrollment;;0.0;False;False;False;"Revogar ou rejeitar vínculo de conta. Método para revogar ou rejeitar um vínculo de conta. Após a execução com sucesso deste método irreversível, o vínculo de conta
+não poderá mais ser utilizado para autenticação nem autorização de iniciaçã";
+enrollmentCreateFidoRegistrationOptions;;0.0;False;False;False;"Obter parâmetros para criação de credenciais FIDO2. Método para obter os parâmetros para criação de uma nova credencial FIDO2. Um novo challenge deve ser criado a cada chamada.
+Os parâmetros da resposta devem ser compatíveis com a definição";
+enrollmentRegisterFidoCredential;;0.0;False;False;False;"Associação da credencial FIDO2 ao vínculo de conta. O vínculo de conta deve estar no status ""AWAITING_ENROLLMENT"". 
+Após o registro com sucesso, o vínculo de conta deve transitar ao status ""AUTHORISED"".
+A falha de verificação da credencial ";
+enrollmentCreateFidoSigningOptions;;0.0;False;False;False;"Obter parâmetros para autenticação FIDO2. Método para obter os parâmetros para autenticação a partir de uma credencial FIDO2 previamente registrada. Um novo challenge deve ser criado a cada chamada.
+Os parâmetros da resposta devem ser compa";
+riskSignals;;0.0;False;False;False;Envio de sinais de risco para iniciação do vínculo de dispositivo Envio de sinais de risco para iniciação do vínculo de dispositivo, o status do enrollment deve estar em `AWAITING_RISK_SIGNALS`. Após recebimento com sucesso dos sinais, o st;
+authorizeConsent;;0.0;False;False;False;Autorização de um consentimento de pagamentos na jornada sem redirecionamento Autorização de um consentimento de pagamentos em status `AWAITING_AUTHORISATION` a partir do access_token emitido pela jornada sem redirecionamento e envio de sin;

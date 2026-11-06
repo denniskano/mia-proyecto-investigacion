@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "CustomerAgreement.yaml",
+  "source": "BIAN",
+  "contrato": "Customer Agreement",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 16,
+  "cantidad_schemas": 41,
+  "cantidad_propiedades": 109,
+  "fragmentos_corpus": 178,
+  "operaciones_con_summary": 16,
+  "operaciones_con_description": 16,
+  "operaciones_summary_igual_description": 16,
+  "metodos": {
+    "POST": 4,
+    "PUT": 8,
+    "GET": 4
+  },
+  "tags": {
+    "CR - CustomerAgreement": 7,
+    "BQ - LegalTerm": 3,
+    "BQ - RegulatoryTerm": 3,
+    "BQ - PolicyTerm": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerAgreement.yaml"
+}

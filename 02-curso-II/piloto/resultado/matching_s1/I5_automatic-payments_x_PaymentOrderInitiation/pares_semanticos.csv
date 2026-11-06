@@ -1,0 +1,13 @@
+﻿ofb_operation_id;bian_operation_id;s_coseno;s_ge_045;s_ge_055;s_ge_065;ofb_texto;bian_texto
+automaticPaymentsPostRecurringConsents;;0.0;False;False;False;Cria um consentimento para transações de pagamentos. Método para criação de consentimento de longa duração. Retorna um `recurringConsentId` no status AWAITING_AUTHORISATION.;
+automaticPaymentsGetRecurringConsentsConsentId;;0.0;False;False;False;Busca informações de um consentimento. Método para buscar informações sobre um consentimento de longa duração.;
+automaticPaymentsPatchRecurringConsentsConsentId;;0.0;False;False;False;"Rejeita, revoga ou edita um consentimento. Método para rejeitar, revogar ou editar um consentimento de longa duração:  
+1 - Informações sobre a revogação:
+- Caso bem sucedido, o consentimento vai para o status “REVOKED”;
+- Apenas consentime";
+automaticPaymentsPostPixRecurringPayments;Initiate;0.7025;True;True;True;Cria uma transação de pagamento. Método para criação de uma transação de pagamento. Retorna um recurringPaymentId.;InCR Initiate a payment transaction
+automaticPaymentsGetPixRecurringPayments;Retrieve;0.5804;True;True;False;"Busca informações de transações de pagamentos associadas a um consentimento. Método para buscar informações sobre um conjunto de pagamentos associados ao mesmo recurringConsentId. 
+Também é possível enviar uma data de início (startDate) e f";ReCR Retrieve details about a payment transaction
+automaticPaymentsGetPixRecurringPaymentsPaymentId;RetrieveCompliance;0.6272;True;True;False;Busca informações de uma transação de pagamento. Método para buscar informações sobre um pagamento.;ReBQ Retrieve details about a payment transaction compliance check
+automaticPaymentsPatchPixRecurringPaymentsPaymentId;Update;0.4618;True;False;False;"Cancelamento de solicitação de pagamento automático. Esse endpoint deve ser usado para cancelar as transações que estejam em uma das seguintes situações: 
+Agendada com sucesso (SCHD), retida para análise (PDNG). Caso a requisição seja bem s";UpCR Update details of a payment transaction instruction

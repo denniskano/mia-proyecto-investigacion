@@ -8,7 +8,7 @@ lang: es
 # Plan de tesis v2
 
 **Título (tesis):** Alineación entre contratos OpenAPI bancarios y modelos de referencia BIAN, mediante análisis estructural y similitud semántica.  
-**Piloto (MIA 403):** catálogo **Open Finance Brasil (OFB)** × tres Service Domains BIAN v14. OFB no sustituye el objeto: es la **muestra empírica** con la que se ejecuta el procedimiento.
+**Piloto (MIA 403):** catálogo **Open Finance Brasil (OFB)** × **258** Service Domains BIAN v14 (OpenAPI oficiales). Las instancias de score del protocolo siguen siendo I1–I6 (n = 7). OFB no sustituye el objeto: es la **muestra empírica** con la que se ejecuta el procedimiento.
 
 **Autores:** Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Programa:** Maestría en Inteligencia Artificial · UNI · MIA 403 (2026-2)  
@@ -25,12 +25,12 @@ En Guía 1 el Grupo 10 dejó escrito *cómo* se calcula S/E/C → AlignmentScore
 |-----------|------------------|----------------------------|
 | Naturaleza | Diseño del procedimiento | Diseño **+** piloto **+** ejecución empírica |
 | Objeto de estudio | Contrato OpenAPI **bancario** | El **mismo** (no se estrecha a OFB) |
-| Referencia | Service Domain BIAN | Service Domain BIAN v14 (tres SD del piloto) |
-| Muestra / piloto | Ejemplos ilustrativos (Anexo F) | 38 APIs **OFB** + 3 SD BIAN |
+| Referencia | Service Domain BIAN | Catálogo BIAN v14 (258 OpenAPI oficiales) |
+| Muestra / piloto | Ejemplos ilustrativos (Anexo F) | 38 APIs **OFB** + 258 SD BIAN |
 | VD del artefacto | AlignmentScore + clasificación (definida) | AlignmentScore + clasificación (**calculada** en el piloto OFB × BIAN) |
 | Software | Fuera de alcance | Parser OE1 hecho; matching OE2–OE4 a construir |
 
-Se hereda el título, el objeto (OpenAPI bancario), P1–P4, S/E/C, umbrales, los 14 papers y la matriz. Lo nuevo es el **piloto**: 38 APIs de Open Finance Brasil frente a tres SD BIAN v14. OFB es estándar de industria, no el YAML de Itaú ni de un banco peruano, y no estrecha el objeto. Nordea, CommBank u Open Banking UK no entran en **este** curso; un contrato de otro banco seguiría siendo objeto de la tesis y quedaría fuera de la muestra actual.
+Se hereda el título, el objeto (OpenAPI bancario), P1–P4, S/E/C, umbrales, los 14 papers y la matriz. Lo nuevo es el **piloto**: 38 APIs de Open Finance Brasil frente al catálogo BIAN v14 (258 SD). El score oficial del protocolo sigue en I1–I6 (n = 7). OFB es estándar de industria, no el YAML de Itaú ni de un banco peruano, y no estrecha el objeto. Nordea, CommBank u Open Banking UK no entran en **este** curso; un contrato de otro banco seguiría siendo objeto de la tesis y quedaría fuera de la muestra actual.
 
 ---
 
@@ -59,10 +59,10 @@ Se hereda el título, el objeto (OpenAPI bancario), P1–P4, S/E/C, umbrales, lo
 
 ### 2.3 Riesgos actuales
 
-1. **Asimetría de inventario:** 160 operaciones OFB vs. 75 BIAN (solo 3 SD). No se puede pretender C global sobre las 38 APIs OFB.
-2. **Pares naturales limitados:** accounts ↔ Savings/Current; payments ↔ PaymentOrderInitiation. Loans, credit-cards y financings OFB **no** tienen SD BIAN en el piloto.
+1. **Asimetría de inventario:** 160 operaciones OFB vs. 4 580 BIAN (258 SD). No se puntúa el producto 38 × 258 ni un C global sobre las 38 APIs OFB.
+2. **Pares del protocolo:** I1–I6 (n = 7) no se reemplazan. Loans y credit-cards ahora tienen SD oficiales (`Loan.yaml`, `CreditCard.yaml`) en un mapa extra; no se inventa un SD.
 3. **Piloto ≠ población:** OFB no es un banco peruano ni agota los OpenAPI bancarios; la validez externa del piloto se declara en limitaciones.
-4. **BIAN summary = description** (75/75): S se apoyará en nombres y en el texto OFB.
+4. **BIAN summary = description** (típico del catálogo v14): S se apoyará en nombres y en el texto OFB.
 5. **No ML supervisado:** no hay etiquetas Alta/Media/Baja a priori; la clasificación es por umbrales del AlignmentScore.
 
 ---
@@ -87,7 +87,7 @@ La primera medición empírica (piloto MIA 403) se hace sobre contratos **Open F
 | Concepto | Tesis (se mantiene) | Piloto MIA 403 |
 |----------|---------------------|----------------|
 | **Objeto de estudio** | Contrato OpenAPI **bancario** (artefacto documental) | No cambia |
-| **Referencia** | Service Domain BIAN | Tres SD v14 del zip |
+| **Referencia** | Service Domain BIAN | Catálogo BIAN v14 (258 SD; I1–I6 usan 3) |
 | **Muestra** | Contratos bancarios parseables (OpenAPI 3.x) | 38 APIs OFB (p. ej. `accounts` 2.4.2) |
 | **Unidad de análisis** | Par elemento contrato ↔ Behavior/BO/BQ | Igual, sobre YAML OFB |
 | **Instancia de medición** | `{fuente}_{api}_{versión} × {sd-bian}_{versión}` | p. ej. `OFB_accounts_2.4.2 × SavingsAccount_14.0.0` |
@@ -103,7 +103,7 @@ OFB es un **estándar de industria** (open finance brasileño), no el YAML de It
 
 | ID | Transformación | Entrada | Salida |
 |----|----------------|---------|--------|
-| **OE1** | Adquirir y normalizar contrato bancario + BIAN | YAML oficiales versionados (piloto: OFB + 3 SD) | Representaciones CSV (hecho en el piloto) + informe de completitud |
+| **OE1** | Adquirir y normalizar contrato bancario + BIAN | YAML oficiales versionados (piloto: 38 OFB + 258 SD) | Representaciones CSV (hecho en el piloto) + informe de completitud |
 | **OE2** | Emparejar estructuras | Representaciones OE1 de **pares declarados** | Matriz de correspondencias + StructuralScore E |
 | **OE3** | Calcular similitud semántica | Corpus OE1 de los mismos pares | Matriz semántica + SemanticScore S |
 | **OE4** | Integrar y clasificar | E, S, inventario BIAN del SD | C, AlignmentScore, nivel, tipologías |
@@ -117,7 +117,7 @@ OFB es un **estándar de industria** (open finance brasileño), no el YAML de It
 
 ### 3.7 Justificación
 
-Mientras el cruce OpenAPI–BIAN se haga a mano, no hay cómo priorizar una cola de APIs ni cómo defender un número en la defensa. Este curso aporta un corpus que se puede citar (OFB, YAML públicos, sin PII), el parser ya corrido y —a partir de la semana 8— scores de I1 e I4. Guía 1 solo tenía ejemplos; aquí hay inventario (`41` contratos) y un protocolo.
+Mientras el cruce OpenAPI–BIAN se haga a mano, no hay cómo priorizar una cola de APIs ni cómo defender un número en la defensa. Este curso aporta un corpus que se puede citar (OFB, YAML públicos, sin PII), el parser ya corrido y —a partir de la semana 8— scores de I1 e I4. Guía 1 solo tenía ejemplos; aquí hay inventario (`296` contratos) y un protocolo.
 
 ### 3.8 Alcance y delimitaciones
 
@@ -129,14 +129,15 @@ Mientras el cruce OpenAPI–BIAN se haga a mano, no hay cómo priorizar una cola
 **Dentro del piloto MIA 403 (muestra)**
 
 - 38 APIs OFB (última estable) como **universo del piloto**.
-- Tres SD BIAN v14 ya adquiridos.
+- Catálogo BIAN v14 (258 OpenAPI oficiales) como referencia.
 - Cálculo de S, E, C y AlignmentScore en los **pares declarados** (§4.1; n = 7 instancias).
+- Mapa extra OFB → SD oficial (loans, cards, …) que **no** sustituye n = 7.
 - Prototipo Python reproducible (parser + matching + agregación).
 
 **Fuera de este piloto (siguen dentro del objeto si se incorporan después)**
 
 - YAML de un banco emisor concreto (p. ej. Itaú, cores peruanos) u otros estándares (Open Banking UK, Berlin Group).
-- El resto del catálogo BIAN.
+- El producto cartesiano 38 OFB × 258 SD.
 
 **Fuera de la tesis**
 
@@ -153,10 +154,10 @@ Fuente: `../piloto/`.
 | Lado | Contratos | Operaciones |
 |------|-----------|-------------|
 | OFB (muestra / piloto) | 38 | 160 |
-| BIAN (referencia) | 3 | 75 |
-| **Total parseado** | **41** | **235** |
+| BIAN (referencia) | 258 | 4 580 |
+| **Total parseado** | **296** | **4 740** |
 
-Propiedades extraídas: 6 746. Corpus: 10 906 fragmentos.
+Propiedades extraídas: 67 388. Corpus: 100 328 fragmentos.
 
 ### 4.1 Pares declarados (muestra empírica)
 
@@ -172,13 +173,13 @@ Propiedades extraídas: 6 746. Corpus: 10 906 fragmentos.
 
 Hay **siete** instancias de medición. I1–I6 nombra las familias de pares; I3 se desdobla en I3a e I3b. I1 e I2 (y I3a/I3b) comparten el mismo YAML OFB frente a dos referencias: los scores **no son independientes**. I4–I6 comparten el mismo SD BIAN.
 
-Las demás **33** APIs OFB (38 − 5 YAML emparejados) entran en **OE1** (inventario y completitud) y en el mapa de *gap*, no en el AlignmentScore salvo ampliación futura de SD BIAN.
+Las demás APIs OFB (38 − 5 YAML de I1–I6) entran en **OE1** y en un mapa extra contra SD oficiales (`Loan.yaml`, `CreditCard.yaml`, …). Ese mapa **no** sustituye n = 7. No se inventa un SD ni se puntúa 38 × 258.
 
 ### 4.2 Hallazgos EDA que condicionan el método
 
 - OFB es mayormente **GET** (130/160); BIAN concentra **PUT** (Update/Control/Execute). E no puede exigir el mismo estilo REST.
 - OFB **no** usa tags CR/BQ: imputarlos sería *leakage*.
-- BIAN: *summary = description* en 75/75. S no debe contar el mismo texto dos veces.
+- BIAN: *summary = description* es típico del catálogo v14. S no debe contar el mismo texto dos veces.
 - 61,9 % de propiedades del consolidado sin description (BIAN 90,4 %; OFB 38,1 %): el matching de atributos BIAN cae sobre el **nombre**. (La cifra «88 %» de las diapositivas de Sesión 5 era incorrecta.)
 - El recorte inicial (12 ops / 5 schemas genéricos) está archivado; no se usa para scores.
 
@@ -214,10 +215,10 @@ OFB OpenAPI  --OE1-->  repres. intermedia  --OE2-->  E
 
 | OE | Indicador | Evidencia | Estado |
 |----|-----------|-----------|--------|
-| OE1 | Completitud; CSV normalizados | `resultado/inventario.json`, consolidado | Piloto hecho; falta informe de completitud por contrato |
-| OE2 | StructuralScore E | Matriz de pares I1–I6 | Pendiente |
-| OE3 | SemanticScore S | Matriz de similitud I1–I6 | Pendiente |
-| OE4 | C + AlignmentScore + nivel + tipologías | Informe por instancia | Pendiente |
+| OE1 | Completitud; CSV normalizados | `resultado/inventario.json`, `oe1_firma.json` | **296/296** firmados |
+| OE2 | StructuralScore E | Matriz de pares I1–I6 + mapa extra | Hecho (v0 léxico) |
+| OE3 | SemanticScore S | Matriz de similitud I1–I6 | Hecho (v0 léxico + MiniLM en I1–I6) |
+| OE4 | C + AlignmentScore + nivel + tipologías | Informe por instancia | Hecho (I1–I6 + catálogo extra) |
 
 Criterio oral: parser al 100 % **no** implica AlignmentScore Alto.
 
@@ -234,7 +235,7 @@ YAML públicos. Ley 29733 no aplica. Se cita OFB y BIAN.
 **Amenazas (actualizadas)**
 
 - Interna: ambigüedad léxica *account* / *payment*; summary duplicado BIAN; I1/I2 e I3a/I3b no son independientes (mismo YAML OFB).
-- Externa: el piloto OFB no cubre un banco peruano ni todo OpenAPI bancario; 3 SD no cubren loans/cards.
+- Externa: el piloto OFB no cubre un banco peruano ni todo OpenAPI bancario; n = 7 no es el cartesiano 38 × 258.
 - Constructo: un score global puede ocultar un BQ crítico mal cubierto.
 - Conclusión: no generalizar a “todo open banking” ni a “todo BIAN”.
 
@@ -256,7 +257,7 @@ El detalle paso a paso está en `protocolo-empirico.md`.
 
 **Criterios de éxito del piloto (examen parcial, semana 8)**
 
-- OE1 reproducible sobre los 41 YAML.
+- OE1 reproducible sobre los 296 YAML.
 - Al menos I1 e I4 con E, S, C y AlignmentScore calculados (aunque sean v0).
 - Documento de amenazas y *leakage* (ya en Sesión 5).
 

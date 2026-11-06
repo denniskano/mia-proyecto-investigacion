@@ -1,0 +1,34 @@
+{
+  "archivo_entrada": "TermDeposit.yaml",
+  "source": "BIAN",
+  "contrato": "Term Deposit",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 35,
+  "cantidad_schemas": 257,
+  "cantidad_propiedades": 1289,
+  "fragmentos_corpus": 1661,
+  "operaciones_con_summary": 35,
+  "operaciones_con_description": 35,
+  "operaciones_summary_igual_description": 35,
+  "metodos": {
+    "POST": 8,
+    "PUT": 18,
+    "GET": 9
+  },
+  "tags": {
+    "CR - TermDepositFacility": 4,
+    "BQ - Interest": 2,
+    "BQ - Charge": 4,
+    "BQ - Sweep": 4,
+    "BQ - DebitandCredit": 4,
+    "BQ - Payments": 5,
+    "BQ - IssuedDevice": 3,
+    "BQ - Booking": 1,
+    "BQ - Rollover": 1,
+    "BQ - AmountBlock": 3,
+    "BQ - Deposit": 4
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/TermDeposit.yaml"
+}

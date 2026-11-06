@@ -10,7 +10,8 @@ lang: es
 **Grupo 10** · Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Programa:** Maestría en Inteligencia Artificial · UNI · MIA 403  
 **Objeto de la tesis:** contratos **OpenAPI bancarios** frente a Service Domains BIAN.  
-**Piloto:** Open Finance Brasil × 3 SD BIAN v14.  
+**Piloto (esta sesión):** Open Finance Brasil × 3 SD BIAN v14.  
+**Piloto vigente (6 nov 2026):** 38 OFB + **258** SD · `../piloto/` (296 YAML). Las cifras 41/235 de este documento son las de la semana 7.  
 **Lámina del aula:** `image.png` (salas de revisión).
 
 **Frase de ancla:** la tesis mide OpenAPI bancario ↔ BIAN; OFB es el piloto.  

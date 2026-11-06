@@ -1,0 +1,25 @@
+{
+  "archivo_entrada": "NotionalPooling.yaml",
+  "source": "BIAN",
+  "contrato": "Notional Pooling",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 15,
+  "cantidad_schemas": 123,
+  "cantidad_propiedades": 354,
+  "fragmentos_corpus": 510,
+  "operaciones_con_summary": 15,
+  "operaciones_con_description": 15,
+  "operaciones_summary_igual_description": 15,
+  "metodos": {
+    "PUT": 9,
+    "GET": 4,
+    "POST": 2
+  },
+  "tags": {
+    "CR - NotionalPoolingFacility": 8,
+    "BQ - CashTransfer": 7
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/NotionalPooling.yaml"
+}

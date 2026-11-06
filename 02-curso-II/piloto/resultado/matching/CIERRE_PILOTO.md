@@ -1,7 +1,7 @@
 # Cierre del piloto OFB × BIAN (P4 / baseline v0)
 
-- Fecha: `2026-11-06T20:09:56Z`
-- Commit: `24d1644ed4cdb7fc80da6f88800b9c87225100ed`
+- Fecha: `2026-11-06T21:00:02Z`
+- Commit: `ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747`
 - Parser: `procesar_openapi.py`
 - Semántica: `tfidf+jaccard-lexical-v0` (embeddings de frase = semana 11)
 
@@ -12,7 +12,9 @@
 | OE1 firmado (ops/schemas = 1.00) | Sí |
 | Matching v0 I1 e I4 (mínimo P4) | Sí |
 | Scores v0 de las 7 instancias (baseline léxico) | Sí |
-| Embeddings + sensibilidad de umbral S (semana 11) | Pendiente |
+| Catálogo BIAN v14 (258 OpenAPI oficiales) | Sí |
+| Mapa extra OFB → SD oficial (sin inventar SD) | Sí (`catalogo/`) |
+| Embeddings MiniLM sobre pares OE2 de I1–I6 | Sí (`matching_s1/`) |
 | Discusión P5 / borrador P7 | Pendiente (tesis, no piloto) |
 
 ## OE1 — completitud
@@ -23,14 +25,18 @@ Meta: ratio 1.00 en operaciones y schemas. Propiedades firmadas sobre `propertie
 |---------|-------------|-----------------|------------|---------|
 | `OFB_accounts_2.4.2.yml` | 6/6 | 31/31 | 86/86 | sí |
 | `OFB_automatic-payments_2.0.0.yml` | 7/7 | 72/72 | 225/225 | sí |
+| `OFB_credit-cards_2.3.1.yml` | 7/7 | 40/40 | 127/127 | sí |
 | `OFB_enrollments_2.1.0.yml` | 8/8 | 36/36 | 52/52 | sí |
+| `OFB_loans_2.5.0.yml` | 5/5 | 42/42 | 112/112 | sí |
 | `OFB_opendata-accounts_1.0.1.yml` | 2/2 | 32/32 | 92/92 | sí |
 | `OFB_payments_4.0.0.yml` | 6/6 | 56/56 | 119/119 | sí |
+| `CreditCard.yaml` | 28/28 | 237/237 | 1054/1054 | sí |
 | `CurrentAccount.yaml` | 34/34 | 256/256 | 1266/1266 | sí |
+| `Loan.yaml` | 24/24 | 200/200 | 823/823 | sí |
 | `PaymentOrderInitiation.yaml` | 7/7 | 137/137 | 522/522 | sí |
 | `SavingsAccount.yaml` | 34/34 | 251/251 | 1282/1282 | sí |
 
-Inventario completo: **41/41** YAML firmados (incluye las 33 APIs OFB que solo entran al inventario, no al AlignmentScore).
+Inventario completo: **296/296** YAML firmados (38 OFB + 258 Service Domains BIAN v14). I1–I6 no se reemplazan; el resto de OFB se mapea a un SD oficial (`resultado/matching/catalogo/`).
 
 ## Scores v0
 
@@ -44,10 +50,24 @@ Inventario completo: **41/41** YAML firmados (incluye las 33 APIs OFB que solo e
 | I5 | `OFB_automatic-payments_2.0.0.yml` × `PaymentOrderInitiation.yaml` | 0.03 | 0.32 | 0.50 | **0.28** | Nula | 4/7 |
 | I6 | `OFB_enrollments_2.1.0.yml` × `PaymentOrderInitiation.yaml` | 0.00 | 0.00 | 0.00 | **0.00** | Nula | 0/8 |
 
-El nivel **Nula/Baja no invalida** el piloto: valida que el score es computable, interpretable y sin leakage. C bajo en cuentas es hallazgo (pocos GET OFB vs 1 CR + varios BQ). I6 en 0 pares es hallazgo: enrollments/FIDO no comparte recurso léxico con PaymentOrderInitiation. S≈0 es el techo del baseline PT×EN; los embeddings de semana 11 existen para eso.
+El nivel **Nula/Baja no invalida** el piloto: valida que el score es computable, interpretable y sin leakage. C bajo en cuentas es hallazgo (pocos GET OFB vs 1 CR + varios BQ). I6 en 0 pares es hallazgo: enrollments/FIDO no comparte recurso léxico con PaymentOrderInitiation. S≈0 es el techo del baseline PT×EN; MiniLM ya corre sobre los mismos pares (`matching_s1/`).
+
+## Catálogo extra (no sustituye I1–I6)
+
+Con los 258 YAML oficiales, loans y credit-cards ya tienen SD BIAN (`Loan.yaml`, `CreditCard.yaml`). No se inventó un Service Domain. No se puntúa el producto cartesiano 38 × 258.
+
+| OFB | BIAN oficial | Pares | Score v0 |
+|-----|--------------|-------|----------|
+| credit-cards | CreditCard | 7/7 | Baja (0,46) |
+| loans | Loan | 4/5 | Nula (0,27) |
+| opendata-loans | Loan | 2/2 | Nula (0,28) |
+| opendata-creditcards | CreditCard | 2/2 | Nula (0,30) |
+| investments | InvestmentAccount | 2/5 | Nula (0,19) |
+
+Detalle: `catalogo/MAPA.md`.
 
 ## Lo que sigue (ya no es cierre de piloto P4)
 
-1. Semana 11: S con embeddings (`paraphrase-multilingual-MiniLM`) y sensibilidad 0.45/0.55/0.65.
+1. MiniLM I1–I6 ya está en `matching_s1/` (S sobre pares OE2 congelados).
 2. Semana 12 (P5): discusión de tipologías contra literatura.
-3. No puntuar loans/cards/financings inventando un SD.
+3. No puntuar 38 OFB × 258 SD. No inventar un SD. I1–I6 siguen siendo n = 7.

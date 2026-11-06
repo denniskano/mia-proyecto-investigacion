@@ -1,0 +1,7 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+customersGetPersonalIdentifications;GET;/personal/identifications;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+customersGetPersonalQualifications;GET;/personal/qualifications;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+customersGetPersonalFinancialRelations;GET;/personal/financial-relations;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+customersGetBusinessIdentifications;GET;/business/identifications;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+customersGetBusinessQualifications;GET;/business/qualifications;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+customersGetBusinessFinancialRelations;GET;/business/financial-relations;;;;;0.0;0.0;False;0.0;0.0;0.0;False

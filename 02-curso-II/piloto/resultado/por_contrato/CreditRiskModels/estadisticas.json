@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "CreditRiskModels.yaml",
+  "source": "BIAN",
+  "contrato": "Credit Risk Models",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 19,
+  "cantidad_schemas": 28,
+  "cantidad_propiedades": 88,
+  "fragmentos_corpus": 144,
+  "operaciones_con_summary": 19,
+  "operaciones_con_description": 19,
+  "operaciones_summary_igual_description": 19,
+  "metodos": {
+    "GET": 4,
+    "PUT": 14,
+    "POST": 1
+  },
+  "tags": {
+    "CR - CreditRiskModelSpecification": 7,
+    "BQ - FunctionalRequirements": 4,
+    "BQ - Production": 4,
+    "BQ - Testing": 4
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CreditRiskModels.yaml"
+}

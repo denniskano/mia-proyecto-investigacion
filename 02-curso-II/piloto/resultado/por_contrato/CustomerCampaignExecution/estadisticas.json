@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "CustomerCampaignExecution.yaml",
+  "source": "BIAN",
+  "contrato": "Customer Campaign Execution",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 18,
+  "cantidad_schemas": 75,
+  "cantidad_propiedades": 219,
+  "fragmentos_corpus": 335,
+  "operaciones_con_summary": 18,
+  "operaciones_con_description": 18,
+  "operaciones_summary_igual_description": 18,
+  "metodos": {
+    "POST": 3,
+    "PUT": 11,
+    "GET": 4
+  },
+  "tags": {
+    "CR - CustomerCampaignProcedure": 7,
+    "BQ - CandidateSelection": 3,
+    "BQ - Execution": 4,
+    "BQ - AnalysisFeedback": 4
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerCampaignExecution.yaml"
+}

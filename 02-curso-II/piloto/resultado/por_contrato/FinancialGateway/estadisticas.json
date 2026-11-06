@@ -1,0 +1,26 @@
+{
+  "archivo_entrada": "FinancialGateway.yaml",
+  "source": "BIAN",
+  "contrato": "Financial Gateway",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 9,
+  "cantidad_schemas": 28,
+  "cantidad_propiedades": 94,
+  "fragmentos_corpus": 147,
+  "operaciones_con_summary": 9,
+  "operaciones_con_description": 9,
+  "operaciones_summary_igual_description": 9,
+  "metodos": {
+    "POST": 3,
+    "PUT": 3,
+    "GET": 3
+  },
+  "tags": {
+    "CR - FinancialGatewayOperatingSession": 5,
+    "BQ - Inbound": 2,
+    "BQ - Outbound": 2
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialGateway.yaml"
+}

@@ -9,7 +9,7 @@ Documento de curso (Guía 2 / desarrollo) Grupo 10. El plan vigente está en `..
 | `Sesion05_Operacionalizacion_y_EDA.md` | Fuente escrita (detalle) |
 | `Sesion05_Operacionalizacion_y_EDA.pdf` | Informe largo (pandoc) |
 | `ppt/build_sesion05.mjs` | Generador del PPTX |
-| `../piloto/` | Piloto: 38 APIs OFB + 3 SD BIAN |
+| `../piloto/` | Piloto vigente: 38 APIs OFB + **258** SD BIAN v14 |
 
 **Dataset:** `../piloto/` (`fuentes/ofb/` + `fuentes/bian/`)  
 **Plan v2:** `../plan-tesis-v2/PLAN_TESIS_V2.pdf`

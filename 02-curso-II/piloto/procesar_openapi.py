@@ -277,7 +277,7 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 def discover(fuentes: Path) -> list[tuple[Path, str, str]]:
     items = []
     for p in sorted(fuentes.rglob("*")):
-        if p.suffix.lower() not in {".yaml", ".yml", ".json"}:
+        if p.suffix.lower() not in {".yaml", ".yml"}:
             continue
         if "archivo" in p.parts:
             continue
@@ -302,9 +302,15 @@ def discover(fuentes: Path) -> list[tuple[Path, str, str]]:
 def run_batch(fuentes: Path, out: Path) -> dict:
     out.mkdir(parents=True, exist_ok=True)
     all_ops, all_props, all_corpus, per_file = [], [], [], []
+    errores = []
     for path, kind, url in discover(fuentes):
         print(f"Procesando {kind}: {path.name}")
-        result = process_file(path, kind, url)
+        try:
+            result = process_file(path, kind, url)
+        except Exception as exc:
+            print(f"  SKIP {path.name}: {exc}")
+            errores.append({"archivo": path.name, "error": str(exc)})
+            continue
         per = out / "por_contrato" / path.stem
         write_csv(per / "operaciones_estructuradas.csv", result["operaciones"])
         write_csv(per / "propiedades_esquemas.csv", result["propiedades"])
@@ -324,18 +330,16 @@ def run_batch(fuentes: Path, out: Path) -> dict:
 
     inventario = {
         "alcance": (
-            "PILOTO AMPLIADO: 3 Service Domains BIAN v14 completos "
-            "(SavingsAccount, CurrentAccount, PaymentOrderInitiation) "
-            "y el catálogo Open Finance Brasil (última versión estable de cada API "
-            "publicada en swagger-apis: cuentas, pagos, créditos, tarjetas, "
-            "consentimientos, open data, inversiones, etc.)."
+            "PILOTO: catálogo Open Finance Brasil (última estable por API) "
+            "frente a todos los Service Domain OpenAPI BIAN v14 publicados "
+            "en bian-official/public (semantic-apis/oas3 yamls)."
         ),
         "advertencia": (
-            "No se ha calculado AlignmentScore. El matching OFB–BIAN (OE2–OE4) sigue pendiente. "
-            "Open Finance Brasil es el corpus del piloto (no el objeto de la tesis). "
-            "Se tomó la última versión estable por API "
-            "(si no hay estable, la pre-release más alta)."
+            "Open Finance Brasil es la muestra del piloto, no el objeto de la tesis. "
+            "I1–I6 siguen siendo las instancias oficiales del protocolo. "
+            "El resto de OFB se mapea a SD oficiales; no se inventa un SD."
         ),
+        "errores_parseo": errores,
         "preprocesamiento": (
             "parseo YAML, extracción, $ref anidado en requestBody/response, "
             "separación camelCase, minúsculas, normalización de prefijos BIAN. "

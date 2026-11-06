@@ -1,0 +1,3 @@
+﻿ofb_operation_id;bian_operation_id;s_jaccard;s_tfidf;s_pair;ofb_texto;bian_texto
+exchangeGetOnlineRate;;0.0;0.0;0.0;conjunto de informações de câmbio para taxa online. as instituições autorizadas a operar em câmbio que disponibilizam em seus canais digitais a possibilidade de contratação ou a informação de taxa de câmbio devem retornar as condições no mo;
+exchangeGetVetValue;;0.0;0.0;0.0;conjunto de informações de câmbio para valor do vet. método para disponibilizar os vets praticados pela instituição nas operações de câmbio, agrupados por tipo de operação (compra ou venda), moeda, forma de entrega, faixas de valores e públ;

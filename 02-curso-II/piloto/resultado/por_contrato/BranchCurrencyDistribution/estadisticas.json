@@ -1,0 +1,28 @@
+{
+  "archivo_entrada": "BranchCurrencyDistribution.yaml",
+  "source": "BIAN",
+  "contrato": "Branch Currency Distribution",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 21,
+  "cantidad_schemas": 79,
+  "cantidad_propiedades": 220,
+  "fragmentos_corpus": 340,
+  "operaciones_con_summary": 21,
+  "operaciones_con_description": 21,
+  "operaciones_summary_igual_description": 21,
+  "metodos": {
+    "PUT": 15,
+    "POST": 1,
+    "GET": 5
+  },
+  "tags": {
+    "CR - CashDistributionProcedure": 7,
+    "BQ - DistributionPlanning": 4,
+    "BQ - InventoryProvisioning": 4,
+    "BQ - InventoryDistributionOversight": 3,
+    "BQ - DistributionVehicleAdministration": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/BranchCurrencyDistribution.yaml"
+}

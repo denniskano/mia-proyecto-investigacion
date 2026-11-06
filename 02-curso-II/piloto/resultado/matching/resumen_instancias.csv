@@ -1,8 +1,8 @@
 ﻿id;ofb;bian;prioridad;S;E;E_estrella;C;AlignmentScore;nivel;n_pares;n_operaciones_ofb;n_operaciones_bian;embedding_model;git_commit
-I1;OFB_accounts_2.4.2.yml;SavingsAccount.yaml;semana-8;0.0131;0.3528;0.5292;0.4;0.2553;Nula;4;6;34;tfidf+jaccard-lexical-v0;24d1644ed4cdb7fc80da6f88800b9c87225100ed
-I2;OFB_accounts_2.4.2.yml;CurrentAccount.yaml;semana-10-11;0.0099;0.4736;0.5683;0.5;0.3278;Nula;5;6;34;tfidf+jaccard-lexical-v0;24d1644ed4cdb7fc80da6f88800b9c87225100ed
-I3a;OFB_opendata-accounts_1.0.1.yml;SavingsAccount.yaml;semana-10-11;0.0;0.5625;0.5625;0.2;0.2542;Nula;2;2;34;tfidf+jaccard-lexical-v0;24d1644ed4cdb7fc80da6f88800b9c87225100ed
-I3b;OFB_opendata-accounts_1.0.1.yml;CurrentAccount.yaml;semana-10-11;0.0;0.5625;0.5625;0.2;0.2542;Nula;2;2;34;tfidf+jaccard-lexical-v0;24d1644ed4cdb7fc80da6f88800b9c87225100ed
-I4;OFB_payments_4.0.0.yml;PaymentOrderInitiation.yaml;semana-8;0.0;0.2885;0.577;0.25;0.1795;Nula;3;6;7;tfidf+jaccard-lexical-v0;24d1644ed4cdb7fc80da6f88800b9c87225100ed
-I5;OFB_automatic-payments_2.0.0.yml;PaymentOrderInitiation.yaml;semana-10-11;0.0269;0.3235;0.566;0.5;0.2834;Nula;4;7;7;tfidf+jaccard-lexical-v0;24d1644ed4cdb7fc80da6f88800b9c87225100ed
-I6;OFB_enrollments_2.1.0.yml;PaymentOrderInitiation.yaml;semana-10-11;0.0;0.0;0.0;0.0;0.0;Nula;0;8;7;tfidf+jaccard-lexical-v0;24d1644ed4cdb7fc80da6f88800b9c87225100ed
+I1;OFB_accounts_2.4.2.yml;SavingsAccount.yaml;semana-8;0.0131;0.3528;0.5292;0.4;0.2553;Nula;4;6;34;tfidf+jaccard-lexical-v0;ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747
+I2;OFB_accounts_2.4.2.yml;CurrentAccount.yaml;semana-10-11;0.0099;0.4736;0.5683;0.5;0.3278;Nula;5;6;34;tfidf+jaccard-lexical-v0;ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747
+I3a;OFB_opendata-accounts_1.0.1.yml;SavingsAccount.yaml;semana-10-11;0.0;0.5625;0.5625;0.2;0.2542;Nula;2;2;34;tfidf+jaccard-lexical-v0;ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747
+I3b;OFB_opendata-accounts_1.0.1.yml;CurrentAccount.yaml;semana-10-11;0.0;0.5625;0.5625;0.2;0.2542;Nula;2;2;34;tfidf+jaccard-lexical-v0;ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747
+I4;OFB_payments_4.0.0.yml;PaymentOrderInitiation.yaml;semana-8;0.0;0.2885;0.577;0.25;0.1795;Nula;3;6;7;tfidf+jaccard-lexical-v0;ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747
+I5;OFB_automatic-payments_2.0.0.yml;PaymentOrderInitiation.yaml;semana-10-11;0.0269;0.3235;0.566;0.5;0.2834;Nula;4;7;7;tfidf+jaccard-lexical-v0;ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747
+I6;OFB_enrollments_2.1.0.yml;PaymentOrderInitiation.yaml;semana-10-11;0.0;0.0;0.0;0.0;0.0;Nula;0;8;7;tfidf+jaccard-lexical-v0;ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747

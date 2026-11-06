@@ -1,0 +1,7 @@
+﻿ofb_operation_id;ofb_method;ofb_path;bian_operation_id;bian_method;bian_path;bian_tag;jaccard_nombre;sim_path;path_recurso;http_igual;profundidad;e_pair;emparejado
+accountsGetAccounts;GET;/accounts;Retrieve;GET;/SavingsAccount/{savingsaccountid}/Retrieve;CR - SavingsAccountFacility;0.3333;0.8;True;1.0;0.5;0.6083;True
+accountsGetAccountsAccountId;GET;/accounts/{accountId};RetrieveCharge;GET;/SavingsAccount/{savingsaccountid}/Charge/{chargeid}/Retrieve;BQ - Charge;0.3333;0.8;True;1.0;0.3333;0.5833;True
+accountsGetAccountsAccountIdBalances;GET;/accounts/{accountId}/balances;RetrieveDeposit;GET;/SavingsAccount/{savingsaccountid}/Deposit/{depositid}/Retrieve;BQ - Deposit;0.25;0.25;False;1.0;0.6667;0.4625;True
+accountsGetAccountsAccountIdTransactions;GET;/accounts/{accountId}/transactions;RetrieveInterest;GET;/SavingsAccount/{savingsaccountid}/Interest/{interestid}/Retrieve;BQ - Interest;0.25;0.25;False;1.0;0.6667;0.4625;True
+accountsGetAccountsAccountIdTransactionsCurrent;GET;/accounts/{accountId}/transactions-current;;;;;0.0;0.0;False;0.0;0.0;0.0;False
+accountsGetAccountsAccountIdOverdraftLimits;GET;/accounts/{accountId}/overdraft-limits;;;;;0.0;0.0;False;0.0;0.0;0.0;False

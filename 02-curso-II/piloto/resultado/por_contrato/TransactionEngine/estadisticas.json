@@ -1,0 +1,24 @@
+{
+  "archivo_entrada": "TransactionEngine.yaml",
+  "source": "BIAN",
+  "contrato": "Transaction Engine",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 6,
+  "cantidad_schemas": 105,
+  "cantidad_propiedades": 286,
+  "fragmentos_corpus": 421,
+  "operaciones_con_summary": 6,
+  "operaciones_con_description": 6,
+  "operaciones_summary_igual_description": 6,
+  "metodos": {
+    "POST": 1,
+    "PUT": 4,
+    "GET": 1
+  },
+  "tags": {
+    "CR - TransactionScheduleFacility": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/TransactionEngine.yaml"
+}

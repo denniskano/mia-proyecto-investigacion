@@ -1,0 +1,298 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\input{../_plantilla/beamer-sesion.tex}
+
+\title{Piloto OFB $\times$ BIAN}
+\subtitle{Catálogo v14 · OE1 296 · I1--I6 + mapa extra}
+\author[Grupo 10 · piloto OFB $\times$ BIAN · nov 2026]{Grupo 10 · Alex Mancilla Antay · Dennis Jack Paitan Cano}
+\date{MIA 403 · UNI}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uninavy] (current page.south west) rectangle (current page.north east);
+    \fill[uniaccent] (current page.south west) rectangle ([xshift=4.5mm]current page.north west);
+  \end{tikzpicture}
+  \vspace{1.1em}
+  {\color{uniaccent}\large\bfseries PILOTO P4}\\[0.85em]
+  {\Huge\bfseries\color{white} OFB $\times$ BIAN v14}\\[1.15em]
+  {\large\color{white} 258 SD oficiales \quad\textcolor{uniaccent}{·}\quad OE1 296/296 \quad\textcolor{uniaccent}{·}\quad I1--I6}\\[1.3em]
+  {\color{white!75} Objeto: OpenAPI bancario \qquad Muestra: Open Finance Brasil}\\[0.35em]
+  {\color{white!75} Grupo 10 · Alex Mancilla Antay · Dennis Jack Paitan Cano · MIA 403 · UNI}
+\end{frame}
+
+\begin{frame}{Qué se cierra hoy}
+\vspace{0.35em}
+\begin{enumerate}\itemsep0.75em
+  \item El piloto no es la tesis: OFB es la muestra
+  \item Catálogo BIAN v14 completo: 258 OpenAPI oficiales
+  \item OE1: 296 YAML firmados (ops y schemas = 1,00)
+  \item I1--I6 no se tocan; loans y cards ya tienen SD real
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[t]{Objeto intacto · piloto acotado}
+\vspace{0.15em}
+{\small
+\begin{tabularx}{\linewidth}{|L{3.3cm}|Y|}
+\hline
+\thc{Pieza} & \thc{En este curso}\\
+\hline
+Objeto de la tesis & Contrato OpenAPI \textbf{bancario}\\
+\rowcolor{tablealt}
+Referencia & Catálogo BIAN v14 (258 SD)\\
+Muestra / piloto & Catálogo Open Finance Brasil\\
+\rowcolor{tablealt}
+Carpeta & \texttt{02-curso-II/piloto/}\\
+No entra & YAML de un banco emisor · inventar un SD\\
+\hline
+\end{tabularx}}
+\vspace{0.55em}
+{\small Loans $\times$ \texttt{Loan.yaml} y credit-cards $\times$ \texttt{CreditCard.yaml}: SD oficiales, no inventados.}
+\end{frame}
+
+\begin{frame}[t]{Dataset --- 296 contratos}
+\vspace{0.1em}
+\begin{tabularx}{\linewidth}{YYYY}
+\thc{296} & \thc{4 740} & \thc{67 388} & \thc{100 328}\\
+\rowcolor{tablealt}
+\centering\color{black} YAML & \centering\color{black} operaciones & \centering\color{black} propiedades & \centering\arraybackslash\color{black} corpus\\
+\end{tabularx}
+\vspace{0.5em}
+{\footnotesize
+\begin{tabularx}{\linewidth}{|L{3.4cm}|Y|L{2.4cm}|}
+\hline
+\thc{Lado} & \thc{Contratos} & \thc{Ops}\\
+\hline
+OFB (muestra) & 38 APIs, última estable & 160\\
+\rowcolor{tablealt}
+BIAN (referencia) & 258 Service Domains v14 & 4 580\\
+\hline
+\end{tabularx}}
+\vspace{0.45em}
+{\small Fuente: \texttt{bian-official/public} release 14.0.0. No se puntúa 38 $\times$ 258.}
+\end{frame}
+
+\begin{frame}[t]{Siete instancias oficiales (n = 7)}
+\vspace{0.08em}
+{\footnotesize\renewcommand{\arraystretch}{1.02}
+\begin{tabularx}{\linewidth}{|L{1.45cm}|L{3.15cm}|Y|L{2.05cm}|}
+\hline
+\thc{ID} & \thc{OFB} & \thc{BIAN} & \thc{P4}\\
+\hline
+I1 & accounts 2.4.2 & SavingsAccount & Sem.\ 8\\
+\rowcolor{tablealt}
+I2 & accounts 2.4.2 & CurrentAccount & Sem.\ 10--11\\
+I3a--b & opendata-accounts 1.0.1 & Savings / Current & Sem.\ 10--11\\
+\rowcolor{tablealt}
+I4 & payments 4.0.0 & PaymentOrderInitiation & Sem.\ 8\\
+I5 & automatic-payments 2.0.0 & PaymentOrderInitiation & Sem.\ 10--11\\
+\rowcolor{tablealt}
+I6 & enrollments 2.1.0 & PaymentOrderInitiation & Sem.\ 10--11\\
+\hline
+\end{tabularx}}
+\vspace{0.28em}
+{\footnotesize I1/I2 e I3a/I3b: mismo YAML, dos SD. El mapa extra \textbf{no} sustituye estas siete.}
+\end{frame}
+
+\begin{frame}[t]{OE1 firmado}
+\vspace{0.08em}
+{\footnotesize\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{\linewidth}{|L{4.6cm}|Y|L{1.6cm}|}
+\hline
+\thc{Contrato} & \thc{Ops / schemas} & \thc{Firma}\\
+\hline
+accounts 2.4.2 & 6/6 · 31/31 & \ok\\
+\rowcolor{tablealt}
+payments 4.0.0 & 6/6 · 56/56 & \ok\\
+SavingsAccount & 34/34 · 251/251 & \ok\\
+\rowcolor{tablealt}
+PaymentOrderInitiation & 7/7 · 137/137 & \ok\\
+Loan.yaml & 24/24 · 200/200 & \ok\\
+\rowcolor{tablealt}
+CreditCard.yaml & 28/28 · 237/237 & \ok\\
+\hline
+\end{tabularx}}
+\vspace{0.28em}
+{\small 296/296 YAML: ops y schemas en ratio 1,00. Props sobre \texttt{properties} directas.}
+\vspace{0.22em}
+{\footnotesize Parser: \texttt{procesar\_openapi.py}. Firma: \texttt{resultado/matching/oe1\_firma.json}.}
+\end{frame}
+
+\begin{frame}[t]{Cómo se calcula el score v0}
+\vspace{0.12em}
+{\small
+\begin{itemize}\itemsep0.28em
+  \item \textbf{E} = (suma de e\_pair + 0 si no hay par) / ops OFB
+  \item \textbf{S} = promedio léxico (Jaccard + TF-IDF) de los pares de E
+  \item \textbf{C} = (CR + BQ con par) / (CR + BQ del SD)
+  \item \textbf{AlignmentScore} = (S + E + C) / 3
+\end{itemize}}
+\vspace{0.2em}
+{\footnotesize\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\linewidth}{|L{2.3cm}|L{1.7cm}|Y|}
+\hline
+\thc{Score} & \thc{Nivel} & \thc{Lectura}\\
+\hline
+0,80 o más & Alta & Cobertura usable del SD\\
+\rowcolor{tablealt}
+0,60 a 0,79 & Media & Parcial; declarar tipología\\
+0,40 a 0,59 & Baja & Desalineación dominante\\
+\rowcolor{tablealt}
+menos de 0,40 & Nula & Casi sin correspondencia\\
+\hline
+\end{tabularx}}
+\end{frame}
+
+\begin{frame}[t]{Scores v0 --- las siete instancias}
+\vspace{0.08em}
+{\footnotesize\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{\linewidth}{|L{1.05cm}|L{0.95cm}|L{0.95cm}|L{0.95cm}|L{1.35cm}|L{1.25cm}|Y|}
+\hline
+\thc{ID} & \thc{S} & \thc{E} & \thc{C} & \thc{Score} & \thc{Nivel} & \thc{Pares}\\
+\hline
+I1 & 0,01 & 0,35 & 0,40 & 0,26 & Nula & 4/6\\
+\rowcolor{tablealt}
+I2 & 0,01 & 0,47 & 0,50 & 0,33 & Nula & 5/6\\
+I3a & 0,00 & 0,56 & 0,20 & 0,25 & Nula & 2/2\\
+\rowcolor{tablealt}
+I3b & 0,00 & 0,56 & 0,20 & 0,25 & Nula & 2/2\\
+I4 & 0,00 & 0,29 & 0,25 & 0,18 & Nula & 3/6\\
+\rowcolor{tablealt}
+I5 & 0,03 & 0,32 & 0,50 & 0,28 & Nula & 4/7\\
+I6 & 0,00 & 0,00 & 0,00 & 0,00 & Nula & 0/8\\
+\hline
+\end{tabularx}}
+\vspace{0.35em}
+{\small Nula no tumba el piloto: el score es computable y sin leakage. Baseline léxico PT$\times$EN.}
+\end{frame}
+
+\begin{frame}[t]{P4 --- I1 accounts $\times$ SavingsAccount}
+\vspace{0.08em}
+{\footnotesize I1: S 0,01 · E 0,35 · C 0,40 · \textbf{0,26 Nula} · 4 de 6 GET emparejados.}
+\vspace{0.35em}
+{\footnotesize\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\linewidth}{|L{3.55cm}|Y|L{1.4cm}|}
+\hline
+\thc{OFB} & \thc{BIAN (greedy)} & \thc{e\_pair}\\
+\hline
+GET /accounts & Retrieve (CR) & 0,61\\
+\rowcolor{tablealt}
+GET /\ldots/accountId & RetrieveCharge (BQ) & 0,58\\
+GET /\ldots/balances & RetrieveDeposit (BQ) & 0,46\\
+\rowcolor{tablealt}
+overdraft-limits & sin par & 0\\
+\hline
+\end{tabularx}}
+\vspace{0.4em}
+{\small Hallazgo: el greedy asigna Charge a la ficha de la cuenta. C cubre BQ de más.}
+\end{frame}
+
+\begin{frame}[t]{P4 --- I4 payments $\times$ PaymentOrderInitiation}
+\vspace{0.08em}
+{\footnotesize I4: S 0,00 · E 0,29 · C 0,25 · \textbf{0,18 Nula} · 3 de 6 ops emparejadas.}
+\vspace{0.35em}
+{\footnotesize\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\linewidth}{|L{3.7cm}|Y|L{1.4cm}|}
+\hline
+\thc{OFB} & \thc{BIAN} & \thc{e\_pair}\\
+\hline
+POST /pix/payments & Initiate (CR) & 0,61\\
+\rowcolor{tablealt}
+GET /\ldots/paymentId & Retrieve (CR) & 0,62\\
+PATCH /\ldots/paymentId & Update (CR) & 0,51\\
+\rowcolor{tablealt}
+/consents (2 ops) & sin par & 0\\
+\hline
+\end{tabularx}}
+\vspace{0.4em}
+{\small Pix sí toca el CR. Consentimiento OFB no es un BQ de POI. C = 1/4.}
+\end{frame}
+
+\begin{frame}[t]{Catálogo extra --- SD que ahora sí existen}
+\vspace{0.08em}
+{\footnotesize El hueco de loans/cards era de disco (3 YAML), no de BIAN. I1--I6 no se reemplazan.}
+\vspace{0.28em}
+{\footnotesize\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{\linewidth}{|L{3.3cm}|L{3.5cm}|L{1.35cm}|Y|}
+\hline
+\thc{OFB} & \thc{BIAN oficial} & \thc{Pares} & \thc{Score}\\
+\hline
+credit-cards & CreditCard & 7/7 & \textbf{0,46 Baja}\\
+\rowcolor{tablealt}
+loans & Loan & 4/5 & 0,27 Nula\\
+opendata-loans & Loan & 2/2 & 0,28 Nula\\
+\rowcolor{tablealt}
+opendata-creditcards & CreditCard & 2/2 & 0,30 Nula\\
+investments & InvestmentAccount & 2/5 & 0,19 Nula\\
+\hline
+\end{tabularx}}
+\vspace{0.35em}
+{\footnotesize Sin par natural: \texttt{admin}, \texttt{common}, \texttt{resources}, \texttt{webhook}, \texttt{participants}.}
+\end{frame}
+
+\begin{frame}[t]{Lectura --- qué mide (y qué no) el v0}
+\vspace{0.12em}
+{\small
+\begin{tabularx}{\linewidth}{|L{2.5cm}|Y|}
+\hline
+\thc{Señal} & \thc{Qué dice el piloto}\\
+\hline
+S $\approx$ 0 & Léxico PT$\times$EN. MiniLM ya corre sobre I1--I6.\\
+\rowcolor{tablealt}
+E 0,29 a 0,56 & Hay par de recurso; 1--1 greedy ensucia C.\\
+I6 = 0 pares & Enrollments/FIDO no es PaymentOrderInitiation.\\
+\rowcolor{tablealt}
+credit-cards 0,46 & Primer Baja: el SD oficial sí existe.\\
+\hline
+\end{tabularx}}
+\vspace{0.45em}
+{\small Éxito: score interpretable, umbrales fijos, catálogo real, sin etiquetar a mano.}
+\end{frame}
+
+\begin{frame}[t]{Qué IA se ejecutó}
+\vspace{0.15em}
+{\small
+\begin{tabularx}{\linewidth}{|L{3.4cm}|Y|}
+\hline
+\thc{Corrida} & \thc{Modelo}\\
+\hline
+S v0 (I1--I6 + catálogo) & Jaccard + TF-IDF (bolsa de tokens)\\
+\rowcolor{tablealt}
+S v1 (solo I1--I6) & MiniLM multilingual sobre pares de E\\
+E y C & Reglas: nombre, path, HTTP, CR/BQ\\
+\hline
+\end{tabularx}}
+\vspace{0.5em}
+{\small MiniLM no reabre E ni el mapa. El catálogo extra sigue en baseline léxico.}
+\vspace{0.35em}
+{\small No hay clasificador Alta/Media/Baja. El nivel es umbral del AlignmentScore.}
+\end{frame}
+
+\begin{frame}[t]{Prohibido en este piloto}
+\vspace{0.2em}
+{\small
+\begin{itemize}\itemsep0.55em
+  \item Copiar tags CR/BQ al CSV de OFB
+  \item Puntuar BIAN contra BIAN y llamarlo banco
+  \item Inventar un SD o puntuar 38 OFB $\times$ 258 SD
+  \item Etiquetar Alta/Media/Baja para entrenar un modelo
+\end{itemize}}
+\end{frame}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[uninavy] (current page.south west) rectangle (current page.north east);
+    \fill[uniaccent] (current page.south west) rectangle ([xshift=4.5mm]current page.north west);
+  \end{tikzpicture}
+  \vspace{0.85em}
+  {\color{uniaccent}\large\bfseries Pedido a la sala}\\[0.6em]
+  {\large\color{white}
+  Catálogo BIAN v14: 258 SD, 296 YAML firmados.\\[0.28em]
+  I1--I6 siguen en n = 7. credit-cards: 0,46 Baja.\\[0.28em]
+  El hueco de loans/cards era de disco, no de BIAN.}\\[0.65em]
+  {\large\color{uniaccent} Siguiente: discusión P5, sin producto cartesiano.}\\[0.85em]
+  {\color{white!70} Grupo 10 · \texttt{02-curso-II/piloto/resultado/matching/}}
+\end{frame}
+
+\end{document}

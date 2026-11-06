@@ -18,15 +18,15 @@
     Versión fija del contrato OpenAPI y del \ServiceDomain{} BIAN; herramientas de \textit{parsing} fijas \\
     \textbf{OE2} &
     Estrategia de \textit{schema matching} &
-    \StructuralScore{} (E) $\in [0, 1]$ &
+    \StructuralScore{} $\in [0, 1]$ &
     Mismo conjunto normalizado de OE1; umbral de correspondencia fijo \\
     \textbf{OE3} &
     Técnica de similitud semántica (embeddings, ontología, híbrido) &
-    \SemanticScore{} (S) $\in [0, 1]$ &
+    \SemanticScore{} $\in [0, 1]$ &
     Mismo corpus de términos; umbral de similitud fijo \\
     \textbf{OE4} &
     Pesos de agregación ($\alpha$, $\beta$, $\gamma$) &
-    \CoverageScore{} (C) (ratio parcial); contribuye a \AlignmentScore{} &
+    \CoverageScore{} (ratio parcial); contribuye a \AlignmentScore{} &
     $\alpha + \beta + \gamma = 1$ fijos; mismos S, E, C; taxonomía Tabla~\ref{tab:tipologias} \\
     \bottomrule
   \end{tabular}

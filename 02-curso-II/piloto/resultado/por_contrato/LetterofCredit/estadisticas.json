@@ -1,0 +1,30 @@
+{
+  "archivo_entrada": "LetterofCredit.yaml",
+  "source": "BIAN",
+  "contrato": "Letter of Credit",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 50,
+  "cantidad_schemas": 201,
+  "cantidad_propiedades": 901,
+  "fragmentos_corpus": 1202,
+  "operaciones_con_summary": 50,
+  "operaciones_con_description": 50,
+  "operaciones_summary_igual_description": 50,
+  "metodos": {
+    "PUT": 29,
+    "POST": 7,
+    "GET": 14
+  },
+  "tags": {
+    "CR - LetterOfCreditTransaction": 8,
+    "BQ - CustomerCollateralAllocation": 7,
+    "BQ - LetterofCreditIssuance": 7,
+    "BQ - CustomerPayment": 7,
+    "BQ - LetterofCreditDefinitionandPricing": 7,
+    "BQ - SellerObligationConfirmation": 7,
+    "BQ - LetterofCreditDemandPayment": 7
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/LetterofCredit.yaml"
+}

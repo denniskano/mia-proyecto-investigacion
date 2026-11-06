@@ -1,0 +1,639 @@
+{
+  "bian_yaml": 242,
+  "ofb_yaml": 38,
+  "regla": "Cada API OFB se contrasta con SD oficiales. I1–I6 siguen siendo las instancias del protocolo. El catálogo extra no sustituye n=7.",
+  "ranking": [
+    {
+      "ofb": "OFB_accounts_2.4.2.yml",
+      "slug": "accounts",
+      "auto_top": [
+        {
+          "bian": "VirtualAccount.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "SavingsAccount.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "InvestmentAccount.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "CurrentAccount.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "AccountsReceivable.yaml",
+          "jaccard_nombre": 0.5
+        }
+      ],
+      "curado": [
+        "SavingsAccount.yaml",
+        "CurrentAccount.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_acquiring-services_1.0.1.yml",
+      "slug": "acquiring-services",
+      "auto_top": [
+        {
+          "bian": "MerchantAcquiringFacility.yaml",
+          "jaccard_nombre": 0.3333
+        }
+      ],
+      "curado": [
+        "MerchantAcquiringFacility.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_admin_2.0.1.yml",
+      "slug": "admin",
+      "auto_top": [],
+      "curado": []
+    },
+    {
+      "ofb": "OFB_automatic-payments_2.0.0.yml",
+      "slug": "automatic-payments",
+      "auto_top": [
+        {
+          "bian": "PaymentRail.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "PaymentOrderInitiation.yaml",
+          "jaccard_nombre": 0.25
+        }
+      ],
+      "curado": [
+        "PaymentOrderInitiation.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_bank-fixed-incomes_1.1.0.yml",
+      "slug": "bank-fixed-incomes",
+      "auto_top": [
+        {
+          "bian": "BankGuarantee.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "BankDrafts.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "InternalBankAccount.yaml",
+          "jaccard_nombre": 0.2
+        },
+        {
+          "bian": "CorrespondentBankDirectory.yaml",
+          "jaccard_nombre": 0.2
+        },
+        {
+          "bian": "CorrespondentBankRelationshipManagement.yaml",
+          "jaccard_nombre": 0.1667
+        }
+      ],
+      "curado": [
+        "TermDeposit.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_capitalization-bonds_2.0.0.yml",
+      "slug": "capitalization-bonds",
+      "auto_top": [],
+      "curado": []
+    },
+    {
+      "ofb": "OFB_channels_3.0.0.yml",
+      "slug": "channels",
+      "auto_top": [
+        {
+          "bian": "ChannelActivityHistory.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "ChannelActivityAnalysis.yaml",
+          "jaccard_nombre": 0.3333
+        }
+      ],
+      "curado": [
+        "eBranchOperations.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_common_2.0.1.yml",
+      "slug": "common",
+      "auto_top": [],
+      "curado": []
+    },
+    {
+      "ofb": "OFB_consents_3.3.1.yml",
+      "slug": "consents",
+      "auto_top": [],
+      "curado": [
+        "CustomerAccessEntitlement.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_credit-cards_2.3.1.yml",
+      "slug": "credit-cards",
+      "auto_top": [
+        {
+          "bian": "CreditCard.yaml",
+          "jaccard_nombre": 1.0
+        },
+        {
+          "bian": "LetterofCredit.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "CreditManagement.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "CreditFacility.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "CardCollections.yaml",
+          "jaccard_nombre": 0.3333
+        }
+      ],
+      "curado": [
+        "CreditCard.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_credit-fixed-incomes_1.1.0.yml",
+      "slug": "credit-fixed-incomes",
+      "auto_top": [
+        {
+          "bian": "LetterofCredit.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "CreditManagement.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "CreditFacility.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "CreditCard.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "CustomerCreditRating.yaml",
+          "jaccard_nombre": 0.2
+        }
+      ],
+      "curado": []
+    },
+    {
+      "ofb": "OFB_credit-portability_1.0.0.yml",
+      "slug": "credit-portability",
+      "auto_top": [
+        {
+          "bian": "LetterofCredit.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "CreditManagement.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "CreditFacility.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "CreditCard.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "CustomerCreditRating.yaml",
+          "jaccard_nombre": 0.25
+        }
+      ],
+      "curado": [
+        "CreditFacility.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_customers_2.2.1.yml",
+      "slug": "customers",
+      "auto_top": [
+        {
+          "bian": "CustomerWorkbench.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "CustomerProposition.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "CustomerPosition.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "CustomerPortfolio.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "CustomerOffer.yaml",
+          "jaccard_nombre": 0.5
+        }
+      ],
+      "curado": [
+        "PartyReferenceDataDirectory.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_enrollments_2.1.0.yml",
+      "slug": "enrollments",
+      "auto_top": [],
+      "curado": [
+        "PartyAuthentication.yaml",
+        "CustomerAccessEntitlement.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_exchange_1.0.1.yml",
+      "slug": "exchange",
+      "auto_top": [
+        {
+          "bian": "KnowledgeExchange.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "CurrencyExchange.yaml",
+          "jaccard_nombre": 0.5
+        }
+      ],
+      "curado": [
+        "CurrencyExchange.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_exchanges_1.0.0.yml",
+      "slug": "exchanges",
+      "auto_top": [
+        {
+          "bian": "KnowledgeExchange.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "CurrencyExchange.yaml",
+          "jaccard_nombre": 0.5
+        }
+      ],
+      "curado": [
+        "CurrencyExchange.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_financings_2.4.0.yml",
+      "slug": "financings",
+      "auto_top": [],
+      "curado": [
+        "CreditFacility.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_funds_1.1.0.yml",
+      "slug": "funds",
+      "auto_top": [
+        {
+          "bian": "MutualFundAdministration.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "HedgeFundAdministration.yaml",
+          "jaccard_nombre": 0.3333
+        }
+      ],
+      "curado": [
+        "MutualFundAdministration.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_insurances_2.0.0.yml",
+      "slug": "insurances",
+      "auto_top": [],
+      "curado": [
+        "Underwriting.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_investments_1.0.1.yml",
+      "slug": "investments",
+      "auto_top": [
+        {
+          "bian": "InvestmentAccount.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "ConsumerInvestments.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "InvestmentPortfolioPlanning.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "InvestmentPortfolioManagement.yaml",
+          "jaccard_nombre": 0.3333
+        },
+        {
+          "bian": "InvestmentPortfolioAnalysis.yaml",
+          "jaccard_nombre": 0.3333
+        }
+      ],
+      "curado": [
+        "InvestmentAccount.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_invoice-financings_2.4.0.yml",
+      "slug": "invoice-financings",
+      "auto_top": [],
+      "curado": [
+        "Factoring.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_loans_2.5.0.yml",
+      "slug": "loans",
+      "auto_top": [
+        {
+          "bian": "Loan.yaml",
+          "jaccard_nombre": 1.0
+        },
+        {
+          "bian": "SyndicatedLoan.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "MortgageLoan.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "MerchandisingLoan.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "LoanSyndication.yaml",
+          "jaccard_nombre": 0.5
+        }
+      ],
+      "curado": [
+        "Loan.yaml",
+        "ConsumerLoan.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_opendata-accounts_1.0.1.yml",
+      "slug": "opendata-accounts",
+      "auto_top": [
+        {
+          "bian": "VirtualAccount.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "SavingsAccount.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "InvestmentAccount.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "CurrentAccount.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "AccountsReceivable.yaml",
+          "jaccard_nombre": 0.5
+        }
+      ],
+      "curado": [
+        "SavingsAccount.yaml",
+        "CurrentAccount.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_opendata-creditcards_1.0.1.yml",
+      "slug": "opendata-creditcards",
+      "auto_top": [],
+      "curado": [
+        "CreditCard.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_opendata-financings_1.0.1.yml",
+      "slug": "opendata-financings",
+      "auto_top": [],
+      "curado": [
+        "CreditFacility.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_opendata-invoicefinancings_1.0.1.yml",
+      "slug": "opendata-invoicefinancings",
+      "auto_top": [],
+      "curado": [
+        "Factoring.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_opendata-loans_1.0.1.yml",
+      "slug": "opendata-loans",
+      "auto_top": [
+        {
+          "bian": "Loan.yaml",
+          "jaccard_nombre": 1.0
+        },
+        {
+          "bian": "SyndicatedLoan.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "MortgageLoan.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "MerchandisingLoan.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "LoanSyndication.yaml",
+          "jaccard_nombre": 0.5
+        }
+      ],
+      "curado": [
+        "Loan.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_opendata-unarranged_1.0.1.yml",
+      "slug": "opendata-unarranged",
+      "auto_top": [],
+      "curado": [
+        "CurrentAccount.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_participants_1.0.0.yml",
+      "slug": "participants",
+      "auto_top": [
+        {
+          "bian": "CardNetworkParticipantFacility.yaml",
+          "jaccard_nombre": 0.25
+        }
+      ],
+      "curado": []
+    },
+    {
+      "ofb": "OFB_payments_4.0.0.yml",
+      "slug": "payments",
+      "auto_top": [
+        {
+          "bian": "PaymentRail.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "PaymentOrderInitiation.yaml",
+          "jaccard_nombre": 0.3333
+        }
+      ],
+      "curado": [
+        "PaymentOrderInitiation.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_payroll-credit-portability_1.0.0-beta.1.yml",
+      "slug": "payroll-credit-portability",
+      "auto_top": [
+        {
+          "bian": "LetterofCredit.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "CreditManagement.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "CreditFacility.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "CreditCard.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "CorporatePayrollServices.yaml",
+          "jaccard_nombre": 0.25
+        }
+      ],
+      "curado": [
+        "CorporatePayrollServices.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_pension_2.0.0.yml",
+      "slug": "pension",
+      "auto_top": [],
+      "curado": [
+        "TrustServices.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_products-services_3.0.0.yml",
+      "slug": "products-services",
+      "auto_top": [
+        {
+          "bian": "SalesProduct.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "ProductTraining.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "ProductServiceAgency.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "ProductPortfolio.yaml",
+          "jaccard_nombre": 0.5
+        },
+        {
+          "bian": "ProductMatching.yaml",
+          "jaccard_nombre": 0.5
+        }
+      ],
+      "curado": [
+        "ProductDirectory.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_resources_3.1.0.yml",
+      "slug": "resources",
+      "auto_top": [],
+      "curado": []
+    },
+    {
+      "ofb": "OFB_treasure-titles_1.1.0.yml",
+      "slug": "treasure-titles",
+      "auto_top": [],
+      "curado": [
+        "CustodyAdministration.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_unarranged-accounts-overdraft_2.5.0.yml",
+      "slug": "unarranged-accounts-overdraft",
+      "auto_top": [
+        {
+          "bian": "VirtualAccount.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "SavingsAccount.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "InvestmentAccount.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "CurrentAccount.yaml",
+          "jaccard_nombre": 0.25
+        },
+        {
+          "bian": "AccountsReceivable.yaml",
+          "jaccard_nombre": 0.25
+        }
+      ],
+      "curado": [
+        "CurrentAccount.yaml",
+        "CreditFacility.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_variable-incomes_1.3.0.yml",
+      "slug": "variable-incomes",
+      "auto_top": [],
+      "curado": [
+        "InvestmentAccount.yaml"
+      ]
+    },
+    {
+      "ofb": "OFB_webhook_1.2.0.yml",
+      "slug": "webhook",
+      "auto_top": [],
+      "curado": []
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "archivo_entrada": "eBranchOperations.yaml",
+  "source": "BIAN",
+  "contrato": "eBranch Operations",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 9,
+  "cantidad_schemas": 48,
+  "cantidad_propiedades": 161,
+  "fragmentos_corpus": 254,
+  "operaciones_con_summary": 9,
+  "operaciones_con_description": 9,
+  "operaciones_summary_igual_description": 9,
+  "metodos": {
+    "POST": 3,
+    "PUT": 3,
+    "GET": 3
+  },
+  "tags": {
+    "CR - eBranchChannelOperatingSession": 5,
+    "BQ - Inbound": 2,
+    "BQ - Outbound": 2
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/eBranchOperations.yaml"
+}

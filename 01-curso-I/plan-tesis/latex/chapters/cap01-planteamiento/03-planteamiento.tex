@@ -1,37 +1,35 @@
 \section{Planteamiento del problema}
 \label{sec:planteamiento}
 
-El curso pide tres capas distintas (PI-11). No tres redacciones del mismo párrafo.
+Hacen falta tres cortes. Si los tres cuentan el TSB, sobran dos.
 
 \subsection{Situación real (problemática)}
 
-TSB, CMA, Casas (47 papers, 40\,\% con dominio) y Golmohammadi ya están en §1.2. Ahí no hay
-objeto ni fila de matriz. Hay clientes sin servicio, APIs publicadas por mandato y literatura
-que casi no pisa un banco.
+Los casos y las cifras quedan en §\ref{sec:problematica}: el TSB, la orden de la CMA, el 40\,\%
+de Casas et al.\ (2021) y la revisión de Golmohammadi et al.\ (2024). Ahí hay clientes fuera de
+servicio y APIs exigidas por regulación. No hay un contrato elegido ni una fila de la matriz.
 
 \subsection{Situación subyacente (problema abstracto)}
 
-Sin el nombre del banco quedan dos árboles. Uno es el YAML: \textit{paths}, operaciones,
-\textit{schemas}. El otro es el \ServiceDomain{}: \Behavior{}, \BusinessObject{}, control.
+Sin el nombre del banco quedan dos estructuras que no coinciden de antemano. El contrato es un
+árbol de \textit{paths}, operaciones y \textit{schemas}. El \ServiceDomain{} es otro:
+\Behavior{}s, \BusinessObject{}s y relaciones de control. El problema abstracto es esa
+correspondencia. Los tipos ---nombre, verbo HTTP, objeto no cubierto, versión del YAML que no
+revisa el modelo--- están en la \Cref{tab:tipologias}. El par \texttt{PaymentOrder} /
+\texttt{paymentRequest} ya se usó en §\ref{sec:problematica}; aquí no se repite.
 
-El desajuste es de \textbf{correspondencia}. \texttt{PaymentOrder} frente a
-\texttt{paymentRequest}. Un PUT del SD sin GET en el contrato. Un esquema que no cubre el
-\textit{business object}. Versiones del YAML que no apuntan a ninguna revisión del modelo
-(Tabla~\ref{tab:tipologias}).
-
-Ahí se clava el \textbf{objeto} (el contrato completo) y la \textbf{unidad} (cada par
-endpoint/schema $\leftrightarrow$ \Behavior{}/\BusinessObject{}; §\ref{sec:objeto-estudio}).
-BIAN es referencia documental, no el software del banco.
+De ese corte salen el objeto y la unidad de §\ref{sec:objeto-estudio}: el contrato completo, y
+cada par endpoint/schema $\leftrightarrow$ \Behavior{}/\BusinessObject{}. BIAN entra como
+documento de referencia, no como el \textit{core} del banco.
 
 \subsection{Problema tecnológico (situación a modificar)}
 
-La matriz (Anexo~C) y el objetivo general del Capítulo~\ref{cap:objetivos} viven aquí, no en el
-expediente TSB. Hoy un equipo lee el Swagger a ojo o corre un \textit{schema matcher} genérico.
-Nadie entrega, para \textbf{este} par YAML $\times$ SD, un S, un E, un C y un nivel
-(Alta/Media/Baja/Nula) con umbrales fijos.
-
-Eso es lo que el Grupo~10 diseña: S/E/C $\rightarrow$ \AlignmentScore{}. Correrlo contra el
-core de un banco no entra en Guía~1 (§1.6).
+Lo que un equipo tiene hoy es el Swagger leído a ojo, o un \textit{schema matcher} que no distingue
+\ServiceDomain{}s. Para el par contrato $\times$ SD no hay un \StructuralScore{}, un
+\SemanticScore{}, un \CoverageScore{} ni un nivel (Alta, Media, Baja, Nula) con los umbrales
+escritos. El objetivo general del Capítulo~\ref{cap:objetivos} y la matriz del Anexo~C describen
+ese procedimiento. Correrlo sobre el \textit{core} de un banco queda fuera de esta Guía
+(\Cref{sec:alcances}).
 
 \subsection{Problema de investigación}
 
@@ -42,10 +40,9 @@ El \textbf{problema de investigación} es una pregunta, no un objetivo:
   del \ServiceDomain{} BIAN emparejado, y cómo se convierte eso en un score?}
 \end{quote}
 
-La pregunta ancla el hueco tecnológico. El Cap.~3 §3.6 dice por qué los 14 papers no lo tapan.
-El Anexo~C no se reescribe aquí.
+El §\ref{sec:brecha} dice qué parte de esa pregunta dejan abierta los 14 papers.
 
-Las \textbf{preguntas específicas} bajan eso a cuatro cortes:
+Las \textbf{preguntas específicas} bajan el mismo hueco a cuatro cortes, no a cuatro objetivos:
 
 \begin{table}[H]
   \centering

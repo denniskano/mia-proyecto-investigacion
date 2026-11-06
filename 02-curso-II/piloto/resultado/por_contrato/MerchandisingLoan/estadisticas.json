@@ -1,0 +1,36 @@
+{
+  "archivo_entrada": "MerchandisingLoan.yaml",
+  "source": "BIAN",
+  "contrato": "Merchandising Loan",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 47,
+  "cantidad_schemas": 235,
+  "cantidad_propiedades": 1168,
+  "fragmentos_corpus": 1540,
+  "operaciones_con_summary": 47,
+  "operaciones_con_description": 47,
+  "operaciones_summary_igual_description": 47,
+  "metodos": {
+    "PUT": 25,
+    "POST": 10,
+    "GET": 12
+  },
+  "tags": {
+    "CR - MerchandisingLoanFacility": 7,
+    "BQ - Billing": 4,
+    "BQ - Charge": 6,
+    "BQ - Payment": 4,
+    "BQ - Sweep": 4,
+    "BQ - CollateralAllocation": 4,
+    "BQ - Deposit": 3,
+    "BQ - IssuedDevice": 3,
+    "BQ - DebitandCredit": 3,
+    "BQ - Booking": 2,
+    "BQ - Interest": 3,
+    "BQ - FinancialStatusTracking": 1,
+    "BQ - AmountBlock": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/MerchandisingLoan.yaml"
+}

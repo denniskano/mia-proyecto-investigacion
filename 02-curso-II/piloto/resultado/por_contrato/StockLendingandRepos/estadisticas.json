@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "StockLendingandRepos.yaml",
+  "source": "BIAN",
+  "contrato": "Stock Lending and Repos",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 29,
+  "cantidad_schemas": 76,
+  "cantidad_propiedades": 227,
+  "fragmentos_corpus": 349,
+  "operaciones_con_summary": 29,
+  "operaciones_con_description": 29,
+  "operaciones_summary_igual_description": 29,
+  "metodos": {
+    "PUT": 17,
+    "POST": 4,
+    "GET": 8
+  },
+  "tags": {
+    "CR - RepoTransaction": 8,
+    "BQ - RepoTransactionCashTransfer": 7,
+    "BQ - RepoTransactionInitiation": 7,
+    "BQ - RepoTransactionSecurityTransfer": 7
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/StockLendingandRepos.yaml"
+}

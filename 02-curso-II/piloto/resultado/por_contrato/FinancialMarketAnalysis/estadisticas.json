@@ -1,0 +1,25 @@
+{
+  "archivo_entrada": "FinancialMarketAnalysis.yaml",
+  "source": "BIAN",
+  "contrato": "Financial Market Analysis",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 10,
+  "cantidad_schemas": 29,
+  "cantidad_propiedades": 82,
+  "fragmentos_corpus": 126,
+  "operaciones_con_summary": 10,
+  "operaciones_con_description": 10,
+  "operaciones_summary_igual_description": 10,
+  "metodos": {
+    "PUT": 6,
+    "GET": 2,
+    "POST": 2
+  },
+  "tags": {
+    "CR - FinancialMarketAnalysis": 5,
+    "BQ - FinancialMarketInsight": 5
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/FinancialMarketAnalysis.yaml"
+}

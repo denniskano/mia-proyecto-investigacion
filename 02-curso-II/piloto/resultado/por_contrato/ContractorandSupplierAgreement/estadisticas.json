@@ -1,0 +1,27 @@
+{
+  "archivo_entrada": "ContractorandSupplierAgreement.yaml",
+  "source": "BIAN",
+  "contrato": "Contractor and Supplier Agreement",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 26,
+  "cantidad_schemas": 85,
+  "cantidad_propiedades": 241,
+  "fragmentos_corpus": 377,
+  "operaciones_con_summary": 26,
+  "operaciones_con_description": 26,
+  "operaciones_summary_igual_description": 26,
+  "metodos": {
+    "PUT": 14,
+    "POST": 4,
+    "GET": 8
+  },
+  "tags": {
+    "CR - SupplierAgreement": 8,
+    "BQ - LegalTerm": 6,
+    "BQ - PolicyTerm": 6,
+    "BQ - RegulatoryTerm": 6
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/ContractorandSupplierAgreement.yaml"
+}

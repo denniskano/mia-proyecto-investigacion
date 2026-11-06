@@ -1,0 +1,9 @@
+﻿ofb_operation_id;bian_operation_id;s_coseno;s_ge_045;s_ge_055;s_ge_065;ofb_texto;bian_texto
+paymentsPostConsents;;0.0;False;False;False;Criar consentimento para a iniciação de pagamento. Método de criação do consentimento para a iniciação de pagamento.;
+paymentsGetConsentsConsentId;;0.0;False;False;False;Consultar consentimento para iniciação de pagamento. Método para consulta do consentimento para a iniciação de pagamento.;
+paymentsPostPixPayments;Initiate;0.6133;True;True;False;Criar iniciação de pagamento. Método para criar uma iniciação de pagamento.;InCR Initiate a payment transaction
+paymentsGetPixPaymentsPaymentId;Retrieve;0.4743;True;False;False;Consultar iniciação de pagamento. Método para consultar uma iniciação de pagamento.;ReCR Retrieve details about a payment transaction
+paymentsPatchPixPaymentsPaymentId;Update;0.4868;True;False;False;"Cancelar iniciação de pagamento. Esse endpoint deve ser usado para cancelar, a pedido do cliente pagador, as transações que estejam em uma das seguintes situações: Agendada com sucesso (SCHD) ou retida para análise (PDNG).
+
+- Caso a requisi";UpCR Update details of a payment transaction instruction
+paymentsPatchPixPaymentsConsentId;;0.0;False;False;False;Cancelar todos os pagamentos referentes ao mesmo Consentimento. Esse endpoint deve ser usado para cancelar, a pedido do cliente pagador, as transações que estejam em uma das seguintes situações: Agendada com sucesso (SCHD) ou retida para an;

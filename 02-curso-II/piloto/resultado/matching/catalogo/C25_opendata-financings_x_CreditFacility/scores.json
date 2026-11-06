@@ -1,0 +1,59 @@
+{
+  "id": "C25",
+  "ofb": "OFB_opendata-financings_1.0.1.yml",
+  "bian": "CreditFacility.yaml",
+  "prioridad": "catalogo-v14",
+  "git_commit": "ec2b2ad58b3936c4fabb7d81ce2fde5d017cf747",
+  "parser_id": "procesar_openapi.py",
+  "embedding_model": "tfidf+jaccard-lexical-v0",
+  "fecha": "2026-11-06T20:55:27Z",
+  "umbrales": {
+    "jaccard_nombre": 0.4,
+    "jaccard_con_http": 0.25,
+    "coseno_semantico_semana_11": 0.55,
+    "nivel_alta": 0.8,
+    "nivel_media": 0.6,
+    "nivel_baja": 0.4
+  },
+  "pesos_oficiales": {
+    "alpha": 0.3333333333333333,
+    "beta": 0.3333333333333333,
+    "gamma": 0.3333333333333333
+  },
+  "n_operaciones_ofb": 2,
+  "n_operaciones_bian": 10,
+  "n_pares": 0,
+  "S": 0.0,
+  "E": 0.0,
+  "E_estrella": 0.0,
+  "C": 0.0,
+  "catalogo_cr_bq": [
+    "CR - CreditLineFacility",
+    "BQ - CreditAllocation",
+    "BQ - Charge"
+  ],
+  "catalogo_cubierto": [],
+  "AlignmentScore": 0.0,
+  "nivel": "Nula",
+  "sensibilidad_pesos": [
+    {
+      "alpha": 0.5,
+      "beta": 0.3,
+      "gamma": 0.2,
+      "AlignmentScore": 0.0,
+      "nivel": "Nula"
+    },
+    {
+      "alpha": 0.2,
+      "beta": 0.5,
+      "gamma": 0.3,
+      "AlignmentScore": 0.0,
+      "nivel": "Nula"
+    }
+  ],
+  "leakage": {
+    "cr_bq_copiados_a_ofb": false,
+    "bian_contra_bian": false,
+    "etiquetado_manual_ml": false
+  }
+}

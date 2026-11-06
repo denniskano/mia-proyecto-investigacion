@@ -47,10 +47,10 @@ El ciclo empírico de 12 semanas del PPT (`Plan_Tesis_AlineacionBIAN.pptx`) se *
 | Slide 1 | Título (OpenAPI bancario ↔ BIAN) + piloto OFB |
 | Slide 2 | Continuidad Guía 1 → Guía 2 |
 | Slide 3 | Pregunta + OG + VD = AlignmentScore |
-| Slide 4 | Piloto: 38 OFB + 3 BIAN; pares I1–I6 |
+| Slide 4 | Piloto: 38 OFB + 258 BIAN; pares I1–I6 |
 | Slide 5 | EDA: GET vs PUT; leakage CR/BQ; summary=description |
 | Slide 6 | I1 e I4: S, E, C, score v0 (aunque sea baseline) |
-| Slide 7 | Amenazas + lo que **no** se mide (loans sin SD) |
+| Slide 7 | Amenazas + mapa extra (loans/cards con SD oficial; no 38×258) |
 | Slide 8 | Hoja de ruta 10–16 |
 
 ---

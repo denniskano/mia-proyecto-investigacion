@@ -1,0 +1,8 @@
+﻿id;ofb;bian;S_v0_lexico;S;E;C;AlignmentScore_v0;AlignmentScore;nivel_v0;nivel;n_pares;embedding_model
+I1;OFB_accounts_2.4.2.yml;SavingsAccount.yaml;0.0131;0.5557;0.3528;0.4;0.2553;0.4362;Nula;Baja;4;sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+I2;OFB_accounts_2.4.2.yml;CurrentAccount.yaml;0.0099;0.5306;0.4736;0.5;0.3278;0.5014;Nula;Baja;5;sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+I3a;OFB_opendata-accounts_1.0.1.yml;SavingsAccount.yaml;0.0;0.4527;0.5625;0.2;0.2542;0.4051;Nula;Baja;2;sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+I3b;OFB_opendata-accounts_1.0.1.yml;CurrentAccount.yaml;0.0;0.4561;0.5625;0.2;0.2542;0.4062;Nula;Baja;2;sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+I4;OFB_payments_4.0.0.yml;PaymentOrderInitiation.yaml;0.0;0.5248;0.2885;0.25;0.1795;0.3544;Nula;Nula;3;sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+I5;OFB_automatic-payments_2.0.0.yml;PaymentOrderInitiation.yaml;0.0269;0.593;0.3235;0.5;0.2834;0.4722;Nula;Baja;4;sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+I6;OFB_enrollments_2.1.0.yml;PaymentOrderInitiation.yaml;0.0;0.0;0.0;0.0;0.0;0.0;Nula;Nula;0;sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2

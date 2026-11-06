@@ -1,0 +1,26 @@
+{
+  "archivo_entrada": "CustomerCaseManagement.yaml",
+  "source": "BIAN",
+  "contrato": "Customer Case Management",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 11,
+  "cantidad_schemas": 44,
+  "cantidad_propiedades": 137,
+  "fragmentos_corpus": 213,
+  "operaciones_con_summary": 11,
+  "operaciones_con_description": 11,
+  "operaciones_summary_igual_description": 11,
+  "metodos": {
+    "POST": 1,
+    "PUT": 7,
+    "GET": 3
+  },
+  "tags": {
+    "CR - CustomerCaseManagementPlan": 5,
+    "BQ - Rules": 3,
+    "BQ - Performance": 3
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CustomerCaseManagement.yaml"
+}

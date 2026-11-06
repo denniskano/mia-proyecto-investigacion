@@ -1,30 +1,31 @@
-Lo que el grupo usa con un sentido fijo. El glosario tabular está en §\ref{sec:glosario}; las
-operativas, en §1.1 y §1.4.
+Los términos de abajo se usan siempre con el mismo sentido. La tabla está en
+§\ref{sec:glosario}. Cómo se calculan, en §1.4.
 
 \subsection{API REST y contrato OpenAPI}
 
-El banco no nos entrega el microservicio. Entrega un YAML (o JSON) OpenAPI: \textit{paths},
-verbos, \textit{schemas}. Eso es lo que se parsea. REST ---recursos, HTTP, JSON--- es el paisaje,
-no el objeto. Casas et al.\ (2021) ya dejaron OpenAPI como estándar de facto; nosotros no
-volvemos a demostrar eso.
+El archivo que entra al procedimiento es YAML o JSON OpenAPI: \textit{paths}, verbos y
+\textit{schemas}. El microservicio que lo implementa no se recibe y no se puntúa. REST ---recurso,
+HTTP, JSON--- nombra el estilo de la interfaz. Casas et al.\ (2021) ya fijaron OpenAPI como
+estándar de facto; esta sección no vuelve a demostrarlo.
 
 \subsection{Modelo de referencia BIAN}
 
-BIAN parte el banco en \ServiceDomain{}s. Cada uno trae \Behavior{}s, \BusinessObject{}s y
-control (Farzi, 2021). En este plan el SD es la vara. No se puntúa el código de un core ni el
-despliegue en un proveedor.
+BIAN divide el banco en \ServiceDomain{}s. Cada dominio publica \Behavior{}s,
+\BusinessObject{}s y relaciones de control (Farzi, 2021). En el plan el SD es la referencia contra
+la que se compara el contrato. No se evalúa el código del \textit{core} ni el despliegue en un
+proveedor.
 
 \subsection{Alineación, coherencia y desalineación}
 
-\textbf{Alineación} es el grado de correspondencia YAML $\leftrightarrow$ SD. Si el
-\AlignmentScore{} cae en Alta o Media, hablamos de coherencia operativa, no de un sello
-regulatorio. \textbf{Desalineación} es el resto: estructural, semántica, de modelado o
-REST/contrato (Tabla~\ref{tab:tipologias}).
+\textbf{Alineación} es la correspondencia entre el YAML y el SD, medida por \AlignmentScore{}.
+Alta o Media se leen como coherencia operativa del par documental. No equivalen a un sello
+regulatorio. \textbf{Desalineación} cubre el resto de la \Cref{tab:tipologias}: estructural,
+semántica, de modelado o de REST/contrato.
 
 \subsection{Modelo de puntuación}
 
-Tres números, no uno mágico: S, E y C, con pesos $\alpha$, $\beta$, $\gamma$. La
-\Cref{fig:bases-conceptuales} coloca el contrato a un lado, el SD al otro y el score al medio.
+S, E y C se agregan con pesos $\alpha$, $\beta$ y $\gamma$. La \Cref{fig:bases-conceptuales}
+deja el contrato a un lado, el SD al otro y el score en el medio.
 
 \begin{figure}[H]
   \centering

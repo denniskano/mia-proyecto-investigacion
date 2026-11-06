@@ -1,0 +1,24 @@
+{
+  "archivo_entrada": "LoanSyndication.yaml",
+  "source": "BIAN",
+  "contrato": "Loan Syndication",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 4,
+  "cantidad_schemas": 63,
+  "cantidad_propiedades": 169,
+  "fragmentos_corpus": 249,
+  "operaciones_con_summary": 4,
+  "operaciones_con_description": 4,
+  "operaciones_summary_igual_description": 4,
+  "metodos": {
+    "GET": 1,
+    "POST": 1,
+    "PUT": 2
+  },
+  "tags": {
+    "CR - SyndicatedLoanApplicationProcedure": 4
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/LoanSyndication.yaml"
+}

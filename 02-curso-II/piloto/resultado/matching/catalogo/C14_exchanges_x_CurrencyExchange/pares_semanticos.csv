@@ -1,0 +1,4 @@
+﻿ofb_operation_id;bian_operation_id;s_jaccard;s_tfidf;s_pair;ofb_texto;bian_texto
+exchangesGetOperations;;0.0;0.0;0.0;obtém a lista de operações de câmbio mantidas pelo cliente na instituição transmissora e para as quais ele tenha fornecido consentimento.;
+exchangesGetOperationsOperationId;;0.0;0.0;0.0;obtém os dados da operação de câmbio identificada por operation id. obtém os dados da operação de câmbio identificada por operation id. as alterações efetuadas na operação original devem ser representadas através de eventos. a operação orig;
+exchangesGetOperationsOperationIdEvents;;0.0;0.0;0.0;obtém os dados dos eventos da operação de câmbio identificada por operation id.;

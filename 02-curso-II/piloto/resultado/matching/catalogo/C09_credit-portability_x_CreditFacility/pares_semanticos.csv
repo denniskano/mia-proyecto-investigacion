@@ -1,0 +1,7 @@
+﻿ofb_operation_id;bian_operation_id;s_jaccard;s_tfidf;s_pair;ofb_texto;bian_texto
+creditPortabilityPostPortabilities;;0.0;0.0;0.0;realiza pedido de portabilidade de crédito para um determinado contrato junto a instituição credora solicitação de portabilidade de crédito via ofb.;
+creditPortabilityGetPortabilitiesByPortabilityId;;0.0;0.0;0.0;consulta portabilidade de crédito através da propriedade portability id. endpoint responsável por consultar pedidos de portabilidade de crédito.;
+creditPortabilityPatchPortabilitiesPortabilityIdCancel;;0.0;0.0;0.0;comunica a instituição credora a respeito do cancelamento da portabilidade de crédito.;
+creditPortabilityGetCreditOperationsContratIdPortabilityEligibility;;0.0;0.0;0.0;informa se um contrato pertencente a um determinado cliente estará habilitado para a realização do pedido de portabilidade de crédito considerando a regra de só existir um pedido de portabilidade para um determinado contrato. informa se o c;
+creditPortabilityGetAccountData;;0.0;0.0;0.0;obtém os dados necessários para realização do pagamento da operação via ted. método responsável por recuperar informações de contas para realização do pagamento via ted.;
+creditPortabilityPostPortabilitiesPortabilityIdPayment;;0.0;0.0;0.0;comunica a instituição credora a respeito da liquidação da portabilidade de crédito.;

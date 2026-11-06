@@ -1,25 +1,13 @@
 \subsection{Qué sí cubre la literatura revisada}
 
-Los catorce papers, leídos en cruz y no eje por eje, dejan esto:
+Los catorce papers ya están repartidos en E1--E6. No se resumen otra vez eje por eje. Leídos
+juntos, el corpus reparte técnicas: formato (Casas et al., 2021; Mainas et al., 2023), cruce de
+esquemas (Shvaiko y Euzenat, 2005), significado (El Bayadh et al., 2015; Santos Sousa et al.,
+2026), separación dominio--interfaz (Schmidt y Thiry, 2020) y, al margen, prueba de APIs vivas y
+ranking por QoS (Ehsan et al., 2022; Golmohammadi et al., 2024; Mahanra Rao et al., 2025).
 
-\begin{enumerate}
-  \item OpenAPI es el formato con el que se especifica REST (E1). Casas et al.\ (2021) lo muestran
-        en 47 artículos; Mainas et al.\ (2023) prueban que se puede enriquecer semánticamente sobre
-        corpus reales.
-  \item Hay marcos para cruzar esquemas (E2) y para medir significado (E3). Shvaiko y Euzenat
-        (2005) y El Bayadh et al.\ (2015) se pueden reutilizar; Santos Sousa et al.\ (2026) ya
-        documentaron dónde fallan los \textit{embeddings}.
-  \item E4 separa dominio e interfaz. Schmidt y Thiry (2020) hablan de microservicios; BIAN juega
-        el mismo papel como referencia de capacidad.
-  \item E5 es otro oficio. Ehsan et al.\ (2022) y Golmohammadi et al.\ (2024) usan OpenAPI para
-        probar APIs vivas. Eso recorta el plan: calidad operativa $\neq$ coherencia con BIAN.
-  \item E6 (Mahanra Rao et al., 2025) rankea servicios por QoS. Consume descripciones; no pregunta
-        si el YAML bancario refleja un \ServiceDomain{}.
-\end{enumerate}
-
-La pregunta del grupo sigue sin respuesta en ese corpus: \textit{¿en qué medida un contrato
-OpenAPI bancario refleja un \ServiceDomain{} BIAN, y cómo se puntúa eso de modo que otro pueda
-repetirlo?}
+La pregunta de §\ref{sec:planteamiento} ---en qué medida el contrato se aparta del SD, y cómo eso
+se vuelve un score--- no está contestada en ese corpus.
 
 \subsection{Vacíos identificados}
 
@@ -36,8 +24,7 @@ La \Cref{fig:brecha} pasa de E1--E6 a los vacíos V1--V5.
 
 \subsection{Oportunidad de investigación}
 
-Cinco fases. Primera: escribir el modelo. Luego OE1 (normalizar), OE2--OE3 (E y S; C junto a
-OE4) y el \AlignmentScore{} con umbrales Alta / Media / Baja / Nula.
-
-Guía~1 se queda en el papel (\Cref{sec:alcances}). Cubre V1--V4 sobre documentos. No cubre
-testing (E5) ni un sello de cumplimiento.
+El Anexo~C parte el trabajo en cinco fases. En Guía~1 se escribe el modelo: OE1 normaliza, OE2 y
+OE3 calculan E y S, y OE4 agrega C con el \AlignmentScore{} y los umbrales Alta, Media, Baja y
+Nula. La calibración de esos umbrales, el testing del eje E5 y un sello de cumplimiento quedan
+fuera (\Cref{sec:alcances}). Las técnicas de cada fase están en el Capítulo~\ref{cap:metodologia}.

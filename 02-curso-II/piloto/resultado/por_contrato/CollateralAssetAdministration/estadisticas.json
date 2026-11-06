@@ -1,0 +1,26 @@
+{
+  "archivo_entrada": "CollateralAssetAdministration.yaml",
+  "source": "BIAN",
+  "contrato": "Collateral Asset Administration",
+  "version": "14.0.0",
+  "openapi": "3.0.1",
+  "cantidad_operaciones": 12,
+  "cantidad_schemas": 116,
+  "cantidad_propiedades": 342,
+  "fragmentos_corpus": 497,
+  "operaciones_con_summary": 12,
+  "operaciones_con_description": 12,
+  "operaciones_summary_igual_description": 12,
+  "metodos": {
+    "POST": 3,
+    "PUT": 6,
+    "GET": 3
+  },
+  "tags": {
+    "CR - CollateralAssetAdministrativePlan": 3,
+    "BQ - Valuation": 4,
+    "BQ - Maintenance": 5
+  },
+  "refs_esquema_no_definidos_en_archivo": 0,
+  "source_url": "https://raw.githubusercontent.com/bian-official/public/main/release14.0.0/semantic-apis/oas3%20/yamls/CollateralAssetAdministration.yaml"
+}

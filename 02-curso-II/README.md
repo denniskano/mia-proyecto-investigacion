@@ -10,7 +10,7 @@
 | [`plan-tesis-v2/PLAN_TESIS_V2.pdf`](plan-tesis-v2/PLAN_TESIS_V2.pdf) | **Plan vigente** (P4) |
 | [`plan-tesis-v2/`](plan-tesis-v2/) | Protocolo, matriz, cronograma, diagnóstico |
 | [`../piloto-bank-api-bian/`](../piloto-bank-api-bian/) | Repo propio del piloto. [GitHub](https://github.com/denniskano/piloto-bank-api-bian) |
-| [`../tesis-bank-api-bian/`](../tesis-bank-api-bian/) | Repo de la tesis. Todavía sin remoto |
+| [`../tesis-bank-api-bian/`](../tesis-bank-api-bian/) | Repo de la tesis. [GitHub](https://github.com/denniskano/tesis-bank-api-bian) |
 | [`sesion-05/`](sesion-05/) | Operacionalización, EDA, presentación |
 | [`sesion-06/`](sesion-06/) | Revisión del método (población, instrumentos, procedimiento, viabilidad) |
 | [`sesion-07/`](sesion-07/) | Revisión de avances: Trello, cuaderno, métricas, 2 revistas |

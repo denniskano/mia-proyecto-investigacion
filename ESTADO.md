@@ -27,7 +27,7 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 | Catálogo extra OFB→SD | `piloto-bank-api-bian/results/matching/catalogo/` | Hecho (sin inventar SD) |
 | MiniLM S v1 | `piloto-bank-api-bian/src/ofb_bian/matching_s1.py` | Hecho (pares OE2 de I1–I6) |
 | Piloto OFB × BIAN | `piloto-bank-api-bian/` · repo propio · 38 APIs + **258 SD** · 296 YAML · 4 740 ops | Hecho |
-| Tesis | `tesis-bank-api-bian/` · repo propio, todavía local | Carpeta lista |
+| Tesis | `tesis-bank-api-bian/` · [GitHub](https://github.com/denniskano/tesis-bank-api-bian) | Repo abierto |
 | EDA Sesión 5 | `02-curso-II/sesion-05/` | Hecho |
 | Revisión método Sesión 6 | `02-curso-II/sesion-06/` | Hecho (papel) |
 | Revisión avances Sesión 7 | `02-curso-II/sesion-07/` | Hecho (papel + cuaderno) |

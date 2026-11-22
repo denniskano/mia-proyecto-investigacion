@@ -24,7 +24,7 @@ mia-proyecto-investigacion/   ← este repo: curso, plan, sesiones
 ├── 01-curso-I/               ← MIA 303 · Guía 1 · plan LaTeX
 ├── 02-curso-II/              ← MIA 403 · sesiones y plan v2
 ├── piloto-bank-api-bian/     ← repo propio, ya en GitHub
-└── tesis-bank-api-bian/      ← repo propio, todavía local
+└── tesis-bank-api-bian/      ← repo propio: github.com/denniskano/tesis-bank-api-bian
 ```
 
 ## Dónde abrir cada cosa
@@ -37,7 +37,7 @@ mia-proyecto-investigacion/   ← este repo: curso, plan, sesiones
 | Revisión método (S6) | [`02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf`](02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf) |
 | Revisión avances (S7) | [`02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf`](02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf) |
 | Dataset piloto | [`piloto-bank-api-bian/`](piloto-bank-api-bian/) · [GitHub](https://github.com/denniskano/piloto-bank-api-bian) |
-| Tesis | [`tesis-bank-api-bian/`](tesis-bank-api-bian/) · sin remoto todavía |
+| Tesis | [`tesis-bank-api-bian/`](tesis-bank-api-bian/) · [GitHub](https://github.com/denniskano/tesis-bank-api-bian) |
 | Plan Guía 1 (LaTeX) | [`01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10_final.pdf`](01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10_final.pdf) |
 | Sílabo MIA 403 | [`02-curso-II/material-oficial/silabo/`](02-curso-II/material-oficial/silabo/) |
 

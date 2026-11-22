@@ -1,16 +1,18 @@
-Cinco fases, las del Anexo~C. Primero se identifica y versiona el YAML y el extracto BIAN
-(§4.3); después se parsea. Aquí se escribe el diseño. Correrlo a escala es §1.6.
+El procedimiento sigue las cinco fases del modelo (Anexo~C), alineadas con OE1--OE4. La
+\textbf{adquisición de artefactos} (Cap.~4 §4.3) precede a la normalización: contratos OpenAPI y
+material BIAN se identifican, versionan y almacenan antes del \textit{parsing}. El prototipo
+ejecuta este procedimiento sobre el piloto de §4.6. La corrida 38$\times$258 queda fuera (§1.6).
 
 \begin{enumerate}
   \item \textbf{Fase 1 --- Diseñar el modelo:} definir entradas, scores S/E/C, fórmula de
         agregación y umbrales de clasificación (Cap.~1 §1.4; Anexo~C).
   \item \textbf{Fase 2 --- Adquirir y normalizar artefactos (OE1):} obtener contratos OpenAPI y
-        extractos BIAN (§4.3); parsear y producir representaciones comparables (tabular, grafo o RDF
-        según factor elegido).
+        extractos BIAN (§4.3); parsear y producir la representación tabular (operación, ruta, verbo,
+        esquema y texto). No usamos grafo ni RDF: el par es de operaciones.
   \item \textbf{Fase 3 --- Emparejar estructuras (OE2):} calcular correspondencias y
-        \StructuralScore{}.
-  \item \textbf{Fase 4 --- Calcular similitud semántica (OE3):} obtener \SemanticScore{}.
-  \item \textbf{Fase 5 --- Integrar y clasificar (OE4):} calcular \CoverageScore{},
+        \StructuralScore{} (E).
+  \item \textbf{Fase 4 --- Calcular similitud semántica (OE3):} obtener \SemanticScore{} (S).
+  \item \textbf{Fase 5 --- Integrar y clasificar (OE4):} calcular \CoverageScore{} (C),
         \AlignmentScore{} y clasificación por tipologías (Tabla~\ref{tab:tipologias}).
 \end{enumerate}
 
@@ -23,14 +25,23 @@ aparece en la \Cref{fig:cadena-objetivos} (Cap.~2).
 \begin{figure}[H]
   \centering
   \figCapSeven
-  \caption{Correspondencia jerárquica para el cálculo de \StructuralScore{}. Fuente: elaboración
+  \caption{Correspondencia jerárquica para el cálculo de \StructuralScore{} (E). Fuente: elaboración
   propia; ejemplo ilustrativo.}
   \label{fig:proc-estructural}
 \end{figure}
 
-\subsection{Protocolo de validación empírica (fuera de alcance)}
+\subsection{Referencia experta y acuerdo}
 
-Cuando se corra, hará falta un repositorio de contratos, el parser, un registro de instancia y
-versión, un criterio de muestra (no un YAML suelto) y ---si se compara contra un humano--- un
-criterio de par ``correcto'' escrito, no improvisado. Ley 29733: sin PII. Precisión contra esa
-referencia y falsos pares se reportan ahí, no en Guía~1.
+El \AlignmentScore{} no es un clasificador. Para saber si un par es correcto hace falta una
+etiqueta independiente del score. La unidad es la operación OFB: el par que armó el greedy, o
+la operación que quedó sin par.
+
+Alex y Jack etiquetan por separado \textit{match} o \textit{no-match}. La rúbrica es el recurso
+de negocio, no el verbo: un GET puede corresponder a un PUT. Si no coinciden, adjudica un
+tercer lector. Ese lector es el asesor, cuando el programa lo designe; hasta entonces la
+adjudicación queda pendiente y no inventamos un nombre. El acuerdo se reporta con kappa de
+Cohen sobre el subconjunto etiquetado.
+
+I6 (\texttt{enrollments} contra Payment Order Initiation) es un control negativo de diseño:
+no comparte recurso. No sustituye la etiqueta. Precision, recall y F1 se calculan contra esas
+etiquetas y todavía no tienen número: no hay subconjunto cerrado.

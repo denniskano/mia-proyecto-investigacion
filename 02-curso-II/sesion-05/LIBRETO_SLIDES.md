@@ -13,8 +13,8 @@
 ## Antes de empezar
 
 - [ ] PDF de las diapositivas abierto (19 páginas)
-- [ ] Si preguntan catálogo: `../piloto/README.md`
-- [ ] Si preguntan números: `../piloto/resultado/inventario.json`
+- [ ] Si preguntan catálogo: `../piloto-bank-api-bian/README.md`
+- [ ] Si preguntan números: `../piloto-bank-api-bian/results/inventario.json`
 - [ ] Reloj: Parte A (láminas 1–8) ~6 min; Parte B (9–19) ~7 min
 
 | Quién | Láminas |
@@ -151,7 +151,7 @@
 
 **Diapositiva:** Parte B — EDA (puente navy)
 
-> Pasamos a datos. 41 contratos, 235 operaciones, carpeta `02-curso-II/piloto`.
+> Pasamos a datos. 41 contratos, 235 operaciones, carpeta `02-curso-II/piloto-bank-api-bian`.
 
 **Acción:** no detenerse.
 

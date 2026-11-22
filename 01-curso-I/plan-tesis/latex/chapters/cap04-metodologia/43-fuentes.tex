@@ -1,7 +1,9 @@
 \subsection{Adquisición de datos}
 
-No hay encuesta. Hay YAML/JSON OpenAPI y material BIAN. Cada instancia lleva un id, p.\ ej.\
-\texttt{\{fuente\}\_\{service-domain\}\_\{version\}}.
+Los datos no provienen de campo clínico ni de encuestas: son \textbf{artefactos digitales}
+(contratos OpenAPI en YAML/JSON y material de referencia BIAN) que el procedimiento trata como
+representaciones documentales comparables. Cada instancia debe identificarse de forma unívoca (p. ej.
+\texttt{\{fuente\}\_\{service-domain\}\_\{version\}}).
 
 \input{tables/tab04-adquisicion-datos}
 
@@ -18,5 +20,19 @@ emparejados con un \ServiceDomain{} BIAN declarado en la documentación del caso
         sintéticos o anonimizados (Anexo~F).
 \end{itemize}
 
-La población es todo par OpenAPI $\leftrightarrow$ SD que cumpla eso. La muestra, un recorte
-(pagos, cuentas, préstamos\ldots). Guía~1 no clava un piloto único.
+La \textbf{población} son los pares contrato OpenAPI bancario $\times$ Service Domain BIAN. La
+\textbf{adquisición} de este piloto son los 38 YAML de Open Finance Brasil (última estable por
+API) y los 258 Service Domains publicados en BIAN release 14.0.0. El parser firma 296 de 296.
+La \textbf{muestra de score} son siete instancias, no el producto 38$\times$258:
+
+\begin{itemize}
+  \item I1: \texttt{accounts} 2.4.2 $\times$ Savings Account.
+  \item I2: el mismo YAML $\times$ Current Account.
+  \item I3a y I3b: \texttt{opendata-accounts} 1.0.1 $\times$ Savings Account y Current Account.
+  \item I4: \texttt{payments} 4.0.0 $\times$ Payment Order Initiation.
+  \item I5: \texttt{automatic-payments} 2.0.0 $\times$ Payment Order Initiation.
+  \item I6: \texttt{enrollments} 2.1.0 $\times$ Payment Order Initiation (control negativo).
+\end{itemize}
+
+I1 con I2, e I3a con I3b, comparten archivo. No son siete observaciones independientes. OFB es
+la muestra pública. No redefine el objeto: el objeto sigue siendo el contrato OpenAPI bancario.

@@ -23,7 +23,7 @@ mia-proyecto-investigacion/
 └── 02-curso-II/              ← MIA 403 · plan v2 + piloto OFB (ejecución)
     ├── material-oficial/     ← sílabo, guías, PDFs de sesión
     ├── plan-tesis-v2/        ← plan ejecutable vigente
-    ├── piloto/               ← dataset OFB × BIAN + matching v0
+    ├── piloto-bank-api-bian/ ← repo propio: github.com/denniskano/piloto-bank-api-bian
     └── sesion-05/            ← operacionalización + EDA
 ```
 
@@ -33,11 +33,11 @@ mia-proyecto-investigacion/
 |---------------|------|
 | **Plan vigente (Curso II)** | [`02-curso-II/plan-tesis-v2/PLAN_TESIS_V2.pdf`](02-curso-II/plan-tesis-v2/PLAN_TESIS_V2.pdf) |
 | Matriz consistencia OFB | [`02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf`](02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf) |
-| PDF / slides piloto | [`02-curso-II/piloto/Piloto_OFB_BIAN_slides.pdf`](02-curso-II/piloto/Piloto_OFB_BIAN_slides.pdf) |
+| PDF / slides piloto | [Piloto OFB × BIAN](https://github.com/denniskano/piloto-bank-api-bian) |
 | Revisión método (S6) | [`02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf`](02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf) |
 | Revisión avances (S7) | [`02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf`](02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf) |
-| Dataset piloto | [`02-curso-II/piloto/`](02-curso-II/piloto/) |
-| Plan Guía 1 (LaTeX) | [`01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf`](01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf) |
+| Dataset piloto | [denniskano/piloto-bank-api-bian](https://github.com/denniskano/piloto-bank-api-bian) |
+| Plan Guía 1 (LaTeX) | [`01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10_final.pdf`](01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10_final.pdf) |
 | Sílabo MIA 403 | [`02-curso-II/material-oficial/silabo/`](02-curso-II/material-oficial/silabo/) |
 
 ## Continuidad en una frase

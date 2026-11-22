@@ -1,17 +1,23 @@
 \section{Objeto de estudio}
 \label{sec:objeto-estudio}
 
-El \textbf{objeto} es el YAML (o JSON) OpenAPI~3.x con el que un banco, un integrador o un
-catálogo describe la API. Se puede parsear. Se puede poner al lado de un \ServiceDomain{}. No es
-el banco, no es BIAN entero y no es el \textit{backend}.
+El \textbf{objeto} no es un banco ni BIAN entero. Son los \textbf{contratos OpenAPI~3.x} con los
+que el sector bancario describe sus APIs: YAML o JSON que se pueden parsear y contrastar con un
+modelo de referencia, antes de formular el problema tecnológico (§1.3).
 
-BIAN entra como \textbf{referencia}: \textit{behaviors}, \textit{business objects}, control. El
-consorcio también publica OpenAPI de muestra; esos YAML no son el objeto. El objeto es el
-contrato \textbf{bancario} que se evalúa. El Anexo~F lo muestra con \textit{Payment Initiation}
-sin convertirlo en el único caso.
+Quedan fuera del objeto la organización BIAN en su totalidad, el código de \textit{backends} y la
+infraestructura de despliegue. BIAN entra como \textbf{modelo de referencia} (\ServiceDomain{}:
+\textit{behaviors}, \textit{business objects}, relaciones de control) contra el cual se leen los
+contratos.
 
-Tres niveles, porque si se mezclan el score no se interpreta. La \Cref{fig:ontologia} y la
-\Cref{tab:objeto-unidad-producto} los separan.
+BIAN también publica OpenAPI de referencia. No por eso medimos el estándar como si fuera solo su
+capa REST. El \ServiceDomain{} es el negocio: \Behavior{}s y \BusinessObject{}s. El contrato que
+evaluamos es el YAML del banco, del integrador o del catálogo: \textit{paths}, \texttt{operationId}
+y \textit{schemas}. El Anexo~F lo muestra con \textit{Payment Initiation}.
+
+Para evitar ambigüedades, se distinguen tres niveles. La \Cref{fig:ontologia} resume la relación
+entre objeto, referencia BIAN, unidad de análisis y producto del modelo; el detalle tabular sigue
+en la \Cref{tab:objeto-unidad-producto}.
 
 \input{chapters/cap01-planteamiento/fig-ontologia}
 
@@ -32,9 +38,10 @@ Tres niveles, porque si se mezclan el score no se interpreta. La \Cref{fig:ontol
   \end{tabular}
 \end{table}
 
-El archivo es el objeto. Cada par endpoint--\Behavior{} o esquema--\BusinessObject{} es la
-unidad. El \AlignmentScore{} y el nivel (Alta/Media/Baja/Nula) se reportan por instancia
-\texttt{contrato} $\times$ \ServiceDomain{}.
+En el procedimiento propuesto, el \textbf{objeto} es el archivo de entrada (el contrato); la
+\textbf{unidad de análisis} es cada par procesado dentro de él (endpoint--
+\Behavior{}, esquema--\BusinessObject{}, etc.); el \textbf{producto} agrega esos resultados en
+\AlignmentScore{} y clasificación por instancia \texttt{contrato} $\times$ \ServiceDomain{}.
 
 Cada instancia se identifica de forma unívoca, p. ej.
 \texttt{\{fuente\}\_\{service-domain\}\_\{version\}}, coherente con la adquisición de datos del
@@ -57,8 +64,9 @@ genérico.
 
 \subsection{Producto central: modelo de alineación}
 
-Lo que la matriz pide como producto es el \textbf{modelo}, no un dashboard. Entrada: un contrato
-y un SD emparejado. Salida:
+El \textbf{resultado esperado} ---lo que la matriz y el Capítulo~\ref{cap:objetivos} declaran como
+producto--- es un \textbf{modelo de alineación}. Dado un contrato OpenAPI bancario y un
+\ServiceDomain{} BIAN emparejado, debe calcular:
 
 \begin{table}[H]
   \centering
@@ -84,8 +92,8 @@ A partir de estos componentes se obtiene el \AlignmentScore{}:
 
 La clasificación interpretativa del \textit{score} es: \textbf{Alta} ($\geq 0{,}80$),
 \textbf{Media} (0,60--0,79), \textbf{Baja} (0,40--0,59) y \textbf{Nula} ($< 0{,}40$). Los umbrales
-son \textbf{convención provisional del diseño} para este plan; su calibración empírica
-permanece fuera del alcance (§1.6). Los scores S, E y C se calculan por unidad de análisis (par UA); el
+son \textbf{convención de diseño}. No se calibran hasta el subconjunto etiquetado (§4.2);
+mientras tanto el prototipo los aplica tal cual y reporta la sensibilidad de los pesos. Los scores S, E y C se calculan por unidad de análisis (par UA); el
 \AlignmentScore{} y la clasificación se reportan por instancia contrato $\times$ \ServiceDomain{}.
 La \Cref{fig:alignment-score} ilustra el cálculo del score de alineación.
 
@@ -96,5 +104,6 @@ La \Cref{fig:alignment-score} ilustra el cálculo del score de alineación.
   \label{fig:alignment-score}
 \end{figure}
 
-Diseño, normalización, E, S, C y el score integrado: eso es Anexo~C y OE1--OE4
-(Capítulo~\ref{cap:objetivos}).
+Esas cinco fases de transformación ---diseño, normalización, cálculo de E, S y C, integración en
+\AlignmentScore{}--- coinciden con la matriz de consistencia (Anexo~C) y con la cadena OE1--OE4 del
+Capítulo~\ref{cap:objetivos}.

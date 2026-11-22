@@ -1,19 +1,26 @@
 \chapter*{Resumen}
 \addcontentsline{toc}{chapter}{Resumen}
 
-El plan mide, con un score, si un contrato OpenAPI bancario corresponde al \ServiceDomain{} BIAN
-con el que se lo empareja. El expediente del TSB ---cerca de 1,9 millones de clientes sin servicio
-en 2018 (House of Commons Treasury Committee, 2018)--- y la orden que obligó a nueve bancos
-británicos de \textit{retail} a publicar APIs (CMA, 2016) se citan como síntomas de mover negocio
-y tecnología sin esa medida. No son el objeto.
+% REESCRIBIR A MANO POR ALEX Y JACK
+% Borrador, no cerrado. En el reporte del 30 % esta página salió casi entera.
+% Léanlo en voz alta y cambien cualquier frase que no dirían en la sustentación.
 
-Trabajamos sobre el contrato. \SemanticScore{} mira nombres y textos; \StructuralScore{},
-si \textit{paths} y verbos se parecen a \textit{behaviors}; \CoverageScore{}, qué parte del
-catálogo BIAN aparece en el YAML. Los tres entran en \AlignmentScore{}. El Anexo~C dice qué fila
-de la matriz corresponde a cada paso.
+Queremos saber, \textbf{antes} de integrar, si el YAML de una API bancaria cuenta el mismo negocio
+que el \ServiceDomain{} BIAN con el que se la empareja. Hoy esa pregunta se responde a ojo, o no se
+responde.
 
-Esta Guía~1 no corre el parser ni puntúa un piloto. Deja escrito \textbf{cómo} se calcularía.
-Latencia, \textit{fuzzing} y seguridad en vivo no entran (§\ref{sec:alcances}).
+En la mesa abrimos el archivo y el SD. Revisamos los \textit{paths}, el \texttt{operationId} de
+cada operación y los \texttt{\$ref} de los \textit{schemas}. Si el contrato dice
+\texttt{paymentRequest} y el dominio habla de \texttt{PaymentOrder}, o si un \Behavior{} no tiene
+operación en el YAML, no queda un número en el expediente. Sobre esa instancia calculamos similitud
+de significado, correspondencia de la jerarquía REST y cobertura de conceptos BIAN:
+\SemanticScore{}, \StructuralScore{} y \CoverageScore{}. Las tres entran en un \AlignmentScore{}.
+El orden queda en la matriz del Anexo~C.
+
+Esta tesis incluye el prototipo que calcula ese número y un piloto acotado: siete instancias
+de Open Finance Brasil contra Service Domains de BIAN v14. El parser y el matching entran.
+Quedan fuera el YAML de un banco emisor, la corrida de las 38 APIs contra los 258 dominios,
+y la latencia, el \textit{fuzzing} o la seguridad en producción (§\ref{sec:alcances}).
 
 \vspace{0.5cm}
 \noindent\textbf{Palabras clave:} \palabrasClaveES.

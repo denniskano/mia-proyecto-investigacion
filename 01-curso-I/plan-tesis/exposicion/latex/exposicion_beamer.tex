@@ -148,24 +148,26 @@
 \end{frame}
 
 % --- 10 Problema tecnológico ---
-\begin{frame}{Problema tecnológico (§1.3) --- situación escrita}
+\begin{frame}{Problema real: justificación, relevancia y alcance}
   \begin{planreminder}{Recordatorio}
-    \keyterm{Problemática del sector} $\neq$ \keyterm{problema tecnológico}. \textbf{Diseñar} es verbo del objetivo general, no formulación del problema.
+    \keyterm{Problemática del sector} $\neq$ \keyterm{problema tecnológico}. \textbf{Diseñar} es verbo del objetivo, no del problema.
   \end{planreminder}
-  \vspace{0.1em}
+  \vspace{0.08em}
   \begin{planstatement}
-  \textbf{Problema tecnológico:} no existe un \textbf{procedimiento documentado y reproducible} que, dado un contrato OpenAPI bancario y un Service Domain BIAN emparejado, \textbf{cuantifique} en qué medida se alinean y bajo qué tipologías se desalinean. Hoy la evaluación es manual, parcial o inexistente antes del despliegue.
+  \textbf{Problema:} no existe un procedimiento documentado y reproducible que, dado un contrato OpenAPI bancario y un Service Domain BIAN, \textbf{cuantifique} la alineación y los tipos de desajuste. Hoy esa revisión es manual, o no se hace, antes del despliegue.
   \end{planstatement}
-  \vspace{0.15em}
+  \vspace{0.1em}
   \begin{planpanel}
-  \small
-  \textbf{Operacionalización (P1--P4):} P1 matching estructural (E) · P2 similitud semántica (S) · P3 cobertura (C) · P4 score integrado (\AlignmentScore). \textbf{Artefacto a diseñar:} procedimiento + modelo S/E/C $\rightarrow$ clasificación en [0,1].
+  \footnotesize
+  \keyterm{Relevancia:} TSB (1,9 millones de clientes, 2018) y la orden CMA (2016, nueve bancos) muestran el costo de mover negocio y tecnología sin esa correspondencia. Casas et al.\ (2021): solo el 40\,\% de 47 estudios ancla un dominio.\\[0.25em]
+  \keyterm{Alcance:} Guía~1 diseña el modelo y el procedimiento (Anexo~C). Fuera: el software, la producción, el \textit{fuzzing}, la latencia y el YAML de un banco emisor.\\[0.25em]
+  \keyterm{P1--P4:} estructural (E) · significado (S) · cobertura (C) · score integrado (\AlignmentScore).
   \end{planpanel}
-  \note{[7:00--7:50] Alex. Decir «insuficiente» en voz alta (PI-12).}
+  \note{[7:00--7:50] Alex. Problema, relevancia (TSB, CMA, Casas) y alcance de Guía~1.}
 \end{frame}
 
 % --- 11 OG ---
-\begin{frame}{Objetivo general (técnico) --- insumo, medición y producto}
+\begin{frame}{Objetivo general y su relación con el problema}
   \begin{planstatement}
   \textbf{Objetivo general:} diseñar un \textbf{modelo de alineación} (S, E, C) y un \textbf{procedimiento reproducible} que, sobre cada instancia \texttt{contrato OpenAPI bancario $\times$ Service Domain BIAN}, calcule el \AlignmentScore{} y la clasificación por niveles.
   \end{planstatement}
@@ -174,9 +176,9 @@
   \small
   \begin{itemize}
     \item \keyterm{Insumo / base de medición:} par contrato OpenAPI~3.x + extracto SD BIAN emparejado
-    \item \keyterm{Producto del artefacto:} procedimiento documentado + \AlignmentScore{} $\in [0,1]$ + clasificación (Alta $\geq$0{,}80 / Media / Baja / Nula)
-    \item \keyterm{VD del artefacto:} \AlignmentScore{} (rendimiento global del procedimiento)
+    \item \keyterm{Producto:} procedimiento documentado + \AlignmentScore{} $\in [0,1]$ + nivel (Alta $\geq$0{,}80 / Media / Baja / Nula)
     \item \keyterm{Fórmula:} $\AlignmentScore = \alpha\cdot S + \beta\cdot E + \gamma\cdot C$, con $\alpha+\beta+\gamma=1$
+    \item \keyterm{Relación con el problema:} el hueco es la ausencia de ese procedimiento; el objetivo general es \textbf{diseñarlo}, no desplegarlo
     \item \keyterm{Objetivo superior} (consecuencia, no OG): cuantificar coherencia \textbf{antes} del despliegue
   \end{itemize}
   \end{planpanel}
@@ -184,12 +186,12 @@
 \end{frame}
 
 % --- 13 OE ---
-\begin{frame}{Objetivos específicos OE1--OE4 (entrada $\rightarrow$ producto)}
+\begin{frame}{Objetivos específicos y el subproblema que cierra cada uno}
   \figplancompact{Figura_04_Cadena_Objetivos}
   \vspace{0.1em}
   \begin{planpanel}
-  \small
-  \textbf{OE1} Normalizar $\rightarrow$ representaciones comparables · \textbf{OE2} Emparejar $\rightarrow$ E $\in [0,1]$ · \textbf{OE3} Similitud semántica $\rightarrow$ S $\in [0,1]$ · \textbf{OE4} Integrar $\rightarrow$ C, \AlignmentScore{}, tipologías. Cada OE es transformación con \textbf{producto verificable}; no equivale a «programar» ni «experimentar» en abstracto.
+  \footnotesize
+  \textbf{OE1} los artefactos no son comparables $\rightarrow$ normalizar · \textbf{OE2} (P1) $\rightarrow$ E $\in [0,1]$ · \textbf{OE3} (P2) $\rightarrow$ S $\in [0,1]$ · \textbf{OE4} (P3--P4) $\rightarrow$ C, \AlignmentScore{} y nivel. Cada uno entrega un producto verificable.
   \end{planpanel}
   \note{[8:25--9:15] Alex. OE1 normaliza · OE2$\rightarrow$E · OE3$\rightarrow$S · OE4$\rightarrow$C + AlignmentScore.}
 \end{frame}
@@ -232,7 +234,7 @@
 \end{frame}
 
 % --- 15 Metodología ---
-\begin{frame}{Metodología --- hitos / fases con verbos (§4.2 · §4.3)}
+\begin{frame}{Metodología para desarrollar y evaluar la propuesta}
   \beamertable{%
   \fontsize{11}{13}\selectfont
   \plantablesetup
@@ -244,16 +246,18 @@
     \rowcolor{tablealt} \tabphase{3} & Emparejar & Schema matching (OE2) & StructuralScore E \\
     \rowcolor{white} \tabphase{4--5} & Calcular / Integrar & S (OE3); C + score (OE4) & \AlignmentScore{} + tipologías \\
   \end{tabular}}
-  \note{[10:35--11:15] Alex. Adquisición precede normalización; Guía~1 = diseño.}
+  \vspace{0.2em}
+  {\footnotesize \keyterm{Desarrollar:} Guía~1 documenta las cinco fases. \keyterm{Evaluar:} \AlignmentScore{} y nivel (0{,}80 / 0{,}60 / 0{,}40). La corrida a escala queda en Tesis~2.}
+  \note{[10:35--11:15] Alex. Desarrollar el diseño; evaluar con umbral, no con etiqueta manual.}
 \end{frame}
 
 % --- 16 Modelo S/E/C ---
-\begin{frame}{Artefacto --- modelo de alineación S / E / C}
+\begin{frame}{Propuesta de solución --- modelo S / E / C}
   \figplancompact{slide17_img01}
   \vspace{0.1em}
   \begin{planpanel}
-  \small
-  \textbf{S} (SemanticScore): similitud de significado · \textbf{E} (StructuralScore): correspondencia REST$\leftrightarrow$BIAN · \textbf{C} (CoverageScore): proporción del SD cubierta. \textbf{Técnicas:} \textit{schema matching} (Shvaiko \& Euzenat, 2005) + similitud semántica (embeddings/ontología). \AlignmentScore{} $\rightarrow$ \textbf{Alta} ($\geq$0{,}80) / Media / Baja / Nula.
+  \footnotesize
+  \textbf{S}: similitud de significado · \textbf{E}: correspondencia REST$\leftrightarrow$BIAN · \textbf{C}: proporción del SD cubierta. Técnicas: \textit{schema matching} (Shvaiko \& Euzenat, 2005) y similitud semántica. \AlignmentScore{} $\rightarrow$ Alta ($\geq$0{,}80) / Media / Baja / Nula. El diseño queda en el Anexo~C; responde al problema y al objetivo general.
   \end{planpanel}
   \note{[11:15--12:00] Alex. Shvaiko (2005) sustenta E; scores por UA, agregado por contrato$\times$SD.}
 \end{frame}
@@ -294,16 +298,17 @@
 \end{frame}
 
 % --- 19 Conclusiones ---
-\begin{frame}{Conclusiones --- relaciones entre conceptos}
+\begin{frame}{Coherencia: problema, objetivos, solución y método}
   \begin{planpanel}
+  \small
   \begin{itemize}
-    \item \keyterm{Objeto} (contrato) + \keyterm{referencia} (BIAN) + \keyterm{UA} $\rightarrow$ scores S/E/C integrados
-    \item OE1--OE4 encadenan transformaciones con productos verificables
-    \item Matriz Anexo C alinea problema tecnológico, objetivos, VI/VD e hipótesis
-    \item Guía 1 entrega diseño; Tesis 2: artefacto software y validación empírica
+    \item \keyterm{Problema:} no hay un score reproducible OpenAPI $\times$ BIAN antes del despliegue
+    \item \keyterm{Objetivos:} el general diseña el modelo; OE1--OE4 normalizan, calculan E, calculan S e integran C y el nivel
+    \item \keyterm{Solución:} S, E y C entran en \AlignmentScore{}; el procedimiento queda escrito en el Anexo~C
+    \item \keyterm{Metodología:} cinco fases para desarrollarlo; umbrales fijos para evaluarlo. Tesis~2 corre el software
   \end{itemize}
   \end{planpanel}
-  \note{[14:00--14:30] Jack. Concluir con relaciones, no opinión (ppt-rules).}
+  \note{[14:00--14:30] Jack. Cerrar recorriendo las cuatro piezas de la consigna.}
 \end{frame}
 
 % --- 20 Recomendaciones ---

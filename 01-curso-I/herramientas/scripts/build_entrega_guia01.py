@@ -71,7 +71,45 @@ def pack_papers() -> None:
             contenido = sin_tildes(ficha_matches[0].read_text(encoding="utf-8"))
             (dst / f"{base} - resumen.md").write_text(contenido, encoding="utf-8")
 
-    print(f"  Papers empaquetados: {len(PAPERS)}")
+    extra = [
+        (
+            "He et al., 2022",
+            "BERTMap: A BERT-based Ontology Alignment System",
+            "He et al. - 2022 - BERTMap*.pdf",
+        ),
+        (
+            "Hertling y Paulheim, 2023",
+            "OLaLa: Ontology Matching with Large Language Models",
+            "Hertling y Paulheim - 2023 - OLaLa*.pdf",
+        ),
+        (
+            "Schneider et al., 2023",
+            "NLFOA: Natural Language Focused Ontology Alignment",
+            "Schneider et al. - 2023 - NLFOA*.pdf",
+        ),
+        (
+            "Kotstein y Decker, 2024",
+            "RESTBERTa: a Transformer-based question answering approach for semantic search in Web API documentation",
+            "Kotstein y Decker - 2024 - RESTBERTa*.pdf",
+        ),
+        (
+            "Lu et al., 2024",
+            "Comparing the Similarity of OpenAPI-Based Microservices",
+            "Lu et al. - 2024 - Comparing the Similarity*.pdf",
+        ),
+    ]
+    aporte = V3 / "bibliografia" / "aporte"
+    copiados = 0
+    for cite, titulo, patron in extra:
+        matches = sorted(aporte.glob(patron))
+        if not matches:
+            print(f"  [aviso] Falta PDF de aporte: {cite}")
+            continue
+        base = safe_name(f"{cite} - {titulo}")
+        shutil.copy2(matches[0], dst / f"{base}.pdf")
+        copiados += 1
+    print("  [aviso] Sin PDF abierto: Oberle y Bauernhansl, 2024 (IEEE, acceso cerrado)")
+    print(f"  Papers empaquetados: {len(PAPERS)} del Anexo B + {copiados} de 2022–2024")
 
 
 def pack_datos() -> None:
@@ -117,11 +155,16 @@ def pack_fuentes() -> None:
     dst = OUT / DIR_FUENTES
     dst.mkdir(parents=True, exist_ok=True)
 
-    pdf = PLAN / "latex" / "build" / "Plan_Tesis_Grupo10.pdf"
-    if pdf.exists():
+    candidatos = [
+        PLAN / "latex" / "build" / "Plan_Tesis_Grupo10_v2.pdf",
+        PLAN / "latex" / "build" / "Plan_Tesis_Grupo10.pdf",
+    ]
+    pdf = next((path for path in candidatos if path.exists()), None)
+    if pdf is not None:
         shutil.copy2(pdf, dst / "Plan de tesis Grupo 10.pdf")
+        print(f"  PDF del plan: {pdf.name}")
     else:
-        print(f"  [aviso] Compilar antes: {pdf}")
+        print(f"  [aviso] Compilar antes: {candidatos[0]}")
 
     zip_path = dst / "Fuentes LaTeX.zip"
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:

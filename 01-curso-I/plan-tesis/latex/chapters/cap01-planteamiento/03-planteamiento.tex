@@ -1,48 +1,59 @@
 \section{Planteamiento del problema}
 \label{sec:planteamiento}
 
-Hacen falta tres cortes. Si los tres cuentan el TSB, sobran dos.
+Tres capas, no tres frases para lo mismo. El docente las pidió distintas (PI-11): el dolor del
+sector, el diagnóstico abstracto y el hueco que el artefacto debe tapar.
 
 \subsection{Situación real (problemática)}
 
-Los casos y las cifras quedan en §\ref{sec:problematica}: el TSB, la orden de la CMA, el 40\,\%
-de Casas et al.\ (2021) y la revisión de Golmohammadi et al.\ (2024). Ahí hay clientes fuera de
-servicio y APIs exigidas por regulación. No hay un contrato elegido ni una fila de la matriz.
+El §1.2 ya trajo TSB, CMA y las cifras de Casas y Golmohammadi. Ahí aún no hay objeto de estudio
+ni fila de la matriz: hay síntomas.
 
 \subsection{Situación subyacente (problema abstracto)}
 
-Sin el nombre del banco quedan dos estructuras que no coinciden de antemano. El contrato es un
-árbol de \textit{paths}, operaciones y \textit{schemas}. El \ServiceDomain{} es otro:
-\Behavior{}s, \BusinessObject{}s y relaciones de control. El problema abstracto es esa
-correspondencia. Los tipos ---nombre, verbo HTTP, objeto no cubierto, versión del YAML que no
-revisa el modelo--- están en la \Cref{tab:tipologias}. El par \texttt{PaymentOrder} /
-\texttt{paymentRequest} ya se usó en §\ref{sec:problematica}; aquí no se repite.
+Si se quita el banco concreto quedan dos jerarquías: el \textbf{contrato OpenAPI}
+(\textit{paths}, \textit{operations}, \textit{schemas}) y el \textbf{\ServiceDomain{} BIAN}
+(\Behavior{}, \BusinessObject{}, control).
 
-De ese corte salen el objeto y la unidad de §\ref{sec:objeto-estudio}: el contrato completo, y
-cada par endpoint/schema $\leftrightarrow$ \Behavior{}/\BusinessObject{}. BIAN entra como
-documento de referencia, no como el \textit{core} del banco.
+El diagnóstico es de \textbf{correspondencia}: mismos conceptos con nombres distintos, operaciones
+HTTP que no reflejan \textit{behaviors}, esquemas que no cubren \textit{business objects},
+versiones sin trazabilidad (§\ref{sec:problematica}; Tabla~\ref{tab:tipologias}).
+
+En este nivel se fija el \textbf{objeto de estudio} (contrato OpenAPI bancario completo) y la
+\textbf{unidad de análisis} (pares endpoint/schema $\leftrightarrow$ \Behavior{}/\BusinessObject{};
+§\ref{sec:objeto-estudio}). BIAN funciona como \textbf{modelo de referencia} documental frente a la
+capa REST.
 
 \subsection{Problema tecnológico (situación a modificar)}
 
-Lo que un equipo tiene hoy es el Swagger leído a ojo, o un \textit{schema matcher} que no distingue
-\ServiceDomain{}s. Para el par contrato $\times$ SD no hay un \StructuralScore{}, un
-\SemanticScore{}, un \CoverageScore{} ni un nivel (Alta, Media, Baja, Nula) con los umbrales
-escritos. El objetivo general del Capítulo~\ref{cap:objetivos} y la matriz del Anexo~C describen
-ese procedimiento. Correrlo sobre el \textit{core} de un banco queda fuera de esta Guía
-(\Cref{sec:alcances}).
+El \textbf{problema tecnológico} ---el de la matriz de consistencia y del objetivo general del
+Capítulo~\ref{cap:objetivos}--- no coincide con la problemática del sector ni con la brecha
+abstracta. Existen prácticas aisladas de revisión manual y herramientas genéricas de
+\textit{schema matching}, pero \textbf{no hay un método reproducible y adaptado} que, dado un
+contrato OpenAPI bancario y un \ServiceDomain{} BIAN emparejado, calcule de forma sistemática en
+qué medida se alinean y bajo qué tipologías se desalinea. Hoy esa evaluación suele ser manual,
+parcial o simplemente no ocurre antes del despliegue.
+
+Respondemos en ese nivel: el procedimiento S/E/C $\rightarrow$ \AlignmentScore{}, el prototipo
+que lo calcula y el piloto de siete instancias. Ponerlo a correr en un banco emisor no entra
+(§1.6).
 
 \subsection{Problema de investigación}
 
-El \textbf{problema de investigación} es una pregunta, no un objetivo:
+Con los niveles anteriores en mente, el \textbf{problema de investigación} queda como pregunta
+medible, distinta de los objetivos:
 
 \begin{quote}
-  \textbf{¿En qué medida, y con qué tipos de desajuste, un contrato OpenAPI bancario se aparta
-  del \ServiceDomain{} BIAN emparejado, y cómo se convierte eso en un score?}
+  \textbf{¿En qué medida y bajo qué tipologías se produce desalineación entre contratos OpenAPI y
+  los modelos de negocio BIAN en arquitecturas API bancarias, y cómo cuantificarla de forma
+  reproducible mediante un modelo de alineación?}
 \end{quote}
 
-El §\ref{sec:brecha} dice qué parte de esa pregunta dejan abierta los 14 papers.
+Esta pregunta ancla el \textbf{problema tecnológico}; la brecha del estado del arte (Cap.~3 §3.6)
+explica por qué la literatura aún no lo resuelve, sin confundirse con la formulación del problema
+tecnológico en Anexo~C.
 
-Las \textbf{preguntas específicas} bajan el mismo hueco a cuatro cortes, no a cuatro objetivos:
+Para operacionalizar el problema se plantean las siguientes \textbf{preguntas específicas}:
 
 \begin{table}[H]
   \centering
@@ -74,5 +85,6 @@ La \Cref{tab:tipologias} resume la tipología de desalineaciones identificadas:
 
 \input{tables/tab02-tipologias}
 
-P1--P4 no son los objetivos. Normalizar, emparejar y puntuar están en OE1--OE4
-(Capítulo~\ref{cap:objetivos}) y en las cinco fases del Anexo~C.
+Las preguntas P1--P4 orientan la investigación; las transformaciones concretas (normalización,
+\textit{matching}, cálculo de \textit{scores}) pasan a los \textbf{objetivos específicos} del
+Capítulo~\ref{cap:objetivos} y a las cinco fases declaradas en Anexo~C.

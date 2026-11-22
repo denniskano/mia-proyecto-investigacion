@@ -9,7 +9,7 @@ Desde la raíz del repo (`plan-tesis/`):
 ```bash
 cd latex
 make pdf
-# Salida: build/Plan_Tesis_Grupo10.pdf
+# Informe vigente: build/Plan_Tesis_Grupo10_final.pdf
 ```
 
 Figuras en `../figuras/` (ver `../figuras/README.md`). No commitear `build/` — ver `../.gitignore`.

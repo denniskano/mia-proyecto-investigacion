@@ -164,9 +164,11 @@
 
 ## SLIDE 11 · 5:30–6:20 · **Alex**
 
-**Diapositiva:** Problema tecnológico + P1–P4 (§1.3)
+**Diapositiva:** Problema real — justificación, relevancia y alcance (§1.3)
 
-> Hasta aquí Jack nos mostró el **dolor del sector** — la problemática real — y yo mostré **cómo mediríamos** casos concretos con S, E y C. Ahora cambiamos de registro: esta diapositiva es el **problema tecnológico** del plan, sección **1.3**. Es el problema que aparece en la **matriz de consistencia** del Anexo C — no confundirlo con la slide 5 ni con la brecha de la slide 19.  
+> Esta lámina responde el primer punto de la consigna: **cuál es el problema real, por qué importa y hasta dónde llega el plan**.  
+>  
+> Hasta aquí Jack mostró el dolor del sector. Esta diapositiva es el **problema tecnológico** (§1.3), el que entra en la matriz del Anexo C. No es la slide 5 ni la brecha de la slide 19.  
 >  
 > Señalo primero el recuadro dorado de **recordatorio**: **«Problemática del sector ≠ problema tecnológico del artefacto»**. En palabras simples: que exista fragmentación en los bancos **motiva** la investigación, pero **no es** el problema que nuestro procedimiento resuelve directamente. Nuestro problema tecnológico es otro: **cómo diseñar un método reproducible** para cuantificar la alineación entre un contrato OpenAPI y un Service Domain BIAN.
 
@@ -204,6 +206,8 @@
 >  
 > **Objetivo general (técnico):** **diseñar** el modelo S/E/C y el procedimiento reproducible que produce el **AlignmentScore**.  
 >  
+> **Relación con el problema:** el hueco es que ese procedimiento no existe; el objetivo general es diseñarlo, no ponerlo en producción.  
+>  
 > **Variable dependiente del artefacto:** el **AlignmentScore** en **[0, 1]** más la **clasificación** por niveles.  
 >  
 > El **objetivo superior** — lo que ocurriría en el mundo real **si** el artefacto existiera y se usara — es que equipos de arquitectura **cuantifiquen la coherencia negocio–API antes del despliegue**. En Guía 1 **no implementamos** ese cambio; solo entregamos el **diseño** validable en Tesis 2.
@@ -214,9 +218,9 @@
 
 ## SLIDE 13 · 6:55–7:45 · **Alex**
 
-**Diapositiva:** Objetivos específicos OE1–OE4 (figura cadena)
+**Diapositiva:** Objetivos específicos y el subproblema que cierra cada uno
 
-> Los **objetivos específicos** son **hitos con producto verificable** — no formulaciones vagas como «programar en Python» o «hacer experimentos».  
+> Los **objetivos específicos** responden al mismo problema, partido en cuatro. Cada uno es un **hito con producto verificable**.  
 >  
 > **OE1 — Normalizar:** transformar contrato y extracto BIAN en **representaciones intermedias comparables**. Producto: esquemas normalizados versionados.  
 > **OE2 — Emparejar:** aplicar *schema matching* → producto: **StructuralScore E** ∈ [0, 1].  
@@ -298,9 +302,11 @@
 
 ## SLIDE 16 · 9:05–9:45 · **Alex**
 
-**Diapositiva:** Metodología — 5 fases (§4.2 · §4.2.1)
+**Diapositiva:** Metodología para desarrollar y evaluar la propuesta
 
-> Hasta ahora definimos **objetivos**, **variables independientes** y **dependientes**. Esta diapositiva responde la pregunta operativa: **¿en qué orden se hace el trabajo?** Es la **metodología** del Capítulo 4 — sección **4.2** y tabla **4.2.1** del informe.  
+> Esta lámina es la metodología: **desarrollar** el diseño en cinco fases y **evaluarlo** con el AlignmentScore y los umbrales 0,80 / 0,60 / 0,40. Guía 1 deja el procedimiento escrito. La corrida a escala es Tesis 2.  
+>  
+> Hasta ahora definimos **objetivos**, **variables independientes** y **dependientes**. Aquí se ve **en qué orden se hace el trabajo** (Capítulo 4, §4.2).  
 >  
 > Si el docente dice «**empiecen por metodología**» — criterio **PI-14** — esta es la diapositiva por la que **conviene arrancar** la parte técnica: muestra el **procedimiento como una secuencia de verbos**, no como una lista suelta de conceptos.
 
@@ -351,8 +357,10 @@
 
 ## SLIDE 17 · 9:45–10:30 · **Alex**
 
-**Diapositiva:** Artefacto S / E / C (figura)
+**Diapositiva:** Propuesta de solución — modelo S / E / C
 
+> Esta es la **propuesta de solución**: un modelo que responde al problema y al objetivo general. El diseño queda en el Anexo C.  
+>  
 > El **artefacto** descompone la evaluación en tres dimensiones complementarias:  
 >  
 > **E (StructuralScore):** grado en que la organización REST (recursos, métodos, anidamiento) corresponde a la estructura del Service Domain BIAN. Base teórica: emparejamiento de esquemas (**Shvaiko & Euzenat, 2005**).  
@@ -470,15 +478,14 @@
 
 ## SLIDE 20 · 12:10–12:40 · **Jack**
 
-**Diapositiva:** Conclusiones
+**Diapositiva:** Coherencia — problema, objetivos, solución y método
 
-> Cerramos con **relaciones entre conceptos**, no con opinión personal:  
+> Cerramos recorriendo las cuatro piezas de la consigna, en el orden de la lámina:  
 >  
-> **OpenAPI** es maduro como formato de contrato técnico; falta un procedimiento **OpenAPI↔BIAN** reproducible.  
-> El **objeto** es el contrato; **BIAN** es **referencia**; la **unidad de análisis** es cada par comparable dentro del contrato → de ahí salen **S, E, C** integrados.  
-> **OE1 a OE4** encadenan transformaciones con **productos verificables** en cada paso.  
-> La **matriz del Anexo C** cierra la trazabilidad: problema tecnológico → objetivos → variables → hipótesis.  
-> **Guía 1** entrega el **diseño**; **Tesis 2** prevé software y validación empírica con contratos reales.
+> **Problema:** no hay un score reproducible entre un OpenAPI bancario y un Service Domain BIAN antes del despliegue.  
+> **Objetivos:** el general diseña ese modelo; OE1 a OE4 normalizan, calculan E, calculan S e integran C y el nivel.  
+> **Solución:** S, E y C entran en el AlignmentScore. El procedimiento queda escrito en el Anexo C.  
+> **Metodología:** cinco fases para desarrollarlo y umbrales fijos para evaluarlo. Tesis 2 corre el software.
 
 ---
 

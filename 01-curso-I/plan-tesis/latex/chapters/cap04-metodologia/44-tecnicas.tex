@@ -1,13 +1,30 @@
-Las técnicas salen de §\ref{sec:estado-arte} y de los factores del Capítulo~\ref{cap:objetivos}.
-No entrenamos un modelo: no hay etiquetas. S y E se calculan con reglas de \textit{schema matching}
-y con una medida de similitud.
+Por objetivo, tomadas del §\ref{sec:estado-arte} y de los factores del Capítulo~\ref{cap:objetivos}.
+No entrenamos un clasificador: no hay etiquetas para ajustar pesos. La configuración que corre
+el prototipo es una sola. Las alternativas del Anexo~D quedan como las que se descartaron.
 
-OE1 parsea OpenAPI~3.x y saca \textit{paths}, operaciones y esquemas hacia una representación
-intermedia. Mainas et al.\ (2023) quedan como referencia de enriquecimiento, no como paso
-obligatorio. OE2 compara nombre, ruta, profundidad y verbo HTTP, siguiendo los cortes de Shvaiko
-y Euzenat (2005). OE3 estima similitud con \textit{embeddings} u ontología (El Bayadh et al.,
-2015; Chandrasekaran y Mago, 2022). OE4 agrega $\alpha S + \beta E + \gamma C$ y clasifica con
-los umbrales de §1.4.
+\begin{itemize}
+  \item \textbf{OE1:} parser de OpenAPI~3.x. Lee \textit{paths}, verbos, \texttt{operationId},
+        \textit{schemas} y \texttt{\$ref} anidados. La salida es una tabla. No se copian tags
+        \texttt{CR} ni \texttt{BQ} al YAML de OFB. Mainas et al.\ (2023) quedan como referencia
+        de enriquecimiento, no como paso.
+  \item \textbf{OE2:} reglas, no una red. Un candidato entra si el Jaccard del nombre llega a
+        0,40, o la ruta toca el recurso del Service Domain, o el verbo coincide y el nombre
+        llega a 0,25. El par vale $0{,}40$ nombre $+ 0{,}25$ ruta $+ 0{,}20$ verbo HTTP
+        $+ 0{,}15$ profundidad. El greedy toma un behavior BIAN por operación OFB. Sin par,
+        esa operación vale 0. GET y PUT pueden emparejarse: exigir el mismo verbo pondría a
+        OFB en cero. La taxonomía es la de Shvaiko y Euzenat (2005).
+  \item \textbf{OE3:} dos SemanticScore sobre los mismos pares, que quedan congelados.
+        v0 es la media de Jaccard y del coseno TF-IDF: el techo léxico, sin GPU. v1 es el
+        coseno de \texttt{paraphrase-multilingual-\allowbreak MiniLM-L12-v2}, ya entrenado, sin
+        \textit{fine-tuning}. El texto se codifica, el vector se normaliza y el coseno es el
+        producto punto. Se eligió porque OFB está en portugués y BIAN en inglés
+        (Chandrasekaran y Mago, 2022; Lu et al., 2024). E y C no se recalculan.
+  \item \textbf{OE4:} $C$ es la fracción de tags \texttt{CR} y \texttt{BQ} del Service Domain
+        que recibieron par. \AlignmentScore{} $= (S+E+C)/3$. Los pesos oficiales son iguales.
+        La sensibilidad usa $(0{,}50,\ 0{,}30,\ 0{,}20)$ y $(0{,}20,\ 0{,}50,\ 0{,}30)$. Los
+        cortes de coseno 0,45 / 0,55 / 0,65 no recortan el S oficial.
+\end{itemize}
 
-Herramientas previstas: Python, un validador OpenAPI y una librería de similitud. El código no
-forma parte de esta Guía (\Cref{sec:alcances}).
+No hay GPT, no se puntúa BIAN contra BIAN y el nivel no se aprende: 0,80 / 0,60 / 0,40 siguen
+siendo convención de diseño hasta que el subconjunto etiquetado diga cuántas instancias cambian
+de nivel (§4.2).

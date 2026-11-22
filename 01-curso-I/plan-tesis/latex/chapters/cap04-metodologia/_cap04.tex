@@ -1,7 +1,9 @@
 \chapter{Diseño metodológico}
 \label{cap:metodologia}
 
-Cómo se baja OE1--OE4 a pasos. Enfoque, fuentes, técnicas y dónde se puede romper la validez.
+Este capítulo describe el \textbf{diseño metodológico} del plan: enfoque, procedimiento, fuentes de
+datos, técnicas y criterios de validez. Se explicita cómo cada objetivo específico (Cap.~2) se
+materializa en pasos con verbos de acción (§4.2--§4.2.1).
 
 \section{Tipo y enfoque metodológico}
 \input{chapters/cap04-metodologia/41-tipo-enfoque}
@@ -24,20 +26,28 @@ Cómo se baja OE1--OE4 a pasos. Enfoque, fuentes, técnicas y dónde se puede ro
 
 \section{Criterios de validez}
 
-Cuatro anclas, ninguna estadística sobre personas: el Anexo~C (problema $\rightarrow$ producto),
-que otro pueda repetir los pasos, que Cap.~1 / Cap.~3 / Anexo~D no se contradigan, y el recorte
-de §1.6.
+La validez del plan se sustenta en: (1)~\textbf{trazabilidad} problema $\rightarrow$ objetivos
+$\rightarrow$ fases $\rightarrow$ productos (Anexo~C); (2)~\textbf{reproducibilidad} del
+procedimiento documentado; (3)~\textbf{coherencia constructiva} entre definiciones Cap.~1, marco
+Cap.~3 y operacionalización Anexo~D; (4)~\textbf{delimitación explícita} de alcance (§1.6).
 
 \section{Amenazas a la validez}
 
-Sin software en esta Guía, la amenaza interna es un parser que se coma mal un \texttt{allOf} o
-un S sesgado porque \texttt{Retrieve} y ``consultar'' no se normalizaron en OE1.
+\begin{itemize}
+  \item \textbf{Interna:} el prototipo y las siete instancias fijan el procedimiento. Sigue el
+        riesgo de un parser que pierda un \texttt{allOf}, y el de un S léxico cerca de cero
+        porque el YAML está en portugués y el Service Domain en inglés. Por eso v0 se conserva
+        como techo y v1 no reabre los pares.
+  \item \textbf{Externa:} los umbrales 0,80 / 0,60 / 0,40 son \textbf{convención provisional} del
+        diseño; una muestra empírica futura podría no representar dominios menos frecuentes (p. ej.
+        crédito vs.\ pagos) ni versiones BIAN distintas entre emisores.
+  \item \textbf{De constructo:} agregar S, E y C en un único \AlignmentScore{} puede ocultar
+        desalineaciones localizadas ---un \textit{schema} crítico mal emparejado con peso bajo en
+        C--- que sí importan a negocio aunque el score global sea ``Medio''.
+  \item \textbf{Conclusión:} las siete instancias no autorizan a hablar por todo el sector. El
+        reporte lleva la instancia junto al score. La etiqueta experta y el F1 cierran esa
+        lectura; hasta que existan, el nivel es una convención.
+\end{itemize}
 
-Hacia afuera: 0,80 / 0,60 / 0,40 son convención de diseño. Un SD de crédito puede no
-comportarse como uno de pagos; otra \textit{release} BIAN tampoco.
-
-El constructo flaquea si un \textit{schema} crítico queda mal emparejado y C lo diluye: el
-\AlignmentScore{} sale ``Medio'' y negocio sigue roto.
-
-Nada de esto se generaliza al sector con un YAML. Hace falta el criterio de inclusión de §4.3 y
-reportar la instancia junto al score. Eso es Tesis~2.
+En síntesis, este capítulo fija el procedimiento, la configuración que corre el prototipo y el
+piloto de siete instancias. La etiqueta experta está definida y todavía no está medida.

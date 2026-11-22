@@ -24,16 +24,16 @@ Complementa la \Cref{tab:variables} (Cap.~2) y la matriz de consistencia (Anexo~
     \midrule
     OE1 &
     Esquema de representación intermedia &
-    Tabular (recurso--operación--esquema); grafo (nodos/aristas); RDF/triples (opcional) \\
+    \textbf{Elegido:} tabular (operación, ruta, verbo, esquema, texto). Descartados: grafo y RDF \\
     OE2 &
     Estrategia de \textit{schema matching} &
-    Nombre exacto; similitud de ruta; profundidad de esquema; operación HTTP \\
+    \textbf{Elegido:} greedy uno a uno, $0{,}40$ nombre $+ 0{,}25$ ruta $+ 0{,}20$ verbo $+ 0{,}15$ profundidad \\
     OE3 &
     Técnica de similitud semántica &
-    Embeddings + coseno; matching ontología; híbrido estructural+semántico \\
+    \textbf{Elegido:} Jaccard+TF-IDF (v0) y MiniLM multilingüe (v1) sobre los pares de E. No se hace \textit{fine-tuning} \\
     OE4 &
     Pesos $\alpha$, $\beta$, $\gamma$ &
-    Pesos iguales ($1/3$); ponderación experta; análisis de sensibilidad \\
+    \textbf{Oficial:} pesos iguales ($1/3$). Sensibilidad: $(0{,}50,\ 0{,}30,\ 0{,}20)$ y $(0{,}20,\ 0{,}50,\ 0{,}30)$ \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -45,6 +45,6 @@ Complementa la \Cref{tab:variables} (Cap.~2) y la matriz de consistencia (Anexo~
         ponderada.
   \item La clasificación nominal (Alta/Media/Baja/Nula) se obtiene por umbrales fijos definidos en
         el Capítulo~1 §1.4 y reutilizados en OE4.
-  \item El diseño documenta el procedimiento; la ejecución experimental a escala queda fuera de
-        alcance del presente plan (§1.6).
+  \item El piloto de siete instancias ejecuta el procedimiento. La corrida 38$\times$258 queda
+        fuera (§1.6). Precision, recall y F1 esperan el subconjunto etiquetado.
 \end{itemize}

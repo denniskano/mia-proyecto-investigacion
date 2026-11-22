@@ -2,7 +2,7 @@
 
 **Grupo 10** · Alex Mancilla Antay · Dennis Jack Paitan Cano  
 **Fecha de esta entrada:** 30 oct 2026  
-**Corrida:** `procesar_openapi.py` sobre `../piloto/`  
+**Corrida:** `procesar_openapi.py` sobre `../piloto-bank-api-bian/`  
 **Commit de referencia:** el de `inventario.json` (41 / 235 / 6 746 / 10 906)
 
 Este cuaderno registra las **primeras pruebas** (OE1 + EDA). No hay AlignmentScore todavía.
@@ -99,4 +99,4 @@ OE1: **296/296** firmados (`resultado/matching/oe1_firma.json`).
 
 I1–I6 **no** se reemplazan. No se puntúa 38 × 258. No se inventa un SD.
 
-Mapa: `../piloto/resultado/matching/catalogo/MAPA.md`.
+Mapa: `../piloto-bank-api-bian/results/matching/catalogo/MAPA.md`.

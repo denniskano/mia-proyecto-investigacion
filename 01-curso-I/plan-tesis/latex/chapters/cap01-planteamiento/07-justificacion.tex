@@ -1,16 +1,18 @@
 \section{Justificación e importancia}
 
-Farzi (2021) y Bhatia (2022) describen la deriva entre producto, integración y gobernanza cuando
-el contrato y BIAN dejan de rastrearse. Un \textit{release} puede alejarse del modelo de negocio
-sin que eso se mida hasta producción. Con decenas de APIs y de socios, leer el Swagger a mano no
-ordena la cola de revisión.
+Si un \textit{release} mueve el YAML y el \ServiceDomain{} acordado se queda en el modelo, el
+desfase se ve en el archivo: un \textit{path} nuevo, un \texttt{operationId} que ya no nombra el
+\Behavior{}, un \texttt{\$ref} que apunta a otro \textit{schema}. Farzi (2021) y Bhatia (2022)
+describen esa deriva entre producto, integración y gobernanza cuando BIAN y el contrato no se
+rastrean. Conviene verla ahí, no cuando el servicio ya está en producción.
 
-\AlignmentScore{}, junto con P1--P4 (§\ref{sec:planteamiento}), pone un número sobre el YAML.
-Shabbir et al.\ (2025) piden exactamente eso para consistencia y mantenibilidad: evidencia, no el
-parecer de una reunión de arquitectura. Casas et al.\ (2021) ya dejan OpenAPI maduro como
-artefacto. Lo que este plan agrega es el cruce con un \ServiceDomain{} y un procedimiento que
-otro pueda repetir (Anexo~C).
+Revisar a mano no escala cuando hay decenas de APIs y de socios. El \AlignmentScore{} y las
+preguntas P1--P4 (§\ref{sec:planteamiento}) sirven para ordenar esa cola con un número
+(Shabbir et al., 2025).
 
-S y E salen de \textit{schema matching} y de similitud semántica. No reemplazan pruebas de
-\textit{runtime} ni una certificación (eje E5, §\ref{sec:estado-arte}). La pregunta, en la
-práctica, es si esta versión del contrato refleja este SD.
+OpenAPI, como artefacto, ya está maduro (Casas et al., 2021). Lo que no tenemos escrito es el
+cruce con un \ServiceDomain{} BIAN. El procedimiento y la matriz del Anexo~C son esa pieza.
+
+S y E salen de alineación de esquemas y de similitud semántica. No reemplazan una prueba en
+\textit{runtime} ni un sello regulatorio (eje E5, §\ref{sec:estado-arte}). La pregunta del plan es
+documental: este contrato, en esta versión, ¿refleja este SD?

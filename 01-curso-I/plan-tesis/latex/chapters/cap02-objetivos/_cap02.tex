@@ -1,8 +1,8 @@
 \chapter{Objetivos, hipótesis y factores}
 \label{cap:objetivos}
 
-Datos de entrada, lo que se promete y lo que se hipotetiza. La figura del cierre ata OE1--OE4 al
-Capítulo~\ref{cap:metodologia}.
+Lo que hay que fijar aquí es qué se toma como dato, qué se promete como objetivo y qué se
+hipotetiza. La figura al cierre enlaza OE1--OE4 con el Capítulo~\ref{cap:metodologia}.
 
 \section{Línea de base / datos iniciales}
 
@@ -18,38 +18,50 @@ modelo:
         \AlignmentScore{} con clasificación por niveles.
 \end{itemize}
 
-Quedan fuera las implementaciones en producción, el tráfico \textit{runtime} y el testing
-automatizado (\Cref{sec:alcances}). La Tabla~1.4 y el Anexo~F muestran el formato del cálculo.
-No eligen el piloto: entra cualquier par contrato OpenAPI bancario --- \ServiceDomain{} BIAN que
-cumpla los criterios de inclusión del plan.
+Quedan fuera de esta línea de base las implementaciones en producción, el tráfico \textit{runtime} y
+los artefactos de testing automatizado (delimitación §1.6). Los ejemplos del Cap.~1 (Tabla~1.4,
+Anexo~F) ilustran el procedimiento pero \textbf{no fijan un caso piloto único}: el diseño aplica a
+cualquier par contrato OpenAPI bancario --- \ServiceDomain{} BIAN que cumpla los criterios de
+inclusión definidos en el plan.
 
 \section{Objetivo superior}
 
-El objetivo superior describe el uso en un banco, si el modelo llegara a usarse. No es el objetivo
-técnico de Guía~1.
+El \textbf{objetivo superior} expresa la consecuencia esperada en el mundo real \textit{si} el
+artefacto existiera y operara en un entorno bancario. No coincide con el objetivo técnico de la
+investigación, pero orienta la relevancia del estudio:
 
 \begin{quote}
-  Que un equipo de arquitectura pueda medir, sobre el contrato y antes del despliegue, cuánto
-  coincide ese OpenAPI con el modelo BIAN de referencia. El resultado esperado es menos adaptadores
-  rehechos a ciegas y menos deriva entre la API publicada y el negocio que BIAN describe.
+  Contar con un procedimiento verificable que permita a equipos de arquitectura y gobernanza de APIs
+  \textbf{cuantificar la coherencia} entre contratos OpenAPI y modelos BIAN \textbf{antes} del
+  despliegue o la certificación, reduciendo retrabajo en adaptadores, ensayo--error en integraciones
+  y deriva entre la capa técnica y el modelo de negocio de referencia.
 \end{quote}
 
-Guía~1 no instala ese procedimiento en un banco (\Cref{sec:alcances}). Deja el modelo y los pasos.
-El software y un piloto a escala son otra entrega.
+La investigación \textbf{no implementa} ese cambio en producción (§1.6). Entrega el modelo, el
+prototipo que calcula S, E y C, y el piloto de siete instancias. La corrida 38$\times$258 queda
+fuera.
 
 \section{Objetivo general (técnico)}
 
-\textbf{Diseñar} cómo se calculan S, E, C y el \AlignmentScore{} de un contrato OpenAPI frente a
-un \ServiceDomain{} BIAN, y dejarlo escrito de modo que otro pueda seguir los mismos pasos
-(Anexo~C).
+\textbf{Diseñar un modelo de alineación} que defina cómo calcular \SemanticScore{},
+\StructuralScore{}, \CoverageScore{} y un \AlignmentScore{} integrado para evaluar contratos
+OpenAPI frente a \ServiceDomain{} BIAN, mediante un procedimiento reproducible documentado en este
+plan.
 
-La unidad de medición es el par \texttt{contrato $\times$ Service Domain}. Sale un
-\AlignmentScore{} en $[0,1]$ y un nivel. Esa es la variable dependiente. S, E, C y la
-completitud de OE1 son insumos, no el resultado que cierra la tesis.
+\textbf{Base de medición.} El objetivo general se verifica sobre cada instancia
+\texttt{contrato OpenAPI bancario $\times$ Service Domain BIAN}. El procedimiento devuelve
+\AlignmentScore{} $\in [0,1]$ y un nivel: Alta, Media, Baja o Nula. La
+\textbf{variable dependiente del artefacto} es ese \AlignmentScore{} junto con el nivel. S, E, C y
+la completitud de la normalización salen de OE1--OE4. Son el producto de un paso. No reemplazan la
+VD global.
 
-OE1 prepara los artefactos. OE2 responde P1 (E). OE3 responde P2 (S). OE4 junta C, el score y
-las tipologías (P3--P4). Tabla~\ref{tab:objetivos-especificos}, \Cref{fig:cadena-objetivos} y
-Anexo~C.
+Cada componente responde a las preguntas P1--P4 del §\ref{sec:planteamiento}: OE1 normaliza los
+artefactos; OE2 responde P1 con \textit{matching} estructural (E); OE3 responde P2 con similitud
+semántica (S); OE4 integra S, E y C para responder P3 (cobertura) y P4 (score global y
+clasificación).
+
+La cadena completa se despliega en la Tabla~\ref{tab:objetivos-especificos}, en la
+\Cref{fig:cadena-objetivos} y en la matriz de consistencia (Anexo~C).
 
 \section{Objetivos específicos}
 
@@ -92,25 +104,28 @@ transformadores sucesivos sobre los artefactos.
 
 \section{Hipótesis}
 
-Una por OE. El factor y el ratio de cada una están en la Tabla~\ref{tab:variables}; aquí va el
-contenido.
+Se plantea una hipótesis por objetivo específico, vinculada al producto verificable y al factor o
+ratio que se mediría en una validación posterior (Tabla~\ref{tab:variables}):
 
 \begin{enumerate}
-  \item \textbf{H1 (OE1).} Si OpenAPI y BIAN se normalizan al mismo modelo intermedio, S, E y C se
-        pueden calcular sobre esas tablas (completitud de la extracción como ratio).
-  \item \textbf{H2 (OE2).} Jaccard de nombres, path y verbo HTTP ---la caja de
-        \textit{schema matching} de Shvaiko y Euzenat (2005)--- alcanza para un E que distinga
-        un par razonable de uno forzado.
-  \item \textbf{H3 (OE3).} Similitud de texto (El Bayadh et al., 2015; Chandrasekaran y Mago,
-        2022), y más adelante embeddings, separan un concepto alineado de un falso amigo de
-        modelado. Eso es S.
-  \item \textbf{H4 (OE4).} Con $\alpha=\beta=\gamma=1/3$ el \AlignmentScore{} se puede leer como
-        Alta/Media/Baja/Nula. Cambiar los pesos (sensibilidad) no debe invertir el relato de una
-        instancia, solo el número.
+  \item \textbf{H1 (OE1):} Normalizar contratos OpenAPI bancarios y especificaciones BIAN en un
+        modelo intermedio común permite calcular de forma sistemática los scores S, E y C
+        (\textbf{factor:} representación intermedia; \textbf{ratio:} completitud de la normalización).
+  \item \textbf{H2 (OE2):} Las técnicas de \textit{schema matching} (Shvaiko y Euzenat, 2005)
+        producen un \StructuralScore{} que refleja la correspondencia entre la organización REST y
+        el modelo BIAN de referencia (\textbf{ratio:} E).
+  \item \textbf{H3 (OE3):} Las métricas de similitud semántica (El Bayadh et al., 2015;
+        Chandrasekaran y Mago, 2022) producen un \SemanticScore{} capaz de distinguir conceptos
+        alineados de desalineaciones semánticas o de modelado (\textbf{ratio:} S).
+  \item \textbf{H4 (OE4):} La agregación ponderada de S, E y C ($\alpha$, $\beta$, $\gamma$) produce
+        un \AlignmentScore{} interpretable y clasificable por niveles de alineación del contrato
+        OpenAPI bancario (\textbf{factores:} $\alpha$, $\beta$, $\gamma$; \textbf{ratio:}
+        \AlignmentScore{} y clasificación).
 \end{enumerate}
 
-La Fase~1, la del diseño, asume que partir en S, E y C es mejor que un único ``índice de
-coherencia'' opaco. El Anexo~C lo deja en filas.
+Adicionalmente, la \textbf{Fase~1} (diseño) se apoya en la hipótesis de que un modelo estructurado
+por componentes S, E y C permite calcular de forma reproducible un score de alineación interpretable
+entre OpenAPI y BIAN (detalle en Anexo~C).
 
 \section{Factores y ratios de la investigación}
 

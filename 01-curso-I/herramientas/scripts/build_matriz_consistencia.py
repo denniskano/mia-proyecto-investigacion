@@ -37,7 +37,8 @@ ROWS = [
         ),
         "producto": (
             "Modelo metodológico documentado: adquisición → normalización → "
-            "SemanticScore (S) + StructuralScore (E) + CoverageScore (C) → AlignmentScore."
+            "SemanticScore (S) + StructuralScore (E) + CoverageScore (C) → AlignmentScore. "
+            "El prototipo implementa este modelo."
         ),
         "vi": "No aplica",
         "estados": "No aplica",
@@ -51,8 +52,9 @@ ROWS = [
             "entrada→salida, criterios de validez explícitos."
         ),
         "control": (
-            "Ámbito: sector bancario; contratos OpenAPI 3.x evaluados contra Service Domains BIAN; "
-            "alcance documental (sin despliegue en producción)."
+            "Ámbito: sector bancario; OpenAPI 3.x contra Service Domains BIAN. "
+            "El prototipo ejecuta el procedimiento. Fuera: despliegue en producción y la corrida "
+            "38×258. Umbrales 0,80 / 0,60 / 0,40: convención de diseño hasta el subconjunto etiquetado."
         ),
     },
     {
@@ -72,8 +74,7 @@ ROWS = [
         ),
         "vi": "Esquema de representación intermedia",
         "estados": (
-            "Modelo tabular (recurso–operación–esquema); modelo en grafo (nodos/aristas); "
-            "modelo RDF/triples (opcional)."
+            "Elegido: tabla (operación, ruta, verbo, esquema, texto). Descartados: grafo y RDF."
         ),
         "vd": "Calidad y completitud de la extracción estructural",
         "hipotesis": (
@@ -85,8 +86,14 @@ ROWS = [
             "% de cobertura respecto al artefacto fuente; integridad de metadatos."
         ),
         "control": (
-            "Versión fija del contrato OpenAPI y del Service Domain BIAN emparejados; "
-            "herramientas de parsing fijas; mismo ámbito sectorial."
+            "Adquisición: 38 YAML de Open Finance Brasil y 258 Service Domains BIAN v14.0.0; "
+            "el parser firma 296/296. Muestra de score, no el producto 38×258: "
+            "I1 accounts 2.4.2 × Savings Account; I2 el mismo YAML × Current Account; "
+            "I3a y I3b opendata-accounts 1.0.1 × Savings Account y Current Account; "
+            "I4 payments 4.0.0 × Payment Order Initiation; "
+            "I5 automatic-payments 2.0.0 × Payment Order Initiation; "
+            "I6 enrollments 2.1.0 × Payment Order Initiation (control negativo). "
+            "I1 con I2, e I3a con I3b, comparten YAML."
         ),
     },
     {
@@ -104,8 +111,10 @@ ROWS = [
         ),
         "vi": "Estrategia de matching estructural (schema matching)",
         "estados": (
-            "Correspondencia por nombre exacto; similitud de ruta/recurso; "
-            "correspondencia por profundidad y tipo de esquema; matching por operación HTTP."
+            "Elegido: greedy uno a uno. Candidato si el Jaccard del nombre ≥ 0,40, "
+            "o la ruta toca el recurso del Service Domain, o el verbo coincide y el Jaccard "
+            "del nombre ≥ 0,25. e_pair = 0,40 nombre + 0,25 ruta + 0,20 verbo HTTP + 0,15 "
+            "profundidad. Sin par, la operación vale 0. GET y PUT pueden emparejarse."
         ),
         "vd": "StructuralScore (E) — alineación estructural OpenAPI ↔ BIAN",
         "hipotesis": (
@@ -113,12 +122,13 @@ ROWS = [
             "la correspondencia entre la organización REST y el modelo BIAN."
         ),
         "metricas": (
-            "StructuralScore E ∈ [0, 1]; tasa de correspondencia estructural (%); "
-            "nº de pares alineados; desalineaciones estructurales detectadas."
+            "StructuralScore E ∈ [0, 1]: media de e_pair sobre las operaciones del contrato. "
+            "La operación sin par entra como 0. Nº de pares del greedy."
         ),
         "control": (
-            "Mismo conjunto normalizado de la Fase 2; umbral de correspondencia fijo; "
-            "sin intervención manual en el matching."
+            "Mismo conjunto normalizado de la Fase 2. Los pares de E quedan congelados "
+            "para el SemanticScore. I6 (enrollments × Payment Order Initiation) es control "
+            "negativo de diseño: no comparte recurso."
         ),
     },
     {
@@ -136,8 +146,9 @@ ROWS = [
         ),
         "vi": "Técnica de similitud semántica",
         "estados": (
-            "Embeddings + similitud coseno; matching léxico/ontológico; "
-            "enfoque híbrido (estructural + semántico)."
+            "Elegido, sobre los pares que congeló E: v0 = (Jaccard + coseno TF-IDF) / 2; "
+            "v1 = coseno de paraphrase-multilingual-MiniLM-L12-v2, ya entrenado, sin fine-tuning. "
+            "No se usa un modelo generativo para armar el par. E y C no se recalculan."
         ),
         "vd": "SemanticScore (S) — alineación semántica OpenAPI ↔ BIAN",
         "hipotesis": (
@@ -145,12 +156,12 @@ ROWS = [
             "conceptos alineados de desalineaciones semánticas o de modelado."
         ),
         "metricas": (
-            "SemanticScore S ∈ [0, 1]; similitud coseno promedio; "
-            "nº de pares sobre umbral; distribución por tipología (semántica, modelado)."
+            "SemanticScore S ∈ [0, 1], por separado en v0 (léxico) y v1 (MiniLM). "
+            "Los cortes de coseno 0,45 / 0,55 / 0,65 no recortan el S oficial."
         ),
         "control": (
-            "Mismo corpus de términos; umbral de similitud fijo; "
-            "misma técnica de embedding/modelo por corrida."
+            "Mismos pares congelados de la Fase 3. OFB en portugués y BIAN en inglés. "
+            "Modelo preentrenado, sin ajuste y sin GPU obligatoria."
         ),
     },
     {
@@ -160,17 +171,18 @@ ROWS = [
             "y cobertura de conceptos BIAN, ni una escala interpretable de alineación global."
         ),
         "objetivo": (
-            "Calcular CoverageScore (C), obtener AlignmentScore = α·S + β·E + γ·C "
-            "(α + β + γ = 1) y clasificar el nivel de alineación del contrato OpenAPI."
+            "Calcular CoverageScore (C), obtener AlignmentScore = (S + E + C) / 3 "
+            "y clasificar el nivel de alineación del contrato OpenAPI. Reportar la sensibilidad "
+            "de los pesos y, cuando haya etiquetas, precision, recall y F1."
         ),
         "producto": (
-            "CoverageScore (C); AlignmentScore; clasificación (Alta ≥0,80 · Media 0,60–0,79 · "
-            "Baja 0,40–0,59 · Nula <0,40); informe de tipologías de desalineación."
+            "CoverageScore (C); AlignmentScore; clasificación (Alta ≥ 0,80 · Media 0,60–0,79 · "
+            "Baja 0,40–0,59 · Nula < 0,40); scores por instancia. Precision, recall, F1 y kappa "
+            "de Cohen cuando el subconjunto etiquetado esté cerrado."
         ),
         "vi": "Pesos de agregación (α, β, γ)",
         "estados": (
-            "Pesos iguales (α=β=γ=1/3); ponderación experta; "
-            "sensibilidad por tipología dominante."
+            "Oficial: α = β = γ = 1/3. Sensibilidad: (0,50, 0,30, 0,20) y (0,20, 0,50, 0,30)."
         ),
         "vd": "AlignmentScore — alineación global OpenAPI ↔ BIAN",
         "hipotesis": (
@@ -178,13 +190,17 @@ ROWS = [
             "y clasificable por niveles de alineación del contrato OpenAPI bancario."
         ),
         "metricas": (
-            "CoverageScore C ∈ [0, 1]; AlignmentScore = α·S + β·E + γ·C; "
-            "nivel de alineación (Alta/Media/Baja/Nula); frecuencia por tipología "
-            "(estructural, semántica, modelado, REST/contrato)."
+            "C = (CR y BQ con al menos un par) / (CR y BQ del Service Domain). "
+            "AlignmentScore = (S + E + C) / 3. Nivel por instancia y por dominio (cuentas, pagos). "
+            "Contra la etiqueta: precision, recall y F1. Un verdadero positivo es un par del greedy "
+            "que el lector confirma; un falso positivo, un par que rechaza; un falso negativo, "
+            "un par del lector que el greedy no armó. Kappa de Cohen del doble etiquetado."
         ),
         "control": (
-            "Pesos α + β + γ = 1 fijos por corrida; mismos S, E, C de Fases 3–4; "
-            "misma taxonomía de desalineaciones (Tabla 2, Cap. 1); umbrales de clasificación fijos."
+            "Pesos oficiales iguales en el score que se reporta. Umbrales fijos como convención. "
+            "Alex y Jack etiquetan match o no-match por recurso de negocio, no por el verbo HTTP. "
+            "El asesor adjudica el desacuerdo cuando el programa lo designe. "
+            "I6 no sustituye la etiqueta."
         ),
     },
 ]
@@ -205,9 +221,10 @@ META = {
         "OpenAPI–BIAN antes del despliegue, reduciendo retrabajo en integraciones."
     ),
     "objetivo_general": (
-        "Diseñar un modelo de alineación y el procedimiento que calculen SemanticScore (S), "
-        "StructuralScore (E), CoverageScore (C) y AlignmentScore integrado para evaluar "
-        "contratos OpenAPI frente a Service Domains BIAN (Guía 1)."
+        "Diseñar un modelo de alineación que defina cómo calcular SemanticScore (S), "
+        "StructuralScore (E), CoverageScore (C) y un AlignmentScore integrado para evaluar "
+        "contratos OpenAPI frente a Service Domains BIAN. Esta tesis entrega el modelo, "
+        "el prototipo que lo calcula y el piloto de siete instancias."
     ),
 }
 
@@ -293,7 +310,7 @@ def build():
         ws.column_dimensions[get_column_letter(i)].width = w
 
     for row in range(start_row, start_row + len(ROWS) + 1):
-        ws.row_dimensions[row].height = 80
+        ws.row_dimensions[row].height = 120
     ws.row_dimensions[start_row].height = 36
 
     ws.freeze_panes = f"A{start_row + 1}"
@@ -322,8 +339,24 @@ def build():
         ("CoverageScore (C)", "Conceptos BIAN cubiertos por el contrato", "Fase 5"),
         (
             "AlignmentScore",
-            "α·S + β·E + γ·C (α+β+γ=1); clasificación Alta/Media/Baja/Nula",
-            "Fase 5 · Anexo figuras_alineacion_openapi_bian.pdf",
+            "(S + E + C) / 3; sensibilidad (0,50, 0,30, 0,20) y (0,20, 0,50, 0,30); "
+            "clasificación Alta/Media/Baja/Nula",
+            "Fase 5 · Cap. 4 §4.4",
+        ),
+        (
+            "Prototipo",
+            "Parser OpenAPI, matching greedy (v0) y MiniLM (v1) sobre las siete instancias",
+            "Cap. 4 §4.2–§4.6",
+        ),
+        (
+            "Muestra de score",
+            "I1–I6: siete instancias OFB × BIAN v14. Fuera: 38×258 y el YAML de un banco emisor",
+            "Cap. 4 §4.3 · §1.6",
+        ),
+        (
+            "Referencia experta",
+            "Doble etiquetado, kappa de Cohen, precision, recall y F1. Sin números hasta cerrar el subconjunto",
+            "Cap. 4 §4.2 y §4.5",
         ),
     ]
     for r, (a, b, c) in enumerate(resumen, 2):

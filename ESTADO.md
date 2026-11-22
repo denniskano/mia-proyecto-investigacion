@@ -11,7 +11,7 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 - Estado del arte (14 papers)
 - Metodología *design science* (Cap. 4)
 - Matriz de consistencia institucional (8 columnas)
-- Informe LaTeX: `01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf`
+- Informe LaTeX: `01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10_final.pdf`
 
 ## En curso (Curso II · MIA 403 · semanas ~5)
 
@@ -22,11 +22,11 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 | Matriz OFB (8 cols) | `02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf` | Hecho |
 | Protocolo empírico | `02-curso-II/plan-tesis-v2/protocolo-empirico.md` | Hecho (catálogo 258 SD) |
 | Cronograma 16 semanas | `02-curso-II/plan-tesis-v2/cronograma-sprints.md` | Hecho |
-| Parser OE1 | `02-curso-II/piloto/procesar_openapi.py` | Hecho · 296/296 firmados |
-| Matching v0 (P4) | `02-curso-II/piloto/matching_v0.py` + `resultado/matching/` | Hecho (I1–I6) |
-| Catálogo extra OFB→SD | `02-curso-II/piloto/resultado/matching/catalogo/` | Hecho (sin inventar SD) |
-| MiniLM S v1 | `02-curso-II/piloto/matching_s1.py` | Hecho (pares OE2 de I1–I6) |
-| Piloto OFB × BIAN | `02-curso-II/piloto/` · 38 APIs + **258 SD** · 296 YAML · 4 740 ops | Hecho |
+| Parser OE1 | `02-curso-II/piloto-bank-api-bian/src/ofb_bian/procesar_openapi.py` | Hecho · 296/296 firmados |
+| Matching v0 (P4) | `02-curso-II/piloto-bank-api-bian/src/ofb_bian/matching_v0.py` + `results/matching/` | Hecho (I1–I6) |
+| Catálogo extra OFB→SD | `02-curso-II/piloto-bank-api-bian/results/matching/catalogo/` | Hecho (sin inventar SD) |
+| MiniLM S v1 | `02-curso-II/piloto-bank-api-bian/src/ofb_bian/matching_s1.py` | Hecho (pares OE2 de I1–I6) |
+| Piloto OFB × BIAN | `02-curso-II/piloto-bank-api-bian/` · 38 APIs + **258 SD** · 296 YAML · 4 740 ops | Hecho |
 | EDA Sesión 5 | `02-curso-II/sesion-05/` | Hecho |
 | Revisión método Sesión 6 | `02-curso-II/sesion-06/` | Hecho (papel) |
 | Revisión avances Sesión 7 | `02-curso-II/sesion-07/` | Hecho (papel + cuaderno) |

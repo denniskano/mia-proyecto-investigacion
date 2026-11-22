@@ -7,7 +7,7 @@ Papers clasificados para el plan de tesis. Importar a **Zotero** con las mismas 
 | Carpeta | Cant. | Uso en el plan |
 |---------|-------|----------------|
 | `estado-del-arte/` | 14 | Cap. 3 — §3.5 tablas y §3.6 brecha (surveys/reviews) |
-| `aporte/` | 22 | Cap. 3–4 — línea de solución (matching, ontología, LLM) |
+| `aporte/` | 26 | Cap. 3–4 — línea de solución (matching, ontología, LLM) |
 | `contexto-openapi-bian/` | 7 | Cap. 1 contexto bancario + Cap. 4 casos de estudio |
 | `otros/` | 2 | Revisar relevancia antes de citar |
 

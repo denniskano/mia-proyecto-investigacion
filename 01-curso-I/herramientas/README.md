@@ -25,7 +25,7 @@ cd plan-tesis/latex && make pdf
 ```
 
 Salidas:
-- Plan de tesis PDF → `plan-tesis/latex/build/Plan_Tesis_Grupo10.pdf`
+- Plan de tesis PDF → `plan-tesis/latex/build/Plan_Tesis_Grupo10_final.pdf`
 - Figuras Cap. 1 → `plan-tesis/figuras/cap01/` (vía symlinks desde Fase B)
 - Figuras Cap. 2–3 → `plan-tesis/figuras/cap02/`, `cap03/` (Fase C/D/E)
 - Fase 0 → `plan-tesis/fases/fase-0-bibliografia/fichas/` + `plan-tesis/anexos/Matriz_Papers_EstadoDelArte_Grupo10.xlsx`

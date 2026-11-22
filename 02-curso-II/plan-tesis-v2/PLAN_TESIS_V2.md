@@ -149,7 +149,7 @@ Mientras el cruce OpenAPI–BIAN se haga a mano, no hay cómo priorizar una cola
 
 ## 4. Universo del piloto y muestra (Sesión 5)
 
-Fuente: `../piloto-bank-api-bian/`.
+Fuente: `../../piloto-bank-api-bian/`.
 
 | Lado | Contratos | Operaciones |
 |------|-----------|-------------|

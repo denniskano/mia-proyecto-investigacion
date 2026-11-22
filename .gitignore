@@ -17,8 +17,9 @@
 *.pyc
 **/*.egg-info/
 
-# Piloto: repositorio propio (github.com/denniskano/piloto-bank-api-bian).
-02-curso-II/piloto-bank-api-bian/
+# Repositorios propios. No se versionan dentro del curso.
+/piloto-bank-api-bian/
+/tesis-bank-api-bian/
 
 # Secretos
 .env

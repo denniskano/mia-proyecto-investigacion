@@ -17,7 +17,7 @@
 **Objeto de la tesis (se mantiene):** contratos **OpenAPI bancarios** frente a Service Domains BIAN.  
 **Piloto MIA 403:** catálogo **Open Finance Brasil (OFB)** — muestra empírica, no redefinición del objeto. En este curso no se añaden YAML de un banco emisor ni Open Banking UK.
 
-**Piloto:** `../piloto-bank-api-bian/`
+**Piloto:** `../../piloto-bank-api-bian/`
 
 Regenerar la matriz (hace falta `openpyxl` del venv de herramientas):
 

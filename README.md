@@ -14,17 +14,17 @@ Este directorio es el **hilo único** del proyecto: Curso I (diseño) → Curso 
 
 **No van al git:** `00-archivo/clases-video/` (~10 GB) y `00-archivo/transcriptions/`. Quedan solo en local.
 
+Tres repositorios. Este es el del curso. Los otros dos viven al lado y tienen su propio git; este repositorio no los versiona.
+
 ```
-mia-proyecto-investigacion/
-├── README.md                 ← estás aquí
-├── ESTADO.md                 ← hecho / en curso / pendiente
-├── 00-archivo/               ← clases, videos, transcripciones (no es el producto)
-├── 01-curso-I/               ← MIA 303 · Guía 1 · plan LaTeX (diseño)
-└── 02-curso-II/              ← MIA 403 · plan v2 + piloto OFB (ejecución)
-    ├── material-oficial/     ← sílabo, guías, PDFs de sesión
-    ├── plan-tesis-v2/        ← plan ejecutable vigente
-    ├── piloto-bank-api-bian/ ← repo propio: github.com/denniskano/piloto-bank-api-bian
-    └── sesion-05/            ← operacionalización + EDA
+mia-proyecto-investigacion/   ← este repo: curso, plan, sesiones
+├── README.md
+├── ESTADO.md
+├── 00-archivo/               ← clases y archivo (no es el producto)
+├── 01-curso-I/               ← MIA 303 · Guía 1 · plan LaTeX
+├── 02-curso-II/              ← MIA 403 · sesiones y plan v2
+├── piloto-bank-api-bian/     ← repo propio, ya en GitHub
+└── tesis-bank-api-bian/      ← repo propio, todavía local
 ```
 
 ## Dónde abrir cada cosa
@@ -36,7 +36,8 @@ mia-proyecto-investigacion/
 | PDF / slides piloto | [Piloto OFB × BIAN](https://github.com/denniskano/piloto-bank-api-bian) |
 | Revisión método (S6) | [`02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf`](02-curso-II/sesion-06/Sesion06_Revision_Metodo.pdf) |
 | Revisión avances (S7) | [`02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf`](02-curso-II/sesion-07/Sesion07_Revision_Avances.pdf) |
-| Dataset piloto | [denniskano/piloto-bank-api-bian](https://github.com/denniskano/piloto-bank-api-bian) |
+| Dataset piloto | [`piloto-bank-api-bian/`](piloto-bank-api-bian/) · [GitHub](https://github.com/denniskano/piloto-bank-api-bian) |
+| Tesis | [`tesis-bank-api-bian/`](tesis-bank-api-bian/) · sin remoto todavía |
 | Plan Guía 1 (LaTeX) | [`01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10_final.pdf`](01-curso-I/plan-tesis/latex/build/Plan_Tesis_Grupo10_final.pdf) |
 | Sílabo MIA 403 | [`02-curso-II/material-oficial/silabo/`](02-curso-II/material-oficial/silabo/) |
 

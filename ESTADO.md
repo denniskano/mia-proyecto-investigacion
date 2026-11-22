@@ -22,11 +22,12 @@ Diseño del plan. **No** se construyó el artefacto ni se midió AlignmentScore.
 | Matriz OFB (8 cols) | `02-curso-II/plan-tesis-v2/Matriz_Consistencia_OFB_Grupo10.pdf` | Hecho |
 | Protocolo empírico | `02-curso-II/plan-tesis-v2/protocolo-empirico.md` | Hecho (catálogo 258 SD) |
 | Cronograma 16 semanas | `02-curso-II/plan-tesis-v2/cronograma-sprints.md` | Hecho |
-| Parser OE1 | `02-curso-II/piloto-bank-api-bian/src/ofb_bian/procesar_openapi.py` | Hecho · 296/296 firmados |
-| Matching v0 (P4) | `02-curso-II/piloto-bank-api-bian/src/ofb_bian/matching_v0.py` + `results/matching/` | Hecho (I1–I6) |
-| Catálogo extra OFB→SD | `02-curso-II/piloto-bank-api-bian/results/matching/catalogo/` | Hecho (sin inventar SD) |
-| MiniLM S v1 | `02-curso-II/piloto-bank-api-bian/src/ofb_bian/matching_s1.py` | Hecho (pares OE2 de I1–I6) |
-| Piloto OFB × BIAN | `02-curso-II/piloto-bank-api-bian/` · 38 APIs + **258 SD** · 296 YAML · 4 740 ops | Hecho |
+| Parser OE1 | `piloto-bank-api-bian/src/ofb_bian/procesar_openapi.py` | Hecho · 296/296 firmados |
+| Matching v0 (P4) | `piloto-bank-api-bian/src/ofb_bian/matching_v0.py` + `results/matching/` | Hecho (I1–I6) |
+| Catálogo extra OFB→SD | `piloto-bank-api-bian/results/matching/catalogo/` | Hecho (sin inventar SD) |
+| MiniLM S v1 | `piloto-bank-api-bian/src/ofb_bian/matching_s1.py` | Hecho (pares OE2 de I1–I6) |
+| Piloto OFB × BIAN | `piloto-bank-api-bian/` · repo propio · 38 APIs + **258 SD** · 296 YAML · 4 740 ops | Hecho |
+| Tesis | `tesis-bank-api-bian/` · repo propio, todavía local | Carpeta lista |
 | EDA Sesión 5 | `02-curso-II/sesion-05/` | Hecho |
 | Revisión método Sesión 6 | `02-curso-II/sesion-06/` | Hecho (papel) |
 | Revisión avances Sesión 7 | `02-curso-II/sesion-07/` | Hecho (papel + cuaderno) |
